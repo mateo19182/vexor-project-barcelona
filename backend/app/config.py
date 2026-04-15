@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     logs_dir: str = "logs"
 
     # Nominatim exige User-Agent identificable; incluye contacto real en producción.
-    nominatim_user_agent: str = "VexorBCN-Enrichment/0.1 (hackathon; contact@example.com)"
+    nominatim_user_agent: str = "VexorBCN-Enrichment/0.1 (hackathon; mateoamadoares@gmail.com)"
 
     catastro_api_key: str = ""
 

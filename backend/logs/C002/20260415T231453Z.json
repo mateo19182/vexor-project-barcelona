@@ -1,0 +1,1402 @@
+{
+  "case_id": "C002",
+  "status": "enriched",
+  "dossier": {
+    "summary": "9 BOE risk/role signal(s), 1 other entry(ies) for 'Mateo Amado Ares'. Found in 1 breach record(s) | 7 new phone(s) discovered: 2017-05-11, 77.27.13.39, 9fdb6ec157a6eb6da07ca48b11a8deab mateoamadoares@gmail.com is registered on iCloud. | +34674527164 is registered on iCloud. Extensive open-source research returned no publicly indexed social media profiles, professional listings, or other web presence directly attributable to a 'Mateo Amado Ares' residing in Oleiros, A Coruña, Spain. The only publicly documented individual sharing the 'Amado Ares' double surname in the A Coruña metropolitan area is 'Jose Antonio Amado Ares', listed as Director de Compras at steelmaker Megasa and based in A Coruña — a possible family relation. No confirmed employer, role, or lifestyle signals were found for the subject. mateoamadoares@gmail.com is registered on Twitter. Email found in 4 breach(es); registered on: trello.com, wattpad.com, duelingnetwork.com, edmodo.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 4 breach(es); earliest 2017, latest 2024 Sin estimación de valor para A Coruña, Oleiros, Spain. Ver gaps.",
+    "facts": [
+      {
+        "claim": "BOE-A-2003-13813 Ley 22/2003, de 9 de julio, Concursal.",
+        "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13813",
+        "confidence": 0.6
+      },
+      {
+        "claim": "Identity found in 1 breach record(s) in the breach intelligence database",
+        "source": "https://9ghz.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "A person named 'Jose Antonio Amado Ares' is publicly listed as Director de Compras at Megasa (steel company) and based in A Coruña, Spain — possibly a family member of the subject.",
+        "source": "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+        "confidence": 0.7
+      },
+      {
+        "claim": "Jose Antonio Amado Ares studied at Universidad de Santiago de Compostela (Licenciatura en Empresariales, 1983-1989) per public business-contact aggregator data.",
+        "source": "https://rocketreach.co/jose-antonio-amado-ares-email_40371641",
+        "confidence": 0.65
+      },
+      {
+        "claim": "Email found in 4 breach(es); earliest 2017, latest 2024",
+        "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Social media profiles, Usernames",
+        "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Moderate (36/100)",
+        "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+        "confidence": 0.9
+      }
+    ],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "BOE.es - Agencia Estatal Boletín Oficial del Estado",
+        "source": "https://boe.es/",
+        "confidence": 0.85,
+        "notes": "Material de oposiciones · Anuarios y revistas · La Editorial del BOE · La Librería del BOE · Notificaciones · Edictos judiciales · Portal de Subastas · Anunciantes · Datos abiertos · Información institucional, organizativa y de planificación · Información de relevancia jurídica ·"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2020-4859 Real Decreto Legislativo 1/2020, de 5 de mayo, por el que se aprueba el texto refundido de la Ley Concursal.",
+        "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-4859",
+        "confidence": 0.85,
+        "notes": "Al servicio de esta manifestación del principio de la seguridad jurídica en que la reordenación consiste, el texto refundido se divide en tres libros: el primero, el más extenso, está dedicado al concurso de acreedores. Pero el lector del texto pronto comprobará que, en la distribución de la materia entre los distintos títulos de que se compone este primer libro, existen diferencias importantes con la sistemática de la Ley 22/2003, de 9 de julio."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se ",
+        "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-14580",
+        "confidence": 0.85,
+        "notes": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se modifica la Directiva (UE) 2017/1132 del Parlamento Europeo y del Consejo, sobre determinados aspectos del Derecho de sociedades (Directiva sobre reestructuración e insolvencia)."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE.es - Buscar en todo el BOE: Ayuda y contenido",
+        "source": "https://www.boe.es/buscar/ayudas/boe_ayuda.php",
+        "confidence": 0.85,
+        "notes": "En la sección IV &quot;Administración de Justicia&quot; se publican los edictos, notificaciones, requisitorias y anuncios de los Juzgados y Tribunales, incluidos los anuncios de subastas judiciales del portal de subastas de la AEBOE."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-B-2016-64141 SANTA CRUZ DE TENERIFE",
+        "source": "https://www.boe.es/buscar/doc.php?id=BOE-B-2016-64141",
+        "confidence": 0.85,
+        "notes": "Los instantes son acreedores de la sociedad demandada, y fundamenta su solicitud de concurso en la existencia de títulos por los que se ha despachado ejecución y sin que del embargo hayan resultado bienes libres bastantes para el pago, declaraciones judiciales de insolvencia, sobreseimiento general en el pago corriente de sus obligaciones."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "III. OTRAS DISPOSICIONES MINISTERIO DE LA PRESIDENCIA, JUSTICIA",
+        "source": "https://www.boe.es/boe/dias/2025/02/07/pdfs/BOE-A-2025-2337.pdf",
+        "confidence": 0.85,
+        "notes": "declaración de concurso así como los acreedores titulares de los embargos anotados"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE.es - CE-D-2019-1127",
+        "source": "https://www.boe.es/buscar/doc.php?id=CE-D-2019-1127",
+        "confidence": 0.85,
+        "notes": "La alteración de la sistemática ha dado lugar, en primer lugar, a la división del texto refundido en tres libros, el primero de ellos dedicado al concurso de acreedores, el segundo al derecho preconcursal, &quot;ese otro derecho de la crisis que es alternativo -y, en ocasiones, previo- al derecho tradicional de insolvencia&quot;, y el tercero a las normas de derecho internacional privado. En relación con el libro I, subraya el preámbulo que, en la distribución de la materia entre los distintos títulos de que se compone existen diferencias importantes con la sistemática de la Ley 22/2003; respect"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "DOCTRINA DE LA FISCALÍA GENERAL DEL ESTADO",
+        "source": "https://www.boe.es/buscar/abrir_fiscalia.php?id=FIS-I-2013-00001.pdf",
+        "confidence": 0.85,
+        "notes": "Además, el art. 164.1 LC incorpora una cláusula general: el concurso se calificará como · culpable cuando en la generación o agravación del estado de insolvencia hubiera mediado dolo"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2023-3949 Resolución de 23 de enero de 2023, de la Dirección General de Seguridad Jurídica y Fe Pública, en el recurso interpuesto contra la negativa del registrador de la propiedad de Villajoyosa n.º 2 a practicar una anotación preventiva de embargo.",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-3949",
+        "confidence": 0.85,
+        "notes": "Asimismo, de los datos que obran en el expediente, resultaba que, por decreto de fecha 20 de febrero de 2020, se acordó la apertura de la fase de liquidación del concurso. Posteriormente, por auto de fecha 8 de febrero de 2022, dictado por el Juzgado de lo Mercantil número 2 de Madrid, se autorizó la dación en pago de la finca a «Sociedad de Gestión de Activos Procedentes de la Reestructuración Bancaria, SA», «libre de embargos, cargas y gravámenes, incluidas las hipotecas que gravan la reseñada finca». Dicho auto fue aportado por la recurrente con ocasión de la interposición del recurso."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Debtor identifiers found in 1 breach record(s)",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "notes": "Breaches: breach database"
+      },
+      {
+        "kind": "contact",
+        "value": "2017-05-11",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "77.27.13.39",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "9fdb6ec157a6eb6da07ca48b11a8deab",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "2017-03-29",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "77.27.14.71",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "2020-06-29",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "iCloud account registered to mateoamadoares@gmail.com",
+        "source": "platform_check:icloud_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: SUCCESS"
+      },
+      {
+        "kind": "contact",
+        "value": "iCloud account registered to +34674527164",
+        "source": "platform_check:icloud_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: SUCCESS"
+      },
+      {
+        "kind": "location",
+        "value": "Oleiros, A Coruña, Galicia, ES",
+        "source": "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+        "confidence": 0.4,
+        "notes": "Address supplied by requester; not independently confirmed via any public record. The 'Amado Ares' surname combination is documented in A Coruña area via a likely family member."
+      },
+      {
+        "kind": "contact",
+        "value": "Twitter account registered to mateoamadoares@gmail.com",
+        "source": "platform_check:twitter_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: REGISTERED"
+      },
+      {
+        "kind": "contact",
+        "value": "trello.com",
+        "source": "https://www.cpomagazine.com/cyber-security/massive-trello-user-data-leak-hacker-lists-15-million-records-on-a-dark-web-hacking-forum/",
+        "confidence": 0.85,
+        "notes": "Account registered on trello.com (breach year: 2024). Data exposed: Email addresses, Names, Usernames"
+      },
+      {
+        "kind": "contact",
+        "value": "wattpad.com",
+        "source": "https://support.wattpad.com/hc/en-us/articles/360046241911-Statement-Regarding-Recent-Security-Issue-",
+        "confidence": 0.85,
+        "notes": "Account registered on wattpad.com (breach year: 2020). Data exposed: Names, Usernames, Dates of birth, Passwords, IP addresses, Genders, Social media profiles, Geographic locations, Passwords"
+      },
+      {
+        "kind": "contact",
+        "value": "duelingnetwork.com",
+        "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+        "confidence": 0.85,
+        "notes": "Account registered on duelingnetwork.com (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords, IP addresses"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in DuelingNetwork breach",
+        "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+        "confidence": 0.9,
+        "notes": null
+      },
+      {
+        "kind": "contact",
+        "value": "edmodo.com",
+        "source": "https://www.uregina.ca/is/security/advisories/security-advisory24.html",
+        "confidence": 0.85,
+        "notes": "Account registered on edmodo.com (breach year: 2017). Data exposed: Email addresses, Usernames, Passwords"
+      }
+    ],
+    "gaps": [
+      "Instagram returned ambiguous status 'INVALID' for mateoamadoares@gmail.com",
+      "No social media profiles (Instagram, Twitter/X, Facebook, TikTok, LinkedIn, GitHub, YouTube) found for 'Mateo Amado Ares'.",
+      "The email handle 'mateoamadoares' returned zero indexed results on any platform.",
+      "Phone number +34674527164 returned no publicly available caller-ID or directory information.",
+      "Subject's current employer, occupation, and age/date of birth could not be determined.",
+      "The 'Mateo Amado - Marketing Staff - Vertebrata Clinica Veterinaria' LinkedIn profile (co.linkedin.com/in/mateo-amado-3a244425b) appears to be a different individual based in Colombia, not Spain.",
+      "Cannot confirm whether Jose Antonio Amado Ares is a family member of the subject; no genealogical or registry source was accessible.",
+      "Subject may maintain private or pseudonymous social accounts not discoverable via name-based searches.",
+      "Phone number breach lookup not supported — no free provider available",
+      "Geocoding no resolvió calle + número + municipio — sin consulta a Catastro",
+      "skipped: missing inputs [instagram_handle]",
+      "skipped: missing inputs [instagram_handle]"
+    ]
+  },
+  "llm_summary": {
+    "summary": "Mateo Amado Ares is the subject of a €2,077.00 personal loan debt, 12 months old, originated in Spain. He is registered at an address in Oleiros, A Coruña, Galicia, ES. One call attempt has been made, with the last outcome being rings out. A legal asset check returned assets not seizable. His email address mateoamadoares@gmail.com is registered on iCloud and Twitter. The phone number +34674527164 is also registered on iCloud. The email has been found in 4 data breaches spanning 2017 to 2024, with exposed data including names, usernames, email addresses, passwords, dates of birth, genders, geographic locations, IP addresses, and social media profiles. One exposed password was identified as a weak hash. Accounts under this email were registered on trello.com (breached 2024), wattpad.com (breached 2020), duelingnetwork.com (breached 2017), and edmodo.com (breached 2017). No confirmed employer, occupation, or lifestyle information was found for the subject.",
+    "key_facts": [
+      "Debt: €2,077.00 personal loan, 12 months old, Spain",
+      "Address: Oleiros, A Coruña, Galicia, ES",
+      "Phone: +34674527164",
+      "Email: mateoamadoares@gmail.com",
+      "1 call attempt made; last outcome: rings out",
+      "Legal asset finding: assets not seizable",
+      "Email registered on iCloud",
+      "Phone +34674527164 registered on iCloud",
+      "Email registered on Twitter",
+      "Email found in 4 data breaches; earliest 2017, latest 2024",
+      "Breach-exposed data types include passwords, dates of birth, IP addresses, names, usernames, genders, geographic locations, social media profiles",
+      "1 password exposed as weak hash (easy-to-crack) in DuelingNetwork breach",
+      "Accounts confirmed on trello.com, wattpad.com, duelingnetwork.com, edmodo.com",
+      "Overall breach risk score: Moderate (36/100)",
+      "No confirmed employer or occupation found for subject"
+    ]
+  },
+  "modules": [
+    {
+      "name": "boe",
+      "status": "ok",
+      "summary": "9 BOE risk/role signal(s), 1 other entry(ies) for 'Mateo Amado Ares'.",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "BOE-A-2003-13813 Ley 22/2003, de 9 de julio, Concursal.",
+          "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13813",
+          "confidence": 0.6
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "BOE.es - Agencia Estatal Boletín Oficial del Estado",
+          "source": "https://boe.es/",
+          "confidence": 0.85,
+          "notes": "Material de oposiciones · Anuarios y revistas · La Editorial del BOE · La Librería del BOE · Notificaciones · Edictos judiciales · Portal de Subastas · Anunciantes · Datos abiertos · Información institucional, organizativa y de planificación · Información de relevancia jurídica ·"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2020-4859 Real Decreto Legislativo 1/2020, de 5 de mayo, por el que se aprueba el texto refundido de la Ley Concursal.",
+          "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-4859",
+          "confidence": 0.85,
+          "notes": "Al servicio de esta manifestación del principio de la seguridad jurídica en que la reordenación consiste, el texto refundido se divide en tres libros: el primero, el más extenso, está dedicado al concurso de acreedores. Pero el lector del texto pronto comprobará que, en la distribución de la materia entre los distintos títulos de que se compone este primer libro, existen diferencias importantes con la sistemática de la Ley 22/2003, de 9 de julio."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se ",
+          "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-14580",
+          "confidence": 0.85,
+          "notes": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se modifica la Directiva (UE) 2017/1132 del Parlamento Europeo y del Consejo, sobre determinados aspectos del Derecho de sociedades (Directiva sobre reestructuración e insolvencia)."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE.es - Buscar en todo el BOE: Ayuda y contenido",
+          "source": "https://www.boe.es/buscar/ayudas/boe_ayuda.php",
+          "confidence": 0.85,
+          "notes": "En la sección IV &quot;Administración de Justicia&quot; se publican los edictos, notificaciones, requisitorias y anuncios de los Juzgados y Tribunales, incluidos los anuncios de subastas judiciales del portal de subastas de la AEBOE."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-B-2016-64141 SANTA CRUZ DE TENERIFE",
+          "source": "https://www.boe.es/buscar/doc.php?id=BOE-B-2016-64141",
+          "confidence": 0.85,
+          "notes": "Los instantes son acreedores de la sociedad demandada, y fundamenta su solicitud de concurso en la existencia de títulos por los que se ha despachado ejecución y sin que del embargo hayan resultado bienes libres bastantes para el pago, declaraciones judiciales de insolvencia, sobreseimiento general en el pago corriente de sus obligaciones."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "III. OTRAS DISPOSICIONES MINISTERIO DE LA PRESIDENCIA, JUSTICIA",
+          "source": "https://www.boe.es/boe/dias/2025/02/07/pdfs/BOE-A-2025-2337.pdf",
+          "confidence": 0.85,
+          "notes": "declaración de concurso así como los acreedores titulares de los embargos anotados"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE.es - CE-D-2019-1127",
+          "source": "https://www.boe.es/buscar/doc.php?id=CE-D-2019-1127",
+          "confidence": 0.85,
+          "notes": "La alteración de la sistemática ha dado lugar, en primer lugar, a la división del texto refundido en tres libros, el primero de ellos dedicado al concurso de acreedores, el segundo al derecho preconcursal, &quot;ese otro derecho de la crisis que es alternativo -y, en ocasiones, previo- al derecho tradicional de insolvencia&quot;, y el tercero a las normas de derecho internacional privado. En relación con el libro I, subraya el preámbulo que, en la distribución de la materia entre los distintos títulos de que se compone existen diferencias importantes con la sistemática de la Ley 22/2003; respect"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "DOCTRINA DE LA FISCALÍA GENERAL DEL ESTADO",
+          "source": "https://www.boe.es/buscar/abrir_fiscalia.php?id=FIS-I-2013-00001.pdf",
+          "confidence": 0.85,
+          "notes": "Además, el art. 164.1 LC incorpora una cláusula general: el concurso se calificará como · culpable cuando en la generación o agravación del estado de insolvencia hubiera mediado dolo"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2023-3949 Resolución de 23 de enero de 2023, de la Dirección General de Seguridad Jurídica y Fe Pública, en el recurso interpuesto contra la negativa del registrador de la propiedad de Villajoyosa n.º 2 a practicar una anotación preventiva de embargo.",
+          "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-3949",
+          "confidence": 0.85,
+          "notes": "Asimismo, de los datos que obran en el expediente, resultaba que, por decreto de fecha 20 de febrero de 2020, se acordó la apertura de la fase de liquidación del concurso. Posteriormente, por auto de fecha 8 de febrero de 2022, dictado por el Juzgado de lo Mercantil número 2 de Madrid, se autorizó la dación en pago de la finca a «Sociedad de Gestión de Activos Procedentes de la Reestructuración Bancaria, SA», «libre de embargos, cargas y gravámenes, incluidas las hipotecas que gravan la reseñada finca». Dicho auto fue aportado por la recurrente con ocasión de la interposición del recurso."
+        }
+      ],
+      "gaps": [],
+      "raw": {},
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 1.194051310994837
+    },
+    {
+      "name": "breach_scout",
+      "status": "ok",
+      "summary": "Found in 1 breach record(s) | 7 new phone(s) discovered: 2017-05-11, 77.27.13.39, 9fdb6ec157a6eb6da07ca48b11a8deab",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Identity found in 1 breach record(s) in the breach intelligence database",
+          "source": "https://9ghz.com",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Debtor identifiers found in 1 breach record(s)",
+          "source": "https://9ghz.com",
+          "confidence": 0.85,
+          "notes": "Breaches: breach database"
+        },
+        {
+          "kind": "contact",
+          "value": "2017-05-11",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "77.27.13.39",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "9fdb6ec157a6eb6da07ca48b11a8deab",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "2017-03-29",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "77.27.14.71",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "2020-06-29",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "keywords": [
+          "Mateo Amado Ares",
+          "mateoamadoares@gmail.com",
+          "+34674527164"
+        ],
+        "mode": "authenticated_batch",
+        "response": {
+          "code": 0,
+          "msg": "ok",
+          "data": [
+            {
+              "data": [],
+              "keyword": "Mateo Amado Ares",
+              "total_count": 0
+            },
+            {
+              "data": [
+                {
+                  "email": "mateoamadoares@gmail.com",
+                  "source": {
+                    "breach_date": "2017-05-11",
+                    "domain": "edmodo.com",
+                    "id": "325635",
+                    "record_count": 43423561,
+                    "region": "",
+                    "title": "Edmodo"
+                  },
+                  "user_name": "ma. a."
+                },
+                {
+                  "email": "mateoamadoares@gmail.com",
+                  "ip_address": "77.27.13.39",
+                  "password": "9fdb6ec157a6eb6da07ca48b11a8deab",
+                  "source": {
+                    "breach_date": "2017-03-29",
+                    "domain": "duelingnetwork.com",
+                    "id": "343259",
+                    "record_count": 6486626,
+                    "region": "",
+                    "title": "Dueling Network"
+                  },
+                  "user_name": "mateo19182"
+                },
+                {
+                  "email": "mateoamadoares@gmail.com",
+                  "ip_address": "77.27.14.71",
+                  "password": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+                  "region": "ES",
+                  "source": {
+                    "breach_date": "2020-06-29",
+                    "domain": "wattpad.com",
+                    "id": "513644",
+                    "record_count": 268765495,
+                    "region": "",
+                    "title": "Wattpad"
+                  },
+                  "user_name": "mateo19182"
+                }
+              ],
+              "keyword": "mateoamadoares@gmail.com",
+              "total_count": 3
+            },
+            {
+              "data": [],
+              "keyword": "+34674527164",
+              "total_count": 0
+            }
+          ]
+        },
+        "status_code": 200,
+        "response_bytes": 978
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 1.6350416960012808
+    },
+    {
+      "name": "icloud_check",
+      "status": "ok",
+      "summary": "mateoamadoares@gmail.com is registered on iCloud. | +34674527164 is registered on iCloud.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "iCloud account registered to mateoamadoares@gmail.com",
+          "source": "platform_check:icloud_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: SUCCESS"
+        },
+        {
+          "kind": "contact",
+          "value": "iCloud account registered to +34674527164",
+          "source": "platform_check:icloud_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: SUCCESS"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "checks": [
+          {
+            "platform": "iCloud",
+            "identifier": "mateoamadoares@gmail.com",
+            "status_raw": "SUCCESS",
+            "http_status": 200,
+            "session_id": "e49fca85-737e-4b23-b7d9-4499ca4d36a5",
+            "error": null
+          },
+          {
+            "platform": "iCloud",
+            "identifier": "+34674527164",
+            "status_raw": "SUCCESS",
+            "http_status": 200,
+            "session_id": "9e9e38e7-a50b-469e-a21e-00945f54180b",
+            "error": null
+          }
+        ]
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 11.703763384000922
+    },
+    {
+      "name": "instagram_check",
+      "status": "no_data",
+      "summary": "Instagram check for mateoamadoares@gmail.com was inconclusive (status: INVALID).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Instagram returned ambiguous status 'INVALID' for mateoamadoares@gmail.com"
+      ],
+      "raw": {
+        "platform": "Instagram",
+        "identifier": "mateoamadoares@gmail.com",
+        "status_raw": "INVALID",
+        "http_status": 200,
+        "session_id": "a18344b5-d7ff-4fcd-9962-0296e065d95e",
+        "error": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.3504896540034679
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "Extensive open-source research returned no publicly indexed social media profiles, professional listings, or other web presence directly attributable to a 'Mateo Amado Ares' residing in Oleiros, A Coruña, Spain. The only publicly documented individual sharing the 'Amado Ares' double surname in the A Coruña metropolitan area is 'Jose Antonio Amado Ares', listed as Director de Compras at steelmaker Megasa and based in A Coruña — a possible family relation. No confirmed employer, role, or lifestyle signals were found for the subject.",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "A person named 'Jose Antonio Amado Ares' is publicly listed as Director de Compras at Megasa (steel company) and based in A Coruña, Spain — possibly a family member of the subject.",
+          "source": "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+          "confidence": 0.7
+        },
+        {
+          "claim": "Jose Antonio Amado Ares studied at Universidad de Santiago de Compostela (Licenciatura en Empresariales, 1983-1989) per public business-contact aggregator data.",
+          "source": "https://rocketreach.co/jose-antonio-amado-ares-email_40371641",
+          "confidence": 0.65
+        }
+      ],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "Oleiros, A Coruña, Galicia, ES",
+          "source": "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+          "confidence": 0.4,
+          "notes": "Address supplied by requester; not independently confirmed via any public record. The 'Amado Ares' surname combination is documented in A Coruña area via a likely family member."
+        }
+      ],
+      "gaps": [
+        "No social media profiles (Instagram, Twitter/X, Facebook, TikTok, LinkedIn, GitHub, YouTube) found for 'Mateo Amado Ares'.",
+        "The email handle 'mateoamadoares' returned zero indexed results on any platform.",
+        "Phone number +34674527164 returned no publicly available caller-ID or directory information.",
+        "Subject's current employer, occupation, and age/date of birth could not be determined.",
+        "The 'Mateo Amado - Marketing Staff - Vertebrata Clinica Veterinaria' LinkedIn profile (co.linkedin.com/in/mateo-amado-3a244425b) appears to be a different individual based in Colombia, not Spain.",
+        "Cannot confirm whether Jose Antonio Amado Ares is a family member of the subject; no genealogical or registry source was accessible.",
+        "Subject may maintain private or pseudonymous social accounts not discoverable via name-based searches."
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "search_queries": [
+          "Mateo Amado Ares A Coruña Oleiros Spain",
+          "mateoamadoares",
+          "\"Mateo Amado Ares\" social media",
+          "\"mateoamadoares\" instagram",
+          "\"Mateo Amado Ares\" linkedin",
+          "\"mateoamadoares\" OR \"mateo.amado.ares\" site:instagram.com OR site:twitter.com OR site:linkedin.com",
+          "\"Mateo Amado Ares\" Oleiros Coruña",
+          "mateoamadoares github OR twitter OR tiktok OR facebook",
+          "\"mateo amado\" galicia spain",
+          "site:linkedin.com \"Mateo Amado Ares\"",
+          "\"mateoamadoares@gmail.com\"",
+          "\"+34674527164\" Spain",
+          "674527164 Spain who is this number",
+          "\"Amado Ares\" Oleiros Coruña Galicia",
+          "\"mateo amado\" coruña OR oleiros",
+          "instagram.com/mateoamadoares",
+          "\"mateo amado\" spain instagram OR twitter OR facebook profile",
+          "\"Mateo Amado\" Spain profile OR bio OR about",
+          "site:github.com \"mateoamadoares\" OR \"mateo-amado-ares\"",
+          "site:facebook.com \"Mateo Amado Ares\"",
+          "\"Mateo Amado\" \"Vertebrata\" veterinaria coruña",
+          "Vertebrata Clinica Veterinaria coruña oleiros galicia",
+          "\"Vertebrata\" clinica veterinaria España ubicacion",
+          "\"mateo amado\" \"a coruña\" OR galicia OR oleiros",
+          "\"Mateo Amado\" Spain OR España profile",
+          "site:infobel.com \"Amado Ares\" OR \"Mateo Amado\" Oleiros",
+          "\"Amado Ares\" Galicia España persona",
+          "Jose Antonio Amado Ares Megasa A Coruña family",
+          "rocketreach \"Mateo Amado Ares\" OR \"mateo amado\" coruña",
+          "site:linkedin.com \"Jose Antonio Amado Ares\" Megasa coruña",
+          "\"Mateo Amado\" oleiros estudiante OR student OR joven",
+          "mateo amado ares twitter OR x.com"
+        ],
+        "fetched_urls": [
+          "https://www.instagram.com/mateoamadoares/",
+          "https://www.linkedin.com/pub/dir/Mateo/Ares",
+          "https://www.linkedin.com/in/mateo-amado-3a244425b/",
+          "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+          "https://rocketreach.co/jose-antonio-amado-ares-email_40371641"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 147.86142705499879
+    },
+    {
+      "name": "twitter_check",
+      "status": "ok",
+      "summary": "mateoamadoares@gmail.com is registered on Twitter.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "Twitter account registered to mateoamadoares@gmail.com",
+          "source": "platform_check:twitter_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: REGISTERED"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "platform": "Twitter",
+        "identifier": "mateoamadoares@gmail.com",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "session_id": "bf67c745-72c9-4851-8a26-5992bdcb0408",
+        "error": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 1.1779716279997956
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 4 breach(es); registered on: trello.com, wattpad.com, duelingnetwork.com, edmodo.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 4 breach(es); earliest 2017, latest 2024",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 4 breach(es); earliest 2017, latest 2024",
+          "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Social media profiles, Usernames",
+          "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Moderate (36/100)",
+          "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "trello.com",
+          "source": "https://www.cpomagazine.com/cyber-security/massive-trello-user-data-leak-hacker-lists-15-million-records-on-a-dark-web-hacking-forum/",
+          "confidence": 0.85,
+          "notes": "Account registered on trello.com (breach year: 2024). Data exposed: Email addresses, Names, Usernames"
+        },
+        {
+          "kind": "contact",
+          "value": "wattpad.com",
+          "source": "https://support.wattpad.com/hc/en-us/articles/360046241911-Statement-Regarding-Recent-Security-Issue-",
+          "confidence": 0.85,
+          "notes": "Account registered on wattpad.com (breach year: 2020). Data exposed: Names, Usernames, Dates of birth, Passwords, IP addresses, Genders, Social media profiles, Geographic locations, Passwords"
+        },
+        {
+          "kind": "contact",
+          "value": "duelingnetwork.com",
+          "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+          "confidence": 0.85,
+          "notes": "Account registered on duelingnetwork.com (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords, IP addresses"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in DuelingNetwork breach",
+          "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+          "confidence": 0.9,
+          "notes": null
+        },
+        {
+          "kind": "contact",
+          "value": "edmodo.com",
+          "source": "https://www.uregina.ca/is/security/advisories/security-advisory24.html",
+          "confidence": 0.85,
+          "notes": "Account registered on edmodo.com (breach year: 2017). Data exposed: Email addresses, Usernames, Passwords"
+        }
+      ],
+      "gaps": [
+        "Phone number breach lookup not supported — no free provider available"
+      ],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  2
+                ],
+                [
+                  "heal",
+                  0
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  1
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  1
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 2,
+                "Unknown": 1
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Moderate",
+                "risk_score": 36
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 3
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🖥️ Device and Network Information",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "G",
+                        "name": "data_IP addresses",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 4
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Names",
+                        "value": 2
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Genders",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Social media profiles",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 3
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👥 Demographics",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Geographic locations",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Dates of birth",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 0,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 2,
+                "y2018": 0,
+                "y2019": 0,
+                "y2020": 1,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 1,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "DuelingNetwork;Edmodo;Wattpad;Trello"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "Trello",
+                "details": "The Trello Data Scraping Incident in January 2024 resulted in over 15 million email addresses, names, and usernames being posted for sale on a popular hacking forum. This data was collected by enumerating a publicly accessible resource using email addresses sourced from previous breach datasets. Trello has stated that this incident did not involve unauthorized access to their systems. ",
+                "domain": "trello.com",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Trello.png",
+                "password_risk": "unknown",
+                "references": "https://www.cpomagazine.com/cyber-security/massive-trello-user-data-leak-hacker-lists-15-million-records-on-a-dark-web-hacking-forum/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Names;Usernames",
+                "xposed_date": "2024",
+                "xposed_records": 15115458,
+                "added": "2024-07-16T01:25:31+00:00"
+              },
+              {
+                "breach": "Wattpad",
+                "details": "Wattpad, a self-publishing platform that claims to be “the world’s most-loved social storytelling platform,” suffered a data breach exposing all of its users. The leaked database included more than 270 million records with more than 268 million unique email address and password combinations. Exposed data includes email address, date of birth, gender if provided, IP address upon sign up, if signed up before 2017, display name, account name, and salted and cryptographically hashed passwords.",
+                "domain": "wattpad.com",
+                "industry": "Entertainment",
+                "logo": "https://xposedornot.com/static/logos/Wattpad.png",
+                "password_risk": "hardtocrack",
+                "references": "https://support.wattpad.com/hc/en-us/articles/360046241911-Statement-Regarding-Recent-Security-Issue-",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Names;Usernames;Dates of birth;Passwords;IP addresses;Genders;Social media profiles;Geographic locations;Passwords",
+                "xposed_date": "2020",
+                "xposed_records": 268113400,
+                "added": "2023-11-08T06:30:32+00:00"
+              },
+              {
+                "breach": "DuelingNetwork",
+                "details": "Online fan game site Dueling Network, a now-defunct Flash game based on the Yu-Gi-Oh trading card game got breached and exposed of its 6.5 million users email as well as poorly hashed passwords.",
+                "domain": "duelingnetwork.com",
+                "industry": "Entertainment",
+                "logo": "https://xposedornot.com/static/logos/Duelingnetwork.png",
+                "password_risk": "easytocrack",
+                "references": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Usernames;Email addresses;Passwords;IP addresses",
+                "xposed_date": "2017",
+                "xposed_records": 6488767,
+                "added": "2023-11-08T06:30:18+00:00"
+              },
+              {
+                "breach": "Edmodo",
+                "details": "Edmodo, an education technology company providing a learning management system, announced that it had suffered a data breach. User names, email addresses, and hashed passwords were acquired by an unauthorized third party. The passwords were “hashed” (or encrypted) using the strong and robust bcrypt algorithm. In 2018, the data breach was reported by the company.",
+                "domain": "edmodo.com",
+                "industry": "Music",
+                "logo": "https://xposedornot.com/static/logos/Edmodo.png",
+                "password_risk": "hardtocrack",
+                "references": "https://www.uregina.ca/is/security/advisories/security-advisory24.html",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Usernames;Passwords",
+                "xposed_date": "2017",
+                "xposed_records": 43415654,
+                "added": "2023-11-08T06:30:18+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.9601038900000276
+    },
+    {
+      "name": "property",
+      "status": "ok",
+      "summary": "Sin estimación de valor para A Coruña, Oleiros, Spain. Ver gaps.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Geocoding no resolvió calle + número + municipio — sin consulta a Catastro"
+      ],
+      "raw": {
+        "geocode": {
+          "engine": "nominatim",
+          "display_name": "Estrada Madrid - A Coruña, O Caño, Iñás, O Real, Oleiros, A Coruña, Galicia, 15171, España",
+          "lat": "43.3209497",
+          "lon": "-8.3005439",
+          "postcode": "15171",
+          "city": "O Real",
+          "provincia": "A Coruña",
+          "state": "Galicia"
+        },
+        "mitma": {
+          "municipio": "Puerto Real",
+          "provincia": "Cádiz",
+          "eur_m2_total": 1747.5,
+          "eur_m2_nueva": 1995.6,
+          "eur_m2_usada": 1739.3,
+          "n_tasaciones": 140,
+          "granularidad": "municipio",
+          "periodo": "T4 2025",
+          "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+        },
+        "serpavi": {
+          "municipio": "Real",
+          "provincia": "Valencia/Valéncia",
+          "alquiler_eur_m2_mes_mediana": 4.35,
+          "alquiler_eur_m2_mes_p25": 3.31,
+          "alquiler_eur_m2_mes_p75": 5.05,
+          "alquiler_eur_mes_mediana": 400.0,
+          "alquiler_eur_mes_p25": 327.26,
+          "alquiler_eur_mes_p75": 485.0,
+          "superficie_tipica_m2": 102.5,
+          "n_viviendas_muestra": 60,
+          "granularidad": "municipio",
+          "periodo": "2024",
+          "source": "https://serpavi.mivau.gob.es/"
+        }
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.5454130759972031
+    },
+    {
+      "name": "image_search",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [instagram_handle]"
+      ],
+      "raw": {},
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.0
+    },
+    {
+      "name": "instagram",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [instagram_handle]"
+      ],
+      "raw": {},
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 3.758999810088426e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 10 module(s): ['boe', 'breach_scout', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'osint_web', 'twitter_check', 'xon', 'property']",
+      "detail": {
+        "modules": [
+          "boe",
+          "breach_scout",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "osint_web",
+          "twitter_check",
+          "xon",
+          "property"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.0001386599979014136,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'breach_scout', 'icloud_check', 'instagram_check', 'osint_web', 'twitter_check', 'xon', 'property']",
+      "detail": {
+        "modules": [
+          "boe",
+          "breach_scout",
+          "icloud_check",
+          "instagram_check",
+          "osint_web",
+          "twitter_check",
+          "xon",
+          "property"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.744131257997651,
+      "module": "boe",
+      "wave": 1,
+      "message": "ok in 1.19s (9 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.194051310994837,
+        "signals": 9,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 11.74532791999809,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "loaded cached ok (8 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 8,
+        "facts": 1,
+        "gaps": 0,
+        "cached_duration_s": 1.6350416960012808
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.745366843002557,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "ok in 11.70s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 11.703763384000922,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.745543643999554,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "no_data in 0.35s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.3504896540034679,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 11.745653350000794,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "loaded cached ok (1 signal(s), 2 fact(s), 7 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 1,
+        "facts": 2,
+        "gaps": 7,
+        "cached_duration_s": 147.86142705499879
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.74567237500014,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "ok in 1.18s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.1779716279997956,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 11.745769257002394,
+      "module": "xon",
+      "wave": 1,
+      "message": "loaded cached ok (5 signal(s), 4 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 5,
+        "facts": 4,
+        "gaps": 1,
+        "cached_duration_s": 0.9601038900000276
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.745791558001656,
+      "module": "property",
+      "wave": 1,
+      "message": "ok in 0.55s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.5454130759972031,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.745944615002372,
+      "module": "image_search",
+      "wave": null,
+      "message": "skipped — missing inputs ['instagram_handle']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "instagram_handle"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.745985913003096,
+      "module": "instagram",
+      "wave": null,
+      "message": "skipped — missing inputs ['instagram_handle']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "instagram_handle"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 11.746027740999125,
+      "module": null,
+      "wave": null,
+      "message": "7 ok, 2 skipped, 0 error(s)",
+      "detail": {
+        "ok": 7,
+        "error": 0,
+        "skipped": 2
+      }
+    }
+  ]
+}

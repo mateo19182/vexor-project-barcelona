@@ -1,0 +1,53 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com is registered on iCloud. | +34674527164 is registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to mateoamadoares@gmail.com",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS"
+    },
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to +34674527164",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "mateoamadoares@gmail.com",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "e49fca85-737e-4b23-b7d9-4499ca4d36a5",
+        "error": null
+      },
+      {
+        "platform": "iCloud",
+        "identifier": "+34674527164",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "9e9e38e7-a50b-469e-a21e-00945f54180b",
+        "error": null
+      }
+    ]
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 11.703763384000922
+}

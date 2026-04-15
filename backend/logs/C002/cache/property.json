@@ -1,0 +1,58 @@
+{
+  "name": "property",
+  "status": "ok",
+  "summary": "Sin estimación de valor para A Coruña, Oleiros, Spain. Ver gaps.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Geocoding no resolvió calle + número + municipio — sin consulta a Catastro"
+  ],
+  "raw": {
+    "geocode": {
+      "engine": "nominatim",
+      "display_name": "Estrada Madrid - A Coruña, O Caño, Iñás, O Real, Oleiros, A Coruña, Galicia, 15171, España",
+      "lat": "43.3209497",
+      "lon": "-8.3005439",
+      "postcode": "15171",
+      "city": "O Real",
+      "provincia": "A Coruña",
+      "state": "Galicia"
+    },
+    "mitma": {
+      "municipio": "Puerto Real",
+      "provincia": "Cádiz",
+      "eur_m2_total": 1747.5,
+      "eur_m2_nueva": 1995.6,
+      "eur_m2_usada": 1739.3,
+      "n_tasaciones": 140,
+      "granularidad": "municipio",
+      "periodo": "T4 2025",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+    },
+    "serpavi": {
+      "municipio": "Real",
+      "provincia": "Valencia/Valéncia",
+      "alquiler_eur_m2_mes_mediana": 4.35,
+      "alquiler_eur_m2_mes_p25": 3.31,
+      "alquiler_eur_m2_mes_p75": 5.05,
+      "alquiler_eur_mes_mediana": 400.0,
+      "alquiler_eur_mes_p25": 327.26,
+      "alquiler_eur_mes_p75": 485.0,
+      "superficie_tipica_m2": 102.5,
+      "n_viviendas_muestra": 60,
+      "granularidad": "municipio",
+      "periodo": "2024",
+      "source": "https://serpavi.mivau.gob.es/"
+    }
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 0.5454130759972031
+}

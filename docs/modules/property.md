@@ -67,7 +67,6 @@ Runs after any wave that may promote `address` into the context (the case seed n
 
 ```
 CATASTRO_API_KEY=
-NOMINATIM_USER_AGENT=VexorBCN-Enrichment/0.1 (contact@domain.com)
 ```
 
 See also [`CATASTRO_API.md`](../CATASTRO_API.md) for raw endpoint docs.
