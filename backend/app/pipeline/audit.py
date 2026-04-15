@@ -11,8 +11,12 @@ the API/CLI a replay and letting us render a compact summary at the end.
 
 from __future__ import annotations
 
+import json
+import re
 import sys
 import time
+from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel, Field, PrivateAttr
@@ -121,3 +125,30 @@ def render_summary(response: EnrichmentResponse) -> str:
             lines.append(f"  {name}: {g}")
 
     return "\n".join(lines)
+
+
+# Filesystem-safe case_id slug — keep letters/digits/`-`/`_`/`.`, collapse rest.
+_SAFE_SLUG = re.compile(r"[^A-Za-z0-9._-]+")
+
+
+def _slug(case_id: str) -> str:
+    s = _SAFE_SLUG.sub("_", case_id).strip("._-") or "case"
+    return s[:128]
+
+
+def write_run_log(response: EnrichmentResponse, logs_dir: str | Path) -> Path:
+    """Persist the full run as JSON at `{logs_dir}/{case_id}/{timestamp}.json`.
+
+    Returns the path written. Timestamp is UTC, filename-safe; the case_id is
+    slugged before being used as a directory name. One file per run — re-runs
+    of the same case accumulate side-by-side rather than overwriting.
+    """
+    ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    case_dir = Path(logs_dir) / _slug(response.case_id)
+    case_dir.mkdir(parents=True, exist_ok=True)
+    path = case_dir / f"{ts}.json"
+    path.write_text(
+        json.dumps(response.model_dump(), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    return path

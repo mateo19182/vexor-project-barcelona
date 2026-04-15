@@ -8,5 +8,5 @@ __pycache__/
 dist/
 build/
 .DS_Store
-.agent
 Dan/aliases.private.md
+.agent

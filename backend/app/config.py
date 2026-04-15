@@ -20,5 +20,10 @@ class Settings(BaseSettings):
     # a refresh.
     osintgram_output_dir: str = "../Osintgram/output"
 
+    # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
+    # full response (dossier + modules + audit events) at
+    # `{logs_dir}/{case_id}/{timestamp}.json`. Resolved from CWD.
+    logs_dir: str = "logs"
+
 
 settings = Settings()
