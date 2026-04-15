@@ -81,8 +81,4 @@ Famous or high-exposure subjects can generate very large API responses (thousand
 2. `ctx_patch` only promotes a field if it is currently empty on Context (confidence 1.0 seed values from case input are never overwritten).
 3. Username signals are capped at 10 per run to avoid flooding the output with noise from high-exposure subjects.
 
-## Model
-
-None — no LLM involved. Pure HTTP + defensive field extraction.
-
-Provider keys: `BREACH_INTEL_HOST`, `BREACH_INTEL_API_KEY`.
+None — no LLM involved. 

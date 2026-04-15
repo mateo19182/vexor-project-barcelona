@@ -7,8 +7,10 @@ Two small async helpers:
   ``HIKERAPI_TOKEN`` that the Instagram enrichment already reads from
   settings.
 * ``reverse_image_lookup`` — POST the image URL to SerpAPI's ``google_lens``
-  engine and normalize the ``visual_matches`` payload into a list of
-  :class:`VisualMatch` records.
+  engine with ``type=exact_matches`` and normalize the ``exact_matches``
+  payload into a list of :class:`VisualMatch` records. Exact-match only
+  (not generic visual matches) — keeps results to pages that host the
+  *same* image rather than visually-similar lookalikes.
 
 Deliberately thin: no interpretation of matches lives here — that's the
 module's job. This file only speaks HTTP.
@@ -36,7 +38,12 @@ def _log(msg: str) -> None:
 
 @dataclass(frozen=True)
 class VisualMatch:
-    """Normalized visual-match record from SerpAPI google_lens."""
+    """Normalized exact-match record from SerpAPI google_lens.
+
+    Name retained for backwards-compatibility — entries now come from the
+    ``exact_matches`` response field (``type=exact_matches``), meaning the
+    page hosts the same image bytes rather than a visually-similar one.
+    """
 
     url: str           # Page URL where the image appears
     title: str         # Page title (may be empty)
@@ -101,7 +108,13 @@ async def reverse_image_lookup(
     *,
     limit: int = 25,
 ) -> list[VisualMatch]:
-    """Run SerpAPI google_lens against ``image_url`` and return normalized matches.
+    """Run SerpAPI google_lens exact-match search and return normalized matches.
+
+    Uses ``type=exact_matches`` so SerpAPI returns only pages hosting the
+    *same* image, not visually-similar ones. This removes the bulk of the
+    lookalike noise (random faces that happen to match generic features)
+    while still being identity-unverified — a subject can share a stock
+    photo, or a photo may be reused across unrelated re-uploads.
 
     Raises ``RuntimeError`` if ``SERPAPI_API_KEY`` is unset — the caller is
     expected to check configuration first. HTTP / JSON errors surface as
@@ -113,6 +126,7 @@ async def reverse_image_lookup(
 
     params = {
         "engine": "google_lens",
+        "type": "exact_matches",
         "url": image_url,
         "api_key": api_key,
     }
@@ -125,7 +139,7 @@ async def reverse_image_lookup(
     if not isinstance(data, dict):
         return []
 
-    raw_matches = data.get("visual_matches") or []
+    raw_matches = data.get("exact_matches") or []
     if not isinstance(raw_matches, list):
         return []
 
@@ -142,17 +156,20 @@ async def reverse_image_lookup(
             domain = host.lower()
         except ValueError:
             domain = ""
+        # Prefer `title`; fall back to `source` (site name) when the entry
+        # has no page title — common for exact-match results.
+        title = str(raw.get("title") or raw.get("source") or "").strip()
         out.append(
             VisualMatch(
                 url=link,
-                title=str(raw.get("title") or "").strip(),
+                title=title,
                 domain=domain,
                 thumbnail=str(raw.get("thumbnail") or "").strip(),
             )
         )
 
     _log(
-        f"serpapi google_lens: {len(raw_matches)} match(es), "
+        f"serpapi google_lens exact_matches: {len(raw_matches)} match(es), "
         f"{len(out)} usable after limit={limit}"
     )
     return out

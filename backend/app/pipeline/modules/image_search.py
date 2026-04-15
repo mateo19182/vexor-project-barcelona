@@ -1,15 +1,21 @@
 """Reverse-image-search module.
 
-Runs SerpAPI's ``google_lens`` engine against the subject's Instagram profile
-picture, then surfaces each visual match as a candidate other-platform
-profile (or a generic web appearance).
+Runs SerpAPI's ``google_lens`` engine in ``exact_matches`` mode against the
+subject's Instagram profile picture, then surfaces each exact match as a
+candidate other-platform profile (or a generic web appearance).
 
-Critical honesty caveat: there is **no** identity-verification pass here.
-Two different people who happen to look alike, or a subject who uses a stock
-photo as their avatar, will both produce noisy matches. Everything emitted
-is hard-capped at low confidence and labelled as a visual-only match so
-synthesis and the human collector treat the entries as leads to verify — not
-as ground truth.
+Exact-match only — we deliberately skip the broader ``visual_matches``
+results because those are dominated by lookalike faces that share only
+generic features (hair colour, pose, crop) and produce an unusable amount
+of noise. Exact matches restrict the response to pages hosting the *same
+image bytes*, which is a far stronger signal.
+
+Critical honesty caveat: exact-image reuse is still **not** identity
+verification. A subject can avatar a stock photo, re-upload someone else's
+picture, or share a family photo — any of which will surface unrelated
+pages. Everything emitted is hard-capped at low confidence and labelled as
+a visual-only match so synthesis and the human collector treat the entries
+as leads to verify — not as ground truth.
 """
 
 from __future__ import annotations
@@ -195,11 +201,11 @@ class ImageSearchModule:
                     "Failed to resolve Instagram profile picture URL via "
                     "hikerapi — reverse-image search not attempted",
                 ],
-                raw={"provider": "serpapi_google_lens", "handle": handle},
+                raw={"provider": "serpapi_google_lens_exact", "handle": handle},
                 duration_s=time.monotonic() - t0,
             )
 
-        _log(f"running SerpAPI google_lens on {image_url[:80]}...")
+        _log(f"running SerpAPI google_lens exact_matches on {image_url[:80]}...")
         try:
             matches = await reverse_image_lookup(image_url, limit=MAX_MATCHES)
         except httpx.HTTPStatusError as exc:
@@ -210,7 +216,7 @@ class ImageSearchModule:
                 summary="Reverse-image search failed.",
                 gaps=[f"SerpAPI returned HTTP {exc.response.status_code}"],
                 raw={
-                    "provider": "serpapi_google_lens",
+                    "provider": "serpapi_google_lens_exact",
                     "image_url": image_url,
                     "handle": handle,
                     "http_status": exc.response.status_code,
@@ -225,7 +231,7 @@ class ImageSearchModule:
                 summary="Reverse-image search failed.",
                 gaps=[f"SerpAPI request error: {type(exc).__name__}"],
                 raw={
-                    "provider": "serpapi_google_lens",
+                    "provider": "serpapi_google_lens_exact",
                     "image_url": image_url,
                     "handle": handle,
                 },
@@ -263,10 +269,10 @@ class ImageSearchModule:
 
         gaps: list[str] = [UNVERIFIED_GAP]
         if not matches:
-            gaps.append("No visual matches found for the profile picture")
+            gaps.append("No exact image matches found for the profile picture")
             summary = (
-                f"Reverse image search on @{handle}'s profile picture returned "
-                f"no matches."
+                f"Reverse image search (exact match) on @{handle}'s profile "
+                f"picture returned no matches."
             )
         else:
             platform_summary = (
@@ -277,10 +283,11 @@ class ImageSearchModule:
                 else "no recognised platforms"
             )
             summary = (
-                f"Reverse image search on @{handle}'s profile picture returned "
-                f"{len(matches)} visual match(es); candidate profiles on "
-                f"{platform_summary}. Matches are unverified — they may be "
-                "lookalikes, stock photos, or unrelated accounts."
+                f"Reverse image search (exact match) on @{handle}'s profile "
+                f"picture returned {len(matches)} exact match(es); candidate "
+                f"profiles on {platform_summary}. Same-image reuse is not "
+                "identity-verified — matches may be stock photos, re-uploads, "
+                "or unrelated accounts."
             )
 
         _log(
@@ -296,10 +303,10 @@ class ImageSearchModule:
             facts=facts,
             gaps=gaps,
             raw={
-                "provider": "serpapi_google_lens",
+                "provider": "serpapi_google_lens_exact",
                 "handle": handle,
                 "image_url": image_url,
-                "visual_match_count": len(matches),
+                "exact_match_count": len(matches),
                 "platform_breakdown": dict(platform_counts),
                 "raw_matches": [
                     {

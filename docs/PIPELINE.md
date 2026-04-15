@@ -2,45 +2,70 @@
 
 How enrichment modules are scheduled, how they share data, and what they emit.
 
+---
+
+## Mental model
+
+The pipeline is built around three ideas:
+
+1. **A shared blackboard (`Context`)** — modules discover identity fields (LinkedIn URL, new emails, Instagram handle...) and write them back for later modules to consume. Writes are typed, confidence-tagged, and non-destructive: a downstream patch can only overwrite an existing field if its confidence is at least as high.
+
+2. **A two-channel output per module (`ModuleResult`)** — every module produces both *structured* output (typed signals, facts, social links, identity patches) consumed programmatically by synthesis and other modules, and *unstructured* output (prose summary, gaps) consumed by the LLM synthesis step and the human reader.
+
+3. **Dependency-ordered wave scheduling** — modules declare which Context fields they need (`requires`). The runner groups modules into waves based on what's currently available on the blackboard, runs each wave concurrently, merges the resulting patches, and advances to the next wave. This gives you parallelism within a wave and correct ordering across waves without any explicit graph wiring.
+
 ```
 Case (user input)
   │
   ▼
-Context (shared blackboard, seeded from case)
-  │                                   ▲
-  ▼                                   │
-Runner (wave scheduler)         ctx_patch (typed, confidence-tagged)
-  │                                   │
-  ├─► Module A ──► ModuleResult ──────┤
-  ├─► Module B ──► ModuleResult ──────┤
-  └─► Module C ──► ModuleResult ──────┘
-          │
-          ▼
-    Synthesis  ──► Dossier  ──► EnrichmentResponse
+Context  ◄──────────────────────────────────────────────────────────┐
+(blackboard, seeded from case)                                      │
+  │                                                                 │
+  ▼                                                                 │
+Runner (wave scheduler)                                   ctx_patch (typed, confidence-tagged)
+  │                                                                 │
+  ├─ wave 1 ──► [ModuleA, ModuleB]  ──► ModuleResult ──────────────┤
+  │                  (concurrent)          (structured + unstructured)
+  │                                                                 │
+  ├─ wave 2 ──► [ModuleC]           ──► ModuleResult ──────────────┤
+  │             (unblocked by wave 1 patches)
+  │
+  ▼
+Synthesis ──► Dossier ──► LlmSummary ──► EnrichmentResponse
 ```
-
-There are two distinct data channels and it's important to keep them straight:
-
-1. **Shared state** — the `Context` blackboard. Modules read identity fields (`ctx.name`, `ctx.linkedin_url`, …). Modules write via a typed `ContextPatch` with source + confidence. The runner applies patches with a confidence-beats rule.
-2. **Per-module output** — a `ModuleResult` with structured signals (consumed programmatically) and unstructured prose (consumed by synthesis / the human reader).
 
 ---
 
 ## Context: the shared blackboard
 
-`pipeline/base.py::Context` carries:
+`pipeline/base.py::Context` is the central data structure the runner threads through every module. It has two parts.
 
-| Field | Purpose |
+### Identity fields (read side)
+
+Flat string fields that modules read directly:
+
+| Field | Set by |
 |---|---|
-| `case` | The original immutable `Case`. |
-| `name`, `email`, `phone`, `address`, `instagram_handle`, `linkedin_url` | Identity fields. Flat strings, read directly. |
-| `identity_provenance` | `dict[str, AttributedValue]` — records who last wrote each identity field (source + confidence). |
+| `name` | Case input, or promoted by any module |
+| `email` | Case input, or promoted by any module |
+| `phone` | Case input, or promoted by any module |
+| `address` | Case input, or promoted by any module |
+| `instagram_handle` | Case input, or promoted by any module |
+| `linkedin_url` | Discovered — not in the Case; must be promoted by a module |
 
-Seeded fields from the Case land with `source="case_input"`, `confidence=1.0`. That means a patch must beat 1.0 to overwrite user-supplied data — effectively: it can't, unless explicitly set to 1.0 as well.
+The `case` field holds the original immutable `Case` object. If a module needs a field from the original input (debt amount, call outcome, etc.) it reads `ctx.case.debt_eur`, not `ctx`.
+
+### Seeding from the Case
+
+`context_from_case()` copies whatever identity fields the Case already provides onto the Context, tagging each with `source="case_input"` and `confidence=1.0`. That confidence ceiling matters: a module-produced patch must also carry `confidence=1.0` to overwrite a user-supplied value — in practice this means user data is treated as ground truth.
+
+### `identity_provenance` (write audit)
+
+Every identity field that has ever been written has a matching entry in `ctx.identity_provenance: dict[str, AttributedValue]`. An `AttributedValue` records `value`, `source` (URL or reference), and `confidence`. This is what makes every resolved field fully auditable — you can always see which module last wrote it and why.
 
 ### Writes: `ContextPatch`
 
-Modules never mutate Context directly. They return a `ContextPatch` on their `ModuleResult`:
+Modules never mutate `Context` directly. To propose an update they populate a `ContextPatch` on their `ModuleResult`:
 
 ```python
 return ModuleResult(
@@ -55,44 +80,54 @@ return ModuleResult(
 )
 ```
 
-The runner applies each field with this rule, in `runner.py::_apply_patch`:
+The runner applies each field with the **confidence-beats rule** (`runner.py::_apply_patch`):
 
-> An incoming entry overwrites the existing one iff its `confidence >= existing.confidence`. Ties go to the new writer (later modules tend to carry more evidence). Provenance is always updated.
+> An incoming patch for a field is applied iff `incoming.confidence >= existing.confidence`. Ties go to the new writer (later modules typically have more evidence). Both applied and rejected patches are recorded in the audit log.
 
-Why this matters:
+This matters for three reasons:
 
-- **No silent overwrites.** Two modules finding different LinkedIn URLs won't clobber each other; the stronger one wins and the loser is logged.
-- **Auditable identity.** Every resolved field carries where it came from and how sure we were.
-- **DAG unblocks naturally.** Downstream modules that `require` a field see the best version found so far.
+- **No silent overwrites.** If two modules disagree on a LinkedIn URL, the one with higher confidence wins and the loser is logged — nothing is silently discarded.
+- **Traceable identity.** Every resolved identity field carries a source and confidence score.
+- **DAG unblocks naturally.** A downstream module that `requires` a field sees the best version found so far, without any explicit dependency declaration between the two modules.
 
 ---
 
 ## Module output: `ModuleResult`
 
-Every module — success or failure — returns the same shape. Two channels:
+Every module — whether it succeeds, errors, or is skipped — returns the same `ModuleResult` shape. This uniformity is what lets the runner, synthesis, and the API response treat all modules identically.
 
-### Structured (programmatic)
+There are two distinct output channels. It's important to keep them separate.
 
-| Field | Type | Purpose |
+### Structured channel (machine-consumed)
+
+| Field | Type | Who consumes it |
 |---|---|---|
-| `social_links` | `list[SocialLink]` | Platform + URL + handle + confidence for each confirmed/candidate profile. |
-| `signals` | `list[Signal]` | Categorized observations, each with a `kind`. Synthesis can group, dedupe, and prioritize. |
-| `facts` | `list[Fact]` | Free-text claims that don't fit a signal kind. Keep small. |
-| `ctx_patch` | `ContextPatch` | Identity-field updates for downstream modules. |
+| `signals` | `list[Signal]` | Synthesis (deduplicated, ranked, fed to the Dossier) |
+| `facts` | `list[Fact]` | Synthesis (concatenated into the Dossier as free-form claims) |
+| `social_links` | `list[SocialLink]` | Synthesis and any module that needs confirmed profiles |
+| `ctx_patch` | `ContextPatch` | Runner (merged into Context after each wave) |
 
-### Unstructured (prose)
+Every entry in these lists must carry a `source` (URL or explicit reference) and a `confidence` in `[0, 1]`. Nothing goes in here without provenance.
 
-| Field | Type | Purpose |
+### Unstructured channel (human/LLM-consumed)
+
+| Field | Type | Who consumes it |
 |---|---|---|
-| `summary` | `str` | 1–4 sentence narrative of what this module found. Fed to the synthesis summary. |
-| `gaps` | `list[str]` | What couldn't be determined, caveats, ambiguities left unresolved. |
-| `raw` | `dict[str, Any]` | Module-specific debug exhaust (tool traces, counts, IDs). Never read by other code — kept for traceability. |
+| `summary` | `str` | Synthesis concatenates `ok`-module summaries into the Dossier prose |
+| `gaps` | `list[str]` | Synthesis collects all gaps; the collector reads them to know what couldn't be verified |
+| `raw` | `dict[str, Any]` | Debug exhaust only — tool traces, API response counts. Never read by other code |
 
-Plus bookkeeping: `name`, `status` (`ok` / `skipped` / `error`), `duration_s` (set by the runner).
+`gaps` is first-class output, not an error state. A module that found nothing should explain what it tried and why it came up empty. "No Instagram posts found — profile may be private" is a useful gap.
+
+### Bookkeeping fields
+
+- `name` — matches the module's `name` attribute; used in logs and the API response.
+- `status` — `"ok"` (ran and returned data), `"error"` (raised or returned an error), `"skipped"` (requirements not met).
+- `duration_s` — set by the runner from wall-clock; don't set this yourself.
 
 ### The Signal taxonomy
 
-`SignalKind` lives in `app/models.py`. Prefer `Signal` over `Fact` whenever any kind applies:
+`SignalKind` lives in `app/models.py`. Prefer `Signal` over `Fact` when any kind applies — structured signals are deduplicated and ranked by synthesis; free-form facts are not.
 
 | Kind | Example `value` |
 |---|---|
@@ -106,112 +141,120 @@ Plus bookkeeping: `name`, `status` (`ok` / `skipped` / `error`), `duration_s` (s
 | `affiliation` | `"UPC Barcelona alum"` |
 | `risk_flag` | `"Email in HaveIBeenPwned breach (LinkedIn 2021)"` |
 
-Rules, non-negotiable:
+Non-negotiable signal rules:
+- `value` is a short canonical form — not a sentence. Put context in `notes`.
+- Every signal carries a `source` (URL or reference) and a `confidence` in `[0, 1]`.
+- If nothing fits a kind, use `Fact` (free-text claim). Still sourced, still scored.
 
-- Every signal has a `source` (URL or explicit reference) and a `confidence` in `[0, 1]`.
-- `value` is a short canonical form, not a sentence. Put context in `notes`.
-- If nothing fits, use `Fact` (free-text claim). Still sourced, still scored.
-
-`SocialLink` is kept separate from `Signal` because it has its own shape (platform, url, handle) and is consumed specifically by social-media enrichers.
+`SocialLink` is separate from `Signal` because it has its own schema (platform, url, handle) and is consumed specifically by social-media enrichers.
 
 ---
 
-## Modules and the DAG
+## How dependencies work
 
-### Module contract
+### `requires` references Context fields, not module names
 
-Anything with these attributes is a module (`pipeline/base.py::Module`):
+A module's `requires` is a tuple of **Context field names** that must be truthy before the module can run:
 
 ```python
-class MyModule:
-    name: str                   # unique identifier; appears in logs + API response
-    requires: tuple[str, ...]   # Context field names that must be truthy before run
-    async def run(self, ctx: Context) -> ModuleResult: ...
+class LinkedInModule:
+    name = "linkedin"
+    requires = ("linkedin_url",)          # waits for ctx.linkedin_url to be set
+
+class OsintWebModule:
+    name = "osint_web"
+    requires = ("name",)                  # needs ctx.name — provided by the case seed
 ```
 
-Register an **instance** (not the class — modules may carry config) by appending to `REGISTRY` in `app/pipeline/modules/__init__.py`.
+This means dependencies are implicit: `linkedin` doesn't declare "I depend on `osint_web`" — it declares "I need `linkedin_url`". Any module that promotes `linkedin_url` onto the Context will unblock it. This keeps modules decoupled; they don't need to know who produces a field, only that the field exists.
 
 ### Wave scheduling
 
-`requires` declares an implicit DAG over Context fields. The runner (`pipeline/runner.py`) executes **waves**:
+The runner (`pipeline/runner.py::run_pipeline`) executes modules in waves:
 
 ```
-wave 1: run every module whose `requires` are already satisfied
-        (by the case-input seeding)
-        — all run concurrently via asyncio.gather
-wave 2: merge ctx_patches from wave 1; run every module newly unblocked
-…
-wave N: repeat until either all modules have run, or no module can advance
+wave 1: every module whose `requires` are already satisfied on Context
+        → these run concurrently via asyncio.gather
+        → ctx_patches are merged into Context after the wave completes
+
+wave 2: every module newly unblocked by wave-1 patches
+        → same concurrency, same merge
+
+…repeat until all modules have a result or no module can advance
 ```
 
-Three per-module outcomes:
-
-| `status` | When | Result shape |
-|---|---|---|
-| `ok` | `run()` returned normally | Full result. |
-| `error` | `run()` raised | Exception type + message in `gaps`. One bad module never poisons the pipeline. |
-| `skipped` | No wave ever satisfied its `requires` | `gaps` lists the missing inputs. |
+If a module's requirements are never met (no module in any prior wave promoted the needed field), it ends as `status="skipped"` with an explicit `gaps` entry listing what was missing. Nothing is silently dropped.
 
 ### Worked example
 
 ```
 REGISTRY = [OsintWebModule, LinkedInModule, InstagramModule]
-  OsintWebModule   requires=("name",)           # case provides this
-  LinkedInModule   requires=("linkedin_url",)   # osint_web promotes this
-  InstagramModule  requires=("instagram_handle",) # case provides or osint_web promotes
 
-wave 1: [osint_web, instagram]   # LinkedIn blocked: no linkedin_url yet
-        osint_web finds a LinkedIn profile @ 0.85 confidence
-          → ctx_patch.linkedin_url is merged into Context
-wave 2: [linkedin]
+  OsintWebModule    requires=("name",)               # case provides this
+  LinkedInModule    requires=("linkedin_url",)        # osint_web may promote this
+  InstagramModule   requires=("instagram_handle",)    # case provides or osint_web promotes
+
+wave 1: [osint_web, instagram]
+  osint_web finds a LinkedIn profile at confidence 0.85
+    → ctx_patch.linkedin_url applied to Context
+
+wave 2: [linkedin]   ← unblocked by the osint_web patch
 ```
 
-If `osint_web` hadn't found a LinkedIn, `linkedin` would end wave 2 as `skipped` with `gaps=["skipped: missing inputs [linkedin_url]"]`. No silent drop.
+If `osint_web` had found nothing, `linkedin` would end as `skipped` with `gaps=["skipped: missing inputs [linkedin_url]"]`.
 
 ---
-
-## Audit log
-
-Every run produces a structured `audit_log: list[AuditEvent]` that ships with `EnrichmentResponse`. The runner records events through `AuditLog.record(...)` (see `pipeline/audit.py`); each call appends a typed event AND streams a formatted line to stderr so dev progress is visible live.
-
-Event kinds (`models.py::EventKind`):
-
-| Kind | When | Key `detail` fields |
-|---|---|---|
-| `pipeline_started` | Entry to `run_pipeline` | `modules` |
-| `wave_started` | Each concurrent wave | `modules` |
-| `module_completed` | Per-module outcome | `status`, `duration_s`, `signals`, `facts`, `gaps` |
-| `ctx_patch_applied` | A patch field won | `field`, `value`, `source`, `confidence` |
-| `ctx_patch_rejected` | A patch field lost to higher existing confidence | `field`, `existing_confidence`, `incoming_confidence` |
-| `pipeline_completed` | Exit from `run_pipeline` | `ok`, `error`, `skipped` |
-
-Every event also carries `elapsed_s` (seconds since pipeline start), `module` (nullable), `wave` (nullable), and a human-readable `message`. The CLI renders a compact `render_summary()` block to stderr at end-of-run; consumers of the API can render the full timeline from `response.audit_log`.
 
 ## Synthesis
 
 `pipeline/synthesis.py::synthesize()` aggregates all `ModuleResult`s into a `Dossier`:
 
-- `summary` — joined from each `ok` module's `summary`.
-- `signals` — deduped by `(kind, value.strip().lower())`, keeping the highest-confidence instance.
-- `facts` — concatenated as-is.
-- `gaps` — concatenated as-is.
+- **`signals`** — deduplicated by `(kind, value.strip().lower())`, keeping the highest-confidence instance per pair. Two modules reporting `"Barcelona, ES"` collapse to one signal.
+- **`facts`** — concatenated as-is.
+- **`gaps`** — concatenated as-is.
+- **`summary`** — joined from each `ok`-module's `summary` field.
 
-This is a stub; once more modules land it becomes an LLM call that cross-references findings (contradiction flagging, collector-relevance ranking).
+The synthesis output feeds the `LlmSummary` step, which condenses the Dossier into a prose summary and key-fact bullets a downstream consumer (e.g. a voice agent) can read as context.
+
+---
+
+## Audit log
+
+Every run produces `audit_log: list[AuditEvent]` on the `EnrichmentResponse`. The runner emits events through `AuditLog.record()` (`pipeline/audit.py`); each call appends a typed event and streams a formatted line to stderr so live progress is visible during development.
+
+| Kind | When | Key `detail` fields |
+|---|---|---|
+| `pipeline_started` | Entry to `run_pipeline` | `modules` |
+| `wave_started` | Each wave | `modules` |
+| `module_completed` | Per-module outcome | `status`, `duration_s`, `signals`, `facts`, `gaps` |
+| `module_cache_hit` | Module served from cache | `status`, `signals`, `facts`, `gaps`, `cached_duration_s` |
+| `ctx_patch_applied` | A patch field won | `field`, `value`, `source`, `confidence` |
+| `ctx_patch_rejected` | A patch field lost | `field`, `existing_confidence`, `incoming_confidence` |
+| `pipeline_completed` | Exit from `run_pipeline` | `ok`, `error`, `skipped` |
+
+Every event carries `elapsed_s`, `module` (nullable), `wave` (nullable), and a human-readable `message`.
+
+---
+
+## Module caching
+
+When `logs_dir` is provided, `run_pipeline` persists each `ok` or `no_data` result to `{logs_dir}/{case_id}/cache/{module_name}.json`. On subsequent runs the cached result is loaded and `run()` is skipped — but the `ctx_patch` from the cached result is still applied, so downstream modules see the same context they would after a live run.
+
+Pass `fresh=True` to bypass the cache for all modules, or `fresh={"module_name"}` to bypass it for specific ones.
 
 ---
 
 ## Adding a new module — checklist
 
-1. Create `app/pipeline/modules/<name>.py` with a class that satisfies the `Module` protocol.
-2. Declare `requires` — the minimum identity fields you actually need. Less is more: over-declaring keeps the module permanently skipped.
+1. Create `app/pipeline/modules/<name>.py` with a class satisfying the `Module` protocol.
+2. Declare `requires` as a tuple of Context field names. Only list fields you actually read — over-declaring keeps the module permanently skipped.
 3. In `run()`:
-   - **Success** → `ModuleResult(status="ok", ...)`. Populate `signals` for anything categorizable; fall back to `facts` only for one-offs. Every claim carries a `source` and a `confidence`.
-   - **Expected failure** (missing API key, private profile, HTTP 404) → `ModuleResult(status="error", gaps=[...])`. Don't raise.
-   - **Unexpected exceptions** → just let them propagate; the runner catches them and marks the module `error`.
-   - If you discovered anything downstream modules could use (a LinkedIn URL, a confirmed email) → populate `ctx_patch` with an `AttributedValue`.
+   - **Success** → `ModuleResult(status="ok", ...)`. Populate `signals` for anything categorizable; fall back to `facts` for one-offs. Every claim needs a `source` and a `confidence`.
+   - **Expected failure** (missing key, private profile, 404) → `ModuleResult(status="error", gaps=[...])`. Don't raise — exceptions are for unexpected errors.
+   - **Discovered identity data** (LinkedIn URL, confirmed email) → populate `ctx_patch` with an `AttributedValue`. This is how you unblock downstream modules.
 4. Register the instance in `app/pipeline/modules/__init__.py::REGISTRY`.
 
-The runner handles scheduling, concurrency, timing, exception isolation, and provenance logging. You don't.
+The runner handles scheduling, concurrency, timing, exception isolation, caching, and provenance logging. Modules do none of that.
 
 ---
 
@@ -219,12 +262,12 @@ The runner handles scheduling, concurrency, timing, exception isolation, and pro
 
 | Thing | File |
 |---|---|
-| `Case`, `Signal`, `Fact`, `SocialLink`, `AttributedValue`, `ContextPatch`, `Dossier`, `AuditEvent` | `app/models.py` |
-| `Context`, `ModuleResult`, `Module` protocol | `app/pipeline/base.py` |
+| `Case`, `Signal`, `Fact`, `SocialLink`, `AttributedValue`, `ContextPatch`, `Dossier`, `LlmSummary`, `AuditEvent` | `app/models.py` |
+| `Context`, `context_from_case`, `ModuleResult`, `Module` protocol | `app/pipeline/base.py` |
 | Wave scheduler, `_apply_patch` | `app/pipeline/runner.py` |
-| Dossier aggregation + dedup | `app/pipeline/synthesis.py` |
+| Dossier aggregation + signal dedup | `app/pipeline/synthesis.py` |
 | `AuditLog`, `render_summary` | `app/pipeline/audit.py` |
 | Module registry | `app/pipeline/modules/__init__.py` |
 | Module implementations | `app/pipeline/modules/<name>.py` |
 | HTTP entry point | `app/main.py` |
-| CLI entry point | `app/cli.py` (registered as `enrich` in `pyproject.toml`) |
+| CLI entry point | `app/cli.py` |

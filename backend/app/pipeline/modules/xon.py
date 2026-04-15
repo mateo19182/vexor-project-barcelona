@@ -92,9 +92,6 @@ class XposedOrNotModule:
         # ── no breach data at all ──────────────────────────────────────────
         if analytics_status == 404 and check_status in (404, 0, -1):
             gaps.append("No breach records found for this email on XposedOrNot")
-            gaps.append(
-                "Phone number breach lookup not supported — no free provider available"
-            )
             return ModuleResult(
                 name=self.name,
                 status="no_data",
@@ -107,9 +104,6 @@ class XposedOrNotModule:
         if analytics_status == -1:
             err_msg = analytics if isinstance(analytics, str) else "request failed"
             gaps.append(f"XposedOrNot API error: {err_msg}")
-            gaps.append(
-                "Phone number breach lookup not supported — no free provider available"
-            )
             return ModuleResult(
                 name=self.name,
                 status="error",
@@ -128,11 +122,6 @@ class XposedOrNotModule:
             signals, facts, gaps = _parse_check(check, email, source_url)
         else:
             gaps.append("XposedOrNot returned an unexpected response; see raw for details")
-
-        # Phone note always added
-        gaps.append(
-            "Phone number breach lookup not supported — no free provider available"
-        )
 
         breach_count = len([s for s in signals if s.kind == "contact"])
         risk_count = len([s for s in signals if s.kind == "risk_flag"])
