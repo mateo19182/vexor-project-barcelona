@@ -16,3 +16,8 @@ modules:
     - address data
     - haveibeen pwned
     - clay
+
+~~get profile pictore and do search~~ — done: `image_search` module (SerpAPI google_lens)
+
+
+limited ourselves to free apis

@@ -1,0 +1,154 @@
+{
+  "name": "breach_scout",
+  "status": "ok",
+  "summary": "Found in 1 breach record(s) | 7 new phone(s) discovered: 2017-05-11, 77.27.13.39, 9fdb6ec157a6eb6da07ca48b11a8deab",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Identity found in 1 breach record(s) in the breach intelligence database",
+      "source": "https://9ghz.com",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Debtor identifiers found in 1 breach record(s)",
+      "source": "https://9ghz.com",
+      "confidence": 0.85,
+      "notes": "Breaches: breach database"
+    },
+    {
+      "kind": "contact",
+      "value": "2017-05-11",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    },
+    {
+      "kind": "contact",
+      "value": "77.27.13.39",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    },
+    {
+      "kind": "contact",
+      "value": "9fdb6ec157a6eb6da07ca48b11a8deab",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    },
+    {
+      "kind": "contact",
+      "value": "2017-03-29",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    },
+    {
+      "kind": "contact",
+      "value": "77.27.14.71",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    },
+    {
+      "kind": "contact",
+      "value": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    },
+    {
+      "kind": "contact",
+      "value": "2020-06-29",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "keywords": [
+      "Mateo Amado Ares",
+      "mateoamadoares@gmail.com",
+      "+34674527164"
+    ],
+    "mode": "authenticated_batch",
+    "response": {
+      "code": 0,
+      "msg": "ok",
+      "data": [
+        {
+          "data": [],
+          "keyword": "Mateo Amado Ares",
+          "total_count": 0
+        },
+        {
+          "data": [
+            {
+              "email": "mateoamadoares@gmail.com",
+              "source": {
+                "breach_date": "2017-05-11",
+                "domain": "edmodo.com",
+                "id": "325635",
+                "record_count": 43423561,
+                "region": "",
+                "title": "Edmodo"
+              },
+              "user_name": "ma. a."
+            },
+            {
+              "email": "mateoamadoares@gmail.com",
+              "ip_address": "77.27.13.39",
+              "password": "9fdb6ec157a6eb6da07ca48b11a8deab",
+              "source": {
+                "breach_date": "2017-03-29",
+                "domain": "duelingnetwork.com",
+                "id": "343259",
+                "record_count": 6486626,
+                "region": "",
+                "title": "Dueling Network"
+              },
+              "user_name": "mateo19182"
+            },
+            {
+              "email": "mateoamadoares@gmail.com",
+              "ip_address": "77.27.14.71",
+              "password": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+              "region": "ES",
+              "source": {
+                "breach_date": "2020-06-29",
+                "domain": "wattpad.com",
+                "id": "513644",
+                "record_count": 268765495,
+                "region": "",
+                "title": "Wattpad"
+              },
+              "user_name": "mateo19182"
+            }
+          ],
+          "keyword": "mateoamadoares@gmail.com",
+          "total_count": 3
+        },
+        {
+          "data": [],
+          "keyword": "+34674527164",
+          "total_count": 0
+        }
+      ]
+    },
+    "status_code": 200,
+    "response_bytes": 978
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 1.6350416960012808
+}

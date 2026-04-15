@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     # web_fetch tools for an Exa-backed client-side tool loop (exa_search →
     # search_and_contents). Absent → fall back to the Anthropic web tools.
     exa_api_key: str = ""
+    # SerpAPI key used by the image_search module's google_lens reverse-image
+    # lookup. Absent → the module skips cleanly.
+    serpapi_api_key: str = ""
     # HikerAPI token for Osintgram's hikerapi-backed mode. Exported into the
     # subprocess env as HIKERAPI_TOKEN (Osintgram reads it case-sensitive).
     hikerapi_token: str = ""
@@ -23,6 +26,11 @@ class Settings(BaseSettings):
     # we don't re-download the same target. Delete a handle's subdir to force
     # a refresh.
     osintgram_output_dir: str = "../Osintgram/output"
+
+    # Breach intelligence provider. Host is kept in env so the vendor is not
+    # hard-coded anywhere in source. Leave blank to disable the module.
+    breach_intel_host: str = ""
+    breach_intel_api_key: str = ""
 
     # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
     # full response (dossier + modules + audit events) at

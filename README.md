@@ -16,7 +16,9 @@ uv sync
 |-----|-------------|
 | `ANTHROPIC_API_KEY` | Web OSINT module (Claude) |
 | `OPENROUTER_API_KEY` | vision analysis |
-| `HIKERAPI_TOKEN` | Instagram data fetching |
+| `HIKERAPI_TOKEN` | Instagram data fetching + `image_search` profile-pic lookup |
+| `EXA_API_KEY` | Optional — upgrades `osint_web` to use Exa for search (better people-finding). Falls back to Anthropic's built-in web tools when absent. |
+| `SERPAPI_API_KEY` | Optional — enables `image_search` (Google Lens reverse image search on the IG profile picture). |
 
 ## Run
 
@@ -44,9 +46,10 @@ curl -s -X POST http://localhost:8000/enrich \
 
 | Module | Requires | Wave | Data source |
 |--------|----------|------|-------------|
-| `osint_web` | `name` | 1 | Claude web search + fetch |
+| `osint_web` | `name` | 1 | Exa (if `EXA_API_KEY` set) or Claude web search + fetch |
 | `xon` | `email` | 1 | XposedOrNot — breach & registration history |
 | `instagram` | `instagram_handle` | 2 | Osintgram (handle may be found by wave 1) |
+| `image_search` | `instagram_handle` | 2 | SerpAPI Google Lens reverse image search on the IG profile picture (unverified visual matches — low-confidence leads only) |
 
 **Wave 1** modules run in parallel. `instagram` waits for wave 1 to finish since `osint_web` may discover the handle from the name.
 

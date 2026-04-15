@@ -1,0 +1,315 @@
+"""Reverse-image-search module.
+
+Runs SerpAPI's ``google_lens`` engine against the subject's Instagram profile
+picture, then surfaces each visual match as a candidate other-platform
+profile (or a generic web appearance).
+
+Critical honesty caveat: there is **no** identity-verification pass here.
+Two different people who happen to look alike, or a subject who uses a stock
+photo as their avatar, will both produce noisy matches. Everything emitted
+is hard-capped at low confidence and labelled as a visual-only match so
+synthesis and the human collector treat the entries as leads to verify — not
+as ground truth.
+"""
+
+from __future__ import annotations
+
+import re
+import sys
+import time
+from collections import Counter
+from urllib.parse import urlparse
+
+import httpx
+
+from app.config import settings
+from app.enrichment.reverse_image import (
+    VisualMatch,
+    fetch_instagram_profile_pic,
+    reverse_image_lookup,
+)
+from app.models import Fact, SocialLink
+from app.pipeline.base import Context, ModuleResult
+
+# Confidence ceilings — matches are visual-only, identity unverified.
+SOCIAL_LINK_CONFIDENCE = 0.3
+FACT_CONFIDENCE = 0.2
+
+# Cap the number of matches we pull from SerpAPI; more = noisier.
+MAX_MATCHES = 25
+
+# Same warning string used on every run — keeps the dossier consistent and
+# makes it easy to grep for unverified findings.
+UNVERIFIED_GAP = (
+    "Visual-match results are not identity-verified; manual or LLM "
+    "same-person check required before trusting any discovered profile."
+)
+
+# domain (lowercased, suffix-match) → canonical platform name
+PLATFORM_BY_DOMAIN: dict[str, str] = {
+    "linkedin.com": "LinkedIn",
+    "twitter.com": "Twitter",
+    "x.com": "Twitter",
+    "facebook.com": "Facebook",
+    "fb.com": "Facebook",
+    "instagram.com": "Instagram",
+    "threads.net": "Threads",
+    "tiktok.com": "TikTok",
+    "github.com": "GitHub",
+    "youtube.com": "YouTube",
+    "reddit.com": "Reddit",
+    "pinterest.com": "Pinterest",
+    "medium.com": "Medium",
+    "substack.com": "Substack",
+    "about.me": "About.me",
+    "behance.net": "Behance",
+    "dribbble.com": "Dribbble",
+    "stackoverflow.com": "Stack Overflow",
+    "quora.com": "Quora",
+}
+
+
+def _log(msg: str) -> None:
+    print(f"[image_search] {msg}", file=sys.stderr, flush=True)
+
+
+def _platform_for(domain: str) -> str | None:
+    """Return the canonical platform name for ``domain``, or ``None``.
+
+    Matches by hostname suffix so ``www.linkedin.com`` and ``m.facebook.com``
+    resolve correctly. Longest suffix wins (so ``x.com`` does not shadow
+    ``something.x.com`` if that entry were ever added).
+    """
+    if not domain:
+        return None
+    domain = domain.lower().lstrip(".")
+    for suffix in sorted(PLATFORM_BY_DOMAIN, key=len, reverse=True):
+        if domain == suffix or domain.endswith(f".{suffix}"):
+            return PLATFORM_BY_DOMAIN[suffix]
+    return None
+
+
+# Conservative handle extractors — only match patterns we're confident about.
+# Misparsed handles are worse than no handle.
+_HANDLE_PATTERNS: dict[str, re.Pattern[str]] = {
+    "LinkedIn": re.compile(r"^/in/([A-Za-z0-9_\-%.]+)/?"),
+    "GitHub": re.compile(r"^/([A-Za-z0-9][A-Za-z0-9_\-]*)/?$"),
+    "Twitter": re.compile(r"^/([A-Za-z0-9_]+)/?$"),
+    "TikTok": re.compile(r"^/@([A-Za-z0-9_.]+)/?"),
+    "Instagram": re.compile(r"^/([A-Za-z0-9_.]+)/?$"),
+    "Medium": re.compile(r"^/@([A-Za-z0-9_.\-]+)/?"),
+    "Threads": re.compile(r"^/@([A-Za-z0-9_.]+)/?"),
+    "Behance": re.compile(r"^/([A-Za-z0-9_\-]+)/?$"),
+    "Dribbble": re.compile(r"^/([A-Za-z0-9_\-]+)/?$"),
+}
+
+# Twitter paths that look like handles but aren't (reserved routes).
+_TWITTER_RESERVED = {
+    "i", "status", "home", "explore", "notifications", "messages",
+    "search", "settings", "login", "signup", "tos", "privacy",
+}
+
+
+def _extract_handle(platform: str, url: str) -> str | None:
+    pattern = _HANDLE_PATTERNS.get(platform)
+    if not pattern:
+        return None
+    try:
+        path = urlparse(url).path or "/"
+    except ValueError:
+        return None
+    m = pattern.match(path)
+    if not m:
+        return None
+    handle = m.group(1).strip()
+    if not handle:
+        return None
+    if platform == "Twitter" and handle.lower() in _TWITTER_RESERVED:
+        return None
+    return handle
+
+
+def _is_self_match(match: VisualMatch, subject_handle: str) -> bool:
+    """True if this match is the same IG profile we started from."""
+    if "instagram.com" not in match.domain:
+        return False
+    try:
+        path = urlparse(match.url).path or "/"
+    except ValueError:
+        return False
+    segments = [s for s in path.split("/") if s]
+    if not segments:
+        return False
+    return segments[0].lower() == subject_handle.lower()
+
+
+class ImageSearchModule:
+    name = "image_search"
+    requires: tuple[str, ...] = ("instagram_handle",)
+
+    async def run(self, ctx: Context) -> ModuleResult:
+        t0 = time.monotonic()
+
+        handle = (ctx.instagram_handle or "").lstrip("@").strip()
+        if not handle:
+            # The runner should not schedule us in this case (requires), but
+            # guard defensively.
+            return ModuleResult(
+                name=self.name,
+                status="skipped",
+                gaps=["No instagram_handle on context"],
+                duration_s=time.monotonic() - t0,
+            )
+
+        if not settings.serpapi_api_key:
+            return ModuleResult(
+                name=self.name,
+                status="skipped",
+                summary="Reverse-image search disabled (SERPAPI_API_KEY not set).",
+                gaps=["SERPAPI_API_KEY not configured — module disabled"],
+                duration_s=time.monotonic() - t0,
+            )
+        if not settings.hikerapi_token:
+            return ModuleResult(
+                name=self.name,
+                status="skipped",
+                summary="Reverse-image search disabled (HIKERAPI_TOKEN not set).",
+                gaps=[
+                    "HIKERAPI_TOKEN not configured — cannot resolve Instagram "
+                    "profile picture URL"
+                ],
+                duration_s=time.monotonic() - t0,
+            )
+
+        _log(f"looking up profile pic for @{handle}")
+        image_url = await fetch_instagram_profile_pic(handle)
+        if not image_url:
+            return ModuleResult(
+                name=self.name,
+                status="ok",
+                summary=(
+                    f"Could not resolve Instagram profile picture URL for "
+                    f"@{handle}; reverse-image search skipped."
+                ),
+                gaps=[
+                    "Failed to resolve Instagram profile picture URL via "
+                    "hikerapi — reverse-image search not attempted",
+                ],
+                raw={"provider": "serpapi_google_lens", "handle": handle},
+                duration_s=time.monotonic() - t0,
+            )
+
+        _log(f"running SerpAPI google_lens on {image_url[:80]}...")
+        try:
+            matches = await reverse_image_lookup(image_url, limit=MAX_MATCHES)
+        except httpx.HTTPStatusError as exc:
+            _log(f"serpapi HTTP {exc.response.status_code}: {exc.response.text[:200]}")
+            return ModuleResult(
+                name=self.name,
+                status="error",
+                summary="Reverse-image search failed.",
+                gaps=[f"SerpAPI returned HTTP {exc.response.status_code}"],
+                raw={
+                    "provider": "serpapi_google_lens",
+                    "image_url": image_url,
+                    "handle": handle,
+                    "http_status": exc.response.status_code,
+                },
+                duration_s=time.monotonic() - t0,
+            )
+        except (httpx.HTTPError, ValueError) as exc:
+            _log(f"serpapi request failed: {exc}")
+            return ModuleResult(
+                name=self.name,
+                status="error",
+                summary="Reverse-image search failed.",
+                gaps=[f"SerpAPI request error: {type(exc).__name__}"],
+                raw={
+                    "provider": "serpapi_google_lens",
+                    "image_url": image_url,
+                    "handle": handle,
+                },
+                duration_s=time.monotonic() - t0,
+            )
+
+        # Drop the source IG profile itself — it's not a lead.
+        matches = [m for m in matches if not _is_self_match(m, handle)]
+
+        social_links: list[SocialLink] = []
+        facts: list[Fact] = []
+        platform_counts: Counter[str] = Counter()
+
+        for match in matches:
+            platform = _platform_for(match.domain)
+            if platform:
+                platform_counts[platform] += 1
+                social_links.append(
+                    SocialLink(
+                        platform=platform,
+                        url=match.url,
+                        handle=_extract_handle(platform, match.url),
+                        confidence=SOCIAL_LINK_CONFIDENCE,
+                    )
+                )
+            else:
+                title = match.title or match.domain or match.url
+                facts.append(
+                    Fact(
+                        claim=f"Profile picture also appears on: {title}",
+                        source=match.url,
+                        confidence=FACT_CONFIDENCE,
+                    )
+                )
+
+        gaps: list[str] = [UNVERIFIED_GAP]
+        if not matches:
+            gaps.append("No visual matches found for the profile picture")
+            summary = (
+                f"Reverse image search on @{handle}'s profile picture returned "
+                f"no matches."
+            )
+        else:
+            platform_summary = (
+                ", ".join(
+                    f"{p} ({n})" for p, n in platform_counts.most_common()
+                )
+                if platform_counts
+                else "no recognised platforms"
+            )
+            summary = (
+                f"Reverse image search on @{handle}'s profile picture returned "
+                f"{len(matches)} visual match(es); candidate profiles on "
+                f"{platform_summary}. Matches are unverified — they may be "
+                "lookalikes, stock photos, or unrelated accounts."
+            )
+
+        _log(
+            f"done: {len(matches)} match(es), {len(social_links)} social_link(s), "
+            f"{len(facts)} fact(s), platforms={dict(platform_counts)}"
+        )
+
+        return ModuleResult(
+            name=self.name,
+            status="ok",
+            summary=summary,
+            social_links=social_links,
+            facts=facts,
+            gaps=gaps,
+            raw={
+                "provider": "serpapi_google_lens",
+                "handle": handle,
+                "image_url": image_url,
+                "visual_match_count": len(matches),
+                "platform_breakdown": dict(platform_counts),
+                "raw_matches": [
+                    {
+                        "url": m.url,
+                        "title": m.title,
+                        "domain": m.domain,
+                        "thumbnail": m.thumbnail,
+                    }
+                    for m in matches
+                ],
+            },
+            duration_s=time.monotonic() - t0,
+        )

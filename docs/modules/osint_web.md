@@ -4,7 +4,14 @@
 
 ## Overview
 
-Uses Claude with server-side `web_search` and `web_fetch` tools to build a public profile of a debtor from open web sources. Anthropic runs the agentic search loop server-side inside a single API call; this module receives the interleaved tool-use/result blocks and a final JSON text block.
+Builds a public profile of a debtor from open web sources. Supports two retrieval backends, selected automatically via environment:
+
+| Backend | Activated when | How it works |
+|---|---|---|
+| **Exa** | `EXA_API_KEY` is set | Client-side tool loop: Claude emits `exa_search` tool calls; the module executes `exa.search_and_contents()` and posts results back as `tool_result` blocks. One tool handles both search and content extraction. |
+| **Anthropic web tools** | `EXA_API_KEY` absent | Server-side: Anthropic runs the `web_search` + `web_fetch` agentic loop inside a single API call; the module resumes on `pause_turn`. |
+
+The `raw.backend` field on the `ModuleResult` records which path ran (`"exa"` or `"anthropic_web"`).
 
 ```
 requires: ("name",)
@@ -43,9 +50,13 @@ Priority order per the system prompt:
 
 ## Agentic loop handling
 
-The model runs with `thinking: {"type": "adaptive"}` and a `json_schema` output constraint. If Anthropic's server-side iteration cap fires (`stop_reason=pause_turn`), the module replays the conversation and resumes — up to `MAX_RESUMES=2` times.
+Both backends run with `thinking: {"type": "adaptive"}` and a `json_schema` output constraint on the final text block.
 
-Model: `claude-sonnet-4-6`, `max_tokens=16000`.
+**Exa path:** Standard client-side tool loop. Claude emits `tool_use` blocks with `exa_search`; the module executes Exa via `asyncio.to_thread` (sync SDK), posts `tool_result` blocks, and loops until `stop_reason != "tool_use"`. Loop cap: `MAX_EXA_ITERS=6`.
+
+**Anthropic web path:** Server-side loop inside one API call. If Anthropic's iteration cap fires (`stop_reason=pause_turn`), the module replays and resumes — up to `MAX_RESUMES=1` time.
+
+Model: `claude-sonnet-4-6`, `max_tokens=8000`.
 
 ## ctx_patch promotion
 
