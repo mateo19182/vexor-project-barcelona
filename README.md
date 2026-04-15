@@ -1,6 +1,6 @@
 # Vexor × Project Barcelona
 
-AI enrichment pipeline for debtor cases. Takes a minimal case (name, country, debt amount, contact history) and returns actionable signals with traceable sources.
+AI enrichment pipeline for debtor cases. Takes a minimal case and returns actionable signals with traceable sources.
 
 ## Setup
 
