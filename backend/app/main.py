@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 
-from app.enrichment.instagram import enrich_instagram
-from app.models import Case, EnrichmentResponse
+from app.models import Case, EnrichmentResponse, ModuleResultView
+from app.pipeline.base import context_from_case
+from app.pipeline.modules import REGISTRY
+from app.pipeline.runner import run_pipeline
+from app.pipeline.synthesis import synthesize
 
 app = FastAPI(title="Vexor BCN — debtor enrichment")
 
@@ -13,14 +16,15 @@ def health() -> dict[str, str]:
 
 @app.post("/enrich", response_model=EnrichmentResponse)
 async def enrich(case: Case) -> EnrichmentResponse:
-    """Accept a case row and run the enrichment pipeline.
+    """Run every registered enrichment module against the case and synthesize."""
+    ctx = context_from_case(case)
+    results = await run_pipeline(ctx, REGISTRY)
+    dossier = await synthesize(ctx, results)
 
-    Currently the pipeline has one step: Instagram OSINT (via Osintgram +
-    OpenRouter vision). More steps will follow.
-    """
-    instagram = await enrich_instagram(case) if case.instagram_handle else None
+    status = "enriched" if any(r.status == "ok" for r in results) else "no_data"
     return EnrichmentResponse(
         case_id=case.case_id,
-        status="enriched" if instagram else "received",
-        instagram=instagram,
+        status=status,
+        dossier=dossier,
+        modules=[ModuleResultView(**r.model_dump()) for r in results],
     )

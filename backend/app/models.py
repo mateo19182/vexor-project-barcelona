@@ -1,3 +1,5 @@
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 
@@ -31,6 +33,15 @@ class Fact(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
 
 
+class SocialLink(BaseModel):
+    """A confirmed (or candidate) social media / professional profile."""
+
+    platform: str
+    url: str
+    handle: str | None = None
+    confidence: float = Field(ge=0.0, le=1.0)
+
+
 class InstagramEnrichment(BaseModel):
     """Output of the Instagram OSINT enrichment step."""
 
@@ -43,9 +54,36 @@ class InstagramEnrichment(BaseModel):
     video_count: int = 0  # counted but not analyzed
 
 
+class Dossier(BaseModel):
+    """Synthesized final view across all modules — what a collector reads first."""
+
+    summary: str
+    facts: list[Fact] = []
+    gaps: list[str] = []
+
+
+class ModuleResultView(BaseModel):
+    """How a single module's output is surfaced in the API response.
+
+    Mirrors `pipeline.base.ModuleResult` but is declared here so the HTTP
+    schema doesn't depend on pipeline internals.
+    """
+
+    name: str
+    status: str
+    summary: str = ""
+    social_links: list[SocialLink] = []
+    facts: list[Fact] = []
+    gaps: list[str] = []
+    raw: dict[str, Any] = Field(default_factory=dict)
+    ctx_updates: dict[str, Any] = Field(default_factory=dict)
+    duration_s: float = 0.0
+
+
 class EnrichmentResponse(BaseModel):
     """Shape of the enriched profile. Grows as pipeline steps are added."""
 
     case_id: str
     status: str = "received"
-    instagram: InstagramEnrichment | None = None
+    dossier: Dossier | None = None
+    modules: list[ModuleResultView] = []

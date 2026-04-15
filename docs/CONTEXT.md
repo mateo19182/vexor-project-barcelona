@@ -23,7 +23,7 @@ Case fields:
 
 | Source | Notes |
 |---|---|
-| **Data Breaches** | betting, traveling, events, G Maps Reviews, second hand (wallapop...) |
+| **Data Breaches** | betting, traveling, events, G Maps Reviews, second hand (wallapop...) | hveibeenpwnd
 | **Family?** | Investigate family connections |
 | **RRSS** | Social media profiles |
 | **Clay** | Clay enrichment API |
@@ -45,3 +45,8 @@ Merge Data ——> Find Out What's Relevant
 ```
 
 Combine all enrichment sources, then filter for actionable signals relevant to debt collection.
+
+
+---
+
+as a lead crm for debtors?
