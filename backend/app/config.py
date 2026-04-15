@@ -56,5 +56,10 @@ class Settings(BaseSettings):
 
     catastro_api_key: str = ""
 
+    # ── Google Maps reviews module ──────────────────────────────────────────
+    # JSON dict copied from Chrome DevTools → Application → Cookies → google.com
+    # Required keys: SID, SSID, APISID, SAPISID, __Secure-1PAPISID, NID
+    google_session_cookies: str = ""
+
 
 settings = Settings()

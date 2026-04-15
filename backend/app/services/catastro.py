@@ -173,6 +173,80 @@ def parse_tipo_via(road: str) -> tuple[str, str]:
     return tipo, (nombre_raw.upper() or road_clean.upper())
 
 
+def parse_planta_puerta(address: str) -> tuple[str | None, str | None]:
+    """Extrae planta y puerta del texto libre de una dirección.
+
+    Catastro usa códigos de planta como: BJ (bajo), EN (entresuelo),
+    PR (principal), AT (ático), SS (sótano), y números ("01", "02"…).
+
+    Ejemplos:
+      "Entresuelo 1"      → ("EN", "01")
+      "3º Izquierda"      → ("03", "IZ")
+      "Bajo B"            → ("BJ", "B")
+      "Planta 4, Puerta 2"→ ("04", "02")
+      "Ático Derecha"     → ("AT", "DR")
+      "Principal"         → ("PR", None)
+    """
+    text = address.lower()
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+
+    # --- Planta ---
+    planta: str | None = None
+
+    planta_keywords = [
+        (r"\bentresuelo\b",  "EN"),
+        (r"\bentsol\b",      "EN"),   # catalán
+        (r"\bprincipal\b",   "PR"),
+        (r"\bppal\b",        "PR"),
+        (r"\batico\b",       "AT"),
+        (r"\bsobreatic[oo]\b", "SA"),
+        (r"\bsotano\b",      "SS"),
+        (r"\bsemisotano\b",  "SS"),
+        (r"\bbajo\b",        "BJ"),
+        (r"\bbajos\b",       "BJ"),
+    ]
+    for pattern, code in planta_keywords:
+        if re.search(pattern, text):
+            planta = code
+            break
+
+    if planta is None:
+        # Números de planta: "3º", "3°", "3o", "planta 3", "p3", "piso 3"
+        m = re.search(r"(?:planta|piso|p\.?)\s*(\d{1,2})|(\d{1,2})\s*[º°o]", text)
+        if m:
+            num = m.group(1) or m.group(2)
+            planta = str(int(num)).zfill(2)
+
+    # --- Puerta ---
+    puerta: str | None = None
+
+    puerta_keywords = [
+        (r"\bizquierda\b|\bizq\.?\b|\biz\b", "IZ"),
+        (r"\bderecha\b|\bdcha\.?\b|\bdr\b",  "DR"),
+        (r"\bcentro\b|\bcen\b",              "CE"),
+        (r"\binterior\b|\bint\b",            "IN"),
+        (r"\bexterior\b|\bext\b",            "EX"),
+    ]
+    for pattern, code in puerta_keywords:
+        if re.search(pattern, text):
+            puerta = code
+            break
+
+    if puerta is None:
+        # Letra sola o número tras la planta: "Entresuelo 1", "3º B", "Planta 4, 2"
+        # Buscamos número o letra que sigue a la planta o a una coma
+        m = re.search(
+            r"(?:entresuelo|entsol|principal|atico|bajo|bajos|planta|piso|[º°o])\s*[,\s]\s*([a-z\d]{1,2})\b",
+            text,
+        )
+        if m:
+            val = m.group(1).upper()
+            puerta = val.zfill(2) if val.isdigit() else val
+
+    return planta, puerta
+
+
 def pick_best_inmueble(inmuebles: list[dict[str, Any]]) -> dict[str, Any] | None:
     """De la lista de inmuebles devuelta por Catastro, elige el más representativo.
 

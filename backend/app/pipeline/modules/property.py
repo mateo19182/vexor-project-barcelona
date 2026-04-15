@@ -179,14 +179,35 @@ class PropertyModule:
                     "— usando tipo de vía inferido"
                 )
 
-            _log(f"[property] catastro /inmueble-localizacion → {tipo_via_exacto} {nombre_via_exacto} {house_number} (prov={prov_catastro})")
+            # Extraer planta y puerta del texto de la dirección para filtrar en Catastro.
+            # Si los pasamos, la API devuelve solo la unidad concreta (ej: EN/01)
+            # en vez de los 40 inmuebles del portal.
+            planta, puerta = catastro_svc.parse_planta_puerta(address)
+            _log(
+                f"[property] catastro /inmueble-localizacion → {tipo_via_exacto} {nombre_via_exacto} "
+                f"{house_number} planta={planta} puerta={puerta} (prov={prov_catastro})"
+            )
             inmuebles = await catastro_svc.get_inmuebles_by_address(
                 provincia=prov_catastro,
                 municipio=municipio,
                 tipo_via=tipo_via_exacto,
                 nombre_via=nombre_via_exacto,
                 numero=house_number,
+                planta=planta,
+                puerta=puerta,
             )
+
+            # Si el filtro por planta/puerta no devuelve nada (Catastro es estricto
+            # con los códigos), reintentamos sin filtro y elegimos el mejor.
+            if not inmuebles and (planta or puerta):
+                _log("[property] catastro sin resultado con planta/puerta → retry sin filtro")
+                inmuebles = await catastro_svc.get_inmuebles_by_address(
+                    provincia=prov_catastro,
+                    municipio=municipio,
+                    tipo_via=tipo_via_exacto,
+                    nombre_via=nombre_via_exacto,
+                    numero=house_number,
+                )
 
             if inmuebles:
                 best = catastro_svc.pick_best_inmueble(inmuebles)
