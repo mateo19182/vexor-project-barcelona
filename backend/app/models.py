@@ -192,62 +192,6 @@ class AuditEvent(BaseModel):
     detail: dict[str, Any] = Field(default_factory=dict)
 
 
-class SourceCitation(BaseModel):
-    title: str
-    url: str
-    retrieved_at: str = Field(description="ISO-8601 UTC instant of fetch")
-    note: str | None = None
-
-
-class GeocodeHit(BaseModel):
-    display_name: str | None = None
-    lat: str | None = None
-    lon: str | None = None
-    road: str | None = None
-    house_number: str | None = None
-    postcode: str | None = None
-    suburb: str | None = None
-    city_district: str | None = None
-    city: str | None = None
-    state: str | None = None
-    country_code: str | None = None
-    nominatim_place_id: int | None = None
-    licence: str | None = None
-
-
-class MoneyBand(BaseModel):
-    min_eur: float
-    max_eur: float
-    currency: str = "EUR"
-    basis: str = Field(description="Qué supuestos enlazan esta banda con las fuentes")
-
-
-class PropertyEstimate(BaseModel):
-    """Salida trazable: bandas, fuentes y lagunas — no cifra única sin contexto."""
-
-    disclaimer: str
-    geocode: GeocodeHit | None = None
-    offer_price_eur_m2_band: MoneyBand | None = Field(
-        default=None,
-        description="Banda €/m² (oferta segunda mano) cuando aplica fuente local + HPI",
-    )
-    sale_value: MoneyBand | None = Field(
-        default=None,
-        description="Banda valor venta si hay €/m² y property_sqm",
-    )
-    rent_monthly: MoneyBand | None = Field(
-        default=None,
-        description="Reservado — sin fuente abierta integrada en esta versión",
-    )
-    macro_hpi_note: str | None = Field(
-        default=None,
-        description="Contexto índice precios vivienda país (Eurostat), no precio de la finca",
-    )
-    methodology: str | None = None
-    sources: list[SourceCitation] = Field(default_factory=list)
-    gaps: list[str] = Field(default_factory=list)
-
-
 class EnrichmentResponse(BaseModel):
     """Shape of the enriched profile. Grows as pipeline steps are added."""
 
@@ -257,4 +201,3 @@ class EnrichmentResponse(BaseModel):
     llm_summary: LlmSummary | None = None
     modules: list[Any] = []
     audit_log: list[AuditEvent] = []
-    property_estimate: PropertyEstimate | None = None
