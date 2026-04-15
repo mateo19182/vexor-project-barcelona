@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(env_file=[".env", "../.env"], extra="ignore")
 
     anthropic_api_key: str = ""
     clay_api_key: str = ""
@@ -36,6 +36,11 @@ class Settings(BaseSettings):
     # full response (dossier + modules + audit events) at
     # `{logs_dir}/{case_id}/{timestamp}.json`. Resolved from CWD.
     logs_dir: str = "logs"
+
+    # Nominatim exige User-Agent identificable; incluye contacto real en producción.
+    nominatim_user_agent: str = "VexorBCN-Enrichment/0.1 (hackathon; contact@example.com)"
+
+    catastro_api_key: str = ""
 
 
 settings = Settings()

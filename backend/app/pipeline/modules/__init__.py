@@ -16,6 +16,7 @@ from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
 from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.xon import XposedOrNotModule
+from app.pipeline.modules.property import PropertyModule
 
 REGISTRY: list[Module] = [
     BreachScoutModule(),
@@ -23,4 +24,5 @@ REGISTRY: list[Module] = [
     InstagramModule(),
     OsintWebModule(),
     XposedOrNotModule(),
+    PropertyModule(),
 ]

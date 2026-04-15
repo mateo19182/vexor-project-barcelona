@@ -43,6 +43,7 @@ async def run_enrichment(
     llm_summary = await generate_llm_summary(ctx, dossier)
 
     status = "enriched" if any(r.status == "ok" for r in results) else "no_data"
+
     response = EnrichmentResponse(
         case_id=case.case_id,
         status=status,
