@@ -18,9 +18,34 @@ class Case(BaseModel):
     phone: str | None = None
     address: str | None = None
 
+    # Optional Instagram handle for the social-media enrichment step.
+    # Resolution from name → handle is out of scope for this step.
+    instagram_handle: str | None = None
+
+
+class Fact(BaseModel):
+    """A single claim extracted from enrichment, always tied back to a source."""
+
+    claim: str
+    source: str = Field(description="IG post URL, image filename, or caption reference")
+    confidence: float = Field(ge=0.0, le=1.0)
+
+
+class InstagramEnrichment(BaseModel):
+    """Output of the Instagram OSINT enrichment step."""
+
+    summary: str
+    facts: list[Fact] = []
+    gaps: list[str] = []
+    raw_captions: list[str] = []
+    profile_info: dict | None = None
+    image_count: int = 0
+    video_count: int = 0  # counted but not analyzed
+
 
 class EnrichmentResponse(BaseModel):
-    """Placeholder — the shape of the enriched profile is TBD."""
+    """Shape of the enriched profile. Grows as pipeline steps are added."""
 
     case_id: str
     status: str = "received"
+    instagram: InstagramEnrichment | None = None

@@ -6,8 +6,11 @@ PII (might be outdated!):
 - name
 - telephone
 - address
+- email
+- NIF
 
 Case fields:
+- case number
 - country
 - debt_eur
 - debt_origin
@@ -15,7 +18,6 @@ Case fields:
 - call_attempts
 - call_outcome
 - legal_asset_finding
-- NIF ?
 
 ## Enrichment Sources
 
@@ -29,11 +31,14 @@ Case fields:
 
 ## Automate Law Info Requests
 
-Tools:
-- https://github.com/Hamed233/Digital-Footprint-OSINT-Tool
+- get balance on accounts
 - https://opencorporates.com/
 
+
 ## Processing
+
+Input da
+
 
 ```
 Merge Data ——> Find Out What's Relevant
