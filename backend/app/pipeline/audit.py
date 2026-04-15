@@ -82,6 +82,10 @@ def render_summary(response: EnrichmentResponse) -> str:
     skp = sum(1 for m in response.modules if m.status == "skipped")
     total = response.audit_log[-1].elapsed_s if response.audit_log else 0.0
 
+    cached_modules = {
+        e.module for e in response.audit_log if e.kind == "module_cache_hit" and e.module
+    }
+
     lines = [
         "",
         "==== enrichment summary ====",
@@ -92,8 +96,9 @@ def render_summary(response: EnrichmentResponse) -> str:
         "modules:",
     ]
     for m in response.modules:
+        marker = " (cached)" if m.name in cached_modules else ""
         lines.append(
-            f"  {m.name:<14} {m.status:<8} {m.duration_s:>5.2f}s   "
+            f"  {m.name:<14} {m.status:<8} {m.duration_s:>5.2f}s{marker:<9}   "
             f"{len(m.signals):>2} signal(s)  {len(m.facts):>2} fact(s)  "
             f"{len(m.gaps):>2} gap(s)"
         )

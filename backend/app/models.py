@@ -160,6 +160,7 @@ EventKind = Literal[
     "pipeline_completed",
     "wave_started",
     "module_completed",
+    "module_cache_hit",
     "ctx_patch_applied",
     "ctx_patch_rejected",
 ]

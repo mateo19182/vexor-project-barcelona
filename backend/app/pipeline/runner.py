@@ -23,6 +23,7 @@ import time
 from app.models import ContextPatch
 from app.pipeline.audit import AuditLog
 from app.pipeline.base import Context, Module, ModuleResult
+from app.pipeline.cache import load_cached, save_cached
 
 
 def _missing_requirements(ctx: Context, module: Module) -> list[str]:
@@ -94,10 +95,34 @@ async def _run_one(module: Module, ctx: Context) -> ModuleResult:
     return result
 
 
+def _is_fresh(module_name: str, fresh: bool | set[str]) -> bool:
+    """True if this module should bypass the cache on this run."""
+    if fresh is True:
+        return True
+    if isinstance(fresh, (set, frozenset)):
+        return module_name in fresh
+    return False
+
+
 async def run_pipeline(
-    ctx: Context, modules: list[Module], audit: AuditLog
+    ctx: Context,
+    modules: list[Module],
+    audit: AuditLog,
+    *,
+    logs_dir: str | None = None,
+    fresh: bool | set[str] = False,
 ) -> list[ModuleResult]:
-    """Run `modules` against `ctx` in waves until every module has a result."""
+    """Run `modules` against `ctx` in waves until every module has a result.
+
+    Caching:
+      * When `logs_dir` is provided, each ok/no_data result is saved to
+        `{logs_dir}/{case_id}/cache/{module_name}.json` after the wave.
+      * On subsequent runs, a cached result is loaded and the module's
+        `run(...)` is skipped — unless `fresh=True` (skip cache for all)
+        or `fresh={"module_name", ...}` (skip cache for named modules).
+      * `ctx_patch` from cached results is still applied, so downstream
+        modules see the same context they would after a live run.
+    """
     pending: list[Module] = list(modules)
     results: list[ModuleResult] = []
     wave = 0
@@ -138,10 +163,48 @@ async def run_pipeline(
             message=str(ready_names),
             modules=ready_names,
         )
-        wave_results = await asyncio.gather(*(_run_one(m, ctx) for m in ready))
 
-        for m, r in zip(ready, wave_results, strict=True):
+        # Try the cache first. Any module with a fresh hit short-circuits;
+        # everyone else runs concurrently alongside.
+        cached_by_name: dict[str, ModuleResult] = {}
+        to_run: list[Module] = []
+        for m in ready:
+            if logs_dir is not None and not _is_fresh(m.name, fresh):
+                hit = load_cached(logs_dir, ctx.case.case_id, m.name)
+                if hit is not None:
+                    cached_by_name[m.name] = hit
+                    continue
+            to_run.append(m)
+
+        live_results = await asyncio.gather(*(_run_one(m, ctx) for m in to_run))
+        live_by_name = {m.name: r for m, r in zip(to_run, live_results, strict=True)}
+
+        # Preserve the original `ready` order when merging results so the
+        # response mirrors module declaration order, not cache/live split.
+        for m in ready:
             pending.remove(m)
+            if m.name in cached_by_name:
+                r = cached_by_name[m.name]
+                results.append(r)
+                _apply_patch(ctx, r.ctx_patch, audit, m.name, wave)
+                audit.record(
+                    "module_cache_hit",
+                    module=m.name,
+                    wave=wave,
+                    message=(
+                        f"loaded cached {r.status} "
+                        f"({len(r.signals)} signal(s), {len(r.facts)} fact(s), "
+                        f"{len(r.gaps)} gap(s))"
+                    ),
+                    status=r.status,
+                    signals=len(r.signals),
+                    facts=len(r.facts),
+                    gaps=len(r.gaps),
+                    cached_duration_s=r.duration_s,
+                )
+                continue
+
+            r = live_by_name[m.name]
             results.append(r)
             _apply_patch(ctx, r.ctx_patch, audit, m.name, wave)
             audit.record(
@@ -159,6 +222,11 @@ async def run_pipeline(
                 facts=len(r.facts),
                 gaps=len(r.gaps),
             )
+
+            # Persist ok/no_data; keep error & skipped out of the cache so
+            # the next run retries them.
+            if logs_dir is not None and r.status in ("ok", "no_data"):
+                save_cached(logs_dir, ctx.case.case_id, r)
 
     counts = {
         "ok": sum(1 for r in results if r.status == "ok"),
