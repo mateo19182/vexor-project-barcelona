@@ -52,11 +52,12 @@ def context_from_case(case: Case) -> Context:
     ctx = Context(
         case=case,
         name=case.name,
+        email=case.email,
         phone=case.phone,
         address=case.address,
         instagram_handle=case.instagram_handle,
     )
-    for field in ("name", "phone", "address", "instagram_handle"):
+    for field in ("name", "email", "phone", "address", "instagram_handle"):
         val = getattr(ctx, field)
         if val:
             ctx.identity_provenance[field] = AttributedValue(

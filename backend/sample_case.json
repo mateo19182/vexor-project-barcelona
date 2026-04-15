@@ -7,5 +7,10 @@
   "call_attempts": 1,
   "call_outcome": "rings_out",
   "legal_asset_finding": "assets_not_seizable",
-  "instagram_handle": "georgehotz"
+  "instagram_handle": "georgehotz",
+  "full_name": "George Hotz",
+  "phone_number": "+1234567890",
+  "address": "123 Main St, City, State 12345",
+  "email": "george.hotz@example.com",
+  "tax_id": "123-45-6789"
 }

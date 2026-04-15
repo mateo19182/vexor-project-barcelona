@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     clay_api_key: str = ""
     openrouter_api_key: str = ""
+    # HikerAPI token for Osintgram's hikerapi-backed mode. Exported into the
+    # subprocess env as HIKERAPI_TOKEN (Osintgram reads it case-sensitive).
+    hikerapi_token: str = ""
 
     # Paths to the sibling Osintgram tool and its venv. Defaults assume the
     # monorepo layout: backend/ and Osintgram/ share a common parent.

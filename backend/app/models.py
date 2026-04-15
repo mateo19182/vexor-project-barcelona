@@ -1,10 +1,12 @@
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field
 
 
 class Case(BaseModel):
     """One row of the Vexor starting dataset — the minimal info a servicer has."""
+
+    model_config = ConfigDict(populate_by_name=True)
 
     case_id: str
     country: str = Field(description="ISO-2 country code, e.g. ES, PT, PL, FR")
@@ -15,10 +17,19 @@ class Case(BaseModel):
     call_outcome: str = Field(description="e.g. not_debtor, busy, rings_out, voicemail")
     legal_asset_finding: str = Field(description="e.g. no_assets_found, bank_account")
 
-    # Optional real-world hints the user may add for testing (name/phone/address).
-    name: str | None = None
-    phone: str | None = None
+    # Optional real-world hints the user may add for testing.
+    # Accepts both canonical field names and common CSV/API aliases.
+    name: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("name", "full_name"),
+    )
+    phone: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("phone", "phone_number"),
+    )
     address: str | None = None
+    email: str | None = None
+    tax_id: str | None = None
 
     # Optional Instagram handle for the social-media enrichment step.
     # Resolution from name → handle is out of scope for this step.

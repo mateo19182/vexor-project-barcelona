@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 import re
 import sys
 import time
@@ -24,7 +25,7 @@ def _log(msg: str) -> None:
 
 OSINTGRAM_COMMANDS: tuple[str, ...] = ("info", "captions", "propic", "photos", "stories")
 COMMAND_TIMEOUT_S = 120.0
-MAX_IMAGES_TO_ANALYZE = 20
+MAX_IMAGES_TO_ANALYZE = 10
 
 
 def _has_cached_data(target_dir: Path) -> bool:
@@ -82,6 +83,13 @@ async def _run_osintgram(
     command: str, handle: str, output_dir: Path
 ) -> tuple[bool, str]:
     """Run one Osintgram command as a subprocess. Returns (ok, error_detail)."""
+    # Osintgram reads HIKERAPI_TOKEN from os.environ (case-sensitive, upper).
+    # Our settings hold it under `hikerapi_token` from the .env file; push it
+    # into the subprocess env so the HikerCLI backend is actually selected.
+    subprocess_env = os.environ.copy()
+    if settings.hikerapi_token:
+        subprocess_env["HIKERAPI_TOKEN"] = settings.hikerapi_token
+
     try:
         proc = await asyncio.create_subprocess_exec(
             settings.osintgram_python,
@@ -94,7 +102,8 @@ async def _run_osintgram(
             "-o",
             str(output_dir),
             cwd=settings.osintgram_root,
-            stdin=asyncio.subprocess.DEVNULL,
+            env=subprocess_env,
+            stdin=asyncio.subprocess.PIPE,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
@@ -104,8 +113,10 @@ async def _run_osintgram(
         return False, f"Failed to start Osintgram: {e}"
 
     try:
+        # HikerCLI.get_user_photo() prompts "how many photos" via input().
+        # Send "\n" (= empty = download all) so it doesn't block on EOF.
         stdout_b, stderr_b = await asyncio.wait_for(
-            proc.communicate(), timeout=COMMAND_TIMEOUT_S
+            proc.communicate(input=b"\n"), timeout=COMMAND_TIMEOUT_S
         )
     except asyncio.TimeoutError:
         try:
@@ -130,6 +141,20 @@ async def _run_osintgram(
         if "throttled" in lowered or "rate" in lowered and "limit" in lowered:
             return False, "Instagram rate-limited the session"
         return False, f"Command '{command}' failed (exit {proc.returncode})"
+
+    # Osintgram's config helpers call sys.exit(0) when required credentials
+    # are missing — they print an "Error: ... cannot be blank" / "missing X
+    # field" message to stdout and bail with exit code 0. Detect that so we
+    # don't report a silent success.
+    if "cannot be blank" in lowered or (
+        "missing" in lowered and "field" in lowered and "credentials.ini" in lowered
+    ):
+        return False, (
+            "Osintgram credentials missing — set HIKERAPI_TOKEN "
+            "(via hikerapi_token in backend/.env) or fill config/credentials.ini"
+        )
+    if "error:" in lowered and ("token" in lowered or "credential" in lowered):
+        return False, f"Osintgram config error: {combined.strip().splitlines()[0][:200]}"
 
     # Some Osintgram commands print errors but exit 0. Heuristic check.
     if "sorry! no results" in lowered and command not in ("stories", "photos"):
@@ -268,11 +293,16 @@ async def enrich_instagram(case: Case) -> InstagramEnrichment:
             video_count=video_count,
         )
 
+    extra_context: dict = {}
+    if captions:
+        extra_context["captions"] = captions
+    if profile_info:
+        extra_context["profile_info"] = profile_info
+
     summary, facts, vision_gaps = await analyze_images(
         images=images,
-        captions=captions,
-        handle=handle,
-        profile_info=profile_info,
+        subject=f"Instagram account @{handle}",
+        extra_context=extra_context or None,
     )
     gaps.extend(vision_gaps)
 

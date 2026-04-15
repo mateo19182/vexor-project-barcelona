@@ -1,8 +1,14 @@
-"""OpenRouter vision client for the Instagram OSINT enrichment step.
+"""Generic vision analysis via OpenRouter.
 
-Two-pass analysis:
+Two-pass analysis for a batch of images:
   Pass 1: per-image factual observations (multimodal, batched).
-  Pass 2: synthesis into summary + facts + gaps (text-only).
+  Pass 2: synthesis into summary + facts + gaps (text-only), optionally
+          folding in caller-supplied textual context.
+
+This module knows NOTHING about where the images came from. Callers
+(Instagram OSINT, LinkedIn scraping, a web-fetched profile page, etc.)
+pass a `subject` descriptor plus any `extra_context` they want the
+synthesis step to consider alongside the image observations.
 """
 
 from __future__ import annotations
@@ -12,6 +18,7 @@ import json
 import sys
 import time
 from pathlib import Path
+from typing import Any
 
 import httpx
 
@@ -81,14 +88,14 @@ def _parse_json_loose(text: str) -> dict | list:
 
 async def _observe_batch(
     batch: list[tuple[Path, str]],
-    handle: str,
+    subject: str,
 ) -> list[dict]:
     """Pass 1: send a batch of images; get per-image observations."""
     content: list[dict] = [
         {
             "type": "text",
             "text": (
-                f"You are analyzing Instagram photos from the account @{handle} "
+                f"You are analyzing photos related to {subject} "
                 "for an OSINT investigation supporting a debt collector.\n\n"
                 "For each image below, output a JSON object with:\n"
                 '  - "source": the exact source string I provide for that image\n'
@@ -125,32 +132,64 @@ async def _observe_batch(
     return []
 
 
+def _render_extra_context(extra_context: dict[str, Any] | None) -> tuple[str, list[str]]:
+    """Render caller-supplied context as prompt sections.
+
+    Returns (prompt_text, section_names). Section names are passed into the
+    synthesis instructions so the model knows which strings are valid
+    `source` citations for non-image evidence.
+    """
+    if not extra_context:
+        return "", []
+    sections: list[str] = []
+    names: list[str] = []
+    for key, value in extra_context.items():
+        if value in (None, "", [], {}):
+            continue
+        names.append(key)
+        sections.append(f"=== {key.upper()} ===\n{json.dumps(value, indent=2)}")
+    return "\n\n".join(sections), names
+
+
 async def _synthesize(
     observations: list[dict],
-    captions: list[str],
-    handle: str,
-    profile_info: dict | None,
+    subject: str,
+    extra_context: dict[str, Any] | None,
 ) -> tuple[str, list[Fact], list[str]]:
-    """Pass 2: fold per-image observations + captions + profile into summary+facts."""
+    """Pass 2: fold per-image observations + caller context into summary+facts."""
+    context_block, context_names = _render_extra_context(extra_context)
+
+    if context_names:
+        source_rule = (
+            'EVERY claim MUST cite a source — either an image URL/filename '
+            "from the observations, or one of these section names for "
+            f"non-image evidence: {', '.join(context_names)}."
+        )
+    else:
+        source_rule = (
+            "EVERY claim MUST cite a source — an image URL/filename drawn "
+            "from the observations below."
+        )
+
     prompt = (
-        f"You are synthesizing OSINT findings for Instagram account @{handle}.\n\n"
-        "Given the per-image observations, post captions, and profile info below, "
-        "produce a JSON object with these keys:\n"
-        '  - "summary": 2-3 sentence factual summary of what this account '
+        f"You are synthesizing OSINT findings related to {subject}.\n\n"
+        "Given the per-image observations"
+        + (" and additional context" if context_names else "")
+        + " below, produce a JSON object with these keys:\n"
+        '  - "summary": 2-3 sentence factual summary of what this evidence '
         "reveals about the person (lifestyle, location hints, employment/business, "
         "assets visible in photos).\n"
         '  - "facts": list of objects with {"claim": str, "source": str, '
-        '"confidence": float 0.0-1.0}. EVERY claim MUST cite a source '
-        "(an image URL/filename from the observations, or \"caption\" if from "
-        "a caption, or \"profile_info\" if from profile data).\n"
+        f'"confidence": float 0.0-1.0}}. {source_rule}\n'
         '  - "gaps": list of strings describing what could NOT be determined '
         "or where evidence is too weak to draw a conclusion.\n\n"
         "Be honest. Do NOT infer beyond the evidence. Prefer fewer well-sourced "
         "facts over many speculative ones. Output valid JSON only.\n\n"
-        f"=== OBSERVATIONS ===\n{json.dumps(observations, indent=2)}\n\n"
-        f"=== CAPTIONS ===\n{json.dumps(captions, indent=2)}\n\n"
-        f"=== PROFILE INFO ===\n{json.dumps(profile_info, indent=2)}\n"
+        f"=== OBSERVATIONS ===\n{json.dumps(observations, indent=2)}"
     )
+    if context_block:
+        prompt += f"\n\n{context_block}"
+    prompt += "\n"
 
     raw = await _call_openrouter(
         [{"role": "user", "content": prompt}],
@@ -183,24 +222,40 @@ async def _synthesize(
 
 async def analyze_images(
     images: list[tuple[Path, str]],
-    captions: list[str],
-    handle: str,
-    profile_info: dict | None,
+    *,
+    subject: str,
+    extra_context: dict[str, Any] | None = None,
 ) -> tuple[str, list[Fact], list[str]]:
     """Two-pass vision analysis.
 
-    images: list of (local_path, source_url_or_filename) tuples.
-    Returns (summary, facts, gaps).
+    Args:
+        images: list of (local_path, source_url_or_filename) tuples.
+        subject: free-form descriptor of who/what these images relate to
+            (e.g. "Instagram account @johndoe", "LinkedIn profile for Jane Q").
+            Injected into the analysis + synthesis prompts so the model knows
+            the investigative framing.
+        extra_context: optional dict of additional text evidence to fold into
+            synthesis. Keys become section headings (and valid `source`
+            citations for non-image facts). Common examples: {"captions": [...],
+            "profile_info": {...}, "bio": "..."}.
+
+    Returns:
+        (summary, facts, gaps) — every Fact.source is either an image source
+        string or one of the extra_context keys.
     """
     gaps: list[str] = []
 
-    if not images and not captions and not profile_info:
-        return "", [], ["No Instagram media or metadata available to analyze"]
+    if not images and not extra_context:
+        return "", [], ["No images or context available to analyze"]
 
+    extra_summary = (
+        f", extra_context keys={list(extra_context.keys())}"
+        if extra_context
+        else ""
+    )
     _log(
-        f"[vision] analyzing {len(images)} image(s), "
-        f"{len(captions)} caption(s), profile_info={'yes' if profile_info else 'no'} "
-        f"with {VISION_MODEL}"
+        f"[vision] analyzing {len(images)} image(s) for {subject}"
+        f"{extra_summary} with {VISION_MODEL}"
     )
 
     observations: list[dict] = []
@@ -215,7 +270,7 @@ async def analyze_images(
             )
             t0 = time.monotonic()
             try:
-                batch_obs = await _observe_batch(batch, handle)
+                batch_obs = await _observe_batch(batch, subject)
             except httpx.HTTPStatusError as e:
                 elapsed = time.monotonic() - t0
                 _log(
@@ -248,7 +303,7 @@ async def analyze_images(
     t0 = time.monotonic()
     try:
         summary, facts, synth_gaps = await _synthesize(
-            observations, captions, handle, profile_info
+            observations, subject, extra_context
         )
     except httpx.HTTPStatusError as e:
         elapsed = time.monotonic() - t0
