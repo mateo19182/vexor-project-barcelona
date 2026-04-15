@@ -20,7 +20,7 @@ from typing import Any
 import anthropic
 
 from app.config import settings
-from app.models import Fact, SocialLink
+from app.models import AttributedValue, ContextPatch, Fact, Signal, SocialLink
 from app.pipeline.base import Context, ModuleResult
 
 
@@ -40,15 +40,44 @@ Primary objectives — in order of priority:
 2. Find general background: current location, employer, job title, business ownership, public bio.
 3. Note any other publicly visible signals: lifestyle, travel, interests, media appearances, public records.
 
+Output channels — use the right one:
+- `social_links`: confirmed social/professional profiles (platform + URL + handle + confidence).
+- `signals`: categorized observations. Prefer this over `facts` whenever the claim fits a kind:
+    * location  — current/frequent residence (e.g. "Barcelona, ES")
+    * employer  — company/organization affiliation
+    * role      — job title / position
+    * business  — ownership, directorship, self-employment
+    * asset     — bank account, vehicle, property, crypto, etc.
+    * lifestyle — travel, luxury goods, hobbies (hints at disposable income)
+    * contact   — additional phone / email / handle discovered
+    * affiliation — clubs, associations, education
+    * risk_flag — data breach hit, legal trouble, sanctions
+  Each signal has a short canonical `value` (not a sentence), a URL `source`, a `confidence`, and optional `notes`.
+- `facts`: ONLY for one-off claims that don't map to any signal kind. Keep this list small.
+- `gaps`: things you could not determine / ambiguities left unresolved.
+
 Hard rules — non-negotiable:
 1. Every claim you output MUST be backed by a specific URL you actually retrieved. Never state a fact without a source.
 2. Do NOT infer, speculate, or generalize beyond the evidence. "Probably X" is not a fact.
 3. Be HONEST about ambiguity. Common names are hard — if you cannot confidently attribute a profile to this specific person, flag it as uncertain in `gaps` rather than including it as a fact.
-4. Prefer fewer well-sourced facts over many speculative ones.
+4. Prefer fewer well-sourced claims over many speculative ones.
 5. Do NOT hallucinate URLs. Only cite URLs you retrieved with web_search or web_fetch.
 6. Workflow: use web_search to locate candidate pages, then web_fetch to confirm the profile belongs to this person before citing it. Budget your tool calls; don't thrash.
 
 Output ONLY the structured JSON in the format requested. No preamble, no commentary."""
+
+
+SIGNAL_KINDS: tuple[str, ...] = (
+    "location",
+    "employer",
+    "role",
+    "business",
+    "asset",
+    "lifestyle",
+    "contact",
+    "affiliation",
+    "risk_flag",
+)
 
 
 OUTPUT_SCHEMA: dict[str, Any] = {
@@ -82,9 +111,32 @@ OUTPUT_SCHEMA: dict[str, Any] = {
                 "additionalProperties": False,
             },
         },
+        "signals": {
+            "type": "array",
+            "description": (
+                "Categorized observations. Prefer these over `facts` whenever "
+                "the claim fits a kind. `value` should be short and canonical "
+                "(e.g. 'Barcelona, ES', not a sentence)."
+            ),
+            "items": {
+                "type": "object",
+                "properties": {
+                    "kind": {"type": "string", "enum": list(SIGNAL_KINDS)},
+                    "value": {"type": "string"},
+                    "source": {
+                        "type": "string",
+                        "description": "Full URL backing this observation.",
+                    },
+                    "confidence": {"type": "number"},
+                    "notes": {"type": "string"},
+                },
+                "required": ["kind", "value", "source", "confidence"],
+                "additionalProperties": False,
+            },
+        },
         "facts": {
             "type": "array",
-            "description": "Other factual findings (location, employer, business, lifestyle, etc.).",
+            "description": "One-off claims that don't map to any signal kind. Keep small.",
             "items": {
                 "type": "object",
                 "properties": {
@@ -105,7 +157,7 @@ OUTPUT_SCHEMA: dict[str, Any] = {
             "description": "Things we could not determine or ambiguities left unresolved.",
         },
     },
-    "required": ["summary", "social_links", "facts", "gaps"],
+    "required": ["summary", "social_links", "signals", "facts", "gaps"],
     "additionalProperties": False,
 }
 
@@ -182,6 +234,71 @@ def _parse_facts(raw_facts: Any) -> list[Fact]:
             confidence = 0.5
         out.append(Fact(claim=claim, source=source, confidence=max(0.0, min(1.0, confidence))))
     return out
+
+
+def _parse_signals(raw_signals: Any) -> list[Signal]:
+    out: list[Signal] = []
+    if not isinstance(raw_signals, list):
+        return out
+    for raw in raw_signals:
+        if not isinstance(raw, dict):
+            continue
+        kind = str(raw.get("kind", "")).strip()
+        value = str(raw.get("value", "")).strip()
+        source = str(raw.get("source", "")).strip()
+        if kind not in SIGNAL_KINDS or not value or not source:
+            continue
+        try:
+            confidence = float(raw.get("confidence", 0.5))
+        except (TypeError, ValueError):
+            confidence = 0.5
+        notes = str(raw.get("notes", "")).strip() or None
+        out.append(
+            Signal(
+                kind=kind,  # type: ignore[arg-type]  # validated against SIGNAL_KINDS
+                value=value,
+                source=source,
+                confidence=max(0.0, min(1.0, confidence)),
+                notes=notes,
+            )
+        )
+    return out
+
+
+def _derive_ctx_patch(social_links: list[SocialLink]) -> ContextPatch:
+    """Promote the highest-confidence LinkedIn / Instagram finds to the
+    shared Context so downstream modules (a dedicated LinkedIn enricher, the
+    Instagram OSINT step) can pick them up in the next wave.
+
+    Only promotes links with confidence >= 0.6 to avoid spreading noise.
+    """
+    patch = ContextPatch()
+
+    def best(platform: str) -> SocialLink | None:
+        candidates = [
+            sl
+            for sl in social_links
+            if sl.platform.strip().lower() == platform and sl.confidence >= 0.6
+        ]
+        if not candidates:
+            return None
+        return max(candidates, key=lambda sl: sl.confidence)
+
+    li = best("linkedin")
+    if li is not None:
+        patch.linkedin_url = AttributedValue(
+            value=li.url, source=li.url, confidence=li.confidence
+        )
+
+    ig = best("instagram")
+    if ig is not None and ig.handle:
+        patch.instagram_handle = AttributedValue(
+            value=ig.handle.lstrip("@"),
+            source=ig.url,
+            confidence=ig.confidence,
+        )
+
+    return patch
 
 
 def _extract_tool_trace(blocks: list[Any]) -> tuple[list[str], list[str]]:
@@ -307,12 +424,15 @@ class OsintWebModule:
 
         summary = str(parsed.get("summary") or "").strip()
         social_links = _parse_social_links(parsed.get("social_links"))
+        signals = _parse_signals(parsed.get("signals"))
         facts = _parse_facts(parsed.get("facts"))
         gaps = [str(g) for g in (parsed.get("gaps") or []) if g]
+        ctx_patch = _derive_ctx_patch(social_links)
 
         _log(
-            f"[osint_web] done: {len(social_links)} link(s), {len(facts)} fact(s), "
-            f"{len(gaps)} gap(s), {len(queries)} search(es), {len(urls)} fetch(es)"
+            f"[osint_web] done: {len(social_links)} link(s), {len(signals)} signal(s), "
+            f"{len(facts)} fact(s), {len(gaps)} gap(s), "
+            f"{len(queries)} search(es), {len(urls)} fetch(es)"
         )
 
         return ModuleResult(
@@ -320,8 +440,10 @@ class OsintWebModule:
             status="ok",
             summary=summary,
             social_links=social_links,
+            signals=signals,
             facts=facts,
             gaps=gaps,
+            ctx_patch=ctx_patch,
             raw={
                 "model": MODEL,
                 "search_queries": queries,

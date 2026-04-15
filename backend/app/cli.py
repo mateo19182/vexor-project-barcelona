@@ -3,6 +3,9 @@
 Usage:
     uv run enrich path/to/case.json
     cat case.json | uv run enrich -
+
+Stdout is JSON (pipe-friendly). Stderr carries the live audit stream during
+the run and a compact summary block at the end.
 """
 
 from __future__ import annotations
@@ -15,6 +18,7 @@ from pathlib import Path
 
 from app.main import enrich
 from app.models import Case
+from app.pipeline.audit import render_summary
 
 
 def _read_input(source: str) -> str:
@@ -32,11 +36,20 @@ def main(argv: list[str] | None = None) -> int:
         "input",
         help="Path to a JSON file with a Case, or '-' to read from stdin.",
     )
+    parser.add_argument(
+        "--no-summary",
+        action="store_true",
+        help="Skip the end-of-run audit summary on stderr.",
+    )
     args = parser.parse_args(argv)
 
     raw = _read_input(args.input)
     case = Case.model_validate_json(raw)
     result = asyncio.run(enrich(case))
+
+    if not args.no_summary:
+        sys.stderr.write(render_summary(result))
+        sys.stderr.write("\n")
 
     json.dump(result.model_dump(), sys.stdout, indent=2, ensure_ascii=False)
     sys.stdout.write("\n")
