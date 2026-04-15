@@ -41,9 +41,10 @@ Rules:
 1. Use only facts present in the dossier input. Do not invent or infer.
 2. Drop low-confidence or contradictory items silently. Do not hedge ("possibly", "maybe").
 3. Prefer canonical values ("Barcelona, ES", "Acme Corp", "€1,240 personal loan, 31 months old").
-4. `summary`: prose, neutral tone. Cover debtor identity, location, employment/role, lifestyle, and any risk/asset findings that are verified. Length should match the richness of the dossier — a thin dossier gets a short summary, a rich one gets a thorough multi-paragraph summary. Do not pad.
-5. `key_facts`: short bullets — one fact per bullet, noun phrase when it suffices. Include as many as the dossier supports.
-6. Always include the case facts (debt amount, origin, age, country, prior call attempts/outcome, legal asset finding) even if the enrichment modules found nothing — the voice agent needs them.
+4. `summary`: prose, neutral tone. Cover debtor identity, location, employment/role, lifestyle, and any risk/asset findings that are CONFIRMED for this specific person. Length scales with richness — a thin dossier gets a short summary. Do not pad with speculation, caveats, or information about other people.
+5. `key_facts`: short bullets — one confirmed fact per bullet. Omit anything speculative or unconfirmed.
+6. Always include the case facts (debt amount, origin, age, country, prior call attempts/outcome, legal asset finding) even if enrichment found nothing.
+7. CRITICAL: Never mention other individuals found during research. Only report on the subject.
 
 Output ONLY the structured JSON requested."""
 

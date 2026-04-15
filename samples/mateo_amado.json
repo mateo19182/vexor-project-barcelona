@@ -1,0 +1,16 @@
+{
+    "case_id": "C002",
+    "country": "ES",
+    "debt_eur": 2077,
+    "debt_origin": "personal_loan",
+    "debt_age_months": 12,
+    "call_attempts": 1,
+    "call_outcome": "rings_out",
+    "legal_asset_finding": "assets_not_seizable",
+    "full_name": "Mateo Amado Ares",
+    "phone_number": "+34674527164",
+    "address": "A Coruña, Oleiros, Spain",
+    "email": "mateoamadoares@gmail.com",
+    "tax_id": "123-45-6789"
+  }
+  

@@ -29,20 +29,20 @@ def _log(msg: str) -> None:
 
 
 MODEL = "claude-sonnet-4-6"
-MAX_TOKENS = 16000
-# Server-side tool loop cap — if Claude hits this, we resume once.
-MAX_RESUMES = 2
+MAX_TOKENS = 8000
+# Server-side tool loop cap — resume at most once.
+MAX_RESUMES = 1
 
-SYSTEM_PROMPT = """You are an OSINT researcher. Your job is to build a public profile of ONE person using only open web sources.
+SYSTEM_PROMPT = """You are an OSINT researcher. Build a public profile of ONE specific person using only open web sources.
 
 Primary objectives — in order of priority:
-1. Find all social media profiles (LinkedIn, Instagram, Twitter/X, Facebook, TikTok, YouTube, GitHub, etc.) that plausibly belong to this person.
-2. Find general background: current location, employer, job title, business ownership, public bio.
-3. Note any other publicly visible signals: lifestyle, travel, interests, media appearances, public records.
+1. Find social media / professional profiles (LinkedIn, Instagram, Twitter/X, Facebook, GitHub, etc.) that BELONG TO THIS EXACT PERSON.
+2. Find background confirmed for this person: current location, employer, job title, business ownership.
+3. Note other publicly visible signals about this person: lifestyle, travel, interests, media appearances, public records.
 
 Output channels — use the right one:
-- `social_links`: confirmed social/professional profiles (platform + URL + handle + confidence).
-- `signals`: categorized observations. Prefer this over `facts` whenever the claim fits a kind:
+- `social_links`: profiles CONFIRMED to belong to the subject (not a namesake).
+- `signals`: categorized observations about the subject only:
     * location  — current/frequent residence (e.g. "Barcelona, ES")
     * employer  — company/organization affiliation
     * role      — job title / position
@@ -53,16 +53,17 @@ Output channels — use the right one:
     * affiliation — clubs, associations, education
     * risk_flag — data breach hit, legal trouble, sanctions
   Each signal has a short canonical `value` (not a sentence), a URL `source`, a `confidence`, and optional `notes`.
-- `facts`: ONLY for one-off claims that don't map to any signal kind. Keep this list small.
+- `facts`: ONLY for one-off claims that don't map to any signal kind. Keep small.
 - `gaps`: things you could not determine / ambiguities left unresolved.
 
 Hard rules — non-negotiable:
-1. Every claim you output MUST be backed by a specific URL you actually retrieved. Never state a fact without a source.
-2. Do NOT infer, speculate, or generalize beyond the evidence. "Probably X" is not a fact.
-3. Be HONEST about ambiguity. Common names are hard — if you cannot confidently attribute a profile to this specific person, flag it as uncertain in `gaps` rather than including it as a fact.
-4. Prefer fewer well-sourced claims over many speculative ones.
-5. Do NOT hallucinate URLs. Only cite URLs you retrieved with web_search or web_fetch.
-6. Workflow: use web_search to locate candidate pages, then web_fetch to confirm the profile belongs to this person before citing it. Budget your tool calls; don't thrash.
+1. Every claim MUST be backed by a specific URL you actually retrieved. No source = not included.
+2. Do NOT infer, speculate, or generalize beyond the evidence.
+3. IDENTITY STRICT MATCH: if you find a person who COULD be the subject but you cannot confirm it using the provided identifiers (email, phone, address), OMIT them from ALL output fields — including `summary`. Use `gaps` to note the unresolved ambiguity. Never mention other individuals in the output.
+4. `summary` must describe ONLY confirmed findings about the subject. If nothing confirmed was found, write "No confirmed public profiles found for [name] matching the provided identifiers."
+5. Prefer 2–3 well-confirmed facts over many speculative ones. Stop early if you have confirmed what you need.
+6. Do NOT hallucinate URLs. Only cite URLs from web_search or web_fetch results.
+7. Workflow: search → fetch to confirm identity → output only if confirmed. Budget tool calls; stop as soon as you have enough.
 
 Output ONLY the structured JSON in the format requested. No preamble, no commentary."""
 
@@ -165,15 +166,16 @@ OUTPUT_SCHEMA: dict[str, Any] = {
 def _build_user_prompt(ctx: Context) -> str:
     case = ctx.case
     lines = [
-        f"Subject: {ctx.name}",
+        "=== SUBJECT ===",
+        f"Name: {ctx.name}",
         f"Country: {case.country}",
     ]
-    if ctx.phone:
-        lines.append(f"Phone (may be stale): {ctx.phone}")
-    if ctx.address:
-        lines.append(f"Address (may be stale): {ctx.address}")
     if ctx.email:
-        lines.append(f"Email: {ctx.email}")
+        lines.append(f"Email (confirmed): {ctx.email}")
+    if ctx.phone:
+        lines.append(f"Phone: {ctx.phone}")
+    if ctx.address:
+        lines.append(f"Address: {ctx.address}")
     if ctx.instagram_handle:
         lines.append(f"Known Instagram: @{ctx.instagram_handle}")
     if ctx.linkedin_url:
@@ -182,8 +184,10 @@ def _build_user_prompt(ctx: Context) -> str:
     lines.extend(
         [
             "",
-            "Goal: find all social media profiles and build a general public profile for this person.",
-            "Use the identifiers above to disambiguate if the name is common.",
+            "=== TASK ===",
+            "Find social media profiles and public background for THIS specific person.",
+            "Use the email/phone/address above as identity anchors — a profile must match at least one to be included.",
+            "If the name is common and you cannot confirm a profile belongs to this person, omit it and note the ambiguity in gaps.",
             "Investigate via web_search + web_fetch. Return the structured JSON.",
         ]
     )

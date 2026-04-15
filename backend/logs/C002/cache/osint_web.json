@@ -1,0 +1,90 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "Extensive open-source research returned no publicly indexed social media profiles, professional listings, or other web presence directly attributable to a 'Mateo Amado Ares' residing in Oleiros, A Coruña, Spain. The only publicly documented individual sharing the 'Amado Ares' double surname in the A Coruña metropolitan area is 'Jose Antonio Amado Ares', listed as Director de Compras at steelmaker Megasa and based in A Coruña — a possible family relation. No confirmed employer, role, or lifestyle signals were found for the subject.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "A person named 'Jose Antonio Amado Ares' is publicly listed as Director de Compras at Megasa (steel company) and based in A Coruña, Spain — possibly a family member of the subject.",
+      "source": "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+      "confidence": 0.7
+    },
+    {
+      "claim": "Jose Antonio Amado Ares studied at Universidad de Santiago de Compostela (Licenciatura en Empresariales, 1983-1989) per public business-contact aggregator data.",
+      "source": "https://rocketreach.co/jose-antonio-amado-ares-email_40371641",
+      "confidence": 0.65
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Oleiros, A Coruña, Galicia, ES",
+      "source": "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+      "confidence": 0.4,
+      "notes": "Address supplied by requester; not independently confirmed via any public record. The 'Amado Ares' surname combination is documented in A Coruña area via a likely family member."
+    }
+  ],
+  "gaps": [
+    "No social media profiles (Instagram, Twitter/X, Facebook, TikTok, LinkedIn, GitHub, YouTube) found for 'Mateo Amado Ares'.",
+    "The email handle 'mateoamadoares' returned zero indexed results on any platform.",
+    "Phone number +34674527164 returned no publicly available caller-ID or directory information.",
+    "Subject's current employer, occupation, and age/date of birth could not be determined.",
+    "The 'Mateo Amado - Marketing Staff - Vertebrata Clinica Veterinaria' LinkedIn profile (co.linkedin.com/in/mateo-amado-3a244425b) appears to be a different individual based in Colombia, not Spain.",
+    "Cannot confirm whether Jose Antonio Amado Ares is a family member of the subject; no genealogical or registry source was accessible.",
+    "Subject may maintain private or pseudonymous social accounts not discoverable via name-based searches."
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "search_queries": [
+      "Mateo Amado Ares A Coruña Oleiros Spain",
+      "mateoamadoares",
+      "\"Mateo Amado Ares\" social media",
+      "\"mateoamadoares\" instagram",
+      "\"Mateo Amado Ares\" linkedin",
+      "\"mateoamadoares\" OR \"mateo.amado.ares\" site:instagram.com OR site:twitter.com OR site:linkedin.com",
+      "\"Mateo Amado Ares\" Oleiros Coruña",
+      "mateoamadoares github OR twitter OR tiktok OR facebook",
+      "\"mateo amado\" galicia spain",
+      "site:linkedin.com \"Mateo Amado Ares\"",
+      "\"mateoamadoares@gmail.com\"",
+      "\"+34674527164\" Spain",
+      "674527164 Spain who is this number",
+      "\"Amado Ares\" Oleiros Coruña Galicia",
+      "\"mateo amado\" coruña OR oleiros",
+      "instagram.com/mateoamadoares",
+      "\"mateo amado\" spain instagram OR twitter OR facebook profile",
+      "\"Mateo Amado\" Spain profile OR bio OR about",
+      "site:github.com \"mateoamadoares\" OR \"mateo-amado-ares\"",
+      "site:facebook.com \"Mateo Amado Ares\"",
+      "\"Mateo Amado\" \"Vertebrata\" veterinaria coruña",
+      "Vertebrata Clinica Veterinaria coruña oleiros galicia",
+      "\"Vertebrata\" clinica veterinaria España ubicacion",
+      "\"mateo amado\" \"a coruña\" OR galicia OR oleiros",
+      "\"Mateo Amado\" Spain OR España profile",
+      "site:infobel.com \"Amado Ares\" OR \"Mateo Amado\" Oleiros",
+      "\"Amado Ares\" Galicia España persona",
+      "Jose Antonio Amado Ares Megasa A Coruña family",
+      "rocketreach \"Mateo Amado Ares\" OR \"mateo amado\" coruña",
+      "site:linkedin.com \"Jose Antonio Amado Ares\" Megasa coruña",
+      "\"Mateo Amado\" oleiros estudiante OR student OR joven",
+      "mateo amado ares twitter OR x.com"
+    ],
+    "fetched_urls": [
+      "https://www.instagram.com/mateoamadoares/",
+      "https://www.linkedin.com/pub/dir/Mateo/Ares",
+      "https://www.linkedin.com/in/mateo-amado-3a244425b/",
+      "https://holaconnect.com/profile/joseantonio-amadoares-4e0f7313",
+      "https://rocketreach.co/jose-antonio-amado-ares-email_40371641"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 147.86142705499879
+}
