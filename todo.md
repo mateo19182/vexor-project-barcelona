@@ -12,3 +12,4 @@ modules:
     - icloud vm
     - address data
     - haveibeen pwned
+    - clay

@@ -3,11 +3,12 @@ import sys
 from fastapi import FastAPI
 
 from app.config import settings
-from app.models import Case, EnrichmentResponse, ModuleResultView
+from app.models import Case, EnrichmentResponse
 from app.pipeline.audit import AuditLog, write_run_log
 from app.pipeline.base import context_from_case
 from app.pipeline.modules import REGISTRY
 from app.pipeline.runner import run_pipeline
+from app.pipeline.llm_summary import generate_llm_summary
 from app.pipeline.synthesis import synthesize
 
 app = FastAPI(title="Vexor BCN — debtor enrichment")
@@ -25,13 +26,15 @@ async def enrich(case: Case) -> EnrichmentResponse:
     audit = AuditLog()
     results = await run_pipeline(ctx, REGISTRY, audit)
     dossier = await synthesize(ctx, results)
+    llm_summary = await generate_llm_summary(ctx, dossier)
 
     status = "enriched" if any(r.status == "ok" for r in results) else "no_data"
     response = EnrichmentResponse(
         case_id=case.case_id,
         status=status,
         dossier=dossier,
-        modules=[ModuleResultView(**r.model_dump()) for r in results],
+        llm_summary=llm_summary,
+        modules=results,
         audit_log=audit.events,
     )
 

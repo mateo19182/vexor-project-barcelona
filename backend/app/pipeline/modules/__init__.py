@@ -13,8 +13,10 @@ from __future__ import annotations
 from app.pipeline.base import Module
 from app.pipeline.modules.instagram import InstagramModule
 from app.pipeline.modules.osint_web import OsintWebModule
+from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
     InstagramModule(),
     OsintWebModule(),
+    XposedOrNotModule(),
 ]

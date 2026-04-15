@@ -129,23 +129,30 @@ class Dossier(BaseModel):
     gaps: list[str] = []
 
 
-class ModuleResultView(BaseModel):
-    """How a single module's output is surfaced in the API response.
+class LlmSummary(BaseModel):
+    """LLM-generated factual summary of the dossier for downstream consumers.
 
-    Mirrors `pipeline.base.ModuleResult` but is declared here so the HTTP
-    schema doesn't depend on pipeline internals.
+    Just the relevant verified info about the debtor and the case, pulled
+    from the full Dossier and condensed by the LLM. No call coaching, no
+    suggested phrasing — only facts a consumer (e.g. the voice agent) reads
+    as context.
     """
 
-    name: str
-    status: str
-    summary: str = ""
-    social_links: list[SocialLink] = []
-    facts: list[Fact] = []
-    signals: list[Signal] = []
-    gaps: list[str] = []
-    raw: dict[str, Any] = Field(default_factory=dict)
-    ctx_patch: ContextPatch = Field(default_factory=ContextPatch)
-    duration_s: float = 0.0
+    summary: str = Field(
+        description=(
+            "Prose summary of who this person is and what the case looks "
+            "like — only verified, sourced info. Length scales with dossier "
+            "richness."
+        )
+    )
+    key_facts: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Short bullets of concrete facts: debt amount/origin/age, "
+            "current location, employer, known handles, prior call history. "
+            "One fact per bullet."
+        ),
+    )
 
 
 EventKind = Literal[
@@ -180,5 +187,6 @@ class EnrichmentResponse(BaseModel):
     case_id: str
     status: str = "received"
     dossier: Dossier | None = None
-    modules: list[ModuleResultView] = []
+    llm_summary: LlmSummary | None = None
+    modules: list[Any] = []
     audit_log: list[AuditEvent] = []

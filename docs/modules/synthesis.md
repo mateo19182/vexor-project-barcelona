@@ -17,10 +17,6 @@ async def synthesize(ctx: Context, results: list[ModuleResult]) -> Dossier
 3. Collects all `gaps`.
 4. Stitches per-module summaries (from `status="ok"` modules) into a single space-joined summary. Falls back to `"No enrichment data recovered for case {id}."` if nothing succeeded.
 
-## Planned upgrade
-
-Once multiple modules produce overlapping signals, this becomes an LLM call that cross-references findings — e.g., flagging contradictions between a LinkedIn employment claim and an asset report, or boosting confidence on signals corroborated by two independent sources.
-
 ## Signal deduplication
 
 `_dedupe_signals` keeps one entry per `(kind, value)` pair, picking the highest confidence. This collapses cases like `osint_web` and `instagram` both reporting the same location with slightly different confidence scores.
