@@ -1,0 +1,3 @@
+[submodule "Osintgram"]
+	path = Osintgram
+	url = https://github.com/Datalux/Osintgram
