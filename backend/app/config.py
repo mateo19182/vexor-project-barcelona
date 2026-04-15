@@ -7,6 +7,10 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     clay_api_key: str = ""
     openrouter_api_key: str = ""
+    # When set, the osint_web module swaps Anthropic's server-side web_search/
+    # web_fetch tools for an Exa-backed client-side tool loop (exa_search →
+    # search_and_contents). Absent → fall back to the Anthropic web tools.
+    exa_api_key: str = ""
     # HikerAPI token for Osintgram's hikerapi-backed mode. Exported into the
     # subprocess env as HIKERAPI_TOKEN (Osintgram reads it case-sensitive).
     hikerapi_token: str = ""

@@ -1,0 +1,40 @@
+{
+  "name": "xon",
+  "status": "ok",
+  "summary": "Breach data retrieved for george.hotz@example.com.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "breach-analytics returned 200 but contained no breach detail",
+    "Phone number breach lookup not supported — no free provider available"
+  ],
+  "raw": {
+    "analytics_status": 200,
+    "analytics": {
+      "BreachMetrics": null,
+      "BreachesSummary": {
+        "site": ""
+      },
+      "ExposedBreaches": null,
+      "ExposedPastes": null,
+      "PasteMetrics": null,
+      "PastesSummary": {
+        "cnt": 0,
+        "domain": "",
+        "tmpstmp": ""
+      }
+    },
+    "check_status": 0,
+    "check": null
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 0.4385953079981846
+}

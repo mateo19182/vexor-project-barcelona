@@ -1,0 +1,726 @@
+{
+  "case_id": "C001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "George Hotz is a verified Instagram user who displays a lifestyle involving frequent travel to locations including China, Mexico, and snowy environments. He is associated with the brand 'COMMA' and has publicly referenced working as a 'Twitter intern' and in 'Business development.' His posts suggest an interest in high-end technology, such as augmented reality and folding phones, while maintaining a public persona that blends influencer tropes with hacker culture. George Hotz (known online as 'geohot') is a prominent American hacker, programmer, and entrepreneur. He is the President of comma.ai (self-driving car software) and founder of the tiny corp / tinygrad project. His Instagram @georgehotz — the confirmed identifier provided — is self-referenced across his LinkedIn, Lex Fridman podcast appearances, and official stream archives. He is publicly based in San Diego, CA and is an active livestreamer and open-source contributor. Breach data retrieved for george.hotz@example.com.",
+    "facts": [
+      {
+        "claim": "The user's full name is George Hotz.",
+        "source": "profile_info",
+        "confidence": 1.0
+      },
+      {
+        "claim": "The user wore a baseball cap featuring the text 'COMMA'.",
+        "source": "https://www.instagram.com/p/Clwpf2cyY90/",
+        "confidence": 0.95
+      },
+      {
+        "claim": "The user claimed to be a 'Twitter intern'.",
+        "source": "captions",
+        "confidence": 0.9
+      },
+      {
+        "claim": "The user visited Disneyland and wore a Maison Margiela hoodie.",
+        "source": "https://www.instagram.com/p/COZDo79DVVb/",
+        "confidence": 0.98
+      },
+      {
+        "claim": "The user has traveled to or planned travel to Shenzhen and Beijing, China.",
+        "source": "captions",
+        "confidence": 0.9
+      },
+      {
+        "claim": "The user was photographed in a Ferrari.",
+        "source": "captions",
+        "confidence": 0.85
+      },
+      {
+        "claim": "The user expressed interest in developing a $599 augmented reality headset.",
+        "source": "captions",
+        "confidence": 0.9
+      },
+      {
+        "claim": "The user has been in snowy or frosted environments.",
+        "source": "https://www.instagram.com/p/DTcde6-kkVx/",
+        "confidence": 0.95
+      },
+      {
+        "claim": "The user wears a silver-colored cross necklace.",
+        "source": "https://www.instagram.com/p/C77Wl-OA_ue/",
+        "confidence": 0.95
+      },
+      {
+        "claim": "George Hotz was the first person to jailbreak the iPhone and the first to SIM-unlock it for use on any carrier (referenced in his own LinkedIn profile via Wikipedia link).",
+        "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "confidence": 0.99
+      },
+      {
+        "claim": "Hotz briefly worked as an informal 'intern' at Twitter/X in late 2022 after Elon Musk's acquisition, attempting to refactor the search algorithm.",
+        "source": "https://lexfridman.com/george-hotz-3/",
+        "confidence": 0.97
+      },
+      {
+        "claim": "George Hotz participated in the Lex Fridman Podcast (#387) in June 2023, discussing comma.ai, tiny corp, AI safety, and Twitter.",
+        "source": "https://lexfridman.com/george-hotz-3/",
+        "confidence": 1.0
+      }
+    ],
+    "signals": [
+      {
+        "kind": "location",
+        "value": "San Diego, CA, US",
+        "source": "https://github.com/geohot",
+        "confidence": 0.97,
+        "notes": "Listed on both GitHub profile and LinkedIn as current location"
+      },
+      {
+        "kind": "employer",
+        "value": "comma.ai",
+        "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "confidence": 1.0,
+        "notes": "Currently serves as President since May 2019"
+      },
+      {
+        "kind": "employer",
+        "value": "the tiny corp / tinygrad",
+        "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "confidence": 1.0,
+        "notes": "Founder since November 2022; website tinygrad.org"
+      },
+      {
+        "kind": "role",
+        "value": "President, comma.ai",
+        "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "confidence": 1.0,
+        "notes": null
+      },
+      {
+        "kind": "role",
+        "value": "Founder, the tiny corp",
+        "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "confidence": 1.0,
+        "notes": null
+      },
+      {
+        "kind": "business",
+        "value": "comma.ai (self-driving car software)",
+        "source": "https://www.crunchbase.com/person/george-hotz",
+        "confidence": 1.0,
+        "notes": "Co-founded September 2015; currently President"
+      },
+      {
+        "kind": "business",
+        "value": "tinygrad.org (AI/ML framework hardware company)",
+        "source": "https://github.com/geohot",
+        "confidence": 1.0,
+        "notes": "Founded November 2022; motto: 'We will commoditize the petaflop'"
+      },
+      {
+        "kind": "affiliation",
+        "value": "Carnegie Mellon University – Computer Science (2012–2013)",
+        "source": "https://www.crunchbase.com/person/george-hotz",
+        "confidence": 0.9,
+        "notes": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "Rochester Institute of Technology – Bioinformatics (2007–2008)",
+        "source": "https://www.crunchbase.com/person/george-hotz",
+        "confidence": 0.9,
+        "notes": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "Google Project Zero – Intern (2014)",
+        "source": "https://www.crunchbase.com/person/george-hotz",
+        "confidence": 1.0,
+        "notes": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "SpaceX – Avionics Intern (2013)",
+        "source": "https://www.crunchbase.com/person/george-hotz",
+        "confidence": 1.0,
+        "notes": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Active Twitch livestreamer (81.3K followers, Science & Technology)",
+        "source": "https://m.twitch.tv/georgehotz",
+        "confidence": 0.99,
+        "notes": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Public speaker (GITEX Global 2023, CES 2018, RSA Conference 2018)",
+        "source": "https://www.crunchbase.com/person/george-hotz",
+        "confidence": 0.95,
+        "notes": null
+      },
+      {
+        "kind": "contact",
+        "value": "Website: geohot.com",
+        "source": "https://github.com/geohot",
+        "confidence": 1.0,
+        "notes": null
+      },
+      {
+        "kind": "contact",
+        "value": "Blog: geohot.github.io/blog",
+        "source": "https://www.youtube.com/watch?v=WS5wGal3ukw",
+        "confidence": 0.95,
+        "notes": null
+      }
+    ],
+    "gaps": [
+      "Used cached Osintgram data for @georgehotz (delete /home/m19182/Work/personal/vexor-project-barcelona/Osintgram/output/georgehotz to force a refresh)",
+      "Specific current residential address or primary city of residence.",
+      "Official employment status beyond the 'Twitter intern' and 'Business development' claims which may be satirical.",
+      "Ownership status of the Ferrari mentioned in captions.",
+      "The specific meaning or organizational affiliation of the 'AEP' cap.",
+      "Verification of whether the '5 million dollar budget' for a home/church was a serious financial claim.",
+      "The email george.hotz@example.com is a generic placeholder and could not be verified as belonging to this subject via any public source.",
+      "The phone number +1234567890 is a placeholder and could not be matched to this subject in any public record.",
+      "The address '123 Main St, City, State 12345' is a placeholder; his actual residential address is not publicly confirmed beyond the San Diego, CA area.",
+      "Official YouTube channel URL (youtube.com/geohot) was referenced in stream archives but the channel itself was not directly fetched for independent confirmation.",
+      "breach-analytics returned 200 but contained no breach detail",
+      "Phone number breach lookup not supported — no free provider available"
+    ]
+  },
+  "llm_summary": {
+    "summary": "George Hotz, known online as 'geohot', is an American hacker, programmer, and entrepreneur based in San Diego, CA, US. He is the President of comma.ai (self-driving car software company, co-founded September 2015) and founder of the tiny corp / tinygrad (AI/ML framework company, founded November 2022). He previously interned at Google Project Zero (2014) and SpaceX Avionics (2013), and briefly worked informally at Twitter/X in late 2022. He is publicly recognized as the first person to jailbreak the iPhone and the first to SIM-unlock it. He maintains an active public presence as a Twitch livestreamer (81.3K followers) and has appeared as a public speaker at events including GITEX Global 2023, CES 2018, and RSA Conference 2018, as well as on the Lex Fridman Podcast (#387, June 2023). His Instagram lifestyle signals include travel to China (Shenzhen and Beijing), visits to Disneyland, and being photographed in a Ferrari. The case involves a €21,077 personal loan debt, 31 months old, originating in the US. One call attempt has been made with the last outcome being rings_out. Legal assessment indicates assets are not seizable. The contact details on file (phone, email, address) are placeholder values not verified as belonging to this subject beyond the San Diego, CA area location.",
+    "key_facts": [
+      "Debt: €21,077 personal loan, 31 months old, US case",
+      "Call history: 1 attempt, last outcome: rings_out",
+      "Legal asset finding: assets not seizable",
+      "Full name: George Hotz (online alias: geohot)",
+      "Location: San Diego, CA, US",
+      "Employer: comma.ai — President since May 2019",
+      "Employer: the tiny corp / tinygrad — Founder since November 2022",
+      "First person to jailbreak the iPhone and SIM-unlock it",
+      "Interned at Google Project Zero (2014) and SpaceX Avionics (2013)",
+      "Briefly worked informally at Twitter/X in late 2022",
+      "Active Twitch livestreamer: 81.3K followers (Science & Technology)",
+      "Appeared on Lex Fridman Podcast #387 in June 2023",
+      "Public speaker: GITEX Global 2023, CES 2018, RSA Conference 2018",
+      "Traveled to Shenzhen and Beijing, China",
+      "Photographed in a Ferrari",
+      "Phone, email, and address on file are unverified placeholder values"
+    ]
+  },
+  "modules": [
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "George Hotz is a verified Instagram user who displays a lifestyle involving frequent travel to locations including China, Mexico, and snowy environments. He is associated with the brand 'COMMA' and has publicly referenced working as a 'Twitter intern' and in 'Business development.' His posts suggest an interest in high-end technology, such as augmented reality and folding phones, while maintaining a public persona that blends influencer tropes with hacker culture.",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "The user's full name is George Hotz.",
+          "source": "profile_info",
+          "confidence": 1.0
+        },
+        {
+          "claim": "The user wore a baseball cap featuring the text 'COMMA'.",
+          "source": "https://www.instagram.com/p/Clwpf2cyY90/",
+          "confidence": 0.95
+        },
+        {
+          "claim": "The user claimed to be a 'Twitter intern'.",
+          "source": "captions",
+          "confidence": 0.9
+        },
+        {
+          "claim": "The user visited Disneyland and wore a Maison Margiela hoodie.",
+          "source": "https://www.instagram.com/p/COZDo79DVVb/",
+          "confidence": 0.98
+        },
+        {
+          "claim": "The user has traveled to or planned travel to Shenzhen and Beijing, China.",
+          "source": "captions",
+          "confidence": 0.9
+        },
+        {
+          "claim": "The user was photographed in a Ferrari.",
+          "source": "captions",
+          "confidence": 0.85
+        },
+        {
+          "claim": "The user expressed interest in developing a $599 augmented reality headset.",
+          "source": "captions",
+          "confidence": 0.9
+        },
+        {
+          "claim": "The user has been in snowy or frosted environments.",
+          "source": "https://www.instagram.com/p/DTcde6-kkVx/",
+          "confidence": 0.95
+        },
+        {
+          "claim": "The user wears a silver-colored cross necklace.",
+          "source": "https://www.instagram.com/p/C77Wl-OA_ue/",
+          "confidence": 0.95
+        }
+      ],
+      "signals": [],
+      "gaps": [
+        "Used cached Osintgram data for @georgehotz (delete /home/m19182/Work/personal/vexor-project-barcelona/Osintgram/output/georgehotz to force a refresh)",
+        "Specific current residential address or primary city of residence.",
+        "Official employment status beyond the 'Twitter intern' and 'Business development' claims which may be satirical.",
+        "Ownership status of the Ferrari mentioned in captions.",
+        "The specific meaning or organizational affiliation of the 'AEP' cap.",
+        "Verification of whether the '5 million dollar budget' for a home/church was a serious financial claim."
+      ],
+      "raw": {
+        "profile_info": {
+          "id": 4342436471,
+          "full_name": "George Hotz",
+          "biography": "lord of the perpetual underclass",
+          "edge_followed_by": 57609,
+          "edge_follow": 183,
+          "is_business_account": false,
+          "is_verified": true,
+          "profile_pic_url_hd": "https://scontent-lis1-1.cdninstagram.com/v/t51.2885-19/51810491_2081208458667230_5574954123863785472_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lis1-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gHcmZYtMu44l-OcRC410Qp9Xp1bGQDvMEh79UznXKZm8wN2_k4dpaJ6YYeVNhwnlkk&_nc_ohc=UaDSiNMcLmcQ7kNvwGIx_Gp&_nc_gid=gCVPa3iEMztiDxF6euZ9nA&edm=AO4kU9EBAAAA&ccb=7-5&ig_cache_key=GLuQFgPe5OEa2WQHAAAAAAA9N15NbkULAAAB0j-ccb7-5&oh=00_Af2hTa9xG8Y2qamvAUFDWrGMTUCZlnCGRSWC9XjpsN5opA&oe=69E5B38F&_nc_sid=164c1d"
+        },
+        "raw_captions": [
+          "folding phone",
+          "preach",
+          "Twitter intern",
+          "does it blend?",
+          "This is water.",
+          "old man and the sea",
+          "from last night",
+          "Attack at dawn",
+          "Summer mask on",
+          "Business development",
+          "You gotta Zuckerberg em",
+          "This too shall pass 🔓",
+          "I want to believe",
+          "Are you outside?",
+          "Does Gucci make face masks yet?",
+          "#pinecone",
+          "Stuck in traffic.",
+          "When you are a famous influencer, you stand on the edge of tall buildings with no fear. Tag a friend who should follow me. #shenzhen #gonna #try #for #reach #with #the #hashtags #influencer #rooftop #hacker #night #city #future #commentbelow #cyberpunk #followme\nPhoto: @yan.l301",
+          "Am I being a good influencer? Will be in Beijing next week, please contact for partnership deal. I am looking for nice hotel for free, do you have and I post? Many likes! #success #china #twizzlers #pool #river #yacht #be #rich",
+          "Been thinking about gratitude. The way most people use it irks me, but I am grateful for the causes and forces that conspire to make the world nice. I’m on a plane, on the Internet, can’t hear the engines, and eating a wonderful breakfast. #mint #a321 #qc35 #notboeing #the #future #will #be #even #better",
+          "I want one. Who can build me one, 5 million dollar budget? Will be home of the church.",
+          "So although I am disappointed with how many likes my last post got, I am in a Ferrari and you are not. #rich  #followforfollowback #lol #im #not #gonna #follow #back",
+          "Walking to Mexico. Is it postmodern or metamodern?",
+          "Moved to the cloud.",
+          "If I made a $599 augmented reality headset that was better than Magic Leap and HoloLens, how many of you would buy it? And what should I name it? Tell me in comments! #engagement #ad #for #future #potential #product",
+          "It feels like a simulation.",
+          "Me"
+        ],
+        "image_count": 10,
+        "video_count": 0
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 17.67860208899947
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "George Hotz (known online as 'geohot') is a prominent American hacker, programmer, and entrepreneur. He is the President of comma.ai (self-driving car software) and founder of the tiny corp / tinygrad project. His Instagram @georgehotz — the confirmed identifier provided — is self-referenced across his LinkedIn, Lex Fridman podcast appearances, and official stream archives. He is publicly based in San Diego, CA and is an active livestreamer and open-source contributor.",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/georgehotz",
+          "handle": "georgehotz",
+          "confidence": 1.0
+        },
+        {
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "handle": "george-hotz-b3866476",
+          "confidence": 1.0
+        },
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/geohot",
+          "handle": "geohot",
+          "confidence": 1.0
+        },
+        {
+          "platform": "Twitter/X",
+          "url": "https://twitter.com/realgeorgehotz",
+          "handle": "realGeorgeHotz",
+          "confidence": 1.0
+        },
+        {
+          "platform": "Twitch",
+          "url": "https://www.twitch.tv/georgehotz",
+          "handle": "georgehotz",
+          "confidence": 1.0
+        },
+        {
+          "platform": "Threads",
+          "url": "https://www.threads.com/@georgehotz",
+          "handle": "georgehotz",
+          "confidence": 1.0
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/@geohotarchive",
+          "handle": "geohotarchive",
+          "confidence": 0.85
+        }
+      ],
+      "facts": [
+        {
+          "claim": "George Hotz was the first person to jailbreak the iPhone and the first to SIM-unlock it for use on any carrier (referenced in his own LinkedIn profile via Wikipedia link).",
+          "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "confidence": 0.99
+        },
+        {
+          "claim": "Hotz briefly worked as an informal 'intern' at Twitter/X in late 2022 after Elon Musk's acquisition, attempting to refactor the search algorithm.",
+          "source": "https://lexfridman.com/george-hotz-3/",
+          "confidence": 0.97
+        },
+        {
+          "claim": "George Hotz participated in the Lex Fridman Podcast (#387) in June 2023, discussing comma.ai, tiny corp, AI safety, and Twitter.",
+          "source": "https://lexfridman.com/george-hotz-3/",
+          "confidence": 1.0
+        }
+      ],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "San Diego, CA, US",
+          "source": "https://github.com/geohot",
+          "confidence": 0.97,
+          "notes": "Listed on both GitHub profile and LinkedIn as current location"
+        },
+        {
+          "kind": "employer",
+          "value": "comma.ai",
+          "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "confidence": 1.0,
+          "notes": "Currently serves as President since May 2019"
+        },
+        {
+          "kind": "employer",
+          "value": "the tiny corp / tinygrad",
+          "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "confidence": 1.0,
+          "notes": "Founder since November 2022; website tinygrad.org"
+        },
+        {
+          "kind": "role",
+          "value": "President, comma.ai",
+          "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "confidence": 1.0,
+          "notes": null
+        },
+        {
+          "kind": "role",
+          "value": "Founder, the tiny corp",
+          "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "confidence": 1.0,
+          "notes": null
+        },
+        {
+          "kind": "business",
+          "value": "comma.ai (self-driving car software)",
+          "source": "https://www.crunchbase.com/person/george-hotz",
+          "confidence": 1.0,
+          "notes": "Co-founded September 2015; currently President"
+        },
+        {
+          "kind": "business",
+          "value": "tinygrad.org (AI/ML framework hardware company)",
+          "source": "https://github.com/geohot",
+          "confidence": 1.0,
+          "notes": "Founded November 2022; motto: 'We will commoditize the petaflop'"
+        },
+        {
+          "kind": "affiliation",
+          "value": "Carnegie Mellon University – Computer Science (2012–2013)",
+          "source": "https://www.crunchbase.com/person/george-hotz",
+          "confidence": 0.9,
+          "notes": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "Rochester Institute of Technology – Bioinformatics (2007–2008)",
+          "source": "https://www.crunchbase.com/person/george-hotz",
+          "confidence": 0.9,
+          "notes": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "Google Project Zero – Intern (2014)",
+          "source": "https://www.crunchbase.com/person/george-hotz",
+          "confidence": 1.0,
+          "notes": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "SpaceX – Avionics Intern (2013)",
+          "source": "https://www.crunchbase.com/person/george-hotz",
+          "confidence": 1.0,
+          "notes": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Active Twitch livestreamer (81.3K followers, Science & Technology)",
+          "source": "https://m.twitch.tv/georgehotz",
+          "confidence": 0.99,
+          "notes": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Public speaker (GITEX Global 2023, CES 2018, RSA Conference 2018)",
+          "source": "https://www.crunchbase.com/person/george-hotz",
+          "confidence": 0.95,
+          "notes": null
+        },
+        {
+          "kind": "contact",
+          "value": "Website: geohot.com",
+          "source": "https://github.com/geohot",
+          "confidence": 1.0,
+          "notes": null
+        },
+        {
+          "kind": "contact",
+          "value": "Blog: geohot.github.io/blog",
+          "source": "https://www.youtube.com/watch?v=WS5wGal3ukw",
+          "confidence": 0.95,
+          "notes": null
+        }
+      ],
+      "gaps": [
+        "The email george.hotz@example.com is a generic placeholder and could not be verified as belonging to this subject via any public source.",
+        "The phone number +1234567890 is a placeholder and could not be matched to this subject in any public record.",
+        "The address '123 Main St, City, State 12345' is a placeholder; his actual residential address is not publicly confirmed beyond the San Diego, CA area.",
+        "Official YouTube channel URL (youtube.com/geohot) was referenced in stream archives but the channel itself was not directly fetched for independent confirmation."
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "exa",
+        "search_queries": [
+          "George Hotz hacker programmer social media profiles",
+          "georgehotz Instagram Twitter GitHub LinkedIn",
+          "George Hotz realGeorgeHotz Twitter X profile comma.ai tinygrad",
+          "George Hotz geohot Twitch YouTube channel livestream"
+        ],
+        "fetched_urls": [
+          "https://www.linkedin.com/in/george-hotz-b3866476",
+          "https://github.com/geohot",
+          "https://www.linkedin.com/posts/george-hotz-b3866476_george-hotz-georgehotz-instagram-profile-activity-6613606814762315776-271M",
+          "https://github.com/geohot?tab=followers",
+          "https://github.com/geohot?tab=following",
+          "https://www.crunchbase.com/person/george-hotz",
+          "https://me.sh/profile/george-hotz",
+          "https://www.threads.com/@georgehotz",
+          "https://www.linkedin.com/posts/george-hotz-b3866476_george-hotz-realgeorgehotz-on-x-activity-6994450977068105728-jUgK",
+          "https://www.youtube.com/watch?v=z6xslDMimME",
+          "https://www.linkedin.com/in/george-hotz-b3866476",
+          "https://www.linkedin.com/posts/george-hotz-b3866476_hahaha-people-on-twitter-took-my-0003hr-activity-7436950834518769664-U3FG",
+          "https://www.linkedin.com/posts/george-hotz-b3866476_george-hotz-georgehotz-instagram-profile-activity-6613606814762315776-271M",
+          "https://www.linkedin.com/posts/george-hotz-b3866476_george-hotz-realgeorgehotz-twitter-activity-6994450977068105728-BSgY",
+          "https://github.com/geohot?tab=followers",
+          "https://github.com/geohot?tab=repositories",
+          "https://github.com/geohot?tab=following",
+          "https://github.com/geohot",
+          "https://lexfridman.com/george-hotz-3/",
+          "https://www.threads.com/@georgehotz",
+          "https://www.linkedin.com/in/george-hotz-b3866476",
+          "https://twicopy.com/realgeorgehotz/",
+          "https://www.youtube.com/watch?v=dNrTrx42DGQ",
+          "https://github.com/geohot",
+          "https://lexfridman.com/george-hotz-3/",
+          "https://www.linkedin.com/posts/george-hotz-b3866476_george-hotz-realgeorgehotz-twitter-activity-6994450977068105728-BSgY",
+          "https://www.youtube.com/watch?v=0kRDs9BW2NU",
+          "https://github.com/geohot?tab=followers",
+          "https://www.threads.com/@georgehotz",
+          "https://gist.github.com/geohot",
+          "https://m.twitch.tv/georgehotz",
+          "https://github.com/geohot",
+          "https://www.youtube.com/watch?v=Y-0yZ1AHb0s",
+          "https://www.twitch.tv/georgehotz",
+          "https://www.youtube.com/watch?v=6fFUfyT-EyA",
+          "https://www.youtube.com/watch?v=j7MRj4N2Cyk",
+          "https://www.youtube.com/watch?v=WS5wGal3ukw",
+          "https://www.youtube.com/@geohotarchive",
+          "https://www.youtube.com/watch?v=Ce528y1fI-0",
+          "https://www.youtube.com/watch?v=9LaIezgiUmw"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": {
+          "value": "georgehotz",
+          "source": "https://www.instagram.com/georgehotz",
+          "confidence": 1.0
+        },
+        "linkedin_url": {
+          "value": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+          "confidence": 1.0
+        }
+      },
+      "duration_s": 86.17995885900018
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Breach data retrieved for george.hotz@example.com.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "breach-analytics returned 200 but contained no breach detail",
+        "Phone number breach lookup not supported — no free provider available"
+      ],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": null,
+          "BreachesSummary": {
+            "site": ""
+          },
+          "ExposedBreaches": null,
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.4385953079981846
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.618999885977246e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 3 module(s): ['instagram', 'osint_web', 'xon']",
+      "detail": {
+        "modules": [
+          "instagram",
+          "osint_web",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 8.263399649877101e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['instagram', 'osint_web', 'xon']",
+      "detail": {
+        "modules": [
+          "instagram",
+          "osint_web",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 86.23398757099858,
+      "module": "instagram",
+      "wave": 1,
+      "message": "ok in 17.68s (0 signal(s), 9 fact(s), 6 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 17.67860208899947,
+        "signals": 0,
+        "facts": 9,
+        "gaps": 6
+      }
+    },
+    {
+      "kind": "ctx_patch_applied",
+      "elapsed_s": 86.23467096099921,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "instagram_handle='georgehotz' (conf 1.00)",
+      "detail": {
+        "field": "instagram_handle",
+        "value": "georgehotz",
+        "source": "https://www.instagram.com/georgehotz",
+        "confidence": 1.0
+      }
+    },
+    {
+      "kind": "ctx_patch_applied",
+      "elapsed_s": 86.23470952299976,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "linkedin_url='https://www.linkedin.com/in/george-hotz-b3866476' (conf 1.00)",
+      "detail": {
+        "field": "linkedin_url",
+        "value": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "source": "https://www.linkedin.com/in/george-hotz-b3866476",
+        "confidence": 1.0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 86.23472591399695,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "ok in 86.18s (15 signal(s), 3 fact(s), 4 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 86.17995885900018,
+        "signals": 15,
+        "facts": 3,
+        "gaps": 4
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 86.23496138499831,
+      "module": "xon",
+      "wave": 1,
+      "message": "ok in 0.44s (0 signal(s), 0 fact(s), 2 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.4385953079981846,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 2
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 86.23507803299799,
+      "module": null,
+      "wave": null,
+      "message": "3 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 3,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

@@ -13,6 +13,7 @@ Invariants (enforced by prompt + schema):
 
 from __future__ import annotations
 
+import asyncio
 import json
 import sys
 from typing import Any
@@ -23,6 +24,9 @@ from app.config import settings
 from app.models import AttributedValue, ContextPatch, Fact, Signal, SocialLink
 from app.pipeline.base import Context, ModuleResult
 
+# `exa_py` is only imported when EXA_API_KEY is set. We import lazily inside
+# the Exa helper so the module still works without the dep installed.
+
 
 def _log(msg: str) -> None:
     print(msg, file=sys.stderr, flush=True)
@@ -32,6 +36,35 @@ MODEL = "claude-sonnet-4-6"
 MAX_TOKENS = 8000
 # Server-side tool loop cap — resume at most once.
 MAX_RESUMES = 1
+# Client-side Exa tool loop cap — bound cost if Claude keeps calling search.
+MAX_EXA_ITERS = 6
+# Per-result text truncation sent back in tool_result content, to cap token spend.
+EXA_RESULT_TEXT_CHARS = 2000
+
+
+EXA_TOOLS: list[dict[str, Any]] = [
+    {
+        "name": "exa_search",
+        "description": (
+            "Search the public web and retrieve the most relevant URLs with "
+            "extracted page text and highlights. Use this as your single "
+            "research primitive — one call handles both finding pages and "
+            "reading their content. Be specific in queries; include identity "
+            "anchors (city, employer, email-domain) when disambiguating a "
+            "common name."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "The search query to perform.",
+                },
+            },
+            "required": ["query"],
+        },
+    }
+]
 
 SYSTEM_PROMPT = """You are an OSINT researcher. Build a public profile of ONE specific person using only open web sources.
 
@@ -348,6 +381,171 @@ def _loose_json(text: str) -> Any:
         return None
 
 
+def _format_exa_result(res: Any) -> str:
+    """Serialize an Exa `search_and_contents` response into a compact JSON
+    string for a `tool_result` block. Truncates each result's `text` so a
+    single search doesn't blow the context window.
+    """
+    out: list[dict[str, Any]] = []
+    for r in getattr(res, "results", []) or []:
+        text = getattr(r, "text", "") or ""
+        out.append(
+            {
+                "url": getattr(r, "url", "") or "",
+                "title": getattr(r, "title", "") or "",
+                "published": getattr(r, "published_date", None),
+                "author": getattr(r, "author", None),
+                "highlights": getattr(r, "highlights", None),
+                "text": text[:EXA_RESULT_TEXT_CHARS],
+            }
+        )
+    return json.dumps({"results": out}, ensure_ascii=False)
+
+
+async def _run_anthropic_web_tools(
+    client: anthropic.AsyncAnthropic, ctx: Context
+) -> tuple[str, list[str], list[str], str | None]:
+    """Drive the investigation using Anthropic's server-side web_search +
+    web_fetch tools. Anthropic runs the agentic loop server-side; we only
+    replay on `stop_reason=pause_turn`.
+    """
+    tools = [
+        {"type": "web_search_20250305", "name": "web_search"},
+        {"type": "web_fetch_20250910", "name": "web_fetch"},
+    ]
+
+    user_prompt = _build_user_prompt(ctx)
+    messages: list[dict[str, Any]] = [{"role": "user", "content": user_prompt}]
+
+    all_blocks: list[Any] = []
+    stop_reason: str | None = None
+
+    for attempt in range(MAX_RESUMES + 1):
+        async with client.messages.stream(
+            model=MODEL,
+            max_tokens=MAX_TOKENS,
+            system=SYSTEM_PROMPT,
+            tools=tools,
+            messages=messages,
+            thinking={"type": "adaptive"},
+            output_config={"format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}},
+        ) as stream:
+            response = await stream.get_final_message()
+
+        all_blocks.extend(response.content)
+        stop_reason = response.stop_reason
+        _log(
+            f"[osint_web/anthropic] attempt {attempt + 1}: stop_reason={stop_reason}, "
+            f"{len(response.content)} block(s)"
+        )
+        if stop_reason != "pause_turn":
+            break
+        # Resume: replay the same user message with the assistant turn appended.
+        messages = [
+            {"role": "user", "content": user_prompt},
+            {"role": "assistant", "content": response.content},
+        ]
+
+    final_text = _last_text_block(all_blocks)
+    queries, urls = _extract_tool_trace(all_blocks)
+    return final_text, queries, urls, stop_reason
+
+
+async def _run_exa_tool(
+    anthropic_client: anthropic.AsyncAnthropic,
+    exa_client: Any,
+    ctx: Context,
+) -> tuple[str, list[str], list[str], str | None]:
+    """Drive the investigation using Exa as a client-side tool. One tool —
+    `exa_search` via `search_and_contents` — serves as both search and fetch
+    (Exa returns extracted page text alongside URLs). We run a standard
+    Anthropic client-side tool loop: while stop_reason=tool_use, execute Exa
+    and post a tool_result block; stop when Claude produces its final text.
+    """
+    user_prompt = _build_user_prompt(ctx)
+    messages: list[dict[str, Any]] = [{"role": "user", "content": user_prompt}]
+
+    all_blocks: list[Any] = []
+    queries: list[str] = []
+    urls: list[str] = []
+    stop_reason: str | None = None
+
+    for attempt in range(MAX_EXA_ITERS):
+        async with anthropic_client.messages.stream(
+            model=MODEL,
+            max_tokens=MAX_TOKENS,
+            system=SYSTEM_PROMPT,
+            tools=EXA_TOOLS,
+            messages=messages,
+            thinking={"type": "adaptive"},
+            output_config={"format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}},
+        ) as stream:
+            response = await stream.get_final_message()
+
+        all_blocks.extend(response.content)
+        stop_reason = response.stop_reason
+        _log(
+            f"[osint_web/exa] attempt {attempt + 1}: stop_reason={stop_reason}, "
+            f"{len(response.content)} block(s)"
+        )
+
+        if stop_reason != "tool_use":
+            break
+
+        # Execute every exa_search tool_use in this turn and collect tool_results.
+        tool_results: list[dict[str, Any]] = []
+        for block in response.content:
+            if getattr(block, "type", None) != "tool_use":
+                continue
+            if getattr(block, "name", None) != "exa_search":
+                continue
+            tool_input = getattr(block, "input", {}) or {}
+            query = str(tool_input.get("query", "")).strip()
+            queries.append(query)
+            try:
+                # exa_py is synchronous; offload to a thread so we don't
+                # block the event loop (other modules may run concurrently).
+                exa_result = await asyncio.to_thread(
+                    exa_client.search_and_contents,
+                    query=query,
+                    type="auto",
+                    highlights=True,
+                )
+                for r in getattr(exa_result, "results", []) or []:
+                    u = getattr(r, "url", None)
+                    if u:
+                        urls.append(u)
+                content_str = _format_exa_result(exa_result)
+                _log(
+                    f"[osint_web/exa] search q={query!r} → "
+                    f"{len(getattr(exa_result, 'results', []) or [])} result(s)"
+                )
+            except Exception as e:  # noqa: BLE001 — surface to Claude via tool_result
+                _log(f"[osint_web/exa] search q={query!r} errored: {e}")
+                content_str = json.dumps({"error": str(e)})
+            tool_results.append(
+                {
+                    "type": "tool_result",
+                    "tool_use_id": block.id,
+                    "content": content_str,
+                }
+            )
+
+        if not tool_results:
+            # stop_reason==tool_use but no exa_search blocks — stop defensively.
+            break
+
+        # Preserve response.content verbatim — thinking blocks are signed and
+        # must round-trip unmodified when tools are enabled.
+        messages = messages + [
+            {"role": "assistant", "content": response.content},
+            {"role": "user", "content": tool_results},
+        ]
+
+    final_text = _last_text_block(all_blocks)
+    return final_text, queries, urls, stop_reason
+
+
 class OsintWebModule:
     name = "osint_web"
     requires: tuple[str, ...] = ("name",)
@@ -360,55 +558,36 @@ class OsintWebModule:
                 gaps=["anthropic_api_key is not configured"],
             )
 
-        _log(f"[osint_web] investigating '{ctx.name}' (country={ctx.case.country})")
+        backend = "exa" if settings.exa_api_key else "anthropic_web"
+        _log(
+            f"[osint_web] investigating '{ctx.name}' "
+            f"(country={ctx.case.country}, backend={backend})"
+        )
 
-        client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
+        anthropic_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
 
-        tools = [
-            {"type": "web_search_20250305", "name": "web_search"},
-            {"type": "web_fetch_20250910", "name": "web_fetch"},
-        ]
-
-        user_prompt = _build_user_prompt(ctx)
-        messages: list[dict[str, Any]] = [{"role": "user", "content": user_prompt}]
-
-        all_blocks: list[Any] = []
-        stop_reason: str | None = None
-
-        # Server-tool loop: one request usually suffices. If Anthropic's
-        # server-side iteration cap is hit (stop_reason=pause_turn), resend
-        # to resume — per the SDK docs, no extra "continue" user message.
-        for attempt in range(MAX_RESUMES + 1):
-            async with client.messages.stream(
-                model=MODEL,
-                max_tokens=MAX_TOKENS,
-                system=SYSTEM_PROMPT,
-                tools=tools,
-                messages=messages,
-                thinking={"type": "adaptive"},
-                output_config={
-                    "format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}
-                },
-            ) as stream:
-                response = await stream.get_final_message()
-
-            all_blocks.extend(response.content)
-            stop_reason = response.stop_reason
-            _log(
-                f"[osint_web] attempt {attempt + 1}: stop_reason={stop_reason}, "
-                f"{len(response.content)} block(s)"
+        if backend == "exa":
+            try:
+                from exa_py import Exa
+            except ImportError:
+                return ModuleResult(
+                    name=self.name,
+                    status="error",
+                    gaps=[
+                        "EXA_API_KEY is set but the `exa_py` package is not installed. "
+                        "Run `uv sync` in backend/."
+                    ],
+                )
+            exa_client = Exa(api_key=settings.exa_api_key)
+            final_text, queries, urls, stop_reason = await _run_exa_tool(
+                anthropic_client, exa_client, ctx
             )
-            if stop_reason != "pause_turn":
-                break
-            # Resume: replay the same user message with the assistant turn appended.
-            messages = [
-                {"role": "user", "content": user_prompt},
-                {"role": "assistant", "content": response.content},
-            ]
+        else:
+            final_text, queries, urls, stop_reason = await _run_anthropic_web_tools(
+                anthropic_client, ctx
+            )
 
-        final_text = _last_text_block(all_blocks)
         parsed = _loose_json(final_text)
-        queries, urls = _extract_tool_trace(all_blocks)
 
         if not isinstance(parsed, dict):
             return ModuleResult(
@@ -419,6 +598,7 @@ class OsintWebModule:
                     f"made {len(queries)} search(es), fetched {len(urls)} URL(s)"
                 ],
                 raw={
+                    "backend": backend,
                     "final_text": final_text,
                     "search_queries": queries,
                     "fetched_urls": urls,
@@ -434,8 +614,8 @@ class OsintWebModule:
         ctx_patch = _derive_ctx_patch(social_links)
 
         _log(
-            f"[osint_web] done: {len(social_links)} link(s), {len(signals)} signal(s), "
-            f"{len(facts)} fact(s), {len(gaps)} gap(s), "
+            f"[osint_web] done (backend={backend}): {len(social_links)} link(s), "
+            f"{len(signals)} signal(s), {len(facts)} fact(s), {len(gaps)} gap(s), "
             f"{len(queries)} search(es), {len(urls)} fetch(es)"
         )
 
@@ -450,6 +630,7 @@ class OsintWebModule:
             ctx_patch=ctx_patch,
             raw={
                 "model": MODEL,
+                "backend": backend,
                 "search_queries": queries,
                 "fetched_urls": urls,
                 "stop_reason": stop_reason,

@@ -1,0 +1,114 @@
+{
+  "name": "instagram",
+  "status": "ok",
+  "summary": "George Hotz is a verified Instagram user who displays a lifestyle involving frequent travel to locations including China, Mexico, and snowy environments. He is associated with the brand 'COMMA' and has publicly referenced working as a 'Twitter intern' and in 'Business development.' His posts suggest an interest in high-end technology, such as augmented reality and folding phones, while maintaining a public persona that blends influencer tropes with hacker culture.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The user's full name is George Hotz.",
+      "source": "profile_info",
+      "confidence": 1.0
+    },
+    {
+      "claim": "The user wore a baseball cap featuring the text 'COMMA'.",
+      "source": "https://www.instagram.com/p/Clwpf2cyY90/",
+      "confidence": 0.95
+    },
+    {
+      "claim": "The user claimed to be a 'Twitter intern'.",
+      "source": "captions",
+      "confidence": 0.9
+    },
+    {
+      "claim": "The user visited Disneyland and wore a Maison Margiela hoodie.",
+      "source": "https://www.instagram.com/p/COZDo79DVVb/",
+      "confidence": 0.98
+    },
+    {
+      "claim": "The user has traveled to or planned travel to Shenzhen and Beijing, China.",
+      "source": "captions",
+      "confidence": 0.9
+    },
+    {
+      "claim": "The user was photographed in a Ferrari.",
+      "source": "captions",
+      "confidence": 0.85
+    },
+    {
+      "claim": "The user expressed interest in developing a $599 augmented reality headset.",
+      "source": "captions",
+      "confidence": 0.9
+    },
+    {
+      "claim": "The user has been in snowy or frosted environments.",
+      "source": "https://www.instagram.com/p/DTcde6-kkVx/",
+      "confidence": 0.95
+    },
+    {
+      "claim": "The user wears a silver-colored cross necklace.",
+      "source": "https://www.instagram.com/p/C77Wl-OA_ue/",
+      "confidence": 0.95
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Used cached Osintgram data for @georgehotz (delete /home/m19182/Work/personal/vexor-project-barcelona/Osintgram/output/georgehotz to force a refresh)",
+    "Specific current residential address or primary city of residence.",
+    "Official employment status beyond the 'Twitter intern' and 'Business development' claims which may be satirical.",
+    "Ownership status of the Ferrari mentioned in captions.",
+    "The specific meaning or organizational affiliation of the 'AEP' cap.",
+    "Verification of whether the '5 million dollar budget' for a home/church was a serious financial claim."
+  ],
+  "raw": {
+    "profile_info": {
+      "id": 4342436471,
+      "full_name": "George Hotz",
+      "biography": "lord of the perpetual underclass",
+      "edge_followed_by": 57609,
+      "edge_follow": 183,
+      "is_business_account": false,
+      "is_verified": true,
+      "profile_pic_url_hd": "https://scontent-lis1-1.cdninstagram.com/v/t51.2885-19/51810491_2081208458667230_5574954123863785472_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lis1-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gHcmZYtMu44l-OcRC410Qp9Xp1bGQDvMEh79UznXKZm8wN2_k4dpaJ6YYeVNhwnlkk&_nc_ohc=UaDSiNMcLmcQ7kNvwGIx_Gp&_nc_gid=gCVPa3iEMztiDxF6euZ9nA&edm=AO4kU9EBAAAA&ccb=7-5&ig_cache_key=GLuQFgPe5OEa2WQHAAAAAAA9N15NbkULAAAB0j-ccb7-5&oh=00_Af2hTa9xG8Y2qamvAUFDWrGMTUCZlnCGRSWC9XjpsN5opA&oe=69E5B38F&_nc_sid=164c1d"
+    },
+    "raw_captions": [
+      "folding phone",
+      "preach",
+      "Twitter intern",
+      "does it blend?",
+      "This is water.",
+      "old man and the sea",
+      "from last night",
+      "Attack at dawn",
+      "Summer mask on",
+      "Business development",
+      "You gotta Zuckerberg em",
+      "This too shall pass 🔓",
+      "I want to believe",
+      "Are you outside?",
+      "Does Gucci make face masks yet?",
+      "#pinecone",
+      "Stuck in traffic.",
+      "When you are a famous influencer, you stand on the edge of tall buildings with no fear. Tag a friend who should follow me. #shenzhen #gonna #try #for #reach #with #the #hashtags #influencer #rooftop #hacker #night #city #future #commentbelow #cyberpunk #followme\nPhoto: @yan.l301",
+      "Am I being a good influencer? Will be in Beijing next week, please contact for partnership deal. I am looking for nice hotel for free, do you have and I post? Many likes! #success #china #twizzlers #pool #river #yacht #be #rich",
+      "Been thinking about gratitude. The way most people use it irks me, but I am grateful for the causes and forces that conspire to make the world nice. I’m on a plane, on the Internet, can’t hear the engines, and eating a wonderful breakfast. #mint #a321 #qc35 #notboeing #the #future #will #be #even #better",
+      "I want one. Who can build me one, 5 million dollar budget? Will be home of the church.",
+      "So although I am disappointed with how many likes my last post got, I am in a Ferrari and you are not. #rich  #followforfollowback #lol #im #not #gonna #follow #back",
+      "Walking to Mexico. Is it postmodern or metamodern?",
+      "Moved to the cloud.",
+      "If I made a $599 augmented reality headset that was better than Magic Leap and HoloLens, how many of you would buy it? And what should I name it? Tell me in comments! #engagement #ad #for #future #potential #product",
+      "It feels like a simulation.",
+      "Me"
+    ],
+    "image_count": 10,
+    "video_count": 0
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 17.67860208899947
+}
