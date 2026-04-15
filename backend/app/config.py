@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     # web_fetch tools for an Exa-backed client-side tool loop (exa_search →
     # search_and_contents). Absent → fall back to the Anthropic web tools.
     exa_api_key: str = ""
+    brave_api_key: str = ""
     # SerpAPI key used by the image_search module's google_lens reverse-image
     # lookup. Absent → the module skips cleanly.
     serpapi_api_key: str = ""
@@ -31,6 +32,19 @@ class Settings(BaseSettings):
     # hard-coded anywhere in source. Leave blank to disable the module.
     breach_intel_host: str = ""
     breach_intel_api_key: str = ""
+
+    # Platform-registration check API. One host, one proxy, and per-platform
+    # (port, api_key) pairs. Each upstream VM answers /cs (create session) +
+    # /h (check handle) over HTTPS on a self-signed cert — see
+    # app/enrichment/platform_check.py.
+    platform_check_host: str = "163.5.221.166"
+    platform_check_proxy: str = ""
+    instagram_check_port: str = ""
+    instagram_check_api_key: str = ""
+    twitter_check_port: str = ""
+    twitter_check_api_key: str = ""
+    icloud_check_port: str = ""
+    icloud_check_api_key: str = ""
 
     # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
     # full response (dossier + modules + audit events) at
