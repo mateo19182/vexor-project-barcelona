@@ -20,6 +20,7 @@ export function HomePage() {
 
   const [modules, setModules] = useState<ModuleInfo[]>([])
   const [enabled, setEnabled] = useState<Record<string, boolean>>({})
+  const [maxMode, setMaxMode] = useState(true)
 
   useEffect(() => {
     fetchModules()
@@ -32,19 +33,17 @@ export function HomePage() {
       .catch(() => {})
   }, [])
 
-  function toggleModule(name: string) {
-    setEnabled(prev => ({ ...prev, [name]: !prev[name] }))
+  function toggleModule(modName: string) {
+    setEnabled(prev => ({ ...prev, [modName]: !prev[modName] }))
   }
 
-  function allEnabled() {
-    return modules.length > 0 && modules.every(m => enabled[m.name])
-  }
-
-  function toggleAll() {
-    const next = !allEnabled()
-    const update: Record<string, boolean> = {}
-    for (const m of modules) update[m.name] = next
-    setEnabled(update)
+  function handleMaxToggle(on: boolean) {
+    setMaxMode(on)
+    if (on) {
+      const all: Record<string, boolean> = {}
+      for (const m of modules) all[m.name] = true
+      setEnabled(all)
+    }
   }
 
   async function handleSubmit() {
@@ -57,7 +56,7 @@ export function HomePage() {
     }
 
     const selected = modules.filter(m => enabled[m.name]).map(m => m.name)
-    const only = allEnabled() ? undefined : selected
+    const only = maxMode ? undefined : selected
 
     setSubmitting(true)
     try {
@@ -94,6 +93,7 @@ export function HomePage() {
 
   const inputClasses = "bg-bg-elevated/60 backdrop-blur-sm border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
   const enabledCount = modules.filter(m => enabled[m.name]).length
+  const [accordionOpen, setAccordionOpen] = useState(false)
 
   return (
     <div className="mx-auto max-w-2xl px-8 py-8">
@@ -152,42 +152,58 @@ export function HomePage() {
 
       {modules.length > 0 && (
         <Card className="bg-bg-surface/50 backdrop-blur-lg border-border-subtle">
-          <CardHeader>
+          <CardContent className="py-4">
             <div className="flex items-center justify-between">
-              <CardTitle className="text-lg font-semibold text-text-primary">
-                Modules
-                <span className="ml-2 text-sm font-normal text-text-tertiary">
-                  {enabledCount}/{modules.length}
+              <div className="flex items-center gap-3">
+                <span className="text-sm font-semibold text-text-primary">Modules</span>
+                <span className="text-xs text-text-tertiary">
+                  {maxMode ? 'MAX' : `${enabledCount}/${modules.length}`}
                 </span>
-              </CardTitle>
-              <button
-                onClick={toggleAll}
-                className="text-xs text-text-secondary hover:text-text-primary transition-colors"
-              >
-                {allEnabled() ? 'Disable all' : 'Enable all'}
-              </button>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-text-secondary">MAX</span>
+                <Switch checked={maxMode} onCheckedChange={handleMaxToggle} />
+              </div>
             </div>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 gap-3">
-              {modules.map(m => (
-                <div
-                  key={m.name}
-                  className="flex items-center justify-between rounded-md px-3 py-2 bg-bg-elevated/40 backdrop-blur-sm border border-border-subtle"
+
+            {!maxMode && (
+              <div className="mt-4">
+                <button
+                  onClick={() => setAccordionOpen(!accordionOpen)}
+                  className="flex items-center gap-2 text-xs text-text-secondary hover:text-text-primary transition-colors w-full"
                 >
-                  <div className="flex flex-col">
-                    <span className="text-sm font-mono text-text-primary">{m.name}</span>
-                    {m.requires.length > 0 && (
-                      <span className="text-[10px] text-text-tertiary">{m.requires.join(', ')}</span>
-                    )}
+                  <svg
+                    className={`w-3 h-3 transition-transform ${accordionOpen ? 'rotate-90' : ''}`}
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                  Select modules ({enabledCount} active)
+                </button>
+
+                {accordionOpen && (
+                  <div className="grid grid-cols-2 gap-2 mt-3">
+                    {modules.map(m => (
+                      <div
+                        key={m.name}
+                        className="flex items-center justify-between rounded-md px-3 py-2 bg-bg-elevated/40 backdrop-blur-sm border border-border-subtle"
+                      >
+                        <div className="flex flex-col">
+                          <span className="text-xs font-mono text-text-primary">{m.name}</span>
+                          {m.requires.length > 0 && (
+                            <span className="text-[10px] text-text-tertiary">{m.requires.join(', ')}</span>
+                          )}
+                        </div>
+                        <Switch
+                          checked={!!enabled[m.name]}
+                          onCheckedChange={() => toggleModule(m.name)}
+                        />
+                      </div>
+                    ))}
                   </div>
-                  <Switch
-                    checked={!!enabled[m.name]}
-                    onCheckedChange={() => toggleModule(m.name)}
-                  />
-                </div>
-              ))}
-            </div>
+                )}
+              </div>
+            )}
           </CardContent>
         </Card>
       )}
