@@ -47,6 +47,12 @@ class Settings(BaseSettings):
     icloud_check_api_key: str = ""
     github_check_port: str = "19185"
     github_check_api_key: str = ""
+    google_gaia_check_port: str = "19186"
+    google_gaia_check_api_key: str = ""
+    twitter_vu_port: str = "19187"
+    twitter_vu_api_key: str = ""
+    uber_hint_port: str = "19188"
+    uber_hint_api_key: str = ""
 
     # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
     # full response (dossier + modules + audit events) at

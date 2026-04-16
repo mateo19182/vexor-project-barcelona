@@ -44,13 +44,7 @@ class GaiaEnrichmentModule:
         gaia_sig = ctx.best("contact", "gaia_id")
         gaia_id = gaia_sig.value if gaia_sig else ""
 
-        cookies = _load_cookies()
-        if cookies is None:
-            return ModuleResult(
-                name=self.name,
-                status="skipped",
-                gaps=["GOOGLE_SESSION_COOKIES not set in .env"],
-            )
+        cookies = _load_cookies() or {}
 
         _log(f"[gaia_enrichment] running for gaia_id={gaia_id}")
         enrichment = await fetch_gaia(gaia_id, cookies)

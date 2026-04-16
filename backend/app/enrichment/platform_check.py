@@ -57,6 +57,7 @@ class PlatformCheckResult:
     session_id: str | None
     duration_s: float
     error: str | None = None
+    data: dict[str, Any] | None = None  # rich "d" payload from REGISTERED responses
 
 
 async def check_platform(
@@ -131,6 +132,7 @@ async def check_platform(
 
         status_raw = _extract_status(h.text)
         registered = _STATUS_MAP.get(status_raw.upper())
+        data = _extract_data(h.text)
         return PlatformCheckResult(
             registered=registered,
             status_raw=status_raw,
@@ -138,6 +140,7 @@ async def check_platform(
             http_status=h.status_code,
             session_id=session_id,
             duration_s=time.monotonic() - t0,
+            data=data,
         )
 
 
@@ -175,6 +178,22 @@ def _extract_status(body: str) -> str:
         except Exception:  # noqa: BLE001
             return ""
     return body.strip('"').strip()
+
+
+def _extract_data(body: str) -> dict[str, Any] | None:
+    body = body.strip()
+    if body.startswith("{"):
+        try:
+            import json
+
+            data = json.loads(body)
+            if isinstance(data, dict):
+                d = data.get("d")
+                if isinstance(d, dict):
+                    return d
+        except Exception:  # noqa: BLE001
+            return None
+    return None
 
 
 def build_module_result(
