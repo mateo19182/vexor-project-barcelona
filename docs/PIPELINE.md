@@ -8,7 +8,7 @@ How enrichment modules are scheduled, how they share data, and what they emit.
 
 The pipeline is built around three ideas:
 
-1. **A shared blackboard (`Context`)** — modules discover identity fields (LinkedIn URL, new emails, Instagram handle...) and write them back for later modules to consume. Writes are typed, confidence-tagged, and non-destructive: a downstream patch can only overwrite an existing field if its confidence is at least as high.
+1. **A shared blackboard (`Context`)** — modules discover identity fields (LinkedIn URL, new emails, Instagram handle) and write them back for later modules to consume. Writes are typed, confidence-tagged, and non-destructive: a downstream patch can only overwrite an existing field if its confidence is at least as high.
 
 2. **A two-channel output per module (`ModuleResult`)** — every module produces both *structured* output (typed signals, facts, social links, identity patches) consumed programmatically by synthesis and other modules, and *unstructured* output (prose summary, gaps) consumed by the LLM synthesis step and the human reader.
 

@@ -16,3 +16,11 @@ sherlock osint tool
 linkedin!!
 
 twitter search!
+
+contexto estructurado, puede venir del case, como escoger lo que se promueve?
+
+mechanism to go back to a module on new data
+
+profile pic maps to similarity search!
+
+frontend!

@@ -22,6 +22,7 @@ from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
 from app.pipeline.modules.instagram_check import InstagramCheckModule
 from app.pipeline.modules.linkedin import LinkedInModule
+from app.pipeline.modules.nosint import NosintModule
 from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.property import PropertyModule
 from app.pipeline.modules.twitter_check import TwitterCheckModule
@@ -40,6 +41,7 @@ REGISTRY: list[Module] = [
     InstagramModule(),
     InstagramCheckModule(),
     LinkedInModule(),
+    NosintModule(),
     OsintWebModule(),
     PropertyModule(),
     TwitterCheckModule(),
