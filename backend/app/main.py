@@ -149,66 +149,6 @@ async def enrich(
         raise HTTPException(status_code=400, detail=str(e)) from e
 
 
-@app.post("/enrich/{module_name}", response_model=EnrichmentResponse)
-async def enrich_single(
-    module_name: str,
-    case: Case,
-    fresh: Annotated[bool, Query()] = False,
-) -> EnrichmentResponse:
-    """Run a single named module. Convenience wrapper around `/enrich?only=…`."""
-    try:
-        return await run_enrichment(
-            case,
-            fresh={module_name} if fresh else False,
-            only={module_name},
-        )
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e)) from e
-
-
-# ── Historical run browser ─────────────────────────────────────────────
-
-_RUN_FILE_RE = re.compile(r"^\d{8}T\d{6}Z\.json$")
-
-
-@app.get("/cases")
-def list_cases() -> dict[str, list[dict[str, Any]]]:
-    """List every case directory and its timestamped run files."""
-    logs = Path(settings.logs_dir)
-    if not logs.is_dir():
-        return {"cases": []}
-
-    cases: list[dict[str, Any]] = []
-    for case_dir in sorted(logs.iterdir()):
-        if not case_dir.is_dir():
-            continue
-        runs = sorted(
-            (
-                {"timestamp": f.stem, "file": f.name}
-                for f in case_dir.iterdir()
-                if f.is_file() and _RUN_FILE_RE.match(f.name)
-            ),
-            key=lambda r: r["timestamp"],
-            reverse=True,
-        )
-        if runs:
-            cases.append({"case_id": case_dir.name, "runs": runs})
-    return {"cases": cases}
-
-
-@app.get("/cases/{case_id}/runs/{filename}")
-def get_run(case_id: str, filename: str) -> Any:
-    """Return a single historical run log as JSON."""
-    if not _RUN_FILE_RE.match(filename):
-        raise HTTPException(status_code=400, detail="invalid filename")
-    path = Path(settings.logs_dir) / case_id / filename
-    if not path.is_file():
-        raise HTTPException(status_code=404, detail="run not found")
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-# ── SSE streaming endpoint ─────────────────────────────────────────────
-
 @app.post("/enrich/stream")
 async def enrich_stream(
     case: Case,
@@ -297,3 +237,61 @@ async def enrich_stream(
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
+
+
+@app.post("/enrich/{module_name}", response_model=EnrichmentResponse)
+async def enrich_single(
+    module_name: str,
+    case: Case,
+    fresh: Annotated[bool, Query()] = False,
+) -> EnrichmentResponse:
+    """Run a single named module. Convenience wrapper around `/enrich?only=…`."""
+    try:
+        return await run_enrichment(
+            case,
+            fresh={module_name} if fresh else False,
+            only={module_name},
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e
+
+
+# ── Historical run browser ─────────────────────────────────────────────
+
+_RUN_FILE_RE = re.compile(r"^\d{8}T\d{6}Z\.json$")
+
+
+@app.get("/cases")
+def list_cases() -> dict[str, list[dict[str, Any]]]:
+    """List every case directory and its timestamped run files."""
+    logs = Path(settings.logs_dir)
+    if not logs.is_dir():
+        return {"cases": []}
+
+    cases: list[dict[str, Any]] = []
+    for case_dir in sorted(logs.iterdir()):
+        if not case_dir.is_dir():
+            continue
+        runs = sorted(
+            (
+                {"timestamp": f.stem, "file": f.name}
+                for f in case_dir.iterdir()
+                if f.is_file() and _RUN_FILE_RE.match(f.name)
+            ),
+            key=lambda r: r["timestamp"],
+            reverse=True,
+        )
+        if runs:
+            cases.append({"case_id": case_dir.name, "runs": runs})
+    return {"cases": cases}
+
+
+@app.get("/cases/{case_id}/runs/{filename}")
+def get_run(case_id: str, filename: str) -> Any:
+    """Return a single historical run log as JSON."""
+    if not _RUN_FILE_RE.match(filename):
+        raise HTTPException(status_code=400, detail="invalid filename")
+    path = Path(settings.logs_dir) / case_id / filename
+    if not path.is_file():
+        raise HTTPException(status_code=404, detail="run not found")
+    return json.loads(path.read_text(encoding="utf-8"))
