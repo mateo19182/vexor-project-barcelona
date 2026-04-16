@@ -82,17 +82,15 @@ class LinkedInModule:
         industry = (overview.get("industryName") or "").strip()
         location = _location_str(overview.get("location"))
 
-        # Headline → role Signal + Fact (raw text is useful verbatim).
+        # Headline → role Signal. Previously also emitted as a Fact, but
+        # signals are the structured layer; the headline is the role value.
         if headline:
-            facts.append(
-                Fact(claim=f"LinkedIn headline: {headline}", source=url, confidence=0.9)
-            )
             signals.append(
                 Signal(
                     kind="role",
                     value=headline,
                     source=url,
-                    confidence=0.75,
+                    confidence=0.85,
                     notes="Verbatim LinkedIn headline",
                 )
             )

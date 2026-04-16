@@ -1,9 +1,10 @@
 {
-    "case_id": "C004",
-    "country": "ES",
-    "full_name": "Pedro Cao Eiriz",
-    "address": "R. Filantropía, 36, 15011 A Coruña",
-    "email": "pedrocaoeiriz@gmail.com",
-    "instagram_handle": "pedrocaoss"
-  }
-  
+  "case_id": "C004",
+  "country": "ES",
+  "signals": [
+    {"kind": "name",    "value": "Pedro Cao Eiriz",                    "source": "case_input", "confidence": 1.0},
+    {"kind": "contact", "value": "pedrocaoeiriz@gmail.com",            "source": "case_input", "confidence": 1.0, "tag": "email"},
+    {"kind": "contact", "value": "pedrocaoss",                         "source": "case_input", "confidence": 1.0, "tag": "instagram"},
+    {"kind": "address", "value": "R. Filantropía, 36, 15011 A Coruña", "source": "case_input", "confidence": 1.0}
+  ]
+}

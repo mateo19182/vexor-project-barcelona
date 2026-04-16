@@ -20,7 +20,7 @@ from __future__ import annotations
 import asyncio
 import time
 
-from app.models import ContextPatch
+from app.models import AttributedValue, ContextPatch, SocialLink
 from app.pipeline.audit import AuditLog
 from app.pipeline.base import Context, Module, ModuleResult
 from app.pipeline.cache import load_cached, save_cached
@@ -38,35 +38,49 @@ def _apply_patch(
     module_name: str,
     wave: int,
 ) -> None:
-    """Merge `patch` into `ctx`, recording one audit event per field touched.
+    """Merge ``patch`` into ``ctx``, recording one audit event per field.
 
-    Rule: an incoming entry overwrites the existing one iff its confidence is
-    >= the existing entry's confidence. Ties go to the new writer (later
-    modules usually have more evidence). Provenance is always updated.
+    Rule: an incoming entry overwrites the *primary* identity field iff its
+    confidence >= the current best. Ties go to the new writer.
+
+    Every proposal is appended to ``identity_provenance[field]`` regardless
+    of whether it won — so consumers can see all discovered values.
     """
     for field in ContextPatch.model_fields:
         incoming = getattr(patch, field)
         if incoming is None:
             continue
-        existing = ctx.identity_provenance.get(field)
-        if existing is not None and existing.confidence > incoming.confidence:
+
+        # Always record the proposal.
+        ctx.identity_provenance.setdefault(field, []).append(incoming)
+
+        # Check if it beats the current best.
+        existing_list = ctx.identity_provenance[field]
+        current_val = getattr(ctx, field)
+        # Find the current best's confidence (the one that set the primary).
+        current_best_conf = 0.0
+        if current_val:
+            for av in existing_list[:-1]:  # exclude the one we just appended
+                if av.value == current_val:
+                    current_best_conf = max(current_best_conf, av.confidence)
+
+        if current_val and current_best_conf > incoming.confidence:
             audit.record(
                 "ctx_patch_rejected",
                 module=module_name,
                 wave=wave,
                 message=(
-                    f"{field}: kept (conf {existing.confidence:.2f} > "
+                    f"{field}: kept {current_val!r} (conf {current_best_conf:.2f} > "
                     f"incoming {incoming.confidence:.2f})"
                 ),
                 field=field,
-                existing_confidence=existing.confidence,
-                existing_source=existing.source,
+                existing_confidence=current_best_conf,
                 incoming_confidence=incoming.confidence,
                 incoming_source=incoming.source,
             )
             continue
+
         setattr(ctx, field, incoming.value)
-        ctx.identity_provenance[field] = incoming
         audit.record(
             "ctx_patch_applied",
             module=module_name,
@@ -77,6 +91,78 @@ def _apply_patch(
             source=incoming.source,
             confidence=incoming.confidence,
         )
+
+
+# --- Auto-promotion: social_links → identity ContextPatch fields ----------
+#
+# Centralised rule that replaces per-module _derive_ctx_patch boilerplate.
+# Modules just emit social_links; the runner promotes handles to identity
+# fields so downstream modules (instagram, twitter, linkedin) get unlocked.
+
+# Minimum confidence for a social link to be promoted to a handle field.
+_SOCIAL_LINK_CONFIDENCE_FLOOR = 0.6
+
+# platform label (lowercased) → (ContextPatch field, value_mode).
+# "url" uses the URL as value; "handle" uses handle.lstrip("@").
+_SOCIAL_LINK_PROMOTIONS: dict[str, tuple[str, str]] = {
+    "linkedin": ("linkedin_url", "url"),
+    "instagram": ("instagram_handle", "handle"),
+    "twitter": ("twitter_handle", "handle"),
+    "x": ("twitter_handle", "handle"),
+}
+
+
+def _auto_promote_social_links(
+    social_links: list[SocialLink], patch: ContextPatch,
+) -> None:
+    """Promote the highest-confidence social link per platform to the
+    appropriate identity field on the ContextPatch.
+
+    Every module that emits social_links (nosint, image_search, osint_web, …)
+    gets handle promotion for free — no per-module boilerplate.
+    """
+    best: dict[str, SocialLink] = {}
+    for sl in social_links:
+        key = sl.platform.strip().lower()
+        if sl.confidence < _SOCIAL_LINK_CONFIDENCE_FLOOR:
+            continue
+        if key not in _SOCIAL_LINK_PROMOTIONS:
+            continue
+        prev = best.get(key)
+        if prev is None or sl.confidence > prev.confidence:
+            best[key] = sl
+
+    for platform_key, sl in best.items():
+        field, mode = _SOCIAL_LINK_PROMOTIONS[platform_key]
+        if getattr(patch, field) is not None:
+            continue
+        if mode == "handle":
+            if not sl.handle:
+                continue
+            val = sl.handle.lstrip("@")
+        else:
+            val = sl.url
+        setattr(patch, field, AttributedValue(
+            value=val, source=sl.url, confidence=sl.confidence,
+        ))
+
+
+def _enrich_patch(result: ModuleResult) -> ContextPatch:
+    """Return the module's ctx_patch enriched with auto-promoted social_links.
+
+    The module's explicit patch entries always win; auto-promotion only
+    fills gaps.
+    """
+    patch = result.ctx_patch.model_copy()
+    _auto_promote_social_links(result.social_links, patch)
+    return patch
+
+
+def _accumulate_signals(ctx: Context, result: ModuleResult) -> None:
+    """Append a module's signals to the shared context so downstream modules
+    can read them.
+    """
+    ctx.signals.extend(result.signals)
 
 
 async def _run_one(module: Module, ctx: Context) -> ModuleResult:
@@ -186,7 +272,8 @@ async def run_pipeline(
             if m.name in cached_by_name:
                 r = cached_by_name[m.name]
                 results.append(r)
-                _apply_patch(ctx, r.ctx_patch, audit, m.name, wave)
+                _apply_patch(ctx, _enrich_patch(r), audit, m.name, wave)
+                _accumulate_signals(ctx, r)
                 audit.record(
                     "module_cache_hit",
                     module=m.name,
@@ -206,7 +293,8 @@ async def run_pipeline(
 
             r = live_by_name[m.name]
             results.append(r)
-            _apply_patch(ctx, r.ctx_patch, audit, m.name, wave)
+            _apply_patch(ctx, _enrich_patch(r), audit, m.name, wave)
+            _accumulate_signals(ctx, r)
             audit.record(
                 "module_completed",
                 module=m.name,

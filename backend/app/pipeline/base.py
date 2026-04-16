@@ -24,14 +24,20 @@ from app.models import (
 class Context(BaseModel):
     """Mutable blackboard passed through the pipeline.
 
-    Modules READ identity fields directly (e.g. `ctx.name`). Modules WRITE
-    via `ModuleResult.ctx_patch`; the runner merges those patches with a
-    confidence-beats rule and records provenance in `identity_provenance`.
+    Identity fields (``name``, ``email``, …) hold the best-known value for
+    each identifier and gate module scheduling via ``requires``.
+
+    ``signals`` accumulates every structured observation from all modules
+    that have already run. Any module can read prior modules' signals — e.g.
+    a Companies-House lookup can check for ``employer`` signals from LinkedIn.
+
+    ``identity_provenance`` keeps **all** proposals per identity field (not
+    just the winner), so consumers can see every value that was ever proposed.
     """
 
     case: Case
-    # Identity fields — extend as new resolvers/enrichers need them.
-    # Keep these in sync with `ContextPatch` in app/models.py.
+
+    # --- Identity fields (best-known value, for module gating) ---
     name: str | None = None
     email: str | None = None
     phone: str | None = None
@@ -40,16 +46,43 @@ class Context(BaseModel):
     linkedin_url: str | None = None
     twitter_handle: str | None = None
     gaia_id: str | None = None
-    # Provenance of each identity field, keyed by field name. Populated as
-    # modules write patches; the case seed lands with source="case_input".
-    identity_provenance: dict[str, AttributedValue] = Field(default_factory=dict)
+
+    # --- Accumulated structured data from all modules ---
+    signals: list[Signal] = Field(default_factory=list)
+
+    # All proposals per identity field (keyed by field name). The primary
+    # identity field holds the highest-confidence value; this list keeps
+    # every proposal so consumers can see alternatives.
+    identity_provenance: dict[str, list[AttributedValue]] = Field(
+        default_factory=dict,
+    )
+
+    def best_signals(self, kind: str) -> list[Signal]:
+        """Return signals of ``kind``, sorted by confidence descending."""
+        return sorted(
+            (s for s in self.signals if s.kind == kind),
+            key=lambda s: s.confidence,
+            reverse=True,
+        )
+
+
+_SEEDED_FIELDS = (
+    "name",
+    "email",
+    "phone",
+    "address",
+    "instagram_handle",
+    "twitter_handle",
+    "gaia_id",
+)
 
 
 def context_from_case(case: Case) -> Context:
     """Seed the Context with whatever identity info the Case already carries.
 
-    Seeded fields get `source="case_input"` and `confidence=1.0` — the user
-    supplied them, so downstream patches have to beat 1.0 to overwrite.
+    Identity fields get ``source="case_input"`` and ``confidence=1.0``.
+    ``case.known_signals`` are injected into ``ctx.signals`` so every module
+    sees them from wave 1.
     """
     ctx = Context(
         case=case,
@@ -58,14 +91,15 @@ def context_from_case(case: Case) -> Context:
         phone=case.phone,
         address=case.address,
         instagram_handle=case.instagram_handle,
+        twitter_handle=case.twitter_handle,
         gaia_id=case.google_id,
+        signals=list(case.known_signals),
     )
-    for field in ("name", "email", "phone", "address", "instagram_handle", "gaia_id"):
+    for field in _SEEDED_FIELDS:
         val = getattr(ctx, field)
         if val:
-            ctx.identity_provenance[field] = AttributedValue(
-                value=val, source="case_input", confidence=1.0
-            )
+            av = AttributedValue(value=val, source="case_input", confidence=1.0)
+            ctx.identity_provenance.setdefault(field, []).append(av)
     return ctx
 
 

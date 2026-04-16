@@ -1,6 +1,39 @@
+from __future__ import annotations
+
 from typing import Any, Literal
 
 from pydantic import AliasChoices, BaseModel, ConfigDict, Field
+
+
+SignalKind = Literal[
+    "location",      # current/frequent residence or region
+    "employer",      # company or organization affiliation
+    "role",          # job title / position
+    "business",      # ownership / directorship / self-employment
+    "asset",         # bank account, vehicle, property, crypto, etc.
+    "lifestyle",     # travel, luxury goods, hobbies — hints at disposable income
+    "contact",       # additional phone / email / handle discovered
+    "affiliation",   # clubs, associations, education
+    "risk_flag",     # data breach hit, criminal record, sanctions, etc.
+]
+
+
+class Signal(BaseModel):
+    """A categorized observation — the single structured data type.
+
+    Every structured finding flows through signals. They accumulate on
+    Context so any module can read prior modules' findings. Synthesis
+    dedupes by ``(kind, value.lower())``.
+
+    ``value`` should be short and canonical (e.g. ``"Barcelona, ES"``,
+    ``"Acme Corp"``). Extra detail goes in ``notes``.
+    """
+
+    kind: SignalKind
+    value: str = Field(description="Short canonical form, e.g. 'Barcelona, ES' or 'Acme Corp'.")
+    source: str = Field(description="Full URL or reference backing the observation.")
+    confidence: float = Field(ge=0.0, le=1.0)
+    notes: str | None = None
 
 
 class Case(BaseModel):
@@ -35,6 +68,9 @@ class Case(BaseModel):
     # Resolution from name → handle is out of scope for this step.
     instagram_handle: str | None = None
 
+    # Optional Twitter/X handle — skips the osint_web resolution step.
+    twitter_handle: str | None = None
+
     # Optional Google/Gaia ID — if known, skips the Gmail-resolution step.
     google_id: str | None = None
 
@@ -48,6 +84,30 @@ class Case(BaseModel):
         description="piso, casa, local, etc. — solo metadato; no cambia el modelo aún",
     )
 
+    # --- Structured pre-seed ---
+    # Known signals the caller wants injected into the pipeline at
+    # confidence 1.0. Same schema as module-emitted signals. These land
+    # on ctx.signals before wave 1 so every module can read them.
+    known_signals: list[Signal] = Field(
+        default_factory=list,
+        description=(
+            "Pre-seed the pipeline with known structured observations. "
+            'E.g. [{"kind": "employer", "value": "Acme Corp", '
+            '"source": "case_input", "confidence": 1.0}]'
+        ),
+    )
+
+    # --- Unstructured context ---
+    # Free-form notes the caller wants to attach to the case. Passed through
+    # to modules and the LLM summary as additional context. Not parsed.
+    context: str | None = Field(
+        default=None,
+        description=(
+            "Free-form notes / unstructured context about the debtor. "
+            "E.g. 'Debtor mentioned having family in Málaga during the last call.'"
+        ),
+    )
+
 
 class Fact(BaseModel):
     """A free-text claim extracted from enrichment, tied back to a source.
@@ -59,31 +119,6 @@ class Fact(BaseModel):
     claim: str
     source: str = Field(description="IG post URL, image filename, or caption reference")
     confidence: float = Field(ge=0.0, le=1.0)
-
-
-SignalKind = Literal[
-    "location",      # current/frequent residence or region
-    "employer",      # company or organization affiliation
-    "role",          # job title / position
-    "business",      # ownership / directorship / self-employment
-    "asset",         # bank account, vehicle, property, crypto, etc.
-    "lifestyle",     # travel, luxury goods, hobbies — hints at disposable income
-    "contact",       # additional phone / email / handle discovered
-    "affiliation",   # clubs, associations, education
-    "risk_flag",     # data breach hit, criminal record, sanctions, etc.
-]
-
-
-class Signal(BaseModel):
-    """A categorized observation. Same provenance contract as Fact, but
-    carries a `kind` so synthesis can group, dedupe, and prioritize.
-    """
-
-    kind: SignalKind
-    value: str = Field(description="Short canonical form, e.g. 'Barcelona, ES' or 'Acme Corp'.")
-    source: str = Field(description="Full URL or reference backing the observation.")
-    confidence: float = Field(ge=0.0, le=1.0)
-    notes: str | None = None
 
 
 class AttributedValue(BaseModel):
@@ -111,6 +146,10 @@ class ContextPatch(BaseModel):
 
     Each field is optional; only non-None entries are applied. The runner
     merges by confidence — see `pipeline/runner.py::_apply_patch`.
+
+    These are identity fields — resolved handles/URLs/emails that unlock
+    downstream modules (e.g. instagram_handle gates the instagram module).
+    All other structured data flows through signals.
     """
 
     name: AttributedValue | None = None

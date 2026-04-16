@@ -21,7 +21,7 @@ from typing import Any
 import anthropic
 
 from app.config import settings
-from app.models import AttributedValue, ContextPatch, Fact, Signal, SocialLink
+from app.models import Fact, Signal, SocialLink
 from app.pipeline.base import Context, ModuleResult
 
 # `exa_py` is only imported when EXA_API_KEY is set. We import lazily inside
@@ -213,6 +213,17 @@ def _build_user_prompt(ctx: Context) -> str:
         lines.append(f"Known Instagram: @{ctx.instagram_handle}")
     if ctx.linkedin_url:
         lines.append(f"Known LinkedIn: {ctx.linkedin_url}")
+    if ctx.twitter_handle:
+        lines.append(f"Known Twitter: @{ctx.twitter_handle}")
+    # Surface any structured signals from prior waves so the research
+    # module can use them as identity anchors.
+    for kind in ("employer", "role", "location"):
+        for s in ctx.best_signals(kind):
+            if s.confidence >= 0.70:
+                lines.append(f"Known {s.kind}: {s.value}")
+                break  # best one per kind is enough
+    if case.context:
+        lines.append(f"Caller notes: {case.context}")
 
     lines.extend(
         [
@@ -300,50 +311,6 @@ def _parse_signals(raw_signals: Any) -> list[Signal]:
             )
         )
     return out
-
-
-def _derive_ctx_patch(social_links: list[SocialLink]) -> ContextPatch:
-    """Promote the highest-confidence LinkedIn / Instagram finds to the
-    shared Context so downstream modules (a dedicated LinkedIn enricher, the
-    Instagram OSINT step) can pick them up in the next wave.
-
-    Only promotes links with confidence >= 0.6 to avoid spreading noise.
-    """
-    patch = ContextPatch()
-
-    def best(*platforms: str) -> SocialLink | None:
-        candidates = [
-            sl
-            for sl in social_links
-            if sl.platform.strip().lower() in platforms and sl.confidence >= 0.6
-        ]
-        if not candidates:
-            return None
-        return max(candidates, key=lambda sl: sl.confidence)
-
-    li = best("linkedin")
-    if li is not None:
-        patch.linkedin_url = AttributedValue(
-            value=li.url, source=li.url, confidence=li.confidence
-        )
-
-    ig = best("instagram")
-    if ig is not None and ig.handle:
-        patch.instagram_handle = AttributedValue(
-            value=ig.handle.lstrip("@"),
-            source=ig.url,
-            confidence=ig.confidence,
-        )
-
-    tw = best("twitter", "x")
-    if tw is not None and tw.handle:
-        patch.twitter_handle = AttributedValue(
-            value=tw.handle.lstrip("@"),
-            source=tw.url,
-            confidence=tw.confidence,
-        )
-
-    return patch
 
 
 def _extract_tool_trace(blocks: list[Any]) -> tuple[list[str], list[str]]:
@@ -619,7 +586,6 @@ class OsintWebModule:
         signals = _parse_signals(parsed.get("signals"))
         facts = _parse_facts(parsed.get("facts"))
         gaps = [str(g) for g in (parsed.get("gaps") or []) if g]
-        ctx_patch = _derive_ctx_patch(social_links)
 
         _log(
             f"[osint_web] done (backend={backend}): {len(social_links)} link(s), "
@@ -635,7 +601,6 @@ class OsintWebModule:
             signals=signals,
             facts=facts,
             gaps=gaps,
-            ctx_patch=ctx_patch,
             raw={
                 "model": MODEL,
                 "backend": backend,

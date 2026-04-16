@@ -13,9 +13,7 @@ boe regex to ensure relevant data
 
 sherlock osint tool
 
-linkedin!!
-
-twitter search!
+twitter is broken...
 
 contexto estructurado, puede venir del case, como escoger lo que se promueve?
 

@@ -7,7 +7,6 @@ account (username + password, or cookie-based auth which is more stable).
 
 from __future__ import annotations
 
-import json
 import tempfile
 from pathlib import Path
 
@@ -19,10 +18,12 @@ async def _build_api(db_path: Path, username: str, password: str, cookies: str) 
     api = API(str(db_path))
 
     if cookies:
-        cookie_dict: dict = json.loads(cookies)
-        # twscrape accepts cookies as a dict directly
+        # twscrape's add_account takes cookies as a *string* and parses
+        # it internally (JSON dict, JSON list of {name,value}, a "k=v; k=v"
+        # header, or base64 of any of the above — see twscrape.utils.parse_cookies).
+        # Pass the raw value through; don't pre-parse to a dict.
         await api.pool.add_account(
-            username, password, email="", email_password="", cookies=cookie_dict
+            username, password, email="", email_password="", cookies=cookies
         )
     else:
         await api.pool.add_account(username, password, email="", email_password="")

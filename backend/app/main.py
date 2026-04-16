@@ -72,7 +72,9 @@ async def run_enrichment(
         fresh=fresh,
     )
     dossier = await synthesize(ctx, results)
-    llm_summary = await generate_llm_summary(ctx, dossier)
+    # Skip the LLM summary when running a module subset — it's expensive and
+    # a single-module dossier isn't worth summarizing. Full runs still get it.
+    llm_summary = None if only is not None else await generate_llm_summary(ctx, dossier)
 
     status = "enriched" if any(r.status == "ok" for r in results) else "no_data"
 

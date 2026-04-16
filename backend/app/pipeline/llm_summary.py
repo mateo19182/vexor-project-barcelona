@@ -89,6 +89,28 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
         lines.append(f"instagram: @{ctx.instagram_handle}")
     if ctx.linkedin_url:
         lines.append(f"linkedin: {ctx.linkedin_url}")
+    if ctx.twitter_handle:
+        lines.append(f"twitter: @{ctx.twitter_handle}")
+
+    # Surface high-confidence structured signals accumulated on Context
+    # so the LLM has confirmed profile data to work with.
+    profile_kinds = ("employer", "role", "location", "business")
+    profile_lines: list[str] = []
+    for kind in profile_kinds:
+        for s in ctx.best_signals(kind):
+            if s.confidence >= 0.70:
+                profile_lines.append(f"{s.kind}: {s.value} (conf={s.confidence:.2f}, src={s.source})")
+    if profile_lines:
+        lines.append("")
+        lines.append("=== CONFIRMED PROFILE ===")
+        lines.extend(profile_lines)
+
+    # Unstructured context from the caller — free-form notes about the debtor
+    # that should inform the summary but aren't structured data.
+    if case.context:
+        lines.append("")
+        lines.append("=== CALLER NOTES ===")
+        lines.append(case.context)
 
     lines.append("")
     lines.append("=== DOSSIER ===")

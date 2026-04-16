@@ -1,0 +1,102 @@
+{
+  "case_id": "test-twitter",
+  "status": "no_data",
+  "dossier": {
+    "summary": "No enrichment data recovered for case test-twitter.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "twitter_enrich: TWITTER_USERNAME not configured — skipping"
+    ]
+  },
+  "llm_summary": {
+    "summary": "No enrichment data is available for case test-twitter. Country, debt amount, debt origin, debt age, call history, and legal asset findings are all unknown.",
+    "key_facts": [
+      "Case ID: test-twitter",
+      "Country: unknown",
+      "Debt amount: unknown",
+      "Debt origin: unknown",
+      "Debt age: unknown",
+      "Call attempts: unknown",
+      "Last call outcome: unknown",
+      "Legal asset finding: unknown"
+    ]
+  },
+  "modules": [
+    {
+      "name": "twitter",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_enrich: TWITTER_USERNAME not configured — skipping"
+      ],
+      "raw": {},
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null,
+        "twitter_handle": null,
+        "gaia_id": null
+      },
+      "duration_s": 3.6888995964545757e-05
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.9203998565208167e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['twitter']",
+      "detail": {
+        "modules": [
+          "twitter"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 9.021800360642374e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['twitter']",
+      "detail": {
+        "modules": [
+          "twitter"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.00026140800036955625,
+      "module": "twitter",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.6888995964545757e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.00028949999978067353,
+      "module": null,
+      "wave": null,
+      "message": "0 ok, 1 skipped, 0 error(s)",
+      "detail": {
+        "ok": 0,
+        "error": 0,
+        "skipped": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "twitter",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter profile @mateo19182 not retrievable: user_not_found"
+  ],
+  "raw": {
+    "error": "user_not_found",
+    "handle": "mateo19182"
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null,
+    "twitter_handle": null,
+    "gaia_id": null
+  },
+  "duration_s": 0.0507813059957698
+}

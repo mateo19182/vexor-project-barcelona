@@ -1,0 +1,93 @@
+{
+  "case_id": "test-twitter",
+  "status": "enriched",
+  "dossier": {
+    "summary": "No enrichment data recovered for case test-twitter.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "Twitter profile @mateo19182 not retrievable: user_not_found"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "twitter",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter profile @mateo19182 not retrievable: user_not_found"
+      ],
+      "raw": {
+        "error": "user_not_found",
+        "handle": "mateo19182"
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null,
+        "twitter_handle": null,
+        "gaia_id": null
+      },
+      "duration_s": 0.4635153800045373
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.8182999812997878e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['twitter']",
+      "detail": {
+        "modules": [
+          "twitter"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 9.221299842465669e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['twitter']",
+      "detail": {
+        "modules": [
+          "twitter"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.46377344399661524,
+      "module": "twitter",
+      "wave": 1,
+      "message": "ok in 0.46s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.4635153800045373,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.46416482699714834,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

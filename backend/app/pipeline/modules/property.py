@@ -372,6 +372,17 @@ class PropertyModule:
         location_str = ", ".join(p for p in [municipio, "ES"] if p)
         summary_parts: list[str] = []
 
+        # Emit a location signal from the geocoded address so downstream
+        # modules and the LLM summary can read it from ctx.signals.
+        if municipio:
+            signals.append(Signal(
+                kind="location",
+                value=location_str,
+                source=CATASTRO_SOURCE if catastro_data else "geocoding",
+                confidence=0.75,
+                notes="Location derived from debtor's known address",
+            ))
+
         if catastro_data:
             m2_s = f"{catastro_data['superficie_m2']:.0f} m²" if catastro_data.get("superficie_m2") else "m² desconocidos"
             uso_s = catastro_data.get("uso") or "uso desconocido"
@@ -386,10 +397,10 @@ class PropertyModule:
             summary_parts.append(f"venta estimada {venta_str}")
             signals.append(Signal(
                 kind="asset",
-                value=f"Inmueble en {location_str}: valor estimado {venta_str}",
+                value=f"Inmueble {venta_str}",
                 source=MITMA_SOURCE,
                 confidence=0.65,
-                notes=estimates.get("venta_nota"),
+                notes=f"{location_str}. {estimates.get('venta_nota', '')}".strip(),
             ))
 
         if "alquiler_mensual_eur_low" in estimates:
@@ -400,10 +411,10 @@ class PropertyModule:
             summary_parts.append(f"alquiler estimado {alq_str}")
             signals.append(Signal(
                 kind="asset",
-                value=f"Alquiler estimado {alq_str} ({location_str})",
+                value=f"Alquiler estimado {alq_str}",
                 source=SERPAVI_SOURCE,
                 confidence=0.70,
-                notes=estimates.get("alquiler_nota"),
+                notes=f"{location_str}. {estimates.get('alquiler_nota', '')}".strip(),
             ))
 
         if not summary_parts and not gaps:

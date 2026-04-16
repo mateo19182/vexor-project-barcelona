@@ -1,0 +1,94 @@
+{
+  "case_id": "test-twitter",
+  "status": "enriched",
+  "dossier": {
+    "summary": "No enrichment data recovered for case test-twitter.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "Twitter profile @mateo19182 not retrievable: Invalid cookie value: "
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "twitter",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter profile @mateo19182 not retrievable: Invalid cookie value: "
+      ],
+      "raw": {
+        "error": "api_error",
+        "handle": "mateo19182",
+        "detail": "Invalid cookie value: "
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null,
+        "twitter_handle": null,
+        "gaia_id": null
+      },
+      "duration_s": 0.0470053850003751
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 3.063699841732159e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['twitter']",
+      "detail": {
+        "modules": [
+          "twitter"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 9.276399941882119e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['twitter']",
+      "detail": {
+        "modules": [
+          "twitter"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0472927129958407,
+      "module": "twitter",
+      "wave": 1,
+      "message": "ok in 0.05s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.0470053850003751,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.04775196300033713,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

@@ -7,6 +7,8 @@
   "call_attempts": 3,
   "call_outcome": "rings_out",
   "legal_asset_finding": "no_assets_found",
-  "name": "David Bustamante",
-  "address": "Madrid, ES"
+  "signals": [
+    {"kind": "name",    "value": "David Bustamante", "source": "case_input", "confidence": 1.0},
+    {"kind": "address", "value": "Madrid, ES",       "source": "case_input", "confidence": 1.0}
+  ]
 }
