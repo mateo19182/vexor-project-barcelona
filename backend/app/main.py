@@ -1,7 +1,10 @@
 import sys
 from typing import Annotated, Any
 
-from fastapi import FastAPI, HTTPException, Query
+import asyncio
+import json
+
+from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
@@ -159,3 +162,79 @@ async def enrich_single(
         )
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e)) from e
+
+
+@app.websocket("/ws/enrich")
+async def ws_enrich(ws: WebSocket) -> None:
+    """Stream enrichment events over WebSocket.
+
+    Client sends a JSON Case as the first message, then receives
+    a stream of audit events as the pipeline runs. Final message
+    has kind="pipeline_completed".
+    """
+    await ws.accept()
+    try:
+        raw = await ws.receive_text()
+        case = Case.model_validate_json(raw)
+    except Exception as e:
+        await ws.send_json({"kind": "error", "message": f"Invalid case: {e}"})
+        await ws.close()
+        return
+
+    ctx = context_from_case(case)
+    audit = AuditLog()
+    queue: asyncio.Queue[dict] = asyncio.Queue()
+
+    original_record = audit.record
+
+    def streaming_record(kind, **kwargs):
+        ev = original_record(kind, **kwargs)
+        queue.put_nowait({
+            "kind": ev.kind,
+            "module": ev.module,
+            "wave": ev.wave,
+            "message": ev.message,
+            "elapsed_s": round(ev.elapsed_s, 3),
+            "detail": ev.detail if hasattr(ev, "detail") else {},
+        })
+        return ev
+
+    audit.record = streaming_record
+
+    async def run():
+        results = await run_pipeline(ctx, REGISTRY, audit, logs_dir=settings.logs_dir, fresh=False)
+        dossier = await synthesize(ctx, results)
+        return results, dossier
+
+    task = asyncio.create_task(run())
+
+    try:
+        while not task.done() or not queue.empty():
+            try:
+                event = await asyncio.wait_for(queue.get(), timeout=0.2)
+                await ws.send_json(event)
+            except asyncio.TimeoutError:
+                continue
+
+        results, dossier = await task
+
+        for r in results:
+            await ws.send_json({
+                "kind": "module_result",
+                "module": r.name,
+                "status": r.status,
+                "signal_count": len(r.signals),
+                "fact_count": len(r.facts),
+                "gaps": r.gaps,
+                "summary": r.summary,
+                "duration_s": round(r.duration_s, 3) if r.duration_s else 0,
+            })
+
+        await ws.send_json({"kind": "pipeline_completed"})
+
+    except WebSocketDisconnect:
+        task.cancel()
+    except Exception as e:
+        await ws.send_json({"kind": "error", "message": str(e)})
+    finally:
+        await ws.close()

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Switch } from '@/components/ui/switch'
-import { buildCase, submitCase, parseCsv, fetchModules, type ModuleInfo } from '@/lib/api'
+import { buildCase, parseCsv, fetchModules, type ModuleInfo } from '@/lib/api'
 
 export function HomePage() {
   const navigate = useNavigate()
@@ -15,7 +15,6 @@ export function HomePage() {
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
   const [nameError, setNameError] = useState('')
-  const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
   const [modules, setModules] = useState<ModuleInfo[]>([])
@@ -58,16 +57,8 @@ export function HomePage() {
     const selected = modules.filter(m => enabled[m.name]).map(m => m.name)
     const only = maxMode ? undefined : selected
 
-    setSubmitting(true)
-    try {
-      const payload = buildCase({ name: name.trim(), email: email.trim(), phone: phone.trim(), address: address.trim() })
-      await submitCase(payload, only)
-      navigate(`/run/${payload.case_id}`)
-    } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : 'Submission failed')
-    } finally {
-      setSubmitting(false)
-    }
+    const payload = buildCase({ name: name.trim(), email: email.trim(), phone: phone.trim(), address: address.trim() })
+    navigate(`/run/${payload.case_id}`, { state: { payload, only } })
   }
 
   function handleCsvImport(e: React.ChangeEvent<HTMLInputElement>) {
@@ -138,8 +129,8 @@ export function HomePage() {
           {submitError && <p className="text-xs text-zinc-400">{submitError}</p>}
 
           <div className="flex items-center gap-3 pt-4">
-            <Button className="bg-white text-text-inverse hover:bg-zinc-200 disabled:opacity-50" onClick={handleSubmit} disabled={submitting}>
-              {submitting ? 'Running...' : 'Run Enrichment'}
+            <Button className="bg-white text-text-inverse hover:bg-zinc-200" onClick={handleSubmit}>
+              Run Enrichment
             </Button>
             <div className="text-text-tertiary text-sm">or</div>
             <input ref={fileInputRef} type="file" accept=".csv" className="hidden" onChange={handleCsvImport} />

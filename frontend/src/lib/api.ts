@@ -1,4 +1,5 @@
 const API_BASE = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
+const WS_BASE = API_BASE.replace(/^http/, 'ws')
 
 export interface CasePayload {
   case_id: string
@@ -67,6 +68,54 @@ export async function submitCase(payload: CasePayload, only?: string[]): Promise
     throw new Error(`Enrichment failed: ${res.status}`)
   }
   return res.json()
+}
+
+export interface WsEvent {
+  kind: string
+  module?: string
+  wave?: number
+  message?: string
+  elapsed_s?: number
+  status?: string
+  signal_count?: number
+  fact_count?: number
+  gaps?: string[]
+  summary?: string
+  duration_s?: number
+}
+
+export function connectEnrichWs(
+  payload: CasePayload,
+  onEvent: (ev: WsEvent) => void,
+  onDone: () => void,
+  onError: (err: string) => void,
+): () => void {
+  const ws = new WebSocket(`${WS_BASE}/ws/enrich`)
+
+  ws.onopen = () => {
+    ws.send(JSON.stringify(payload))
+  }
+
+  ws.onmessage = (msg) => {
+    const ev: WsEvent = JSON.parse(msg.data)
+    if (ev.kind === 'pipeline_completed') {
+      onDone()
+      ws.close()
+    } else if (ev.kind === 'error') {
+      onError(ev.message ?? 'Unknown error')
+      ws.close()
+    } else {
+      onEvent(ev)
+    }
+  }
+
+  ws.onerror = () => {
+    onError('WebSocket connection failed')
+  }
+
+  ws.onclose = () => {}
+
+  return () => ws.close()
 }
 
 export function parseCsv(text: string): Array<{ name: string; email: string; phone: string; address: string }> {
