@@ -1,93 +1,133 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import { Badge } from '@/components/ui/badge'
-import { LogPanel } from '@/components/run/LogPanel'
-import { ModuleGraph } from '@/components/run/ModuleGraph'
-import { connectEnrichWs, type WsEvent, type CasePayload } from '@/lib/api'
-import type { LogEntry, ModuleNode } from '@/lib/mock-run'
+import { PipelineGraph } from '@/components/graph/PipelineGraph'
+import { ExecutionTimeline } from '@/components/timeline/ExecutionTimeline'
+import { DossierView } from '@/components/detail/DossierView'
+import { ModuleDetail } from '@/components/detail/ModuleDetail'
+import { streamEnrich } from '@/api/stream'
+import { fetchModules } from '@/api/client'
+import type { EnrichmentResponse, ModuleInfo, AuditEvent, ModuleResult } from '@/api/types'
+import type { CasePayload } from '@/lib/api'
+
+type Tab = 'graph' | 'timeline' | 'dossier'
 
 export function RunPage() {
   const { runId } = useParams()
   const location = useLocation()
   const state = location.state as { payload?: CasePayload; only?: string[] } | null
 
-  const [logs, setLogs] = useState<LogEntry[]>([])
-  const [modules, setModules] = useState<ModuleNode[]>([])
-  const [done, setDone] = useState(false)
+  const [activeTab, setActiveTab] = useState<Tab>('graph')
+  const [moduleInfos, setModuleInfos] = useState<ModuleInfo[]>([])
+  const [response, setResponse] = useState<EnrichmentResponse | null>(null)
+  const [liveEvents, setLiveEvents] = useState<AuditEvent[]>([])
+  const [isStreaming, setIsStreaming] = useState(false)
   const [error, setError] = useState('')
-  const logCounter = useRef(0)
-  const connected = useRef(false)
+  const [selectedModule, setSelectedModule] = useState<ModuleResult | null>(null)
+  const started = useRef(false)
 
   useEffect(() => {
-    if (!state?.payload || connected.current) return
-    connected.current = true
+    fetchModules().then(setModuleInfos).catch(() => {})
+  }, [])
 
-    const close = connectEnrichWs(
-      state.payload,
-      (ev: WsEvent) => {
-        if (ev.kind === 'module_completed' && ev.module) {
-          const id = logCounter.current++
-          const ts = new Date().toISOString().slice(11, 19)
-          const status = (ev.message?.includes('skipped') ? 'skipped'
-            : ev.message?.includes('error') || ev.message?.includes('failed') ? 'error'
-            : 'ok') as LogEntry['status']
+  useEffect(() => {
+    if (!state?.payload || started.current) return
+    started.current = true
+    setIsStreaming(true)
 
-          setLogs(prev => [...prev, {
-            id: `log-${id}`,
-            timestamp: ts,
-            module: ev.module!,
-            status,
-            message: ev.message ?? '',
-            duration_s: ev.elapsed_s,
-          }])
-        }
-
-        if (ev.kind === 'module_result' && ev.module) {
-          setModules(prev => [...prev, {
-            name: ev.module!,
-            status: (ev.status as ModuleNode['status']) ?? 'ok',
-            signalCount: ev.signal_count ?? 0,
-            duration_s: ev.duration_s,
-          }])
-        }
+    streamEnrich(state.payload, {
+      onEvent: (ev) => {
+        setLiveEvents((prev) => [...prev, ev])
       },
-      () => setDone(true),
-      (err) => setError(err),
-    )
-
-    return close
+      onResult: (res) => {
+        setResponse(res)
+        setIsStreaming(false)
+      },
+      onError: (err) => {
+        setError(err)
+        setIsStreaming(false)
+      },
+    })
   }, [state])
 
-  const okCount = modules.filter(m => m.status === 'ok').length
-  const errCount = modules.filter(m => m.status === 'error').length
-  const skipCount = modules.filter(m => m.status === 'skipped').length
+  function handleNodeClick(moduleName: string) {
+    const mod = response?.modules.find((m) => m.name === moduleName)
+    if (mod) setSelectedModule(mod)
+  }
+
+  const okCount = response?.modules.filter((m) => m.status === 'ok').length ?? 0
+  const errCount = response?.modules.filter((m) => m.status === 'error').length ?? 0
+  const skipCount = response?.modules.filter((m) => m.status === 'skipped').length ?? 0
+
+  const tabs: { key: Tab; label: string }[] = [
+    { key: 'graph', label: 'Graph' },
+    { key: 'timeline', label: 'Timeline' },
+    { key: 'dossier', label: 'Dossier' },
+  ]
 
   return (
     <div className="flex flex-col h-[calc(100vh-3.5rem)]">
       <div className="flex items-center gap-3 px-6 py-3 border-b border-border-subtle">
         <h1 className="text-sm font-semibold tracking-tight">Run</h1>
         <Badge variant="outline" className="text-text-primary bg-white/5 border-white/20">
-          {done ? (
-            <span className="w-1.5 h-1.5 rounded-full bg-white" />
-          ) : (
+          {isStreaming ? (
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+          ) : (
+            <span className="w-1.5 h-1.5 rounded-full bg-white" />
           )}
           {runId}
         </Badge>
-        {error && <span className="text-xs text-zinc-400">{error}</span>}
+
+        <div className="flex items-center gap-1 ml-4">
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`px-3 py-1 text-xs rounded transition-colors ${
+                activeTab === tab.key
+                  ? 'bg-white/10 text-text-primary'
+                  : 'text-text-tertiary hover:text-text-secondary'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {error && <span className="text-xs text-zinc-400 ml-2">{error}</span>}
+
         <span className="text-xs text-text-tertiary ml-auto">
-          {done ? 'Complete' : 'Running...'}
-          {modules.length > 0 && ` — ${okCount} ok / ${errCount} error / ${skipCount} skipped`}
+          {isStreaming ? 'Running...' : response ? 'Complete' : 'Waiting...'}
+          {response && ` — ${okCount} ok / ${errCount} error / ${skipCount} skipped`}
         </span>
       </div>
 
-      <div className="flex-1 flex gap-3 p-3 min-h-0">
-        <div className="w-[45%] min-w-[320px]">
-          <LogPanel logs={logs} />
-        </div>
+      <div className="flex-1 flex min-h-0">
         <div className="flex-1">
-          <ModuleGraph modules={modules} />
+          {activeTab === 'graph' && (
+            <PipelineGraph
+              response={response}
+              moduleInfos={moduleInfos}
+              liveEvents={liveEvents}
+              onNodeClick={handleNodeClick}
+            />
+          )}
+          {activeTab === 'timeline' && (
+            <ExecutionTimeline response={response} liveEvents={liveEvents} />
+          )}
+          {activeTab === 'dossier' && response && (
+            <DossierView response={response} />
+          )}
+          {activeTab === 'dossier' && !response && (
+            <div className="flex items-center justify-center h-full text-text-tertiary text-sm">
+              Dossier will appear when the pipeline completes.
+            </div>
+          )}
         </div>
+
+        {selectedModule && (
+          <ModuleDetail module={selectedModule} onClose={() => setSelectedModule(null)} />
+        )}
       </div>
     </div>
   )
