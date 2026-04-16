@@ -40,6 +40,8 @@ class Review(BaseModel):
 class ReviewsEnrichment(BaseModel):
     gaia_id: str
     profile_url: str
+    name: str = ""
+    profile_pic_url: str = ""
     reviews: list[Review] = []
     total_found: int = 0
     gaps: list[str] = []
@@ -73,11 +75,14 @@ async def fetch_reviews(
         )
 
     reviews = _parse(html, profile_url)
-    _log(f"[google_maps_reviews] found {len(reviews)} review(s)")
+    name, profile_pic_url = _parse_profile(html)
+    _log(f"[google_maps_reviews] found {len(reviews)} review(s) — name={name!r}")
 
     return ReviewsEnrichment(
         gaia_id=gaia_id,
         profile_url=profile_url,
+        name=name,
+        profile_pic_url=profile_pic_url,
         reviews=reviews,
         total_found=len(reviews),
         gaps=[] if reviews else ["No public reviews found on the contributor page"],
@@ -107,13 +112,13 @@ async def _render_page(url: str, cookies: dict[str, str]) -> str:
         ])
 
         page = await context.new_page()
-        await page.goto(url, wait_until="networkidle", timeout=30_000)
+        await page.goto(url, wait_until="domcontentloaded", timeout=30_000)
+        await page.wait_for_timeout(3_000)
 
         # Dismiss Google consent screen if it appears
         if "consent.google.com" in page.url or "Antes de ir" in await page.title():
             _log("[google_maps_reviews] consent screen detected — accepting")
             try:
-                # Click the "Accept all" / "Aceptar todo" button
                 accept = page.locator(
                     "button:has-text('Aceptar todo'), "
                     "button:has-text('Accept all'), "
@@ -121,7 +126,7 @@ async def _render_page(url: str, cookies: dict[str, str]) -> str:
                     "form[action*='consent.google.com/save'] button"
                 ).first
                 await accept.click()
-                await page.wait_for_load_state("networkidle", timeout=15_000)
+                await page.wait_for_timeout(3_000)
             except Exception as e:  # noqa: BLE001
                 _log(f"[google_maps_reviews] could not dismiss consent: {e}")
 
@@ -210,3 +215,44 @@ def _parse_block(block: Any, source_url: str) -> Review | None:
         place_url=place_url,
         source_url=source_url,
     )
+
+
+def _parse_profile(html: str) -> tuple[str, str]:
+    """Extract the contributor's display name and profile picture URL.
+
+    Returns (name, profile_pic_url). Empty strings if not found.
+
+    Selectors validated against Google Maps contributor pages (April 2025):
+      - Name:  button.fontHeadlineLarge inside .BZZkgb (next to profile pic)
+      - Photo: img[alt='Foto de perfil'] / img[alt='Profile photo'] inside .Gmmhvf
+    """
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        return "", ""
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Profile picture — Google Maps uses a consistent alt text across locales
+    pic_url = ""
+    pic_el = soup.find(
+        "img",
+        alt=lambda a: a and any(
+            kw in a.lower() for kw in ("foto de perfil", "profile photo", "profile picture", "profilbild")
+        ),
+    )
+    if pic_el:
+        src = pic_el.get("src", "") or ""
+        # Upgrade to a larger resolution by replacing the size suffix
+        if "=w" in src:
+            pic_url = src.split("=w")[0] + "=w400-h400-p-rp-mo-br100"
+        else:
+            pic_url = src
+
+    # Display name — .fontHeadlineLarge button sits next to the profile pic
+    name = ""
+    name_el = soup.select_one(".fontHeadlineLarge")
+    if name_el:
+        name = name_el.get_text(strip=True)
+
+    return name, pic_url
