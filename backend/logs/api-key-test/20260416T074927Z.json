@@ -1,0 +1,114 @@
+{
+  "case_id": "api-key-test",
+  "status": "enriched",
+  "dossier": {
+    "summary": "No confirmed public profiles or background information found for Mateo Amado Ares matching the provided email identifier (mateoamadoares@gmail.com). Searches across the open web, LinkedIn, Instagram, and Spanish public records returned no results for the exact full name or email address.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "No open-web results returned for the exact name 'Mateo Amado Ares' or the email 'mateoamadoares@gmail.com' — the subject may have a minimal or entirely private online presence.",
+      "LinkedIn shows profiles for 'Mateo Amado' and 'Mateo Ares' separately, but none carrying the full compound surname 'Amado Ares'; identity cannot be confirmed without the email anchor matching.",
+      "Instagram handle @mateo.ares0 was found but could not be fetched to verify identity against the provided email; excluded per strict-match rule.",
+      "Spanish Registro Mercantil and other public registries require authenticated access and could not be queried via open web for directorship or business ownership data.",
+      "Current address within the Barcelona area and employer/occupation are unknown from public sources."
+    ]
+  },
+  "llm_summary": null,
+  "lead_verification": null,
+  "modules": [
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "No confirmed public profiles or background information found for Mateo Amado Ares matching the provided email identifier (mateoamadoares@gmail.com). Searches across the open web, LinkedIn, Instagram, and Spanish public records returned no results for the exact full name or email address.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "No open-web results returned for the exact name 'Mateo Amado Ares' or the email 'mateoamadoares@gmail.com' — the subject may have a minimal or entirely private online presence.",
+        "LinkedIn shows profiles for 'Mateo Amado' and 'Mateo Ares' separately, but none carrying the full compound surname 'Amado Ares'; identity cannot be confirmed without the email anchor matching.",
+        "Instagram handle @mateo.ares0 was found but could not be fetched to verify identity against the provided email; excluded per strict-match rule.",
+        "Spanish Registro Mercantil and other public registries require authenticated access and could not be queried via open web for directorship or business ownership data.",
+        "Current address within the Barcelona area and employer/occupation are unknown from public sources."
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "anthropic_web",
+        "search_queries": [
+          "Mateo Amado Ares Barcelona",
+          "mateoamadoares@gmail.com",
+          "\"Mateo Amado Ares\"",
+          "\"Mateo Amado\" Ares España",
+          "mateoamadoares site:linkedin.com OR site:facebook.com OR site:twitter.com",
+          "\"Mateo Amado Ares\" linkedin",
+          "mateoamadoares instagram OR twitter OR facebook",
+          "\"Mateo Amado Ares\" OR \"mateoamadoares\"",
+          "mateoamadoares Barcelona debtor Spain",
+          "\"Mateo Amado\" Barcelona linkedin",
+          "linkedin \"Mateo Amado Ares\" Barcelona Spain",
+          "\"mateoamadoares\" OR \"mateo.amado.ares\"",
+          "Mateo Amado Ares Spain social media profile",
+          "Mateo Amado Ares España registros publicos empresa"
+        ],
+        "fetched_urls": [
+          "https://www.linkedin.com/pub/dir/Mateo/Ares",
+          "https://www.instagram.com/mateo.ares0/",
+          "https://www.linkedin.com/in/mateo-amado-3a244425b/"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "duration_s": 82.18843926899717
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 3.2117997761815786e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['osint_web']",
+      "detail": {
+        "modules": [
+          "osint_web"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 8.458900265395641e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['osint_web']",
+      "detail": {
+        "modules": [
+          "osint_web"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 82.1887030969956,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "ok in 82.19s (0 signal(s), 0 fact(s), 5 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 82.18843926899717,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 5
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 82.1891395910061,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

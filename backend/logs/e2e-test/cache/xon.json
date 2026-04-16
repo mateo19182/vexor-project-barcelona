@@ -1,0 +1,388 @@
+{
+  "name": "xon",
+  "status": "ok",
+  "summary": "Email found in 4 breach(es); registered on: trello.com, wattpad.com, duelingnetwork.com, edmodo.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 4 breach(es); earliest 2017, latest 2024",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Email found in 4 breach(es); earliest 2017, latest 2024",
+      "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+      "confidence": 0.95
+    },
+    {
+      "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Social media profiles, Usernames",
+      "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Overall breach risk score: Moderate (36/100)",
+      "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+      "confidence": 0.85
+    },
+    {
+      "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+      "source": "https://xposedornot.com/xposed/#mateoamadoares%40gmail.com",
+      "confidence": 0.9
+    }
+  ],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "trello.com",
+      "source": "https://www.cpomagazine.com/cyber-security/massive-trello-user-data-leak-hacker-lists-15-million-records-on-a-dark-web-hacking-forum/",
+      "confidence": 0.85,
+      "notes": "Account registered on trello.com (breach year: 2024). Data exposed: Email addresses, Names, Usernames",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "wattpad.com",
+      "source": "https://support.wattpad.com/hc/en-us/articles/360046241911-Statement-Regarding-Recent-Security-Issue-",
+      "confidence": 0.85,
+      "notes": "Account registered on wattpad.com (breach year: 2020). Data exposed: Names, Usernames, Dates of birth, Passwords, IP addresses, Genders, Social media profiles, Geographic locations, Passwords",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "duelingnetwork.com",
+      "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+      "confidence": 0.85,
+      "notes": "Account registered on duelingnetwork.com (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords, IP addresses",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Password exposed as easytocrack in DuelingNetwork breach",
+      "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "edmodo.com",
+      "source": "https://www.uregina.ca/is/security/advisories/security-advisory24.html",
+      "confidence": 0.85,
+      "notes": "Account registered on edmodo.com (breach year: 2017). Data exposed: Email addresses, Usernames, Passwords",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "analytics_status": 200,
+    "analytics": {
+      "BreachMetrics": {
+        "get_details": [],
+        "industry": [
+          [
+            [
+              "misc",
+              0
+            ],
+            [
+              "ente",
+              2
+            ],
+            [
+              "heal",
+              0
+            ],
+            [
+              "elec",
+              0
+            ],
+            [
+              "mini",
+              0
+            ],
+            [
+              "musi",
+              1
+            ],
+            [
+              "manu",
+              0
+            ],
+            [
+              "ener",
+              0
+            ],
+            [
+              "news",
+              0
+            ],
+            [
+              "hosp",
+              0
+            ],
+            [
+              "food",
+              0
+            ],
+            [
+              "phar",
+              0
+            ],
+            [
+              "educ",
+              0
+            ],
+            [
+              "cons",
+              0
+            ],
+            [
+              "agri",
+              0
+            ],
+            [
+              "tele",
+              0
+            ],
+            [
+              "info",
+              1
+            ],
+            [
+              "tran",
+              0
+            ],
+            [
+              "aero",
+              0
+            ],
+            [
+              "fina",
+              0
+            ],
+            [
+              "reta",
+              0
+            ],
+            [
+              "nonp",
+              0
+            ],
+            [
+              "govt",
+              0
+            ],
+            [
+              "spor",
+              0
+            ],
+            [
+              "envi",
+              0
+            ]
+          ]
+        ],
+        "passwords_strength": [
+          {
+            "EasyToCrack": 1,
+            "PlainText": 0,
+            "StrongHash": 2,
+            "Unknown": 1
+          }
+        ],
+        "risk": [
+          {
+            "risk_label": "Moderate",
+            "risk_score": 36
+          }
+        ],
+        "xposed_data": [
+          {
+            "children": [
+              {
+                "name": "🔒 Security Practices",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "D",
+                    "name": "data_Passwords",
+                    "value": 3
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "🖥️ Device and Network Information",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "G",
+                    "name": "data_IP addresses",
+                    "value": 2
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "👤 Personal Identification",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Usernames",
+                    "value": 4
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Names",
+                    "value": 2
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Genders",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Social media profiles",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "📞 Communication and Social Interactions",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "F",
+                    "name": "data_Email addresses",
+                    "value": 3
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "👥 Demographics",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Geographic locations",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Dates of birth",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              }
+            ]
+          }
+        ],
+        "yearwise_details": [
+          {
+            "y2007": 0,
+            "y2008": 0,
+            "y2009": 0,
+            "y2010": 0,
+            "y2011": 0,
+            "y2012": 0,
+            "y2013": 0,
+            "y2014": 0,
+            "y2015": 0,
+            "y2016": 0,
+            "y2017": 2,
+            "y2018": 0,
+            "y2019": 0,
+            "y2020": 1,
+            "y2021": 0,
+            "y2022": 0,
+            "y2023": 0,
+            "y2024": 1,
+            "y2025": 0,
+            "y2026": 0
+          }
+        ]
+      },
+      "BreachesSummary": {
+        "site": "DuelingNetwork;Edmodo;Wattpad;Trello"
+      },
+      "ExposedBreaches": {
+        "breaches_details": [
+          {
+            "breach": "Trello",
+            "details": "The Trello Data Scraping Incident in January 2024 resulted in over 15 million email addresses, names, and usernames being posted for sale on a popular hacking forum. This data was collected by enumerating a publicly accessible resource using email addresses sourced from previous breach datasets. Trello has stated that this incident did not involve unauthorized access to their systems. ",
+            "domain": "trello.com",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/Trello.png",
+            "password_risk": "unknown",
+            "references": "https://www.cpomagazine.com/cyber-security/massive-trello-user-data-leak-hacker-lists-15-million-records-on-a-dark-web-hacking-forum/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Names;Usernames",
+            "xposed_date": "2024",
+            "xposed_records": 15115458,
+            "added": "2024-07-16T01:25:31+00:00"
+          },
+          {
+            "breach": "Wattpad",
+            "details": "Wattpad, a self-publishing platform that claims to be “the world’s most-loved social storytelling platform,” suffered a data breach exposing all of its users. The leaked database included more than 270 million records with more than 268 million unique email address and password combinations. Exposed data includes email address, date of birth, gender if provided, IP address upon sign up, if signed up before 2017, display name, account name, and salted and cryptographically hashed passwords.",
+            "domain": "wattpad.com",
+            "industry": "Entertainment",
+            "logo": "https://xposedornot.com/static/logos/Wattpad.png",
+            "password_risk": "hardtocrack",
+            "references": "https://support.wattpad.com/hc/en-us/articles/360046241911-Statement-Regarding-Recent-Security-Issue-",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Names;Usernames;Dates of birth;Passwords;IP addresses;Genders;Social media profiles;Geographic locations;Passwords",
+            "xposed_date": "2020",
+            "xposed_records": 268113400,
+            "added": "2023-11-08T06:30:32+00:00"
+          },
+          {
+            "breach": "DuelingNetwork",
+            "details": "Online fan game site Dueling Network, a now-defunct Flash game based on the Yu-Gi-Oh trading card game got breached and exposed of its 6.5 million users email as well as poorly hashed passwords.",
+            "domain": "duelingnetwork.com",
+            "industry": "Entertainment",
+            "logo": "https://xposedornot.com/static/logos/Duelingnetwork.png",
+            "password_risk": "easytocrack",
+            "references": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Usernames;Email addresses;Passwords;IP addresses",
+            "xposed_date": "2017",
+            "xposed_records": 6488767,
+            "added": "2023-11-08T06:30:18+00:00"
+          },
+          {
+            "breach": "Edmodo",
+            "details": "Edmodo, an education technology company providing a learning management system, announced that it had suffered a data breach. User names, email addresses, and hashed passwords were acquired by an unauthorized third party. The passwords were “hashed” (or encrypted) using the strong and robust bcrypt algorithm. In 2018, the data breach was reported by the company.",
+            "domain": "edmodo.com",
+            "industry": "Music",
+            "logo": "https://xposedornot.com/static/logos/Edmodo.png",
+            "password_risk": "hardtocrack",
+            "references": "https://www.uregina.ca/is/security/advisories/security-advisory24.html",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Usernames;Passwords",
+            "xposed_date": "2017",
+            "xposed_records": 43415654,
+            "added": "2023-11-08T06:30:18+00:00"
+          }
+        ]
+      },
+      "ExposedPastes": null,
+      "PasteMetrics": null,
+      "PastesSummary": {
+        "cnt": 0,
+        "domain": "",
+        "tmpstmp": ""
+      }
+    },
+    "check_status": 0,
+    "check": null
+  },
+  "duration_s": 0.3806575480266474
+}

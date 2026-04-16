@@ -1,0 +1,757 @@
+{
+  "name": "breach_scout",
+  "status": "ok",
+  "summary": "Found in 13 breach record(s) | 9 new email(s) discovered: lordkulbitus@gmail.com, mateo_amado@hotmail.com, mateo.amado@telepizza.com | 23 new phone(s) discovered: 1551 S HARVARD BLVD LOS ANGELES LOS ANGELES CA 90006, 013841311, 27151 W 15TH ST LOS ANGELES LOS ANGELES CA 90006 | Aliases/usernames: MateoAmado98, mateo-amado-6469ba6a, mateoamado10",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Identity found in 13 breach record(s) in the breach intelligence database",
+      "source": "https://9ghz.com",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Debtor identifiers found in 13 breach record(s)",
+      "source": "https://9ghz.com",
+      "confidence": 0.85,
+      "notes": "Breaches: National Public Data (SSNs Breach), Bouygues Telecom Database, Twitter (400M), PeopleDataLabs (PDL), Apollo",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "lordkulbitus@gmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo_amado@hotmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo.amado@telepizza.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoamado10@hotmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoamadoospina@hotmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo.amado@gmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoamdo13@gmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateovalent@yahoo.com.ar",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoamadobu@gmail.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "1551 S HARVARD BLVD LOS ANGELES LOS ANGELES CA 90006",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "013841311",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "27151 W 15TH ST LOS ANGELES LOS ANGELES CA 90006",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "2715 W HALF LOS ANGELES LOS ANGELES CA 90032",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "014156418",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "3603361542",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "1209 5TH AVE TRLR 2 SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "520214404",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "1209 5 TH AVE SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "1209 5TH AVE SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "1209 5 TH AVE TRLR 2 SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "9047654558",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "659228271",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "26/12/2006",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "79292b7d530409870997df98e3086feadffc19bf9a4bffab3da5c19652a374db,0dc934e01ba15b360386960c945002c6256b7729",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+527774262264",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "100028350330553",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+12396017699",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "100007964822891",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "77.27.13.39",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "9fdb6ec157a6eb6da07ca48b11a8deab",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "77.27.14.71",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "MateoAmado98",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "mateo-amado-6469ba6a",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "mateoamado10",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "te0nil35",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "mateo amado",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "100028350330553",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "100007964822891",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "ma. a.",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "mateo19182",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "keywords": [
+      "Mateo Amado",
+      "mateoamadoares@gmail.com",
+      "+34674527164"
+    ],
+    "mode": "authenticated_batch",
+    "response": {
+      "code": 0,
+      "msg": "ok",
+      "data": [
+        {
+          "data": [
+            {
+              "address": "1551 S HARVARD BLVD LOS ANGELES LOS ANGELES CA 90006",
+              "id_number": "013841311",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "27151 W 15TH ST LOS ANGELES LOS ANGELES CA 90006",
+              "id_number": "013841311",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "2715 W HALF LOS ANGELES LOS ANGELES CA 90032",
+              "id_number": "014156418",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "1209 5TH AVE TRLR 2 SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+              "id_number": "520214404",
+              "phone": "3603361542",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "1209 5 TH AVE SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+              "id_number": "520214404",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "1209 5TH AVE SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+              "id_number": "520214404",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "1209 5 TH AVE TRLR 2 SCOTTSBLUFF SCOTTS BLUFF NE 69361",
+              "id_number": "520214404",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "PO BOX 148 MITCHELL SCOTTS BLUFF NE 69357",
+              "id_number": "520214404",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "1551 S HARVARD BLVD LOS ANGELES LOS ANGELES CA 90006",
+              "id_number": "013841311",
+              "phone": "9047654558",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "3 SQUARE DE LA MADELEINE 77220 TOURNAN EN BRIE",
+              "date_of_birth": "26/12/2006",
+              "email": "lordkulbitus@gmail.com",
+              "phone": "659228271",
+              "real_name": "mateo amado",
+              "region": "FR",
+              "source": {
+                "breach_date": "2025-08-01",
+                "domain": "bouyguestelecom.fr",
+                "id": "444239",
+                "record_count": 6319574,
+                "region": "FR",
+                "title": "Bouygues Telecom Database"
+              }
+            },
+            {
+              "email": "mateo_amado@hotmail.com",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2021-01-01",
+                "domain": "twitter.com",
+                "id": "4853",
+                "record_count": 450682012,
+                "region": "",
+                "title": "Twitter (400M)"
+              },
+              "user_name": "MateoAmado98"
+            },
+            {
+              "email": "mateo_amado@hotmail.com",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2021-01-01",
+                "domain": "twitter.com",
+                "id": "4853",
+                "record_count": 450682012,
+                "region": "",
+                "title": "Twitter (400M)"
+              },
+              "user_name": "MateoAmado98"
+            },
+            {
+              "email": "mateo.amado@telepizza.com",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2019-01-01",
+                "domain": "peopledatalabs.com",
+                "id": "514356",
+                "record_count": 471014406,
+                "region": "US",
+                "title": "PeopleDataLabs (PDL) "
+              },
+              "user_name": "mateo-amado-6469ba6a"
+            },
+            {
+              "address": "Madrid, Spain Community of Madrid, Spain Spain {'type': 'envelope', 'coordinates': [[-3.8341618, 40.5635903], [-3.5249115, 40.3120639]]}",
+              "email": "mateo.amado@telepizza.com",
+              "other_info": "http://www.linkedin.com/in/mateo-amado-6469ba6a Técnico de Desarrollo entry telepizza",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2018-07-23",
+                "domain": "apollo.io",
+                "id": "323836",
+                "record_count": 125929660,
+                "region": "",
+                "title": "Apollo"
+              }
+            },
+            {
+              "email": "mateoamado10@hotmail.com",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2018-12-01",
+                "domain": "dubsmash.com",
+                "id": "51334b",
+                "record_count": 161749950,
+                "region": "",
+                "title": "Dubsmash"
+              },
+              "user_name": "mateoamado10"
+            },
+            {
+              "email": "mateoamadoospina@hotmail.com",
+              "gender": "M",
+              "password": "$2y$10$lJd4GL/pG3C22AQ1kiTkZeIWOcNVOygGqlab91.S8iSpYYSUs6EW.",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2019-08-01",
+                "domain": "traceup.com",
+                "id": "425242",
+                "record_count": 988376,
+                "region": "",
+                "title": "AlpineReplay Database"
+              }
+            },
+            {
+              "email": "mateo.amado@gmail.com",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2019-01-01",
+                "domain": "peopledatalabs.com",
+                "id": "514356",
+                "record_count": 471014406,
+                "region": "US",
+                "title": "PeopleDataLabs (PDL) "
+              },
+              "user_name": "mateo-amado-6469ba6a"
+            },
+            {
+              "email": "mateoamdo13@gmail.com",
+              "password": "$2y$10$EgF06AUDrEUa3nWgytaEheKrP8HikYjmSk7ibiGB24.gygSLlbUue",
+              "real_name": "mateo amado",
+              "region": "CO",
+              "source": {
+                "breach_date": "2020-06-29",
+                "domain": "wattpad.com",
+                "id": "513644",
+                "record_count": 268765495,
+                "region": "",
+                "title": "Wattpad"
+              },
+              "user_name": "te0nil35"
+            },
+            {
+              "email": "mateovalent@yahoo.com.ar",
+              "password": "79292b7d530409870997df98e3086feadffc19bf9a4bffab3da5c19652a374db,0dc934e01ba15b360386960c945002c6256b7729",
+              "real_name": "mateo amado",
+              "source": {
+                "breach_date": "2018-07-10",
+                "domain": "animoto.com",
+                "id": "474830",
+                "record_count": 22437749,
+                "region": "",
+                "title": "Animoto"
+              }
+            },
+            {
+              "date_of_birth": "1981-01-18",
+              "email": "mateoamadobu@gmail.com",
+              "gender": "M",
+              "real_name": "mateo amado",
+              "region": "PE",
+              "source": {
+                "breach_date": "2019-04-22",
+                "domain": "deezer.com",
+                "id": "513652",
+                "record_count": 229037936,
+                "region": "",
+                "title": "Deezer"
+              },
+              "user_name": "mateo amado"
+            },
+            {
+              "gender": "M",
+              "phone": "+527774262264",
+              "real_name": "mateo amado",
+              "region": "MX",
+              "source": {
+                "breach_date": "2019-08-01",
+                "domain": "facebook.com",
+                "id": "3453",
+                "record_count": 509458528,
+                "region": "",
+                "title": "Facebook"
+              },
+              "user_name": "100028350330553"
+            },
+            {
+              "address": "Naples, Florida Guatemala City, Guatemala",
+              "gender": "M",
+              "other_info": "Facebook",
+              "phone": "+12396017699",
+              "real_name": "mateo amado",
+              "region": "US",
+              "source": {
+                "breach_date": "2019-08-01",
+                "domain": "facebook.com",
+                "id": "3453",
+                "record_count": 509458528,
+                "region": "",
+                "title": "Facebook"
+              },
+              "user_name": "100007964822891"
+            },
+            {
+              "date_of_birth": "1981-01-18",
+              "email": "mateoamadobu@gmail.com",
+              "gender": "M",
+              "real_name": "Mateo Amado",
+              "region": "PE",
+              "source": {
+                "breach_date": "2019-04-22",
+                "domain": "deezer.com",
+                "id": "513652",
+                "record_count": 229037936,
+                "region": "",
+                "title": "Deezer"
+              },
+              "user_name": "mateo amado"
+            }
+          ],
+          "keyword": "Mateo Amado",
+          "total_count": 23
+        },
+        {
+          "data": [
+            {
+              "email": "mateoamadoares@gmail.com",
+              "source": {
+                "breach_date": "2017-05-11",
+                "domain": "edmodo.com",
+                "id": "325635",
+                "record_count": 43423561,
+                "region": "",
+                "title": "Edmodo"
+              },
+              "user_name": "ma. a."
+            },
+            {
+              "email": "mateoamadoares@gmail.com",
+              "ip_address": "77.27.13.39",
+              "password": "9fdb6ec157a6eb6da07ca48b11a8deab",
+              "source": {
+                "breach_date": "2017-03-29",
+                "domain": "duelingnetwork.com",
+                "id": "343259",
+                "record_count": 6486626,
+                "region": "",
+                "title": "Dueling Network"
+              },
+              "user_name": "mateo19182"
+            },
+            {
+              "email": "mateoamadoares@gmail.com",
+              "ip_address": "77.27.14.71",
+              "password": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+              "region": "ES",
+              "source": {
+                "breach_date": "2020-06-29",
+                "domain": "wattpad.com",
+                "id": "513644",
+                "record_count": 268765495,
+                "region": "",
+                "title": "Wattpad"
+              },
+              "user_name": "mateo19182"
+            }
+          ],
+          "keyword": "mateoamadoares@gmail.com",
+          "total_count": 3
+        },
+        {
+          "data": [],
+          "keyword": "+34674527164",
+          "total_count": 0
+        }
+      ]
+    },
+    "status_code": 200,
+    "response_bytes": 7670
+  },
+  "duration_s": 1.6922090190346353
+}

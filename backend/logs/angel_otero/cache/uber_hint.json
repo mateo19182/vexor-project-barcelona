@@ -1,0 +1,26 @@
+{
+  "name": "uber_hint",
+  "status": "ok",
+  "summary": "mateoamadoares2@gmail.com is NOT registered on Uber. | +3467452714 is NOT registered on Uber.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "email_lookup": {
+      "identifier": "mateoamadoares2@gmail.com",
+      "id_type": "email",
+      "status_raw": "BAN",
+      "data": null,
+      "error": null
+    },
+    "phone_lookup": {
+      "identifier": "+3467452714",
+      "id_type": "phone",
+      "status_raw": "BAN",
+      "data": null,
+      "error": null
+    }
+  },
+  "duration_s": 3.0253588590421714
+}

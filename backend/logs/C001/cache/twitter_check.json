@@ -1,28 +1,27 @@
 {
   "name": "twitter_check",
   "status": "ok",
-  "summary": "geohot@gmail.com is NOT registered on Twitter.",
+  "summary": "mateoamadoares@gmail.com is registered on Twitter.",
   "social_links": [],
   "facts": [],
-  "signals": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "Twitter account registered to mateoamadoares@gmail.com",
+      "source": "platform_check:twitter_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: REGISTERED",
+      "tag": null
+    }
+  ],
   "gaps": [],
   "raw": {
     "platform": "Twitter",
-    "identifier": "geohot@gmail.com",
-    "status_raw": "FAIL",
+    "identifier": "mateoamadoares@gmail.com",
+    "status_raw": "REGISTERED",
     "http_status": 200,
-    "session_id": "14a2a39e-871d-4d55-9e48-61110fcbfd2b",
+    "session_id": "1fe4c25f-c72e-4cdf-90ed-8584f54e4bcb",
     "error": null
   },
-  "ctx_patch": {
-    "name": null,
-    "email": null,
-    "phone": null,
-    "address": null,
-    "instagram_handle": null,
-    "linkedin_url": null,
-    "twitter_handle": null,
-    "gaia_id": null
-  },
-  "duration_s": 0.9810777620004956
+  "duration_s": 1.3272647900157608
 }

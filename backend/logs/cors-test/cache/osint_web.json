@@ -1,0 +1,31 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "No confirmed public profiles found for Test matching the provided identifiers. The name 'Test' is not a valid personal name and no identity anchors (email, phone, address) were supplied to match against any discovered profiles.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "osint_web",
+      "source": "osint_web",
+      "confidence": 1.0,
+      "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+      "tag": "enrichment_ran"
+    }
+  ],
+  "gaps": [
+    "No real personal name provided — 'Test' is not a searchable human identity.",
+    "No identity anchors (email, phone, address, username) were supplied, making it impossible to confirm any profile belongs to this specific subject.",
+    "Country 'ES' (Spain) alone is insufficient to narrow down a subject without a real name or other identifiers.",
+    "Unable to perform any meaningful OSINT without at least one confirmed identifier."
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [],
+    "fetched_urls": [],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 7.61745434300974
+}

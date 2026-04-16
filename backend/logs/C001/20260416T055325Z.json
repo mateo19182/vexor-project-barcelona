@@ -1,0 +1,108 @@
+{
+  "case_id": "C001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "No confirmed public profiles found for George Hotz matching the provided identifiers (email xanulloa@gmail.com, phone 617758559, address Sant Martí, Barcelona 08026). The Instagram handle @georgehotz (58K followers) is publicly attributed to the well-known American hacker/engineer George Hotz ('geohot'), not the subject. The Twitter handle @Aziffo returned no retrievable profile. No open-web sources linked the email prefix 'xanulloa', the phone number 617758559, or the Sant Martí address to any identifiable public persona.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "Instagram @georgehotz is publicly attributed to a well-known American tech figure (George Hotz / geohot, founder of comma.ai), not to the subject in Barcelona — cannot confirm this handle belongs to the subject without a matching identifier",
+      "Twitter/X handle @Aziffo returned no accessible or retrievable profile in search results; identity cannot be confirmed",
+      "Email prefix 'xanulloa' returned no social-media or public-record matches linking it to this subject",
+      "Phone number 617758559 (Spanish mobile format) returned no public directory or social results linking it to this subject",
+      "No LinkedIn, GitHub, or other professional profiles found matching the subject's identifiers",
+      "Subject's exact address (Sant Martí, 08026, Barcelona) could not be cross-referenced with any public record for this name"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "No confirmed public profiles found for George Hotz matching the provided identifiers (email xanulloa@gmail.com, phone 617758559, address Sant Martí, Barcelona 08026). The Instagram handle @georgehotz (58K followers) is publicly attributed to the well-known American hacker/engineer George Hotz ('geohot'), not the subject. The Twitter handle @Aziffo returned no retrievable profile. No open-web sources linked the email prefix 'xanulloa', the phone number 617758559, or the Sant Martí address to any identifiable public persona.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Instagram @georgehotz is publicly attributed to a well-known American tech figure (George Hotz / geohot, founder of comma.ai), not to the subject in Barcelona — cannot confirm this handle belongs to the subject without a matching identifier",
+        "Twitter/X handle @Aziffo returned no accessible or retrievable profile in search results; identity cannot be confirmed",
+        "Email prefix 'xanulloa' returned no social-media or public-record matches linking it to this subject",
+        "Phone number 617758559 (Spanish mobile format) returned no public directory or social results linking it to this subject",
+        "No LinkedIn, GitHub, or other professional profiles found matching the subject's identifiers",
+        "Subject's exact address (Sant Martí, 08026, Barcelona) could not be cross-referenced with any public record for this name"
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "anthropic_web",
+        "search_queries": [
+          "@Aziffo Twitter",
+          "@georgehotz Instagram Barcelona",
+          "xanulloa gmail Barcelona",
+          "\"Aziffo\" Twitter X profile",
+          "\"xanulloa\" site:instagram.com OR site:twitter.com OR site:linkedin.com",
+          "\"georgehotz\" Instagram \"Barcelona\" OR \"Sant Marti\" OR \"08026\"",
+          "617758559 Spain",
+          "xanulloa Barcelona tech"
+        ],
+        "fetched_urls": [
+          "https://x.com/Aziffo",
+          "https://www.instagram.com/georgehotz/"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "duration_s": 50.06138918400393
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 7.813199772499502e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['osint_web']",
+      "detail": {
+        "modules": [
+          "osint_web"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.00019931199494749308,
+      "module": null,
+      "wave": 1,
+      "message": "['osint_web']",
+      "detail": {
+        "modules": [
+          "osint_web"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 50.0618096459948,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "ok in 50.06s (0 signal(s), 0 fact(s), 6 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 50.06138918400393,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 6
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 50.06246249299147,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

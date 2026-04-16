@@ -1,0 +1,39 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "The subject, Mateo Amado, uses the official crest of Club Atlético River Plate as a social media avatar. This suggests a strong personal interest in or affiliation with the Argentine sports club.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The subject's social media presence is associated with the handle 'colid1o'.",
+      "source": "twitter/colid1o_avatar.jpg",
+      "confidence": 0.9
+    }
+  ],
+  "signals": [
+    {
+      "kind": "asset",
+      "value": "Mateo Amado uses the Club Atlético River Plate (CARP) logo as a profile avatar.",
+      "source": "vision_batch:twitter/colid1o_avatar.jpg",
+      "confidence": 0.35,
+      "notes": "Inferred from visual analysis of collected photos",
+      "tag": null
+    }
+  ],
+  "gaps": [
+    "Physical location of the subject cannot be determined from a logo.",
+    "Employment status and business affiliations are not visible.",
+    "It is unclear if the subject is an Argentine citizen or simply a fan of the club.",
+    "No personal assets or lifestyle details are visible beyond sports interests."
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/colid1o_avatar.jpg"
+    ]
+  },
+  "duration_s": 5.635210820008069
+}

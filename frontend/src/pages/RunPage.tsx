@@ -37,20 +37,24 @@ export function RunPage() {
     started.current = true
     setIsStreaming(true)
 
-    streamEnrich(state.payload, {
-      onEvent: (ev) => {
-        setLiveEvents((prev) => [...prev, ev])
+    streamEnrich(
+      state.payload,
+      {
+        onEvent: (ev) => {
+          setLiveEvents((prev) => [...prev, ev])
+        },
+        onResult: (res) => {
+          setResponse(res)
+          setIsStreaming(false)
+          setShowDossier(true)
+        },
+        onError: (err) => {
+          setError(err)
+          setIsStreaming(false)
+        },
       },
-      onResult: (res) => {
-        setResponse(res)
-        setIsStreaming(false)
-        setShowDossier(true)
-      },
-      onError: (err) => {
-        setError(err)
-        setIsStreaming(false)
-      },
-    })
+      state.only,
+    )
   }, [state])
 
   function handleNodeClick(moduleName: string) {

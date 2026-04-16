@@ -1,0 +1,59 @@
+{
+  "name": "property",
+  "status": "ok",
+  "summary": "Sin estimacion de valor para Sant Martí, 08026, Barcelona. Ver gaps.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Barcelona, ES",
+      "source": "geocoding",
+      "confidence": 0.75,
+      "notes": "Location derived from debtor's known address",
+      "tag": null
+    }
+  ],
+  "gaps": [
+    "Geocoding no resolvio calle + numero + municipio — sin consulta a Catastro"
+  ],
+  "raw": {
+    "geocode": {
+      "engine": "nominatim",
+      "display_name": "Sant Martí, Barcelona, Barcelonès, Barcelona, Catalunya, España",
+      "lat": "41.4084102",
+      "lon": "2.2031889",
+      "postcode": null,
+      "city": "Barcelona",
+      "provincia": "Catalunya",
+      "state": "Catalunya"
+    },
+    "mitma": {
+      "municipio": "Barcelona",
+      "provincia": "Barcelona",
+      "eur_m2_total": 4501.2,
+      "eur_m2_nueva": 5005.2,
+      "eur_m2_usada": 4493.6,
+      "n_tasaciones": 5735,
+      "granularidad": "municipio",
+      "periodo": "T4 2025",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+    },
+    "serpavi": {
+      "municipio": "Barcelona",
+      "provincia": "Barcelona",
+      "alquiler_eur_m2_mes_mediana": 13.68,
+      "alquiler_eur_m2_mes_p25": 11.11,
+      "alquiler_eur_m2_mes_p75": 16.77,
+      "alquiler_eur_mes_mediana": 900.0,
+      "alquiler_eur_mes_p25": 735.83,
+      "alquiler_eur_mes_p75": 1169.01,
+      "superficie_tipica_m2": 68.0,
+      "n_viviendas_muestra": 140872,
+      "granularidad": "municipio",
+      "periodo": "2024",
+      "source": "https://serpavi.mivau.gob.es/"
+    }
+  },
+  "duration_s": 0.38349953800207004
+}

@@ -1,0 +1,20 @@
+{
+  "name": "twitter_check",
+  "status": "no_data",
+  "summary": "Twitter check for alentad@gmail.com was inconclusive (status: BAN).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter returned ambiguous status 'BAN' for alentad@gmail.com"
+  ],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "alentad@gmail.com",
+    "status_raw": "BAN",
+    "http_status": 200,
+    "session_id": "07c5f042-955d-456a-bc89-1a6f643c8a26",
+    "error": null
+  },
+  "duration_s": 1.6824708890053444
+}

@@ -33,13 +33,34 @@ const categoryIcons: Record<string, string> = {
   risk: "RISK",
 };
 
+// Lead tier based on mask cross-referencing:
+//   HIGH (>=0.95): both email mask + phone mask match the lead
+//   MID  (>=0.80): only one mask matches (email OR phone)
+//   LOW  (>=0.60): a collected email/phone matches a mask somewhere
+//   null (<0.60):  no mask match — unknown, no color
+function leadTier(confidence: number): { label: string; color: string; border: string; bg: string } | null {
+  if (confidence >= 0.95) return { label: "HIGH", color: "text-red-400", border: "border-red-500/30", bg: "bg-red-500/10" };
+  if (confidence >= 0.80) return { label: "MID", color: "text-orange-400", border: "border-orange-500/30", bg: "bg-orange-500/10" };
+  if (confidence >= 0.60) return { label: "LOW", color: "text-yellow-400", border: "border-yellow-500/30", bg: "bg-yellow-500/10" };
+  return null;
+}
+
+const isContactChannel = (ch: string) => ["email", "phone"].includes(ch.toLowerCase());
+
 function ChannelRow({ ch }: { ch: ContactChannel }) {
+  const contact = isContactChannel(ch.channel);
+  const tier = contact ? leadTier(ch.confidence) : null;
+
   return (
-    <div className="flex items-center gap-3 bg-bg-elevated/30 rounded-lg px-3 py-2">
-      <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-bg-overlay text-text-secondary w-16 text-center shrink-0">
+    <div className={`flex items-center gap-3 rounded-lg px-3 py-2 ${
+      tier ? `${tier.bg} border ${tier.border}` : "bg-bg-elevated/30"
+    }`}>
+      <span className={`text-[10px] font-mono uppercase px-1.5 py-0.5 rounded w-16 text-center shrink-0 ${
+        tier ? `${tier.bg} ${tier.color}` : "bg-bg-overlay text-text-secondary"
+      }`}>
         {ch.channel}
       </span>
-      <span className="text-sm text-text-primary font-mono flex-1 truncate">{ch.value}</span>
+      <span className={`text-sm font-mono flex-1 truncate ${tier ? tier.color : "text-text-primary"}`}>{ch.value}</span>
       {ch.verified_on.length > 0 && (
         <div className="flex items-center gap-1 shrink-0">
           {ch.verified_on.map((p) => (
@@ -48,6 +69,11 @@ function ChannelRow({ ch }: { ch: ContactChannel }) {
             </span>
           ))}
         </div>
+      )}
+      {tier && (
+        <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded ${tier.bg} ${tier.color} shrink-0`}>
+          {tier.label}
+        </span>
       )}
       <span className="text-[10px] text-text-tertiary shrink-0">{(ch.confidence * 100).toFixed(0)}%</span>
     </div>

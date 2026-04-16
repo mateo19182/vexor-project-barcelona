@@ -1,0 +1,18 @@
+{
+  "name": "twitter_check",
+  "status": "ok",
+  "summary": "mateoamadoares2@gmail.com is NOT registered on Twitter.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "mateoamadoares2@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "session_id": "25251f0b-f58c-40a1-8f71-9421047d115c",
+    "error": null
+  },
+  "duration_s": 1.1158176090102643
+}

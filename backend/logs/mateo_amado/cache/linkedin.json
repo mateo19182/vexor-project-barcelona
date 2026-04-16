@@ -1,0 +1,148 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "LinkedIn @mateo-amado-3a244425b (Mateo Amado) — Trabajador con experiencia en atencion al cliente, gestion de documentos e inventario, ventas y facturacion. — Cali, Valle del Cauca, Colombia — 2 followers.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "LinkedIn position: Marketing Staff — Vertebrata Clinica Veterinaria · Part-time — Oct 2022 - Jan 2024 · 1 yr 4 mos",
+      "source": "https://www.linkedin.com/search/results/all/?keywords=Vertebrata+Clinica+Veterinaria",
+      "confidence": 0.8
+    },
+    {
+      "claim": "LinkedIn position: Assistant Manager — Vertebrata · Full-time — Mar 2022 - Sep 2023 · 1 yr 7 mos",
+      "source": "https://www.linkedin.com/search/results/all/?keywords=Vertebrata",
+      "confidence": 0.8
+    }
+  ],
+  "signals": [
+    {
+      "kind": "role",
+      "value": "Trabajador con experiencia en atencion al cliente, gestion de documentos e inventario, ventas y facturacion.",
+      "source": "mateo-amado-3a244425b",
+      "confidence": 0.85,
+      "notes": "Verbatim LinkedIn headline",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "Platzi",
+      "source": "https://www.linkedin.com/school/platzi-inc/",
+      "confidence": 0.85,
+      "notes": "Listed as current position on LinkedIn",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Industry: Internet",
+      "source": "mateo-amado-3a244425b",
+      "confidence": 0.7,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "location",
+      "value": "Cali, Valle del Cauca, Colombia",
+      "source": "mateo-amado-3a244425b",
+      "confidence": 0.8,
+      "notes": "Self-reported location on LinkedIn profile",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "username": "mateo-amado-3a244425b",
+    "profile_url": "mateo-amado-3a244425b",
+    "urn": "ACoAAD_1gSoB2ttzzmlGX5Y1P5aO9tAtWKmP0Uc",
+    "overview": {
+      "firstName": "Mateo",
+      "lastName": "Amado",
+      "fullName": "Mateo Amado",
+      "headline": "Trabajador con experiencia en atencion al cliente, gestion de documentos e inventario, ventas y facturacion.",
+      "publicIdentifier": "mateo-amado-3a244425b",
+      "followerCount": 2,
+      "connectionsCount": 2,
+      "qualityProfile": true,
+      "joined": 1671721299236,
+      "profileID": "1073053994",
+      "urn": "ACoAAD_1gSoB2ttzzmlGX5Y1P5aO9tAtWKmP0Uc",
+      "CurrentPositions": [
+        {
+          "id": "2822346",
+          "name": "Platzi",
+          "url": "https://www.linkedin.com/school/platzi-inc/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/C4E0BAQEOTcHh0HnWwQ/company-logo_400_400/company-logo_400_400/0/1677870818259/platzi_inc_logo?e=1778112000&v=beta&t=CQDOLAA3Gyi68UbOzxqXzgGGVBL2N-yO20P1FRYv_Os"
+        }
+      ],
+      "isTopVoice": false,
+      "premium": false,
+      "influencer": false,
+      "industryName": "Internet",
+      "industryUrn": "urn:li:fsd_industry:6",
+      "location": {
+        "countryCode": "co",
+        "countryName": "Colombia",
+        "city": "Cali, Valle del Cauca",
+        "fullLocation": "Cali, Valle del Cauca, Colombia"
+      },
+      "profilePictureURL": "https://media.licdn.com/dms/image/v2/D4E03AQED8Y9d4pdOmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725319967202?e=1778112000&v=beta&t=BxTiUBkbqxwYnmLahIslehBwmp4VIQvBtz8KX-ZdHGI",
+      "supportedLocales": [
+        {
+          "country": "US",
+          "language": "en"
+        }
+      ]
+    },
+    "details": {
+      "about": "",
+      "featuredPosts": null,
+      "positions": [
+        {
+          "jobTitle": "Marketing Staff",
+          "company": "Vertebrata Clinica Veterinaria · Part-time",
+          "location": "Cali, Valle del Cauca, Colombia · Remote",
+          "duration": "Oct 2022 - Jan 2024 · 1 yr 4 mos",
+          "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Vertebrata+Clinica+Veterinaria",
+          "companyId": "all",
+          "jobDescription": "Design and administrate the Google ADS campaign, making daily revews and reports to keep it optimized; also making weekly and monthly adaptations based on the data compiled by Google."
+        },
+        {
+          "jobTitle": "Assistant Manager",
+          "company": "Vertebrata · Full-time",
+          "location": "Cali, Valle del Cauca, Colombia · On-site",
+          "duration": "Mar 2022 - Sep 2023 · 1 yr 7 mos",
+          "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Vertebrata",
+          "companyId": "all",
+          "jobDescription": "General assistant, doing customer service in site; answering calls, SMS, WhatsApp, and E-Mail. Management of physical and digital documents, general schedule for 5+ roles and also the inventory. Sales and billing."
+        }
+      ],
+      "education": [
+        {
+          "duration": "2022",
+          "durationParsed": {
+            "start": {
+              "year": 0,
+              "month": 0,
+              "day": 0
+            },
+            "end": {
+              "year": 0,
+              "month": 0,
+              "day": 0
+            }
+          },
+          "university": "Platzi",
+          "universityLink": "https://www.linkedin.com/company/2822346/",
+          "degree": "Beginner, Programation",
+          "description": null,
+          "subDescription": null
+        }
+      ],
+      "languages": {
+        "languages": null,
+        "deepLink": ""
+      }
+    }
+  },
+  "duration_s": 3.714543371053878
+}

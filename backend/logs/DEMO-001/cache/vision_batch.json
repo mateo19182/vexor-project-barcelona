@@ -1,0 +1,31 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "The provided evidence consists of a single uniform blue image associated with a social media profile. No information regarding the subject's lifestyle, location, employment, or assets can be determined from this source.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The subject's Twitter avatar (Aziffo_avatar.jpg) is a solid blue image with no identifiable features.",
+      "source": "twitter/Aziffo_avatar.jpg",
+      "confidence": 1.0
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Subject's physical appearance",
+    "Current geographic location",
+    "Employment status or business affiliations",
+    "Personal assets or lifestyle details",
+    "Verification that the account 'Aziffo' belongs to the subject Angel Otero"
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/Aziffo_avatar.jpg"
+    ]
+  },
+  "duration_s": 4.427286109013949
+}

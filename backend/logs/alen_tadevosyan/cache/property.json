@@ -1,0 +1,98 @@
+{
+  "name": "property",
+  "status": "ok",
+  "summary": "Inmueble en Hermosilla 28, 28001, Madrid, Spain. Catastro: 628 m2, Residencial | venta estimada 2.66M €–3.98M € | alquiler estimado 7k €–10k €/mes",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Inmueble en Hermosilla 28, 28001, Madrid, Spain: superficie 628 m2, uso Residencial, ano construccion desconocido. Referencia catastral: 2054211VK4725C0042OU.",
+      "source": "https://catastro-api.es",
+      "confidence": 0.95
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Madrid, ES",
+      "source": "https://catastro-api.es",
+      "confidence": 0.75,
+      "notes": "Location derived from debtor's known address",
+      "tag": null
+    },
+    {
+      "kind": "asset",
+      "value": "Inmueble 2.66M €–3.98M €",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS",
+      "confidence": 0.65,
+      "notes": "Madrid, ES. 628 m2 x 5286 EUR/m2 (MITMA Madrid T4 2025) x banda +/-19%",
+      "tag": null
+    },
+    {
+      "kind": "asset",
+      "value": "Alquiler estimado 7k €–10k €/mes",
+      "source": "https://serpavi.mivau.gob.es/",
+      "confidence": 0.7,
+      "notes": "Madrid, ES. 628 m2 x 13.97 EUR/m2/mes (SERPAVI Madrid 2024) x banda +/-15%",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "geocode": {
+      "engine": "nominatim",
+      "display_name": "28, Calle de Hermosilla, Recoletos, Salamanca, Madrid, Comunidad de Madrid, 28001, España",
+      "lat": "40.4261748",
+      "lon": "-3.6849031",
+      "postcode": "28001",
+      "city": "Madrid",
+      "provincia": "Comunidad de Madrid",
+      "state": "Comunidad de Madrid"
+    },
+    "catastro": {
+      "referencia_catastral": "2054211VK4725C0042OU",
+      "superficie_m2": 628.0,
+      "uso": "Residencial",
+      "ano_construccion": null,
+      "coeficiente_participacion": "15,08",
+      "codigo_postal": "28001",
+      "n_inmuebles_portal": 98
+    },
+    "mitma": {
+      "municipio": "Madrid",
+      "provincia": "Madrid",
+      "eur_m2_total": 5286.2,
+      "eur_m2_nueva": 5920.6,
+      "eur_m2_usada": 5266.5,
+      "n_tasaciones": 12077,
+      "granularidad": "municipio",
+      "periodo": "T4 2025",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+    },
+    "serpavi": {
+      "municipio": "Madrid",
+      "provincia": "Madrid",
+      "alquiler_eur_m2_mes_mediana": 13.97,
+      "alquiler_eur_m2_mes_p25": 11.03,
+      "alquiler_eur_m2_mes_p75": 17.92,
+      "alquiler_eur_mes_mediana": 868.75,
+      "alquiler_eur_mes_p25": 700.0,
+      "alquiler_eur_mes_p75": 1166.17,
+      "superficie_tipica_m2": 66.0,
+      "n_viviendas_muestra": 300447,
+      "granularidad": "municipio",
+      "periodo": "2024",
+      "source": "https://serpavi.mivau.gob.es/"
+    },
+    "estimates": {
+      "venta_total_eur_low": 2655787,
+      "venta_total_eur_high": 3983680,
+      "venta_base_eur": 3319734,
+      "venta_nota": "628 m2 x 5286 EUR/m2 (MITMA Madrid T4 2025) x banda +/-19%",
+      "alquiler_mensual_eur_low": 7457,
+      "alquiler_mensual_eur_high": 10089,
+      "alquiler_mensual_base_eur": 8773,
+      "alquiler_nota": "628 m2 x 13.97 EUR/m2/mes (SERPAVI Madrid 2024) x banda +/-15%"
+    }
+  },
+  "duration_s": 2.813996232987847
+}

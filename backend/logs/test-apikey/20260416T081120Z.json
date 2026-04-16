@@ -1,0 +1,1229 @@
+{
+  "case_id": "test-apikey",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Email found on 7 platform(s) | 2 breach/leak hit(s)",
+    "facts": [
+      {
+        "claim": "Email active on 9 platform(s) out of 42 checked: en.gravatar.com, kucoin.com, Breach Check v2, trello.com, adobe.com, beatstars.com, adobe.com, leakcheck.io, account.microsoft.com",
+        "source": "https://nosint.org",
+        "confidence": 0.85
+      }
+    ],
+    "signals": [
+      {
+        "kind": "contact",
+        "value": "en.gravatar.com",
+        "source": "https://en.gravatar.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Gravatar to account",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "kucoin.com",
+        "source": "https://kucoin.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: KuCoin",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Breach Check v2",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Breach Check v2",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "trello.com",
+        "source": "https://trello.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Trello email to account",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "adobe.com",
+        "source": "https://adobe.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Adobe T2E",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "beatstars.com",
+        "source": "https://beatstars.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: BeatStars",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Leak Check",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Leak Check",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "account.microsoft.com",
+        "source": "https://account.microsoft.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Microsoft Account Recovery",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "nosint",
+        "source": "https://nosint.org",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      }
+    ],
+    "gaps": []
+  },
+  "enriched_dossier": {
+    "subject": {
+      "name": "Mateo Amado Ares",
+      "aliases": [],
+      "location": null,
+      "country": "ES",
+      "phones": [],
+      "emails": [
+        "mateoamadoares@gmail.com"
+      ],
+      "social_handles": {}
+    },
+    "case_summary": "No case metadata provided..",
+    "digital_footprint": "moderate",
+    "contact_channels": [
+      {
+        "channel": "email",
+        "value": "mateoamadoares@gmail.com",
+        "verified_on": [
+          "En",
+          "Kucoin",
+          "Trello",
+          "Adobe",
+          "Beatstars",
+          "Account"
+        ],
+        "confidence": 1.0,
+        "notes": null
+      }
+    ],
+    "intelligence": [
+      {
+        "category": "risk",
+        "finding": "Email found in Breach Check v2 — Found by NoSINT module: Breach Check v2",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Email found in Leak Check — Found by NoSINT module: Leak Check",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Email active on 9 platform(s) out of 42 checked: en.gravatar.com, kucoin.com, Breach Check v2, trello.com, adobe.com, beatstars.com, adobe.com, leakcheck.io, account.microsoft.com",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "actionable": false
+      }
+    ],
+    "risk_flags": [
+      "Email found in Breach Check v2 (Found by NoSINT module: Breach Check v2)",
+      "Email found in Leak Check (Found by NoSINT module: Leak Check)"
+    ],
+    "platform_registrations": [
+      "En",
+      "Kucoin",
+      "Trello",
+      "Adobe",
+      "Beatstars",
+      "Account"
+    ],
+    "gaps": [],
+    "technical_issues": [],
+    "module_coverage": {
+      "nosint": "ok"
+    }
+  },
+  "llm_summary": null,
+  "lead_verification": null,
+  "modules": [
+    {
+      "name": "nosint",
+      "status": "ok",
+      "summary": "Email found on 7 platform(s) | 2 breach/leak hit(s)",
+      "social_links": [
+        {
+          "platform": "gravatar to account",
+          "url": "https://en.gravatar.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "kucoin",
+          "url": "https://kucoin.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "trello email to account",
+          "url": "https://trello.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "adobe t2e",
+          "url": "https://adobe.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "beatstars",
+          "url": "https://beatstars.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "adobe recovery",
+          "url": "https://adobe.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "microsoft account recovery",
+          "url": "https://account.microsoft.com",
+          "handle": null,
+          "confidence": 0.8
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Email active on 9 platform(s) out of 42 checked: en.gravatar.com, kucoin.com, Breach Check v2, trello.com, adobe.com, beatstars.com, adobe.com, leakcheck.io, account.microsoft.com",
+          "source": "https://nosint.org",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "en.gravatar.com",
+          "source": "https://en.gravatar.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Gravatar to account",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "kucoin.com",
+          "source": "https://kucoin.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: KuCoin",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Breach Check v2",
+          "source": "https://nosint.org",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Breach Check v2",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "trello.com",
+          "source": "https://trello.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Trello email to account",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "adobe.com",
+          "source": "https://adobe.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Adobe T2E",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "beatstars.com",
+          "source": "https://beatstars.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: BeatStars",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "adobe.com",
+          "source": "https://adobe.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Adobe Recovery",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Leak Check",
+          "source": "https://leakcheck.io",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Leak Check",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "account.microsoft.com",
+          "source": "https://account.microsoft.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Microsoft Account Recovery",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "nosint",
+          "source": "https://nosint.org",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+        "total_modules_run": 42,
+        "hits_count": 9,
+        "all_results": [
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Zoho",
+            "target_url": "accounts.zoho.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "missing_csrf_token",
+            "start_time": "2026-04-16T08:11:13.690792Z",
+            "end_time": "2026-04-16T08:11:14.645374Z",
+            "duration_ms": 954
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "ProtonMail account check",
+            "target_url": "proton.me",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.690605Z",
+            "end_time": "2026-04-16T08:11:13.690726Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Proton Wallet",
+            "target_url": "protonmail.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_proton_account",
+            "start_time": "2026-04-16T08:11:13.757478Z",
+            "end_time": "2026-04-16T08:11:13.758035Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Mail.ru",
+            "target_url": "mail.ru",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_domain",
+            "start_time": "2026-04-16T08:11:13.719399Z",
+            "end_time": "2026-04-16T08:11:13.719887Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Tutanota",
+            "target_url": "mail.tutanota.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unsupported_domain",
+            "start_time": "2026-04-16T08:11:13.690284Z",
+            "end_time": "2026-04-16T08:11:13.690496Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "OK.ru",
+            "target_url": "ok.ru",
+            "module_target": [
+              "email",
+              "phone",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T08:11:13.862482Z",
+            "end_time": "2026-04-16T08:11:13.862542Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T08:11:13.867790Z",
+            "end_time": "2026-04-16T08:11:13.867862Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "username",
+              "email"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T08:11:13.862326Z",
+            "end_time": "2026-04-16T08:11:13.862431Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "HubSpot",
+            "target_url": "hubspot.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T08:11:13.735320Z",
+            "end_time": "2026-04-16T08:11:14.727604Z",
+            "duration_ms": 992
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Deliveroo",
+            "target_url": "deliveroo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_404",
+            "start_time": "2026-04-16T08:11:13.691216Z",
+            "end_time": "2026-04-16T08:11:14.727386Z",
+            "duration_ms": 1036
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Facebook",
+            "target_url": "facebook.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "AsyncClient.post() got an unexpected keyword argument 'allow_redirects'",
+            "start_time": "2026-04-16T08:11:13.714978Z",
+            "end_time": "2026-04-16T08:11:14.778057Z",
+            "duration_ms": 1063
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Microsoft Info Exposure",
+            "target_url": "microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "connection_failed",
+            "start_time": "2026-04-16T08:11:13.751968Z",
+            "end_time": "2026-04-16T08:11:14.778268Z",
+            "duration_ms": 1026
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Poshmark email to account",
+            "target_url": "poshmark.com",
+            "module_target": [
+              "email",
+              "name"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.739864Z",
+            "end_time": "2026-04-16T08:11:14.782129Z",
+            "duration_ms": 1042
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Life360 email to partial phone",
+            "target_url": "life360.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T08:11:13.867932Z",
+            "end_time": "2026-04-16T08:11:14.780882Z",
+            "duration_ms": 912
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "EA.com",
+            "target_url": "ea.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_or_fetch_failed",
+            "start_time": "2026-04-16T08:11:13.746355Z",
+            "end_time": "2026-04-16T08:11:14.827572Z",
+            "duration_ms": 1081
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "IMVU email to account",
+            "target_url": "imvu.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.737866Z",
+            "end_time": "2026-04-16T08:11:14.807146Z",
+            "duration_ms": 1069
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Gravatar to account",
+            "target_url": "en.gravatar.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "avatar_url": "https://0.gravatar.com/avatar/792f383baf1a3c8eab21b62618109fd1",
+              "last_seen": "2026-04-16 09:11:14",
+              "display": {
+                "username": "mateoamadoares"
+              },
+              "table": {
+                "headers": [
+                  "Username",
+                  "Social",
+                  "Name",
+                  "URL"
+                ],
+                "values": []
+              },
+              "_metadata": {
+                "name": "Gravatar",
+                "user_link": "https://gravatar.com/mateoamadoares"
+              },
+              "badges_list": [
+                "Custom Avatar"
+              ]
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.872951Z",
+            "end_time": "2026-04-16T08:11:14.807517Z",
+            "duration_ms": 934
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Foursquare email to account",
+            "target_url": "foursquare.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "api_error_401",
+            "start_time": "2026-04-16T08:11:13.744022Z",
+            "end_time": "2026-04-16T08:11:14.807304Z",
+            "duration_ms": 1063
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Instagram",
+            "target_url": "instagram.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_401",
+            "start_time": "2026-04-16T08:11:13.876029Z",
+            "end_time": "2026-04-16T08:11:14.862163Z",
+            "duration_ms": 986
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Typeform",
+            "target_url": "typeform.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "not_registered",
+            "start_time": "2026-04-16T08:11:13.680038Z",
+            "end_time": "2026-04-16T08:11:14.863061Z",
+            "duration_ms": 1183
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "ImageShack",
+            "target_url": "imageshack.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T08:11:13.723866Z",
+            "end_time": "2026-04-16T08:11:14.861463Z",
+            "duration_ms": 1137
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "AutoDropship to account",
+            "target_url": "autods.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.720042Z",
+            "end_time": "2026-04-16T08:11:14.853349Z",
+            "duration_ms": 1133
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Duolingo Account Check",
+            "target_url": "duolingo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "cannot access local variable 'user' where it is not associated with a value",
+            "start_time": "2026-04-16T08:11:13.717030Z",
+            "end_time": "2026-04-16T08:11:14.861748Z",
+            "duration_ms": 1144
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "KuCoin",
+            "target_url": "kucoin.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "registered_email": "mateoamadoares@gmail.com",
+                "all_methods_found": "Email",
+                "combinations_count": 1
+              },
+              "badges_list": [
+                "Email"
+              ],
+              "display_table": {
+                "headers": [
+                  "Valid Recovery Combinations"
+                ],
+                "values": [
+                  [
+                    "Email required"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "KuCoin",
+                "site_icon": "https://www.kucoin.com/favicon.ico",
+                "profile_url": "https://www.kucoin.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.755319Z",
+            "end_time": "2026-04-16T08:11:14.891732Z",
+            "duration_ms": 1136
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Breach Check v2",
+            "target_url": "",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "3",
+                "unique_sources": "3"
+              },
+              "display_table": {
+                "headers": [
+                  "Email",
+                  "Username",
+                  "Hash",
+                  "Last IP",
+                  "Source",
+                  "Date"
+                ],
+                "values": [
+                  [
+                    "mateoamadoares@gmail.com",
+                    "mateoamadoares1",
+                    "-",
+                    "-",
+                    "trello.com",
+                    "2024-01"
+                  ],
+                  [
+                    "mateoamadoares@gmail.com",
+                    "Mateo19182",
+                    "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+                    "77.27.14.71",
+                    "wattpad.com",
+                    "2020-06"
+                  ],
+                  [
+                    "mateoamadoares@gmail.com",
+                    "ma. a.",
+                    "-",
+                    "-",
+                    "edmodo.com",
+                    "2017"
+                  ]
+                ]
+              },
+              "badges_list": [
+                "3 breaches"
+              ],
+              "_metadata": {
+                "name": "Breach Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.862597Z",
+            "end_time": "2026-04-16T08:11:14.898153Z",
+            "duration_ms": 1035
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Trello email to account",
+            "target_url": "trello.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "avatar_url": "https://trello-members.s3.amazonaws.com/620653bfcfc00d5b169efc68/28d37cccf4f6cb936499b6e2ba7791bb",
+              "timing": {
+                "account_last_online": "2024-02-17 17:03:35",
+                "account_last_interaction": "2024-02-17 22:22:35"
+              },
+              "display": {
+                "user_id": "620653bfcfc00d5b169efc68",
+                "username": "mateoamadoares1",
+                "full_name": "mateoamadoares",
+                "initials": "M",
+                "bio": "None"
+              },
+              "badges_list": [
+                "Verified Email",
+                "Inactive"
+              ],
+              "_metadata": {
+                "site_name": "Trello",
+                "site_icon": "https://trello.com/favicon.ico",
+                "profile_url": "https://trello.com/u/mateoamadoares1"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.721346Z",
+            "end_time": "2026-04-16T08:11:14.899931Z",
+            "duration_ms": 1178
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "GitHub email to users",
+            "target_url": "github.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T08:11:13.684122Z",
+            "end_time": "2026-04-16T08:11:14.904188Z",
+            "duration_ms": 1220
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Flickr email to account",
+            "target_url": "flickr.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.733330Z",
+            "end_time": "2026-04-16T08:11:14.935390Z",
+            "duration_ms": 1202
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "SolidCore",
+            "target_url": "solidcore.co",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.712549Z",
+            "end_time": "2026-04-16T08:11:14.989195Z",
+            "duration_ms": 1276
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Yandex account recovery info",
+            "target_url": "yandex.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_page_302",
+            "start_time": "2026-04-16T08:11:13.708407Z",
+            "end_time": "2026-04-16T08:11:15.030541Z",
+            "duration_ms": 1322
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Mega.nz",
+            "target_url": "mega.nz",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T08:11:13.710503Z",
+            "end_time": "2026-04-16T08:11:15.068702Z",
+            "duration_ms": 1358
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Forever21",
+            "target_url": "forever21.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "user_not_found",
+            "start_time": "2026-04-16T08:11:13.874421Z",
+            "end_time": "2026-04-16T08:11:15.086206Z",
+            "duration_ms": 1211
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Plex.TV",
+            "target_url": "plex.tv",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "email_lookup_failed",
+            "start_time": "2026-04-16T08:11:13.748432Z",
+            "end_time": "2026-04-16T08:11:15.094859Z",
+            "duration_ms": 1346
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Adobe T2E",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "avatar_url": "https://pps.services.adobe.com/api/profile/image/default/bb99dbb8-eab4-438d-ab41-f2f9f1b8ead3/276",
+              "display": {
+                "account_type": "Individual",
+                "enterprise": "No"
+              },
+              "badges_list": [
+                "Active"
+              ],
+              "recovery_table": {
+                "email": "mateoamadoares@gmail.com"
+              },
+              "display_table": {
+                "headers": [
+                  "Account Type",
+                  "Authentication Methods",
+                  "Enterprise Linked"
+                ],
+                "values": [
+                  [
+                    "Individual",
+                    "google, password",
+                    "No"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_icon": "https://www.adobe.com/favicon.ico"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.741870Z",
+            "end_time": "2026-04-16T08:11:15.104356Z",
+            "duration_ms": 1362
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "AntiPublic Leak Check",
+            "target_url": "antipublic.one",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T08:11:13.685665Z",
+            "end_time": "2026-04-16T08:11:15.119516Z",
+            "duration_ms": 1433
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "avatar_url": "https://cdn5.beatstars.com/eyJidWNrZXQiOiJidHMtY29udGVudCIsImtleSI6InVzZXJzL3Byb2QvMTM2NjUyNS9pbWFnZS92YVFGOFppSFl1dGkvaXRhZjFqdXBtLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOm51bGwsIndpZHRoIjoyMDAsImhlaWdodCI6MjAwfSwidG9Gb3JtYXQiOiJ3ZWJwIn19?t=1636232144822",
+              "display": {
+                "member_id": "MR1366525",
+                "full_name": "entrxpy",
+                "username": "fcs19182",
+                "location": "A Coruña",
+                "bio": "None",
+                "followers": 9,
+                "plays": 14,
+                "tags": null
+              },
+              "badges_list": [
+                "Free"
+              ],
+              "display_table": {
+                "headers": [
+                  "Network",
+                  "Profile",
+                  "Link"
+                ],
+                "values": [
+                  [
+                    "INSTAGRAM",
+                    "instagram.com/mateo19182",
+                    "https://www.instagram.com/instagram.com/mateo19182"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_icon": "https://beatstars.com/favicon.ico",
+                "profile_link": "https://www.beatstars.com/fcs19182"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.727533Z",
+            "end_time": "2026-04-16T08:11:15.168857Z",
+            "duration_ms": 1441
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T08:11:13.866458Z",
+            "end_time": "2026-04-16T08:11:15.171036Z",
+            "duration_ms": 1304
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Adobe Recovery",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "badges_list": [
+                "Adobe Account",
+                "Email Recovery"
+              ],
+              "display": {
+                "masked_email": "m*****s@g*****l.com",
+                "recovery_method": "Email",
+                "available_factors": "email",
+                "secondary_email": "",
+                "phone": ""
+              },
+              "display_table": {
+                "headers": [
+                  "Masked Primary Email",
+                  "Favorite Recovery",
+                  "Available Factors"
+                ],
+                "values": [
+                  [
+                    "m*****s@g*****l.com",
+                    "Email",
+                    "email"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "Adobe",
+                "site_icon": "https://www.adobe.com/favicon.ico",
+                "profile_url": "https://account.adobe.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.731018Z",
+            "end_time": "2026-04-16T08:11:15.208786Z",
+            "duration_ms": 1477
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Leak Check",
+            "target_url": "leakcheck.io",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "5"
+              },
+              "display_table": {
+                "headers": [
+                  "Password",
+                  "Source",
+                  "Breach Date"
+                ],
+                "values": [
+                  [
+                    "mateo19182",
+                    "Duelingnetwork.com",
+                    "2017-03"
+                  ],
+                  [
+                    "mateo19182",
+                    "Wattpad.com",
+                    "2020-05"
+                  ],
+                  [
+                    "N/A",
+                    "Edmodo",
+                    "2017-05"
+                  ],
+                  [
+                    "N/A",
+                    "Trello.com",
+                    "2024-01"
+                  ],
+                  [
+                    "N/A",
+                    "Spacetimestudios.com",
+                    "2020-11"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "name": "Leak Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.864827Z",
+            "end_time": "2026-04-16T08:11:15.231168Z",
+            "duration_ms": 1366
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "HudsonRock",
+            "target_url": "cavalier.hudsonrock.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T08:11:13.688563Z",
+            "end_time": "2026-04-16T08:11:15.387711Z",
+            "duration_ms": 1699
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Microsoft Account Recovery",
+            "target_url": "account.microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "badges_list": [
+                "Account Exists",
+                "Email Recovery"
+              ],
+              "display": {
+                "account_status": "Exists",
+                "recovery_methods": "Email Recovery"
+              },
+              "recovery_table": {
+                "email": "mateoamadoares@gmail.com"
+              },
+              "_metadata": {
+                "site_icon": "https://account.microsoft.com/favicon.ico",
+                "name": "Microsoft / Outlook"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T08:11:13.870553Z",
+            "end_time": "2026-04-16T08:11:15.438755Z",
+            "duration_ms": 1568
+          },
+          {
+            "search_id": "1a62d645-fa33-466f-88aa-f3487c6dc1b0",
+            "module_name": "Coinbase Wallet Balances",
+            "target_url": "coinbase.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "profile_not_found",
+            "start_time": "2026-04-16T08:11:13.753694Z",
+            "end_time": "2026-04-16T08:11:15.719209Z",
+            "duration_ms": 1965
+          }
+        ]
+      },
+      "duration_s": 7.603431960014859
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.9467988749966025e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['nosint']",
+      "detail": {
+        "modules": [
+          "nosint"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 7.965299300849438e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['nosint']",
+      "detail": {
+        "modules": [
+          "nosint"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 7.6036390170047525,
+      "module": "nosint",
+      "wave": 1,
+      "message": "ok in 7.60s (10 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 7.603431960014859,
+        "signals": 10,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 7.614693551004166,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

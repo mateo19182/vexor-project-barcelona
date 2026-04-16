@@ -1,0 +1,72 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "No confirmed public profiles or social media accounts were found for Mateo Amado matching the provided identity anchors (email mateoamadoares@gmail.com, phone +34674527164, address Passeig Maragall 13, Entresuelo 1, 08026, Barcelona, Spain). Multiple namesakes named Mateo Amado exist online but none could be linked to the supplied identifiers.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Passeig Maragall 13, Entresuelo 1, 08026, Barcelona, ES",
+      "source": "https://es.kompass.com/c/mio-interiors/es1335684/",
+      "confidence": 0.4,
+      "notes": "Address matches a listing for 'Mio Interiors' (wholesale construction materials/sanitary equipment) at Pasaje Maragall 13 P Ba 08026 Barcelona; connection to subject Mateo Amado unconfirmed — noted as a gap.",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "osint_web",
+      "source": "osint_web",
+      "confidence": 1.0,
+      "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+      "tag": "enrichment_ran"
+    }
+  ],
+  "gaps": [
+    "No social media profile (LinkedIn, Instagram, Twitter/X, Facebook, GitHub) confirmed to belong to Mateo Amado with email mateoamadoares@gmail.com or phone +34674527164.",
+    "The email handle 'mateoamadoares' suggests a compound surname 'Amado Ares', but no public records were found under this exact name in Barcelona.",
+    "A business 'Mio Interiors' appears in Kompass at Pasaje Maragall 13, 08026 Barcelona (matching the provided address), but no ownership link to Mateo Amado could be confirmed.",
+    "Phone number +34674527164 returned no public results in any directory or listing.",
+    "Multiple LinkedIn profiles for 'Mateo Amado' exist (Madrid area, Colombia) but none are geolocated to Barcelona or linked to the provided email/phone.",
+    "Current employer, job title, and professional background of the subject remain unknown."
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "Mateo Amado Ares Barcelona Spain",
+      "mateoamadoares@gmail.com",
+      "\"Mateo Amado\" Barcelona \"Passeig Maragall\"",
+      "\"+34674527164\" OR \"674527164\" Spain",
+      "\"Mateo Amado Ares\" LinkedIn",
+      "\"mateoamadoares\" site:instagram.com OR site:twitter.com OR site:facebook.com",
+      "\"Mateo Amado\" Spain 08026",
+      "mateoamadoares instagram",
+      "\"mateoamadoares\" social media profile",
+      "\"Mateo Amado\" \"08026\" OR \"Maragall\" Barcelona",
+      "\"Mateo Amado\" Barcelona Spain social media",
+      "\"Mateo Amado Ares\" Spain",
+      "site:linkedin.com \"Mateo Amado\" Barcelona",
+      "\"Mateo Amado\" veterinaria Barcelona España",
+      "Vertebrata Clinica Veterinaria Barcelona location",
+      "\"Mateo Amado\" Barcelona email OR phone OR contacto",
+      "\"Passeig Maragall 13\" \"Entresuelo\" Barcelona person",
+      "\"Mateo Amado\" Barcelona wallapop OR infojobs OR forocoches OR idealista",
+      "\"Mateo Amado\" España twitter OR instagram OR facebook",
+      "Vertebrata Clinica Veterinaria LinkedIn location",
+      "\"Amado Ares\" Barcelona España",
+      "site:facebook.com \"Mateo Amado\" Barcelona España",
+      "\"Passeig Maragall 13\" empresa negocio 08026",
+      "\"mateo amado\" \"barcelona\" github OR gitlab",
+      "674527164 Spain Barcelona",
+      "\"Mateo Amado\" Spain personal profile",
+      "\"Mio Interiors\" \"Passeig Maragall\" Barcelona responsable propietario"
+    ],
+    "fetched_urls": [
+      "https://es.kompass.com/c/mio-interiors/es1335684/",
+      "https://www.linkedin.com/in/mateo-amado-3a244425b/"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 107.38368323299801
+}

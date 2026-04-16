@@ -1,0 +1,92 @@
+{
+  "case_id": "stream-test",
+  "status": "no_data",
+  "dossier": {
+    "summary": "No enrichment data recovered for case stream-test.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "skipped: missing inputs [contact:email]"
+    ]
+  },
+  "enriched_dossier": {
+    "subject": {
+      "name": "Test",
+      "aliases": [],
+      "location": null,
+      "country": "ES",
+      "phones": [],
+      "emails": [],
+      "social_handles": {}
+    },
+    "case_summary": "No case metadata provided..",
+    "digital_footprint": "minimal",
+    "contact_channels": [],
+    "intelligence": [],
+    "risk_flags": [],
+    "platform_registrations": [],
+    "gaps": [],
+    "technical_issues": [
+      "skipped: missing inputs [contact:email]"
+    ],
+    "module_coverage": {
+      "nosint": "skipped"
+    }
+  },
+  "llm_summary": null,
+  "lead_verification": null,
+  "modules": [
+    {
+      "name": "nosint",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.6041001547127962e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['nosint']",
+      "detail": {
+        "modules": [
+          "nosint"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.00010250101331621408,
+      "module": "nosint",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.00015284703113138676,
+      "module": null,
+      "wave": null,
+      "message": "0 ok, 1 skipped, 0 error(s)",
+      "detail": {
+        "ok": 0,
+        "error": 0,
+        "skipped": 1
+      }
+    }
+  ]
+}

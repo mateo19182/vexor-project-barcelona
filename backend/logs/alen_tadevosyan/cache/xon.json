@@ -1,0 +1,448 @@
+{
+  "name": "xon",
+  "status": "ok",
+  "summary": "Email found in 6 breach(es); registered on: gravatar.com, underarmour.com, duolingo.com, luminpdf.com, myfitnesspal.com, adobe.com | 2 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 6 breach(es); earliest 2013, latest 2025",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Email found in 6 breach(es); earliest 2013, latest 2025",
+      "source": "https://xposedornot.com/xposed/#alentad%40gmail.com",
+      "confidence": 0.95
+    },
+    {
+      "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Spoken languages, Usernames",
+      "source": "https://xposedornot.com/xposed/#alentad%40gmail.com",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Overall breach risk score: Moderate (42/100)",
+      "source": "https://xposedornot.com/xposed/#alentad%40gmail.com",
+      "confidence": 0.85
+    },
+    {
+      "claim": "2 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 2 weak hash)",
+      "source": "https://xposedornot.com/xposed/#alentad%40gmail.com",
+      "confidence": 0.9
+    }
+  ],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "gravatar.com",
+      "source": "https://xposedornot.com/xposed/#alentad%40gmail.com",
+      "confidence": 0.85,
+      "notes": "Account registered on gravatar.com (breach year: 2020). Data exposed: Names, Email addresses, Usernames",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "underarmour.com",
+      "source": "https://xposedornot.com/xposed/#alentad%40gmail.com",
+      "confidence": 0.85,
+      "notes": "Account registered on underarmour.com (breach year: 2025). Data exposed: Email addresses, Names, Genders, Geographic locations, Dates of birth",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "duolingo.com",
+      "source": "https://www.bleepingcomputer.com/news/security/scraped-data-of-26-million-duolingo-users-released-on-hacking-forum/",
+      "confidence": 0.85,
+      "notes": "Account registered on duolingo.com (breach year: 2023). Data exposed: Email addresses, Names, Usernames",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "luminpdf.com",
+      "source": "https://www.zdnet.com/article/data-of-24-3-million-lumin-pdf-users-shared-on-hacking-forum/",
+      "confidence": 0.85,
+      "notes": "Account registered on luminpdf.com (breach year: 2019). Data exposed: Names, Email addresses, Genders, Passwords, Usernames, Spoken languages",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "myfitnesspal.com",
+      "source": "https://uktechnews.co.uk/2021/10/01/everything-you-need-to-know-about-the-myfitnesspal-data-breach/",
+      "confidence": 0.85,
+      "notes": "Account registered on myfitnesspal.com (breach year: 2018). Data exposed: Email addresses, Usernames, Passwords, IP addresses",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Password exposed as easytocrack in MyFitnessPal breach",
+      "source": "https://uktechnews.co.uk/2021/10/01/everything-you-need-to-know-about-the-myfitnesspal-data-breach/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "adobe.com",
+      "source": "https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/",
+      "confidence": 0.85,
+      "notes": "Account registered on adobe.com (breach year: 2013). Data exposed: Usernames, Passwords, Email addresses",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Password exposed as easytocrack in Adobe breach",
+      "source": "https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "analytics_status": 200,
+    "analytics": {
+      "BreachMetrics": {
+        "get_details": [],
+        "industry": [
+          [
+            [
+              "misc",
+              0
+            ],
+            [
+              "ente",
+              0
+            ],
+            [
+              "heal",
+              1
+            ],
+            [
+              "elec",
+              0
+            ],
+            [
+              "mini",
+              0
+            ],
+            [
+              "musi",
+              0
+            ],
+            [
+              "manu",
+              0
+            ],
+            [
+              "ener",
+              0
+            ],
+            [
+              "news",
+              0
+            ],
+            [
+              "hosp",
+              0
+            ],
+            [
+              "food",
+              0
+            ],
+            [
+              "phar",
+              0
+            ],
+            [
+              "educ",
+              1
+            ],
+            [
+              "cons",
+              0
+            ],
+            [
+              "agri",
+              0
+            ],
+            [
+              "tele",
+              0
+            ],
+            [
+              "info",
+              3
+            ],
+            [
+              "tran",
+              0
+            ],
+            [
+              "aero",
+              0
+            ],
+            [
+              "fina",
+              0
+            ],
+            [
+              "reta",
+              1
+            ],
+            [
+              "nonp",
+              0
+            ],
+            [
+              "govt",
+              0
+            ],
+            [
+              "spor",
+              0
+            ],
+            [
+              "envi",
+              0
+            ]
+          ]
+        ],
+        "passwords_strength": [
+          {
+            "EasyToCrack": 2,
+            "PlainText": 0,
+            "StrongHash": 0,
+            "Unknown": 4
+          }
+        ],
+        "risk": [
+          {
+            "risk_label": "Moderate",
+            "risk_score": 42
+          }
+        ],
+        "xposed_data": [
+          {
+            "children": [
+              {
+                "name": "👤 Personal Identification",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Usernames",
+                    "value": 5
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Names",
+                    "value": 4
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Genders",
+                    "value": 2
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "📞 Communication and Social Interactions",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "F",
+                    "name": "data_Email addresses",
+                    "value": 6
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "🔒 Security Practices",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "D",
+                    "name": "data_Passwords",
+                    "value": 3
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "🍔 Personal Habits and Lifestyle",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "C",
+                    "name": "data_Spoken languages",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "🖥️ Device and Network Information",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "G",
+                    "name": "data_IP addresses",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "👥 Demographics",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Geographic locations",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Dates of birth",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              }
+            ]
+          }
+        ],
+        "yearwise_details": [
+          {
+            "y2007": 0,
+            "y2008": 0,
+            "y2009": 0,
+            "y2010": 0,
+            "y2011": 0,
+            "y2012": 0,
+            "y2013": 1,
+            "y2014": 0,
+            "y2015": 0,
+            "y2016": 0,
+            "y2017": 0,
+            "y2018": 1,
+            "y2019": 1,
+            "y2020": 1,
+            "y2021": 0,
+            "y2022": 0,
+            "y2023": 1,
+            "y2024": 0,
+            "y2025": 1,
+            "y2026": 0
+          }
+        ]
+      },
+      "BreachesSummary": {
+        "site": "Duolingo;LuminPDF;MyFitnessPal;Adobe;UnderArmour;Gravatar"
+      },
+      "ExposedBreaches": {
+        "breaches_details": [
+          {
+            "breach": "Gravatar",
+            "details": "Gravatar, an avatar service owned by Automattic, disclosed a 2020 incident in which an unauthorized party accessed user data, exposing email addresses and hashed passwords, with a portion of the email hashes later cracked.",
+            "domain": "gravatar.com",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/Gravatar.png",
+            "password_risk": "unknown",
+            "references": "",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Names;Email addresses;Usernames",
+            "xposed_date": "2020",
+            "xposed_records": 25104710,
+            "added": "2026-04-07T09:46:56+00:00"
+          },
+          {
+            "breach": "UnderArmour",
+            "details": "Under Armour, an American sportswear and athletic apparel brand, was claimed as a victim by the Everest ransomware group in November 2025 in an attempted extortion alleging access to 343GB of data. Customer data from the incident was later published publicly in January 2026, exposing 73M email addresses. Many records also contained additional personal information such as names, dates of birth, genders, geographic locations and purchase information.",
+            "domain": "underarmour.com",
+            "industry": "Retail",
+            "logo": "https://xposedornot.com/static/logos/Underarmour.png",
+            "password_risk": "unknown",
+            "references": "",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Names;Genders;Geographic locations;Dates of birth",
+            "xposed_date": "2025",
+            "xposed_records": 73065604,
+            "added": "2026-02-14T12:30:58+00:00"
+          },
+          {
+            "breach": "Duolingo",
+            "details": "Data belonging to 2.6 million Duolingo users was scraped in January 2023. This data included real names, login names, email addresses, and internal DuoLingo service information. The leak stemmed from an exposed API that allowed threat actors to confirm email addresses associated with DuoLingo accounts.",
+            "domain": "duolingo.com",
+            "industry": "Education",
+            "logo": "https://xposedornot.com/static/logos/Duolingo.png",
+            "password_risk": "unknown",
+            "references": "https://www.bleepingcomputer.com/news/security/scraped-data-of-26-million-duolingo-users-released-on-hacking-forum/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Names;Usernames",
+            "xposed_date": "2023",
+            "xposed_records": 2676686,
+            "added": "2023-11-08T06:30:40+00:00"
+          },
+          {
+            "breach": "LuminPDF",
+            "details": "Lumin PDF, a cloud-based PDF editing and sharing platform, suffered a data breach in 2019 that exposed the personal information of more than 15 million users. The stolen data included email addresses, passwords (stored as bcrypt hashes), and Google tokens, which could have potentially given unauthorized access to other Google services. The breach was believed to have been caused by a vulnerability in Lumin PDF's backend infrastructure.",
+            "domain": "luminpdf.com",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/LuminPDF.jpg",
+            "password_risk": "unknown",
+            "references": "https://www.zdnet.com/article/data-of-24-3-million-lumin-pdf-users-shared-on-hacking-forum/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Names;Email addresses;Genders;Passwords;Usernames;Spoken languages",
+            "xposed_date": "2019",
+            "xposed_records": 15453070,
+            "added": "2023-11-08T06:30:25+00:00"
+          },
+          {
+            "breach": "MyFitnessPal",
+            "details": "Around 150 million users of the MyFitnessPal app experienced a data breach in 2018 that compromised their personal information. The breach involved unauthorized access to usernames, passwords, and email addresses. While Under Armour, the parent company of MyFitnessPal, quickly reset the passwords of affected users, it was later discovered that the old passwords were being sold on the dark web.",
+            "domain": "myfitnesspal.com",
+            "industry": "Health Care",
+            "logo": "https://xposedornot.com/static/logos/Myfitnesspal.png",
+            "password_risk": "easytocrack",
+            "references": "https://uktechnews.co.uk/2021/10/01/everything-you-need-to-know-about-the-myfitnesspal-data-breach/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Usernames;Passwords;IP addresses",
+            "xposed_date": "2018",
+            "xposed_records": 143570814,
+            "added": "2023-11-08T06:30:20+00:00"
+          },
+          {
+            "breach": "Adobe",
+            "details": "Adobe, the multinational software company, suffered a major data breach in October 2013 that initially seemed to impact nearly 3 million user accounts. However, the situation turned out to be far more severe than initially estimated, with the number of compromised accounts eventually ballooning to about 150 million. The breach occurred when attackers accessed user passwords and the source code for certain Adobe products, such as Cold Fusion. The compromised data, which included almost 150 million encrypted passwords, was subsequently found on a website frequented by cyber criminals. The Adobe data breach is considered one of the worst in history due to the massive number of records affected and the company's use of questionable encryption techniques.",
+            "domain": "adobe.com",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/Adobe.png",
+            "password_risk": "easytocrack",
+            "references": "https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Usernames;Passwords;Email addresses",
+            "xposed_date": "2013",
+            "xposed_records": 152403035,
+            "added": "2023-11-08T06:30:03+00:00"
+          }
+        ]
+      },
+      "ExposedPastes": null,
+      "PasteMetrics": null,
+      "PastesSummary": {
+        "cnt": 0,
+        "domain": "",
+        "tmpstmp": ""
+      }
+    },
+    "check_status": 0,
+    "check": null
+  },
+  "duration_s": 1.005283632024657
+}

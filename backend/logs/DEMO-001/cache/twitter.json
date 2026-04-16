@@ -1,0 +1,16 @@
+{
+  "name": "twitter",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter profile @Aziffo not retrievable: user_not_found"
+  ],
+  "raw": {
+    "error": "user_not_found",
+    "handle": "Aziffo"
+  },
+  "duration_s": 0.2328783799894154
+}

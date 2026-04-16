@@ -1,0 +1,74 @@
+{
+  "name": "lead_verification",
+  "status": "ok",
+  "summary": "Lead quality: MEDIUM (50%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone verified across 1 platform(s) [twitter_vu].",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Contact data possibly outdated: email",
+      "source": "module:lead_verification",
+      "confidence": 0.75,
+      "notes": "Masked data from platform checks doesn't match the lead's email. The person may have updated their contact info on those platforms.",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "Verified: phone",
+      "source": "module:lead_verification",
+      "confidence": 0.85,
+      "notes": "Lead's phone compatible with masked data from platform checks — contact info appears current.",
+      "tag": "verified"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "verification": {
+      "quality": "medium",
+      "score": 0.5,
+      "summary": "Lead quality: MEDIUM (50%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone verified across 1 platform(s) [twitter_vu].",
+      "checks": [
+        {
+          "field": "email",
+          "input": "mateoamadoares2@gmail.com",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "ot*****@g****.***",
+              "result": "incompatible",
+              "reason": "local prefix 'ot' != 'ma'; local length 15 vs mask 7"
+            }
+          ],
+          "verdict": "likely_outdated"
+        },
+        {
+          "field": "phone",
+          "input": "+3467452714",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "14",
+              "result": "compatible",
+              "reason": "last 2 digits '14' match"
+            }
+          ],
+          "verdict": "likely_current"
+        }
+      ],
+      "cross_checks": [],
+      "input_emails": [
+        "mateoamadoares2@gmail.com"
+      ],
+      "input_phones": [
+        "+3467452714"
+      ],
+      "masks_found": {
+        "email_masked": 1,
+        "phone_masked": 0,
+        "phone_hint": 1
+      }
+    }
+  },
+  "duration_s": 0.00026344298385083675
+}

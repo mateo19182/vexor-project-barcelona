@@ -1,0 +1,77 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "Limited public information was found for Angel Otero using the provided identifiers. The Twitter handle @Aziffo is a confirmed identifier for the subject. A GitHub user with the matching handle 'Aziffo' (user ID 54035051) was found posting issues on open-source repositories, using Arch Linux. No public records linking the email mateoamadoares@gmail.com to any online profile were found via open web sources.",
+  "social_links": [
+    {
+      "platform": "Twitter/X",
+      "url": "https://twitter.com/Aziffo",
+      "handle": "@Aziffo",
+      "confidence": 1.0
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/Aziffo",
+      "handle": "Aziffo",
+      "confidence": 0.8
+    }
+  ],
+  "facts": [
+    {
+      "claim": "GitHub user Aziffo (ID 54035051) filed issues on the Alacritty terminal emulator project in May 2021 and December 2021, using Arch Linux with versions 0.8.0 and 0.9.0",
+      "source": "https://github.com/alacritty/alacritty/issues/5156",
+      "confidence": 0.8
+    }
+  ],
+  "signals": [
+    {
+      "kind": "affiliation",
+      "value": "Arch Linux user",
+      "source": "https://github.com/alacritty/alacritty/issues/5156",
+      "confidence": 0.8,
+      "notes": "GitHub user Aziffo reported issues on Alacritty using OS: Linux arch, suggesting Arch Linux as primary OS",
+      "tag": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Open-source software contributor / Linux power user",
+      "source": "https://github.com/alacritty/alacritty/issues/5730",
+      "confidence": 0.7,
+      "notes": "Filed multiple bug reports on open-source terminal emulator Alacritty between 2021-2022",
+      "tag": null
+    }
+  ],
+  "gaps": [
+    "No public web content links the email mateoamadoares@gmail.com to any online profile or the name Angel Otero",
+    "Could not directly access the Twitter/X profile for @Aziffo to confirm display name or bio",
+    "Could not directly access the GitHub profile page at github.com/Aziffo to confirm real name or linked accounts",
+    "No location, employer, or other background information for this specific Angel Otero could be confirmed",
+    "The name 'Angel Otero' is very common; no confirmed match to the provided email identifier was found across public people-search databases"
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "@Aziffo Twitter",
+      "mateoamadoares@gmail.com Angel Otero",
+      "Aziffo \"Angel Otero\" site:twitter.com OR site:x.com",
+      "\"Aziffo\" Angel Otero",
+      "\"mateoamadoares\" OR \"mateoamadoares@gmail.com\"",
+      "Aziffo gaming OR streamer OR social media",
+      "\"Angel Otero\" \"mateoamadoares\"",
+      "Aziffo Twitter profile \"Angel\"",
+      "site:github.com Aziffo",
+      "github.com/Aziffo Angel Otero",
+      "\"@Aziffo\" OR \"Aziffo\" twitter profile name",
+      "Aziffo linux arch user twitter github"
+    ],
+    "fetched_urls": [
+      "https://x.com/Aziffo",
+      "https://github.com/Aziffo",
+      "https://github.com/alacritty/alacritty/issues/5156",
+      "https://github.com/alacritty/alacritty/issues/5730"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 75.83696424801019
+}

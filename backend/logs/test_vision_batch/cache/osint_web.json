@@ -1,0 +1,120 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "The Twitter handle @Aziffo (a confirmed identifier for the subject) belongs to a Spanish-speaking individual with a technical/developer orientation, whose bio references 'multithreading' and 'debugging.' The same handle 'Aziffo' appears on GitHub (user ID 54035051), where the account opened issues on the alacritty terminal emulator project, indicating use of Linux (Arch) on a laptop. No public content directly linking the email mateoamadoares@gmail.com to any indexed social profile was found. A LinkedIn profile for an 'Angel Otero' at PriceSmart (Universidad Tecnológica de Panamá graduate, IT/software background, Spanish-language posts) is a plausible but unconfirmed match.",
+  "social_links": [
+    {
+      "platform": "Twitter/X",
+      "url": "https://twitter.com/Aziffo",
+      "handle": "Aziffo",
+      "confidence": 1.0
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/Aziffo",
+      "handle": "Aziffo",
+      "confidence": 0.9
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/angel-otero-649292103/",
+      "handle": "/in/angel-otero-649292103",
+      "confidence": 0.35
+    }
+  ],
+  "facts": [
+    {
+      "claim": "GitHub handle Aziffo (user ID 54035051) filed issues on the alacritty/alacritty repository in May 2021, December 2021, and April 2023, all using Linux (Arch).",
+      "source": "https://github.com/alacritty/alacritty/issues/5730",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Twitter @Aziffo had 41 followers, 268 following, and 137 tweets at time of last indexed data, with a Spanish-language developer bio.",
+      "source": "https://www.instalker.org/Aziffo",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "lifestyle",
+      "value": "Spanish-speaking, developer-oriented",
+      "source": "https://www.instalker.org/Aziffo",
+      "confidence": 0.9,
+      "notes": "Twitter bio reads 'gozando el multithreading del día a día y intentando debuguear algo' — Spanish, technical/coding focus",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Linux (Arch) user",
+      "source": "https://github.com/alacritty/alacritty/issues/5730",
+      "confidence": 0.9,
+      "notes": "GitHub user Aziffo reported using Linux Arch on a laptop with alacritty terminal emulator",
+      "tag": null
+    },
+    {
+      "kind": "role",
+      "value": "Software / IT developer",
+      "source": "https://github.com/alacritty/alacritty/issues/5156",
+      "confidence": 0.85,
+      "notes": "Multiple GitHub issues filed about developer tooling (alacritty, polybar) indicating active software development practice",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "PriceSmart (IT Technician / Executive Administrative Assistant)",
+      "source": "https://www.linkedin.com/in/angel-otero-649292103/",
+      "confidence": 0.3,
+      "notes": "LinkedIn profile for Angel Otero at PriceSmart; education from Universidad Tecnológica de Panamá. Cannot confirm this is the same individual without a link to @Aziffo or provided email",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Universidad Tecnológica de Panamá",
+      "source": "https://www.linkedin.com/in/angel-otero-649292103/",
+      "confidence": 0.3,
+      "notes": "Education listed on possibly-matching LinkedIn profile; unconfirmed as subject",
+      "tag": null
+    }
+  ],
+  "gaps": [
+    "Email mateoamadoares@gmail.com returned no indexed public results and could not be linked to any social profile.",
+    "Could not confirm that the GitHub user Aziffo's real name is Angel Otero — the GitHub profile was inaccessible directly and no public bio mentions a real name.",
+    "LinkedIn profile for 'Angel Otero - IT Technician - PriceSmart' could not be confirmed as the same individual without explicit connection to the @Aziffo handle or the provided email.",
+    "No Instagram, Facebook, or TikTok profiles for handle 'Aziffo' or 'mateoamadoares' were found in public search results.",
+    "Country/location of the subject could not be confirmed; possible Panama or Latin America connection based on LinkedIn data but unverified."
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "@Aziffo Twitter",
+      "mateoamadoares@gmail.com",
+      "Angel Otero Aziffo \"mateoamadoares\"",
+      "\"Angel Otero\" Aziffo",
+      "Aziffo \"Angel Otero\" site:twitter.com OR site:x.com",
+      "\"Aziffo\" twitter profile \"Angel Otero\"",
+      "Aziffo gaming OR roblox OR discord",
+      "\"mateoamadoares\" username social media",
+      "Aziffo profile username",
+      "Aziffo instagram OR youtube OR tiktok",
+      "\"Aziffo\" \"Angel\"",
+      "twitter.com/Aziffo OR x.com/Aziffo",
+      "Aziffo",
+      "github.com/Aziffo profile",
+      "Aziffo \"Angel Otero\" OR \"mateoamadoares\" linux developer",
+      "\"Angel Otero\" PriceSmart IT Technician software developer",
+      "\"Angel Otero\" PriceSmart Panama twitter OR github OR aziffo"
+    ],
+    "fetched_urls": [
+      "https://x.com/Aziffo",
+      "https://www.instagram.com/aziffo/",
+      "https://www.instalker.org/Aziffo",
+      "https://github.com/Aziffo",
+      "https://github.com/alacritty/alacritty/issues/5730",
+      "https://github.com/alacritty/alacritty/issues/5156",
+      "https://www.linkedin.com/in/angel-otero-649292103/"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 190.9781879229995
+}

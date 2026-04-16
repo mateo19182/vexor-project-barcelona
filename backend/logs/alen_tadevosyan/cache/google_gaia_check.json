@@ -1,0 +1,29 @@
+{
+  "name": "google_gaia_check",
+  "status": "ok",
+  "summary": "alentad@gmail.com -> Google Gaia ID 116611014734022194127",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "116611014734022194127",
+      "source": "platform_check:google_gaia_check",
+      "confidence": 1.0,
+      "notes": "Google account registered to alentad@gmail.com",
+      "tag": "gaia_id"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "alentad@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "alentad@gmail.com",
+      "gaiaId": "116611014734022194127"
+    },
+    "error": null
+  },
+  "duration_s": 1.388969637977425
+}

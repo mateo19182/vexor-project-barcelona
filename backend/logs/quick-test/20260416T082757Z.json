@@ -1,0 +1,155 @@
+{
+  "case_id": "quick-test",
+  "status": "enriched",
+  "dossier": {
+    "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Angel Otero'.",
+    "facts": [],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "BOE-B-2020-22293 A CORUÑA",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
+        "confidence": 0.85,
+        "notes": "4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+        "tag": null
+      }
+    ],
+    "gaps": []
+  },
+  "enriched_dossier": {
+    "subject": {
+      "name": "Angel Otero",
+      "aliases": [],
+      "location": null,
+      "country": "ES",
+      "phones": [],
+      "emails": [],
+      "social_handles": {}
+    },
+    "case_summary": "No case metadata provided..",
+    "digital_footprint": "minimal",
+    "contact_channels": [],
+    "intelligence": [
+      {
+        "category": "risk",
+        "finding": "BOE-B-2020-22293 A CORUÑA — 4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
+        "confidence": 0.85,
+        "actionable": false
+      }
+    ],
+    "risk_flags": [
+      "BOE-B-2020-22293 A CORUÑA (4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com)"
+    ],
+    "platform_registrations": [],
+    "gaps": [],
+    "technical_issues": [],
+    "module_coverage": {
+      "borme": "no_data",
+      "boe": "ok"
+    }
+  },
+  "llm_summary": null,
+  "lead_verification": null,
+  "modules": [
+    {
+      "name": "borme",
+      "status": "no_data",
+      "summary": "No BORME entries found for 'Angel Otero'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.5947504970245063
+    },
+    {
+      "name": "boe",
+      "status": "ok",
+      "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Angel Otero'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "BOE-B-2020-22293 A CORUÑA",
+          "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
+          "confidence": 0.85,
+          "notes": "4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.5988138219690882
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.900701317936182e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 2 module(s): ['boe', 'borme']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 7.627601735293865e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.5989883420406841,
+      "module": "borme",
+      "wave": 1,
+      "message": "no_data in 0.59s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.5947504970245063,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.5992315880139358,
+      "module": "boe",
+      "wave": 1,
+      "message": "ok in 0.60s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.5988138219690882,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.5993842030293308,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

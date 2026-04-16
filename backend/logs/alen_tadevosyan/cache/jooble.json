@@ -1,0 +1,122 @@
+{
+  "name": "jooble",
+  "status": "ok",
+  "summary": "Jooble: 'Global Strategy Manager (ex)' in Madrid, ES → 5476 listing(s).",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Jooble confirms 'Global Strategy Manager (ex)' is an active job title in Madrid, ES (5476 listing(s) found).",
+      "source": "jooble.org search: 'Global Strategy Manager (ex)' / 'Madrid, ES'",
+      "confidence": 0.6
+    }
+  ],
+  "signals": [
+    {
+      "kind": "lifestyle",
+      "value": "Active job market for Global Strategy Manager (ex) in Madrid, ES (5476+ listings)",
+      "source": "jooble.org search: 'Global Strategy Manager (ex)' / 'Madrid, ES'",
+      "confidence": 0.65,
+      "notes": "High demand: 5476 active Jooble listings for 'Global Strategy Manager (ex)' in Madrid, ES — consistent with active local employment.",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "jobs": [
+      {
+        "title": "Strategy Manager",
+        "company": "Wolters Kluwer N.V.",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "Lead Project & Program <b>Manager </b>page is loaded## Lead Project & Program Managerremote type:...&nbsp;&nbsp;...requisition id: R0056071Wolters Kluwer is a <b>global </b>leader in information services and...&nbsp;&nbsp;...*Experience*** 4+ years of experience in <b>Strategy,</b> Consulting, Project Management, or Business...&nbsp;",
+        "link": "https://es.jooble.org/jdp/1359174295430630941",
+        "updated": "2026-04-14T00:00:00.0000000"
+      },
+      {
+        "title": "Brand Growth & Strategy Manager",
+        "company": "Beiersdorf AG",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "A <b>global </b>consumer goods company in Madrid is seeking a Marketing <b>Manager </b>to develop and implement marketing plans for its NIVEA products. The ideal candidate has a BS...&nbsp;&nbsp;...include translating brand guidelines into <b>strategies </b>and collaborating with sales and customer service...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-6982284226543638106",
+        "updated": "2026-04-12T00:00:00.0000000"
+      },
+      {
+        "title": "Finance & Strategy Manager, Hopper/ HTS (100% Remote - Spain)",
+        "company": "Hopper",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...member of the Finance and <b>Strategy </b>team, you won’t just...&nbsp;&nbsp;...leverage Go-To-Market <b>strategies.</b> You’ll design...&nbsp;&nbsp;...Open communication with <b>management </b>and company leadership...&nbsp;&nbsp;...leading travel platform <b>globally </b>– powering Hopper’s mobile...&nbsp;&nbsp;...platform, and <b>global </b>travel agency that powers...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-449554740030564972",
+        "updated": "2026-04-12T00:00:00.0000000"
+      },
+      {
+        "title": "Data Strategy & Governance Manager(Consultoría Global)",
+        "company": "Merlin Digital Partner",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...innovación, colaboración y aprendizaje continuo. \r\n Buscamos  un <b>Manager </b>de Data <b>Strategy </b>& Governance  en  Barcelona o Madrid. \r\n La Misión \r\n Serás...&nbsp;&nbsp;...de liderar una  práctica estratégica  en una compañía <b>global </b>en plena expansión. \r\n Un  entorno innovador, colaborativo...&nbsp;",
+        "link": "https://es.jooble.org/jdp/17277255139859335",
+        "updated": "2026-04-14T00:00:00.0000000"
+      },
+      {
+        "title": "Business Strategy & Growth Manager Growth Madrid",
+        "company": "Cabify",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...camino por recorrer... ¿nos acompañas?\r\n En el equipo de Growth estamos buscando la persona idónea para que se incorpore como  <b>Global </b>Growth <b>Manager </b> . \r\n Tendrás como objetivo apoyar a los equipos globales y locales a definir, ejecutar y acelerar estrategias que nos...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-4979587583183073261",
+        "updated": "2026-04-14T00:00:00.0000000"
+      },
+      {
+        "title": "DIGITAL STRATEGY MANAGER - CLOUD & GENERATIVE AI",
+        "company": "Prime IT España",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...Extensive experience in <b>managing </b>and coordinating <b>global </b>projects (top-level consulting)\r\n Technical background in digital architectures \r\n Focus on the application of Generative AI in cloud environments (any of the major clouds)\r\n Strategic profile combining results...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-3712770350559703837",
+        "updated": "2026-04-15T00:00:00.0000000"
+      },
+      {
+        "title": "Especialista MES Siemens Opcenter EX/DS - Soporte Avanzado",
+        "company": "Capgemini",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "Una compañía de ingeniería <b>global </b>busca un/a Especialista en Soporte Técnico MES para proporcionar soporte especializado en soluciones basadas en Siemens Opcenter <b>EX </b>DS. Con más de 4 años de experiencia y habilidades en diagnóstico de incidencias, esta posición implica...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-3413575593630921659",
+        "updated": "2026-04-16T00:00:00.0000000"
+      },
+      {
+        "title": "Head of Configuration and Planning",
+        "company": "Solera Corporation",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "Configuration <b>Manager </b>page is loaded## Configuration Managerlocations: Madrid: Sevilletime...&nbsp;&nbsp;...Madrid, Spain****Who We Are**Solera is a <b>global </b>leader in data and software services that...&nbsp;&nbsp;...This role owns the Configuration delivery <b>strategy,</b> ensures alignment with Implementation,...&nbsp;",
+        "link": "https://es.jooble.org/jdp/3695880213728630070",
+        "updated": "2026-04-16T00:00:00.0000000"
+      },
+      {
+        "title": "Global Head of Product Strategy - Energy & Grid Solutions",
+        "company": "Hitachi Vantara Corporation",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "A leading technology firm is seeking an experienced product <b>management </b>leader to drive the strategic direction and profitable growth of their portfolio in the energy sector. This role demands over 15 years of expertise in diverse technologies such as grid and power electronics...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-8048629853279599650",
+        "updated": "2026-04-13T00:00:00.0000000"
+      },
+      {
+        "title": "Global Planning & Control Manager",
+        "company": "Rovensa",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...<b>Global </b>Planning & Control <b>Manager </b>\r\n Date: Mar 13, 2026\r\n Location: Madrid, M, ES \r\n Company: Tradecorp International \r\n Rovensa is a global leader of sustainable solutions for agriculture with a great history and an ambitious dream: to feed the planet by helping farmers...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-862397783536400786",
+        "updated": "2026-04-14T00:00:00.0000000"
+      }
+    ],
+    "total_count": 5476,
+    "errors": [],
+    "job_title_used": "Global Strategy Manager (ex)"
+  },
+  "duration_s": 0.6430436359951273
+}

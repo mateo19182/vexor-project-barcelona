@@ -1,0 +1,380 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 25 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://es.linkedin.com/in/alentadevosyan",
+      "handle": "alentadevosyan",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/logfoundation/",
+      "handle": "logfoundation",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/kittymm/",
+      "handle": "kittymm",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/tadevosyan_alen",
+      "handle": "tadevosyan_alen",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/prisonchannel",
+      "handle": "prisonchannel",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://in.linkedin.com/company/t6d",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://ie.linkedin.com/company/talented-international",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/talentedagency/",
+      "handle": "talentedagency",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/talented/",
+      "handle": "talented",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/talented.company/",
+      "handle": "talented.company",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/talentdfromsd/",
+      "handle": "talentdfromsd",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/talentdpeople/",
+      "handle": "talentdpeople",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/talentedk12",
+      "handle": "talentedk12",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/talentedagency?lang=en",
+      "handle": "talentedagency",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/AlentameOficial/",
+      "handle": "AlentameOficial",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/TylerR909/Talented",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/talented/FileManager",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/bkader/Talented_WoTLK",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/talented",
+      "handle": "talented",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/Lethay/TalentedClassic",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@talenteded",
+      "handle": "@talenteded",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/channel/talented",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/talented-girl?lang=en",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/the-most-talented-man-in-the-world",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/music/Talented-6781123185807984641?lang=en",
+      "handle": null,
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "alentadevosyan",
+      "source": "https://es.linkedin.com/in/alentadevosyan",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "logfoundation",
+      "source": "https://www.linkedin.com/in/logfoundation/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "kittymm",
+      "source": "https://www.linkedin.com/in/kittymm/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "tadevosyan_alen",
+      "source": "https://x.com/tadevosyan_alen",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "prisonchannel",
+      "source": "https://www.facebook.com/prisonchannel",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "https://in.linkedin.com/company/t6d",
+      "source": "https://in.linkedin.com/company/t6d",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "https://ie.linkedin.com/company/talented-international",
+      "source": "https://ie.linkedin.com/company/talented-international",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "talentedagency",
+      "source": "https://www.instagram.com/talentedagency/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "talented",
+      "source": "https://www.instagram.com/talented/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "talented.company",
+      "source": "https://www.instagram.com/talented.company/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "talentdfromsd",
+      "source": "https://www.instagram.com/talentdfromsd/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "talentdpeople",
+      "source": "https://www.instagram.com/talentdpeople/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "talentedk12",
+      "source": "https://x.com/talentedk12",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "talentedagency",
+      "source": "https://x.com/talentedagency?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "AlentameOficial",
+      "source": "https://www.facebook.com/AlentameOficial/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/TylerR909/Talented",
+      "source": "https://github.com/TylerR909/Talented",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/talented/FileManager",
+      "source": "https://github.com/talented/FileManager",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/bkader/Talented_WoTLK",
+      "source": "https://github.com/bkader/Talented_WoTLK",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "talented",
+      "source": "https://github.com/talented",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/Lethay/TalentedClassic",
+      "source": "https://github.com/Lethay/TalentedClassic",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "talenteded",
+      "source": "https://www.tiktok.com/@talenteded",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://tiktok.com/channel/talented",
+      "source": "https://tiktok.com/channel/talented",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/talented-girl?lang=en",
+      "source": "https://www.tiktok.com/discover/talented-girl?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/the-most-talented-man-in-the-world",
+      "source": "https://www.tiktok.com/discover/the-most-talented-man-in-the-world",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/music/Talented-6781123185807984641?lang=en",
+      "source": "https://www.tiktok.com/music/Talented-6781123185807984641?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Alen Tadevosyan\" site:linkedin.com ES",
+      "\"Alen Tadevosyan\" site:instagram.com ES",
+      "\"Alen Tadevosyan\" site:x.com ES",
+      "\"Alen Tadevosyan\" site:facebook.com ES",
+      "\"Alen Tadevosyan\" site:github.com ES",
+      "\"Alen Tadevosyan\" site:tiktok.com ES",
+      "alentad site:linkedin.com",
+      "alentad site:instagram.com",
+      "alentad site:x.com",
+      "alentad site:facebook.com",
+      "alentad site:github.com",
+      "alentad site:tiktok.com"
+    ],
+    "links_found": 25,
+    "errors": []
+  },
+  "duration_s": 1.7099679100210778
+}

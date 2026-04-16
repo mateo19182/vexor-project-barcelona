@@ -1,0 +1,31 @@
+{
+  "name": "xon",
+  "status": "ok",
+  "summary": "Breach data retrieved for mateoamadoares2@gmail.com.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "breach-analytics returned 200 but contained no breach detail"
+  ],
+  "raw": {
+    "analytics_status": 200,
+    "analytics": {
+      "BreachMetrics": null,
+      "BreachesSummary": {
+        "site": ""
+      },
+      "ExposedBreaches": null,
+      "ExposedPastes": null,
+      "PasteMetrics": null,
+      "PastesSummary": {
+        "cnt": 0,
+        "domain": "",
+        "tmpstmp": ""
+      }
+    },
+    "check_status": 0,
+    "check": null
+  },
+  "duration_s": 0.31171352800447494
+}

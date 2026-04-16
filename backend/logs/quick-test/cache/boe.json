@@ -1,0 +1,20 @@
+{
+  "name": "boe",
+  "status": "ok",
+  "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Angel Otero'.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "BOE-B-2020-22293 A CORUÑA",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
+      "confidence": 0.85,
+      "notes": "4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {},
+  "duration_s": 0.5988138219690882
+}

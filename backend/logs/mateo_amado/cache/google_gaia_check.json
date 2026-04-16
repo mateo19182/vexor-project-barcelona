@@ -1,0 +1,29 @@
+{
+  "name": "google_gaia_check",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com -> Google Gaia ID 115857738407699147590",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "115857738407699147590",
+      "source": "platform_check:google_gaia_check",
+      "confidence": 1.0,
+      "notes": "Google account registered to mateoamadoares@gmail.com",
+      "tag": "gaia_id"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "mateoamadoares@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "mateoamadoares@gmail.com",
+      "gaiaId": "115857738407699147590"
+    },
+    "error": null
+  },
+  "duration_s": 1.1439358089701273
+}

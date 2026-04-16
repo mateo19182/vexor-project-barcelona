@@ -1,0 +1,1058 @@
+{
+  "case_id": "test-integration-001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Juan Garcia'. 2 BORME risk/role signal(s), 0 other entry(ies) for 'Juan Garcia'. Found 48 social profile(s) via Brave search Breach data retrieved for juan.garcia.test@example.com. Could not retrieve any Instagram data for @chosenjuanjose.",
+    "facts": [],
+    "signals": [
+      {
+        "kind": "role",
+        "value": "BOE-A-1994-5518 Orden de 2 de marzo de 1994 por la que se dispone el nombramiento del General de División del Cuerpo General de las Armas del Ejército de Tierra, don Juan Garcia Martínez, como Jefe Logístico Regional y Gobernador Militar de Madrid.",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-5518",
+        "confidence": 0.7,
+        "notes": "BOE-A-1994-5518 Orden de 2 de marzo de 1994 por la que se dispone el nombramiento del General de División del Cuerpo General de las Armas del Ejército de Tierra, don <strong>Juan Garcia</strong> Martínez, como Jefe Logístico Regional y Gobernador Militar de Madrid.",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOLETÍN OFICIAL DEL REGISTRO MERCANTIL Núm. 141 Lunes 26 de julio de 2021",
+        "source": "https://www.boe.es/borme/dias/2021/07/26/pdfs/BORME-A-2021-141-15.pdf",
+        "confidence": 0.85,
+        "notes": "Resoluciones: Auto de conclusión ... cese de las · limitaciones de administración y disposición del deudor, extinción de la Sociedad. Situación concursal. Procedimiento concursal · 191/2013. Fecha de resolución 14/06/2013. Revocación de administradores concursales. Juzgado: num. 2 JUZGADO DE LO · MERCANTIL DE A CORUÑA. Juez: RAGAEL GARCIA PEREZ. Administrador Concursal. Fecha 18/05/2021, NIF/CIF 32794384H. ARMENTEROS CUETOS JUAN ...",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOLETÍN OFICIAL DEL REGISTRO MERCANTIL Núm. 5 Jueves 9 de enero de 2025",
+        "source": "https://www.boe.es/borme/dias/2025/01/09/pdfs/BORME-A-2025-5-20.pdf",
+        "confidence": 0.85,
+        "notes": "Cambio del Organo de Administración: ... único a Administradores solidarios. Datos registrales. S 8 , H SS 20544, I/A 5 ... Ceses/Dimisiones. Liquidador M: OYARZABAL CELARAIN JUAN-RAMON;IBARGOYEN CANCIO ANA-MARIA. Adm. Mancom.: IBARGOYEN CANCIO ANA-MARIA;OYARZABAL CELARAIN JUAN-RAMON. Nombramientos. Liquidador M: IBARGOYEN CANCIO · ANA-MARIA;OYARZABAL CELARAIN JUAN-RAMON. Disolución. Voluntaria. Extinción. Datos registrales. S 8 , H SS 39244, I/A ... Ceses/Dimisiones. Adm. Unico: CRUZ GARCIA ...",
+        "tag": null
+      }
+    ],
+    "gaps": [
+      "BREACH_INTEL_HOST env var not set — module disabled",
+      "github_check: missing port/api_key settings",
+      "google_gaia_check: missing port/api_key settings",
+      "icloud_check: missing port/api_key settings",
+      "instagram_check: missing port/api_key settings",
+      "NOSINT_API_KEY is not set",
+      "anthropic_api_key is not configured",
+      "twitter_check: missing port/api_key settings",
+      "uber_hint: missing port/api_key settings",
+      "breach-analytics returned 200 but contained no breach detail",
+      "SERPER_API_KEY not configured — module disabled",
+      "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python",
+      "jooble: JOOBLE_API_KEY not configured — skipping",
+      "linkedin: LINKDAPI_API_KEY not configured — skipping",
+      "twitter_enrich: TWITTER_USERNAME not configured — skipping",
+      "twitter_vu: missing port/api_key settings",
+      "skipped: missing inputs [contact:gaia_id]",
+      "skipped: missing inputs [address]"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "ok",
+      "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Juan Garcia'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "role",
+          "value": "BOE-A-1994-5518 Orden de 2 de marzo de 1994 por la que se dispone el nombramiento del General de División del Cuerpo General de las Armas del Ejército de Tierra, don Juan Garcia Martínez, como Jefe Logístico Regional y Gobernador Militar de Madrid.",
+          "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-5518",
+          "confidence": 0.7,
+          "notes": "BOE-A-1994-5518 Orden de 2 de marzo de 1994 por la que se dispone el nombramiento del General de División del Cuerpo General de las Armas del Ejército de Tierra, don <strong>Juan Garcia</strong> Martínez, como Jefe Logístico Regional y Gobernador Militar de Madrid.",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.05272827798035
+    },
+    {
+      "name": "borme",
+      "status": "ok",
+      "summary": "2 BORME risk/role signal(s), 0 other entry(ies) for 'Juan Garcia'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "BOLETÍN OFICIAL DEL REGISTRO MERCANTIL Núm. 141 Lunes 26 de julio de 2021",
+          "source": "https://www.boe.es/borme/dias/2021/07/26/pdfs/BORME-A-2021-141-15.pdf",
+          "confidence": 0.85,
+          "notes": "Resoluciones: Auto de conclusión ... cese de las · limitaciones de administración y disposición del deudor, extinción de la Sociedad. Situación concursal. Procedimiento concursal · 191/2013. Fecha de resolución 14/06/2013. Revocación de administradores concursales. Juzgado: num. 2 JUZGADO DE LO · MERCANTIL DE A CORUÑA. Juez: RAGAEL GARCIA PEREZ. Administrador Concursal. Fecha 18/05/2021, NIF/CIF 32794384H. ARMENTEROS CUETOS JUAN ...",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOLETÍN OFICIAL DEL REGISTRO MERCANTIL Núm. 5 Jueves 9 de enero de 2025",
+          "source": "https://www.boe.es/borme/dias/2025/01/09/pdfs/BORME-A-2025-5-20.pdf",
+          "confidence": 0.85,
+          "notes": "Cambio del Organo de Administración: ... único a Administradores solidarios. Datos registrales. S 8 , H SS 20544, I/A 5 ... Ceses/Dimisiones. Liquidador M: OYARZABAL CELARAIN JUAN-RAMON;IBARGOYEN CANCIO ANA-MARIA. Adm. Mancom.: IBARGOYEN CANCIO ANA-MARIA;OYARZABAL CELARAIN JUAN-RAMON. Nombramientos. Liquidador M: IBARGOYEN CANCIO · ANA-MARIA;OYARZABAL CELARAIN JUAN-RAMON. Disolución. Voluntaria. Extinción. Datos registrales. S 8 , H SS 39244, I/A ... Ceses/Dimisiones. Adm. Unico: CRUZ GARCIA ...",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.0423466800129972
+    },
+    {
+      "name": "brave_social",
+      "status": "ok",
+      "summary": "Found 48 social profile(s) via Brave search",
+      "social_links": [
+        {
+          "platform": "linkedin",
+          "url": "https://es.linkedin.com/in/juan-garcia-herce-b723b823",
+          "handle": "juan-garcia-herce-b723b823",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/pub/dir/Juan/Garcia",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://es.linkedin.com/in/juangarciavillan",
+          "handle": "juangarciavillan",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/juan-garcia-01661978/",
+          "handle": "juan-garcia-01661978",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://es.linkedin.com/in/manueljg/en",
+          "handle": "manueljg",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/chosenjuanjose/",
+          "handle": "chosenjuanjose",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/juangarperez/",
+          "handle": "juangarperez",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/jhonnyboygee/",
+          "handle": "jhonnyboygee",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/artbyjgarcia/",
+          "handle": "artbyjgarcia",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/juan_garcia_dt/",
+          "handle": "juan_garcia_dt",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/juangarrrcia",
+          "handle": "juangarrrcia",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/juangranadosa?lang=es",
+          "handle": "juangranadosa",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/juanribarroja?lang=es",
+          "handle": "juanribarroja",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/juangar73886647?lang=es",
+          "handle": "juangar73886647",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/JuanGarciaE",
+          "handle": "JuanGarciaE",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/juan.garcia.812261/",
+          "handle": "juan.garcia.812261",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/juan.m.garciaIII/",
+          "handle": "juan.m.garciaIII",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://es-la.facebook.com/public/Juan-Garcia",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/public/Juan-Garcia-Garcia",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/suministrosbigmat/",
+          "handle": "suministrosbigmat",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/juanyque",
+          "handle": "juanyque",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/Juan-Garcia1",
+          "handle": "Juan-Garcia1",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/juangarcia-ts",
+          "handle": "juangarcia-ts",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/alexcorvis84",
+          "handle": "alexcorvis84",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/juan-g-bonilla",
+          "handle": "juan-g-bonilla",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/Juan-Garcia?lang=es",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/serie-coreana-de-juan-garcia",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/juan-garcia-comandante-drama-chino-espa%C3%B1ol",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/juan-garcia-garden-apartments-in-las-vegas",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/juan-garcia-b6a5aa15/",
+          "handle": "juan-garcia-b6a5aa15",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/juan-garcia-a089b1178/",
+          "handle": "juan-garcia-a089b1178",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/0xjuang/",
+          "handle": "0xjuang",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://es.linkedin.com/in/juan-antonio-garc%C3%ADa-torres-49254261",
+          "handle": "juan-antonio-garc%C3%ADa-torres-49254261",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/juan-garcia-37001670/",
+          "handle": "juan-garcia-37001670",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/juangarg/",
+          "handle": "juangarg",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/juuangarcia/",
+          "handle": "juuangarcia",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/juangarciadt?lang=en",
+          "handle": "juangarciadt",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/JGarcia3rd",
+          "handle": "JGarcia3rd",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/juangarciabm?lang=en",
+          "handle": "juangarciabm",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/JuanGarciaOfficial/",
+          "handle": "JuanGarciaOfficial",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/programajuangarcia/",
+          "handle": "programajuangarcia",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/garciatestteam/",
+          "handle": "garciatestteam",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/juank1809",
+          "handle": "juank1809",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/juanjosegarciaripoll",
+          "handle": "juanjosegarciaripoll",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/juan-manuel-garcia-pincho",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/hijo-de-juan-carlos-garcias-y-monica-pasqualotto",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/cuales-fueron-las-parejas-de-juan-carlos-garcia",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/monica-pasqualotto-habla-de-juan-carlos-garcia",
+          "handle": null,
+          "confidence": 0.65
+        }
+      ],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "queries": [
+          "\"Juan Garcia\" site:linkedin.com ES",
+          "\"Juan Garcia\" site:instagram.com ES",
+          "\"Juan Garcia\" site:x.com ES",
+          "\"Juan Garcia\" site:facebook.com ES",
+          "\"Juan Garcia\" site:github.com ES",
+          "\"Juan Garcia\" site:tiktok.com ES",
+          "juan.garcia.test site:linkedin.com",
+          "juan.garcia.test site:instagram.com",
+          "juan.garcia.test site:x.com",
+          "juan.garcia.test site:facebook.com",
+          "juan.garcia.test site:github.com",
+          "juan.garcia.test site:tiktok.com"
+        ],
+        "links_found": 48,
+        "errors": []
+      },
+      "duration_s": 1.0650756969989743
+    },
+    {
+      "name": "breach_scout",
+      "status": "skipped",
+      "summary": "Breach intelligence host not configured (BREACH_INTEL_HOST unset).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BREACH_INTEL_HOST env var not set — module disabled"
+      ],
+      "raw": {},
+      "duration_s": 4.604400601238012e-05
+    },
+    {
+      "name": "github_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "github_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 1.6053993022069335e-05
+    },
+    {
+      "name": "google_gaia_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "google_gaia_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 1.3612996554002166e-05
+    },
+    {
+      "name": "icloud_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "icloud_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 1.1420983355492353e-05
+    },
+    {
+      "name": "instagram_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "instagram_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 1.0379008017480373e-05
+    },
+    {
+      "name": "nosint",
+      "status": "skipped",
+      "summary": "NoSINT skipped — NOSINT_API_KEY not configured.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "NOSINT_API_KEY is not set"
+      ],
+      "raw": {},
+      "duration_s": 1.1361000360921025e-05
+    },
+    {
+      "name": "osint_web",
+      "status": "error",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "anthropic_api_key is not configured"
+      ],
+      "raw": {},
+      "duration_s": 1.0835996363312006e-05
+    },
+    {
+      "name": "twitter_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 9.90001717582345e-06
+    },
+    {
+      "name": "uber_hint",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "uber_hint: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 1.0440999176353216e-05
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Breach data retrieved for juan.garcia.test@example.com.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "breach-analytics returned 200 but contained no breach detail"
+      ],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": null,
+          "BreachesSummary": {
+            "site": ""
+          },
+          "ExposedBreaches": null,
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "duration_s": 0.4825637580070179
+    },
+    {
+      "name": "image_search",
+      "status": "skipped",
+      "summary": "Reverse-image search disabled (SERPER_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "SERPER_API_KEY not configured — module disabled"
+      ],
+      "raw": {},
+      "duration_s": 4.4671003706753254e-05
+    },
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "Could not retrieve any Instagram data for @chosenjuanjose.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python"
+      ],
+      "raw": {
+        "profile_info": null,
+        "raw_captions": [],
+        "image_count": 0,
+        "video_count": 0
+      },
+      "duration_s": 0.009414804022526368
+    },
+    {
+      "name": "jooble",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "jooble: JOOBLE_API_KEY not configured — skipping"
+      ],
+      "raw": {},
+      "duration_s": 2.4630018742755055e-05
+    },
+    {
+      "name": "linkedin",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "linkedin: LINKDAPI_API_KEY not configured — skipping"
+      ],
+      "raw": {},
+      "duration_s": 2.8126989491283894e-05
+    },
+    {
+      "name": "twitter",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_enrich: TWITTER_USERNAME not configured — skipping"
+      ],
+      "raw": {},
+      "duration_s": 2.5277986424043775e-05
+    },
+    {
+      "name": "twitter_vu",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_vu: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.9176997486501932e-05
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:gaia_id]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "property",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [address]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 3.6509998608380556e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 21 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "twitter_vu",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.00015863601583987474,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'icloud_check', 'instagram_check', 'nosint', 'osint_web', 'twitter_check', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "icloud_check",
+          "instagram_check",
+          "nosint",
+          "osint_web",
+          "twitter_check",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0858503580093384,
+      "module": "boe",
+      "wave": 1,
+      "message": "ok in 1.05s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.05272827798035,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0862695790128782,
+      "module": "borme",
+      "wave": 1,
+      "message": "ok in 1.04s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.0423466800129972,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.086664311005734,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "ok in 1.07s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.0650756969989743,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0870120850158855,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.604400601238012e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.087046550004743,
+      "module": "github_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.6053993022069335e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0870627399999648,
+      "module": "google_gaia_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.3612996554002166e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0870776190131437,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.1420983355492353e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0870918600121513,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.0379008017480373e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0871053610171657,
+      "module": "nosint",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.1361000360921025e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0871182199916802,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "error in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "error",
+        "duration_s": 1.0835996363312006e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0871317700075451,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 9.90001717582345e-06,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0871455779997632,
+      "module": "uber_hint",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.0440999176353216e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0871587459987495,
+      "module": "xon",
+      "wave": 1,
+      "message": "ok in 0.48s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.4825637580070179,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 1.0873578950122464,
+      "module": null,
+      "wave": 2,
+      "message": "['image_search', 'instagram', 'jooble', 'linkedin', 'twitter', 'twitter_vu']",
+      "detail": {
+        "modules": [
+          "image_search",
+          "instagram",
+          "jooble",
+          "linkedin",
+          "twitter",
+          "twitter_vu"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0973557550169062,
+      "module": "image_search",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.4671003706753254e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0974384080036543,
+      "module": "instagram",
+      "wave": 2,
+      "message": "ok in 0.01s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.009414804022526368,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0977793830097653,
+      "module": "jooble",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.4630018742755055e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0978076810133643,
+      "module": "linkedin",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.8126989491283894e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0978261260024738,
+      "module": "twitter",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.5277986424043775e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0978407500078902,
+      "module": "twitter_vu",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.9176997486501932e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0979196949920151,
+      "module": "gaia_enrichment",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:gaia_id']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:gaia_id"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.0979727130034007,
+      "module": "property",
+      "wave": null,
+      "message": "skipped — missing inputs ['address']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "address"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 1.0980226329993457,
+      "module": null,
+      "wave": null,
+      "message": "5 ok, 15 skipped, 1 error(s)",
+      "detail": {
+        "ok": 5,
+        "error": 1,
+        "skipped": 15
+      }
+    }
+  ]
+}

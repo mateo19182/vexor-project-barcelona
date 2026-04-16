@@ -88,15 +88,29 @@ function ModuleAccordion({
                 Signals ({moduleResult.signals.length})
               </span>
               <div className="mt-1 space-y-1">
-                {moduleResult.signals.map((sig, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <span className="text-[9px] px-1 py-0.5 rounded bg-bg-surface text-text-tertiary font-mono shrink-0">
-                      {sig.tag ? `${sig.kind}:${sig.tag}` : sig.kind}
-                    </span>
-                    <span className="text-[11px] text-text-secondary flex-1 break-all">{sig.value}</span>
-                    <span className="text-[9px] text-text-tertiary shrink-0">{(sig.confidence * 100).toFixed(0)}%</span>
-                  </div>
-                ))}
+                {moduleResult.signals.map((sig, i) => {
+                  const isContact = sig.kind === "contact" && (sig.tag === "email" || sig.tag === "phone");
+                  const tier = isContact
+                    ? sig.confidence >= 0.95 ? { color: "text-red-400", label: "HIGH" }
+                    : sig.confidence >= 0.80 ? { color: "text-orange-400", label: "MID" }
+                    : sig.confidence >= 0.60 ? { color: "text-yellow-400", label: "LOW" }
+                    : null
+                    : null;
+                  return (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className={`text-[9px] px-1 py-0.5 rounded font-mono shrink-0 ${
+                        tier ? `${tier.color} bg-bg-surface` : "bg-bg-surface text-text-tertiary"
+                      }`}>
+                        {sig.tag ? `${sig.kind}:${sig.tag}` : sig.kind}
+                      </span>
+                      <span className={`text-[11px] flex-1 break-all ${tier ? tier.color : "text-text-secondary"}`}>{sig.value}</span>
+                      {tier && (
+                        <span className={`text-[8px] font-semibold ${tier.color} shrink-0`}>{tier.label}</span>
+                      )}
+                      <span className="text-[9px] text-text-tertiary shrink-0">{(sig.confidence * 100).toFixed(0)}%</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

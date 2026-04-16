@@ -1,0 +1,31 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "The provided evidence consists solely of a monochromatic blue avatar associated with a social media profile. No personal details, lifestyle indicators, or geographic locations can be determined from this visual data.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The subject's Twitter avatar (Aziffo) is a solid, monochromatic blue square.",
+      "source": "twitter/Aziffo_avatar.jpg",
+      "confidence": 1.0
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Physical appearance of Mateo Amado Ares",
+    "Current geographic location or residence",
+    "Employment status or business affiliations",
+    "Ownership of assets or lifestyle preferences",
+    "Verification that the 'Aziffo' account belongs to the subject"
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/Aziffo_avatar.jpg"
+    ]
+  },
+  "duration_s": 4.458296852011699
+}

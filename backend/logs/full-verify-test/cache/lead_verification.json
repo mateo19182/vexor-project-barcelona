@@ -1,0 +1,122 @@
+{
+  "name": "lead_verification",
+  "status": "ok",
+  "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Contact data possibly outdated: email, phone, phone, phone, phone, phone",
+      "source": "module:lead_verification",
+      "confidence": 0.75,
+      "notes": "Masked data from platform checks doesn't match the lead's email, phone, phone, phone, phone, phone. The person may have updated their contact info on those platforms.",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "verification": {
+      "quality": "low",
+      "score": 0.0,
+      "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used; phone INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different phone used.",
+      "checks": [
+        {
+          "field": "email",
+          "input": "mateoamadoares@gmail.com",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "sl****@p*********.***",
+              "result": "incompatible",
+              "reason": "local prefix 'sl' != 'ma'; local length 14 vs mask 6; domain[0] prefix 'p' != 'g'; domain[0] length 5 vs mask 10"
+            }
+          ],
+          "verdict": "likely_outdated"
+        },
+        {
+          "field": "phone",
+          "input": "617758559",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "94",
+              "result": "incompatible",
+              "reason": "last 2 digits '94' != '59'"
+            }
+          ],
+          "verdict": "likely_outdated"
+        },
+        {
+          "field": "phone",
+          "input": "77.27.13.39",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "94",
+              "result": "incompatible",
+              "reason": "last 2 digits '94' != '39'"
+            }
+          ],
+          "verdict": "likely_outdated"
+        },
+        {
+          "field": "phone",
+          "input": "9fdb6ec157a6eb6da07ca48b11a8deab",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "94",
+              "result": "incompatible",
+              "reason": "last 2 digits '94' != '18'"
+            }
+          ],
+          "verdict": "likely_outdated"
+        },
+        {
+          "field": "phone",
+          "input": "77.27.14.71",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "94",
+              "result": "incompatible",
+              "reason": "last 2 digits '94' != '71'"
+            }
+          ],
+          "verdict": "likely_outdated"
+        },
+        {
+          "field": "phone",
+          "input": "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "94",
+              "result": "incompatible",
+              "reason": "last 2 digits '94' != '00'"
+            }
+          ],
+          "verdict": "likely_outdated"
+        }
+      ],
+      "cross_checks": [],
+      "input_emails": [
+        "mateoamadoares@gmail.com"
+      ],
+      "input_phones": [
+        "617758559",
+        "77.27.13.39",
+        "9fdb6ec157a6eb6da07ca48b11a8deab",
+        "77.27.14.71",
+        "9048230ae1dfcc2709420afe98f49cb58e7fa0dc072befc5cddb81a611f06c00"
+      ],
+      "masks_found": {
+        "email_masked": 1,
+        "phone_masked": 0,
+        "phone_hint": 1
+      }
+    }
+  },
+  "duration_s": 0.00019356099073775113
+}

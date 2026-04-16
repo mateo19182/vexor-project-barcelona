@@ -228,6 +228,10 @@ async def enrich_stream(
             results = await run_pipeline(
                 ctx, mods, audit, logs_dir=settings.logs_dir, fresh=fresh_val,
             )
+            # Let any pending audit.record() tasks drain into the queue
+            # before we send the final result.
+            await asyncio.sleep(0)
+
             dossier = await synthesize(ctx, results)
             enriched = await build_enriched_dossier(ctx, results)
             llm_summary = (
@@ -262,10 +266,17 @@ async def enrich_stream(
             await queue.put(None)
 
     async def event_generator():
+        # Initial SSE comment to flush proxy/browser buffers
+        yield ": connected\n\n"
         task = asyncio.create_task(run_and_finish())
         try:
             while True:
-                item = await queue.get()
+                try:
+                    item = await asyncio.wait_for(queue.get(), timeout=15.0)
+                except asyncio.TimeoutError:
+                    # Send keepalive comment to prevent connection timeout
+                    yield ": keepalive\n\n"
+                    continue
                 if item is None:
                     break
                 yield item

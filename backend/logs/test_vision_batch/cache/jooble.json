@@ -1,0 +1,127 @@
+{
+  "name": "jooble",
+  "status": "ok",
+  "summary": "Jooble: 'Software / IT developer' → 4430 listing(s). Sample salaries: de 35000 a 45000 €/año.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Jooble salary range for 'Software / IT developer': de 35000 a 45000 €/año",
+      "source": "jooble.org search: 'Software / IT developer'",
+      "confidence": 0.55
+    },
+    {
+      "claim": "Jooble confirms 'Software / IT developer' is an active job title (4430 listing(s) found).",
+      "source": "jooble.org search: 'Software / IT developer'",
+      "confidence": 0.6
+    }
+  ],
+  "signals": [
+    {
+      "kind": "lifestyle",
+      "value": "Active job market for Software / IT developer (4430+ listings)",
+      "source": "jooble.org search: 'Software / IT developer'",
+      "confidence": 0.65,
+      "notes": "High demand: 4430 active Jooble listings for 'Software / IT developer' — consistent with active local employment.",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "jobs": [
+      {
+        "title": "Software Developer",
+        "company": "B. Braun Melsungen AG",
+        "location": "Barcelona",
+        "salary": "",
+        "snippet": "&nbsp;...values. That’s why we would like to keep <b>developing </b>our company with you. Keeping your...&nbsp;&nbsp;...appreciation. That's Sharing Expertise. \r\n <b>Software Developer </b>\r\n Job Location: Barcelona, Barcelona,...&nbsp;&nbsp;...development processes (such as SCRUM)\r\n <b>It </b>would be desirable if you have worked...&nbsp;",
+        "link": "https://es.jooble.org/jdp/3673996963275416405",
+        "updated": "2026-04-12T00:00:00.0000000"
+      },
+      {
+        "title": "Software developer",
+        "company": "Mentice Inc.",
+        "location": "Barcelona",
+        "salary": "",
+        "snippet": "&nbsp;...We are looking for  <b>Software Developers </b> to join our growing team in Barcelona!\r\n Mentice is the...&nbsp;&nbsp;...Mentice solutions have been specifically <b>developed </b>for healthcare providers and the medical...&nbsp;&nbsp;...in computer science, engineering, <b>IT,</b> or a similar field with strong programming...&nbsp;",
+        "link": "https://es.jooble.org/jdp/5758448276188236960",
+        "updated": "2026-04-12T00:00:00.0000000"
+      },
+      {
+        "title": "Software Developer - P4",
+        "company": "Ports North",
+        "location": "Sevilla",
+        "salary": "",
+        "snippet": "&nbsp;...Overview \r\n <b>Software </b>Development Java - Hybrid Working Model. Here at Korn Ferry we are supporting...&nbsp;&nbsp;...We are looking for a senior software <b>developer </b>to join our Sevilla team building our...&nbsp;&nbsp;...Professional proficiency in English \r\n <b>It'</b>s A Bonus If You Have \r\n Knowledge of Domain...&nbsp;",
+        "link": "https://es.jooble.org/jdp/6939813970093228681",
+        "updated": "2026-04-12T00:00:00.0000000"
+      },
+      {
+        "title": "PL/SQL Software Developer",
+        "company": "NN",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...field.* Minimum of 3 years of experience in <b>developing </b>Oracle database applications using PL/SQL...&nbsp;&nbsp;...environment to deliver high quality <b>software </b>against aggressive schedules.* Fluent English...&nbsp;&nbsp;...** and **Madrid**, that complement our <b>IT </b>teams across NN markets. These centres bring...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-5769970309592330152",
+        "updated": "2026-04-15T00:00:00.0000000"
+      },
+      {
+        "title": "Software Developer (Internship)",
+        "company": "Altech Solutions & Consulting SL",
+        "location": "Barcelona",
+        "salary": "",
+        "snippet": "&nbsp;...innovative solutions that provide value to <b>its </b>clients in the areas of transportation,...&nbsp;&nbsp;...in Barcelona’s 22@ technology district, <b>it </b>has successfully completed numerous...&nbsp;&nbsp;...work. \r\n Free coffee and fruit. \r\n~ Position:  <b>Software Developer </b>(Internship)\r\n\r\n#J-18808-Ljbffr...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-4136773765402790125",
+        "updated": "2026-04-15T00:00:00.0000000"
+      },
+      {
+        "title": "Senior Software Developer",
+        "company": "Dandelion Payments",
+        "location": "España",
+        "salary": "",
+        "snippet": "&nbsp;...one family, one community at a time. \r\n ABOUT THIS ROLE \r\n As a <b>Software Developer </b>(.NET), in ITyour role will be to design, develop, and...&nbsp;&nbsp;...define the general contents and requirements to perform this job. <b>It </b>is not to be taken as a complete statement of responsibilities...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-2748606164568703116",
+        "updated": "2026-04-13T00:00:00.0000000"
+      },
+      {
+        "title": "Software Developer SAP BW & HANA (m/f/d)",
+        "company": "Deutsche Pfandbriefbank AG",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...greener and more sustainable. \r\n Would you like to be part of <b>it? To develop </b>your individual potential? Then you are right with us. Our...&nbsp;&nbsp;..., we are searching for an employee with immediate effect as  <b>Software </b>Developer SAP BW & HANA (m/f/d)\r\n Your tasks consist of \r\n Responsibility...&nbsp;",
+        "link": "https://es.jooble.org/jdp/5225853842447902700",
+        "updated": "2026-04-16T00:00:00.0000000"
+      },
+      {
+        "title": "Software Developer Engineer II",
+        "company": "Amazon",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...and retail in the B2B space <b>developing </b>innovative purchasing and procurement...&nbsp;&nbsp;...are looking for a talented <b>Software </b>Development Engineer to join...&nbsp;&nbsp;...of products and services. <b>It </b>gives opportunity to get...&nbsp;&nbsp;...continuous improvement. \r\n Design, <b>develop,</b> and maintain innovative...&nbsp;",
+        "link": "https://es.jooble.org/jdp/4253648668735046163",
+        "updated": "2026-04-16T00:00:00.0000000"
+      },
+      {
+        "title": "Software Engineer - Developer Experience SDK Python",
+        "company": "Sinch",
+        "location": "Madrid",
+        "salary": "",
+        "snippet": "&nbsp;...<b>Software </b>Engineer - <b>Developer </b>Experience SDK Python \r\n Be the First to Apply \r\n Job Description \r\n About Sinch \r\n Sinch is pioneering the way the world...&nbsp;&nbsp;...verify users or craft omnichannel campaigns, Sinch makes <b>it </b>easy. Our AI-infused Super Network, APIs, and applications...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-6767541241168865463",
+        "updated": "2026-04-13T00:00:00.0000000"
+      },
+      {
+        "title": "Programador/a Industrial de Sistemas de Control (Visual Basic)",
+        "company": "Melt Group",
+        "location": "Barcelona",
+        "salary": "de 35000 a 45000 €/año",
+        "snippet": "&nbsp;...periodo inicial de acompañamiento, la responsabilidad completa del <b>software </b>que supervisa y controla las unidades productivas de la planta....&nbsp;&nbsp;..., coordinando proyectos estratégicos dentro del ámbito <b>IT/</b>OT. \r\n¿Cuál es la experiencia que puedes aportar?\r\n Experiencia...&nbsp;",
+        "link": "https://es.jooble.org/jdp/-4591511933552009113",
+        "updated": "2026-04-13T00:00:00.0000000"
+      }
+    ],
+    "total_count": 4430,
+    "errors": [],
+    "job_title_used": "Software / IT developer"
+  },
+  "duration_s": 0.37040451902430505
+}

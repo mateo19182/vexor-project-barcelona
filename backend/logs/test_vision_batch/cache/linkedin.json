@@ -1,0 +1,13 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "linkedin: could not parse slug from 'angel-otero-159733198'"
+  ],
+  "raw": {},
+  "duration_s": 0.00004625500878319144
+}

@@ -1,0 +1,18 @@
+{
+  "name": "github_check",
+  "status": "ok",
+  "summary": "mateoamadoares2@gmail.com is NOT registered on GitHub.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "platform": "GitHub",
+    "identifier": "mateoamadoares2@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "session_id": "b22b1c71-637e-42ff-b758-8424b0906ff8",
+    "error": null
+  },
+  "duration_s": 1.7189465090050362
+}

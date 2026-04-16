@@ -1,0 +1,22 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "alentad@gmail.com is NOT registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "alentad@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "a918d351-c729-4187-a185-11f651f52220",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 2.0530703850090504
+}

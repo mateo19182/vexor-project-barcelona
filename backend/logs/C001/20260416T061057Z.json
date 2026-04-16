@@ -1,0 +1,460 @@
+{
+  "case_id": "C001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Angel Otero'. LinkedIn @david-rivera-bazo (David Rivera Bazo) — Proveedor Oficial de Fitness Feeling / InnPlay — Perillo, Galicia, Spain — 2,950 followers.",
+    "facts": [
+      {
+        "claim": "LinkedIn About: 💪 Con más de una 15 años de experiencia en el sector fitness, lideroINNPLAY, donde nos dedicamos a aportar valor al mundo del fitness mediante soluciones tecnológicas innovadoras. 🚀 Nuestra misión es transformar la manera en que los centros deportivos interactúan con sus clientes y optimizan sus operaciones internas.​\n\n🤝 Como proveedor oficial de #FitnessFeeling, ofrecemos herramientas que permiten a los gimnasios mejorar la experiencia de sus usuarios, implementar entrenamientos 🎥 y digitalizar",
+        "source": "https://es.linkedin.com/in/david-rivera-bazo",
+        "confidence": 0.85
+      },
+      {
+        "claim": "LinkedIn position: Producto y Operaciones — Innplay Soluciones Digitales · Full-time — Nov 2019 - Present · 6 yrs 6 mos",
+        "source": "https://www.linkedin.com/company/66964862/",
+        "confidence": 0.8
+      },
+      {
+        "claim": "LinkedIn position: 360 Trainer - Servicios Externalizados de Entrenamiento Personal — 360Trainer — Jun 2017 - Aug 2020 · 3 yrs 3 mos",
+        "source": "https://www.linkedin.com/search/results/all/?keywords=360Trainer",
+        "confidence": 0.8
+      },
+      {
+        "claim": "LinkedIn position: Consultor Senior — Fitness Creativo — Sep 2016 - Dec 2019 · 3 yrs 4 mos",
+        "source": "https://www.linkedin.com/search/results/all/?keywords=Fitness+Creativo",
+        "confidence": 0.8
+      }
+    ],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "BOE-B-2020-22293 A CORUÑA",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
+        "confidence": 0.85,
+        "notes": "4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+        "tag": null
+      },
+      {
+        "kind": "role",
+        "value": "Proveedor Oficial de Fitness Feeling / InnPlay",
+        "source": "https://es.linkedin.com/in/david-rivera-bazo",
+        "confidence": 0.85,
+        "notes": "Verbatim LinkedIn headline",
+        "tag": null
+      },
+      {
+        "kind": "employer",
+        "value": "Universidade da Coruña",
+        "source": "https://www.linkedin.com/school/universidade-da-coru%C3%B1a/",
+        "confidence": 0.85,
+        "notes": "Listed as current position on LinkedIn",
+        "tag": null
+      },
+      {
+        "kind": "employer",
+        "value": "Innplay - Proveedor Oficial Fitness Feeling",
+        "source": "https://www.linkedin.com/company/innplay-soluciones-audiovisuales/",
+        "confidence": 0.85,
+        "notes": "Listed as current position on LinkedIn",
+        "tag": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "Industry: Sports",
+        "source": "https://es.linkedin.com/in/david-rivera-bazo",
+        "confidence": 0.7,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "location",
+        "value": "Perillo, Galicia, Spain",
+        "source": "https://es.linkedin.com/in/david-rivera-bazo",
+        "confidence": 0.8,
+        "notes": "Self-reported location on LinkedIn profile",
+        "tag": null
+      }
+    ],
+    "gaps": [
+      "jooble: JOOBLE_API_KEY not configured — skipping"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "ok",
+      "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Angel Otero'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "BOE-B-2020-22293 A CORUÑA",
+          "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
+          "confidence": 0.85,
+          "notes": "4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.600958533002995
+    },
+    {
+      "name": "linkedin",
+      "status": "ok",
+      "summary": "LinkedIn @david-rivera-bazo (David Rivera Bazo) — Proveedor Oficial de Fitness Feeling / InnPlay — Perillo, Galicia, Spain — 2,950 followers.",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "LinkedIn About: 💪 Con más de una 15 años de experiencia en el sector fitness, lideroINNPLAY, donde nos dedicamos a aportar valor al mundo del fitness mediante soluciones tecnológicas innovadoras. 🚀 Nuestra misión es transformar la manera en que los centros deportivos interactúan con sus clientes y optimizan sus operaciones internas.​\n\n🤝 Como proveedor oficial de #FitnessFeeling, ofrecemos herramientas que permiten a los gimnasios mejorar la experiencia de sus usuarios, implementar entrenamientos 🎥 y digitalizar",
+          "source": "https://es.linkedin.com/in/david-rivera-bazo",
+          "confidence": 0.85
+        },
+        {
+          "claim": "LinkedIn position: Producto y Operaciones — Innplay Soluciones Digitales · Full-time — Nov 2019 - Present · 6 yrs 6 mos",
+          "source": "https://www.linkedin.com/company/66964862/",
+          "confidence": 0.8
+        },
+        {
+          "claim": "LinkedIn position: 360 Trainer - Servicios Externalizados de Entrenamiento Personal — 360Trainer — Jun 2017 - Aug 2020 · 3 yrs 3 mos",
+          "source": "https://www.linkedin.com/search/results/all/?keywords=360Trainer",
+          "confidence": 0.8
+        },
+        {
+          "claim": "LinkedIn position: Consultor Senior — Fitness Creativo — Sep 2016 - Dec 2019 · 3 yrs 4 mos",
+          "source": "https://www.linkedin.com/search/results/all/?keywords=Fitness+Creativo",
+          "confidence": 0.8
+        }
+      ],
+      "signals": [
+        {
+          "kind": "role",
+          "value": "Proveedor Oficial de Fitness Feeling / InnPlay",
+          "source": "https://es.linkedin.com/in/david-rivera-bazo",
+          "confidence": 0.85,
+          "notes": "Verbatim LinkedIn headline",
+          "tag": null
+        },
+        {
+          "kind": "employer",
+          "value": "Universidade da Coruña",
+          "source": "https://www.linkedin.com/school/universidade-da-coru%C3%B1a/",
+          "confidence": 0.85,
+          "notes": "Listed as current position on LinkedIn",
+          "tag": null
+        },
+        {
+          "kind": "employer",
+          "value": "Innplay - Proveedor Oficial Fitness Feeling",
+          "source": "https://www.linkedin.com/company/innplay-soluciones-audiovisuales/",
+          "confidence": 0.85,
+          "notes": "Listed as current position on LinkedIn",
+          "tag": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "Industry: Sports",
+          "source": "https://es.linkedin.com/in/david-rivera-bazo",
+          "confidence": 0.7,
+          "notes": null,
+          "tag": null
+        },
+        {
+          "kind": "location",
+          "value": "Perillo, Galicia, Spain",
+          "source": "https://es.linkedin.com/in/david-rivera-bazo",
+          "confidence": 0.8,
+          "notes": "Self-reported location on LinkedIn profile",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "username": "david-rivera-bazo",
+        "profile_url": "https://es.linkedin.com/in/david-rivera-bazo",
+        "urn": "ACoAAAitKZkBs7gAfKAPiAlPoQn8NFDb37Ysxy8",
+        "overview": {
+          "firstName": "David",
+          "lastName": "Rivera Bazo",
+          "fullName": "David Rivera Bazo",
+          "headline": "Proveedor Oficial de Fitness Feeling / InnPlay",
+          "publicIdentifier": "david-rivera-bazo",
+          "followerCount": 2950,
+          "connectionsCount": 2928,
+          "creator": true,
+          "qualityProfile": true,
+          "joined": 1318013663555,
+          "profileID": "145566105",
+          "urn": "ACoAAAitKZkBs7gAfKAPiAlPoQn8NFDb37Ysxy8",
+          "CurrentPositions": [
+            {
+              "id": "47842",
+              "name": "Universidade da Coruña",
+              "url": "https://www.linkedin.com/school/universidade-da-coru%C3%B1a/",
+              "logoURL": "https://media.licdn.com/dms/image/v2/D4D0BAQEaaQqJMKDing/company-logo_400_400/company-logo_400_400/0/1716195488529/universidade_da_corua_logo?e=1778112000&v=beta&t=Pry7Ya_4ZLaTcdzitfA3srKcLLUYLYbMLNClQIx44K8"
+            },
+            {
+              "id": "66964862",
+              "name": "Innplay - Proveedor Oficial Fitness Feeling",
+              "url": "https://www.linkedin.com/company/innplay-soluciones-audiovisuales/",
+              "logoURL": "https://media.licdn.com/dms/image/v2/D4D0BAQG6iHbeNeSkwg/img-crop_100/B4DZYSsGfRHsAQ-/0/1744070273565?e=1778112000&v=beta&t=LhRcSacNJfM9bBsTWPbY4x78vZyQxeocPusgqOe3ha0"
+            }
+          ],
+          "isTopVoice": false,
+          "premium": false,
+          "influencer": false,
+          "industryName": "Sports",
+          "industryUrn": "urn:li:fsd_industry:33",
+          "location": {
+            "countryCode": "es",
+            "countryName": "Spain",
+            "city": "Perillo, Galicia",
+            "fullLocation": "Perillo, Galicia, Spain"
+          },
+          "backgroundImageURL": "https://media.licdn.com/dms/image/v2/D4D16AQExeus5BEnngw/profile-displaybackgroundimage-shrink_200_800/B4DZWjjgwvGcAY-/0/1742205751322?e=1778112000&v=beta&t=RWo91oKNmAIXGQ0AAjCfNYOijWyXhiUW-dbaEjk7vwQ",
+          "profilePictureURL": "https://media.licdn.com/dms/image/v2/D4E03AQHSe3txqfTlpg/profile-displayphoto-shrink_100_100/B4EZUoJxgBGYAU-/0/1740135406707?e=1778112000&v=beta&t=6FAdmk_8X_bZeP1jwBcvqFYzu6suHz4ZR_UIXIV0reQ",
+          "supportedLocales": [
+            {
+              "country": "ES",
+              "language": "es"
+            }
+          ]
+        },
+        "details": {
+          "about": "💪 Con más de una 15 años de experiencia en el sector fitness, lideroINNPLAY, donde nos dedicamos a aportar valor al mundo del fitness mediante soluciones tecnológicas innovadoras. 🚀 Nuestra misión es transformar la manera en que los centros deportivos interactúan con sus clientes y optimizan sus operaciones internas.​\n\n🤝 Como proveedor oficial de #FitnessFeeling, ofrecemos herramientas que permiten a los gimnasios mejorar la experiencia de sus usuarios, implementar entrenamientos 🎥 y digitalizar sus servicios 📲. Nuestro enfoque se centra en integrar tecnología avanzada para facilitar la gestión eficiente ⚙️ y fomentar la fidelización de los clientes 💚.\n\n🔥 Mi pasión es unir deporte y  tecnología. Creo firmemente que la innovación 💡 es esencial para que los centros deportivos se diferencien y prosperen en un mercado competitivo.​\n\n👉 ¿Quieres llevar tu centro deportivo al siguiente nivel?\n\nConéctate conmigo y exploremos juntos cómo la tecnología puede transformar tu negocio. 🚀",
+          "featuredPosts": [
+            {
+              "postLink": "https://www.linkedin.com/feed/update/urn:li:activity:7392120765103378432?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7392120765103378432%29",
+              "postText": "¿Sigues gestionando tus cursillos en hojas de Excel o con procesos manuales?\n\nCon Nadus puedes hacerlo todo desde una sola plataforma: gestión de alumnos, asistencia, comunicación con familias y análisis de rendimiento en tiempo real.\n\n🚀 Digitaliza tu escuela de natación, mejora la experiencia de tus usuarios y toma decisiones basadas en datos.\n\n👉 Escríbeme, solicita una demo y descubre Nadus en acción"
+            },
+            {
+              "postLink": "https://www.linkedin.com/feed/update/urn:li:activity:7331300742420475905?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7331300742420475905%29",
+              "postText": "Utilizar pantallas en clases dirigidas con instructor es para listos. \n\nPara centros que saben cómo multiplicar el talento de sus técnicos, liberar su tiempo y ofrecer experiencias top.\n\nEn este vídeo te enseño cómo CloudFit  transforma una simple pantalla en un entrenador más del equipo.\n\n✅ Sencillo de usar\n✅ Adaptable a cualquier espacio\n✅ Siempre listo\n\n🎯 Un ejemplo de como se puede usar en dinamizaciones en sala fitness.\n\nSi crees que esto es el futuro…\n➡️ Estás equivocado.\n\nEsto ya es el presente.\n\n\nEscríbeme y te cuento... \n\n#Fitness #Tecnología #EntrenamientoInteligente #CloudFit #TransformaciónDigital #Gimnasios #Innovación"
+            },
+            {
+              "postLink": "https://www.linkedin.com/feed/update/urn:li:activity:7326335983891709952?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7326335983891709952%29",
+              "postText": "¡Nos vemos el 23 de mayo en Santiago!\n\nGracias a BORJA ROPERO BLANCO de AsesFit  por invitarme al 2º Encuentro de Centros de Entrenamiento.\nLlevo tiempo trabajando con tecnología en centros deportivos, y ese día compartiré ideas reales para romper miedos, mejorar procesos y hacer crecer tu centro con herramientas digitales.\n\nNo será una charla más. Será una llamada a actuar.\n\n¿Vas a seguir haciendo lo mismo esperando resultados distintos? Este es el momento de cambiar.\n\nSolo quedan 10 plazas y más de 45 entrenadores ya se han apuntado... ¿Te apuntas tú también?\n\n¡Nos vemos en Santiago!\n\nApúntate aquí...\n\nhttps://lnkd.in/dqEmBBEC\n\n#TransformaciónDigital #TecnologíaFitness #FitnessInteligente #Asesfit #BorjaRopero #CentrosDeEntrenamiento #GestiónDeportiva #InnovaciónFitness #EntrenadoresUnidos"
+            },
+            {
+              "postLink": "https://www.linkedin.com/feed/update/urn:li:activity:7313500429403721730?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7313500429403721730%29",
+              "postText": "🎯 ¿Y si te dijera que he encontrado la solución a uno de los mayores dolores de cabeza en una sala de fitness?\n\nCuando una sala se llena hasta los topes, los técnicos no dan abasto.\n\n 📈 Los programas de entrenamiento se colapsan.\n 😓 Los usuarios esperan.\n 😤 La experiencia se resiente.\n 🔥 Y el equipo técnico se quema.\n\nDurante años he visto intentos de solucionar esto:\n\n ➡️ Convertir los míticos PDFs en apps. Tenenmos un producto funcional para ello desde Innplay - Proveedor Oficial Fitness Feeling\n ➡️ Cobrar más por este servicio de programación.\n ➡️ Externalizarlo a servicios de entrenamiento personal.\n\nSí, todo eso puede aliviar carga de saturación de un técnico en una sala fitness...\n\nPero ninguna de estas soluciones convierte al técnico de sala en lo que realmente debería ser: un profesional que aporta valor real en la experiencia del usuario.\n\n💡 Pues creo que yo estoy trabajando justo en eso.\n\nUna herramienta pensada para esos momentos críticos, que descongestiona sin despersonalizar. Que libera al técnico… para que pueda volver a inspirar.\n\nPorque el técnico no está para apagar fuegos. Está para ayudar.\n\nSi gestionas un gimnasio o una sala fitness… hablamos cuando quieras y si no pronto sabrás de que te hablo...\n\n#fitness #tecnología #salafitness #gestiónfitness #solucionesdigitales #inspiración #4plusplus"
+            },
+            {
+              "postLink": "https://www.linkedin.com/feed/update/urn:li:activity:7311003974407479296?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7311003974407479296%29",
+              "postText": "🙋‍♂️ 🙋‍♂️ Que levante la mano el gestor deportivo que necesite un software para gestionar su escuela de natación.... \n\n- Que este comunicando con tu software de gestión\n- Que disponga de una comunicación fluida con los padres\n- Que permita evaluar y hacer seguimiento y progreso del alumno\n- Con indicadores básicos sobre como funciona la escuela\n- Que permita asignar alumnos a grupos de una forma automatizada\n\n... Y muchas más funcionalidades!!\n\nLo hablamos en FIBO2025?"
+            }
+          ],
+          "positions": [
+            {
+              "jobTitle": "Producto y Operaciones",
+              "company": "Innplay Soluciones Digitales · Full-time",
+              "location": "Galicia, Spain",
+              "duration": "Nov 2019 - Present · 6 yrs 6 mos",
+              "companyLink": "https://www.linkedin.com/company/66964862/",
+              "companyId": "66964862",
+              "jobDescription": "Decimos que feeling es el sentimiento entre personas que se caracteriza por ser muy positivo, sin explicar que elementos las unen. En Innplay creamos fitness feeling mejorando la conexión entre gimnasios & usuarios. Hemos descubierto como crear relaciones positivas a través de la creatividad, el diseño y la innovación, aportando valor tecnológico al mundo del fitness."
+            },
+            {
+              "jobTitle": "360 Trainer - Servicios Externalizados de Entrenamiento Personal",
+              "company": "360Trainer",
+              "location": "Greater La Coruña Area",
+              "duration": "Jun 2017 - Aug 2020 · 3 yrs 3 mos",
+              "companyLink": "https://www.linkedin.com/search/results/all/?keywords=360Trainer",
+              "companyId": "all",
+              "jobDescription": "Desarrollo e implantación de servicios de entrenamiento personal en centros deportivos."
+            },
+            {
+              "jobTitle": "Consultor Senior",
+              "company": "Fitness Creativo",
+              "location": "",
+              "duration": "Sep 2016 - Dec 2019 · 3 yrs 4 mos",
+              "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Fitness+Creativo",
+              "companyId": "all",
+              "jobDescription": "¿Alguna vez has intentado ver tu Empresa desde el Aire, con la Visión de un Águila? Si pudieras ver todo el funcionamiento de tu empresa, desde el Aire – metafóricamente hablando – tendrías una visión mucho más potente para tomar decisiones inteligentes…\n"
+            },
+            {
+              "jobTitle": "TiempoD Soluciones Creativas",
+              "company": "3 yrs 1 mo",
+              "location": "",
+              "duration": "Madrid y alrededores, España",
+              "companyLink": "https://www.linkedin.com/search/results/all/?keywords=TiempoD+Soluciones+Creativas",
+              "companyId": "all",
+              "jobDescription": ""
+            },
+            {
+              "jobTitle": "Director de operaciones",
+              "company": "Koombo Training",
+              "location": "A Coruña y alrededores, España",
+              "duration": "Oct 2017 - Oct 2019 · 2 yrs 1 mo",
+              "companyLink": "https://www.linkedin.com/company/18858068/",
+              "companyId": "18858068",
+              "jobDescription": "Koombo ofrece soluciones digitales para el mundo del fitness y la salud.Una plataforma para mejorar la experiencia del entrenador y del usuario de centros deportivos."
+            }
+          ],
+          "education": [
+            {
+              "duration": "2001 - 2006",
+              "durationParsed": {
+                "start": {
+                  "year": 2001,
+                  "month": 1,
+                  "day": 1
+                },
+                "end": {
+                  "year": 2006,
+                  "month": 1,
+                  "day": 1
+                }
+              },
+              "university": "Universidade da Coruña",
+              "universityLink": "https://www.linkedin.com/company/47842/",
+              "degree": "Licenciatura, CC Actividad Física y Deportiva",
+              "description": null,
+              "subDescription": null
+            },
+            {
+              "duration": "2015 - 2016",
+              "durationParsed": {
+                "start": {
+                  "year": 2015,
+                  "month": 1,
+                  "day": 1
+                },
+                "end": {
+                  "year": 2016,
+                  "month": 1,
+                  "day": 1
+                }
+              },
+              "university": "Fitness Coaching Institute",
+              "universityLink": "https://www.linkedin.com/search/results/all/?keywords=Fitness+Coaching+Institute",
+              "degree": "Certificación como Fitness Coach, Coaching Deportivo",
+              "description": null,
+              "subDescription": null
+            }
+          ],
+          "languages": {
+            "languages": [
+              {
+                "Language": "Inglés",
+                "Level": "Elementary proficiency"
+              }
+            ],
+            "deepLink": ""
+          }
+        }
+      },
+      "duration_s": 3.9441872669849545
+    },
+    {
+      "name": "jooble",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "jooble: JOOBLE_API_KEY not configured — skipping"
+      ],
+      "raw": {},
+      "duration_s": 1.5808007447049022e-05
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.4506007321178913e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 3 module(s): ['boe', 'jooble', 'linkedin']",
+      "detail": {
+        "modules": [
+          "boe",
+          "jooble",
+          "linkedin"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 7.447600364685059e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'linkedin']",
+      "detail": {
+        "modules": [
+          "boe",
+          "linkedin"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 3.950653670995962,
+      "module": "boe",
+      "wave": 1,
+      "message": "ok in 0.60s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.600958533002995,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 3.9508674220123794,
+      "module": "linkedin",
+      "wave": 1,
+      "message": "ok in 3.94s (5 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 3.9441872669849545,
+        "signals": 5,
+        "facts": 4,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 3.951151254004799,
+      "module": null,
+      "wave": 2,
+      "message": "['jooble']",
+      "detail": {
+        "modules": [
+          "jooble"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 3.9512322480150033,
+      "module": "jooble",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.5808007447049022e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 3.951254915999016,
+      "module": null,
+      "wave": null,
+      "message": "2 ok, 1 skipped, 0 error(s)",
+      "detail": {
+        "ok": 2,
+        "error": 0,
+        "skipped": 1
+      }
+    }
+  ]
+}

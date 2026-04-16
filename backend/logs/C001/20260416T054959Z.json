@@ -1,0 +1,1513 @@
+{
+  "case_id": "C001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Found 73 social profile(s) via Brave search Could not retrieve any Instagram data for @georgehotz. Sin estimacion de valor para Sant Martí, 08026, Barcelona. Ver gaps. Email found in 1 breach(es); registered on: duelingnetwork.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 1 breach(es); earliest 2017, latest 2017",
+    "facts": [
+      {
+        "claim": "Email found in 1 breach(es); earliest 2017, latest 2017",
+        "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Email addresses, IP addresses, Passwords, Usernames",
+        "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Low (22/100)",
+        "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+        "confidence": 0.9
+      }
+    ],
+    "signals": [
+      {
+        "kind": "location",
+        "value": "Barcelona, ES",
+        "source": "geocoding",
+        "confidence": 0.75,
+        "notes": "Location derived from debtor's known address",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "duelingnetwork.com",
+        "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+        "confidence": 0.85,
+        "notes": "Account registered on duelingnetwork.com (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords, IP addresses",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in DuelingNetwork breach",
+        "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+        "confidence": 0.9,
+        "notes": null,
+        "tag": null
+      }
+    ],
+    "gaps": [
+      "BREACH_INTEL_HOST env var not set — module disabled",
+      "github_check: missing port/api_key settings",
+      "google_gaia_check: missing port/api_key settings",
+      "icloud_check: missing port/api_key settings",
+      "SERPER_API_KEY not configured — module disabled",
+      "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python",
+      "instagram_check: missing port/api_key settings",
+      "linkedin: LINKDAPI_API_KEY not configured — skipping",
+      "NOSINT_API_KEY is not set",
+      "anthropic_api_key is not configured",
+      "Geocoding no resolvio calle + numero + municipio — sin consulta a Catastro",
+      "twitter_check: missing port/api_key settings",
+      "twitter_enrich: TWITTER_USERNAME not configured — skipping",
+      "twitter_vu: missing port/api_key settings",
+      "uber_hint: missing port/api_key settings",
+      "skipped: missing inputs [contact:gaia_id]",
+      "skipped: missing inputs [role]"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "no_data",
+      "summary": "No BOE entries found for 'George Hotz'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.3333005300082732
+    },
+    {
+      "name": "borme",
+      "status": "no_data",
+      "summary": "No BORME entries found for 'George Hotz'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.3178129669977352
+    },
+    {
+      "name": "brave_social",
+      "status": "ok",
+      "summary": "Found 73 social profile(s) via Brave search",
+      "social_links": [
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/george-hotz-b3866476/",
+          "handle": "george-hotz-b3866476",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/george-hotz-17425171/",
+          "handle": "george-hotz-17425171",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/george-hotz-7a803162/",
+          "handle": "george-hotz-7a803162",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/georgehotz/",
+          "handle": "georgehotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/georgehotz/reels/?hl=en",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/georgehotzalias/",
+          "handle": "georgehotzalias",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/realGeorgeHotz",
+          "handle": "realGeorgeHotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/geohothacks",
+          "handle": "geohothacks",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/geohotarchive",
+          "handle": "geohotarchive",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/hckrgeohot?lang=en",
+          "handle": "hckrgeohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/geohot",
+          "handle": "geohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/geohot?tab=repositories",
+          "handle": "geohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/littlemountainman/geohot-terminal",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/geohot?tab=followers",
+          "handle": "geohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/geohot?tab=stars",
+          "handle": "geohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/george-hotz",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/popular/george-hotz/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/gehotz",
+          "handle": "gehotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/geohotarchive?lang=en",
+          "handle": "geohotarchive",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/George-Hotz",
+          "handle": "George-Hotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/George-Hotz/George-Hotz",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/george-hotz-deepseek",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/aziff90/",
+          "handle": "aziff90",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/zifo-technologies",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/azfilmfest",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/azafaros-b-v",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/aziff90/",
+          "handle": "aziff90",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/ziffo_/",
+          "handle": "ziffo_",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/azfu/?hl=en",
+          "handle": "azfu",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/azifeeee/?hl=en",
+          "handle": "azifeeee",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/zaffo",
+          "handle": "zaffo",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/azfilmfest",
+          "handle": "azfilmfest",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/ZayFoh",
+          "handle": "ZayFoh",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/_AlAzif",
+          "handle": "_AlAzif",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/azawiofficial?lang=en",
+          "handle": "azawiofficial",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/AzeffounOfficielle/?locale=fr_FR",
+          "handle": "AzeffounOfficielle",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/Azeffoun75/",
+          "handle": "Azeffoun75",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/azeffounbeach.h/",
+          "handle": "azeffounbeach.h",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/AZIFband315/",
+          "handle": "AZIFband315",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/aziff.azipp",
+          "handle": "aziff.azipp",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/Al-Azif",
+          "handle": "Al-Azif",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/aziff",
+          "handle": "aziff",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/Azifor",
+          "handle": "Azifor",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@ziffo99",
+          "handle": "@ziffo99",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/azelefa",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/faizan-asif-ba7651195/",
+          "handle": "faizan-asif-ba7651195",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/azafi_o/?hl=en",
+          "handle": "azafi_o",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/alazifoon/",
+          "handle": "alazifoon",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/george__hotz/",
+          "handle": "george__hotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/george_francishotz/",
+          "handle": "george_francishotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/GeoHot1/",
+          "handle": "GeoHot1",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/public/George-Hotz",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/p/George-Francis-Hotz-GeoHot--100039732353259/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/zangula",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/xanumgroup",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/xanthella-limited",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/xalu",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/xiannychinchilla/",
+          "handle": "xiannychinchilla",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/C574FxUM9d7/?hl=am-et",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/cannupahanska/?hl=en",
+          "handle": "cannupahanska",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/xalilulloh.a/",
+          "handle": "xalilulloh.a",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/atuaxanela/",
+          "handle": "atuaxanela",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/XANVALA",
+          "handle": "XANVALA",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/xaneladalua",
+          "handle": "xaneladalua",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/XonilaApp",
+          "handle": "XonilaApp",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/xenlua",
+          "handle": "xenlua",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/xanvalo",
+          "handle": "xanvalo",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/xhinola",
+          "handle": "xhinola",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/mattgodbolt/xania",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/XANuN",
+          "handle": "XANuN",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/XANua",
+          "handle": "XANua",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/tag/xanxullo",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/xanxullonovelda",
+          "handle": null,
+          "confidence": 0.65
+        }
+      ],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "queries": [
+          "\"George Hotz\" site:linkedin.com ES",
+          "\"George Hotz\" site:instagram.com ES",
+          "\"George Hotz\" site:x.com ES",
+          "\"George Hotz\" site:facebook.com ES",
+          "\"George Hotz\" site:github.com ES",
+          "\"George Hotz\" site:tiktok.com ES",
+          "georgehotz site:linkedin.com",
+          "georgehotz site:instagram.com",
+          "georgehotz site:x.com",
+          "georgehotz site:facebook.com",
+          "georgehotz site:github.com",
+          "georgehotz site:tiktok.com",
+          "Aziffo site:linkedin.com",
+          "Aziffo site:instagram.com",
+          "Aziffo site:x.com",
+          "Aziffo site:facebook.com",
+          "Aziffo site:github.com",
+          "Aziffo site:tiktok.com",
+          "Aziffo site:linkedin.com",
+          "Aziffo site:instagram.com",
+          "Aziffo site:x.com",
+          "Aziffo site:facebook.com",
+          "Aziffo site:github.com",
+          "Aziffo site:tiktok.com",
+          "george-hotz-b3866476 site:linkedin.com",
+          "george-hotz-b3866476 site:instagram.com",
+          "george-hotz-b3866476 site:x.com",
+          "george-hotz-b3866476 site:facebook.com",
+          "george-hotz-b3866476 site:github.com",
+          "george-hotz-b3866476 site:tiktok.com",
+          "xanulloa site:linkedin.com",
+          "xanulloa site:instagram.com",
+          "xanulloa site:x.com",
+          "xanulloa site:facebook.com",
+          "xanulloa site:github.com",
+          "xanulloa site:tiktok.com"
+        ],
+        "links_found": 73,
+        "errors": []
+      },
+      "duration_s": 1.5018748930015136
+    },
+    {
+      "name": "breach_scout",
+      "status": "skipped",
+      "summary": "Breach intelligence host not configured (BREACH_INTEL_HOST unset).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BREACH_INTEL_HOST env var not set — module disabled"
+      ],
+      "raw": {},
+      "duration_s": 7.607598672620952e-05
+    },
+    {
+      "name": "github_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "github_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.692500129342079e-05
+    },
+    {
+      "name": "google_gaia_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "google_gaia_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.0008999854326248e-05
+    },
+    {
+      "name": "icloud_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "icloud_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.0572973880916834e-05
+    },
+    {
+      "name": "image_search",
+      "status": "skipped",
+      "summary": "Reverse-image search disabled (SERPER_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "SERPER_API_KEY not configured — module disabled"
+      ],
+      "raw": {},
+      "duration_s": 3.523100167512894e-05
+    },
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "Could not retrieve any Instagram data for @georgehotz.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python"
+      ],
+      "raw": {
+        "profile_info": null,
+        "raw_captions": [],
+        "image_count": 0,
+        "video_count": 0
+      },
+      "duration_s": 0.010197082010563463
+    },
+    {
+      "name": "instagram_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "instagram_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 4.201699630357325e-05
+    },
+    {
+      "name": "linkedin",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "linkedin: LINKDAPI_API_KEY not configured — skipping"
+      ],
+      "raw": {},
+      "duration_s": 3.5793986171483994e-05
+    },
+    {
+      "name": "nosint",
+      "status": "skipped",
+      "summary": "NoSINT skipped — NOSINT_API_KEY not configured.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "NOSINT_API_KEY is not set"
+      ],
+      "raw": {},
+      "duration_s": 3.586901584640145e-05
+    },
+    {
+      "name": "osint_web",
+      "status": "error",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "anthropic_api_key is not configured"
+      ],
+      "raw": {},
+      "duration_s": 3.3276010071858764e-05
+    },
+    {
+      "name": "property",
+      "status": "ok",
+      "summary": "Sin estimacion de valor para Sant Martí, 08026, Barcelona. Ver gaps.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "Barcelona, ES",
+          "source": "geocoding",
+          "confidence": 0.75,
+          "notes": "Location derived from debtor's known address",
+          "tag": null
+        }
+      ],
+      "gaps": [
+        "Geocoding no resolvio calle + numero + municipio — sin consulta a Catastro"
+      ],
+      "raw": {
+        "geocode": {
+          "engine": "nominatim",
+          "display_name": "Sant Martí, Barcelona, Barcelonès, Barcelona, Catalunya, España",
+          "lat": "41.4084102",
+          "lon": "2.2031889",
+          "postcode": null,
+          "city": "Barcelona",
+          "provincia": "Catalunya",
+          "state": "Catalunya"
+        },
+        "mitma": {
+          "municipio": "Barcelona",
+          "provincia": "Barcelona",
+          "eur_m2_total": 4501.2,
+          "eur_m2_nueva": 5005.2,
+          "eur_m2_usada": 4493.6,
+          "n_tasaciones": 5735,
+          "granularidad": "municipio",
+          "periodo": "T4 2025",
+          "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+        },
+        "serpavi": {
+          "municipio": "Barcelona",
+          "provincia": "Barcelona",
+          "alquiler_eur_m2_mes_mediana": 13.68,
+          "alquiler_eur_m2_mes_p25": 11.11,
+          "alquiler_eur_m2_mes_p75": 16.77,
+          "alquiler_eur_mes_mediana": 900.0,
+          "alquiler_eur_mes_p25": 735.83,
+          "alquiler_eur_mes_p75": 1169.01,
+          "superficie_tipica_m2": 68.0,
+          "n_viviendas_muestra": 140872,
+          "granularidad": "municipio",
+          "periodo": "2024",
+          "source": "https://serpavi.mivau.gob.es/"
+        }
+      },
+      "duration_s": 0.8172739360015839
+    },
+    {
+      "name": "twitter_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 5.8089004596695304e-05
+    },
+    {
+      "name": "twitter",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_enrich: TWITTER_USERNAME not configured — skipping"
+      ],
+      "raw": {},
+      "duration_s": 2.4706998374313116e-05
+    },
+    {
+      "name": "twitter_vu",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_vu: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.785801189020276e-05
+    },
+    {
+      "name": "uber_hint",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "uber_hint: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.440900425426662e-05
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 1 breach(es); registered on: duelingnetwork.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 1 breach(es); earliest 2017, latest 2017",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 1 breach(es); earliest 2017, latest 2017",
+          "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Email addresses, IP addresses, Passwords, Usernames",
+          "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Low (22/100)",
+          "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#xanulloa%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "duelingnetwork.com",
+          "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+          "confidence": 0.85,
+          "notes": "Account registered on duelingnetwork.com (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords, IP addresses",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in DuelingNetwork breach",
+          "source": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+          "confidence": 0.9,
+          "notes": null,
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  1
+                ],
+                [
+                  "heal",
+                  0
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  0
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  0
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 0,
+                "Unknown": 0
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Low",
+                "risk_score": 22
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🖥️ Device and Network Information",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "G",
+                        "name": "data_IP addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 0,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 1,
+                "y2018": 0,
+                "y2019": 0,
+                "y2020": 0,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 0,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "DuelingNetwork"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "DuelingNetwork",
+                "details": "Online fan game site Dueling Network, a now-defunct Flash game based on the Yu-Gi-Oh trading card game got breached and exposed of its 6.5 million users email as well as poorly hashed passwords.",
+                "domain": "duelingnetwork.com",
+                "industry": "Entertainment",
+                "logo": "https://xposedornot.com/static/logos/Duelingnetwork.png",
+                "password_risk": "easytocrack",
+                "references": "https://hotforsecurity.bitdefender.com/blog/hacker-steals-6-5-million-accounts-from-yu-gi-oh-clone-17865.html",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Usernames;Email addresses;Passwords;IP addresses",
+                "xposed_date": "2017",
+                "xposed_records": 6488767,
+                "added": "2023-11-08T06:30:18+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "duration_s": 0.8019604530127253
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:gaia_id]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "jooble",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [role]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 6.218798807822168e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 21 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "twitter_vu",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.0001857269962783903,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "twitter_vu",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5235196450084914,
+      "module": "boe",
+      "wave": 1,
+      "message": "no_data in 1.33s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 1.3333005300082732,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5239761880075093,
+      "module": "borme",
+      "wave": 1,
+      "message": "no_data in 1.32s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 1.3178129669977352,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5244474939827342,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "ok in 1.50s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.5018748930015136,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5248113029811066,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 7.607598672620952e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5248555860016495,
+      "module": "github_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.692500129342079e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5249075370084029,
+      "module": "google_gaia_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.0008999854326248e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5249325509939808,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.0572973880916834e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.524955136992503,
+      "module": "image_search",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.523100167512894e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5249767509812955,
+      "module": "instagram",
+      "wave": 1,
+      "message": "ok in 0.01s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.010197082010563463,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5251921610033605,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.201699630357325e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5252236249798443,
+      "module": "linkedin",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.5793986171483994e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5252445979858749,
+      "module": "nosint",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.586901584640145e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5252637049998157,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "error in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "error",
+        "duration_s": 3.3276010071858764e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.525284268980613,
+      "module": "property",
+      "wave": 1,
+      "message": "ok in 0.82s (1 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.8172739360015839,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5255035099980887,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 5.8089004596695304e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5255331049847882,
+      "module": "twitter",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.4706998374313116e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5255549539870117,
+      "module": "twitter_vu",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.785801189020276e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5255739979911596,
+      "module": "uber_hint",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.440900425426662e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5255930550047196,
+      "module": "xon",
+      "wave": 1,
+      "message": "ok in 0.80s (2 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.8019604530127253,
+        "signals": 2,
+        "facts": 4,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5259715330030303,
+      "module": "gaia_enrichment",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:gaia_id']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:gaia_id"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.5260603530041408,
+      "module": "jooble",
+      "wave": null,
+      "message": "skipped — missing inputs ['role']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "role"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 1.5261119499919005,
+      "module": null,
+      "wave": null,
+      "message": "4 ok, 14 skipped, 1 error(s)",
+      "detail": {
+        "ok": 4,
+        "error": 1,
+        "skipped": 14
+      }
+    }
+  ]
+}

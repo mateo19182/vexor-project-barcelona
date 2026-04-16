@@ -1,0 +1,51 @@
+{
+  "name": "lead_verification",
+  "status": "ok",
+  "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Contact data possibly outdated: email",
+      "source": "module:lead_verification",
+      "confidence": 0.75,
+      "notes": "Masked data from platform checks doesn't match the lead's email. The person may have updated their contact info on those platforms.",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "verification": {
+      "quality": "low",
+      "score": 0.0,
+      "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used.",
+      "checks": [
+        {
+          "field": "email",
+          "input": "alentad@gmail.com",
+          "matches": [
+            {
+              "platform": "twitter_vu",
+              "mask": "4j********@p***********.*******.***",
+              "result": "incompatible",
+              "reason": "local prefix '4j' != 'al'; local length 7 vs mask 10; domain segments 2 vs mask 3"
+            }
+          ],
+          "verdict": "likely_outdated"
+        }
+      ],
+      "cross_checks": [],
+      "input_emails": [
+        "alentad@gmail.com"
+      ],
+      "input_phones": [],
+      "masks_found": {
+        "email_masked": 1,
+        "phone_masked": 0,
+        "phone_hint": 0
+      }
+    }
+  },
+  "duration_s": 0.00010336004197597504
+}

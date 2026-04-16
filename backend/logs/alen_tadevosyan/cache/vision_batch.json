@@ -1,0 +1,40 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "Alen Tadevosyan is a man with dark hair and a beard who has been photographed in an indoor event setting. The evidence suggests he has participated in a formal or professional ceremony where he received a trophy or award.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Alen Tadevosyan has dark hair and a beard.",
+      "source": "twitter/tadevosyan_alen_avatar.jpg",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Alen Tadevosyan was photographed holding a light-colored trophy or award.",
+      "source": "twitter/tadevosyan_alen_avatar.jpg",
+      "confidence": 0.8
+    },
+    {
+      "claim": "Alen Tadevosyan attended an indoor event featuring a circular logo or graphic background.",
+      "source": "twitter/tadevosyan_alen_avatar.jpg",
+      "confidence": 0.7
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Specific location (city or country) of the event.",
+    "Current employment status or specific business affiliation.",
+    "The text or organization name associated with the circular logo.",
+    "Date of the photograph or the nature of the award received."
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/tadevosyan_alen_avatar.jpg"
+    ]
+  },
+  "duration_s": 8.074253256956581
+}

@@ -192,35 +192,39 @@ async def run_pipeline(
                     continue
             to_run.append(m)
 
-        live_results = await asyncio.gather(*(_run_one(m, ctx) for m in to_run))
-        live_by_name = {m.name: r for m, r in zip(to_run, live_results, strict=True)}
-
-        # Preserve the original `ready` order when merging results so the
-        # response mirrors module declaration order, not cache/live split.
-        for m in ready:
+        # Emit cached results immediately so SSE consumers see them.
+        for m in [m for m in ready if m.name in cached_by_name]:
             pending.remove(m)
-            if m.name in cached_by_name:
-                r = cached_by_name[m.name]
-                results.append(r)
-                _accumulate_signals(ctx, r)
-                audit.record(
-                    "module_cache_hit",
-                    module=m.name,
-                    wave=wave,
-                    message=(
-                        f"loaded cached {r.status} "
-                        f"({len(r.signals)} signal(s), {len(r.facts)} fact(s), "
-                        f"{len(r.gaps)} gap(s))"
-                    ),
-                    status=r.status,
-                    signals=len(r.signals),
-                    facts=len(r.facts),
-                    gaps=len(r.gaps),
-                    cached_duration_s=r.duration_s,
-                )
-                continue
+            r = cached_by_name[m.name]
+            results.append(r)
+            _accumulate_signals(ctx, r)
+            audit.record(
+                "module_cache_hit",
+                module=m.name,
+                wave=wave,
+                message=(
+                    f"loaded cached {r.status} "
+                    f"({len(r.signals)} signal(s), {len(r.facts)} fact(s), "
+                    f"{len(r.gaps)} gap(s))"
+                ),
+                status=r.status,
+                signals=len(r.signals),
+                facts=len(r.facts),
+                gaps=len(r.gaps),
+                cached_duration_s=r.duration_s,
+            )
+        # Yield so cached events reach the SSE queue before live modules.
+        await asyncio.sleep(0)
 
-            r = live_by_name[m.name]
+        # Run live modules and emit results as each one finishes (not after
+        # the whole wave), so the frontend graph updates incrementally.
+        async def _run_and_tag(m: Module) -> tuple[Module, ModuleResult]:
+            return m, await _run_one(m, ctx)
+
+        live_tasks = [asyncio.create_task(_run_and_tag(m)) for m in to_run]
+        for coro in asyncio.as_completed(live_tasks):
+            m, r = await coro
+            pending.remove(m)
             results.append(r)
             _accumulate_signals(ctx, r)
             audit.record(
@@ -238,6 +242,8 @@ async def run_pipeline(
                 facts=len(r.facts),
                 gaps=len(r.gaps),
             )
+            # Yield so the event reaches SSE immediately.
+            await asyncio.sleep(0)
 
             # Persist ok/no_data; keep error & skipped out of the cache so
             # the next run retries them.

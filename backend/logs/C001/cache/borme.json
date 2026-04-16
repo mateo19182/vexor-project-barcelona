@@ -1,92 +1,11 @@
 {
   "name": "borme",
-  "status": "ok",
-  "summary": "10 BORME risk/role signal(s), 0 other entry(ies) for 'George Hotz'.",
+  "status": "no_data",
+  "summary": "No BORME entries found for 'Angel Otero'.",
   "social_links": [],
   "facts": [],
-  "signals": [
-    {
-      "kind": "risk_flag",
-      "value": "III. OTRAS DISPOSICIONES MINISTERIO DE LA PRESIDENCIA, JUSTICIA",
-      "source": "https://www.boe.es/boe/dias/2026/01/22/pdfs/BOE-A-2026-1523.pdf",
-      "confidence": 0.85,
-      "notes": "1. Para poder practicar la inscripción relativa al nombramiento y cese del · administrador concursal, debe acompañarse el acta de aceptación del cargo por parte"
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2026-5796 Resolución de 26 de noviembre de 2025, de la Dirección General de Seguridad Jurídica y Fe Pública, en el recurso interpuesto contra la nota de calificación extendida por la registradora mercantil y de bienes muebles interina de Ciudad Real, por la que se rechaza la inscripción del acuerdo social de cese y nombramiento de administrador de una sociedad.",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-5796",
-      "confidence": 0.85,
-      "notes": "G. M. como administrador solidario. <strong>Constaba que por unanimidad de los socios presentes o representados, se acordaba el cese de la administradora doña M. I. G. G. y el nombramiento de don M. G. M. como administrador solidario de la sociedad</strong>."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2026-7310 Resolución de 24 de marzo de 2026, de la Subsecretaría, por la que se convoca concurso general para la provisión de puestos de trabajo.",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-7310",
-      "confidence": 0.85,
-      "notes": "2. Se declara inhábil el mes de agosto, a fin de garantizar el correcto desarrollo del concurso y el cumplimiento de plazos establecido en el mismo. 3. En la resolución, que deberá estar motivada en los términos del artículo 47.2 del Real Decreto 364/1995, de 10 de marzo, se hará indicación expresa del puesto de trabajo, localidad, Órgano directivo y Departamento ministerial o Administración Pública de cese de los participantes a quienes se les adjudique destino, así como de su subgrupo de titulación."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BORME-C-2026-733 LA CAMPERA S.A.",
-      "source": "https://www.boe.es/diario_borme/txt.php?id=BORME-C-2026-733",
-      "confidence": 0.85,
-      "notes": "Dimisión o cese de los miembros del Consejo de Administración y nombramiento de nuevo órgano de administración o reelección de cargos, con determinación, en su caso, de su retribución y régimen de actuación. Octavo.- Delegación de facultades para la formalización, interpretación, subsanación, inscripción y ejecución de los acuerdos adoptados, incluida la solicitud de concurso si procediere."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2024-14098 Resolución de 9 de julio de 2024, de la Secretaría de Estado de Función Pública, por la que se convocan procesos selectivos para el ingreso y el acceso en Cuerpos de la Administración General del Estado, y se encarga su realización a la Comisión Permanente de Selección",
-      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2024-14098",
-      "confidence": 0.85,
-      "notes": "5. El Gobierno y la Administración. El Presidente del Gobierno. El Consejo de Ministros. Designación, causas de cese y responsabilidad del Gobierno."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "II. AUTORIDADES Y PERSONAL A. Nombramientos, situaciones e incidencias",
-      "source": "https://www.boe.es/boe/dias/2025/06/17/pdfs/BOE-A-2025-12217.pdf",
-      "confidence": 0.85,
-      "notes": "A. Nombramientos, situaciones e incidencias ... Sec. II.A. Pág. 79974 ... Procesal y Administrativa y Auxilio Judicial, el 24 de junio de 2025, martes. Aquel personal funcionario que se encuentre desempeñando un puesto de trabajo en · comisión de servicios, no será necesario que se desplace al órgano judicial de origen · que tenga reservado para formalizar el cese..."
-    },
-    {
-      "kind": "role",
-      "value": "BOE-A-2024-1477 Resolución de 22 de enero de 2024, de la Secretaría de Estado de Función Pública, por la que se nombra personal funcionario de carrera, por el sistema de promoción interna, en la Escala Técnica de Gestión de Organismos Autónomos.",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-1477",
-      "confidence": 0.75,
-      "notes": "II. Autoridades y personal - A. Nombramientos, situaciones e incidencias"
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-B-2021-6990 MADRID",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2021-6990",
-      "confidence": 0.85,
-      "notes": "Mediante Auto dictado en fecha 27 de enero 2021 en el Concurso núm. 1392/2018 de la entidad Ibérica de Señalización y Conservación, S.L., con CIF B-78824521, <strong>se ha procedido al cese de la Administradora Concursal D.ª Carmen Díaz de Magdalena y al nombramiento de D</strong>."
-    },
-    {
-      "kind": "role",
-      "value": "BOE-A-2023-15188 Resolución de 8 de junio de 2023, de la Dirección General de Seguridad Jurídica y Fe Pública, en el recurso interpuesto contra la nota de calificación emitida por el registrador mercantil y de bienes muebles I de Málaga, fundada en la calificación conjunta de una escritura y de una solicitud de convocatoria de junta general presentada por administrador mancomunado cesado en junta general.",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-15188",
-      "confidence": 0.75,
-      "notes": "Mediante escritura autorizada el día <strong>5 de enero de 2023</strong> por el notario de Marbella, don Eduardo Hernández Compta, con el número 23 de protocolo, se procedió a solemnizar los cambios atinentes al órgano de administración de la compañía «1945 Malpensa 2, SL»; en concreto, la renuncia ..."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2025-8914 Resolución de 30 de abril de 2025, de la Dirección General de Función Pública, por la que se efectúa formalización definitiva de adjudicaciones del concurso ordinario de provisión de puestos de trabajo reservados a personal funcionario de administración local con habilitación de carácter nacional.",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-8914",
-      "confidence": 0.85,
-      "notes": "Autoridades y personal - A. Nombramientos, situaciones e incidencias ... Los y las presidentes de las corporaciones locales con puestos incluidos en el concurso ordinario de provisión de puestos de trabajo reservados a personal funcionario de Administración local con habilitación de carácter nacional, cuyas bases y convocatorias específicas fueron publicadas conjuntamente, en extracto, por Resolución de esta Dirección General de 10 de enero de 2025 (publicada en el «Boletín Oficial del Estado» núm."
-    }
-  ],
+  "signals": [],
   "gaps": [],
   "raw": {},
-  "ctx_patch": {
-    "name": null,
-    "email": null,
-    "phone": null,
-    "address": null,
-    "instagram_handle": null,
-    "linkedin_url": null,
-    "twitter_handle": null,
-    "gaia_id": null
-  },
-  "duration_s": 0.6662677610001992
+  "duration_s": 1.190163797000423
 }

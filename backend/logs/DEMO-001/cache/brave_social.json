@@ -1,0 +1,701 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 108 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-0857661/",
+      "handle": "angel-otero-0857661",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-633823a8/",
+      "handle": "angel-otero-633823a8",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-649292103/",
+      "handle": "angel-otero-649292103",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-159733198/",
+      "handle": "angel-otero-159733198",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/miguel-angel-otero-diaz-0727b360/",
+      "handle": "miguel-angel-otero-diaz-0727b360",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/oteroso/?hl=en",
+      "handle": "oteroso",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/carpinteriaangelotero/",
+      "handle": "carpinteriaangelotero",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/DTLlffwDbae/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/oteroso/?locale=es_ES%2F",
+      "handle": "oteroso",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/angelvict0r/",
+      "handle": "angelvict0r",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/miguelotero68",
+      "handle": "miguelotero68",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/angeloter0?lang=en",
+      "handle": "angeloter0",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://es-la.facebook.com/public/Miguel-Angel-Otero",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/p/Angel-Otero-Dental-Office-100054534395798/?locale=es_LA",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/juanangel.oterocarnota/",
+      "handle": "juanangel.oterocarnota",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/angel.otero.5076",
+      "handle": "angel.otero.5076",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/AngelOtero",
+      "handle": "AngelOtero",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/george-hotz-b3866476/",
+      "handle": "george-hotz-b3866476",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/george-hotz-17425171/",
+      "handle": "george-hotz-17425171",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/georgehotz/",
+      "handle": "georgehotz",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/georgehotz/reels/?hl=en",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/popular/george-hotz/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/realGeorgeHotz",
+      "handle": "realGeorgeHotz",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/gehotz",
+      "handle": "gehotz",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/geohothacks",
+      "handle": "geohothacks",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/geohotarchive?lang=en",
+      "handle": "geohotarchive",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/geohot",
+      "handle": "geohot",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/George-Hotz",
+      "handle": "George-Hotz",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/George-Hotz/George-Hotz",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/geohot?tab=repositories",
+      "handle": "geohot",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/littlemountainman/geohot-terminal",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/george-hotz",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/george-hotz-deepseek",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/aziff90/",
+      "handle": "aziff90",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/company/azfilmfest",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/company/zifo-technologies",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/faizan-asif-ba7651195/",
+      "handle": "faizan-asif-ba7651195",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/aziff90/",
+      "handle": "aziff90",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/azifeeee/?hl=en",
+      "handle": "azifeeee",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/iamaliffaziz/",
+      "handle": "iamaliffaziz",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/azafi_o/?hl=en",
+      "handle": "azafi_o",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/ZayFoh",
+      "handle": "ZayFoh",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/azfilmfest",
+      "handle": "azfilmfest",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/_AlAzif",
+      "handle": "_AlAzif",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/azawiofficial?lang=en",
+      "handle": "azawiofficial",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/Zuffa_Boxing",
+      "handle": "Zuffa_Boxing",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/azeffounbeach.h/",
+      "handle": "azeffounbeach.h",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/Azeffoun75/",
+      "handle": "Azeffoun75",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/AZIFband315/",
+      "handle": "AZIFband315",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/aziff.azipp",
+      "handle": "aziff.azipp",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/azfoa/",
+      "handle": "azfoa",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/Al-Azif",
+      "handle": "Al-Azif",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/aziff",
+      "handle": "aziff",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/Azifor",
+      "handle": "Azifor",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@ziffo99",
+      "handle": "@ziffo99",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/azelefa",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/david-rivera-bazo/",
+      "handle": "david-rivera-bazo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/pub/dir/David/Bazo",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/david-rivera-4955ba191/",
+      "handle": "david-rivera-4955ba191",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/davidriveramusic/",
+      "handle": "davidriveramusic",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/david.rivera_s/",
+      "handle": "david.rivera_s",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/pe4doers/",
+      "handle": "pe4doers",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/iguessdavid/",
+      "handle": "iguessdavid",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/drdavidrivera/",
+      "handle": "drdavidrivera",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/davidbazo?lang=es",
+      "handle": "davidbazo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/davidriverada?lang=es",
+      "handle": "davidriverada",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/davidprivera?lang=en",
+      "handle": "davidprivera",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/LinkedIn_ES",
+      "handle": "LinkedIn_ES",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/reprivera",
+      "handle": "reprivera",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/CouncilMemberDavidRivera/",
+      "handle": "CouncilMemberDavidRivera",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/david.nunezrivera1/",
+      "handle": "david.nunezrivera1",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/@DavidRiveraViolinist/",
+      "handle": "@DavidRiveraViolinist",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/CouncilmemberRivera",
+      "handle": "CouncilmemberRivera",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/linkedin-developers",
+      "handle": "linkedin-developers",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/linkedin",
+      "handle": "linkedin",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/Jihad-41/linkedin-email-scraper",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/dr-david-ignacio-lopez-rivera",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/what-happen-to-david-belen-rivera",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@linkedin?lang=en",
+      "handle": "@linkedin",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/dr-david-ignacio-lopez-rivera-precio",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/david-rivera-barber-shop",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateo-andres-5689985b/",
+      "handle": "mateo-andres-5689985b",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateo-rodriguez-dev/",
+      "handle": "mateo-rodriguez-dev",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://ar.linkedin.com/in/mateoaymard?trk=public_profile_browsemap",
+      "handle": "mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateomoralesj/",
+      "handle": "mateomoralesj",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jaime-francisco-matorras-42802168/",
+      "handle": "jaime-francisco-matorras-42802168",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateoaymard/",
+      "handle": "mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateoaymard/reels/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateonewyork/",
+      "handle": "mateonewyork",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateosarc_/?hl=en",
+      "handle": "mateosarc_",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateodamato/",
+      "handle": "mateodamato",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoaymard",
+      "handle": "mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoprice3",
+      "handle": "mateoprice3",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoal79390607?lang=ar",
+      "handle": "mateoal79390607",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoramirezfl1?lang=es",
+      "handle": "mateoramirezfl1",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/MateeoAymard/",
+      "handle": "MateeoAymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/Matematicarlos/",
+      "handle": "Matematicarlos",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/umadocemaresia/",
+      "handle": "umadocemaresia",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateoatr",
+      "handle": "mateoatr",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/matheusmatos",
+      "handle": "matheusmatos",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateominato",
+      "handle": "mateominato",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateusjatenee",
+      "handle": "mateusjatenee",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/getmateo",
+      "handle": "getmateo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateosarc?lang=en",
+      "handle": "@mateosarc",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateoaymard",
+      "handle": "@mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateooo.k?lang=en",
+      "handle": "@mateooo.k",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/mateo-malo?lang=en",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mtwramirez",
+      "handle": "@mtwramirez",
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Angel Otero\" site:linkedin.com ES",
+      "\"Angel Otero\" site:instagram.com ES",
+      "\"Angel Otero\" site:x.com ES",
+      "\"Angel Otero\" site:facebook.com ES",
+      "\"Angel Otero\" site:github.com ES",
+      "\"Angel Otero\" site:tiktok.com ES",
+      "georgehotz site:linkedin.com",
+      "georgehotz site:instagram.com",
+      "georgehotz site:x.com",
+      "georgehotz site:facebook.com",
+      "georgehotz site:github.com",
+      "georgehotz site:tiktok.com",
+      "Aziffo site:linkedin.com",
+      "Aziffo site:instagram.com",
+      "Aziffo site:x.com",
+      "Aziffo site:facebook.com",
+      "Aziffo site:github.com",
+      "Aziffo site:tiktok.com",
+      "Aziffo site:linkedin.com",
+      "Aziffo site:instagram.com",
+      "Aziffo site:x.com",
+      "Aziffo site:facebook.com",
+      "Aziffo site:github.com",
+      "Aziffo site:tiktok.com",
+      "https://es.linkedin.com/in/david-rivera-bazo site:linkedin.com",
+      "https://es.linkedin.com/in/david-rivera-bazo site:instagram.com",
+      "https://es.linkedin.com/in/david-rivera-bazo site:x.com",
+      "https://es.linkedin.com/in/david-rivera-bazo site:facebook.com",
+      "https://es.linkedin.com/in/david-rivera-bazo site:github.com",
+      "https://es.linkedin.com/in/david-rivera-bazo site:tiktok.com",
+      "mateoamadoares site:linkedin.com",
+      "mateoamadoares site:instagram.com",
+      "mateoamadoares site:x.com",
+      "mateoamadoares site:facebook.com",
+      "mateoamadoares site:github.com",
+      "mateoamadoares site:tiktok.com"
+    ],
+    "links_found": 108,
+    "errors": []
+  },
+  "duration_s": 1.3284460330032744
+}

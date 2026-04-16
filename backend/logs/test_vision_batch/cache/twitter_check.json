@@ -1,0 +1,27 @@
+{
+  "name": "twitter_check",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com is registered on Twitter.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "Twitter account registered to mateoamadoares@gmail.com",
+      "source": "platform_check:twitter_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: REGISTERED",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "mateoamadoares@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "session_id": "808a2993-e049-4522-8446-f80f688de360",
+    "error": null
+  },
+  "duration_s": 1.4581832720141392
+}

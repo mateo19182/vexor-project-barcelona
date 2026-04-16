@@ -1,0 +1,446 @@
+{
+  "case_id": "C001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Found 48 social profile(s) via Brave search",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "linkedin: could not parse slug from 'george-hotz-b3866476'"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "no_data",
+      "summary": "No BOE entries found for 'David Rivera Bazo'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.1289153590041678
+    },
+    {
+      "name": "brave_social",
+      "status": "ok",
+      "summary": "Found 48 social profile(s) via Brave search",
+      "social_links": [
+        {
+          "platform": "linkedin",
+          "url": "https://es.linkedin.com/in/david-rivera-bazo",
+          "handle": "david-rivera-bazo",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://es.linkedin.com/in/carlosfernandezalvira",
+          "handle": "carlosfernandezalvira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/george-hotz-b3866476/",
+          "handle": "george-hotz-b3866476",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/georgehotz/",
+          "handle": "georgehotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/george__hotz/",
+          "handle": "george__hotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/george_francishotz/",
+          "handle": "george_francishotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/georgehotzalias/",
+          "handle": "georgehotzalias",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/realGeorgeHotz",
+          "handle": "realGeorgeHotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/gehotz",
+          "handle": "gehotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/hckrgeohot?lang=en",
+          "handle": "hckrgeohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/geohothacks",
+          "handle": "geohothacks",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/GeoHot1/",
+          "handle": "GeoHot1",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/public/George-Hotz",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/p/George-Francis-Hotz-GeoHot--100039732353259/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/geohot",
+          "handle": "geohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/geohot?tab=repositories",
+          "handle": "geohot",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/George-Hotz",
+          "handle": "George-Hotz",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/littlemountainman/geohot-terminal",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/George-Hotz/George-Hotz",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/george-hotz",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/george-hotz-deepseek",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://ar.linkedin.com/in/mateoaymard?trk=public_profile_browsemap",
+          "handle": "mateoaymard",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/mateomoralesj/",
+          "handle": "mateomoralesj",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jaime-francisco-matorras-42802168/",
+          "handle": "jaime-francisco-matorras-42802168",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/mateocriado/",
+          "handle": "mateocriado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/mateo-parrado-509340210/",
+          "handle": "mateo-parrado-509340210",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/mateoaymard/",
+          "handle": "mateoaymard",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/mateoaymard/reels/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/mateonewyork/",
+          "handle": "mateonewyork",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/mateodamato/",
+          "handle": "mateodamato",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/mateosarc_/?hl=en",
+          "handle": "mateosarc_",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/mateoaymard",
+          "handle": "mateoaymard",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/mateoprice3",
+          "handle": "mateoprice3",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/mateoal79390607?lang=ar",
+          "handle": "mateoal79390607",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/mateodr_",
+          "handle": "mateodr_",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/MateeoAymard/",
+          "handle": "MateeoAymard",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/umadocemaresia/",
+          "handle": "umadocemaresia",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/mateoscar/",
+          "handle": "mateoscar",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/mateoatr",
+          "handle": "mateoatr",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/matheusmatos",
+          "handle": "matheusmatos",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/mateominato",
+          "handle": "mateominato",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/mateusjatenee",
+          "handle": "mateusjatenee",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/MateusMSoares",
+          "handle": "MateusMSoares",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mateosarc?lang=en",
+          "handle": "@mateosarc",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mateoaymard",
+          "handle": "@mateoaymard",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mateooo.k?lang=en",
+          "handle": "@mateooo.k",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mtwramirez",
+          "handle": "@mtwramirez",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/mateo-malo?lang=en",
+          "handle": null,
+          "confidence": 0.65
+        }
+      ],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "queries": [
+          "\"David Rivera Bazo\" site:linkedin.com ES",
+          "\"David Rivera Bazo\" site:instagram.com ES",
+          "\"David Rivera Bazo\" site:x.com ES",
+          "\"David Rivera Bazo\" site:facebook.com ES",
+          "\"David Rivera Bazo\" site:github.com ES",
+          "\"David Rivera Bazo\" site:tiktok.com ES",
+          "george-hotz-b3866476 site:linkedin.com",
+          "george-hotz-b3866476 site:instagram.com",
+          "george-hotz-b3866476 site:x.com",
+          "george-hotz-b3866476 site:facebook.com",
+          "george-hotz-b3866476 site:github.com",
+          "george-hotz-b3866476 site:tiktok.com",
+          "mateoamadoares site:linkedin.com",
+          "mateoamadoares site:instagram.com",
+          "mateoamadoares site:x.com",
+          "mateoamadoares site:facebook.com",
+          "mateoamadoares site:github.com",
+          "mateoamadoares site:tiktok.com"
+        ],
+        "links_found": 48,
+        "errors": []
+      },
+      "duration_s": 1.1907254740071949
+    },
+    {
+      "name": "linkedin",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "linkedin: could not parse slug from 'george-hotz-b3866476'"
+      ],
+      "raw": {},
+      "duration_s": 8.70829971972853e-05
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 0.00010715701500885189,
+      "module": null,
+      "wave": null,
+      "message": "starting with 3 module(s): ['boe', 'brave_social', 'linkedin']",
+      "detail": {
+        "modules": [
+          "boe",
+          "brave_social",
+          "linkedin"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.00031370000215247273,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'brave_social', 'linkedin']",
+      "detail": {
+        "modules": [
+          "boe",
+          "brave_social",
+          "linkedin"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.2047203819965944,
+      "module": "boe",
+      "wave": 1,
+      "message": "no_data in 1.13s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 1.1289153590041678,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.2053739850234706,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "ok in 1.19s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.1907254740071949,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 1.2057436180184595,
+      "module": "linkedin",
+      "wave": 1,
+      "message": "ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 8.70829971972853e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 1.2059870500233956,
+      "module": null,
+      "wave": null,
+      "message": "2 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 2,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

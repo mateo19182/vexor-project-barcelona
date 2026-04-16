@@ -1,0 +1,27 @@
+{
+  "name": "github_check",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com is registered on GitHub.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "GitHub account registered to mateoamadoares@gmail.com",
+      "source": "platform_check:github_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: REGISTERED",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "platform": "GitHub",
+    "identifier": "mateoamadoares@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "session_id": "1da5f6ad-2a44-47c8-b48a-410a74517226",
+    "error": null
+  },
+  "duration_s": 1.4618119790102355
+}

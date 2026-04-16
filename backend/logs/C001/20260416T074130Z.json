@@ -1,0 +1,68 @@
+{
+  "case_id": "C001",
+  "status": "no_data",
+  "dossier": {
+    "summary": "No enrichment data recovered for case C001.",
+    "facts": [],
+    "signals": [],
+    "gaps": [
+      "skipped: missing inputs [contact:email_masked]"
+    ]
+  },
+  "llm_summary": null,
+  "lead_verification": null,
+  "modules": [
+    {
+      "name": "lead_verification",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email_masked]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.55719933193177e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['lead_verification']",
+      "detail": {
+        "modules": [
+          "lead_verification"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 7.857699529267848e-05,
+      "module": "lead_verification",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email_masked']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email_masked"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.0001227589964400977,
+      "module": null,
+      "wave": null,
+      "message": "0 ok, 1 skipped, 0 error(s)",
+      "detail": {
+        "ok": 0,
+        "error": 0,
+        "skipped": 1
+      }
+    }
+  ]
+}

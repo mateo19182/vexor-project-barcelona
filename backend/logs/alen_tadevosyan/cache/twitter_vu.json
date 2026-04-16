@@ -1,0 +1,63 @@
+{
+  "name": "twitter_vu",
+  "status": "ok",
+  "summary": "@tadevosyan_alen is a valid Twitter/X user; name=Alen Tadevosyan; email=4j********@p***********.*******.***.",
+  "social_links": [
+    {
+      "platform": "twitter",
+      "url": "https://x.com/tadevosyan_alen",
+      "handle": "tadevosyan_alen",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "name",
+      "value": "Alen Tadevosyan",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.8,
+      "notes": "Display name from Twitter/X profile @tadevosyan_alen",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "4j********@p***********.*******.***",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.85,
+      "notes": "Masked email associated with @tadevosyan_alen",
+      "tag": "email_masked"
+    },
+    {
+      "kind": "contact",
+      "value": "https://pbs.twimg.com/profile_images/2040112105068572672/PHGz_DUS_normal.jpg",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.9,
+      "notes": "Twitter/X profile picture for @tadevosyan_alen",
+      "tag": "photo"
+    },
+    {
+      "kind": "contact",
+      "value": "tadevosyan_alen",
+      "source": "https://x.com/tadevosyan_alen",
+      "confidence": 0.95,
+      "notes": null,
+      "tag": "twitter"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "tadevosyan_alen",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "tadevosyan_alen",
+      "name": "Alen Tadevosyan",
+      "email": "4j********@p***********.*******.***",
+      "phone": "",
+      "avatar": "https://pbs.twimg.com/profile_images/2040112105068572672/PHGz_DUS_normal.jpg"
+    },
+    "error": null
+  },
+  "duration_s": 4.027081046951935
+}

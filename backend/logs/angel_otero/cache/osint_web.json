@@ -1,0 +1,48 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "No confirmed public profiles or records found for Angel Otero matching the provided identifiers (email: mateoamadoares2@gmail.com, phone: +3467452714, address: Passeig Maragall 13, 08026 Barcelona, Spain). The name 'Angel Otero' is common in Spain with over 230 namesakes on LinkedIn alone; none could be confirmed as matching this specific individual.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "osint_web",
+      "source": "osint_web",
+      "confidence": 1.0,
+      "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+      "tag": "enrichment_ran"
+    }
+  ],
+  "gaps": [
+    "No indexed web content found associating the email mateoamadoares2@gmail.com with any public profile or social account.",
+    "Phone number +3467452714 returned no results in public directories or web searches.",
+    "Address Passeig Maragall 13, Entresuelo 1, 08026 Barcelona returned no public records tied to Angel Otero.",
+    "'Angel Otero' is a very common name in Spain (233+ LinkedIn profiles); without a confirmed identifier match, no namesake profile could be attributed to this subject.",
+    "No public business registrations, court records, or media mentions found linking the provided identifiers to this individual."
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "mateoamadoares2@gmail.com",
+      "\"Angel Otero\" \"Passeig Maragall\" Barcelona",
+      "\"Angel Otero\" Barcelona \"08026\"",
+      "\"mateoamadoares2\" social media profile",
+      "\"+3467452714\" OR \"67452714\" Angel Otero",
+      "\"Angel Otero\" \"Passeig Maragall\" Spain",
+      "\"Angel Otero\" Barcelona Spain LinkedIn",
+      "mateoamadoares2 gmail instagram facebook",
+      "\"Angel Otero\" \"Passeig Maragall 13\" Barcelona",
+      "Angel Otero Barcelona \"08026\" Spain",
+      "\"67452714\" Spain Barcelona phone",
+      "\"Angel Otero\" Barcelona Gracia \"Passeig Maragall\"",
+      "site:facebook.com \"Angel Otero\" Barcelona Maragall",
+      "\"mateoamadoares\" username profile",
+      "\"Angel Otero\" Spain autónomo Barcelona empresa"
+    ],
+    "fetched_urls": [],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 47.43932762200711
+}

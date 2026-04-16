@@ -1,0 +1,55 @@
+{
+  "name": "twitter_vu",
+  "status": "ok",
+  "summary": "@colid1o is a valid Twitter/X user; name=colid1o.",
+  "social_links": [
+    {
+      "platform": "twitter",
+      "url": "https://x.com/colid1o",
+      "handle": "colid1o",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "name",
+      "value": "colid1o",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.8,
+      "notes": "Display name from Twitter/X profile @colid1o",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "https://pbs.twimg.com/profile_images/2008280892347764736/oD9siwQo_normal.jpg",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.9,
+      "notes": "Twitter/X profile picture for @colid1o",
+      "tag": "photo"
+    },
+    {
+      "kind": "contact",
+      "value": "colid1o",
+      "source": "https://x.com/colid1o",
+      "confidence": 0.95,
+      "notes": null,
+      "tag": "twitter"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "colid1o",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "colid1o",
+      "name": "colid1o",
+      "email": "",
+      "phone": "",
+      "avatar": "https://pbs.twimg.com/profile_images/2008280892347764736/oD9siwQo_normal.jpg"
+    },
+    "error": null
+  },
+  "duration_s": 12.350896271003876
+}

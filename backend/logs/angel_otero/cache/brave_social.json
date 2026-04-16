@@ -1,0 +1,632 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 43 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-0857661/",
+      "handle": "angel-otero-0857661",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-633823a8/",
+      "handle": "angel-otero-633823a8",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-649292103/",
+      "handle": "angel-otero-649292103",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/angel-otero-159733198/",
+      "handle": "angel-otero-159733198",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/miguel-angel-otero-diaz-0727b360/",
+      "handle": "miguel-angel-otero-diaz-0727b360",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/oteroso/?hl=en",
+      "handle": "oteroso",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/carpinteriaangelotero/",
+      "handle": "carpinteriaangelotero",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/DTLlffwDbae/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/oteroso/?locale=es_ES%2F",
+      "handle": "oteroso",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/angelvict0r/",
+      "handle": "angelvict0r",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/miguelotero68",
+      "handle": "miguelotero68",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/angeloter0?lang=en",
+      "handle": "angeloter0",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://es-la.facebook.com/public/Miguel-Angel-Otero",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/p/Angel-Otero-Dental-Office-100054534395798/?locale=es_LA",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/juanangel.oterocarnota/",
+      "handle": "juanangel.oterocarnota",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/AngelOtero",
+      "handle": "AngelOtero",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/angel.otero.5076",
+      "handle": "angel.otero.5076",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/company/mateo-technologies-llc",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/matthew-mateo-4190aa2a3/",
+      "handle": "matthew-mateo-4190aa2a3",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateo-adams-00/",
+      "handle": "mateo-adams-00",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/matthew-amodio-20b9707b",
+      "handle": "matthew-amodio-20b9707b",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateo012/?hl=en",
+      "handle": "mateo012",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/jonsonmateo012/",
+      "handle": "jonsonmateo012",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateomate_oficial/",
+      "handle": "mateomate_oficial",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/askmateo/?hl=en",
+      "handle": "askmateo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateodamato/",
+      "handle": "mateodamato",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/MateoIs2Lit",
+      "handle": "MateoIs2Lit",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoesports?lang=en",
+      "handle": "mateoesports",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateomusclexxx?lang=en",
+      "handle": "mateomusclexxx",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/KingMateoXXX?lang=en",
+      "handle": "KingMateoXXX",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoprice3",
+      "handle": "mateoprice3",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/math2me/",
+      "handle": "math2me",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/umadocemaresia/",
+      "handle": "umadocemaresia",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/MatogrossoeMathiasOficial/",
+      "handle": "MatogrossoeMathiasOficial",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateoatr",
+      "handle": "mateoatr",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/matheo",
+      "handle": "matheo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateo21",
+      "handle": "mateo21",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateusjatenee",
+      "handle": "mateusjatenee",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateosss",
+      "handle": "mateosss",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/mateo-roblox-mm2",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateosarc?lang=en",
+      "handle": "@mateosarc",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateo012569",
+      "handle": "@mateo012569",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateooo.k?lang=en",
+      "handle": "@mateooo.k",
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "angel-otero-0857661",
+      "source": "https://www.linkedin.com/in/angel-otero-0857661/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "angel-otero-633823a8",
+      "source": "https://www.linkedin.com/in/angel-otero-633823a8/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "angel-otero-649292103",
+      "source": "https://www.linkedin.com/in/angel-otero-649292103/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "angel-otero-159733198",
+      "source": "https://www.linkedin.com/in/angel-otero-159733198/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "miguel-angel-otero-diaz-0727b360",
+      "source": "https://www.linkedin.com/in/miguel-angel-otero-diaz-0727b360/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "oteroso",
+      "source": "https://www.instagram.com/oteroso/?hl=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "carpinteriaangelotero",
+      "source": "https://www.instagram.com/carpinteriaangelotero/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.instagram.com/p/DTLlffwDbae/",
+      "source": "https://www.instagram.com/p/DTLlffwDbae/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "oteroso",
+      "source": "https://www.instagram.com/oteroso/?locale=es_ES%2F",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "angelvict0r",
+      "source": "https://www.instagram.com/angelvict0r/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "miguelotero68",
+      "source": "https://x.com/miguelotero68",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "angeloter0",
+      "source": "https://x.com/angeloter0?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "https://es-la.facebook.com/public/Miguel-Angel-Otero",
+      "source": "https://es-la.facebook.com/public/Miguel-Angel-Otero",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.facebook.com/p/Angel-Otero-Dental-Office-100054534395798/?locale=es_LA",
+      "source": "https://www.facebook.com/p/Angel-Otero-Dental-Office-100054534395798/?locale=es_LA",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "juanangel.oterocarnota",
+      "source": "https://www.facebook.com/juanangel.oterocarnota/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "AngelOtero",
+      "source": "https://www.facebook.com/AngelOtero",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "angel.otero.5076",
+      "source": "https://www.facebook.com/angel.otero.5076",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.linkedin.com/company/mateo-technologies-llc",
+      "source": "https://www.linkedin.com/company/mateo-technologies-llc",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "matthew-mateo-4190aa2a3",
+      "source": "https://www.linkedin.com/in/matthew-mateo-4190aa2a3/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo-adams-00",
+      "source": "https://www.linkedin.com/in/mateo-adams-00/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "matthew-amodio-20b9707b",
+      "source": "https://www.linkedin.com/in/matthew-amodio-20b9707b",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo012",
+      "source": "https://www.instagram.com/mateo012/?hl=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "jonsonmateo012",
+      "source": "https://www.instagram.com/jonsonmateo012/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "mateomate_oficial",
+      "source": "https://www.instagram.com/mateomate_oficial/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "askmateo",
+      "source": "https://www.instagram.com/askmateo/?hl=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "mateodamato",
+      "source": "https://www.instagram.com/mateodamato/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "MateoIs2Lit",
+      "source": "https://x.com/MateoIs2Lit",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoesports",
+      "source": "https://x.com/mateoesports?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateomusclexxx",
+      "source": "https://x.com/mateomusclexxx?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "KingMateoXXX",
+      "source": "https://x.com/KingMateoXXX?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoprice3",
+      "source": "https://x.com/mateoprice3",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "math2me",
+      "source": "https://www.facebook.com/math2me/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "umadocemaresia",
+      "source": "https://www.facebook.com/umadocemaresia/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "MatogrossoeMathiasOficial",
+      "source": "https://www.facebook.com/MatogrossoeMathiasOficial/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoatr",
+      "source": "https://github.com/mateoatr",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "matheo",
+      "source": "https://github.com/matheo",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo21",
+      "source": "https://github.com/mateo21",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "mateusjatenee",
+      "source": "https://github.com/mateusjatenee",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "mateosss",
+      "source": "https://github.com/mateosss",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/mateo-roblox-mm2",
+      "source": "https://www.tiktok.com/discover/mateo-roblox-mm2",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mateosarc",
+      "source": "https://www.tiktok.com/@mateosarc?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo012569",
+      "source": "https://www.tiktok.com/@mateo012569",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mateooo.k",
+      "source": "https://www.tiktok.com/@mateooo.k?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Angel Otero\" site:linkedin.com ES",
+      "\"Angel Otero\" site:instagram.com ES",
+      "\"Angel Otero\" site:x.com ES",
+      "\"Angel Otero\" site:facebook.com ES",
+      "\"Angel Otero\" site:github.com ES",
+      "\"Angel Otero\" site:tiktok.com ES",
+      "mateoamadoares2 site:linkedin.com",
+      "mateoamadoares2 site:instagram.com",
+      "mateoamadoares2 site:x.com",
+      "mateoamadoares2 site:facebook.com",
+      "mateoamadoares2 site:github.com",
+      "mateoamadoares2 site:tiktok.com"
+    ],
+    "links_found": 43,
+    "errors": []
+  },
+  "duration_s": 0.8744525270303711
+}

@@ -1,0 +1,481 @@
+{
+  "name": "breach_scout",
+  "status": "ok",
+  "summary": "Found in 11 breach record(s) | 4 new email(s) discovered: tag@logfoundation.com, 37499286858, 374099223256 | 13 new phone(s) discovered: 7864636864, 37499286858, 8188455008 | Aliases/usernames: spolitx, prisonchannel, alen tadevosyan",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Identity found in 11 breach record(s) in the breach intelligence database",
+      "source": "https://9ghz.com",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Debtor identifiers found in 11 breach record(s)",
+      "source": "https://9ghz.com",
+      "confidence": 0.85,
+      "notes": "Breaches: Gravatar, PeopleDataLabs (PDL), NetProspex, VK, Luxottica Database",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "tag@logfoundation.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "37499286858",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "374099223256",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "atadevosyan@arcanopartners.com",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Email address recovered from breach records",
+      "tag": "email"
+    },
+    {
+      "kind": "contact",
+      "value": "7864636864",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "37499286858",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "8188455008",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "1155 ELM AVE 10 GLENDALE LOS ANGELES CA 91201",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "605124827",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "1169 RAYMOND AVE 2 GLENDALE LOS ANGELES CA 91201",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "493 TRAVIS AVE STATEN ISLAND RICHMOND NY 10314",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "8415 AMIGO AVE 11 NORTHRIDGE LOS ANGELES CA 91324",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "605126827",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "8415 AMIGO AVE APT 11 NORTHRIDGE LOS ANGELES CA 91324",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "374099223256",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "34634285794",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "18.189.123.211",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "7864636864",
+      "source": "https://9ghz.com",
+      "confidence": 0.55,
+      "notes": "First phone discovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "spolitx",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "prisonchannel",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "alen tadevosyan",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "alen638413",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "alentad",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "keywords": [
+      "Alen Tadevosyan",
+      "alentad@gmail.com"
+    ],
+    "mode": "authenticated_batch",
+    "response": {
+      "code": 0,
+      "msg": "ok",
+      "data": [
+        {
+          "data": [
+            {
+              "email": "alentad@gmail.com",
+              "other_info": "https:\\/\\/www.facebook.com\\/app_scoped_user_id\\/985789168182090\\/ 985789168182090   https:\\/\\/secure.gravatar.com\\/avatar\\/537522d3e6c29faa9915218bd9fe5124",
+              "real_name": "alen tadevosyan",
+              "source": {
+                "breach_date": "2020-10-03",
+                "domain": "gravatar.com",
+                "id": "325444",
+                "record_count": 113990759,
+                "region": "",
+                "title": "Gravatar"
+              },
+              "user_name": "spolitx"
+            },
+            {
+              "email": "tag@logfoundation.com",
+              "real_name": "alen tadevosyan",
+              "source": {
+                "breach_date": "2019-01-01",
+                "domain": "peopledatalabs.com",
+                "id": "514356",
+                "record_count": 471014406,
+                "region": "US",
+                "title": "PeopleDataLabs (PDL) "
+              },
+              "user_name": "prisonchannel"
+            },
+            {
+              "address": "1020 N Hollywood Way 13 burbank california",
+              "other_info": "Log Foundation Incorporated ras;chief executive officer",
+              "phone": "7864636864",
+              "real_name": "alen tadevosyan",
+              "source": {
+                "breach_date": "2016-09-01",
+                "domain": "netprospex.com",
+                "id": "474d35",
+                "record_count": 33698126,
+                "region": "",
+                "title": "NetProspex"
+              }
+            },
+            {
+              "email": "37499286858",
+              "password": "usasuke",
+              "real_name": "alen tadevosyan",
+              "region": "RU",
+              "source": {
+                "breach_date": "2012-01-01",
+                "domain": "vk.com",
+                "id": "325339",
+                "record_count": 93338602,
+                "region": "RU",
+                "title": "VK"
+              }
+            },
+            {
+              "address": "625 E PALM AVE BURBANK CA",
+              "phone": "8188455008",
+              "real_name": "alen tadevosyan",
+              "source": {
+                "breach_date": "2021-05-01",
+                "domain": "luxottica.com",
+                "id": "345654",
+                "record_count": 77093812,
+                "region": "IT",
+                "title": "Luxottica Database"
+              }
+            },
+            {
+              "address": "1155 ELM AVE 10 GLENDALE LOS ANGELES CA 91201",
+              "id_number": "605124827",
+              "real_name": "alen tadevosyan",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "1169 RAYMOND AVE 2 GLENDALE LOS ANGELES CA 91201",
+              "id_number": "605124827",
+              "other_info": "Alen Tadevosya Tadevosyan Alen",
+              "real_name": "alen tadevosyan",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "493 TRAVIS AVE STATEN ISLAND RICHMOND NY 10314",
+              "id_number": "605124827",
+              "real_name": "alen tadevosyan",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "8415 AMIGO AVE 11 NORTHRIDGE LOS ANGELES CA 91324",
+              "id_number": "605126827",
+              "real_name": "alen tadevosyan",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "address": "8415 AMIGO AVE APT 11 NORTHRIDGE LOS ANGELES CA 91324",
+              "id_number": "605126827",
+              "real_name": "alen tadevosyan",
+              "region": "US",
+              "source": {
+                "breach_date": "2024-04-08",
+                "domain": "nationalpublicdata.com",
+                "id": "373041",
+                "record_count": 2695681513,
+                "region": "US",
+                "title": "National Public Data (SSNs Breach)"
+              }
+            },
+            {
+              "email": "374099223256",
+              "password": "11veziri",
+              "real_name": "alen tadevosyan",
+              "region": "RU",
+              "source": {
+                "breach_date": "2012-01-01",
+                "domain": "vk.com",
+                "id": "325339",
+                "record_count": 93338602,
+                "region": "RU",
+                "title": "VK"
+              }
+            },
+            {
+              "address": "Madrid Spain Calle Santa Hortensia 12, Piso: Bajo Puerta: A",
+              "email": "atadevosyan@arcanopartners.com",
+              "other_info": "Arcano partners Research Analyst",
+              "phone": "34634285794",
+              "real_name": "alen tadevosyan",
+              "source": {
+                "breach_date": "2020-12-12",
+                "domain": "capitaleconomics.com",
+                "id": "434e36",
+                "record_count": 263829,
+                "region": "",
+                "title": "Capital Economics"
+              }
+            },
+            {
+              "email": "alentad@gmail.com",
+              "gender": "M",
+              "source": {
+                "breach_date": "2019-04-01",
+                "domain": "luminpdf.com",
+                "id": "514a4a",
+                "record_count": 15453048,
+                "region": "",
+                "title": "Lumin PDF"
+              },
+              "user_name": "alen tadevosyan"
+            }
+          ],
+          "keyword": "Alen Tadevosyan",
+          "total_count": 13
+        },
+        {
+          "data": [
+            {
+              "email": "alentad@gmail.com",
+              "other_info": "https:\\/\\/www.facebook.com\\/app_scoped_user_id\\/985789168182090\\/ 985789168182090   https:\\/\\/secure.gravatar.com\\/avatar\\/537522d3e6c29faa9915218bd9fe5124",
+              "real_name": "Alen Tadevosyan",
+              "source": {
+                "breach_date": "2020-10-03",
+                "domain": "gravatar.com",
+                "id": "325444",
+                "record_count": 113990759,
+                "region": "",
+                "title": "Gravatar"
+              },
+              "user_name": "spolitx"
+            },
+            {
+              "email": "alentad@gmail.com",
+              "real_name": "Alen",
+              "source": {
+                "breach_date": "2023-08-01",
+                "domain": "duolingo.com",
+                "id": "5a4947",
+                "record_count": 2699476,
+                "region": "",
+                "title": "Duolingo Scrape Database"
+              },
+              "user_name": "alen638413"
+            },
+            {
+              "email": "alentad@gmail.com",
+              "gender": "M",
+              "source": {
+                "breach_date": "2019-04-01",
+                "domain": "luminpdf.com",
+                "id": "514a4a",
+                "record_count": 15453048,
+                "region": "",
+                "title": "Lumin PDF"
+              },
+              "user_name": "alen tadevosyan"
+            },
+            {
+              "email": "alentad@gmail.com",
+              "source": {
+                "breach_date": "2013-10-04",
+                "domain": "adobe.com",
+                "id": "323252",
+                "record_count": 152445165,
+                "region": "",
+                "title": "Adobe"
+              }
+            },
+            {
+              "email": "alentad@gmail.com",
+              "ip_address": "18.189.123.211",
+              "source": {
+                "breach_date": "2018-02-01",
+                "domain": "myfitnesspal.com",
+                "id": "324a47",
+                "record_count": 144633048,
+                "region": "US",
+                "title": "MyFitnessPal"
+              },
+              "user_name": "alentad"
+            }
+          ],
+          "keyword": "alentad@gmail.com",
+          "total_count": 5
+        }
+      ]
+    },
+    "status_code": 200,
+    "response_bytes": 5075
+  },
+  "duration_s": 2.145269628963433
+}

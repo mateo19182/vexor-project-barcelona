@@ -1,0 +1,20 @@
+{
+  "name": "twitter_check",
+  "status": "no_data",
+  "summary": "Twitter check for mateoamadoares@gmail.com was inconclusive (status: BAN).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter returned ambiguous status 'BAN' for mateoamadoares@gmail.com"
+  ],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "mateoamadoares@gmail.com",
+    "status_raw": "BAN",
+    "http_status": 200,
+    "session_id": "2cb598c6-b68c-41c8-b35e-318dcef7bbaf",
+    "error": null
+  },
+  "duration_s": 1.1725142959912773
+}

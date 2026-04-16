@@ -1,0 +1,45 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "The evidence consists of a single low-resolution profile image of an older male with facial hair and glasses. He is dressed in casual layered clothing and appears to be in an outdoor setting with vegetation in the background.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The subject is an older male with a white or grey beard and mustache.",
+      "source": "twitter/miguelotero68_avatar.jpg",
+      "confidence": 0.9
+    },
+    {
+      "claim": "The subject wears eyeglasses.",
+      "source": "twitter/miguelotero68_avatar.jpg",
+      "confidence": 0.9
+    },
+    {
+      "claim": "The subject was photographed wearing a dark jacket over a grey hooded garment.",
+      "source": "twitter/miguelotero68_avatar.jpg",
+      "confidence": 0.85
+    },
+    {
+      "claim": "The subject was in an outdoor environment with green foliage at the time of the photo.",
+      "source": "twitter/miguelotero68_avatar.jpg",
+      "confidence": 0.8
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Specific geographic location cannot be determined from the blurred foliage.",
+    "Employment status and business affiliations are not visible.",
+    "Ownership of assets or specific lifestyle indicators are absent.",
+    "Full legal name and date of birth are not confirmed by the image alone."
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/miguelotero68_avatar.jpg"
+    ]
+  },
+  "duration_s": 5.907598210033029
+}

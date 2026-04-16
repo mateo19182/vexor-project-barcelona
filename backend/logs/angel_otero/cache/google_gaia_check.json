@@ -1,0 +1,17 @@
+{
+  "name": "google_gaia_check",
+  "status": "ok",
+  "summary": "mateoamadoares2@gmail.com is NOT registered on Google.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "identifier": "mateoamadoares2@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "data": null,
+    "error": null
+  },
+  "duration_s": 1.0951327460352331
+}

@@ -1,0 +1,230 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "LinkedIn @alentadevosyan (Alen Tadevosyan is hiring) — stripe for debt @ VexorAI | ex-Revolut | IE University — Greater Madrid Metropolitan Area — 2,481 followers.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "LinkedIn About: https://vexorai.eu/careers",
+      "source": "alentadevosyan",
+      "confidence": 0.85
+    },
+    {
+      "claim": "LinkedIn position: Founder — VexorAI · Full-time — Sep 2025 - Present · 8 mos",
+      "source": "https://www.linkedin.com/company/102789704/",
+      "confidence": 0.8
+    },
+    {
+      "claim": "LinkedIn position: Founder — Stealth Startup · Full-time — Jun 2024 - Aug 2025 · 1 yr 3 mos",
+      "source": "https://www.linkedin.com/company/18583501/",
+      "confidence": 0.8
+    },
+    {
+      "claim": "LinkedIn position: Chief of Staff Office — Revolut · Full-time — Apr 2023 - Jul 2024 · 1 yr 4 mos",
+      "source": "https://www.linkedin.com/company/5356541/",
+      "confidence": 0.8
+    }
+  ],
+  "signals": [
+    {
+      "kind": "role",
+      "value": "stripe for debt @ VexorAI | ex-Revolut | IE University",
+      "source": "alentadevosyan",
+      "confidence": 0.85,
+      "notes": "Verbatim LinkedIn headline",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "IE University",
+      "source": "https://www.linkedin.com/school/ie-university/",
+      "confidence": 0.85,
+      "notes": "Listed as current position on LinkedIn",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "VexorAI",
+      "source": "https://www.linkedin.com/company/vexor-ai/",
+      "confidence": 0.85,
+      "notes": "Listed as current position on LinkedIn",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Industry: Financial Services",
+      "source": "alentadevosyan",
+      "confidence": 0.7,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "location",
+      "value": "Greater Madrid Metropolitan Area",
+      "source": "alentadevosyan",
+      "confidence": 0.8,
+      "notes": "Self-reported location on LinkedIn profile",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "username": "alentadevosyan",
+    "profile_url": "alentadevosyan",
+    "urn": "ACoAACmRDK8Blv_VQriVNv1Bs3PeWaOloJSOwJw",
+    "overview": {
+      "firstName": "Alen",
+      "lastName": "Tadevosyan",
+      "fullName": "Alen Tadevosyan is hiring",
+      "headline": "stripe for debt @ VexorAI | ex-Revolut | IE University",
+      "publicIdentifier": "alentadevosyan",
+      "followerCount": 2481,
+      "connectionsCount": 2455,
+      "qualityProfile": true,
+      "joined": 1542544690739,
+      "profileID": "697371823",
+      "urn": "ACoAACmRDK8Blv_VQriVNv1Bs3PeWaOloJSOwJw",
+      "CurrentPositions": [
+        {
+          "id": "2816303",
+          "name": "IE University",
+          "url": "https://www.linkedin.com/school/ie-university/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/C4D0BAQE_cu0afFEiAw/company-logo_400_400/company-logo_400_400/0/1663153533407/ie_university_logo?e=1778112000&v=beta&t=xeIz2dNJJVh7n5473qJ5xYQ2J1Tao5iePIpLCkV4uLk"
+        },
+        {
+          "id": "102789704",
+          "name": "VexorAI",
+          "url": "https://www.linkedin.com/company/vexor-ai/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/D4E0BAQHu_rkF2zTkUA/company-logo_400_400/company-logo_400_400/0/1719256360714/keani_gg_logo?e=1778112000&v=beta&t=0hS_E-5AyvHUNpRZjJZaQqYTb4RQWxjM95WKTBSr_9g"
+        }
+      ],
+      "isTopVoice": false,
+      "premium": false,
+      "influencer": false,
+      "isHiring": true,
+      "industryName": "Financial Services",
+      "industryUrn": "urn:li:fsd_industry:43",
+      "location": {
+        "countryCode": "es",
+        "countryName": "Spain",
+        "city": "Greater Madrid Metropolitan Area",
+        "fullLocation": "Greater Madrid Metropolitan Area"
+      },
+      "backgroundImageURL": "https://media.licdn.com/dms/image/v2/D4D16AQFfAunsgiu5Dg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1732195766250?e=1778112000&v=beta&t=_u3O14VmV4CvpAw-8pxqa3k23aTSCQaD8XU5T3Ohf4M",
+      "profilePictureURL": "https://media.licdn.com/dms/image/v2/C4D03AQH3DsZGUOm3UQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635699458841?e=1778112000&v=beta&t=iMnKqOcSh88fNXiZplhlRTsqm16jMiDxrKhFcNKWgbE",
+      "supportedLocales": [
+        {
+          "country": "US",
+          "language": "en"
+        }
+      ]
+    },
+    "details": {
+      "about": "https://vexorai.eu/careers",
+      "featuredPosts": null,
+      "positions": [
+        {
+          "jobTitle": "Founder",
+          "company": "VexorAI · Full-time",
+          "location": "Madrid, Community of Madrid, Spain",
+          "duration": "Sep 2025 - Present · 8 mos",
+          "companyLink": "https://www.linkedin.com/company/102789704/",
+          "companyId": "102789704",
+          "jobDescription": "https://vexorai.eu/careers"
+        },
+        {
+          "jobTitle": "Founder",
+          "company": "Stealth Startup · Full-time",
+          "location": "Madrid, Community of Madrid, Spain",
+          "duration": "Jun 2024 - Aug 2025 · 1 yr 3 mos",
+          "companyLink": "https://www.linkedin.com/company/18583501/",
+          "companyId": "18583501",
+          "jobDescription": "AI x Digital Identity"
+        },
+        {
+          "jobTitle": "Chief of Staff Office",
+          "company": "Revolut · Full-time",
+          "location": "Madrid, Community of Madrid, Spain · On-site",
+          "duration": "Apr 2023 - Jul 2024 · 1 yr 4 mos",
+          "companyLink": "https://www.linkedin.com/company/5356541/",
+          "companyId": "5356541",
+          "jobDescription": ""
+        },
+        {
+          "jobTitle": "Head of Collections",
+          "company": "DR SMILE · Full-time",
+          "location": "Madrid, Community of Madrid, Spain",
+          "duration": "Feb 2021 - Mar 2023 · 2 yrs 2 mos",
+          "companyLink": "https://www.linkedin.com/company/18392371/",
+          "companyId": "18392371",
+          "jobDescription": ""
+        },
+        {
+          "jobTitle": "Research Analyst",
+          "company": "Arcano · Internship",
+          "location": "Madrid, Community of Madrid, Spain",
+          "duration": "May 2020 - Dec 2020 · 8 mos",
+          "companyLink": "https://www.linkedin.com/company/137611/",
+          "companyId": "137611",
+          "jobDescription": ""
+        }
+      ],
+      "education": [
+        {
+          "duration": "",
+          "durationParsed": {
+            "start": {
+              "year": 0,
+              "month": 0,
+              "day": 0
+            },
+            "end": {
+              "year": 0,
+              "month": 0,
+              "day": 0
+            }
+          },
+          "university": "IE University",
+          "universityLink": "https://www.linkedin.com/company/2816303/",
+          "degree": "Bachelor in Politics, Law and Economics, Public Policy Analysis",
+          "description": null,
+          "subDescription": null
+        },
+        {
+          "duration": "",
+          "durationParsed": {
+            "start": {
+              "year": 0,
+              "month": 0,
+              "day": 0
+            },
+            "end": {
+              "year": 0,
+              "month": 0,
+              "day": 0
+            }
+          },
+          "university": "«Shirakatsy Lyceum» International Scientific-Educational Complex» Closed Joint-Stock Company",
+          "universityLink": "https://www.linkedin.com/search/results/all/?keywords=%C2%ABShirakatsy+Lyceum%C2%BB+International+Scientific-Educational+Complex%C2%BB+Closed+Joint-Stock+Company",
+          "degree": "National Program and IBDP",
+          "description": null,
+          "subDescription": null
+        }
+      ],
+      "languages": {
+        "languages": [
+          {
+            "Language": "Armenian",
+            "Level": "Native or bilingual proficiency"
+          },
+          {
+            "Language": "English",
+            "Level": "Native or bilingual proficiency"
+          }
+        ],
+        "deepLink": "https://www.linkedin.com/in/alentadevosyan/details/languages?profileUrn=urn%3Ali%3Afsd_profile%3AACoAACmRDK8Blv_VQriVNv1Bs3PeWaOloJSOwJw"
+      }
+    }
+  },
+  "duration_s": 1.2384177450439893
+}

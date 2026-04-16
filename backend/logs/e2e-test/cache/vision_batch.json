@@ -1,0 +1,35 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "The provided evidence consists of a single profile image associated with the handle 'Aziffo'. This image contains no identifiable information regarding the subject's lifestyle, location, or professional background.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The subject uses the online handle 'Aziffo' on Twitter.",
+      "source": "twitter/Aziffo_avatar.jpg",
+      "confidence": 0.9
+    },
+    {
+      "claim": "The subject's profile avatar is a solid, uniform blue color with no discernible features.",
+      "source": "twitter/Aziffo_avatar.jpg",
+      "confidence": 1.0
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Geographic location of the subject.",
+    "Employment status or business affiliations.",
+    "Physical appearance or confirmation of identity.",
+    "Ownership of assets or specific lifestyle indicators."
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/Aziffo_avatar.jpg"
+    ]
+  },
+  "duration_s": 4.543341520999093
+}

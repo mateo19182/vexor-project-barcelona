@@ -1,0 +1,20 @@
+{
+  "name": "boe",
+  "status": "ok",
+  "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Juan Garcia'.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "role",
+      "value": "BOE-A-1994-5518 Orden de 2 de marzo de 1994 por la que se dispone el nombramiento del General de División del Cuerpo General de las Armas del Ejército de Tierra, don Juan Garcia Martínez, como Jefe Logístico Regional y Gobernador Militar de Madrid.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-1994-5518",
+      "confidence": 0.7,
+      "notes": "BOE-A-1994-5518 Orden de 2 de marzo de 1994 por la que se dispone el nombramiento del General de División del Cuerpo General de las Armas del Ejército de Tierra, don <strong>Juan Garcia</strong> Martínez, como Jefe Logístico Regional y Gobernador Militar de Madrid.",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {},
+  "duration_s": 1.05272827798035
+}

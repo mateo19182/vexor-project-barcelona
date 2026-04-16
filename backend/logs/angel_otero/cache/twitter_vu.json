@@ -1,0 +1,71 @@
+{
+  "name": "twitter_vu",
+  "status": "ok",
+  "summary": "@miguelotero68 is a valid Twitter/X user; name=Miguel Angel Otero; email=ot*****@g****.***; phone_cc=14.",
+  "social_links": [
+    {
+      "platform": "twitter",
+      "url": "https://x.com/miguelotero68",
+      "handle": "miguelotero68",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "name",
+      "value": "Miguel Angel Otero",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.8,
+      "notes": "Display name from Twitter/X profile @miguelotero68",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "ot*****@g****.***",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.85,
+      "notes": "Masked email associated with @miguelotero68",
+      "tag": "email_masked"
+    },
+    {
+      "kind": "contact",
+      "value": "14",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.7,
+      "notes": "Phone country code for @miguelotero68",
+      "tag": "phone_hint"
+    },
+    {
+      "kind": "contact",
+      "value": "https://pbs.twimg.com/profile_images/1682087835724050432/xkJu6v5S_normal.jpg",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.9,
+      "notes": "Twitter/X profile picture for @miguelotero68",
+      "tag": "photo"
+    },
+    {
+      "kind": "contact",
+      "value": "miguelotero68",
+      "source": "https://x.com/miguelotero68",
+      "confidence": 0.95,
+      "notes": null,
+      "tag": "twitter"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "miguelotero68",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "miguelotero68",
+      "name": "Miguel Angel Otero",
+      "email": "ot*****@g****.***",
+      "phone": "14",
+      "avatar": "https://pbs.twimg.com/profile_images/1682087835724050432/xkJu6v5S_normal.jpg"
+    },
+    "error": null
+  },
+  "duration_s": 2.4756450389977545
+}

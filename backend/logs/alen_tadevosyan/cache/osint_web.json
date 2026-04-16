@@ -1,0 +1,194 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "Alen Tadevosyan is an Armenian national born and raised in Yerevan who relocated to Madrid, Spain to study at IE University (Bachelor in Philosophy, Politics, Law & Economics, Segovia and Madrid campuses). He served as Co-President of SOAR Madrid (Society for Orphaned Armenian Relief) and interned as a Research Analyst at Arcano Partners. Post-graduation he worked as Global Strategy Manager at Revolut (Madrid) and is now Founder/CEO of Vexor (AI + Web3 Identity), based in Madrid/Remote, also participating in the Project Europe startup accelerator programme.",
+  "social_links": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/alentadevosyan/",
+      "handle": "alentadevosyan",
+      "confidence": 0.9
+    },
+    {
+      "platform": "Twitter/X",
+      "url": "https://x.com/tadevosyan_alen",
+      "handle": "tadevosyan_alen",
+      "confidence": 0.7
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/alentadevosyan/",
+      "handle": "alentadevosyan",
+      "confidence": 0.7
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Born and raised in Yerevan, Armenia; fluent in English, Russian, Armenian, and Spanish",
+      "source": "https://www.soar-us.org/madrid/",
+      "confidence": 0.98
+    },
+    {
+      "claim": "Supported by the IE Foundation scholarship/support during his university studies",
+      "source": "https://www.ie.edu/university/ieu-experience/stories/alen-tadevosyan/",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Madrid, ES",
+      "source": "https://www.linkedin.com/in/alentadevosyan/",
+      "confidence": 0.95,
+      "notes": "Greater Madrid Metropolitan Area confirmed via LinkedIn; address on Hermosilla 28, 28001 Madrid is in the Salamanca district near IE University Madrid campus",
+      "tag": null
+    },
+    {
+      "kind": "role",
+      "value": "Founder/CEO, Vexor (AI + Web3 Identity)",
+      "source": "https://www.linkedin.com/in/logfoundation/",
+      "confidence": 0.85,
+      "notes": "Current role as shown in LinkedIn 'People also named' snippet; ex-Revolut and IE University also referenced",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "Vexor (Madrid/Remote)",
+      "source": "https://www.linkedin.com/in/kittymm/",
+      "confidence": 0.85,
+      "notes": "Listed as Vexor founder in Project Europe CoWork 3 participants post",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "Revolut",
+      "source": "https://www.linkedin.com/in/alentadevosyan/",
+      "confidence": 0.9,
+      "notes": "LinkedIn title shows Global Strategy Manager at Revolut; now listed as ex-Revolut",
+      "tag": null
+    },
+    {
+      "kind": "role",
+      "value": "Global Strategy Manager (ex)",
+      "source": "https://www.linkedin.com/in/alentadevosyan/",
+      "confidence": 0.9,
+      "notes": "Former role at Revolut, Madrid",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "Arcano Partners",
+      "source": "https://www.soar-us.org/madrid/",
+      "confidence": 0.85,
+      "notes": "Research Analyst internship during IE University studies",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "IE University – Bachelor in Philosophy, Politics, Law and Economics (PPLE)",
+      "source": "https://www.ie.edu/university/ieu-experience/stories/alen-tadevosyan/",
+      "confidence": 0.98,
+      "notes": "Studied at both Segovia and Madrid campuses",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "SOAR Madrid – Co-President",
+      "source": "https://www.soar-us.org/madrid/",
+      "confidence": 0.98,
+      "notes": "Society for Orphaned Armenian Relief, Madrid chapter",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Project Europe – startup accelerator participant",
+      "source": "https://www.linkedin.com/in/kittymm/",
+      "confidence": 0.85,
+      "notes": "Listed among Project Europe founders at CoWork 3 Berlin event",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "180 Degrees Consulting – project lead",
+      "source": "https://www.soar-us.org/madrid/",
+      "confidence": 0.85,
+      "notes": "Led a full consulting project for a client as part of the multinational university consultancy",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Central Bank of Armenia – intern (Monetary Policy Dept.)",
+      "source": "https://www.soar-us.org/madrid/",
+      "confidence": 0.9,
+      "notes": "Summer internship involving quantitative/qualitative data analysis",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Anania Shirakatsy Lyceum, Yerevan – IB Diploma",
+      "source": "https://www.soar-us.org/madrid/",
+      "confidence": 0.98,
+      "notes": "Graduated from IB Diploma Programme before moving to Spain",
+      "tag": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Soccer and Formula 1 fan; attends sporting events in person",
+      "source": "https://www.ie.edu/university/ieu-experience/stories/alen-tadevosyan/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "osint_web",
+      "source": "osint_web",
+      "confidence": 1.0,
+      "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+      "tag": "enrichment_ran"
+    },
+    {
+      "kind": "contact",
+      "value": "alentadevosyan",
+      "source": "https://www.linkedin.com/in/alentadevosyan/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "alentadevosyan",
+      "source": "https://www.instagram.com/alentadevosyan/",
+      "confidence": 0.7,
+      "notes": null,
+      "tag": "instagram"
+    }
+  ],
+  "gaps": [
+    "Email alentad@gmail.com could not be directly matched to any indexed public profile — identity inferred from distinctive name and consistent Madrid/Armenia/IE University details",
+    "Twitter/X handle @tadevosyan_alen profile content not retrievable (JavaScript restriction); ownership unconfirmed beyond name match",
+    "Instagram @alentadevosyan could not be inspected for content confirmation",
+    "Exact current status at Vexor (active vs. early-stage) and company registry details not publicly indexed",
+    "Facebook profile at prisonchannel URL attributed to 'Alen Tadevosyan' appears unrelated to subject and was omitted",
+    "LOG FOUNDATION INCORPORATED (Burbank, CA) lists an Alen Tadevosyan as President/Executive Director but Burbank, CA address does not match subject's Madrid location — cannot confirm same person"
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "Alen Tadevosyan Madrid Spain",
+      "alentad@gmail.com",
+      "Alen Tadevosyan Revolut Madrid LinkedIn",
+      "Alen Tadevosyan Vexor founder CEO Madrid",
+      "\"Alen Tadevosyan\" Arcano Partners \"IE University\" Armenia"
+    ],
+    "fetched_urls": [
+      "https://www.linkedin.com/in/alentadevosyan/",
+      "https://www.ie.edu/university/ieu-experience/stories/alen-tadevosyan/",
+      "https://www.soar-us.org/madrid/",
+      "https://x.com/tadevosyan_alen"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 96.23715765000088
+}

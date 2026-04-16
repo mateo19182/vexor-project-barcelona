@@ -1,0 +1,16 @@
+{
+  "name": "twitter",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter profile @tadevosyan_alen not retrievable: user_not_found"
+  ],
+  "raw": {
+    "error": "user_not_found",
+    "handle": "tadevosyan_alen"
+  },
+  "duration_s": 0.08089214499341324
+}

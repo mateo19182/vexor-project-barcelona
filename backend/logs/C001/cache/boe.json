@@ -1,92 +1,20 @@
 {
   "name": "boe",
   "status": "ok",
-  "summary": "10 BOE risk/role signal(s), 0 other entry(ies) for 'George Hotz'.",
+  "summary": "1 BOE risk/role signal(s), 0 other entry(ies) for 'Angel Otero'.",
   "social_links": [],
   "facts": [],
   "signals": [
     {
       "kind": "risk_flag",
-      "value": "BOE-A-2020-4859 Real Decreto Legislativo 1/2020, de 5 de mayo, por el que se aprueba el texto refundido de la Ley Concursal.",
-      "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-4859",
+      "value": "BOE-B-2020-22293 A CORUÑA",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-22293",
       "confidence": 0.85,
-      "notes": "4. La solicitud de declaración de concurso presentada por cualquier acreedor deberá fundarse en alguno de los siguientes hechos externos reveladores del estado de insolvencia: 1.º <strong>La existencia de una previa declaración judicial o administrativa de insolvencia del deudor, siempre que sea firme</strong>."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "TEJU . Búsqueda de edictos judiciales: ayuda y contenido",
-      "source": "https://www.boe.es/buscar/ayudas/edictos_judiciales_ayuda.php",
-      "confidence": 0.85,
-      "notes": "Tras efectuar la búsqueda se recupera un listado de resultados en los que aparecen reseñados los documentos localizados con los siguientes datos: publicación (número de BOE al que corresponde el suplemento y fecha de publicación), órgano judicial emisor del edicto, y título."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "Ley 22/2003, de 9 de julio, Concursal. Jefatura del Estado",
-      "source": "https://boe.es/buscar/pdf/2003/BOE-A-2003-13813-consolidado.pdf",
-      "confidence": 0.85,
-      "notes": "Durante la tramitación del concurso se mantienen los órganos de la persona jurídica · deudora. Los administradores concursales están legitimados para ejercer las acciones de · responsabilidad contra los administradores, auditores y liquidadores, sin necesidad de previo · acuerdo de la junta o asamblea de socios. El efecto más severo que la ley establece es el · del embargo de bienes y derechos de los administradores y liquidadores, que el juez puede"
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se ",
-      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-14580",
-      "confidence": 0.85,
-      "notes": "Cuando el deudor insolvente es una persona física, el <strong>concurso</strong> pretende identificar a los deudores de buena fe y ofrecerles una exoneración parcial de su pasivo insatisfecho que les permita beneficiarse de una segunda oportunidad, evitando su paso a la economía sumergida o a una situación ..."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2011-15938 Ley 38/2011, de 10 de octubre, de reforma de la Ley 22/2003, de 9 de julio, Concursal.",
-      "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-15938",
-      "confidence": 0.85,
-      "notes": "1. Cuando la solicitud hubiera ... dado lugar a una declaración administrativa o judicial de insolvencia, <strong>el juez dictará auto de declaración de concurso el primer día hábil siguiente</strong>...."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2003-13813 Ley 22/2003, de 9 de julio, Concursal.",
-      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2003-13813",
-      "confidence": 0.85,
-      "notes": "4. Si la solicitud de declaración de concurso la presenta un acreedor, deberá fundarla en título por el cual se haya despachado ejecución o apremio sin que del embargo resultasen bienes libres bastantes para el pago, o en la existencia de alguno de los siguientes hechos:"
-    },
-    {
-      "kind": "risk_flag",
-      "value": "CONCURSO DE ACREEDORES 2 COMENTARIO DE LA SENTENCIA DEL TRIBUNAL SUPREMO",
-      "source": "https://www.boe.es/biblioteca_juridica/comentarios_sentencias_unificacion_doctrina_civil_y_mercantil/abrir_pdf.php?id=COM-D-2019-2",
-      "confidence": 0.85,
-      "notes": "del procedimiento de insolvencia. De esta forma se pretende asegurar que el · deudor que se beneficia de la condonación de sus deudas es honrado. El tercer requisito que cita el art.178bis –que se hubiese optado por el · procedimiento del acuerdo extrajudicial de pagos y que, frustrada su consti- tución o cumplimiento, se hubiera acabado en el concurso consecutivo– tam- bién es, a mi juicio, una forma de acreditar que el deudor que se va a benefi- ciar de la exoneración actuó de buena fe."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-B-2016-57830 MADRID",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-57830",
-      "confidence": 0.85,
-      "notes": "Si la solicitud de declaración de concurso la presenta un acreedor, deberá fundarla en título por el cual se haya despachado ejecución o apremio sin que del embargo resultasen bienes libres bastantes para el pago, o en la existencia de alguno de los siguientes hechos: (,..)2.° La existencia de embargos por ejecuciones pendientes que afecten de una manera general al patrimonio del deudor."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-B-2020-34358 ELCHE",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2020-34358",
-      "confidence": 0.85,
-      "notes": "&quot;1.- Procede declarar en estado de insolvencia a doña María José Juan Buades, con DNI 52.763.126-E, y con domicilio en calle Capitán Baltasar Tristany, nº 159, piso 3º, puerta B, declarándola en situación de concurso y decretándose la conclusión del mismo por insuficiencia de masa activa, sin apertura, por tanto, de fase de liquidación ni nombramiento de Administrador concursal. 2.- Publíquese, de forma gratuita, el presente auto por medio de edicto que se insertará en el Boletín Oficial del Estado, así como en el Registro Público Concursal y en el tablón de anuncios del Juzgado."
-    },
-    {
-      "kind": "risk_flag",
-      "value": "BOE-A-2024-2528 Resolución de 5 de febrero de 2024, conjunta de la Dirección General de la Agencia Estatal de Administración Tributaria y de la Intervención General de la Administración del Estado, por la que se establecen las condiciones para el envío centralizado de las deudas no tributarias gestionadas por Departamentos Ministeriales que constituyen recursos del presupuesto del Estado para su gestión recaudatoria, para los intercambios de información que se deriven de dicha gestión y demás aspe",
-      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-2528",
-      "confidence": 0.85,
-      "notes": "Los Departamentos Ministeriales excluirán de la relación de deudas certificadas en descubierto las de aquellos deudores que hayan sido declarados en <strong>concurso</strong> de acreedores, siempre que la deuda se encuentre en periodo voluntario de ingreso a la fecha de la declaración del <strong>concurso</strong>."
+      "notes": "4º.- La administración concursal, al amparo de lo previsto en los artículos 26 y 27 de la LC, con las facultades determinadas en el apartado anterior, estará integrada por: Don Alejandro Otero Guldrís, Rúa Alfredo Brañas, n.º 22, 2.º, de Santiago de Compostela, teléfono 981591595 y correo electrónico concursoangeltrillo@gmail.com",
+      "tag": null
     }
   ],
   "gaps": [],
   "raw": {},
-  "ctx_patch": {
-    "name": null,
-    "email": null,
-    "phone": null,
-    "address": null,
-    "instagram_handle": null,
-    "linkedin_url": null,
-    "twitter_handle": null,
-    "gaia_id": null
-  },
-  "duration_s": 0.707192051995662
+  "duration_s": 1.3678004950052127
 }

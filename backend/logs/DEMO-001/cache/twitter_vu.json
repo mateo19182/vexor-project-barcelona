@@ -1,0 +1,47 @@
+{
+  "name": "twitter_vu",
+  "status": "ok",
+  "summary": "@Aziffo is a valid Twitter/X user; name=Aziffo.",
+  "social_links": [
+    {
+      "platform": "twitter",
+      "url": "https://x.com/Aziffo",
+      "handle": "Aziffo",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "name",
+      "value": "Aziffo",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.8,
+      "notes": "Display name from Twitter/X profile @Aziffo",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "https://pbs.twimg.com/profile_images/2044204091941752833/Yn_wQXdi_normal.jpg",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.9,
+      "notes": "Twitter/X profile picture for @Aziffo",
+      "tag": "photo"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "Aziffo",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "Aziffo",
+      "name": "Aziffo",
+      "email": "",
+      "phone": "",
+      "avatar": "https://pbs.twimg.com/profile_images/2044204091941752833/Yn_wQXdi_normal.jpg"
+    },
+    "error": null
+  },
+  "duration_s": 1.6865459750115406
+}

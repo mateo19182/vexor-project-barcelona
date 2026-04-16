@@ -1,0 +1,415 @@
+{
+  "case_id": "verify-test-001",
+  "status": "enriched",
+  "dossier": {
+    "summary": "@Aziffo is a valid Twitter/X user; name=Aziffo; email=sl****@p*********.***; phone_cc=94. mateoamadoares@gmail.com registered on Uber; phone=********64 | 617758559 is NOT registered on Uber. Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone INCONSISTENT across 2 platform(s) [uber_hint, twitter_vu] — likely outdated or different phone used.",
+    "facts": [],
+    "signals": [
+      {
+        "kind": "name",
+        "value": "Aziffo",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.8,
+        "notes": "Display name from Twitter/X profile @Aziffo",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "sl****@p*********.***",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.85,
+        "notes": "Masked email associated with @Aziffo",
+        "tag": "email_masked"
+      },
+      {
+        "kind": "contact",
+        "value": "94",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.7,
+        "notes": "Phone country code for @Aziffo",
+        "tag": "phone_hint"
+      },
+      {
+        "kind": "contact",
+        "value": "https://pbs.twimg.com/profile_images/2044204091941752833/Yn_wQXdi_normal.jpg",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.9,
+        "notes": "Twitter/X profile picture for @Aziffo",
+        "tag": "photo"
+      },
+      {
+        "kind": "contact",
+        "value": "Aziffo",
+        "source": "https://x.com/Aziffo",
+        "confidence": 0.95,
+        "notes": null,
+        "tag": "twitter"
+      },
+      {
+        "kind": "contact",
+        "value": "Uber account registered to mateoamadoares@gmail.com",
+        "source": "platform_check:uber_hint",
+        "confidence": 0.85,
+        "notes": null,
+        "tag": "uber"
+      },
+      {
+        "kind": "contact",
+        "value": "********64",
+        "source": "platform_check:uber_hint",
+        "confidence": 0.8,
+        "notes": "Masked phone from Uber (looked up via email: mateoamadoares@gmail.com)",
+        "tag": "phone_masked"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Contact data possibly outdated: email, phone",
+        "source": "module:lead_verification",
+        "confidence": 0.75,
+        "notes": "Masked data from platform checks doesn't match the lead's email, phone. The person may have updated their contact info on those platforms.",
+        "tag": null
+      }
+    ],
+    "gaps": []
+  },
+  "llm_summary": null,
+  "lead_verification": {
+    "quality": "low",
+    "score": 0.0,
+    "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone INCONSISTENT across 2 platform(s) [uber_hint, twitter_vu] — likely outdated or different phone used.",
+    "checks": [
+      {
+        "field": "email",
+        "input": "mateoamadoares@gmail.com",
+        "matches": [
+          {
+            "platform": "twitter_vu",
+            "mask": "sl****@p*********.***",
+            "result": "incompatible",
+            "reason": "local prefix 'sl' != 'ma'; local length 14 vs mask 6; domain[0] prefix 'p' != 'g'; domain[0] length 5 vs mask 10"
+          }
+        ],
+        "verdict": "likely_outdated"
+      },
+      {
+        "field": "phone",
+        "input": "617758559",
+        "matches": [
+          {
+            "platform": "uber_hint",
+            "mask": "********64",
+            "result": "incompatible",
+            "reason": "last 2 digits '64' != '59'"
+          },
+          {
+            "platform": "twitter_vu",
+            "mask": "94",
+            "result": "incompatible",
+            "reason": "last 2 digits '94' != '59'"
+          }
+        ],
+        "verdict": "likely_outdated"
+      }
+    ],
+    "cross_checks": [
+      {
+        "description": "uber_hint looked up email 'mateoamadoares@gmail.com' → phone mask '********64' vs lead phone '617758559'",
+        "result": "incompatible",
+        "reason": "last 2 digits '64' != '59'"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "twitter_vu",
+      "status": "ok",
+      "summary": "@Aziffo is a valid Twitter/X user; name=Aziffo; email=sl****@p*********.***; phone_cc=94.",
+      "social_links": [
+        {
+          "platform": "twitter",
+          "url": "https://x.com/Aziffo",
+          "handle": "Aziffo",
+          "confidence": 0.95
+        }
+      ],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "name",
+          "value": "Aziffo",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.8,
+          "notes": "Display name from Twitter/X profile @Aziffo",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "sl****@p*********.***",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.85,
+          "notes": "Masked email associated with @Aziffo",
+          "tag": "email_masked"
+        },
+        {
+          "kind": "contact",
+          "value": "94",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.7,
+          "notes": "Phone country code for @Aziffo",
+          "tag": "phone_hint"
+        },
+        {
+          "kind": "contact",
+          "value": "https://pbs.twimg.com/profile_images/2044204091941752833/Yn_wQXdi_normal.jpg",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.9,
+          "notes": "Twitter/X profile picture for @Aziffo",
+          "tag": "photo"
+        },
+        {
+          "kind": "contact",
+          "value": "Aziffo",
+          "source": "https://x.com/Aziffo",
+          "confidence": 0.95,
+          "notes": null,
+          "tag": "twitter"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "Aziffo",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "Aziffo",
+          "name": "Aziffo",
+          "email": "sl****@p*********.***",
+          "phone": "94",
+          "avatar": "https://pbs.twimg.com/profile_images/2044204091941752833/Yn_wQXdi_normal.jpg"
+        },
+        "error": null
+      },
+      "duration_s": 3.0550461739767343
+    },
+    {
+      "name": "uber_hint",
+      "status": "ok",
+      "summary": "mateoamadoares@gmail.com registered on Uber; phone=********64 | 617758559 is NOT registered on Uber.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "Uber account registered to mateoamadoares@gmail.com",
+          "source": "platform_check:uber_hint",
+          "confidence": 0.85,
+          "notes": null,
+          "tag": "uber"
+        },
+        {
+          "kind": "contact",
+          "value": "********64",
+          "source": "platform_check:uber_hint",
+          "confidence": 0.8,
+          "notes": "Masked phone from Uber (looked up via email: mateoamadoares@gmail.com)",
+          "tag": "phone_masked"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "email_lookup": {
+          "identifier": "mateoamadoares@gmail.com",
+          "id_type": "email",
+          "status_raw": "REGISTERED",
+          "data": {
+            "login": "mateoamadoares@gmail.com",
+            "phoneMask": "********64",
+            "emailMask": ""
+          },
+          "error": null
+        },
+        "phone_lookup": {
+          "identifier": "617758559",
+          "id_type": "phone",
+          "status_raw": "BAN",
+          "data": null,
+          "error": null
+        }
+      },
+      "duration_s": 1.960304628009908
+    },
+    {
+      "name": "lead_verification",
+      "status": "ok",
+      "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone INCONSISTENT across 2 platform(s) [uber_hint, twitter_vu] — likely outdated or different phone used.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Contact data possibly outdated: email, phone",
+          "source": "module:lead_verification",
+          "confidence": 0.75,
+          "notes": "Masked data from platform checks doesn't match the lead's email, phone. The person may have updated their contact info on those platforms.",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "verification": {
+          "quality": "low",
+          "score": 0.0,
+          "summary": "Lead quality: LOW (0%). email INCONSISTENT across 1 platform(s) [twitter_vu] — likely outdated or different email used; phone INCONSISTENT across 2 platform(s) [uber_hint, twitter_vu] — likely outdated or different phone used.",
+          "checks": [
+            {
+              "field": "email",
+              "input": "mateoamadoares@gmail.com",
+              "matches": [
+                {
+                  "platform": "twitter_vu",
+                  "mask": "sl****@p*********.***",
+                  "result": "incompatible",
+                  "reason": "local prefix 'sl' != 'ma'; local length 14 vs mask 6; domain[0] prefix 'p' != 'g'; domain[0] length 5 vs mask 10"
+                }
+              ],
+              "verdict": "likely_outdated"
+            },
+            {
+              "field": "phone",
+              "input": "617758559",
+              "matches": [
+                {
+                  "platform": "uber_hint",
+                  "mask": "********64",
+                  "result": "incompatible",
+                  "reason": "last 2 digits '64' != '59'"
+                },
+                {
+                  "platform": "twitter_vu",
+                  "mask": "94",
+                  "result": "incompatible",
+                  "reason": "last 2 digits '94' != '59'"
+                }
+              ],
+              "verdict": "likely_outdated"
+            }
+          ],
+          "cross_checks": [
+            {
+              "description": "uber_hint looked up email 'mateoamadoares@gmail.com' → phone mask '********64' vs lead phone '617758559'",
+              "result": "incompatible",
+              "reason": "last 2 digits '64' != '59'"
+            }
+          ],
+          "input_emails": [
+            "mateoamadoares@gmail.com"
+          ],
+          "input_phones": [
+            "617758559"
+          ],
+          "masks_found": {
+            "email_masked": 1,
+            "phone_masked": 1,
+            "phone_hint": 1
+          }
+        }
+      },
+      "duration_s": 0.00020863302052021027
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.315701567567885e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 3 module(s): ['lead_verification', 'twitter_vu', 'uber_hint']",
+      "detail": {
+        "modules": [
+          "lead_verification",
+          "twitter_vu",
+          "uber_hint"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 7.579199154861271e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['twitter_vu', 'uber_hint']",
+      "detail": {
+        "modules": [
+          "twitter_vu",
+          "uber_hint"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 3.055364544998156,
+      "module": "twitter_vu",
+      "wave": 1,
+      "message": "ok in 3.06s (5 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 3.0550461739767343,
+        "signals": 5,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 3.055693970993161,
+      "module": "uber_hint",
+      "wave": 1,
+      "message": "ok in 1.96s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.960304628009908,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 3.055846064002253,
+      "module": null,
+      "wave": 2,
+      "message": "['lead_verification']",
+      "detail": {
+        "modules": [
+          "lead_verification"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 3.0561861009919085,
+      "module": "lead_verification",
+      "wave": 2,
+      "message": "ok in 0.00s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.00020863302052021027,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 3.056390014011413,
+      "module": null,
+      "wave": null,
+      "message": "3 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 3,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

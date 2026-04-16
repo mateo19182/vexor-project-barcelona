@@ -1,0 +1,40 @@
+{
+  "name": "uber_hint",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com registered on Uber; phone=********64",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "Uber account registered to mateoamadoares@gmail.com",
+      "source": "platform_check:uber_hint",
+      "confidence": 0.85,
+      "notes": null,
+      "tag": "uber"
+    },
+    {
+      "kind": "contact",
+      "value": "********64",
+      "source": "platform_check:uber_hint",
+      "confidence": 0.8,
+      "notes": "Masked phone from Uber (looked up via email: mateoamadoares@gmail.com)",
+      "tag": "phone_masked"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "email_lookup": {
+      "identifier": "mateoamadoares@gmail.com",
+      "id_type": "email",
+      "status_raw": "REGISTERED",
+      "data": {
+        "login": "mateoamadoares@gmail.com",
+        "phoneMask": "********64",
+        "emailMask": ""
+      },
+      "error": null
+    }
+  },
+  "duration_s": 1.1752814530045725
+}

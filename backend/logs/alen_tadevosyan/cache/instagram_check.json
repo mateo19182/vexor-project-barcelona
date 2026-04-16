@@ -1,0 +1,20 @@
+{
+  "name": "instagram_check",
+  "status": "no_data",
+  "summary": "Instagram check for alentad@gmail.com was inconclusive (status: INVALID).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Instagram returned ambiguous status 'INVALID' for alentad@gmail.com"
+  ],
+  "raw": {
+    "platform": "Instagram",
+    "identifier": "alentad@gmail.com",
+    "status_raw": "INVALID",
+    "http_status": 200,
+    "session_id": "6f63406c-2f8d-40c8-957d-f090c2820b48",
+    "error": null
+  },
+  "duration_s": 0.9441142149735242
+}

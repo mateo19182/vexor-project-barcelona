@@ -1,0 +1,13 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "No images collected for batch vision analysis.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "No images found in photos directory"
+  ],
+  "raw": {},
+  "duration_s": 0.00008301399066112936
+}

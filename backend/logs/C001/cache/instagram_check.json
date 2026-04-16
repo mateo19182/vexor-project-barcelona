@@ -1,30 +1,20 @@
 {
   "name": "instagram_check",
   "status": "no_data",
-  "summary": "Instagram check for geohot@gmail.com was inconclusive (status: INVALID).",
+  "summary": "Instagram check for mateoamadoares@gmail.com was inconclusive (status: INVALID).",
   "social_links": [],
   "facts": [],
   "signals": [],
   "gaps": [
-    "Instagram returned ambiguous status 'INVALID' for geohot@gmail.com"
+    "Instagram returned ambiguous status 'INVALID' for mateoamadoares@gmail.com"
   ],
   "raw": {
     "platform": "Instagram",
-    "identifier": "geohot@gmail.com",
+    "identifier": "mateoamadoares@gmail.com",
     "status_raw": "INVALID",
     "http_status": 200,
-    "session_id": "fe9aa8eb-68a6-4674-a807-2206d03028a2",
+    "session_id": "fbaafdf7-347c-4f3b-afbc-e280ec3eb38a",
     "error": null
   },
-  "ctx_patch": {
-    "name": null,
-    "email": null,
-    "phone": null,
-    "address": null,
-    "instagram_handle": null,
-    "linkedin_url": null,
-    "twitter_handle": null,
-    "gaia_id": null
-  },
-  "duration_s": 0.3350099829985993
+  "duration_s": 0.36158409001654945
 }

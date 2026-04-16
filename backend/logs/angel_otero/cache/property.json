@@ -1,0 +1,98 @@
+{
+  "name": "property",
+  "status": "ok",
+  "summary": "Inmueble en Passeig Maragall 13. Entresuelo 1. 08026. Spain. Catastro: 67 m2, Residencial | venta estimada 241k €–362k € | alquiler estimado 779 €–1k €/mes",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Inmueble en Passeig Maragall 13. Entresuelo 1. 08026. Spain: superficie 67 m2, uso Residencial, ano construccion desconocido. Referencia catastral: 1652108DF3815B0047IG.",
+      "source": "https://catastro-api.es",
+      "confidence": 0.95
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Barcelona, ES",
+      "source": "https://catastro-api.es",
+      "confidence": 0.75,
+      "notes": "Location derived from debtor's known address",
+      "tag": null
+    },
+    {
+      "kind": "asset",
+      "value": "Inmueble 241k €–362k €",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS",
+      "confidence": 0.65,
+      "notes": "Barcelona, ES. 67 m2 x 4501 EUR/m2 (MITMA Barcelona T4 2025) x banda +/-19%",
+      "tag": null
+    },
+    {
+      "kind": "asset",
+      "value": "Alquiler estimado 779 €–1k €/mes",
+      "source": "https://serpavi.mivau.gob.es/",
+      "confidence": 0.7,
+      "notes": "Barcelona, ES. 67 m2 x 13.68 EUR/m2/mes (SERPAVI Barcelona 2024) x banda +/-15%",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "geocode": {
+      "engine": "photon",
+      "display_name": "Passeig de Maragall 1-3, Barcelona",
+      "lat": "41.4133713",
+      "lon": "2.1810219",
+      "postcode": "08026",
+      "city": "Barcelona",
+      "provincia": "Barcelonès",
+      "state": "Catalonia"
+    },
+    "catastro": {
+      "referencia_catastral": "1652108DF3815B0047IG",
+      "superficie_m2": 67.0,
+      "uso": "Residencial",
+      "ano_construccion": null,
+      "coeficiente_participacion": "1,24",
+      "codigo_postal": "08026",
+      "n_inmuebles_portal": 1
+    },
+    "mitma": {
+      "municipio": "Barcelona",
+      "provincia": "Barcelona",
+      "eur_m2_total": 4501.2,
+      "eur_m2_nueva": 5005.2,
+      "eur_m2_usada": 4493.6,
+      "n_tasaciones": 5735,
+      "granularidad": "municipio",
+      "periodo": "T4 2025",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+    },
+    "serpavi": {
+      "municipio": "Barcelona",
+      "provincia": "Barcelona",
+      "alquiler_eur_m2_mes_mediana": 13.68,
+      "alquiler_eur_m2_mes_p25": 11.11,
+      "alquiler_eur_m2_mes_p75": 16.77,
+      "alquiler_eur_mes_mediana": 900.0,
+      "alquiler_eur_mes_p25": 735.83,
+      "alquiler_eur_mes_p75": 1169.01,
+      "superficie_tipica_m2": 68.0,
+      "n_viviendas_muestra": 140872,
+      "granularidad": "municipio",
+      "periodo": "2024",
+      "source": "https://serpavi.mivau.gob.es/"
+    },
+    "estimates": {
+      "venta_total_eur_low": 241264,
+      "venta_total_eur_high": 361896,
+      "venta_base_eur": 301580,
+      "venta_nota": "67 m2 x 4501 EUR/m2 (MITMA Barcelona T4 2025) x banda +/-19%",
+      "alquiler_mensual_eur_low": 779,
+      "alquiler_mensual_eur_high": 1054,
+      "alquiler_mensual_base_eur": 917,
+      "alquiler_nota": "67 m2 x 13.68 EUR/m2/mes (SERPAVI Barcelona 2024) x banda +/-15%"
+    }
+  },
+  "duration_s": 2.2275216709822416
+}

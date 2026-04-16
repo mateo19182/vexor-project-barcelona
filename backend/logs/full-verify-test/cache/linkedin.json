@@ -1,0 +1,13 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "linkedin: could not parse slug from 'mateoamadoares'"
+  ],
+  "raw": {},
+  "duration_s": 0.00002777398913167417
+}

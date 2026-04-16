@@ -1,0 +1,26 @@
+{
+  "name": "uber_hint",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com is NOT registered on Uber. | 617758559 is NOT registered on Uber.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "email_lookup": {
+      "identifier": "mateoamadoares@gmail.com",
+      "id_type": "email",
+      "status_raw": "BAN",
+      "data": null,
+      "error": null
+    },
+    "phone_lookup": {
+      "identifier": "617758559",
+      "id_type": "phone",
+      "status_raw": "BAN",
+      "data": null,
+      "error": null
+    }
+  },
+  "duration_s": 3.3745656170067377
+}

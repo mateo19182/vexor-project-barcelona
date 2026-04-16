@@ -1,0 +1,492 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 33 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateo-amado-3a244425b/",
+      "handle": "mateo-amado-3a244425b",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://es.linkedin.com/in/mateo-amado-6469ba6a",
+      "handle": "mateo-amado-6469ba6a",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateoamado98/?hl=en",
+      "handle": "mateoamado98",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/C6Gzvq-OdHK/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/colid1o?lang=es",
+      "handle": "colid1o",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/mateo.amadocattaneo/",
+      "handle": "mateo.amadocattaneo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateo-rodriguez-dev/",
+      "handle": "mateo-rodriguez-dev",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://ar.linkedin.com/in/mateoaymard?trk=public_profile_browsemap",
+      "handle": "mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateomoralesj/",
+      "handle": "mateomoralesj",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jorge-mattamouros/",
+      "handle": "jorge-mattamouros",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mateoromano/",
+      "handle": "mateoromano",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateoaymard/",
+      "handle": "mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateoaymard/reels/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/eusoumateo/",
+      "handle": "eusoumateo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mateonewyork/",
+      "handle": "mateonewyork",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/mate0.music/",
+      "handle": "mate0.music",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoaymard",
+      "handle": "mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoprice3",
+      "handle": "mateoprice3",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateoal79390607?lang=ar",
+      "handle": "mateoal79390607",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/mateodr_",
+      "handle": "mateodr_",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/MateeoAymard/",
+      "handle": "MateeoAymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/umadocemaresia/",
+      "handle": "umadocemaresia",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/mateo.amador.5/",
+      "handle": "mateo.amador.5",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateoatr",
+      "handle": "mateoatr",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/matheusmatos",
+      "handle": "matheusmatos",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateominato",
+      "handle": "mateominato",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/getmateo",
+      "handle": "getmateo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mateusjatenee",
+      "handle": "mateusjatenee",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateosarc?lang=en",
+      "handle": "@mateosarc",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateoaymard",
+      "handle": "@mateoaymard",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateooo.k?lang=en",
+      "handle": "@mateooo.k",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mtwramirez",
+      "handle": "@mtwramirez",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@mateo.nyc",
+      "handle": "@mateo.nyc",
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "mateo-amado-3a244425b",
+      "source": "https://www.linkedin.com/in/mateo-amado-3a244425b/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo-amado-6469ba6a",
+      "source": "https://es.linkedin.com/in/mateo-amado-6469ba6a",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoamado98",
+      "source": "https://www.instagram.com/mateoamado98/?hl=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.instagram.com/p/C6Gzvq-OdHK/",
+      "source": "https://www.instagram.com/p/C6Gzvq-OdHK/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "colid1o",
+      "source": "https://x.com/colid1o?lang=es",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo.amadocattaneo",
+      "source": "https://www.facebook.com/mateo.amadocattaneo/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo-rodriguez-dev",
+      "source": "https://www.linkedin.com/in/mateo-rodriguez-dev/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoaymard",
+      "source": "https://ar.linkedin.com/in/mateoaymard?trk=public_profile_browsemap",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateomoralesj",
+      "source": "https://www.linkedin.com/in/mateomoralesj/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "jorge-mattamouros",
+      "source": "https://www.linkedin.com/in/jorge-mattamouros/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoromano",
+      "source": "https://www.linkedin.com/in/mateoromano/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoaymard",
+      "source": "https://www.instagram.com/mateoaymard/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.instagram.com/mateoaymard/reels/",
+      "source": "https://www.instagram.com/mateoaymard/reels/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "eusoumateo",
+      "source": "https://www.instagram.com/eusoumateo/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "mateonewyork",
+      "source": "https://www.instagram.com/mateonewyork/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "mate0.music",
+      "source": "https://www.instagram.com/mate0.music/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoaymard",
+      "source": "https://x.com/mateoaymard",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoprice3",
+      "source": "https://x.com/mateoprice3",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoal79390607",
+      "source": "https://x.com/mateoal79390607?lang=ar",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "mateodr_",
+      "source": "https://x.com/mateodr_",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "MateeoAymard",
+      "source": "https://www.facebook.com/MateeoAymard/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "umadocemaresia",
+      "source": "https://www.facebook.com/umadocemaresia/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo.amador.5",
+      "source": "https://www.facebook.com/mateo.amador.5/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoatr",
+      "source": "https://github.com/mateoatr",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "matheusmatos",
+      "source": "https://github.com/matheusmatos",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "mateominato",
+      "source": "https://github.com/mateominato",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "getmateo",
+      "source": "https://github.com/getmateo",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "mateusjatenee",
+      "source": "https://github.com/mateusjatenee",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "mateosarc",
+      "source": "https://www.tiktok.com/@mateosarc?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mateoaymard",
+      "source": "https://www.tiktok.com/@mateoaymard",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mateooo.k",
+      "source": "https://www.tiktok.com/@mateooo.k?lang=en",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mtwramirez",
+      "source": "https://www.tiktok.com/@mtwramirez",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "mateo.nyc",
+      "source": "https://www.tiktok.com/@mateo.nyc",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Mateo Amado\" site:linkedin.com ES",
+      "\"Mateo Amado\" site:instagram.com ES",
+      "\"Mateo Amado\" site:x.com ES",
+      "\"Mateo Amado\" site:facebook.com ES",
+      "\"Mateo Amado\" site:github.com ES",
+      "\"Mateo Amado\" site:tiktok.com ES",
+      "mateoamadoares site:linkedin.com",
+      "mateoamadoares site:instagram.com",
+      "mateoamadoares site:x.com",
+      "mateoamadoares site:facebook.com",
+      "mateoamadoares site:github.com",
+      "mateoamadoares site:tiktok.com"
+    ],
+    "links_found": 33,
+    "errors": []
+  },
+  "duration_s": 1.273842971015256
+}

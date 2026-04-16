@@ -76,7 +76,11 @@ class AuditLog(BaseModel):
             print(_format_stream(ev), file=sys.stderr, flush=True)
         if self.on_event is not None:
             sse_line = f"data: {json.dumps(ev.model_dump(), ensure_ascii=False)}\n\n"
-            asyncio.get_event_loop().create_task(self.on_event(sse_line))
+            try:
+                loop = asyncio.get_running_loop()
+                loop.create_task(self.on_event(sse_line))
+            except RuntimeError:
+                pass
         return ev
 
 

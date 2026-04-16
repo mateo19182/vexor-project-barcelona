@@ -1,0 +1,62 @@
+{
+  "name": "boe",
+  "status": "ok",
+  "summary": "0 BOE risk/role signal(s), 10 other entry(ies) for 'Test'.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "BOE-A-2021-11046 Real Decreto 472/2021, de 29 de junio, por el que se incorpora al ordenamiento jurídico español la Directiva (UE) 2018/958, del Parlamento Europeo y del Consejo, de 28 de junio de 2018, relativa al test de proporcionalidad antes de adoptar nuevas regulaciones de profesiones.",
+      "source": "https://www.boe.es/eli/es/rd/2021/06/29/472",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2024-8707 Real Decreto 435/2024, de 30 de abril, por el que se modifica el Real Decreto 472/2021, de 29 de junio, por el que se incorpora al ordenamiento jurídico español la Directiva (UE) 2018/958, del Parlamento Europeo y del Consejo, de 28 de junio de 2018, relativa al test de proporcionalidad antes de adoptar nuevas regulaciones de profesiones.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-8707",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2025-11949 Resolución de 30 de mayo de 2025, de la Dirección General de Ordenación Profesional, por la que se convoca a la realización de pruebas de aptitud a determinados nacionales de Estados miembros de la Unión Europea que han solicitado el reconocimiento de la cualificación profesional para ejercer en España en las profesiones sanitarias de Enfermería de Cuidados Generales y Fisioterapia, y la especialidad de Psicología Clínica, y se anuncia la fecha y lugar para la realización de dich",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-11949",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2003-11294 Orden JUS/1454/2003, de 27 de mayo, por la que se convocan pruebas selectivas para ingreso en el Cuerpo de Auxiliares de la Administración de Justicia.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2003-11294",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2024-21833 Orden SND/1149/2024, de 11 de octubre, por la que se convoca a la realización de pruebas de aptitud a determinados nacionales de Estados miembros de la Unión Europea que han solicitado el reconocimiento de la cualificación profesional para ejercer en España en las profesiones sanitarias de Enfermería de Cuidados Generales y Fisioterapia, se anuncia la fecha y lugar para la realización de dicha prueba de aptitud.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-21833",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2025-901 Resolución de 9 de enero de 2025, de la Subsecretaría, por la que se convoca proceso selectivo para ingreso, por el sistema general de acceso libre y promoción interna, en el Cuerpo de Ingenieros Técnicos de Obras Públicas.",
+      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-901",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2015-2670 Real Decreto 123/2015, de 27 de febrero, por el que se regula la licencia y habilitaciones del piloto de ultraligero.",
+      "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-2670",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2020-13182 Resolución de 21 de octubre de 2020, del Instituto Nacional de Administración Pública, por la que se convocan acciones de apoyo a la preparación de las pruebas selectivas para acceso, por promoción interna, a los cuerpos de los subgrupos C1 y A2 adscritos al Ministerio de Política Territorial y Función Pública.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-13182",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2021-11615 Resolución de 9 de julio de 2021, de la Dirección General de Salud Pública, por la que se modifica la de 4 de junio de 2021, relativa a los controles sanitarios a realizar en los puntos de entrada de España.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-11615",
+      "confidence": 0.6
+    },
+    {
+      "claim": "BOE-A-2022-10700 Resolución 160/38262/2022, de 24 de junio, de la Dirección General de la Guardia Civil, por la que se convocan pruebas selectivas para el ingreso en los centros docentes de formación para la incorporación a la Escala de Cabos y Guardias del Cuerpo de la Guardia Civil.",
+      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-10700",
+      "confidence": 0.6
+    }
+  ],
+  "signals": [],
+  "gaps": [],
+  "raw": {},
+  "duration_s": 1.4484735179576091
+}

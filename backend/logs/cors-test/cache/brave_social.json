@@ -1,0 +1,290 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 19 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://fr.linkedin.com/in/test-es-test-es-079576ba",
+      "handle": "test-es-test-es-079576ba",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://es.linkedin.com/company/efset",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/est.tests/",
+      "handle": "est.tests",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/est.tests/reels/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/testeat.es/",
+      "handle": "testeat.es",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/cvcrea_es/",
+      "handle": "cvcrea_es",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/test.tudat/",
+      "handle": "test.tudat",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/teaediciones",
+      "handle": "teaediciones",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/clinicasthetest/",
+      "handle": "clinicasthetest",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/p/Egyptian-Scholastic-Test-EST-100075961766227/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/todoslostestdelcelador/",
+      "handle": "todoslostestdelcelador",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/mgharvey/ES-sim",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/efekos/es-test",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/getify/es-feature-tests",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/como-hacer-el-test-que-sentimiento-eres-test",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/test-de-sentimiento-humano-eres",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/respuestas-examen-psicometrico-evaluatest-etegrity",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/ef-set-test-con-respuestas",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/respuestas-del-ef-test",
+      "handle": null,
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "test-es-test-es-079576ba",
+      "source": "https://fr.linkedin.com/in/test-es-test-es-079576ba",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "https://es.linkedin.com/company/efset",
+      "source": "https://es.linkedin.com/company/efset",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "linkedin"
+    },
+    {
+      "kind": "contact",
+      "value": "est.tests",
+      "source": "https://www.instagram.com/est.tests/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.instagram.com/est.tests/reels/",
+      "source": "https://www.instagram.com/est.tests/reels/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "testeat.es",
+      "source": "https://www.instagram.com/testeat.es/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "cvcrea_es",
+      "source": "https://www.instagram.com/cvcrea_es/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "test.tudat",
+      "source": "https://www.instagram.com/test.tudat/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "instagram"
+    },
+    {
+      "kind": "contact",
+      "value": "teaediciones",
+      "source": "https://x.com/teaediciones",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "twitter"
+    },
+    {
+      "kind": "contact",
+      "value": "clinicasthetest",
+      "source": "https://www.facebook.com/clinicasthetest/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.facebook.com/p/Egyptian-Scholastic-Test-EST-100075961766227/",
+      "source": "https://www.facebook.com/p/Egyptian-Scholastic-Test-EST-100075961766227/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "todoslostestdelcelador",
+      "source": "https://www.facebook.com/todoslostestdelcelador/",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "facebook"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/mgharvey/ES-sim",
+      "source": "https://github.com/mgharvey/ES-sim",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/efekos/es-test",
+      "source": "https://github.com/efekos/es-test",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://github.com/getify/es-feature-tests",
+      "source": "https://github.com/getify/es-feature-tests",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "github"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/como-hacer-el-test-que-sentimiento-eres-test",
+      "source": "https://www.tiktok.com/discover/como-hacer-el-test-que-sentimiento-eres-test",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/test-de-sentimiento-humano-eres",
+      "source": "https://www.tiktok.com/discover/test-de-sentimiento-humano-eres",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/respuestas-examen-psicometrico-evaluatest-etegrity",
+      "source": "https://www.tiktok.com/discover/respuestas-examen-psicometrico-evaluatest-etegrity",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/ef-set-test-con-respuestas",
+      "source": "https://www.tiktok.com/discover/ef-set-test-con-respuestas",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    },
+    {
+      "kind": "contact",
+      "value": "https://www.tiktok.com/discover/respuestas-del-ef-test",
+      "source": "https://www.tiktok.com/discover/respuestas-del-ef-test",
+      "confidence": 0.65,
+      "notes": null,
+      "tag": "tiktok"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Test\" site:linkedin.com ES",
+      "\"Test\" site:instagram.com ES",
+      "\"Test\" site:x.com ES",
+      "\"Test\" site:facebook.com ES",
+      "\"Test\" site:github.com ES",
+      "\"Test\" site:tiktok.com ES"
+    ],
+    "links_found": 19,
+    "errors": []
+  },
+  "duration_s": 1.417603334004525
+}

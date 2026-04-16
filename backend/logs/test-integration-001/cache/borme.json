@@ -1,0 +1,28 @@
+{
+  "name": "borme",
+  "status": "ok",
+  "summary": "2 BORME risk/role signal(s), 0 other entry(ies) for 'Juan Garcia'.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "BOLETÍN OFICIAL DEL REGISTRO MERCANTIL Núm. 141 Lunes 26 de julio de 2021",
+      "source": "https://www.boe.es/borme/dias/2021/07/26/pdfs/BORME-A-2021-141-15.pdf",
+      "confidence": 0.85,
+      "notes": "Resoluciones: Auto de conclusión ... cese de las · limitaciones de administración y disposición del deudor, extinción de la Sociedad. Situación concursal. Procedimiento concursal · 191/2013. Fecha de resolución 14/06/2013. Revocación de administradores concursales. Juzgado: num. 2 JUZGADO DE LO · MERCANTIL DE A CORUÑA. Juez: RAGAEL GARCIA PEREZ. Administrador Concursal. Fecha 18/05/2021, NIF/CIF 32794384H. ARMENTEROS CUETOS JUAN ...",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOLETÍN OFICIAL DEL REGISTRO MERCANTIL Núm. 5 Jueves 9 de enero de 2025",
+      "source": "https://www.boe.es/borme/dias/2025/01/09/pdfs/BORME-A-2025-5-20.pdf",
+      "confidence": 0.85,
+      "notes": "Cambio del Organo de Administración: ... único a Administradores solidarios. Datos registrales. S 8 , H SS 20544, I/A 5 ... Ceses/Dimisiones. Liquidador M: OYARZABAL CELARAIN JUAN-RAMON;IBARGOYEN CANCIO ANA-MARIA. Adm. Mancom.: IBARGOYEN CANCIO ANA-MARIA;OYARZABAL CELARAIN JUAN-RAMON. Nombramientos. Liquidador M: IBARGOYEN CANCIO · ANA-MARIA;OYARZABAL CELARAIN JUAN-RAMON. Disolución. Voluntaria. Extinción. Datos registrales. S 8 , H SS 39244, I/A ... Ceses/Dimisiones. Adm. Unico: CRUZ GARCIA ...",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {},
+  "duration_s": 1.0423466800129972
+}

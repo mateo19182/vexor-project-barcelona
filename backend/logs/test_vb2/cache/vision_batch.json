@@ -1,0 +1,31 @@
+{
+  "name": "vision_batch",
+  "status": "ok",
+  "summary": "The available evidence for Angel Otero consists of a single profile image that contains no identifiable information. Consequently, no details regarding the subject's lifestyle, location, employment, or assets can be determined from this source.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "The subject's Twitter avatar (Aziffo_avatar.jpg) is a solid blue image with no visible features.",
+      "source": "twitter/Aziffo_avatar.jpg",
+      "confidence": 1.0
+    }
+  ],
+  "signals": [],
+  "gaps": [
+    "Physical appearance of Angel Otero",
+    "Current geographic location",
+    "Employment status or business affiliations",
+    "Ownership of assets or property",
+    "Social media activity or biographical details"
+  ],
+  "raw": {
+    "image_count": 1,
+    "platforms": [
+      "twitter"
+    ],
+    "images_analyzed": [
+      "twitter/Aziffo_avatar.jpg"
+    ]
+  },
+  "duration_s": 4.4590786379994825
+}

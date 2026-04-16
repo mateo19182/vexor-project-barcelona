@@ -1,0 +1,30 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "mateoamadoares2@gmail.com is NOT registered on iCloud. | +3467452714 is NOT registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "mateoamadoares2@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "720d6fda-fd4f-404f-a51a-9a9e55ea48ba",
+        "error": null
+      },
+      {
+        "platform": "iCloud",
+        "identifier": "+3467452714",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "129805ec-a81e-41b3-a2af-6f0cb56426f7",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 3.7327554670046084
+}

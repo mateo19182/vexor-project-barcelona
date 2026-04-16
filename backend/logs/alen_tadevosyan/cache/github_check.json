@@ -1,0 +1,18 @@
+{
+  "name": "github_check",
+  "status": "ok",
+  "summary": "alentad@gmail.com is NOT registered on GitHub.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "platform": "GitHub",
+    "identifier": "alentad@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "session_id": "091d0784-1987-4d77-98d5-cc6c0004f846",
+    "error": null
+  },
+  "duration_s": 2.4029569440172054
+}

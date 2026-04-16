@@ -1,0 +1,22 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "LinkedIn profile 'angel-otero-0857661' not retrievable: the data cannot be displayed or it doesn't exist, make sure the username is correct and exists"
+  ],
+  "raw": {
+    "username": "angel-otero-0857661",
+    "profile_url": "angel-otero-0857661",
+    "overview": {
+      "error": "api_error",
+      "status": 200,
+      "detail": "the data cannot be displayed or it doesn't exist, make sure the username is correct and exists"
+    },
+    "details": null
+  },
+  "duration_s": 1.1095570970210247
+}

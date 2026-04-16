@@ -1,0 +1,31 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "mateoamadoares@gmail.com is registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to mateoamadoares@gmail.com",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "mateoamadoares@gmail.com",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "d1657dfc-a56a-44c3-8c67-a107c802ab40",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 1.4755245260021184
+}

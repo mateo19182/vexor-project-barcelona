@@ -1,0 +1,19 @@
+{
+  "name": "uber_hint",
+  "status": "ok",
+  "summary": "alentad@gmail.com is NOT registered on Uber.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "email_lookup": {
+      "identifier": "alentad@gmail.com",
+      "id_type": "email",
+      "status_raw": "BAN",
+      "data": null,
+      "error": null
+    }
+  },
+  "duration_s": 1.923081150976941
+}

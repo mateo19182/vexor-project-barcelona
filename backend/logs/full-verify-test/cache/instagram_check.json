@@ -1,0 +1,20 @@
+{
+  "name": "instagram_check",
+  "status": "no_data",
+  "summary": "Instagram check for mateoamadoares@gmail.com was inconclusive (status: INVALID).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Instagram returned ambiguous status 'INVALID' for mateoamadoares@gmail.com"
+  ],
+  "raw": {
+    "platform": "Instagram",
+    "identifier": "mateoamadoares@gmail.com",
+    "status_raw": "INVALID",
+    "http_status": 200,
+    "session_id": "b31b9bec-b836-4522-9469-68e328b463ce",
+    "error": null
+  },
+  "duration_s": 0.29100163499242626
+}
