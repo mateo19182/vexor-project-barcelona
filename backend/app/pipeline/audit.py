@@ -11,13 +11,14 @@ the API/CLI a replay and letting us render a compact summary at the end.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import re
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Awaitable, Callable
 
 from pydantic import BaseModel, Field, PrivateAttr
 
@@ -42,7 +43,12 @@ class AuditLog(BaseModel):
     itself is the write-side helper.
     """
 
+    model_config = {"arbitrary_types_allowed": True}
+
     events: list[AuditEvent] = Field(default_factory=list)
+    on_event: Callable[[str], Awaitable[None]] | None = Field(
+        default=None, exclude=True,
+    )
     # Wall-clock anchor for `elapsed_s` on each event. Private so it stays
     # out of serialization and never leaks into the API response.
     _started_at: float = PrivateAttr(default_factory=time.monotonic)
@@ -68,6 +74,9 @@ class AuditLog(BaseModel):
         self.events.append(ev)
         if stream:
             print(_format_stream(ev), file=sys.stderr, flush=True)
+        if self.on_event is not None:
+            sse_line = f"data: {json.dumps(ev.model_dump(), ensure_ascii=False)}\n\n"
+            asyncio.get_event_loop().create_task(self.on_event(sse_line))
         return ev
 
 
