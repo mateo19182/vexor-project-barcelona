@@ -242,12 +242,7 @@ def _parse_profile(html: str) -> tuple[str, str]:
         ),
     )
     if pic_el:
-        src = pic_el.get("src", "") or ""
-        # Upgrade to a larger resolution by replacing the size suffix
-        if "=w" in src:
-            pic_url = src.split("=w")[0] + "=w400-h400-p-rp-mo-br100"
-        else:
-            pic_url = src
+        pic_url = pic_el.get("src", "") or ""
 
     # Display name — .fontHeadlineLarge button sits next to the profile pic
     name = ""
