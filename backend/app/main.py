@@ -9,11 +9,10 @@ from typing import Annotated, Any
 
 from fastapi import FastAPI, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
-from pydantic import BaseModel
+from fastapi.responses import HTMLResponse, StreamingResponse
 
 from app.config import settings
-from app.models import Case, EnrichmentResponse, LeadVerification, Signal
+from app.models import Case, CsvBatchResponse, EnrichmentResponse, LeadVerification, Signal
 from app.pipeline.audit import AuditLog, write_run_log
 from app.pipeline.base import context_from_case
 from app.pipeline.modules import REGISTRY
@@ -21,7 +20,22 @@ from app.pipeline.runner import run_pipeline
 from app.pipeline.llm_summary import generate_llm_summary
 from app.pipeline.synthesis import synthesize, build_enriched_dossier
 
-app = FastAPI(title="Vexor BCN — debtor enrichment")
+app = FastAPI(
+    title="Vexor BCN",
+    description="AI-powered debtor enrichment API. Takes minimal case data and returns actionable intelligence from 23+ OSINT modules.",
+    version="1.0.0",
+    contact={"name": "Vexor AI", "email": "brawlstarsapkspain@gmail.com"},
+    docs_url=None,
+    redoc_url=None,
+)
+
+app.openapi_tags = [
+    {"name": "Health", "description": "Service health checks"},
+    {"name": "Enrichment", "description": "Run enrichment modules against a debtor case"},
+    {"name": "Cases", "description": "Browse historical enrichment runs"},
+    {"name": "CSV Import", "description": "Batch enrichment from CSV upload"},
+    {"name": "Modules", "description": "Inspect registered pipeline modules"},
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -32,12 +46,12 @@ app.add_middleware(
 )
 
 
-@app.get("/health")
+@app.get("/health", tags=["Health"], summary="Service health check", response_description="Status object confirming the service is running")
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-@app.get("/modules")
+@app.get("/modules", tags=["Modules"], summary="List registered enrichment modules", response_description="Module names and their signal requirements")
 def modules() -> dict[str, list[dict[str, Any]]]:
     """List every registered module, including its declared `requires`."""
     return {
@@ -143,7 +157,7 @@ def _extract_lead_verification(results: list) -> LeadVerification | None:
     return None
 
 
-@app.post("/enrich", response_model=EnrichmentResponse)
+@app.post("/enrich", response_model=EnrichmentResponse, tags=["Enrichment"], summary="Enrich a debtor case", response_description="Full enrichment response with dossier, signals, and audit trail")
 async def enrich(
     case: Case,
     fresh: Annotated[list[str] | None, Query()] = None,
@@ -174,7 +188,7 @@ async def enrich(
         raise HTTPException(status_code=400, detail=str(e)) from e
 
 
-@app.post("/enrich/stream")
+@app.post("/enrich/stream", tags=["Enrichment"], summary="Stream enrichment events (SSE)", response_description="Server-Sent Events stream followed by final result")
 async def enrich_stream(
     case: Case,
     fresh: Annotated[list[str] | None, Query()] = None,
@@ -266,7 +280,7 @@ async def enrich_stream(
     )
 
 
-@app.post("/enrich/{module_name}", response_model=EnrichmentResponse)
+@app.post("/enrich/{module_name}", response_model=EnrichmentResponse, tags=["Enrichment"], summary="Run a single enrichment module", response_description="Enrichment response from the named module only")
 async def enrich_single(
     module_name: str,
     case: Case,
@@ -288,7 +302,7 @@ async def enrich_single(
 _RUN_FILE_RE = re.compile(r"^\d{8}T\d{6}Z\.json$")
 
 
-@app.get("/cases")
+@app.get("/cases", tags=["Cases"], summary="List all cases with run history", response_description="Array of case objects with their timestamped run files")
 def list_cases() -> dict[str, list[dict[str, Any]]]:
     """List every case directory and its timestamped run files."""
     logs = Path(settings.logs_dir)
@@ -313,7 +327,7 @@ def list_cases() -> dict[str, list[dict[str, Any]]]:
     return {"cases": cases}
 
 
-@app.get("/cases/{case_id}/runs/{filename}")
+@app.get("/cases/{case_id}/runs/{filename}", tags=["Cases"], summary="Fetch a historical run log", response_description="Full JSON run log for the specified case and timestamp")
 def get_run(case_id: str, filename: str) -> Any:
     """Return a single historical run log as JSON."""
     if not _RUN_FILE_RE.match(filename):
@@ -386,12 +400,7 @@ def _row_to_case(row: dict[str, str]) -> Case:
     )
 
 
-class CsvBatchResponse(BaseModel):
-    total: int
-    results: list[EnrichmentResponse]
-
-
-@app.post("/enrich-csv", response_model=CsvBatchResponse)
+@app.post("/enrich-csv", response_model=CsvBatchResponse, tags=["CSV Import"], summary="Batch enrich from CSV file", response_description="Array of enrichment responses, one per CSV row")
 async def enrich_csv(
     file: UploadFile,
     fresh: Annotated[bool, Query()] = True,
@@ -431,3 +440,84 @@ async def enrich_csv(
         )
 
     return CsvBatchResponse(total=len(results), results=results)
+
+
+# ── Custom dark-themed Swagger UI ────────────────────────────────────────
+
+_SWAGGER_DARK_CSS = """
+/* Vexor dark theme */
+body { background: #09090B !important; }
+.swagger-ui { background: #09090B; }
+.swagger-ui .topbar { background: #111113 !important; border-bottom: 1px solid #27272A; padding: 8px 0; }
+.swagger-ui .topbar .download-url-wrapper .select-label span { color: #FAFAFA; }
+.swagger-ui .info .title { color: #FAFAFA !important; font-family: 'Inter', sans-serif; }
+.swagger-ui .info p, .swagger-ui .info li { color: #A1A1AA; font-family: 'Inter', sans-serif; }
+.swagger-ui .opblock-tag { color: #FAFAFA !important; font-family: 'Inter', sans-serif; border-bottom-color: #27272A !important; }
+.swagger-ui .opblock { background: #111113 !important; border-color: #27272A !important; }
+.swagger-ui .opblock .opblock-summary { border-color: #27272A !important; }
+.swagger-ui .opblock .opblock-summary-method { font-family: 'JetBrains Mono', monospace; }
+.swagger-ui .opblock .opblock-summary-path { color: #FAFAFA !important; font-family: 'JetBrains Mono', monospace; }
+.swagger-ui .opblock .opblock-summary-description { color: #A1A1AA !important; }
+.swagger-ui .opblock-description-wrapper p { color: #A1A1AA !important; }
+.swagger-ui .opblock-body pre { background: #18181B !important; color: #FAFAFA !important; }
+.swagger-ui .opblock .opblock-section-header { background: #18181B !important; border-color: #27272A !important; }
+.swagger-ui .opblock .opblock-section-header h4 { color: #FAFAFA !important; }
+.swagger-ui .btn { color: #FAFAFA !important; border-color: #3F3F46 !important; }
+.swagger-ui .btn.execute { background: #3F3F46 !important; }
+.swagger-ui select { background: #18181B !important; color: #FAFAFA !important; border-color: #3F3F46 !important; }
+.swagger-ui input[type=text] { background: #18181B !important; color: #FAFAFA !important; border-color: #3F3F46 !important; }
+.swagger-ui textarea { background: #18181B !important; color: #FAFAFA !important; border-color: #3F3F46 !important; font-family: 'JetBrains Mono', monospace; }
+.swagger-ui .model-box { background: #111113 !important; }
+.swagger-ui .model { color: #A1A1AA !important; }
+.swagger-ui .model-title { color: #FAFAFA !important; }
+.swagger-ui .prop-type { color: #22D3EE !important; }
+.swagger-ui .prop-format { color: #A1A1AA !important; }
+.swagger-ui table thead tr th { color: #FAFAFA !important; border-color: #27272A !important; }
+.swagger-ui table tbody tr td { color: #A1A1AA !important; border-color: #27272A !important; }
+.swagger-ui .response-col_status { color: #FAFAFA !important; }
+.swagger-ui .responses-inner { background: #111113 !important; }
+.swagger-ui .model-container { background: #111113 !important; }
+.swagger-ui section.models { border-color: #27272A !important; }
+.swagger-ui section.models h4 { color: #FAFAFA !important; border-color: #27272A !important; }
+.swagger-ui .scheme-container { background: #111113 !important; box-shadow: none !important; }
+.swagger-ui .loading-container .loading::after { color: #A1A1AA !important; }
+.swagger-ui .opblock.opblock-post { border-color: #166534 !important; }
+.swagger-ui .opblock.opblock-post .opblock-summary { background: rgba(22,101,52,0.15) !important; }
+.swagger-ui .opblock.opblock-get { border-color: #1E40AF !important; }
+.swagger-ui .opblock.opblock-get .opblock-summary { background: rgba(30,64,175,0.15) !important; }
+.swagger-ui .parameter__name { color: #FAFAFA !important; }
+.swagger-ui .parameter__type { color: #22D3EE !important; }
+.swagger-ui .markdown p, .swagger-ui .markdown li { color: #A1A1AA; }
+"""
+
+
+@app.get("/docs", include_in_schema=False)
+async def custom_swagger_docs():
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{app.title} — API Docs</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>{_SWAGGER_DARK_CSS}</style>
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+    <script>
+    SwaggerUIBundle({{
+        url: "{app.openapi_url}",
+        dom_id: '#swagger-ui',
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
+        layout: 'BaseLayout',
+        docExpansion: 'list',
+        filter: true,
+        tryItOutEnabled: true,
+        syntaxHighlight: {{ theme: 'monokai' }},
+    }});
+    </script>
+</body>
+</html>"""
+    return HTMLResponse(content=html)

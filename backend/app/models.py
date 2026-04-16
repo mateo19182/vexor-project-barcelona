@@ -35,23 +35,38 @@ class Signal(BaseModel):
     twitter / gaia_id / etc. Most other kinds don't need a tag.
     """
 
-    kind: SignalKind
+    kind: SignalKind = Field(description="Category of the observation (name, address, contact, etc.)")
     value: str = Field(description="Short canonical form, e.g. 'Barcelona, ES' or 'Acme Corp'.")
     source: str = Field(description="Full URL or reference backing the observation.")
-    confidence: float = Field(ge=0.0, le=1.0)
-    notes: str | None = None
-    tag: str | None = None
+    confidence: float = Field(ge=0.0, le=1.0, description="Confidence score from 0.0 to 1.0 per the project rubric")
+    notes: str | None = Field(default=None, description="Additional detail that doesn't fit in value")
+    tag: str | None = Field(default=None, description="Sub-category within kind, e.g. 'email' or 'linkedin' for contact signals")
 
 
 class Case(BaseModel):
     """One row of the Vexor starting dataset — the minimal info a servicer has."""
 
-    case_id: str
+    model_config = {"json_schema_extra": {"examples": [{
+        "case_id": "DEMO-001",
+        "country": "ES",
+        "debt_eur": 4500.0,
+        "debt_origin": "personal_loan",
+        "debt_age_months": 18,
+        "call_attempts": 3,
+        "call_outcome": "voicemail",
+        "signals": [
+            {"kind": "name", "value": "Maria Lopez Garcia", "source": "case_input", "confidence": 1.0},
+            {"kind": "contact", "tag": "email", "value": "maria.lopez@gmail.com", "source": "case_input", "confidence": 1.0},
+        ],
+        "context": "Debtor mentioned family in Malaga during last call",
+    }]}}
+
+    case_id: str = Field(description="Unique identifier for this debtor case")
     country: str | None = Field(default=None, description="ISO-2 country code, e.g. ES, PT, PL, FR")
-    debt_eur: float | None = None
+    debt_eur: float | None = Field(default=None, description="Outstanding debt amount in euros")
     debt_origin: str | None = Field(default=None, description="e.g. personal_loan, telecom, credit_card")
-    debt_age_months: int | None = None
-    call_attempts: int | None = None
+    debt_age_months: int | None = Field(default=None, description="Age of the debt in months")
+    call_attempts: int | None = Field(default=None, description="Number of collection call attempts")
     call_outcome: str | None = Field(default=None, description="e.g. not_debtor, busy, rings_out, voicemail")
     legal_asset_finding: str | None = Field(default=None, description="e.g. no_assets_found, bank_account")
 
@@ -92,18 +107,18 @@ class Fact(BaseModel):
     for one-off claims that don't map to any `SignalKind`.
     """
 
-    claim: str
+    claim: str = Field(description="Free-text factual claim")
     source: str = Field(description="IG post URL, image filename, or caption reference")
-    confidence: float = Field(ge=0.0, le=1.0)
+    confidence: float = Field(ge=0.0, le=1.0, description="Confidence score from 0.0 to 1.0")
 
 
 class SocialLink(BaseModel):
     """A confirmed (or candidate) social media / professional profile."""
 
-    platform: str
-    url: str
-    handle: str | None = None
-    confidence: float = Field(ge=0.0, le=1.0)
+    platform: str = Field(description="Social media platform name (instagram, linkedin, twitter, etc.)")
+    url: str = Field(description="Full URL to the profile")
+    handle: str | None = Field(default=None, description="Username or handle on the platform")
+    confidence: float = Field(ge=0.0, le=1.0, description="Confidence that this profile belongs to the subject")
 
 
 class InstagramEnrichment(BaseModel):
@@ -311,11 +326,18 @@ class LeadVerification(BaseModel):
 class EnrichmentResponse(BaseModel):
     """Shape of the enriched profile. Grows as pipeline steps are added."""
 
-    case_id: str
-    status: str = "received"
+    case_id: str = Field(description="Case identifier from the input")
+    status: str = Field(default="received", description="Pipeline result: received, enriched, or no_data")
     dossier: Dossier | None = None
     enriched_dossier: EnrichedDossier | None = None
     llm_summary: LlmSummary | None = None
     lead_verification: LeadVerification | None = None
-    modules: list[Any] = []
-    audit_log: list[AuditEvent] = []
+    modules: list[Any] = Field(default_factory=list, description="Per-module results with signals, facts, and metadata")
+    audit_log: list[AuditEvent] = Field(default_factory=list)
+
+
+class CsvBatchResponse(BaseModel):
+    """Response from batch CSV enrichment."""
+
+    total: int = Field(description="Number of rows processed")
+    results: list[EnrichmentResponse] = Field(description="Enrichment results, one per CSV row")
