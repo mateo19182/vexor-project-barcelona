@@ -46,7 +46,11 @@ class Settings(BaseSettings):
     icloud_check_port: str = ""
     icloud_check_api_key: str = ""
     github_check_port: str = "19185"
-    github_check_api_key: str = "932b5bf7-a59b-4850-83f2-9ca80cccc509"
+    github_check_api_key: str = ""
+
+    # Google Photos API key used by the google_id module (GHunt technique).
+    # Defaults to the well-known public key; override via GOOGLE_PHOTOS_API_KEY.
+    google_photos_api_key: str = "AIzaSyAa2odBewW-sPJu3jMORr0aNedh3YlkiQc"
 
     # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
     # full response (dossier + modules + audit events) at

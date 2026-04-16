@@ -25,7 +25,6 @@ from app.models import AttributedValue, ContextPatch
 from app.pipeline.base import Context, ModuleResult
 
 _PEOPLE_URL = "https://people-pa.clients6.google.com/v2/people/lookup"
-_PHOTOS_API_KEY = "AIzaSyAa2odBewW-sPJu3jMORr0aNedh3YlkiQc"
 _PHOTOS_ORIGIN = "https://photos.google.com"
 _UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -70,7 +69,7 @@ async def resolve_gaia_id(email: str, cookies: dict[str, str]) -> str | None:
         "Host": "people-pa.clients6.google.com",
         "Authorization": f"SAPISIDHASH {_sapisid_hash(sapisid, _PHOTOS_ORIGIN)}",
         "X-Goog-AuthUser": "0",
-        "X-Goog-Api-Key": _PHOTOS_API_KEY,
+        "X-Goog-Api-Key": settings.google_photos_api_key,
         "Origin": _PHOTOS_ORIGIN,
         "Referer": _PHOTOS_ORIGIN,
         "User-Agent": _UA,

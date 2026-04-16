@@ -124,7 +124,11 @@ async def _observe_batch(
         )
 
     raw = await _call_openrouter([{"role": "user", "content": content}])
-    parsed = _parse_json_loose(raw)
+    try:
+        parsed = _parse_json_loose(raw)
+    except json.JSONDecodeError:
+        _log(f"[vision] _observe_batch: could not parse JSON response: {raw[:200]}")
+        return []
     if isinstance(parsed, dict):
         return parsed.get("images", []) or []
     if isinstance(parsed, list):
@@ -195,7 +199,11 @@ async def _synthesize(
         [{"role": "user", "content": prompt}],
         json_mode=True,
     )
-    data = _parse_json_loose(raw)
+    try:
+        data = _parse_json_loose(raw)
+    except json.JSONDecodeError:
+        _log(f"[vision] _synthesize: could not parse JSON response: {raw[:200]}")
+        return "", [], ["Synthesis response was not valid JSON"]
     if not isinstance(data, dict):
         return "", [], ["Synthesis response was not a JSON object"]
 
