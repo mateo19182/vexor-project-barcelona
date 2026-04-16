@@ -48,10 +48,6 @@ class Settings(BaseSettings):
     github_check_port: str = "19185"
     github_check_api_key: str = ""
 
-    # Google Photos API key used by the google_id module (GHunt technique).
-    # Defaults to the well-known public key; override via GOOGLE_PHOTOS_API_KEY.
-    google_photos_api_key: str = "AIzaSyAa2odBewW-sPJu3jMORr0aNedh3YlkiQc"
-
     # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
     # full response (dossier + modules + audit events) at
     # `{logs_dir}/{case_id}/{timestamp}.json`. Resolved from CWD.
@@ -80,7 +76,12 @@ class Settings(BaseSettings):
     # Generate at: https://nosint.org/dashboard/settings (API Keys section).
     nosint_api_key: str = ""
 
-    # ── Google Maps reviews module ──────────────────────────────────────────
+    # Jooble job search API — used by the `jooble` module to estimate salary
+    # range and job-market activity for the debtor's LinkedIn headline/role.
+    # Get a key at https://jooble.org/api/about
+    jooble_api_key: str = ""
+
+    # ── Google Maps / GAIA enrichment ────────────────────────────────────────
     # JSON dict copied from Chrome DevTools → Application → Cookies → google.com
     # Required keys: SID, SSID, APISID, SAPISID, __Secure-1PAPISID, NID
     google_session_cookies: str = ""

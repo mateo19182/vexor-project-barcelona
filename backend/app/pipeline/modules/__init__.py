@@ -16,18 +16,19 @@ from app.pipeline.modules.borme import BormeModule
 from app.pipeline.modules.brave_social import BraveSocialModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
 from app.pipeline.modules.github_check import GithubCheckModule
-from app.pipeline.modules.google_id import GoogleIdModule
 from app.pipeline.modules.gaia_enrichment import GaiaEnrichmentModule
 from app.pipeline.modules.icloud_check import ICloudCheckModule
 from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
 from app.pipeline.modules.instagram_check import InstagramCheckModule
+from app.pipeline.modules.jooble import JoobleModule
 from app.pipeline.modules.linkedin import LinkedInModule
 from app.pipeline.modules.nosint import NosintModule
 from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.property import PropertyModule
 from app.pipeline.modules.twitter_check import TwitterCheckModule
 from app.pipeline.modules.twitter import TwitterModule
+from app.pipeline.modules.wallapop import WallapopModule
 from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
@@ -36,17 +37,18 @@ REGISTRY: list[Module] = [
     BraveSocialModule(),
     BreachScoutModule(),
     GithubCheckModule(),
-    GoogleIdModule(),
     GaiaEnrichmentModule(),
     ICloudCheckModule(),
     ImageSearchModule(),
     InstagramModule(),
     InstagramCheckModule(),
+    JoobleModule(),
     LinkedInModule(),
     NosintModule(),
     OsintWebModule(),
     PropertyModule(),
     TwitterCheckModule(),
     TwitterModule(),
+    WallapopModule(),
     XposedOrNotModule(),
 ]
