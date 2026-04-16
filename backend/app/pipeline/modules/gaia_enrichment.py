@@ -1,0 +1,136 @@
+"""GAIA enrichment module.
+
+Input  → ctx.gaia_id
+Output → contributor stats, public reviews, public photos + lifestyle signals
+
+Runs in wave 2+ — after google_id promotes gaia_id to Context.
+"""
+
+from __future__ import annotations
+
+import json
+import sys
+
+from app.config import settings
+from app.enrichment.gaia_enrichment import fetch_gaia
+from app.models import Fact, Signal
+from app.pipeline.base import Context, ModuleResult
+
+
+def _log(msg: str) -> None:
+    print(msg, file=sys.stderr, flush=True)
+
+
+def _load_cookies() -> dict[str, str] | None:
+    raw = settings.google_session_cookies
+    if not raw:
+        return None
+    try:
+        data = json.loads(raw)
+        if isinstance(data, dict):
+            return {str(k): str(v) for k, v in data.items()}
+        if isinstance(data, list):
+            return {str(c["name"]): str(c["value"]) for c in data if "name" in c and "value" in c}
+    except Exception as e:  # noqa: BLE001
+        _log(f"[gaia_enrichment] cannot parse GOOGLE_SESSION_COOKIES: {e}")
+    return None
+
+
+class GaiaEnrichmentModule:
+    name = "gaia_enrichment"
+    requires: tuple[str, ...] = ("gaia_id",)
+
+    async def run(self, ctx: Context) -> ModuleResult:
+        gaia_id = ctx.gaia_id or ""
+
+        cookies = _load_cookies()
+        if cookies is None:
+            return ModuleResult(
+                name=self.name,
+                status="skipped",
+                gaps=["GOOGLE_SESSION_COOKIES not set in .env"],
+            )
+
+        _log(f"[gaia_enrichment] running for gaia_id={gaia_id}")
+        enrichment = await fetch_gaia(gaia_id, cookies)
+
+        signals: list[Signal] = []
+        facts: list[Fact] = []
+
+        # ── Review signals ────────────────────────────────────────────────
+        for rev in enrichment.reviews:
+            label = rev.place or "Unknown place"
+            if rev.rating:
+                label += f" ({rev.rating}★)"
+            if rev.time_ago:
+                label += f" — {rev.time_ago}"
+
+            if rev.place:
+                signals.append(Signal(
+                    kind="lifestyle",
+                    value=f"Google Maps review: {label}",
+                    source=rev.place_url or enrichment.profile_url,
+                    confidence=0.85,
+                    notes=rev.text[:250] if rev.text else None,
+                ))
+            elif rev.text:
+                facts.append(Fact(
+                    claim=f"Google Maps review: {rev.text[:350]}",
+                    source=enrichment.profile_url,
+                    confidence=0.80,
+                ))
+
+        # ── Photo signals ─────────────────────────────────────────────────
+        for photo in enrichment.photos:
+            label = photo.place_name or "unknown location"
+            signals.append(Signal(
+                kind="lifestyle",
+                value=f"Google Maps photo uploaded — {label}",
+                source=photo.url,
+                confidence=0.75,
+                notes=None,
+            ))
+
+        # ── Stats facts ───────────────────────────────────────────────────
+        s = enrichment.stats
+        if s.reviews_count or s.ratings_count or s.photos_count:
+            parts: list[str] = []
+            if s.reviews_count:
+                parts.append(f"{s.reviews_count} reviews")
+            if s.ratings_count:
+                parts.append(f"{s.ratings_count} ratings")
+            if s.photos_count:
+                parts.append(f"{s.photos_count} photos")
+            if s.local_guides_level:
+                parts.append(f"Local Guides level {s.local_guides_level}")
+            facts.append(Fact(
+                claim=f"Google Maps contributor stats: {', '.join(parts)}",
+                source=enrichment.profile_url,
+                confidence=0.90,
+            ))
+
+        # ── Summary ───────────────────────────────────────────────────────
+        summary_parts = [f"GAIA enrichment for {gaia_id}."]
+        if enrichment.name:
+            summary_parts.append(f"Name: {enrichment.name}.")
+        if s.reviews_count or s.ratings_count or s.photos_count:
+            summary_parts.append(
+                f"Contributor: {s.reviews_count} reviews, {s.ratings_count} ratings, {s.photos_count} photos"
+                + (f", Local Guides level {s.local_guides_level}" if s.local_guides_level else "")
+                + "."
+            )
+        if enrichment.reviews:
+            places = [r.place for r in enrichment.reviews if r.place]
+            summary_parts.append(f"Reviewed places: {', '.join(places[:6])}.")
+        if enrichment.photos:
+            summary_parts.append(f"Found {len(enrichment.photos)} public photo(s).")
+
+        return ModuleResult(
+            name=self.name,
+            status="ok",
+            summary=" ".join(summary_parts),
+            signals=signals,
+            facts=facts,
+            gaps=enrichment.gaps,
+            raw=enrichment.model_dump(),
+        )

@@ -16,7 +16,7 @@ from app.pipeline.modules.borme import BormeModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
 from app.pipeline.modules.github_check import GithubCheckModule
 from app.pipeline.modules.google_id import GoogleIdModule
-from app.pipeline.modules.google_maps_reviews import GoogleMapsReviewsModule
+from app.pipeline.modules.gaia_enrichment import GaiaEnrichmentModule
 from app.pipeline.modules.icloud_check import ICloudCheckModule
 from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
@@ -35,7 +35,7 @@ REGISTRY: list[Module] = [
     BreachScoutModule(),
     GithubCheckModule(),
     GoogleIdModule(),
-    GoogleMapsReviewsModule(),
+    GaiaEnrichmentModule(),
     ICloudCheckModule(),
     ImageSearchModule(),
     InstagramModule(),
