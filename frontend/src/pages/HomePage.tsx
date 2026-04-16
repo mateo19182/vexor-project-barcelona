@@ -12,7 +12,7 @@ export function HomePage() {
         New Case
       </h1>
 
-      <Card className="bg-bg-surface border-border-subtle mb-6">
+      <Card className="bg-bg-surface/50 backdrop-blur-lg border-border-subtle mb-6">
         <CardHeader>
           <CardTitle className="text-lg font-semibold text-text-primary">
             Debtor Information
@@ -24,7 +24,7 @@ export function HomePage() {
             <Input
               id="name"
               placeholder="Full name"
-              className="bg-bg-elevated border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
+              className="bg-bg-elevated/60 backdrop-blur-sm border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
             />
           </div>
 
@@ -34,7 +34,7 @@ export function HomePage() {
               id="email"
               type="email"
               placeholder="email@example.com"
-              className="bg-bg-elevated border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
+              className="bg-bg-elevated/60 backdrop-blur-sm border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
             />
           </div>
 
@@ -44,7 +44,7 @@ export function HomePage() {
               id="phone"
               type="tel"
               placeholder="+34 600 000 000"
-              className="bg-bg-elevated border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
+              className="bg-bg-elevated/60 backdrop-blur-sm border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
             />
           </div>
 
@@ -53,7 +53,7 @@ export function HomePage() {
             <Input
               id="address"
               placeholder="Street, city, country"
-              className="bg-bg-elevated border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
+              className="bg-bg-elevated/60 backdrop-blur-sm border-border-default text-text-primary placeholder:text-text-tertiary focus:border-text-primary"
             />
           </div>
 
