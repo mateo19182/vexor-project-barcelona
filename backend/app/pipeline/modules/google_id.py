@@ -1,12 +1,11 @@
 """Google ID resolver module.
 
-Resolves a Gmail address to its Google Gaia ID using the same technique as
-GHunt (https://github.com/mxrch/GHunt): calls Google's internal people-pa
-endpoint authenticated with the Photos API key + SAPISIDHASH.
-
 Input  (requires): ctx.email
-Output (ctx_patch): ctx.gaia_id  — picked up by google_maps_reviews in the
-                                    next pipeline wave.
+Output (ctx_patch): ctx.gaia_id
+
+Resolves a Gmail address to its Google Gaia ID using the same technique as
+GHunt (https://github.com/mxrch/GHunt): authenticates against Google's
+internal people-pa endpoint via SAPISIDHASH + the Photos API key.
 
 Auth: GOOGLE_SESSION_COOKIES in .env — JSON dict of Google session cookies.
 Copy from Chrome DevTools → Application → Cookies → google.com.
@@ -26,12 +25,8 @@ from app.models import AttributedValue, ContextPatch
 from app.pipeline.base import Context, ModuleResult
 
 _PEOPLE_URL = "https://people-pa.clients6.google.com/v2/people/lookup"
-_MAPS_CONTRIB = "https://www.google.com/maps/contrib/{gaia_id}/reviews"
-
-# GHunt technique: auth uses the Photos API key and its origin
 _PHOTOS_API_KEY = "AIzaSyAa2odBewW-sPJu3jMORr0aNedh3YlkiQc"
 _PHOTOS_ORIGIN = "https://photos.google.com"
-
 _UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -54,7 +49,7 @@ def _load_cookies() -> dict[str, str] | None:
         if isinstance(data, list):
             return {str(c["name"]): str(c["value"]) for c in data if "name" in c and "value" in c}
     except Exception as e:  # noqa: BLE001
-        _log(f"[google_maps] cannot parse GOOGLE_SESSION_COOKIES: {e}")
+        _log(f"[google_id] cannot parse GOOGLE_SESSION_COOKIES: {e}")
     return None
 
 
@@ -65,10 +60,10 @@ def _sapisid_hash(sapisid: str, origin: str) -> str:
 
 
 async def resolve_gaia_id(email: str, cookies: dict[str, str]) -> str | None:
-    """Gmail address → Gaia ID. Exported so the enricher can call it directly."""
+    """Resolve a Gmail address to its Gaia ID via Google's people-pa API."""
     sapisid = cookies.get("SAPISID") or cookies.get("__Secure-1PAPISID") or ""
     if not sapisid:
-        _log("[google_maps] no SAPISID cookie found")
+        _log("[google_id] no SAPISID cookie found")
         return None
 
     headers = {
@@ -90,50 +85,43 @@ async def resolve_gaia_id(email: str, cookies: dict[str, str]) -> str | None:
     try:
         async with httpx.AsyncClient(cookies=cookies, timeout=15.0) as client:
             resp = await client.get(_PEOPLE_URL, params=params, headers=headers)
-        _log(f"[google_maps] people-lookup HTTP {resp.status_code}")
+        _log(f"[google_id] people-lookup HTTP {resp.status_code}")
 
         if resp.status_code != 200:
-            _log(f"[google_maps] response: {resp.text[:400]}")
+            _log(f"[google_id] response: {resp.text[:400]}")
             return None
 
         data = resp.json()
         people = data.get("people") or {}
         if isinstance(people, dict) and people:
             gaia_id = next(iter(people))
-            _log(f"[google_maps] Gaia ID → {gaia_id}")
+            _log(f"[google_id] {email} → {gaia_id}")
             return gaia_id
         matches = data.get("matches") or []
         if matches:
             ids = matches[0].get("personId") or []
             if ids:
-                _log(f"[google_maps] Gaia ID (matches) → {ids[0]}")
+                _log(f"[google_id] {email} → {ids[0]} (from matches)")
                 return str(ids[0])
 
-        _log(f"[google_maps] unexpected shape: {json.dumps(data)[:300]}")
+        _log(f"[google_id] no result for {email}: {json.dumps(data)[:200]}")
         return None
 
     except Exception as e:  # noqa: BLE001
-        _log(f"[google_maps] people-lookup error: {e}")
+        _log(f"[google_id] lookup error: {e}")
         return None
 
 
-class GoogleMapsModule:
-    """Resolves Gmail → Gaia ID and writes it to context.
-
-    Downstream modules (google_maps_reviews) declare requires=("gaia_id",)
-    and will run in the next wave once this patch is applied.
-    """
-
-    name = "google_maps"
+class GoogleIdModule:
+    name = "google_id"
     requires: tuple[str, ...] = ("email",)
 
     async def run(self, ctx: Context) -> ModuleResult:
-        # If the Gaia ID is already in context (supplied in the Case), skip.
         if ctx.gaia_id:
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                summary=f"Gaia ID already known: {ctx.gaia_id}",
+                summary=f"Gaia ID already in context: {ctx.gaia_id}",
             )
 
         cookies = _load_cookies()
@@ -141,17 +129,12 @@ class GoogleMapsModule:
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                gaps=[
-                    "GOOGLE_SESSION_COOKIES not set. "
-                    "Copy from Chrome DevTools → Application → Cookies → google.com "
-                    "into .env as: GOOGLE_SESSION_COOKIES={\"SID\":\"...\", ...}"
-                ],
+                gaps=["GOOGLE_SESSION_COOKIES not set in .env"],
             )
 
         email = ctx.email or ""
-        _log(f"[google_maps] resolving Gaia ID for {email}")
-
         gaia_id = await resolve_gaia_id(email, cookies)
+
         if not gaia_id:
             return ModuleResult(
                 name=self.name,
@@ -160,18 +143,16 @@ class GoogleMapsModule:
                 raw={"email": email},
             )
 
-        maps_url = _MAPS_CONTRIB.format(gaia_id=gaia_id)
-
         return ModuleResult(
             name=self.name,
             status="ok",
-            summary=f"Resolved {email} → Gaia ID {gaia_id}",
+            summary=f"{email} → Gaia ID {gaia_id}",
             ctx_patch=ContextPatch(
                 gaia_id=AttributedValue(
                     value=gaia_id,
-                    source=maps_url,
+                    source=f"https://www.google.com/maps/contrib/{gaia_id}",
                     confidence=1.0,
                 )
             ),
-            raw={"email": email, "gaia_id": gaia_id, "maps_url": maps_url},
+            raw={"email": email, "gaia_id": gaia_id},
         )
