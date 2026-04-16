@@ -266,9 +266,6 @@ async def generate_llm_summary(
             max_tokens=MAX_TOKENS,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_prompt}],
-            output_config={
-                "format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}
-            },
         )
     except anthropic.APIError as e:
         _log(f"[llm_summary] API error: {e}")

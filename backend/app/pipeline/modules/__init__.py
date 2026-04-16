@@ -23,6 +23,7 @@ from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
 from app.pipeline.modules.instagram_check import InstagramCheckModule
 from app.pipeline.modules.jooble import JoobleModule
+from app.pipeline.modules.lead_verification import LeadVerificationModule
 from app.pipeline.modules.linkedin import LinkedInModule
 from app.pipeline.modules.nosint import NosintModule
 from app.pipeline.modules.osint_web import OsintWebModule
@@ -31,6 +32,7 @@ from app.pipeline.modules.twitter_check import TwitterCheckModule
 from app.pipeline.modules.twitter import TwitterModule
 from app.pipeline.modules.twitter_vu import TwitterVuModule
 from app.pipeline.modules.uber_hint import UberHintModule
+from app.pipeline.modules.vision_batch import VisionBatchModule
 from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
@@ -46,6 +48,7 @@ REGISTRY: list[Module] = [
     InstagramModule(),
     InstagramCheckModule(),
     JoobleModule(),
+    LeadVerificationModule(),
     LinkedInModule(),
     NosintModule(),
     OsintWebModule(),
@@ -54,5 +57,6 @@ REGISTRY: list[Module] = [
     TwitterModule(),
     TwitterVuModule(),
     UberHintModule(),
+    VisionBatchModule(),
     XposedOrNotModule(),
 ]

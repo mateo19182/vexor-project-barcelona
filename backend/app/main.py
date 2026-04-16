@@ -1,16 +1,19 @@
 import asyncio
+import csv
+import io
 import json
 import re
 import sys
 from pathlib import Path
 from typing import Annotated, Any
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
+from pydantic import BaseModel
 
 from app.config import settings
-from app.models import Case, EnrichmentResponse
+from app.models import Case, EnrichmentResponse, LeadVerification, Signal
 from app.pipeline.audit import AuditLog, write_run_log
 from app.pipeline.base import context_from_case
 from app.pipeline.modules import REGISTRY
@@ -98,6 +101,9 @@ async def run_enrichment(
     # a single-module dossier isn't worth summarizing. Full runs still get it.
     llm_summary = None if only is not None else await generate_llm_summary(ctx, dossier)
 
+    # Extract lead verification from its module result (if it ran).
+    lead_verification = _extract_lead_verification(results)
+
     status = "enriched" if any(r.status == "ok" for r in results) else "no_data"
 
     response = EnrichmentResponse(
@@ -106,6 +112,7 @@ async def run_enrichment(
         dossier=dossier,
         enriched_dossier=enriched,
         llm_summary=llm_summary,
+        lead_verification=lead_verification,
         modules=results,
         audit_log=audit.events,
     )
@@ -118,6 +125,22 @@ async def run_enrichment(
         print(f"[audit] failed to write run log: {e}", file=sys.stderr, flush=True)
 
     return response
+
+
+def _extract_lead_verification(results: list) -> LeadVerification | None:
+    """Pull the structured verification report from the lead_verification module."""
+    for r in results:
+        if getattr(r, "name", None) == "lead_verification" and r.status == "ok":
+            v = (r.raw or {}).get("verification")
+            if v:
+                return LeadVerification(
+                    quality=v.get("quality", "unknown"),
+                    score=v.get("score", 0.0),
+                    summary=v.get("summary", ""),
+                    checks=v.get("checks", []),
+                    cross_checks=v.get("cross_checks", []),
+                )
+    return None
 
 
 @app.post("/enrich", response_model=EnrichmentResponse)
@@ -299,3 +322,112 @@ def get_run(case_id: str, filename: str) -> Any:
     if not path.is_file():
         raise HTTPException(status_code=404, detail="run not found")
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+# ── CSV import ────────────────────────────────────────────────────────────
+
+
+# PII columns → (signal_kind, signal_tag)
+_CSV_SIGNAL_COLUMNS: dict[str, tuple[str, str | None]] = {
+    "name": ("name", None),
+    "email": ("contact", "email"),
+    "email_2": ("contact", "email"),
+    "phone": ("contact", "phone"),
+    "phone_2": ("contact", "phone"),
+    "twitter": ("contact", "twitter"),
+    "instagram": ("contact", "instagram"),
+    "instagram_2": ("contact", "instagram"),
+    "linkedin": ("contact", "linkedin"),
+    "address": ("address", None),
+}
+
+
+def _row_to_case(row: dict[str, str]) -> Case:
+    """Convert one CSV row into a Case with signals."""
+    signals: list[Signal] = []
+    for col, (kind, tag) in _CSV_SIGNAL_COLUMNS.items():
+        val = (row.get(col) or "").strip()
+        if not val:
+            continue
+        signals.append(Signal(
+            kind=kind,
+            tag=tag,
+            value=val,
+            source="csv_import",
+            confidence=1.0,
+        ))
+
+    # Parse numeric/optional Case fields
+    def _float(key: str) -> float | None:
+        v = (row.get(key) or "").strip()
+        try:
+            return float(v) if v else None
+        except ValueError:
+            return None
+
+    def _int(key: str) -> int | None:
+        v = (row.get(key) or "").strip()
+        try:
+            return int(v) if v else None
+        except ValueError:
+            return None
+
+    return Case(
+        case_id=row.get("case_id", "").strip() or "unknown",
+        country=row.get("country", "").strip() or None,
+        debt_eur=_float("debt_eur"),
+        debt_origin=row.get("debt_origin", "").strip() or None,
+        debt_age_months=_int("debt_age_months"),
+        call_attempts=_int("call_attempts"),
+        call_outcome=row.get("call_outcome", "").strip() or None,
+        legal_asset_finding=row.get("legal_asset_finding", "").strip() or None,
+        signals=signals,
+        context=row.get("context", "").strip() or None,
+    )
+
+
+class CsvBatchResponse(BaseModel):
+    total: int
+    results: list[EnrichmentResponse]
+
+
+@app.post("/enrich-csv", response_model=CsvBatchResponse)
+async def enrich_csv(
+    file: UploadFile,
+    fresh: Annotated[bool, Query()] = True,
+) -> CsvBatchResponse:
+    """Upload a CSV file and enrich every row sequentially.
+
+    The CSV must have a header row. Standard columns (case_id, country,
+    debt_eur, …) map to Case fields. PII columns (name, email, phone,
+    twitter, instagram, linkedin, address) become input signals.
+
+    Rows are processed one at a time so logs stay readable.
+    """
+    raw = await file.read()
+    text = raw.decode("utf-8-sig")  # handle BOM from Excel exports
+    reader = csv.DictReader(io.StringIO(text))
+    rows = list(reader)
+    if not rows:
+        raise HTTPException(status_code=400, detail="CSV is empty or has no data rows")
+
+    print(
+        f"[csv] processing {len(rows)} lead(s) from {file.filename}",
+        file=sys.stderr, flush=True,
+    )
+
+    results: list[EnrichmentResponse] = []
+    for i, row in enumerate(rows, 1):
+        case = _row_to_case(row)
+        print(
+            f"[csv] ({i}/{len(rows)}) enriching {case.case_id}...",
+            file=sys.stderr, flush=True,
+        )
+        resp = await run_enrichment(case, fresh=fresh)
+        results.append(resp)
+        print(
+            f"[csv] ({i}/{len(rows)}) {case.case_id} → {resp.status}",
+            file=sys.stderr, flush=True,
+        )
+
+    return CsvBatchResponse(total=len(results), results=results)

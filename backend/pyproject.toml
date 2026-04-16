@@ -16,6 +16,7 @@ dependencies = [
     "beautifulsoup4>=4.12",
     "twscrape>=0.14",
     "sherlock-project>=0.14",
+    "python-multipart>=0.0.26",
 ]
 
 [project.scripts]

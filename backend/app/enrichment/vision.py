@@ -47,7 +47,11 @@ async def _call_openrouter(
     model: str = VISION_MODEL,
     json_mode: bool = True,
 ) -> str:
-    """POST to OpenRouter chat completions. Returns the message content string."""
+    """POST to OpenRouter chat completions. Returns the message content string.
+
+    Automatically retries with FALLBACK_MODEL if the primary model returns a
+    4xx/5xx error (e.g. model unavailable or overloaded).
+    """
     payload: dict = {
         "model": model,
         "messages": messages,
@@ -64,12 +68,28 @@ async def _call_openrouter(
     }
 
     async with httpx.AsyncClient(timeout=REQUEST_TIMEOUT_S) as client:
-        resp = await client.post(
-            f"{OPENROUTER_BASE}/chat/completions",
-            json=payload,
-            headers=headers,
-        )
-        resp.raise_for_status()
+        try:
+            resp = await client.post(
+                f"{OPENROUTER_BASE}/chat/completions",
+                json=payload,
+                headers=headers,
+            )
+            resp.raise_for_status()
+        except httpx.HTTPStatusError as exc:
+            if model != FALLBACK_MODEL:
+                _log(
+                    f"[vision] primary model {model} failed "
+                    f"(HTTP {exc.response.status_code}), retrying with {FALLBACK_MODEL}"
+                )
+                payload["model"] = FALLBACK_MODEL
+                resp = await client.post(
+                    f"{OPENROUTER_BASE}/chat/completions",
+                    json=payload,
+                    headers=headers,
+                )
+                resp.raise_for_status()
+            else:
+                raise
         data = resp.json()
     return data["choices"][0]["message"]["content"]
 
