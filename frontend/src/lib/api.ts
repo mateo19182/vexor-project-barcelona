@@ -44,8 +44,21 @@ export function buildCase(fields: {
   }
 }
 
-export async function submitCase(payload: CasePayload): Promise<EnrichmentResponse> {
-  const res = await fetch(`${API_BASE}/enrich`, {
+export interface ModuleInfo {
+  name: string
+  requires: string[]
+}
+
+export async function fetchModules(): Promise<ModuleInfo[]> {
+  const res = await fetch(`${API_BASE}/modules`)
+  if (!res.ok) throw new Error(`Failed to fetch modules: ${res.status}`)
+  const data = await res.json()
+  return data.modules
+}
+
+export async function submitCase(payload: CasePayload, only?: string[]): Promise<EnrichmentResponse> {
+  const params = only ? '?' + only.map(m => `only=${encodeURIComponent(m)}`).join('&') : ''
+  const res = await fetch(`${API_BASE}/enrich${params}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
