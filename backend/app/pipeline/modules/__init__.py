@@ -14,6 +14,7 @@ from app.pipeline.base import Module
 from app.pipeline.modules.boe import BoeModule
 from app.pipeline.modules.borme import BormeModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
+from app.pipeline.modules.github_check import GithubCheckModule
 from app.pipeline.modules.google_id import GoogleIdModule
 from app.pipeline.modules.google_maps_reviews import GoogleMapsReviewsModule
 from app.pipeline.modules.icloud_check import ICloudCheckModule
@@ -25,24 +26,20 @@ from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.property import PropertyModule
 from app.pipeline.modules.twitter_check import TwitterCheckModule
 from app.pipeline.modules.twitter_enrich import TwitterEnrichModule
-from app.pipeline.modules.nosint import NosintModule
 from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
     BoeModule(),
     BormeModule(),
     BreachScoutModule(),
+    GithubCheckModule(),
     GoogleIdModule(),
     GoogleMapsReviewsModule(),
     ICloudCheckModule(),
     ImageSearchModule(),
     InstagramModule(),
     InstagramCheckModule(),
-<<<<<<< HEAD
-    NosintModule(),
-=======
     LinkedInModule(),
->>>>>>> 0c9f1f1 (linkedin scraper module)
     OsintWebModule(),
     PropertyModule(),
     TwitterCheckModule(),

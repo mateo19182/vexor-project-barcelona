@@ -1,12 +1,16 @@
 """LinkedIn enrichment via LinkdAPI (https://linkdapi.com).
 
 Two endpoints are used:
-  * ``/api/v1/profile/overview?username=<handle>`` — basic profile info.
-  * ``/api/v1/profile/details?urn=<urn>`` — richer details (headline,
-    summary, location, verification) when the overview surfaces a URN.
+  * ``/api/v1/profile/overview?username=<slug>`` — basic profile info;
+    returns the URN we need for the details call.
+  * ``/api/v1/profile/details?urn=<urn>`` — richer details: about text,
+    featured posts, positions, etc.
 
-Returns plain dicts; on failure returns ``{"error": ...}`` so the pipeline
-module can translate into gaps without catching exceptions.
+Both endpoints wrap the payload as
+``{success, statusCode, message, errors, data}``; we unwrap ``data`` here
+so callers see the fields directly. On HTTP / parse failure we return a
+dict containing ``{"error": ..., "detail": ...}`` under whichever key
+failed, never raising.
 """
 
 from __future__ import annotations
@@ -15,7 +19,7 @@ import re
 
 import httpx
 
-_BASE = "https://api.linkdapi.com/api/v1"
+_BASE = "https://linkdapi.com/api/v1"
 _USERNAME_RE = re.compile(r"linkedin\.com/in/([^/?#]+)", re.IGNORECASE)
 
 
@@ -27,7 +31,10 @@ def extract_username(linkedin_url: str) -> str | None:
     return m.group(1).strip().rstrip("/") if m else None
 
 
-async def _get(client: httpx.AsyncClient, path: str, params: dict, api_key: str) -> dict:
+async def _get(
+    client: httpx.AsyncClient, path: str, params: dict, api_key: str
+) -> dict:
+    """GET + unwrap LinkdAPI's ``data`` envelope. Errors come back as dicts."""
     try:
         r = await client.get(
             f"{_BASE}{path}",
@@ -37,26 +44,39 @@ async def _get(client: httpx.AsyncClient, path: str, params: dict, api_key: str)
         )
     except httpx.HTTPError as exc:
         return {"error": "http_error", "detail": str(exc)}
-    if r.status_code >= 400:
+
+    try:
+        body = r.json()
+    except ValueError:
         return {
-            "error": "api_error",
+            "error": "bad_json",
             "status": r.status_code,
             "detail": r.text[:500],
         }
-    try:
-        return r.json()
-    except ValueError:
-        return {"error": "bad_json", "detail": r.text[:500]}
+
+    if r.status_code >= 400 or not body.get("success"):
+        return {
+            "error": "api_error",
+            "status": r.status_code,
+            "detail": body.get("message") or str(body)[:500],
+        }
+
+    return body.get("data") or {}
 
 
 async def enrich_linkedin(linkedin_url: str, api_key: str) -> dict:
-    """Fetch LinkdAPI overview (+ details when a URN is returned)."""
+    """Fetch LinkdAPI overview (+ details when the URN is available)."""
     username = extract_username(linkedin_url)
     if not username:
-        return {"error": "bad_url", "detail": f"could not parse slug from {linkedin_url!r}"}
+        return {
+            "error": "bad_url",
+            "detail": f"could not parse slug from {linkedin_url!r}",
+        }
 
     async with httpx.AsyncClient() as client:
-        overview = await _get(client, "/profile/overview", {"username": username}, api_key)
+        overview = await _get(
+            client, "/profile/overview", {"username": username}, api_key
+        )
 
         if "error" in overview:
             return {
@@ -66,7 +86,7 @@ async def enrich_linkedin(linkedin_url: str, api_key: str) -> dict:
                 "details": None,
             }
 
-        urn = overview.get("urn") or overview.get("profileUrn") or overview.get("id")
+        urn = overview.get("urn")
         details: dict | None = None
         if urn:
             details = await _get(client, "/profile/details", {"urn": urn}, api_key)

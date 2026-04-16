@@ -45,6 +45,8 @@ class Settings(BaseSettings):
     twitter_check_api_key: str = ""
     icloud_check_port: str = ""
     icloud_check_api_key: str = ""
+    github_check_port: str = "19185"
+    github_check_api_key: str = "932b5bf7-a59b-4850-83f2-9ca80cccc509"
 
     # Per-run log directory. Each call to `enrich()` drops a JSON dump of the
     # full response (dossier + modules + audit events) at
