@@ -24,11 +24,22 @@ _USERNAME_RE = re.compile(r"linkedin\.com/in/([^/?#]+)", re.IGNORECASE)
 
 
 def extract_username(linkedin_url: str) -> str | None:
-    """Pull the vanity slug out of a linkedin.com/in/<slug> URL."""
+    """Pull the vanity slug out of a linkedin.com/in/<slug> URL or bare slug.
+
+    Accepts both full URLs (``https://linkedin.com/in/john-doe``) and bare
+    slugs (``john-doe``) — the runner stores the handle (bare slug) as the
+    signal value, while the full URL lives in ``signal.source``.
+    """
     if not linkedin_url:
         return None
     m = _USERNAME_RE.search(linkedin_url)
-    return m.group(1).strip().rstrip("/") if m else None
+    if m:
+        return m.group(1).strip().rstrip("/")
+    # Bare slug: no slashes, no spaces, looks like a LinkedIn vanity name
+    stripped = linkedin_url.strip().rstrip("/")
+    if stripped and "/" not in stripped and " " not in stripped:
+        return stripped
+    return None
 
 
 async def _get(

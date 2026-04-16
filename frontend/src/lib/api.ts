@@ -37,9 +37,16 @@ export function buildCase(fields: {
     signals.push({ kind: 'address', value: fields.address, source: 'case_input', confidence: 1.0 })
   }
 
+  // Infer country from address
+  const addrLower = fields.address.toLowerCase()
+  const esKeywords = ['spain', 'españa', 'espana', ', es', 'madrid', 'barcelona',
+    'valencia', 'sevilla', 'bilbao', 'málaga', 'malaga', 'zaragoza', 'murcia',
+    'vigo', 'coruña', 'galicia', 'cataluña', 'euskadi']
+  const country = esKeywords.some(kw => addrLower.includes(kw)) ? 'ES' : null
+
   return {
     case_id: fields.name.toLowerCase().replace(/\s+/g, '_') || 'unknown',
-    country: null,
+    country,
     signals,
     context: '',
   }

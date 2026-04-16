@@ -1,0 +1,163 @@
+{
+  "case_id": "test-pedro",
+  "status": "enriched",
+  "dossier": {
+    "summary": "GAIA enrichment for 109807121807838897737. Name: Pedro Cao. Reviewed places: Xuxes CBD, Restaurante Cambalache - Concepción Arenal.",
+    "facts": [],
+    "signals": [
+      {
+        "kind": "lifestyle",
+        "value": "Google Maps review: Xuxes CBD (5★)",
+        "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+        "confidence": 0.85,
+        "notes": "Llevo varios meses comprando aquí y siempre ha sido una experiencia de 10. Los productos llegan rápido y bien empaquetados. La atención postventa es excelente, siempre dispuestos a ayudar."
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Google Maps review: Restaurante Cambalache - Concepción Arenal (5★) — Hace 8 años",
+        "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+        "confidence": 0.85,
+        "notes": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno."
+      }
+    ],
+    "gaps": [
+      "No public photos found on the contributor page"
+    ]
+  },
+  "llm_summary": {
+    "summary": "Pedro Cao has left Google Maps reviews for two establishments: Xuxes CBD and Restaurante Cambalache - Concepción Arenal. No case details (debt amount, country, debt age, call history, or legal asset findings) are available for this file, and enrichment data is limited to these two review signals with no employment, location, or asset information confirmed.",
+    "key_facts": [
+      "Debtor name: Pedro Cao",
+      "Left a 5-star review for Xuxes CBD, noting fast delivery and good after-sales service",
+      "Left a 5-star review for Restaurante Cambalache - Concepción Arenal approximately 8 years ago",
+      "No confirmed debt amount, country, or debt age on file",
+      "No confirmed call history or legal asset findings on file"
+    ]
+  },
+  "modules": [
+    {
+      "name": "gaia_enrichment",
+      "status": "ok",
+      "summary": "GAIA enrichment for 109807121807838897737. Name: Pedro Cao. Reviewed places: Xuxes CBD, Restaurante Cambalache - Concepción Arenal.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "lifestyle",
+          "value": "Google Maps review: Xuxes CBD (5★)",
+          "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+          "confidence": 0.85,
+          "notes": "Llevo varios meses comprando aquí y siempre ha sido una experiencia de 10. Los productos llegan rápido y bien empaquetados. La atención postventa es excelente, siempre dispuestos a ayudar."
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Google Maps review: Restaurante Cambalache - Concepción Arenal (5★) — Hace 8 años",
+          "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+          "confidence": 0.85,
+          "notes": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno."
+        }
+      ],
+      "gaps": [
+        "No public photos found on the contributor page"
+      ],
+      "raw": {
+        "gaia_id": "109807121807838897737",
+        "profile_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+        "name": "Pedro Cao",
+        "profile_pic_url": "https://lh3.googleusercontent.com/a/ACg8ocL-ORl7mqC4cIHzzDqZMOiZZFUWjvuyEBCKu2D9g42TiaVVY1s=w72-h72-p-rp-mo-br100",
+        "stats": {
+          "reviews_count": 0,
+          "photos_count": 0,
+          "points": 0,
+          "local_guides_level": 2
+        },
+        "reviews": [
+          {
+            "place": "Xuxes CBD",
+            "rating": "5",
+            "text": "Llevo varios meses comprando aquí y siempre ha sido una experiencia de 10. Los productos llegan rápido y bien empaquetados. La atención postventa es excelente, siempre dispuestos a ayudar.",
+            "time_ago": "",
+            "place_url": "",
+            "source_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews"
+          },
+          {
+            "place": "Restaurante Cambalache - Concepción Arenal",
+            "rating": "5",
+            "text": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno.",
+            "time_ago": "Hace 8 años",
+            "place_url": "",
+            "source_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews"
+          }
+        ],
+        "photos": [],
+        "total_reviews": 2,
+        "gaps": [
+          "No public photos found on the contributor page"
+        ]
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null,
+        "twitter_handle": null,
+        "gaia_id": null
+      },
+      "duration_s": 21.797362999990582
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.4833000022917986e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 1 module(s): ['gaia_enrichment']",
+      "detail": {
+        "modules": [
+          "gaia_enrichment"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 7.329200161620975e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['gaia_enrichment']",
+      "detail": {
+        "modules": [
+          "gaia_enrichment"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 21.797589167021215,
+      "module": "gaia_enrichment",
+      "wave": 1,
+      "message": "ok in 21.80s (2 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 21.797362999990582,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 21.798352874990087,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

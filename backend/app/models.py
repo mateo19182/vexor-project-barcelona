@@ -130,18 +130,26 @@ class Dossier(BaseModel):
 class LlmSummary(BaseModel):
     """LLM-generated factual summary of the dossier for downstream consumers.
 
-    Just the relevant verified info about the debtor and the case, pulled
-    from the full Dossier and condensed by the LLM. No call coaching, no
-    suggested phrasing — only facts a consumer (e.g. the voice agent) reads
-    as context.
+    Structured for a human collector: executive brief, approach context,
+    confidence assessment, key facts, and unanswered questions.
     """
 
-    summary: str = Field(
+    executive_brief: str = Field(
         description=(
-            "Prose summary of who this person is and what the case looks "
-            "like — only verified, sourced info. Length scales with dossier "
-            "richness."
+            "3-5 lines: who this person is, what the debt looks like, "
+            "and what we know. Readable in 10 seconds."
         )
+    )
+    approach_context: str = Field(
+        default="",
+        description=(
+            "Relevant context for the call: lifestyle indicators, economic "
+            "signals, conversational entry points. Facts only."
+        ),
+    )
+    confidence_level: str = Field(
+        default="low",
+        description="How much we actually know: high, moderate, or low.",
     )
     key_facts: list[str] = Field(
         default_factory=list,
@@ -150,6 +158,100 @@ class LlmSummary(BaseModel):
             "current location, employer, known handles, prior call history. "
             "One fact per bullet."
         ),
+    )
+    unanswered_questions: list[str] = Field(
+        default_factory=list,
+        description=(
+            "Key questions a collector would want answered that the "
+            "enrichment could not resolve."
+        ),
+    )
+
+    # Backward compat: expose a flat `summary` for anything that reads it.
+    @property
+    def summary(self) -> str:
+        return self.executive_brief
+
+
+# ---------------------------------------------------------------------------
+# Enriched Dossier — structured output for the collector dashboard
+# ---------------------------------------------------------------------------
+
+
+class SubjectProfile(BaseModel):
+    """Confirmed identity of the subject, assembled from signals."""
+
+    name: str = ""
+    aliases: list[str] = Field(default_factory=list)
+    location: str | None = None
+    country: str | None = None
+    phones: list[str] = Field(default_factory=list)
+    emails: list[str] = Field(default_factory=list)
+    social_handles: dict[str, str] = Field(
+        default_factory=dict,
+        description="platform -> handle, e.g. {'github': 'pedroko22'}",
+    )
+
+
+class ContactChannel(BaseModel):
+    """A prioritized contact channel for the collector."""
+
+    channel: str = Field(description="phone, email, instagram, twitter, etc.")
+    value: str
+    verified_on: list[str] = Field(
+        default_factory=list,
+        description="Platforms where this identifier is confirmed registered.",
+    )
+    confidence: float = Field(ge=0.0, le=1.0)
+    notes: str | None = None
+
+
+class IntelligenceItem(BaseModel):
+    """A categorized intelligence finding."""
+
+    category: str = Field(
+        description="identity, location, employment, lifestyle, financial, digital, risk"
+    )
+    finding: str
+    source: str
+    confidence: float = Field(ge=0.0, le=1.0)
+    actionable: bool = Field(
+        default=False,
+        description="Whether the collector can act on this finding.",
+    )
+
+
+class EnrichedDossier(BaseModel):
+    """What the collector sees — prioritized and actionable.
+
+    Replaces the flat Dossier as the primary frontend payload. The raw
+    Dossier is still kept internally for the LLM summary step.
+    """
+
+    subject: SubjectProfile
+    case_summary: str = Field(description="2-3 lines: debt + history snapshot.")
+    digital_footprint: str = Field(
+        default="minimal",
+        description="minimal, moderate, or extensive.",
+    )
+    contact_channels: list[ContactChannel] = Field(default_factory=list)
+    intelligence: list[IntelligenceItem] = Field(default_factory=list)
+    risk_flags: list[str] = Field(default_factory=list)
+    platform_registrations: list[str] = Field(
+        default_factory=list,
+        description="Platforms the subject is confirmed registered on.",
+    )
+    gaps: list[str] = Field(
+        default_factory=list,
+        description="Intelligence gaps — what we couldn't find out.",
+    )
+    technical_issues: list[str] = Field(
+        default_factory=list,
+        description="Infra / module errors — not shown prominently.",
+    )
+    module_coverage: dict[str, str] = Field(
+        default_factory=dict,
+        description="module_name -> status (ok/error/skipped/no_data).",
     )
 
 
@@ -184,6 +286,7 @@ class EnrichmentResponse(BaseModel):
     case_id: str
     status: str = "received"
     dossier: Dossier | None = None
+    enriched_dossier: EnrichedDossier | None = None
     llm_summary: LlmSummary | None = None
     modules: list[Any] = []
     audit_log: list[AuditEvent] = []

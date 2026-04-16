@@ -12,7 +12,7 @@ export async function streamEnrich(
   casePayload: unknown,
   callbacks: StreamCallbacks
 ): Promise<void> {
-  const res = await fetch(`${BASE}/enrich/stream`, {
+  const res = await fetch(`${BASE}/enrich/stream?fresh=true`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(casePayload),

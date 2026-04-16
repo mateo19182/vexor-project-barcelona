@@ -1,7 +1,6 @@
 """Google Maps Reviews module.
 
-Input  → ctx.gaia_id  (set directly via Case.google_id, or written by the
-                        google_maps resolver if an email is provided instead)
+Input  → ctx.gaia_id  (set directly via Case.google_id in the case seed)
 Output → raw JSON list of reviews + lifestyle signals
 
 Each review: { place, rating, text, time_ago, place_url, source_url }

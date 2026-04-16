@@ -1,0 +1,3625 @@
+{
+  "case_id": "pedro_cao_eiriz",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Found 30 social profile(s) via Brave search Found in 2 breach record(s) | 1 new phone(s) discovered: 77.27.5.101 | Aliases/usernames: pedroko22 pedrocaoeiriz@gmail.com is registered on GitHub. pedrocaoeiriz@gmail.com -> Google Gaia ID 109807121807838897737 pedrocaoeiriz@gmail.com is NOT registered on iCloud. | +34617758559 is registered on iCloud. Email found on 5 platform(s) | 2 breach/leak hit(s) No confirmed public profiles found for Pedro Cao Eiriz matching the provided identifiers. Extensive searches across web, social media, LinkedIn, Spanish business registries, and people-search databases returned no results linking the name, email (pedrocaoeiriz@gmail.com), phone (+34617758559), or address (Passeig Maragall 13, Entresuelo 1, 08026 Barcelona) to any publicly indexed individual. pedrocaoeiriz@gmail.com is NOT registered on Uber. | +34617758559 registered on Uber; email=p******z@gmail.com Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018 GAIA enrichment for 109807121807838897737. Name: Pedro Cao. Contributor: 1 reviews, 0 ratings, 2 photos, Local Guides level 2. Reviewed places: Restaurante Cambalache - Concepción Arenal. Found 3 public photo(s). Could not resolve Instagram profile picture URL for @pedroca; reverse-image search skipped. Could not retrieve any Instagram data for @pedroca. @pedroca is a valid Twitter/X user; name=Pedroca Monteiro.",
+    "facts": [
+      {
+        "claim": "Identity found in 2 breach record(s) in the breach intelligence database",
+        "source": "https://9ghz.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Email active on 7 platform(s) out of 43 checked: account.microsoft.com, Breach Check v2, leakcheck.io, multi, kucoin.com, adobe.com, adobe.com",
+        "source": "https://nosint.org",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Moderate (28/100)",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Google Maps contributor stats: 1 reviews, 2 photos, Local Guides level 2",
+        "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+        "confidence": 0.9
+      }
+    ],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "Debtor identifiers found in 2 breach record(s)",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "notes": "Breaches: Taringa, 8fit, taringa.net, 8fit.com",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "77.27.5.101",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "pedroko22",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "notes": "Username / alias found in breach records — may correspond to social profiles",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "GitHub account registered to pedrocaoeiriz@gmail.com",
+        "source": "platform_check:github_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: REGISTERED",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "109807121807838897737",
+        "source": "platform_check:google_gaia_check",
+        "confidence": 1.0,
+        "notes": "Google account registered to pedrocaoeiriz@gmail.com",
+        "tag": "gaia_id"
+      },
+      {
+        "kind": "contact",
+        "value": "iCloud account registered to +34617758559",
+        "source": "platform_check:icloud_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: SUCCESS",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "account.microsoft.com",
+        "source": "https://account.microsoft.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Microsoft Account Recovery; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Breach Check v2",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Breach Check v2; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Leak Check",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Leak Check; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "multi",
+        "source": "https://multi",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Multi-site Account; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "kucoin.com",
+        "source": "https://kucoin.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: KuCoin; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "adobe.com",
+        "source": "https://adobe.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Adobe T2E; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "nosint",
+        "source": "https://nosint.org",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "location",
+        "value": "Passeig Maragall 13, Entresuelo 1, 08026 Barcelona, ES",
+        "source": "https://barcelona.callejero.net/passeig-maragall.html",
+        "confidence": 0.6,
+        "notes": "Address provided as identity anchor; postal code 08026 corresponds to the Camp de l'Arpa del Clot / Sant Martí district of Barcelona. No public source independently corroborates this address for the subject.",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "osint_web",
+        "source": "osint_web",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "contact",
+        "value": "Uber account registered to +34617758559",
+        "source": "platform_check:uber_hint",
+        "confidence": 0.85,
+        "notes": null,
+        "tag": "uber"
+      },
+      {
+        "kind": "contact",
+        "value": "p******z@gmail.com",
+        "source": "platform_check:uber_hint",
+        "confidence": 0.8,
+        "notes": "Masked email from Uber (looked up via phone: +34617758559)",
+        "tag": "email_masked"
+      },
+      {
+        "kind": "contact",
+        "value": "8fit.com",
+        "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+        "confidence": 0.85,
+        "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "taringa.net",
+        "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+        "confidence": 0.85,
+        "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in Taringa breach",
+        "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+        "confidence": 0.9,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Google Maps review: Restaurante Cambalache - Concepción Arenal (5★) — Hace 8 años",
+        "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+        "confidence": 0.85,
+        "notes": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno.",
+        "tag": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Google Maps photo uploaded — Itnig Café",
+        "source": "https://lh3.googleusercontent.com/gps-cs/ACgwaOta36KFtYmrbjUTwcjwaWYGFQel-iCJ5J8CF8-A_tq_3H0Kg1drOx5aYybQ_Zpxy_6AqfdLkFSCQD1cvICQUkUhKzu6qtyta8Nd7vNl4Zsq8HDAFuNhyJMFAvKzumoQJwN2I1n3ih6RQW_O",
+        "confidence": 0.75,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Google Maps photo uploaded — unknown location",
+        "source": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7P_cfKU_jpi87YGBjaTo6j3cxYEorTn1zrCfvnQs8bBZPNy-tw7ar9Ita_C2yUzR8sjXscRdpSIlJvMOLf3_6Iqon1y8PUMojTUCH7TlLIfTUJ68zX6vhHxXA3x7N_svpOcuE",
+        "confidence": 0.75,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "name",
+        "value": "Pedroca Monteiro",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.8,
+        "notes": "Display name from Twitter/X profile @pedroca",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "https://pbs.twimg.com/profile_images/1153524310801289216/w24W30wx_normal.jpg",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.9,
+        "notes": "Twitter/X profile picture for @pedroca",
+        "tag": "photo"
+      }
+    ],
+    "gaps": [
+      "Instagram returned ambiguous status 'INVALID' for pedrocaoeiriz@gmail.com",
+      "No web-indexed presence found for 'Pedro Cao Eiriz' under any spelling variation.",
+      "Phone number +34617758559 returns no public results on any indexed platform.",
+      "Email pedrocaoeiriz@gmail.com returns no public results on any indexed platform.",
+      "A 'Carolina Cao Eiriz' (LinkedIn: Senior Client Advisor at Louis Vuitton, Madrid) shares the rare compound surname but cannot be confirmed as a relative and is a distinct individual — omitted per identity-strict-match rule.",
+      "No Spanish company registry (BORME/Einforma) results found for 'Cao Eiriz' linked to Pedro.",
+      "Instagram account @pedro_cao exists but could not be confirmed as belonging to the subject — no matching identifier found.",
+      "property enrichment solo disponible para ES (country!=ES)",
+      "Twitter returned ambiguous status 'BAN' for pedrocaoeiriz@gmail.com",
+      "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted",
+      "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python",
+      "linkedin: could not parse slug from 'pedro-pedreira'",
+      "Twitter profile @pedroca not retrievable: user_not_found",
+      "skipped: missing inputs [role]"
+    ]
+  },
+  "llm_summary": {
+    "summary": "Pedro Cao Eiriz is the subject of this case, associated with the address Passeig Maragall 13, Entresuelo 1, 08026 Barcelona, ES (Camp de l'Arpa del Clot / Sant Martí district). His contact identifiers include phone +34617758559, email pedrocaoeiriz@gmail.com, and social handles @pedroca (Instagram/Twitter) and LinkedIn slug pedro-pedreira. The email is linked to a confirmed Google account (Gaia ID 109807121807838897737) under the name Pedro Cao, and is registered on GitHub, Adobe, KuCoin, and Microsoft platforms. The phone number is registered on both iCloud and Uber; the Uber account shows a masked email p******z@gmail.com. The email appears in two data breaches (Taringa, 2017; 8fit, 2018), with exposed data including email addresses, passwords, usernames, names, genders, geographic locations, and IP addresses. One password from the Taringa breach is classified as a weak hash (easy-to-crack). Google Maps activity under this identity shows Local Guides Level 2 status with 1 review and 2 uploaded photos. A known alias/username from breach records is pedroko22. No employment, income, or asset information was found. Debt amount, origin, age, and prior call history are not recorded in the case file.",
+    "key_facts": [
+      "Name: Pedro Cao Eiriz",
+      "Phone: +34617758559",
+      "Email: pedrocaoeiriz@gmail.com",
+      "Address: Passeig Maragall 13, Entresuelo 1, 08026 Barcelona, ES (Camp de l'Arpa del Clot / Sant Martí district)",
+      "Google account confirmed: Gaia ID 109807121807838897737, display name Pedro Cao",
+      "Phone +34617758559 registered on iCloud",
+      "Phone +34617758559 registered on Uber (masked email: p******z@gmail.com)",
+      "Email registered on: GitHub, Adobe, KuCoin, Microsoft",
+      "Email found in 2 breaches: Taringa (2017) and 8fit (2018)",
+      "Breach-exposed data types: email addresses, passwords, usernames, names, genders, geographic locations, IP addresses",
+      "One weak-hash (easy-to-crack) password exposed in Taringa breach",
+      "Known alias from breach records: pedroko22",
+      "Google Maps: Local Guides Level 2, 1 review, 2 photos",
+      "Debt amount, origin, age, and prior call history: all unknown"
+    ]
+  },
+  "modules": [
+    {
+      "name": "boe",
+      "status": "no_data",
+      "summary": "No BOE entries found for 'Pedro Cao Eiriz'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.7061498339753598
+    },
+    {
+      "name": "borme",
+      "status": "no_data",
+      "summary": "No BORME entries found for 'Pedro Cao Eiriz'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.709293250052724
+    },
+    {
+      "name": "brave_social",
+      "status": "ok",
+      "summary": "Found 30 social profile(s) via Brave search",
+      "social_links": [
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/pedro-pedreira/",
+          "handle": "pedro-pedreira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/pedro-eiras-61346868/",
+          "handle": "pedro-eiras-61346868",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/pedrocerejeira/",
+          "handle": "pedrocerejeira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/pedroeiras/",
+          "handle": "pedroeiras",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/pedroeirasoficial/",
+          "handle": "pedroeirasoficial",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/pedroca/",
+          "handle": "pedroca",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/pedrocapedroca/",
+          "handle": "pedrocapedroca",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/pedrohgsiqueira/",
+          "handle": "pedrohgsiqueira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/peedropinheiro/",
+          "handle": "peedropinheiro",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/pedropedreira_/",
+          "handle": "pedropedreira_",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/pedroca",
+          "handle": "pedroca",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/pedrocerize",
+          "handle": "pedrocerize",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/pedrogoferreira?lang=en",
+          "handle": "pedrogoferreira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/pedrohgsiqueira?lang=en",
+          "handle": "pedrohgsiqueira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/pedrotmareis",
+          "handle": "pedrotmareis",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/p/Pedrooliveira-61557014173992/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/pedro.teixeira.oficial/",
+          "handle": "pedro.teixeira.oficial",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/pedro.eiras.92/",
+          "handle": "pedro.eiras.92",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/pedrofilipeoliveira/",
+          "handle": "pedrofilipeoliveira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/pedrocertezas/",
+          "handle": "pedrocertezas",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/pedrib",
+          "handle": "pedrib",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/pedroerp",
+          "handle": "pedroerp",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/PedroHenriques",
+          "handle": "PedroHenriques",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/pedroapfilho",
+          "handle": "pedroapfilho",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/pedrocostaferreira",
+          "handle": "pedrocostaferreira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@pedrohgsiqueira",
+          "handle": "@pedrohgsiqueira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@pedroallann?lang=en",
+          "handle": "@pedroallann",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@pedrocertezas",
+          "handle": "@pedrocertezas",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@pedrosvoliveira",
+          "handle": "@pedrosvoliveira",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@pedrocaoficial6",
+          "handle": "@pedrocaoficial6",
+          "confidence": 0.65
+        }
+      ],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "queries": [
+          "\"Pedro Cao Eiriz\" site:linkedin.com",
+          "\"Pedro Cao Eiriz\" site:instagram.com",
+          "\"Pedro Cao Eiriz\" site:x.com",
+          "\"Pedro Cao Eiriz\" site:facebook.com",
+          "\"Pedro Cao Eiriz\" site:github.com",
+          "\"Pedro Cao Eiriz\" site:tiktok.com",
+          "pedrocaoeiriz site:linkedin.com",
+          "pedrocaoeiriz site:instagram.com",
+          "pedrocaoeiriz site:x.com",
+          "pedrocaoeiriz site:facebook.com",
+          "pedrocaoeiriz site:github.com",
+          "pedrocaoeiriz site:tiktok.com"
+        ],
+        "links_found": 30,
+        "errors": []
+      },
+      "duration_s": 1.0666664579766802
+    },
+    {
+      "name": "breach_scout",
+      "status": "ok",
+      "summary": "Found in 2 breach record(s) | 1 new phone(s) discovered: 77.27.5.101 | Aliases/usernames: pedroko22",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Identity found in 2 breach record(s) in the breach intelligence database",
+          "source": "https://9ghz.com",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Debtor identifiers found in 2 breach record(s)",
+          "source": "https://9ghz.com",
+          "confidence": 0.85,
+          "notes": "Breaches: Taringa, 8fit, taringa.net, 8fit.com",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "77.27.5.101",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "pedroko22",
+          "source": "https://9ghz.com",
+          "confidence": 0.65,
+          "notes": "Username / alias found in breach records — may correspond to social profiles",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "keywords": [
+          "Pedro Cao Eiriz",
+          "pedrocaoeiriz@gmail.com",
+          "+34617758559"
+        ],
+        "mode": "authenticated_batch",
+        "response": {
+          "code": 0,
+          "msg": "ok",
+          "data": [
+            {
+              "data": [],
+              "keyword": "Pedro Cao Eiriz",
+              "total_count": 0
+            },
+            {
+              "data": [
+                {
+                  "email": "pedrocaoeiriz@gmail.com",
+                  "source": {
+                    "breach_date": "2017-08-01",
+                    "domain": "taringa.net",
+                    "id": "473659",
+                    "record_count": 27971100,
+                    "region": "",
+                    "title": "Taringa"
+                  },
+                  "user_name": "pedroko22"
+                },
+                {
+                  "address": "ES",
+                  "email": "pedrocaoeiriz@gmail.com",
+                  "gender": "M",
+                  "ip_address": "77.27.5.101",
+                  "real_name": "Pedro",
+                  "source": {
+                    "breach_date": "2018-07-01",
+                    "domain": "8fit.com",
+                    "id": "47485a",
+                    "record_count": 15025407,
+                    "region": "",
+                    "title": "8fit"
+                  }
+                },
+                {
+                  "email": "pedrocaoeiriz@gmail.com",
+                  "password": "$2a$10$oqf9O8daMMn33RdvdqGvCO4vjG.yv/MTz6izxlUW6CldZe0hs9Vme",
+                  "source": {
+                    "breach_date": "2018-07-01",
+                    "domain": "8fit.com",
+                    "id": "47485a",
+                    "record_count": 15025407,
+                    "region": "",
+                    "title": "8fit"
+                  }
+                }
+              ],
+              "keyword": "pedrocaoeiriz@gmail.com",
+              "total_count": 3
+            },
+            {
+              "data": [],
+              "keyword": "+34617758559",
+              "total_count": 0
+            }
+          ]
+        },
+        "status_code": 200,
+        "response_bytes": 858
+      },
+      "duration_s": 1.469976415974088
+    },
+    {
+      "name": "github_check",
+      "status": "ok",
+      "summary": "pedrocaoeiriz@gmail.com is registered on GitHub.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "GitHub account registered to pedrocaoeiriz@gmail.com",
+          "source": "platform_check:github_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: REGISTERED",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "platform": "GitHub",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "session_id": "fdadb005-5fdd-4dda-89e8-c7b4f09c84eb",
+        "error": null
+      },
+      "duration_s": 1.4662354169995524
+    },
+    {
+      "name": "google_gaia_check",
+      "status": "ok",
+      "summary": "pedrocaoeiriz@gmail.com -> Google Gaia ID 109807121807838897737",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "109807121807838897737",
+          "source": "platform_check:google_gaia_check",
+          "confidence": 1.0,
+          "notes": "Google account registered to pedrocaoeiriz@gmail.com",
+          "tag": "gaia_id"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "pedrocaoeiriz@gmail.com",
+          "gaiaId": "109807121807838897737"
+        },
+        "error": null
+      },
+      "duration_s": 2.2398550839861855
+    },
+    {
+      "name": "icloud_check",
+      "status": "ok",
+      "summary": "pedrocaoeiriz@gmail.com is NOT registered on iCloud. | +34617758559 is registered on iCloud.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "iCloud account registered to +34617758559",
+          "source": "platform_check:icloud_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: SUCCESS",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "checks": [
+          {
+            "platform": "iCloud",
+            "identifier": "pedrocaoeiriz@gmail.com",
+            "status_raw": "FAIL",
+            "http_status": 200,
+            "session_id": "d02bb403-57d6-48c1-ab0d-ce6f4c7ed442",
+            "error": null
+          },
+          {
+            "platform": "iCloud",
+            "identifier": "+34617758559",
+            "status_raw": "SUCCESS",
+            "http_status": 200,
+            "session_id": "278e5c0f-5b40-4c24-8526-83e7c11df137",
+            "error": null
+          }
+        ]
+      },
+      "duration_s": 2.893314124958124
+    },
+    {
+      "name": "instagram_check",
+      "status": "no_data",
+      "summary": "Instagram check for pedrocaoeiriz@gmail.com was inconclusive (status: INVALID).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Instagram returned ambiguous status 'INVALID' for pedrocaoeiriz@gmail.com"
+      ],
+      "raw": {
+        "platform": "Instagram",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "INVALID",
+        "http_status": 200,
+        "session_id": "89cff319-3477-4098-bdaa-9d587c9a76ff",
+        "error": null
+      },
+      "duration_s": 0.23009504203218967
+    },
+    {
+      "name": "nosint",
+      "status": "ok",
+      "summary": "Email found on 5 platform(s) | 2 breach/leak hit(s)",
+      "social_links": [
+        {
+          "platform": "microsoft account recovery",
+          "url": "https://account.microsoft.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "multi-site account",
+          "url": "https://multi",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "kucoin",
+          "url": "https://kucoin.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "adobe t2e",
+          "url": "https://adobe.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "adobe recovery",
+          "url": "https://adobe.com",
+          "handle": null,
+          "confidence": 0.8
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Email active on 7 platform(s) out of 43 checked: account.microsoft.com, Breach Check v2, leakcheck.io, multi, kucoin.com, adobe.com, adobe.com",
+          "source": "https://nosint.org",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "account.microsoft.com",
+          "source": "https://account.microsoft.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Microsoft Account Recovery; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Breach Check v2",
+          "source": "https://nosint.org",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Breach Check v2; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Leak Check",
+          "source": "https://leakcheck.io",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Leak Check; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "multi",
+          "source": "https://multi",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Multi-site Account; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "kucoin.com",
+          "source": "https://kucoin.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: KuCoin; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "adobe.com",
+          "source": "https://adobe.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Adobe T2E; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "adobe.com",
+          "source": "https://adobe.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Adobe Recovery; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "nosint",
+          "source": "https://nosint.org",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "search_id": "3aedf851-0355-4412-9098-09f7b3847a0d",
+        "total_modules_run": 43,
+        "hits_count": 7,
+        "all_results": [
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Instagram",
+            "target_url": "instagram.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_401",
+            "start_time": "2026-04-16T06:20:19.293973Z",
+            "end_time": "2026-04-16T06:20:19.294068Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Forever21",
+            "target_url": "forever21.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "user_not_found",
+            "start_time": "2026-04-16T06:20:19.293873Z",
+            "end_time": "2026-04-16T06:20:19.293954Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Microsoft Account Recovery",
+            "target_url": "account.microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "badges_list": [
+                "Account Exists",
+                "Email Recovery"
+              ],
+              "display": {
+                "account_status": "Exists",
+                "recovery_methods": "Email Recovery"
+              },
+              "recovery_table": {
+                "email": "pedrocaoeiriz@gmail.com"
+              },
+              "_metadata": {
+                "site_icon": "https://account.microsoft.com/favicon.ico",
+                "name": "Microsoft / Outlook"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.293694Z",
+            "end_time": "2026-04-16T06:20:19.293745Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Gravatar to account",
+            "target_url": "en.gravatar.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_gravatar_profile",
+            "start_time": "2026-04-16T06:20:19.293769Z",
+            "end_time": "2026-04-16T06:20:19.293850Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Life360 email to partial phone",
+            "target_url": "life360.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T06:20:19.293591Z",
+            "end_time": "2026-04-16T06:20:19.293666Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T06:20:19.292233Z",
+            "end_time": "2026-04-16T06:20:19.293473Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T06:20:19.293498Z",
+            "end_time": "2026-04-16T06:20:19.293565Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Breach Check v2",
+            "target_url": "",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "2",
+                "unique_sources": "2"
+              },
+              "display_table": {
+                "headers": [
+                  "Email",
+                  "Username",
+                  "Hash",
+                  "Source",
+                  "Date"
+                ],
+                "values": [
+                  [
+                    "pedrocaoeiriz@gmail.com",
+                    "-",
+                    "$2a$10$oqf9O8daMMn33RdvdqGvCO4vjG.yv/MTz6izxlUW6CldZe0hs9Vme",
+                    "8fit.com",
+                    "2018-07"
+                  ],
+                  [
+                    "pedrocaoeiriz@gmail.com",
+                    "pedroko22",
+                    "-",
+                    "taringa.net",
+                    "2017"
+                  ]
+                ]
+              },
+              "badges_list": [
+                "2 breaches"
+              ],
+              "_metadata": {
+                "name": "Breach Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.291998Z",
+            "end_time": "2026-04-16T06:20:19.292068Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Leak Check",
+            "target_url": "leakcheck.io",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "2"
+              },
+              "display_table": {
+                "headers": [
+                  "Password",
+                  "Source",
+                  "Breach Date"
+                ],
+                "values": [
+                  [
+                    "el chayan01",
+                    "Taringa.net",
+                    "2017-08"
+                  ],
+                  [
+                    "N/A",
+                    "8fit.com",
+                    "2018-07"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "name": "Leak Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.292091Z",
+            "end_time": "2026-04-16T06:20:19.292187Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "OK.ru",
+            "target_url": "ok.ru",
+            "module_target": [
+              "email",
+              "phone",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T06:20:19.291884Z",
+            "end_time": "2026-04-16T06:20:19.291974Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.291802Z",
+            "end_time": "2026-04-16T06:20:19.291851Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Multi-site Account",
+            "target_url": "multi",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "total_checked": 121,
+              "found_count": 0,
+              "badges_list": [],
+              "display_table": {
+                "headers": [
+                  "Site",
+                  "Status",
+                  "Recovery Email",
+                  "Recovery Phone",
+                  "Metadata"
+                ],
+                "values": [
+                  [
+                    "about.me",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "adobe.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "amazon.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "amocrm.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "anydo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "archive.org",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "armurerieauxerre.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "atlassian.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "axonaut.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "babeshows.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "badeggsonline.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "biosmods.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "biotechnologyforums.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "bitmoji.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blablacar.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blackworldforum.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blip.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blitzortung.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "bluegrassrivals.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "bodybuilding.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "buymeacoffee.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cambridgemt.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "caringbridge.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "chinaphonearena.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "clashfarmer.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "codecademy.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "codeigniter.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "codepen.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "coroflot.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cpaelites.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cpahero.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cracked_to.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "crevado.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "deliveroo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "demonforums.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "devrant.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "diigo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "discord.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "docker.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "dominosfr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "ebay.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "ello.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "envato.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "eventbrite.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "evernote.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "fanpop.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "firefox.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "flickr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "freelancer.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "freiberg.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "garmin.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "github.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "google.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "gravatar.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "hubspot.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "imgur.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "insightly.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "instagram.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "issuu.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "koditv.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "komoot.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "laposte.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "lastfm.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "lastpass.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "mail.ru",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "mybb.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "myspace.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nattyornot.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "naturabuy.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "ndemiccreations.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nextpvr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nike.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nimble.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nocrm.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nutshell.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "odnoklassniki.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "office365.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "onlinesequencer.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "parler.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "patreon.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "pinterest.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "pipedrive.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "plurk.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "pornhub.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "proton.me",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "quora.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "rambler.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "redtube.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "replit.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "rocketreach.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "samsung.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "seoclerks.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "sevencups.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "smule.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "snapchat.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "soundcloud.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "sporcle.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "spotify.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "strava.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "taringa.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "teamleader.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "teamtreehouse.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "tellonym.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "thecardboard.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "therianguide.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "thevapingforum.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "tumblr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "tunefind.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "twitter.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "venmo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "vivino.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "voxmedia.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "vrbo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "vsco.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "wattpad.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "wordpress.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "xing.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "xnxx.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "xvideos.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "yahoo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "zoho.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_icon": "https://img.icons8.com/color/48/000000/globe.png",
+                "overwrite_category": "registered_sites",
+                "include_not_found": true
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.291712Z",
+            "end_time": "2026-04-16T06:20:19.291784Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Proton Wallet",
+            "target_url": "protonmail.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_proton_account",
+            "start_time": "2026-04-16T06:20:19.291612Z",
+            "end_time": "2026-04-16T06:20:19.291689Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Coinbase Wallet Balances",
+            "target_url": "coinbase.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "profile_not_found",
+            "start_time": "2026-04-16T06:20:19.291455Z",
+            "end_time": "2026-04-16T06:20:19.291515Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "KuCoin",
+            "target_url": "kucoin.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "registered_email": "pedrocaoeiriz@gmail.com",
+                "all_methods_found": "Google 2FA, Email, SMS",
+                "combinations_count": 3
+              },
+              "badges_list": [
+                "Google 2FA",
+                "Email",
+                "SMS"
+              ],
+              "display_table": {
+                "headers": [
+                  "Valid Recovery Combinations"
+                ],
+                "values": [
+                  [
+                    "Email, Google 2FA required"
+                  ],
+                  [
+                    "SMS, Google 2FA required"
+                  ],
+                  [
+                    "Email, SMS required"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "KuCoin",
+                "site_icon": "https://www.kucoin.com/favicon.ico",
+                "profile_url": "https://www.kucoin.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.291538Z",
+            "end_time": "2026-04-16T06:20:19.291590Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "GitHub email to users",
+            "target_url": "github.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T06:20:19.284773Z",
+            "end_time": "2026-04-16T06:20:19.284959Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Microsoft Info Exposure",
+            "target_url": "microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "connection_failed",
+            "start_time": "2026-04-16T06:20:19.291373Z",
+            "end_time": "2026-04-16T06:20:19.291431Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Plex.TV",
+            "target_url": "plex.tv",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "email_lookup_failed",
+            "start_time": "2026-04-16T06:20:19.291289Z",
+            "end_time": "2026-04-16T06:20:19.291355Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "EA.com",
+            "target_url": "ea.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_or_fetch_failed",
+            "start_time": "2026-04-16T06:20:19.291194Z",
+            "end_time": "2026-04-16T06:20:19.291271Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Adobe T2E",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "avatar_url": "https://pps.services.adobe.com/api/profile/image/default/bb99dbb8-eab4-438d-ab41-f2f9f1b8ead3/276",
+              "display": {
+                "account_type": "Individual",
+                "enterprise": "No"
+              },
+              "badges_list": [
+                "Active"
+              ],
+              "recovery_table": {
+                "email": "pedrocaoeiriz@gmail.com"
+              },
+              "display_table": {
+                "headers": [
+                  "Account Type",
+                  "Authentication Methods",
+                  "Enterprise Linked"
+                ],
+                "values": [
+                  [
+                    "Individual",
+                    "password, google",
+                    "No"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_icon": "https://www.adobe.com/favicon.ico"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.290939Z",
+            "end_time": "2026-04-16T06:20:19.291017Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Poshmark email to account",
+            "target_url": "poshmark.com",
+            "module_target": [
+              "email",
+              "name"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.290821Z",
+            "end_time": "2026-04-16T06:20:19.290896Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "HubSpot",
+            "target_url": "hubspot.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T06:20:19.290637Z",
+            "end_time": "2026-04-16T06:20:19.290726Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "IMVU email to account",
+            "target_url": "imvu.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.290744Z",
+            "end_time": "2026-04-16T06:20:19.290803Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Flickr email to account",
+            "target_url": "flickr.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.290518Z",
+            "end_time": "2026-04-16T06:20:19.290611Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.289198Z",
+            "end_time": "2026-04-16T06:20:19.289270Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Adobe Recovery",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "badges_list": [
+                "Adobe Account",
+                "Email Recovery"
+              ],
+              "display": {
+                "masked_email": "p*****z@g*****l.com",
+                "recovery_method": "Email",
+                "available_factors": "email",
+                "secondary_email": "",
+                "phone": ""
+              },
+              "display_table": {
+                "headers": [
+                  "Masked Primary Email",
+                  "Favorite Recovery",
+                  "Available Factors"
+                ],
+                "values": [
+                  [
+                    "p*****z@g*****l.com",
+                    "Email",
+                    "email"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "Adobe",
+                "site_icon": "https://www.adobe.com/favicon.ico",
+                "profile_url": "https://account.adobe.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:20:19.289294Z",
+            "end_time": "2026-04-16T06:20:19.289367Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "ImageShack",
+            "target_url": "imageshack.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T06:20:19.289106Z",
+            "end_time": "2026-04-16T06:20:19.289180Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Trello email to account",
+            "target_url": "trello.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.289004Z",
+            "end_time": "2026-04-16T06:20:19.289086Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "AutoDropship to account",
+            "target_url": "autods.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.288816Z",
+            "end_time": "2026-04-16T06:20:19.288961Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Mail.ru",
+            "target_url": "mail.ru",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_domain",
+            "start_time": "2026-04-16T06:20:19.287558Z",
+            "end_time": "2026-04-16T06:20:19.287629Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Duolingo Account Check",
+            "target_url": "duolingo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "cannot access local variable 'user' where it is not associated with a value",
+            "start_time": "2026-04-16T06:20:19.287441Z",
+            "end_time": "2026-04-16T06:20:19.287534Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Typeform",
+            "target_url": "typeform.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "not_registered",
+            "start_time": "2026-04-16T06:20:19.284247Z",
+            "end_time": "2026-04-16T06:20:19.284708Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "SolidCore",
+            "target_url": "solidcore.co",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.287234Z",
+            "end_time": "2026-04-16T06:20:19.287308Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Facebook",
+            "target_url": "facebook.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "AsyncClient.post() got an unexpected keyword argument 'allow_redirects'",
+            "start_time": "2026-04-16T06:20:19.287331Z",
+            "end_time": "2026-04-16T06:20:19.287398Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Yandex account recovery info",
+            "target_url": "yandex.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_page_302",
+            "start_time": "2026-04-16T06:20:19.286973Z",
+            "end_time": "2026-04-16T06:20:19.287088Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Mega.nz",
+            "target_url": "mega.nz",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.287112Z",
+            "end_time": "2026-04-16T06:20:19.287209Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Zoho",
+            "target_url": "accounts.zoho.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "missing_csrf_token",
+            "start_time": "2026-04-16T06:20:19.286655Z",
+            "end_time": "2026-04-16T06:20:19.286734Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Deliveroo",
+            "target_url": "deliveroo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_404",
+            "start_time": "2026-04-16T06:20:19.286764Z",
+            "end_time": "2026-04-16T06:20:19.286892Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "ProtonMail account check",
+            "target_url": "proton.me",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:20:19.286520Z",
+            "end_time": "2026-04-16T06:20:19.286635Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "HudsonRock",
+            "target_url": "cavalier.hudsonrock.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T06:20:19.285126Z",
+            "end_time": "2026-04-16T06:20:19.285204Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Tutanota",
+            "target_url": "mail.tutanota.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unsupported_domain",
+            "start_time": "2026-04-16T06:20:19.285228Z",
+            "end_time": "2026-04-16T06:20:19.286477Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "AntiPublic Leak Check",
+            "target_url": "antipublic.one",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T06:20:19.284996Z",
+            "end_time": "2026-04-16T06:20:19.285096Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Foursquare email to account",
+            "target_url": "foursquare.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "api_error_401",
+            "start_time": "2026-04-16T06:20:19.291037Z",
+            "end_time": "2026-04-16T06:20:19.291152Z",
+            "duration_ms": 0,
+            "cached": true
+          }
+        ]
+      },
+      "duration_s": 0.7861684159724973
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "No confirmed public profiles found for Pedro Cao Eiriz matching the provided identifiers. Extensive searches across web, social media, LinkedIn, Spanish business registries, and people-search databases returned no results linking the name, email (pedrocaoeiriz@gmail.com), phone (+34617758559), or address (Passeig Maragall 13, Entresuelo 1, 08026 Barcelona) to any publicly indexed individual.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "Passeig Maragall 13, Entresuelo 1, 08026 Barcelona, ES",
+          "source": "https://barcelona.callejero.net/passeig-maragall.html",
+          "confidence": 0.6,
+          "notes": "Address provided as identity anchor; postal code 08026 corresponds to the Camp de l'Arpa del Clot / Sant Martí district of Barcelona. No public source independently corroborates this address for the subject.",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "osint_web",
+          "source": "osint_web",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [
+        "No web-indexed presence found for 'Pedro Cao Eiriz' under any spelling variation.",
+        "Phone number +34617758559 returns no public results on any indexed platform.",
+        "Email pedrocaoeiriz@gmail.com returns no public results on any indexed platform.",
+        "A 'Carolina Cao Eiriz' (LinkedIn: Senior Client Advisor at Louis Vuitton, Madrid) shares the rare compound surname but cannot be confirmed as a relative and is a distinct individual — omitted per identity-strict-match rule.",
+        "No Spanish company registry (BORME/Einforma) results found for 'Cao Eiriz' linked to Pedro.",
+        "Instagram account @pedro_cao exists but could not be confirmed as belonging to the subject — no matching identifier found."
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "anthropic_web",
+        "search_queries": [
+          "Pedro Cao Eiriz",
+          "pedrocaoeiriz@gmail.com",
+          "\"Pedro Cao Eiriz\" Barcelona",
+          "\"+34617758559\" OR \"617758559\"",
+          "\"Passeig Maragall 13\" \"08026\" Barcelona",
+          "\"Pedro Cao Eiriz\" LinkedIn",
+          "\"Cao Eiriz\" Spain",
+          "pedrocaoeiriz",
+          "\"Pedro Cao\" Barcelona \"08026\"",
+          "\"Pedro Cao\" Eiriz Instagram",
+          "\"Cao Eiriz\" Barcelona LinkedIn",
+          "linkedin \"Pedro Cao\" Spain Barcelona",
+          "site:linkedin.com \"Pedro Cao Eiriz\"",
+          "\"Pedro Cao\" \"Eiriz\" Spain",
+          "\"Passeig Maragall\" 13 Barcelona empresa",
+          "\"Pedro Cao\" Barcelona Galicia Eiriz",
+          "\"Pedro Cao\" \"Passeig Maragall\" Barcelona",
+          "\"617758559\" Spain phone",
+          "BORME \"Pedro Cao Eiriz\" administrador",
+          "\"Pedro Cao Eiriz\" twitter OR facebook OR instagram",
+          "\"Cao Eiriz\" empresa sociedad España",
+          "infocif \"Pedro Cao\" Barcelona",
+          "einforma \"Pedro Cao\" Barcelona administrador",
+          "\"Pedro Cao\" Spain abogado medico arquitecto",
+          "\"Passeig Maragall, 13\" Barcelona empresa negocio",
+          "\"pedro cao\" \"eiriz\" site:facebook.com OR site:twitter.com OR site:x.com",
+          "\"Pedro Cao Eiriz\" OR \"P. Cao Eiriz\"",
+          "einforma \"Cao Eiriz\"",
+          "\"Passeig Maragall\" \"13\" \"entresuelo\" Barcelona"
+        ],
+        "fetched_urls": [
+          "https://www.instagram.com/pedro_cao/",
+          "https://es.linkedin.com/in/carolina-cao-eiriz-77501b14b",
+          "https://www.einforma.com/servlet/app/portal/ENTP/screen/SProductoBuscarEmpresa/razSoc/CAO+EIRIZ"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "duration_s": 108.78542600001674
+    },
+    {
+      "name": "property",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "property enrichment solo disponible para ES (country!=ES)"
+      ],
+      "raw": {},
+      "duration_s": 1.8624996300786734e-05
+    },
+    {
+      "name": "twitter_check",
+      "status": "no_data",
+      "summary": "Twitter check for pedrocaoeiriz@gmail.com was inconclusive (status: BAN).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter returned ambiguous status 'BAN' for pedrocaoeiriz@gmail.com"
+      ],
+      "raw": {
+        "platform": "Twitter",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "BAN",
+        "http_status": 200,
+        "session_id": "18489bc5-2916-4400-b435-c3ea8f424c4c",
+        "error": null
+      },
+      "duration_s": 0.8246372089488432
+    },
+    {
+      "name": "uber_hint",
+      "status": "ok",
+      "summary": "pedrocaoeiriz@gmail.com is NOT registered on Uber. | +34617758559 registered on Uber; email=p******z@gmail.com",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "Uber account registered to +34617758559",
+          "source": "platform_check:uber_hint",
+          "confidence": 0.85,
+          "notes": null,
+          "tag": "uber"
+        },
+        {
+          "kind": "contact",
+          "value": "p******z@gmail.com",
+          "source": "platform_check:uber_hint",
+          "confidence": 0.8,
+          "notes": "Masked email from Uber (looked up via phone: +34617758559)",
+          "tag": "email_masked"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "email_lookup": {
+          "identifier": "pedrocaoeiriz@gmail.com",
+          "id_type": "email",
+          "status_raw": "FAIL",
+          "data": null,
+          "error": null
+        },
+        "phone_lookup": {
+          "identifier": "+34617758559",
+          "id_type": "phone",
+          "status_raw": "REGISTERED",
+          "data": {
+            "login": "+34617758559",
+            "phoneMask": "",
+            "emailMask": "p******z@gmail.com"
+          },
+          "error": null
+        }
+      },
+      "duration_s": 4.310272957955021
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Moderate (28/100)",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "8fit.com",
+          "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+          "confidence": 0.85,
+          "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "taringa.net",
+          "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+          "confidence": 0.85,
+          "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in Taringa breach",
+          "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+          "confidence": 0.9,
+          "notes": null,
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  0
+                ],
+                [
+                  "heal",
+                  1
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  0
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  0
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 1,
+                "Unknown": 0
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Moderate",
+                "risk_score": 28
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Names",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Genders",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🖥️ Device and Network Information",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "G",
+                        "name": "data_IP addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👥 Demographics",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Geographic locations",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 0,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 1,
+                "y2018": 1,
+                "y2019": 0,
+                "y2020": 0,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 0,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "8fit;Taringa"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "8fit",
+                "details": "8fit, a popular fitness and health app, experienced a data breach. The breach occurred in early 2021, with the database made public later in June. The leaked data included email addresses and usernames, along with salted MD5 password hashes.",
+                "domain": "8fit.com",
+                "industry": "Health Care",
+                "logo": "https://xposedornot.com/static/logos/8fit.png",
+                "password_risk": "hardtocrack",
+                "references": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Passwords;Genders;IP addresses;Names;Geographic locations",
+                "xposed_date": "2018",
+                "xposed_records": 15026800,
+                "added": "2023-11-08T06:30:21+00:00"
+              },
+              {
+                "breach": "Taringa",
+                "details": "Data breach that occurred at Taringa, a Latin American social network in 2018. The data breach was the result of a hacking incident in which the personal information of over 28 million users was exposed. The data that was compromised included email addresses, hashed passwords, and personal information such as names, birth dates, and location data.",
+                "domain": "taringa.net",
+                "industry": "Non-Profit/Charities",
+                "logo": "https://xposedornot.com/static/logos/Taringa.png",
+                "password_risk": "easytocrack",
+                "references": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Usernames;Email addresses;Passwords",
+                "xposed_date": "2017",
+                "xposed_records": 28001047,
+                "added": "2023-11-08T06:30:19+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "duration_s": 0.16377874999307096
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "ok",
+      "summary": "GAIA enrichment for 109807121807838897737. Name: Pedro Cao. Contributor: 1 reviews, 0 ratings, 2 photos, Local Guides level 2. Reviewed places: Restaurante Cambalache - Concepción Arenal. Found 3 public photo(s).",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Google Maps contributor stats: 1 reviews, 2 photos, Local Guides level 2",
+          "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "lifestyle",
+          "value": "Google Maps review: Restaurante Cambalache - Concepción Arenal (5★) — Hace 8 años",
+          "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+          "confidence": 0.85,
+          "notes": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno.",
+          "tag": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Google Maps photo uploaded — Itnig Café",
+          "source": "https://lh3.googleusercontent.com/gps-cs/ACgwaOta36KFtYmrbjUTwcjwaWYGFQel-iCJ5J8CF8-A_tq_3H0Kg1drOx5aYybQ_Zpxy_6AqfdLkFSCQD1cvICQUkUhKzu6qtyta8Nd7vNl4Zsq8HDAFuNhyJMFAvKzumoQJwN2I1n3ih6RQW_O",
+          "confidence": 0.75,
+          "notes": null,
+          "tag": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Google Maps photo uploaded — Itnig Café",
+          "source": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuE5ciz-VRIve5b9hx4C6i7EUxlUpy_z8VJuvSXvhibSFzl3rtzHN6VPXkhh3UO21br4KmJcckRrAUfu2bFF7pqxNd9D7IF2k3VU88pOtCTW0lpyAxPT-8gwsEsXub-T7l6bH2UOIoy4B54",
+          "confidence": 0.75,
+          "notes": null,
+          "tag": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Google Maps photo uploaded — unknown location",
+          "source": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7P_cfKU_jpi87YGBjaTo6j3cxYEorTn1zrCfvnQs8bBZPNy-tw7ar9Ita_C2yUzR8sjXscRdpSIlJvMOLf3_6Iqon1y8PUMojTUCH7TlLIfTUJ68zX6vhHxXA3x7N_svpOcuE",
+          "confidence": 0.75,
+          "notes": null,
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "gaia_id": "109807121807838897737",
+        "profile_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+        "name": "Pedro Cao",
+        "profile_pic_url": "https://lh3.googleusercontent.com/a/ACg8ocL-ORl7mqC4cIHzzDqZMOiZZFUWjvuyEBCKu2D9g42TiaVVY1s=w72-h72-p-rp-mo-br100",
+        "stats": {
+          "reviews_count": 1,
+          "ratings_count": 0,
+          "photos_count": 2,
+          "local_guides_level": 2
+        },
+        "reviews": [
+          {
+            "place": "Restaurante Cambalache - Concepción Arenal",
+            "rating": "5",
+            "text": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno.",
+            "time_ago": "Hace 8 años",
+            "place_url": "",
+            "source_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews"
+          }
+        ],
+        "photos": [
+          {
+            "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOta36KFtYmrbjUTwcjwaWYGFQel-iCJ5J8CF8-A_tq_3H0Kg1drOx5aYybQ_Zpxy_6AqfdLkFSCQD1cvICQUkUhKzu6qtyta8Nd7vNl4Zsq8HDAFuNhyJMFAvKzumoQJwN2I1n3ih6RQW_O",
+            "place_name": "Itnig Café"
+          },
+          {
+            "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuE5ciz-VRIve5b9hx4C6i7EUxlUpy_z8VJuvSXvhibSFzl3rtzHN6VPXkhh3UO21br4KmJcckRrAUfu2bFF7pqxNd9D7IF2k3VU88pOtCTW0lpyAxPT-8gwsEsXub-T7l6bH2UOIoy4B54",
+            "place_name": "Itnig Café"
+          },
+          {
+            "url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7P_cfKU_jpi87YGBjaTo6j3cxYEorTn1zrCfvnQs8bBZPNy-tw7ar9Ita_C2yUzR8sjXscRdpSIlJvMOLf3_6Iqon1y8PUMojTUCH7TlLIfTUJ68zX6vhHxXA3x7N_svpOcuE",
+            "place_name": ""
+          }
+        ],
+        "total_reviews": 1,
+        "gaps": []
+      },
+      "duration_s": 26.865696208027657
+    },
+    {
+      "name": "image_search",
+      "status": "ok",
+      "summary": "Could not resolve Instagram profile picture URL for @pedroca; reverse-image search skipped.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted"
+      ],
+      "raw": {
+        "provider": "serpapi_google_lens_exact",
+        "handle": "pedroca"
+      },
+      "duration_s": 0.19127483398187906
+    },
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "Could not retrieve any Instagram data for @pedroca.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python"
+      ],
+      "raw": {
+        "profile_info": null,
+        "raw_captions": [],
+        "image_count": 0,
+        "video_count": 0
+      },
+      "duration_s": 0.0028765409952029586
+    },
+    {
+      "name": "linkedin",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "linkedin: could not parse slug from 'pedro-pedreira'"
+      ],
+      "raw": {},
+      "duration_s": 3.116601146757603e-05
+    },
+    {
+      "name": "twitter",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter profile @pedroca not retrievable: user_not_found"
+      ],
+      "raw": {
+        "error": "user_not_found",
+        "handle": "pedroca"
+      },
+      "duration_s": 0.027921374945435673
+    },
+    {
+      "name": "twitter_vu",
+      "status": "ok",
+      "summary": "@pedroca is a valid Twitter/X user; name=Pedroca Monteiro.",
+      "social_links": [
+        {
+          "platform": "twitter",
+          "url": "https://x.com/pedroca",
+          "handle": "pedroca",
+          "confidence": 0.95
+        }
+      ],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "name",
+          "value": "Pedroca Monteiro",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.8,
+          "notes": "Display name from Twitter/X profile @pedroca",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "https://pbs.twimg.com/profile_images/1153524310801289216/w24W30wx_normal.jpg",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.9,
+          "notes": "Twitter/X profile picture for @pedroca",
+          "tag": "photo"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "pedroca",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "pedroca",
+          "name": "Pedroca Monteiro",
+          "email": "",
+          "phone": "",
+          "avatar": "https://pbs.twimg.com/profile_images/1153524310801289216/w24W30wx_normal.jpg"
+        },
+        "error": null
+      },
+      "duration_s": 11.530060917022638
+    },
+    {
+      "name": "jooble",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [role]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.850002445280552e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 21 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "twitter_vu",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.00018095900304615498,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'icloud_check', 'instagram_check', 'nosint', 'osint_web', 'property', 'twitter_check', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "icloud_check",
+          "instagram_check",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.8049259170075,
+      "module": "boe",
+      "wave": 1,
+      "message": "no_data in 0.71s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.7061498339753598,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80522758403094,
+      "module": "borme",
+      "wave": 1,
+      "message": "no_data in 0.71s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.709293250052724,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80538525001612,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "ok in 1.07s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.0666664579766802,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80560729204444,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "ok in 1.47s (3 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.469976415974088,
+        "signals": 3,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80571575002978,
+      "module": "github_check",
+      "wave": 1,
+      "message": "ok in 1.47s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.4662354169995524,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80580416700104,
+      "module": "google_gaia_check",
+      "wave": 1,
+      "message": "ok in 2.24s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 2.2398550839861855,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80589900002815,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "ok in 2.89s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 2.893314124958124,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80598500004271,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "no_data in 0.23s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.23009504203218967,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80606979201548,
+      "module": "nosint",
+      "wave": 1,
+      "message": "ok in 0.79s (8 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.7861684159724973,
+        "signals": 8,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80649816704681,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "ok in 108.79s (2 signal(s), 0 fact(s), 6 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 108.78542600001674,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 6
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80667975003598,
+      "module": "property",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.8624996300786734e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.8067105000373,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "no_data in 0.82s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.8246372089488432,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.8068311670213,
+      "module": "uber_hint",
+      "wave": 1,
+      "message": "ok in 4.31s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 4.310272957955021,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 108.80694187502377,
+      "module": "xon",
+      "wave": 1,
+      "message": "ok in 0.16s (3 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.16377874999307096,
+        "signals": 3,
+        "facts": 4,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 108.80713229201501,
+      "module": null,
+      "wave": 2,
+      "message": "['gaia_enrichment', 'image_search', 'instagram', 'linkedin', 'twitter', 'twitter_vu']",
+      "detail": {
+        "modules": [
+          "gaia_enrichment",
+          "image_search",
+          "instagram",
+          "linkedin",
+          "twitter",
+          "twitter_vu"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.67310845904285,
+      "module": "gaia_enrichment",
+      "wave": 2,
+      "message": "ok in 26.87s (4 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 26.865696208027657,
+        "signals": 4,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.6735683750012,
+      "module": "image_search",
+      "wave": 2,
+      "message": "ok in 0.19s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.19127483398187906,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.67377033404773,
+      "module": "instagram",
+      "wave": 2,
+      "message": "ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.0028765409952029586,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.67387745901942,
+      "module": "linkedin",
+      "wave": 2,
+      "message": "ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 3.116601146757603e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.67396850005025,
+      "module": "twitter",
+      "wave": 2,
+      "message": "ok in 0.03s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.027921374945435673,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.6740711670136,
+      "module": "twitter_vu",
+      "wave": 2,
+      "message": "ok in 11.53s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 11.530060917022638,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 135.67422050004825,
+      "module": "jooble",
+      "wave": null,
+      "message": "skipped — missing inputs ['role']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "role"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 135.67426229204284,
+      "module": null,
+      "wave": null,
+      "message": "15 ok, 2 skipped, 0 error(s)",
+      "detail": {
+        "ok": 15,
+        "error": 0,
+        "skipped": 2
+      }
+    }
+  ]
+}

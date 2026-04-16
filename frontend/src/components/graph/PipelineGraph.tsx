@@ -55,17 +55,6 @@ export function PipelineGraph({
       proOptions={{ hideAttribution: true }}
     >
       <Background gap={24} size={1} color="rgba(255,255,255,0.04)" />
-      <Controls showInteractive={false} />
-      <MiniMap
-        nodeColor={(node) => {
-          const status = (node.data as { status?: string })?.status;
-          if (status === "ok" || status === "cached") return "#FAFAFA";
-          if (status === "error") return "#71717A";
-          if (status === "running") return "#FAFAFA";
-          return "#3F3F46";
-        }}
-        maskColor="rgba(0,0,0,0.7)"
-      />
     </ReactFlow>
   );
 }

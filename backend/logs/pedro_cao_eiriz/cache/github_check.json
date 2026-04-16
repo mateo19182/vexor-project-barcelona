@@ -1,0 +1,27 @@
+{
+  "name": "github_check",
+  "status": "ok",
+  "summary": "pedrocaoeiriz@gmail.com is registered on GitHub.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "GitHub account registered to pedrocaoeiriz@gmail.com",
+      "source": "platform_check:github_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: REGISTERED",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "platform": "GitHub",
+    "identifier": "pedrocaoeiriz@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "session_id": "3cdfbdcc-d30d-4c82-8d2d-1764c79178c0",
+    "error": null
+  },
+  "duration_s": 1.473552249954082
+}

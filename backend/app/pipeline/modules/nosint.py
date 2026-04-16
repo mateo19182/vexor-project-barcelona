@@ -3,14 +3,19 @@
 Requires: contact:email signal
 Output:
   signals  — one `contact` signal per platform where the email is found;
-             `risk_flag` for any breach/leak/paste module hit.
+             `risk_flag` for any breach/leak/paste module hit;
+             `contact:nosint_ran` sentinel (always emitted) so that the
+             sherlock module can schedule itself in a later wave and consume
+             the handles nosint discovered.
   facts    — summary fact with hit count and list of matched platforms.
   raw      — full `all_results` list (every module event, valid or not).
 """
 
 from __future__ import annotations
 
+import re
 import sys
+from urllib.parse import urlparse
 
 from app.config import settings
 from app.enrichment.nosint import enrich_nosint
@@ -21,6 +26,34 @@ from app.pipeline.base import Context, ModuleResult
 _BREACH_KEYWORDS = {"breach", "hibp", "haveibeenpwned", "leak", "pwned", "paste", "exposed"}
 
 _SOURCE_BASE = "https://nosint.org"
+
+# Patterns to extract a handle from a profile URL.
+# Each entry: (platform_name, compiled regex that captures the handle in group 1)
+_PROFILE_URL_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("twitter",   re.compile(r"(?:twitter\.com|x\.com)/([A-Za-z0-9_]{1,50})/?$")),
+    ("instagram", re.compile(r"instagram\.com/([A-Za-z0-9_.]{1,50})/?$")),
+    ("github",    re.compile(r"github\.com/([A-Za-z0-9\-]{1,39})/?$")),
+    ("tiktok",    re.compile(r"tiktok\.com/@([A-Za-z0-9_.]{1,50})/?$")),
+    ("facebook",  re.compile(r"facebook\.com/([A-Za-z0-9.]{1,50})/?$")),
+    ("linkedin",  re.compile(r"linkedin\.com/in/([A-Za-z0-9\-]{1,100})/?$")),
+]
+
+
+def _extract_handle(url: str) -> tuple[str, str] | None:
+    """Return ``(platform_tag, handle)`` if the URL is a recognised profile URL.
+
+    Returns ``None`` when the URL doesn't match any known pattern or when the
+    extracted path segment looks like a generic page (e.g. ``/home``, ``/about``).
+    """
+    for platform_tag, pattern in _PROFILE_URL_PATTERNS:
+        m = pattern.search(url)
+        if m:
+            handle = m.group(1).lstrip("@")
+            # Reject obvious non-username path segments
+            if handle.lower() in {"home", "about", "help", "login", "signup", "explore"}:
+                continue
+            return platform_tag, handle
+    return None
 
 
 def _log(msg: str) -> None:
@@ -97,9 +130,16 @@ class NosintModule:
                     notes=notes,
                 ))
                 if target_url:
+                    # Try to extract a clean handle from the profile URL so the
+                    # runner stores the username (not the full URL) in the
+                    # contact signal — and so sherlock can use it directly.
+                    extracted = _extract_handle(source_url)
+                    handle = extracted[1] if extracted else None
+                    platform_tag = extracted[0] if extracted else module_name.lower()
                     social_links.append(SocialLink(
-                        platform=module_name,
+                        platform=platform_tag,
                         url=source_url,
+                        handle=handle,
                         confidence=0.8,
                     ))
 
@@ -137,6 +177,20 @@ class NosintModule:
             if summary_parts
             else f"NoSINT: no valid hits for {email} across {total} module(s)."
         )
+
+        # Shared scheduling sentinel — always emitted so username_finder can
+        # declare a dependency and be scheduled in a later wave, after all
+        # handles discovered here are on the context.
+        # OsintWebModule emits the same tag; either one is enough to unblock
+        # username_finder.
+        signals.append(Signal(
+            kind="contact",
+            tag="enrichment_ran",
+            value="nosint",
+            source=_SOURCE_BASE,
+            confidence=1.0,
+            notes="Scheduling sentinel — signals that wave-1 enrichment completed.",
+        ))
 
         return ModuleResult(
             name=self.name,

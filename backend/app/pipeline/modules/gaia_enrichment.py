@@ -3,7 +3,7 @@
 Input  -> contact:gaia_id signal
 Output -> contributor stats, public reviews, public photos + lifestyle signals
 
-Runs in wave 2+ — after google_id emits the gaia_id signal.
+Runs in wave 2+ — after a contact:gaia_id signal is available.
 """
 
 from __future__ import annotations

@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import { Badge } from '@/components/ui/badge'
+import { LogPanel } from '@/components/run/LogPanel'
 import { PipelineGraph } from '@/components/graph/PipelineGraph'
 import { ExecutionTimeline } from '@/components/timeline/ExecutionTimeline'
 import { DossierView } from '@/components/detail/DossierView'
@@ -10,7 +11,7 @@ import { fetchModules } from '@/api/client'
 import type { EnrichmentResponse, ModuleInfo, AuditEvent, ModuleResult } from '@/api/types'
 import type { CasePayload } from '@/lib/api'
 
-type Tab = 'graph' | 'timeline' | 'dossier'
+type Tab = 'graph' | 'timeline'
 
 export function RunPage() {
   const { runId } = useParams()
@@ -24,6 +25,7 @@ export function RunPage() {
   const [isStreaming, setIsStreaming] = useState(false)
   const [error, setError] = useState('')
   const [selectedModule, setSelectedModule] = useState<ModuleResult | null>(null)
+  const [showDossier, setShowDossier] = useState(false)
   const started = useRef(false)
 
   useEffect(() => {
@@ -42,6 +44,7 @@ export function RunPage() {
       onResult: (res) => {
         setResponse(res)
         setIsStreaming(false)
+        setShowDossier(true)
       },
       onError: (err) => {
         setError(err)
@@ -62,7 +65,6 @@ export function RunPage() {
   const tabs: { key: Tab; label: string }[] = [
     { key: 'graph', label: 'Graph' },
     { key: 'timeline', label: 'Timeline' },
-    { key: 'dossier', label: 'Dossier' },
   ]
 
   return (
@@ -92,6 +94,14 @@ export function RunPage() {
               {tab.label}
             </button>
           ))}
+          {response && (
+            <button
+              onClick={() => setShowDossier(true)}
+              className="px-3 py-1 text-xs rounded transition-colors text-text-tertiary hover:text-text-secondary"
+            >
+              Dossier
+            </button>
+          )}
         </div>
 
         {error && <span className="text-xs text-zinc-400 ml-2">{error}</span>}
@@ -103,6 +113,9 @@ export function RunPage() {
       </div>
 
       <div className="flex-1 flex min-h-0">
+        <div className="w-[380px] shrink-0">
+          <LogPanel events={liveEvents} response={response} isStreaming={isStreaming} />
+        </div>
         <div className="flex-1">
           {activeTab === 'graph' && (
             <PipelineGraph
@@ -115,20 +128,39 @@ export function RunPage() {
           {activeTab === 'timeline' && (
             <ExecutionTimeline response={response} liveEvents={liveEvents} />
           )}
-          {activeTab === 'dossier' && response && (
-            <DossierView response={response} />
-          )}
-          {activeTab === 'dossier' && !response && (
-            <div className="flex items-center justify-center h-full text-text-tertiary text-sm">
-              Dossier will appear when the pipeline completes.
-            </div>
-          )}
         </div>
 
         {selectedModule && (
           <ModuleDetail module={selectedModule} onClose={() => setSelectedModule(null)} />
         )}
       </div>
+
+      {/* Dossier popup modal */}
+      {showDossier && response && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setShowDossier(false)}
+          />
+          <div className="relative w-[90vw] max-w-4xl h-[85vh] bg-bg-surface/95 backdrop-blur-xl border border-border-subtle rounded-xl shadow-2xl overflow-hidden flex flex-col">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-border-subtle">
+              <div>
+                <h2 className="text-lg font-semibold text-text-primary">Dossier</h2>
+                <span className="text-xs text-text-tertiary">{response.case_id} — {okCount} ok / {errCount} error / {skipCount} skipped</span>
+              </div>
+              <button
+                onClick={() => setShowDossier(false)}
+                className="text-text-tertiary hover:text-text-primary text-xl px-2"
+              >
+                &times;
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto">
+              <DossierView response={response} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

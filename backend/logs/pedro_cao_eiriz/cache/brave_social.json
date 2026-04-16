@@ -1,0 +1,209 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 30 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pedro-pedreira/",
+      "handle": "pedro-pedreira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pedro-eiras-61346868/",
+      "handle": "pedro-eiras-61346868",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pedrocerejeira/",
+      "handle": "pedrocerejeira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pedroeiras/",
+      "handle": "pedroeiras",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pedroeirasoficial/",
+      "handle": "pedroeirasoficial",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/pedroca/",
+      "handle": "pedroca",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/pedrocapedroca/",
+      "handle": "pedrocapedroca",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/pedrohgsiqueira/",
+      "handle": "pedrohgsiqueira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/peedropinheiro/",
+      "handle": "peedropinheiro",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/pedropedreira_/",
+      "handle": "pedropedreira_",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/pedroca",
+      "handle": "pedroca",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/pedrocerize",
+      "handle": "pedrocerize",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/pedrogoferreira?lang=en",
+      "handle": "pedrogoferreira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/pedrohgsiqueira?lang=en",
+      "handle": "pedrohgsiqueira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/pedrotmareis",
+      "handle": "pedrotmareis",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/p/Pedrooliveira-61557014173992/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/pedro.teixeira.oficial/",
+      "handle": "pedro.teixeira.oficial",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/pedro.eiras.92/",
+      "handle": "pedro.eiras.92",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/pedrofilipeoliveira/",
+      "handle": "pedrofilipeoliveira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/pedrocertezas/",
+      "handle": "pedrocertezas",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/pedrib",
+      "handle": "pedrib",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/pedroerp",
+      "handle": "pedroerp",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/PedroHenriques",
+      "handle": "PedroHenriques",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/pedroapfilho",
+      "handle": "pedroapfilho",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/pedrocostaferreira",
+      "handle": "pedrocostaferreira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@pedrohgsiqueira",
+      "handle": "@pedrohgsiqueira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@pedroallann?lang=en",
+      "handle": "@pedroallann",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@pedrocertezas",
+      "handle": "@pedrocertezas",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@pedrosvoliveira",
+      "handle": "@pedrosvoliveira",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/@pedrocaoficial6",
+      "handle": "@pedrocaoficial6",
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Pedro Cao Eiriz\" site:linkedin.com",
+      "\"Pedro Cao Eiriz\" site:instagram.com",
+      "\"Pedro Cao Eiriz\" site:x.com",
+      "\"Pedro Cao Eiriz\" site:facebook.com",
+      "\"Pedro Cao Eiriz\" site:github.com",
+      "\"Pedro Cao Eiriz\" site:tiktok.com",
+      "pedrocaoeiriz site:linkedin.com",
+      "pedrocaoeiriz site:instagram.com",
+      "pedrocaoeiriz site:x.com",
+      "pedrocaoeiriz site:facebook.com",
+      "pedrocaoeiriz site:github.com",
+      "pedrocaoeiriz site:tiktok.com"
+    ],
+    "links_found": 30,
+    "errors": []
+  },
+  "duration_s": 0.6900904159992933
+}

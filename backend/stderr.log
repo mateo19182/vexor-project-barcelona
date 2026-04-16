@@ -1,0 +1,66 @@
+[audit + 0.00s] pipeline_started       starting with 21 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']
+[audit + 0.00s] wave_started           wave 1: ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'icloud_check', 'instagram_check', 'nosint', 'osint_web', 'twitter_check', 'uber_hint', 'xon']
+[brave_social] running 12 queries
+[breach_scout] querying 2 keyword(s): ['Jose Manuel Amado Abelenda', 'josemanuelamadoabelenda@gmail.com']
+[osint_web] investigating 'Jose Manuel Amado Abelenda' (country=ES, backend=anthropic_web)
+[nosint] search a78a3d28-60c9-49e5-b17f-9b17a51d82fe started — 43 modules
+[brave_social] done: 25 link(s) from 12 queries, 0 error(s)
+[nosint] stream complete (43 module results)
+[nosint] 4/43 modules returned valid data
+[breach_scout] batch response 200 (4,229 bytes)
+[breach_scout] parsed: 4 breach(es), 1 email(s), 7 phone(s), 2 username(s), 7 business(es)
+[breach_scout] emitting phone signal: +34881983814
+[audit +11.22s] module_completed       boe: no_data in 0.70s (0 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       borme: no_data in 0.69s (0 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       brave_social: ok in 0.68s (0 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       breach_scout: ok in 1.32s (18 signal(s), 1 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       github_check: ok in 0.80s (0 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       google_gaia_check: ok in 11.20s (1 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       icloud_check: ok in 1.38s (1 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       instagram_check: no_data in 0.23s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +11.22s] module_completed       nosint: ok in 0.68s (5 signal(s), 1 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       osint_web: error in 0.42s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +11.22s] module_completed       twitter_check: no_data in 0.95s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +11.22s] module_completed       uber_hint: ok in 1.10s (0 signal(s), 0 fact(s), 0 gap(s))
+[audit +11.22s] module_completed       xon: ok in 0.15s (4 signal(s), 4 fact(s), 0 gap(s))
+[audit +11.22s] wave_started           wave 2: ['gaia_enrichment', 'image_search', 'instagram', 'linkedin', 'twitter', 'twitter_vu']
+[gaia_enrichment] running for gaia_id=105982492274469151146
+[gaia_enrichment] fetching stats for 105982492274469151146
+[image_search] looking up profile pic for @https://www.instagram.com/p/C_0JFG2sY9Y/
+[instagram] enrichment for @https://www.instagram.com/p/C_0JFG2sY9Y/ (case test-jose-manuel)
+[instagram] cache MISS — running 5 Osintgram command(s)
+[instagram] (1/5) osintgram 'info'...
+[instagram] (1/5) 'info' FAIL in 0.0s: Osintgram not found at ../Osintgram/venv/bin/python
+[instagram] hard-stop: aborting remaining commands
+[instagram] collecting outputs from /Users/pedro/Desktop/Code/Nordés/Osintgram/output/https:/www.instagram.com/p/C_0JFG2sY9Y...
+[instagram] collected: 0 image(s), 0 video(s), 0 caption(s), profile_info=no
+2026-04-16 09:11:48.507 | INFO     | twscrape.db:migrate:96 - Running migration to v1
+2026-04-16 09:11:48.508 | INFO     | twscrape.db:migrate:96 - Running migration to v2
+2026-04-16 09:11:48.509 | INFO     | twscrape.db:migrate:96 - Running migration to v3
+2026-04-16 09:11:48.509 | INFO     | twscrape.db:migrate:96 - Running migration to v4
+2026-04-16 09:11:48.529 | INFO     | twscrape.accounts_pool:add_account:110 - Account JamesCarl180776 added successfully (active=False)
+2026-04-16 09:11:48.530 | WARNING  | twscrape.accounts_pool:get_for_queue_or_wait:297 - No active accounts. Stopping...
+2026-04-16 09:11:48.531 | WARNING  | twscrape.accounts_pool:get_for_queue_or_wait:297 - No active accounts. Stopping...
+[reverse_image] hikerapi HTTP 402 for @https://www.instagram.com/p/C_0JFG2sY9Y/: {"state":false,"error":"Top up your account at https://hikerapi.com/billing","exc_type":"InsufficientFunds"}
+[gaia_enrichment] fetching reviews page for 105982492274469151146
+[gaia_enrichment] consent screen — accepting
+[gaia_enrichment] found 0 raw review block(s)
+[gaia_enrichment] name='Contribuciones'  stats=reviews_count=0 ratings_count=0 photos_count=0 local_guides_level=0  reviews=0
+[gaia_enrichment] fetching photos page for 105982492274469151146
+[gaia_enrichment] consent screen on photos page — accepting
+[gaia_enrichment] found 0 photo(s)
+[audit +38.63s] module_completed       gaia_enrichment: ok in 27.41s (0 signal(s), 0 fact(s), 3 gap(s))
+[audit +38.63s] module_completed       image_search: ok in 0.23s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +38.63s] module_completed       instagram: ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +38.63s] module_completed       linkedin: ok in 3.33s (4 signal(s), 4 fact(s), 0 gap(s))
+[audit +38.63s] module_completed       twitter: ok in 0.03s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +38.63s] module_completed       twitter_vu: ok in 2.52s (3 signal(s), 0 fact(s), 0 gap(s))
+[audit +38.63s] wave_started           wave 3: ['jooble']
+[jooble] searching 'Senior Infrastructure Project Manager' in 'Vilvoorde, Flemish Region, Belgium' via es.jooble.org…
+[jooble] got 0 total / 0 returned, 0 error(s)
+[audit +38.88s] module_completed       jooble: ok in 0.26s (0 signal(s), 0 fact(s), 1 gap(s))
+[audit +38.88s] module_completed       property: skipped — missing inputs ['address']
+[audit +38.88s] pipeline_completed     15 ok, 1 skipped, 1 error(s)
+[llm_summary] summarizing dossier for case test-jose-manuel
+[llm_summary] API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca72xASiu1PmkhShEwEND'}
+[audit] run log → logs/test-jose-manuel/20260416T071216Z.json

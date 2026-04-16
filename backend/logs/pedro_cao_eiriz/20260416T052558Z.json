@@ -1,0 +1,1966 @@
+{
+  "case_id": "pedro_cao_eiriz",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Email found on 4 platform(s) | 2 breach/leak hit(s) No confirmed public profiles or records found for Pedro Cao Eiriz matching the provided identifiers (email: pedrocaoeiriz@gmail.com, phone: +34617758559, address: Passeig Maragall 13, Entresuelo 1). No social media profiles, business registrations, or other public web sources could be linked to this specific individual. Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018",
+    "facts": [
+      {
+        "claim": "Email active on 6 platform(s) out of 42 checked: kucoin.com, Breach Check v2, leakcheck.io, adobe.com, account.microsoft.com, adobe.com",
+        "source": "https://nosint.org",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Moderate (28/100)",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.9
+      }
+    ],
+    "signals": [
+      {
+        "kind": "contact",
+        "value": "kucoin.com",
+        "source": "https://kucoin.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: KuCoin",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Breach Check v2",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Breach Check v2",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Leak Check",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Leak Check",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "adobe.com",
+        "source": "https://adobe.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Adobe T2E",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "account.microsoft.com",
+        "source": "https://account.microsoft.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Microsoft Account Recovery",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "nosint",
+        "source": "https://nosint.org",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "location",
+        "value": "Passeig Maragall 13, Entresuelo 1, Barcelona, ES",
+        "source": "https://www.google.com/maps",
+        "confidence": 0.5,
+        "notes": "Address provided as identity anchor; not independently confirmed via open web sources.",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "osint_web",
+        "source": "osint_web",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "contact",
+        "value": "8fit.com",
+        "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+        "confidence": 0.85,
+        "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "taringa.net",
+        "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+        "confidence": 0.85,
+        "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in Taringa breach",
+        "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+        "confidence": 0.9,
+        "notes": null,
+        "tag": null
+      }
+    ],
+    "gaps": [
+      "BRAVE_API_KEY env var not configured",
+      "BRAVE_API_KEY env var not configured",
+      "BRAVE_API_KEY not configured",
+      "BREACH_INTEL_HOST env var not set — module disabled",
+      "github_check: missing port/api_key settings",
+      "icloud_check: missing port/api_key settings",
+      "instagram_check: missing port/api_key settings",
+      "No social media profiles (LinkedIn, Instagram, Facebook, Twitter/X, GitHub) found for Pedro Cao Eiriz.",
+      "Phone number +34617758559 returned no public web results.",
+      "Email pedrocaoeiriz@gmail.com returned no indexed public results.",
+      "Could not confirm employer, job title, or business ownership.",
+      "'Cao Eiriz' surname combination returned zero results in Spanish/Catalan business registries or public directories.",
+      "Unable to distinguish this individual from any namesakes due to complete absence of indexed public data.",
+      "property enrichment solo disponible para ES (country!=ES)",
+      "twitter_check: missing port/api_key settings",
+      "wallapop raised AttributeError: 'Context' object has no attribute 'name'",
+      "skipped: missing inputs [contact:gaia_id]",
+      "skipped: missing inputs [contact:instagram]",
+      "skipped: missing inputs [contact:instagram]",
+      "skipped: missing inputs [role]",
+      "skipped: missing inputs [contact:linkedin]",
+      "skipped: missing inputs [contact:twitter]"
+    ]
+  },
+  "llm_summary": {
+    "summary": "Pedro Cao Eiriz is the subject of this case. Contact identifiers on file include phone +34617758559, email pedro.cao@xuxescompany.com (with an associated personal email pedrocaoeiriz@gmail.com), and an address at Passeig Maragall 13, Entresuelo 1, Barcelona, ES (provided as identity anchor, not independently confirmed). A separate case address is listed as Carrer de Cortit 23, Bajo con puerta negra, with NIF 54131311Y. The personal email was found active on platforms including KuCoin, Adobe, and Microsoft Account Recovery, and appears in 2 data breaches dated 2017 (Taringa) and 2018 (8fit). Exposed data types include email addresses, passwords, usernames, names, genders, geographic locations, and IP addresses. One exposed password was identified as a weak hash (easy-to-crack). Overall breach risk score is rated Moderate (28/100). No employer, job title, business registration, social media profiles, or other public web presence could be confirmed for this individual. Case debt amount, origin, age, call history, and legal asset findings are not on record.",
+    "key_facts": [
+      "Name: Pedro Cao Eiriz",
+      "NIF: 54131311Y",
+      "Phone: +34617758559",
+      "Work email: pedro.cao@xuxescompany.com",
+      "Personal email: pedrocaoeiriz@gmail.com",
+      "Case address: Carrer de Cortit 23, Bajo con puerta negra",
+      "Address on file (unconfirmed): Passeig Maragall 13, Entresuelo 1, Barcelona, ES",
+      "Email found in 2 data breaches: Taringa (2017) and 8fit (2018)",
+      "Email active on: KuCoin, Adobe, Microsoft Account Recovery",
+      "Exposed data includes passwords, usernames, names, geographic locations, IP addresses",
+      "One password exposed as weak hash (easy-to-crack)",
+      "Breach risk score: Moderate (28/100)",
+      "No social media profiles, employer, or business registration confirmed",
+      "No prior call attempts, debt details, or legal asset findings on record"
+    ]
+  },
+  "modules": [
+    {
+      "name": "boe",
+      "status": "skipped",
+      "summary": "BOE module disabled (BRAVE_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BRAVE_API_KEY env var not configured"
+      ],
+      "raw": {},
+      "duration_s": 0.00011433300096541643
+    },
+    {
+      "name": "borme",
+      "status": "skipped",
+      "summary": "BORME module disabled (BRAVE_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BRAVE_API_KEY env var not configured"
+      ],
+      "raw": {},
+      "duration_s": 7.66250304877758e-05
+    },
+    {
+      "name": "brave_social",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BRAVE_API_KEY not configured"
+      ],
+      "raw": {},
+      "duration_s": 1.9625003915280104e-05
+    },
+    {
+      "name": "breach_scout",
+      "status": "skipped",
+      "summary": "Breach intelligence host not configured (BREACH_INTEL_HOST unset).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BREACH_INTEL_HOST env var not set — module disabled"
+      ],
+      "raw": {},
+      "duration_s": 4.3291947804391384e-05
+    },
+    {
+      "name": "github_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "github_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 4.5459019020199776e-05
+    },
+    {
+      "name": "icloud_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "icloud_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 2.0332983694970608e-05
+    },
+    {
+      "name": "instagram_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "instagram_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 3.533298149704933e-05
+    },
+    {
+      "name": "nosint",
+      "status": "ok",
+      "summary": "Email found on 4 platform(s) | 2 breach/leak hit(s)",
+      "social_links": [
+        {
+          "platform": "kucoin",
+          "url": "https://kucoin.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "adobe t2e",
+          "url": "https://adobe.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "microsoft account recovery",
+          "url": "https://account.microsoft.com",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "adobe recovery",
+          "url": "https://adobe.com",
+          "handle": null,
+          "confidence": 0.8
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Email active on 6 platform(s) out of 42 checked: kucoin.com, Breach Check v2, leakcheck.io, adobe.com, account.microsoft.com, adobe.com",
+          "source": "https://nosint.org",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "kucoin.com",
+          "source": "https://kucoin.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: KuCoin",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Breach Check v2",
+          "source": "https://nosint.org",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Breach Check v2",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Leak Check",
+          "source": "https://leakcheck.io",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Leak Check",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "adobe.com",
+          "source": "https://adobe.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Adobe T2E",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "account.microsoft.com",
+          "source": "https://account.microsoft.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Microsoft Account Recovery",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "adobe.com",
+          "source": "https://adobe.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Adobe Recovery",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "nosint",
+          "source": "https://nosint.org",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+        "total_modules_run": 42,
+        "hits_count": 6,
+        "all_results": [
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Zoho",
+            "target_url": "accounts.zoho.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "missing_csrf_token",
+            "start_time": "2026-04-16T05:23:07.108168Z",
+            "end_time": "2026-04-16T05:23:08.034595Z",
+            "duration_ms": 926
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Tutanota",
+            "target_url": "mail.tutanota.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unsupported_domain",
+            "start_time": "2026-04-16T05:23:07.106352Z",
+            "end_time": "2026-04-16T05:23:07.106623Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T05:23:07.319822Z",
+            "end_time": "2026-04-16T05:23:07.319899Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Mail.ru",
+            "target_url": "mail.ru",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_domain",
+            "start_time": "2026-04-16T05:23:07.124273Z",
+            "end_time": "2026-04-16T05:23:07.124893Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "OK.ru",
+            "target_url": "ok.ru",
+            "module_target": [
+              "email",
+              "phone",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T05:23:07.313760Z",
+            "end_time": "2026-04-16T05:23:07.313822Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Proton Wallet",
+            "target_url": "protonmail.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_proton_account",
+            "start_time": "2026-04-16T05:23:07.153873Z",
+            "end_time": "2026-04-16T05:23:07.154080Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "username",
+              "email"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T05:23:07.313552Z",
+            "end_time": "2026-04-16T05:23:07.313678Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "ProtonMail account check",
+            "target_url": "proton.me",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.107898Z",
+            "end_time": "2026-04-16T05:23:07.108097Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Facebook",
+            "target_url": "facebook.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "AsyncClient.post() got an unexpected keyword argument 'allow_redirects'",
+            "start_time": "2026-04-16T05:23:07.119233Z",
+            "end_time": "2026-04-16T05:23:08.190882Z",
+            "duration_ms": 1071
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Deliveroo",
+            "target_url": "deliveroo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_404",
+            "start_time": "2026-04-16T05:23:07.108571Z",
+            "end_time": "2026-04-16T05:23:08.170105Z",
+            "duration_ms": 1061
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "HubSpot",
+            "target_url": "hubspot.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T05:23:07.135734Z",
+            "end_time": "2026-04-16T05:23:08.117219Z",
+            "duration_ms": 981
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Poshmark email to account",
+            "target_url": "poshmark.com",
+            "module_target": [
+              "email",
+              "name"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.140369Z",
+            "end_time": "2026-04-16T05:23:08.197514Z",
+            "duration_ms": 1057
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Life360 email to partial phone",
+            "target_url": "life360.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T05:23:07.319970Z",
+            "end_time": "2026-04-16T05:23:08.197675Z",
+            "duration_ms": 877
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Foursquare email to account",
+            "target_url": "foursquare.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "api_error_401",
+            "start_time": "2026-04-16T05:23:07.143814Z",
+            "end_time": "2026-04-16T05:23:08.204040Z",
+            "duration_ms": 1060
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "IMVU email to account",
+            "target_url": "imvu.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.138678Z",
+            "end_time": "2026-04-16T05:23:08.203748Z",
+            "duration_ms": 1065
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Microsoft Info Exposure",
+            "target_url": "microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "connection_failed",
+            "start_time": "2026-04-16T05:23:07.149041Z",
+            "end_time": "2026-04-16T05:23:08.198902Z",
+            "duration_ms": 1049
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Gravatar to account",
+            "target_url": "en.gravatar.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_gravatar_profile",
+            "start_time": "2026-04-16T05:23:07.324247Z",
+            "end_time": "2026-04-16T05:23:08.197821Z",
+            "duration_ms": 873
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "EA.com",
+            "target_url": "ea.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_or_fetch_failed",
+            "start_time": "2026-04-16T05:23:07.145198Z",
+            "end_time": "2026-04-16T05:23:08.218128Z",
+            "duration_ms": 1072
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Duolingo Account Check",
+            "target_url": "duolingo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "cannot access local variable 'user' where it is not associated with a value",
+            "start_time": "2026-04-16T05:23:07.121059Z",
+            "end_time": "2026-04-16T05:23:08.270650Z",
+            "duration_ms": 1149
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Typeform",
+            "target_url": "typeform.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "not_registered",
+            "start_time": "2026-04-16T05:23:07.089988Z",
+            "end_time": "2026-04-16T05:23:08.265831Z",
+            "duration_ms": 1175
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "ImageShack",
+            "target_url": "imageshack.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T05:23:07.128451Z",
+            "end_time": "2026-04-16T05:23:08.266174Z",
+            "duration_ms": 1137
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.129979Z",
+            "end_time": "2026-04-16T05:23:08.270823Z",
+            "duration_ms": 1140
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Instagram",
+            "target_url": "instagram.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_401",
+            "start_time": "2026-04-16T05:23:07.327256Z",
+            "end_time": "2026-04-16T05:23:08.266010Z",
+            "duration_ms": 938
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "KuCoin",
+            "target_url": "kucoin.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "registered_email": "pedrocaoeiriz@gmail.com",
+                "all_methods_found": "Google 2FA, Email, SMS",
+                "combinations_count": 3
+              },
+              "badges_list": [
+                "Google 2FA",
+                "Email",
+                "SMS"
+              ],
+              "display_table": {
+                "headers": [
+                  "Valid Recovery Combinations"
+                ],
+                "values": [
+                  [
+                    "Email, Google 2FA required"
+                  ],
+                  [
+                    "SMS, Google 2FA required"
+                  ],
+                  [
+                    "Email, SMS required"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "KuCoin",
+                "site_icon": "https://www.kucoin.com/favicon.ico",
+                "profile_url": "https://www.kucoin.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T05:23:07.152232Z",
+            "end_time": "2026-04-16T05:23:08.290465Z",
+            "duration_ms": 1138
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Trello email to account",
+            "target_url": "trello.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.126384Z",
+            "end_time": "2026-04-16T05:23:08.285695Z",
+            "duration_ms": 1159
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "GitHub email to users",
+            "target_url": "github.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T05:23:07.095152Z",
+            "end_time": "2026-04-16T05:23:08.285900Z",
+            "duration_ms": 1190
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Breach Check v2",
+            "target_url": "",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "2",
+                "unique_sources": "2"
+              },
+              "display_table": {
+                "headers": [
+                  "Email",
+                  "Username",
+                  "Hash",
+                  "Source",
+                  "Date"
+                ],
+                "values": [
+                  [
+                    "pedrocaoeiriz@gmail.com",
+                    "-",
+                    "$2a$10$oqf9O8daMMn33RdvdqGvCO4vjG.yv/MTz6izxlUW6CldZe0hs9Vme",
+                    "8fit.com",
+                    "2018-07"
+                  ],
+                  [
+                    "pedrocaoeiriz@gmail.com",
+                    "pedroko22",
+                    "-",
+                    "taringa.net",
+                    "2017"
+                  ]
+                ]
+              },
+              "badges_list": [
+                "2 breaches"
+              ],
+              "_metadata": {
+                "name": "Breach Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T05:23:07.313885Z",
+            "end_time": "2026-04-16T05:23:08.305782Z",
+            "duration_ms": 991
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "AutoDropship to account",
+            "target_url": "autods.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.125025Z",
+            "end_time": "2026-04-16T05:23:08.320628Z",
+            "duration_ms": 1195
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "SolidCore",
+            "target_url": "solidcore.co",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.117305Z",
+            "end_time": "2026-04-16T05:23:08.338296Z",
+            "duration_ms": 1220
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Flickr email to account",
+            "target_url": "flickr.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.133971Z",
+            "end_time": "2026-04-16T05:23:08.364225Z",
+            "duration_ms": 1230
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Yandex account recovery info",
+            "target_url": "yandex.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_page_302",
+            "start_time": "2026-04-16T05:23:07.113426Z",
+            "end_time": "2026-04-16T05:23:08.412386Z",
+            "duration_ms": 1298
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Mega.nz",
+            "target_url": "mega.nz",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T05:23:07.115531Z",
+            "end_time": "2026-04-16T05:23:08.459567Z",
+            "duration_ms": 1344
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Forever21",
+            "target_url": "forever21.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "user_not_found",
+            "start_time": "2026-04-16T05:23:07.325437Z",
+            "end_time": "2026-04-16T05:23:08.478140Z",
+            "duration_ms": 1152
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Plex.TV",
+            "target_url": "plex.tv",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "email_lookup_failed",
+            "start_time": "2026-04-16T05:23:07.146996Z",
+            "end_time": "2026-04-16T05:23:08.504401Z",
+            "duration_ms": 1357
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Leak Check",
+            "target_url": "leakcheck.io",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "2"
+              },
+              "display_table": {
+                "headers": [
+                  "Password",
+                  "Source",
+                  "Breach Date"
+                ],
+                "values": [
+                  [
+                    "el chayan01",
+                    "Taringa.net",
+                    "2017-08"
+                  ],
+                  [
+                    "N/A",
+                    "8fit.com",
+                    "2018-07"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "name": "Leak Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T05:23:07.315943Z",
+            "end_time": "2026-04-16T05:23:08.575110Z",
+            "duration_ms": 1259
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T05:23:07.317191Z",
+            "end_time": "2026-04-16T05:23:08.681004Z",
+            "duration_ms": 1363
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Adobe T2E",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "avatar_url": "https://pps.services.adobe.com/api/profile/image/default/bb99dbb8-eab4-438d-ab41-f2f9f1b8ead3/276",
+              "display": {
+                "account_type": "Individual",
+                "enterprise": "No"
+              },
+              "badges_list": [
+                "Active"
+              ],
+              "recovery_table": {
+                "email": "pedrocaoeiriz@gmail.com"
+              },
+              "display_table": {
+                "headers": [
+                  "Account Type",
+                  "Authentication Methods",
+                  "Enterprise Linked"
+                ],
+                "values": [
+                  [
+                    "Individual",
+                    "password, google",
+                    "No"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_icon": "https://www.adobe.com/favicon.ico"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T05:23:07.142055Z",
+            "end_time": "2026-04-16T05:23:08.740554Z",
+            "duration_ms": 1598
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Microsoft Account Recovery",
+            "target_url": "account.microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "badges_list": [
+                "Account Exists",
+                "Email Recovery"
+              ],
+              "display": {
+                "account_status": "Exists",
+                "recovery_methods": "Email Recovery"
+              },
+              "recovery_table": {
+                "email": "pedrocaoeiriz@gmail.com"
+              },
+              "_metadata": {
+                "site_icon": "https://account.microsoft.com/favicon.ico",
+                "name": "Microsoft / Outlook"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T05:23:07.321719Z",
+            "end_time": "2026-04-16T05:23:08.778625Z",
+            "duration_ms": 1456
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "AntiPublic Leak Check",
+            "target_url": "antipublic.one",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T05:23:07.097801Z",
+            "end_time": "2026-04-16T05:23:08.797241Z",
+            "duration_ms": 1699
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "HudsonRock",
+            "target_url": "cavalier.hudsonrock.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T05:23:07.099472Z",
+            "end_time": "2026-04-16T05:23:08.816022Z",
+            "duration_ms": 1716
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Adobe Recovery",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "badges_list": [
+                "Adobe Account",
+                "Email Recovery"
+              ],
+              "display": {
+                "masked_email": "p*****z@g*****l.com",
+                "recovery_method": "Email",
+                "available_factors": "email",
+                "secondary_email": "",
+                "phone": ""
+              },
+              "display_table": {
+                "headers": [
+                  "Masked Primary Email",
+                  "Favorite Recovery",
+                  "Available Factors"
+                ],
+                "values": [
+                  [
+                    "p*****z@g*****l.com",
+                    "Email",
+                    "email"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "Adobe",
+                "site_icon": "https://www.adobe.com/favicon.ico",
+                "profile_url": "https://account.adobe.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T05:23:07.131987Z",
+            "end_time": "2026-04-16T05:23:08.814689Z",
+            "duration_ms": 1682
+          },
+          {
+            "search_id": "0062ec4f-9f2e-4824-96cc-e5efacc01d12",
+            "module_name": "Coinbase Wallet Balances",
+            "target_url": "coinbase.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "profile_not_found",
+            "start_time": "2026-04-16T05:23:07.150711Z",
+            "end_time": "2026-04-16T05:23:09.111039Z",
+            "duration_ms": 1960
+          }
+        ]
+      },
+      "duration_s": 7.669919457985088
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "No confirmed public profiles or records found for Pedro Cao Eiriz matching the provided identifiers (email: pedrocaoeiriz@gmail.com, phone: +34617758559, address: Passeig Maragall 13, Entresuelo 1). No social media profiles, business registrations, or other public web sources could be linked to this specific individual.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "Passeig Maragall 13, Entresuelo 1, Barcelona, ES",
+          "source": "https://www.google.com/maps",
+          "confidence": 0.5,
+          "notes": "Address provided as identity anchor; not independently confirmed via open web sources.",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "osint_web",
+          "source": "osint_web",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [
+        "No social media profiles (LinkedIn, Instagram, Facebook, Twitter/X, GitHub) found for Pedro Cao Eiriz.",
+        "Phone number +34617758559 returned no public web results.",
+        "Email pedrocaoeiriz@gmail.com returned no indexed public results.",
+        "Could not confirm employer, job title, or business ownership.",
+        "'Cao Eiriz' surname combination returned zero results in Spanish/Catalan business registries or public directories.",
+        "Unable to distinguish this individual from any namesakes due to complete absence of indexed public data."
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "anthropic_web",
+        "search_queries": [
+          "Pedro Cao Eiriz",
+          "pedrocaoeiriz@gmail.com",
+          "Pedro Cao Eiriz Barcelona \"Passeig Maragall\"",
+          "\"+34617758559\" Pedro",
+          "\"Pedro Cao Eiriz\" LinkedIn",
+          "\"617758559\" Spain",
+          "\"Cao Eiriz\" Spain Barcelona",
+          "pedrocaoeiriz site:linkedin.com OR site:facebook.com OR site:instagram.com",
+          "\"Pedro Cao Eiriz\" empresa negocio",
+          "\"Cao Eiriz\" Barcelona abogado OR consultor OR empresa",
+          "\"Pedro Cao\" Barcelona Maragall",
+          "site:infocif.es \"Pedro Cao\"",
+          "\"pedrocaoeiriz\" OR \"pedro.cao.eiriz\""
+        ],
+        "fetched_urls": [],
+        "stop_reason": "end_turn"
+      },
+      "duration_s": 40.51904454198666
+    },
+    {
+      "name": "property",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "property enrichment solo disponible para ES (country!=ES)"
+      ],
+      "raw": {},
+      "duration_s": 3.32500203512609e-05
+    },
+    {
+      "name": "twitter_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "twitter_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 4.26670303568244e-05
+    },
+    {
+      "name": "wallapop",
+      "status": "error",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "wallapop raised AttributeError: 'Context' object has no attribute 'name'"
+      ],
+      "raw": {},
+      "duration_s": 6.400002166628838e-05
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Moderate (28/100)",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "8fit.com",
+          "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+          "confidence": 0.85,
+          "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "taringa.net",
+          "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+          "confidence": 0.85,
+          "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in Taringa breach",
+          "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+          "confidence": 0.9,
+          "notes": null,
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  0
+                ],
+                [
+                  "heal",
+                  1
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  0
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  0
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 1,
+                "Unknown": 0
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Moderate",
+                "risk_score": 28
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Names",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Genders",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🖥️ Device and Network Information",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "G",
+                        "name": "data_IP addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👥 Demographics",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Geographic locations",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 0,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 1,
+                "y2018": 1,
+                "y2019": 0,
+                "y2020": 0,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 0,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "8fit;Taringa"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "8fit",
+                "details": "8fit, a popular fitness and health app, experienced a data breach. The breach occurred in early 2021, with the database made public later in June. The leaked data included email addresses and usernames, along with salted MD5 password hashes.",
+                "domain": "8fit.com",
+                "industry": "Health Care",
+                "logo": "https://xposedornot.com/static/logos/8fit.png",
+                "password_risk": "hardtocrack",
+                "references": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Passwords;Genders;IP addresses;Names;Geographic locations",
+                "xposed_date": "2018",
+                "xposed_records": 15026800,
+                "added": "2023-11-08T06:30:21+00:00"
+              },
+              {
+                "breach": "Taringa",
+                "details": "Data breach that occurred at Taringa, a Latin American social network in 2018. The data breach was the result of a hacking incident in which the personal information of over 28 million users was exposed. The data that was compromised included email addresses, hashed passwords, and personal information such as names, birth dates, and location data.",
+                "domain": "taringa.net",
+                "industry": "Non-Profit/Charities",
+                "logo": "https://xposedornot.com/static/logos/Taringa.png",
+                "password_risk": "easytocrack",
+                "references": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Usernames;Email addresses;Passwords",
+                "xposed_date": "2017",
+                "xposed_records": 28001047,
+                "added": "2023-11-08T06:30:19+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "duration_s": 0.32784404198173434
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:gaia_id]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "image_search",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:instagram]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "instagram",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:instagram]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "jooble",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [role]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "linkedin",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:linkedin]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "twitter",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:twitter]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 0.00019008299568668008,
+      "module": null,
+      "wave": null,
+      "message": "starting with 19 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'wallapop', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "wallapop",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.0008817919879220426,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'icloud_check', 'instagram_check', 'nosint', 'osint_web', 'property', 'twitter_check', 'wallapop', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "icloud_check",
+          "instagram_check",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "wallapop",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0050225830054841936,
+      "module": "boe",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 0.00011433300096541643,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.00507975002983585,
+      "module": "borme",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 7.66250304877758e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0051105000311508775,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.9625003915280104e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005123292037751526,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.3291947804391384e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.00515300000552088,
+      "module": "github_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.5459019020199776e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005163083027582616,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 2.0332983694970608e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005172500037588179,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.533298149704933e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.005194958008360118,
+      "module": "nosint",
+      "wave": 1,
+      "message": "loaded cached ok (7 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 7,
+        "facts": 1,
+        "gaps": 0,
+        "cached_duration_s": 7.669919457985088
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.005206625035498291,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "loaded cached ok (2 signal(s), 0 fact(s), 6 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 2,
+        "facts": 0,
+        "gaps": 6,
+        "cached_duration_s": 40.51904454198666
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005215957993641496,
+      "module": "property",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.32500203512609e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005224708002060652,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.26670303568244e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005233042000327259,
+      "module": "wallapop",
+      "wave": 1,
+      "message": "error in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "error",
+        "duration_s": 6.400002166628838e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0052412080112844706,
+      "module": "xon",
+      "wave": 1,
+      "message": "loaded cached ok (3 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 3,
+        "facts": 4,
+        "gaps": 0,
+        "cached_duration_s": 0.32784404198173434
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005272708018310368,
+      "module": "gaia_enrichment",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:gaia_id']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:gaia_id"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005296792020089924,
+      "module": "image_search",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:instagram']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:instagram"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.00532141700387001,
+      "module": "instagram",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:instagram']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:instagram"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005336583009921014,
+      "module": "jooble",
+      "wave": null,
+      "message": "skipped — missing inputs ['role']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "role"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0053511669975705445,
+      "module": "linkedin",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:linkedin']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:linkedin"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.005369708000216633,
+      "module": "twitter",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:twitter']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:twitter"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.005387083045206964,
+      "module": null,
+      "wave": null,
+      "message": "3 ok, 15 skipped, 1 error(s)",
+      "detail": {
+        "ok": 3,
+        "error": 1,
+        "skipped": 15
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "name": "gaia_enrichment",
+  "status": "ok",
+  "summary": "GAIA enrichment for 109807121807838897737. Name: Pedro Cao. Reviewed places: Xuxes CBD, Restaurante Cambalache - Concepción Arenal. Found 3 public photo(s).",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "lifestyle",
+      "value": "Google Maps review: Xuxes CBD (5★)",
+      "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+      "confidence": 0.85,
+      "notes": "Llevo varios meses comprando aquí y siempre ha sido una experiencia de 10. Los productos llegan rápido y bien empaquetados. La atención postventa es excelente, siempre dispuestos a ayudar."
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Google Maps review: Restaurante Cambalache - Concepción Arenal (5★) — Hace 8 años",
+      "source": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+      "confidence": 0.85,
+      "notes": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno."
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Google Maps photo uploaded — Itnig Café",
+      "source": "https://lh3.googleusercontent.com/gps-cs/ACgwaOta36KFtYmrbjUTwcjwaWYGFQel-iCJ5J8CF8-A_tq_3H0Kg1drOx5aYybQ_Zpxy_6AqfdLkFSCQD1cvICQUkUhKzu6qtyta8Nd7vNl4Zsq8HDAFuNhyJMFAvKzumoQJwN2I1n3ih6RQW_O",
+      "confidence": 0.75,
+      "notes": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Google Maps photo uploaded — Itnig Café",
+      "source": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuE5ciz-VRIve5b9hx4C6i7EUxlUpy_z8VJuvSXvhibSFzl3rtzHN6VPXkhh3UO21br4KmJcckRrAUfu2bFF7pqxNd9D7IF2k3VU88pOtCTW0lpyAxPT-8gwsEsXub-T7l6bH2UOIoy4B54",
+      "confidence": 0.75,
+      "notes": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Google Maps photo uploaded — unknown location",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7P_cfKU_jpi87YGBjaTo6j3cxYEorTn1zrCfvnQs8bBZPNy-tw7ar9Ita_C2yUzR8sjXscRdpSIlJvMOLf3_6Iqon1y8PUMojTUCH7TlLIfTUJ68zX6vhHxXA3x7N_svpOcuE",
+      "confidence": 0.75,
+      "notes": null
+    }
+  ],
+  "gaps": [
+    "Stats API: no stats returned (profile may be empty or private)"
+  ],
+  "raw": {
+    "gaia_id": "109807121807838897737",
+    "profile_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews",
+    "name": "Pedro Cao",
+    "profile_pic_url": "https://lh3.googleusercontent.com/a/ACg8ocL-ORl7mqC4cIHzzDqZMOiZZFUWjvuyEBCKu2D9g42TiaVVY1s=w72-h72-p-rp-mo-br100",
+    "stats": {
+      "reviews_count": 0,
+      "ratings_count": 0,
+      "photos_count": 0,
+      "local_guides_level": 2
+    },
+    "reviews": [
+      {
+        "place": "Xuxes CBD",
+        "rating": "5",
+        "text": "Llevo varios meses comprando aquí y siempre ha sido una experiencia de 10. Los productos llegan rápido y bien empaquetados. La atención postventa es excelente, siempre dispuestos a ayudar.",
+        "time_ago": "",
+        "place_url": "",
+        "source_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews"
+      },
+      {
+        "place": "Restaurante Cambalache - Concepción Arenal",
+        "rating": "5",
+        "text": "Muy rico y rápido, y el camarero que me atendió era muy atento y bueno.",
+        "time_ago": "Hace 8 años",
+        "place_url": "",
+        "source_url": "https://www.google.com/maps/contrib/109807121807838897737/reviews"
+      }
+    ],
+    "photos": [
+      {
+        "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOta36KFtYmrbjUTwcjwaWYGFQel-iCJ5J8CF8-A_tq_3H0Kg1drOx5aYybQ_Zpxy_6AqfdLkFSCQD1cvICQUkUhKzu6qtyta8Nd7vNl4Zsq8HDAFuNhyJMFAvKzumoQJwN2I1n3ih6RQW_O",
+        "place_name": "Itnig Café"
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/gps-cs/ACgwaOuE5ciz-VRIve5b9hx4C6i7EUxlUpy_z8VJuvSXvhibSFzl3rtzHN6VPXkhh3UO21br4KmJcckRrAUfu2bFF7pqxNd9D7IF2k3VU88pOtCTW0lpyAxPT-8gwsEsXub-T7l6bH2UOIoy4B54",
+        "place_name": "Itnig Café"
+      },
+      {
+        "url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7P_cfKU_jpi87YGBjaTo6j3cxYEorTn1zrCfvnQs8bBZPNy-tw7ar9Ita_C2yUzR8sjXscRdpSIlJvMOLf3_6Iqon1y8PUMojTUCH7TlLIfTUJ68zX6vhHxXA3x7N_svpOcuE",
+        "place_name": ""
+      }
+    ],
+    "total_reviews": 2,
+    "gaps": [
+      "Stats API: no stats returned (profile may be empty or private)"
+    ]
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null,
+    "twitter_handle": null,
+    "gaia_id": null
+  },
+  "duration_s": 21.78395733301295
+}

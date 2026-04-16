@@ -1,0 +1,29 @@
+{
+  "name": "google_gaia_check",
+  "status": "ok",
+  "summary": "josemanuelamadoabelenda@gmail.com -> Google Gaia ID 105982492274469151146",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "105982492274469151146",
+      "source": "platform_check:google_gaia_check",
+      "confidence": 1.0,
+      "notes": "Google account registered to josemanuelamadoabelenda@gmail.com",
+      "tag": "gaia_id"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "josemanuelamadoabelenda@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "josemanuelamadoabelenda@gmail.com",
+      "gaiaId": "105982492274469151146"
+    },
+    "error": null
+  },
+  "duration_s": 11.203761083015706
+}

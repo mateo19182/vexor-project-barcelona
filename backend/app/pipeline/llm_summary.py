@@ -1,8 +1,8 @@
 """LLM summary generator.
 
 Runs AFTER `synthesize()` — reads the finished Dossier plus the raw case
-context and asks Claude to produce a factual summary the downstream voice
-agent can consume before placing the call.
+context and asks Claude to produce a structured factual briefing a human
+debt collector reads before placing a call.
 
 This is not a pipeline module (it depends on results, not Context), so it
 sits alongside `synthesis.py` rather than in `pipeline/modules/`.
@@ -11,6 +11,7 @@ Invariants:
   * Summary contains only facts present in the Dossier — no invention.
   * Signals with low confidence or unresolved gaps are dropped, not hedged.
   * We never tell the voice agent how to behave — we only hand it context.
+  * Contradictions between sources are flagged explicitly.
 """
 
 from __future__ import annotations
@@ -33,18 +34,22 @@ def _log(msg: str) -> None:
     print(msg, file=sys.stderr, flush=True)
 
 
-SYSTEM_PROMPT = """You condense a debtor enrichment dossier into a factual summary for a downstream voice agent.
+SYSTEM_PROMPT = """You condense a debtor enrichment dossier into a structured factual briefing for a human debt collector.
 
-You are NOT coaching the voice agent. Do NOT suggest phrasing, openings, strategy, tone, or what to avoid. Only report verified facts.
+You are NOT coaching the collector. Do NOT suggest phrasing, openings, strategy, tone, or what to avoid. Only report verified facts organized for quick consumption.
 
 Rules:
 1. Use only facts present in the dossier input. Do not invent or infer.
 2. Drop low-confidence or contradictory items silently. Do not hedge ("possibly", "maybe").
-3. Prefer canonical values ("Barcelona, ES", "Acme Corp", "\u20ac1,240 personal loan, 31 months old").
-4. `summary`: prose, neutral tone. Cover debtor identity, location, employment/role, lifestyle, and any risk/asset findings that are CONFIRMED for this specific person. Length scales with richness \u2014 a thin dossier gets a short summary. Do not pad with speculation, caveats, or information about other people.
-5. `key_facts`: short bullets \u2014 one confirmed fact per bullet. Omit anything speculative or unconfirmed.
-6. Always include the case facts (debt amount, origin, age, country, prior call attempts/outcome, legal asset finding) even if enrichment found nothing.
-7. CRITICAL: Never mention other individuals found during research. Only report on the subject.
+3. Prefer canonical values ("Barcelona, ES", "Acme Corp", "€1,240 personal loan, 31 months old").
+4. `executive_brief`: 3-5 lines of prose. Cover: who is this person, what the debt looks like, and the most important findings. A collector reads this in 10 seconds to decide their approach. Length scales with richness — a thin dossier gets a short brief.
+5. `approach_context`: lifestyle indicators, economic signals, conversational entry points drawn from confirmed data. E.g. "Google Maps reviews suggest familiarity with Barcelona restaurant scene" or "registered on KuCoin (crypto exchange)". Only include if there are real signals — leave empty for thin dossiers.
+6. `confidence_level`: "high" if we have employment + location + multiple verified contacts, "moderate" if we have some contacts and partial profile, "low" if mostly just case data and platform registrations.
+7. `key_facts`: short bullets — one confirmed fact per bullet. Omit anything speculative.
+8. `unanswered_questions`: the 3-5 most important questions a collector would want answered that the enrichment could NOT resolve. E.g. "Current employer unknown", "No confirmed social media presence", "Relationship to Mio Interiors SL unclear".
+9. CRITICAL: Flag contradictions between sources explicitly in the brief (e.g. "Twitter @pedroca shows display name 'Pedroca Monteiro' which does not match subject name").
+10. CRITICAL: Never mention other individuals found during research unless they are directly relevant to the subject's profile.
+11. Always include the case facts (debt amount, origin, age, country, prior call attempts/outcome, legal asset finding) even if enrichment found nothing.
 
 Output ONLY the structured JSON requested."""
 
@@ -52,17 +57,46 @@ Output ONLY the structured JSON requested."""
 OUTPUT_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
-        "summary": {
+        "executive_brief": {
             "type": "string",
-            "description": "Factual prose summary of debtor + case, length scaled to dossier richness.",
+            "description": (
+                "3-5 lines: who this person is, what the debt looks like, "
+                "key findings. Readable in 10 seconds."
+            ),
+        },
+        "approach_context": {
+            "type": "string",
+            "description": (
+                "Lifestyle/economic signals and conversational entry points. "
+                "Empty string if dossier is thin."
+            ),
+        },
+        "confidence_level": {
+            "type": "string",
+            "enum": ["high", "moderate", "low"],
+            "description": "How much we actually know about this person.",
         },
         "key_facts": {
             "type": "array",
             "items": {"type": "string"},
-            "description": "Short bullets \u2014 one concrete verified fact each.",
+            "description": "Short bullets — one concrete verified fact each.",
+        },
+        "unanswered_questions": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": (
+                "3-5 key questions the collector would want answered that "
+                "enrichment could not resolve."
+            ),
         },
     },
-    "required": ["summary", "key_facts"],
+    "required": [
+        "executive_brief",
+        "approach_context",
+        "confidence_level",
+        "key_facts",
+        "unanswered_questions",
+    ],
     "additionalProperties": False,
 }
 
@@ -73,7 +107,7 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
         "=== CASE ===",
         f"case_id: {case.case_id}",
         f"country: {case.country or 'unknown'}",
-        f"debt: {f'\u20ac{case.debt_eur:.2f}' if case.debt_eur is not None else 'unknown'} ({case.debt_origin or 'unknown'}, {case.debt_age_months or 'unknown'} months old)",
+        f"debt: {f'€{case.debt_eur:.2f}' if case.debt_eur is not None else 'unknown'} ({case.debt_origin or 'unknown'}, {case.debt_age_months or 'unknown'} months old)",
         f"call_history: {case.call_attempts if case.call_attempts is not None else 'unknown'} attempt(s), last outcome: {case.call_outcome or 'unknown'}",
         f"legal_asset_finding: {case.legal_asset_finding or 'unknown'}",
     ]
@@ -107,8 +141,21 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
     if tw_sig:
         lines.append(f"twitter: @{tw_sig.value}")
 
+    # Verified contact channels — platforms where identifiers are confirmed
+    verified_lines: list[str] = []
+    for s in ctx.all("contact"):
+        if s.tag == "enrichment_ran":
+            continue  # skip scheduling sentinels
+        if s.notes and "registered" in s.notes.lower():
+            verified_lines.append(f"  {s.value} — {s.notes} (src={s.source})")
+        if s.tag in ("uber", "icloud") and s.confidence >= 0.7:
+            verified_lines.append(f"  {s.tag}: {s.value} (conf={s.confidence:.2f}, src={s.source})")
+    if verified_lines:
+        lines.append("")
+        lines.append("=== VERIFIED CHANNELS ===")
+        lines.extend(verified_lines)
+
     # Surface high-confidence structured signals accumulated on Context
-    # so the LLM has confirmed profile data to work with.
     profile_kinds = ("employer", "role", "location", "business")
     profile_lines: list[str] = []
     for kind in profile_kinds:
@@ -120,8 +167,28 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
         lines.append("=== CONFIRMED PROFILE ===")
         lines.extend(profile_lines)
 
-    # Unstructured context from the caller — free-form notes about the debtor
-    # that should inform the summary but aren't structured data.
+    # Lifestyle signals — give the LLM context for approach_context
+    lifestyle_lines: list[str] = []
+    for s in ctx.all("lifestyle"):
+        if s.confidence >= 0.60:
+            note = f" — {s.notes}" if s.notes else ""
+            lifestyle_lines.append(f"  {s.value}{note} (conf={s.confidence:.2f})")
+    if lifestyle_lines:
+        lines.append("")
+        lines.append("=== LIFESTYLE SIGNALS ===")
+        lines.extend(lifestyle_lines)
+
+    # Risk flags
+    risk_lines: list[str] = []
+    for s in ctx.all("risk_flag"):
+        note = f" — {s.notes}" if s.notes else ""
+        risk_lines.append(f"  {s.value}{note} (conf={s.confidence:.2f}, src={s.source})")
+    if risk_lines:
+        lines.append("")
+        lines.append("=== RISK FLAGS ===")
+        lines.extend(risk_lines)
+
+    # Unstructured context from the caller
     if case.context:
         lines.append("")
         lines.append("=== CALLER NOTES ===")
@@ -129,14 +196,16 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
 
     lines.append("")
     lines.append("=== DOSSIER ===")
-    lines.append(f"summary: {dossier.summary}")
-
+    # Don't send the raw concatenated summary — send structured signal data instead
     if dossier.signals:
         lines.append("")
         lines.append("signals:")
         for s in dossier.signals:
+            # Filter sentinels
+            if s.tag == "enrichment_ran":
+                continue
             tag_str = f"/{s.tag}" if s.tag else ""
-            note = f" \u2014 {s.notes}" if s.notes else ""
+            note = f" — {s.notes}" if s.notes else ""
             lines.append(
                 f"  [{s.kind}{tag_str}] {s.value} (conf={s.confidence:.2f}){note}"
             )
@@ -149,12 +218,12 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
 
     if dossier.gaps:
         lines.append("")
-        lines.append("gaps (do NOT include in output):")
+        lines.append("gaps (use these to inform unanswered_questions):")
         for g in dossier.gaps:
             lines.append(f"  - {g}")
 
     lines.append("")
-    lines.append("Produce the summary JSON now. Facts only \u2014 no coaching.")
+    lines.append("Produce the briefing JSON now. Facts only — no coaching.")
     return "\n".join(lines)
 
 
@@ -176,14 +245,14 @@ def _loose_json(text: str) -> Any:
 async def generate_llm_summary(
     ctx: Context, dossier: Dossier
 ) -> LlmSummary | None:
-    """Run the LLM over the finished Dossier and return a factual summary.
+    """Run the LLM over the finished Dossier and return a structured briefing.
 
     Returns None if the API key is missing or the model fails to return
-    valid JSON \u2014 the caller treats it as optional, the pipeline is not
+    valid JSON — the caller treats it as optional, the pipeline is not
     broken by a failed summary.
     """
     if not settings.anthropic_api_key:
-        _log("[llm_summary] skipped \u2014 anthropic_api_key not configured")
+        _log("[llm_summary] skipped — anthropic_api_key not configured")
         return None
 
     client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
@@ -216,16 +285,35 @@ async def generate_llm_summary(
         _log("[llm_summary] final block was not JSON")
         return None
 
-    summary = str(parsed.get("summary") or "").strip()
+    executive_brief = str(parsed.get("executive_brief") or "").strip()
+    if not executive_brief:
+        _log("[llm_summary] empty executive_brief")
+        return None
+
+    approach_context = str(parsed.get("approach_context") or "").strip()
+    confidence_level = str(parsed.get("confidence_level") or "low").strip()
+    if confidence_level not in ("high", "moderate", "low"):
+        confidence_level = "low"
+
     key_facts = [
         str(f).strip()
         for f in (parsed.get("key_facts") or [])
         if str(f).strip()
     ]
+    unanswered = [
+        str(q).strip()
+        for q in (parsed.get("unanswered_questions") or [])
+        if str(q).strip()
+    ]
 
-    if not summary:
-        _log("[llm_summary] empty summary")
-        return None
-
-    _log(f"[llm_summary] done: {len(key_facts)} key fact(s)")
-    return LlmSummary(summary=summary, key_facts=key_facts)
+    _log(
+        f"[llm_summary] done: confidence={confidence_level}, "
+        f"{len(key_facts)} fact(s), {len(unanswered)} question(s)"
+    )
+    return LlmSummary(
+        executive_brief=executive_brief,
+        approach_context=approach_context,
+        confidence_level=confidence_level,
+        key_facts=key_facts,
+        unanswered_questions=unanswered,
+    )

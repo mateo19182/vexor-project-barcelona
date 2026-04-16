@@ -1,0 +1,16 @@
+{
+  "name": "twitter",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter profile @amadoasenjo not retrievable: user_not_found"
+  ],
+  "raw": {
+    "error": "user_not_found",
+    "handle": "amadoasenjo"
+  },
+  "duration_s": 0.026095749984961003
+}

@@ -77,16 +77,25 @@ class PropertyModule:
     requires: tuple[tuple[str, str | None], ...] = (("address", None),)
 
     async def run(self, ctx: Context) -> ModuleResult:
-        # Solo Espana por ahora
-        if (ctx.case.country or "").upper() != "ES":
+        address_sig = ctx.best("address")
+        address = address_sig.value if address_sig else ""
+
+        # Infer Spain from case.country OR from the address text itself
+        country = (ctx.case.country or "").upper()
+        address_lower = address.lower()
+        is_spain = country == "ES" or any(
+            kw in address_lower
+            for kw in ["spain", "españa", "espana", ", es", "madrid", "barcelona",
+                        "valencia", "sevilla", "bilbao", "málaga", "malaga", "zaragoza",
+                        "murcia", "palma", "vigo", "coruña", "coruna", "galicia",
+                        "andalucia", "cataluña", "cataluna", "euskadi"]
+        )
+        if not is_spain:
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                gaps=["property enrichment solo disponible para ES (country!=ES)"],
+                gaps=["property enrichment solo disponible para ES (no se detecta España en la dirección)"],
             )
-
-        address_sig = ctx.best("address")
-        address = address_sig.value if address_sig else ""
         if not address.strip():
             return ModuleResult(
                 name=self.name,

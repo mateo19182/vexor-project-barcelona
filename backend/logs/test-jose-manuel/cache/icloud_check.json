@@ -1,0 +1,31 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "josemanuelamadoabelenda@gmail.com is registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "d7a6ebcf-21b7-471a-825f-aa5dd2e486b1",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 1.384819958009757
+}

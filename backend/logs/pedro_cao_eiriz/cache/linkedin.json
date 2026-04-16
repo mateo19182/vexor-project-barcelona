@@ -1,0 +1,13 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "linkedin: could not parse slug from 'pedro-pedreira'"
+  ],
+  "raw": {},
+  "duration_s": 0.0000475000124424696
+}

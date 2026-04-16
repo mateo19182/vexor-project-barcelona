@@ -1,0 +1,78 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "No confirmed public profiles or social media accounts were found for Pedro Cao Eiriz matching the provided identifiers (email pedrocaoeiriz@gmail.com, phone +34617758559). The provided address — Passeig Maragall 13, Entresuelo 1, 08026 Barcelona — corresponds to the registered premises of Mio Interiors SL, a Barcelona-based furniture and bathroom wholesale company, though no public record links Pedro Cao Eiriz to that business by name. No personal social media, LinkedIn, or other public profiles were confirmed for this individual.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Passeig Maragall 13, Entresuelo 1, 08026 Barcelona, ES",
+      "source": "https://www.datoscif.es/empresa/mio-interiors-sl",
+      "confidence": 0.5,
+      "notes": "This address matches the registered premises of Mio Interiors SL. Whether it is also a personal residence for the subject cannot be confirmed from open sources.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Mio Interiors SL (CIF B65741324) — Paseo Maragall 13 BJ, 08026 Barcelona",
+      "source": "https://empresite.eleconomista.es/MIO-INTERIORS.html",
+      "confidence": 0.2,
+      "notes": "This company is registered at the subject's provided address. The sole legal administrator on record is Sandra Brun Torras, not Pedro Cao Eiriz. Any connection to the subject is unconfirmed.",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "osint_web",
+      "source": "osint_web",
+      "confidence": 1.0,
+      "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+      "tag": "enrichment_ran"
+    }
+  ],
+  "gaps": [
+    "No social media profiles (LinkedIn, Instagram, Twitter/X, Facebook, etc.) could be confirmed as belonging to Pedro Cao Eiriz using the provided identifiers.",
+    "The phone number +34617758559 returned no relevant public results.",
+    "The email pedrocaoeiriz@gmail.com returned no indexed public profiles.",
+    "The address matches registered premises of Mio Interiors SL (administrator: Sandra Brun Torras); Pedro Cao Eiriz's relationship to this business or property is unknown.",
+    "A 'Carolina Cao Eiriz' (LinkedIn: es.linkedin.com/in/carolina-cao-eiriz-77501b14b) shares the same rare surname combination and appears to be Spanish; possible relative, but no confirmed link to subject.",
+    "No Spanish business registry (BORME) entries were found under the name Pedro Cao Eiriz."
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "Pedro Cao Eiriz",
+      "pedrocaoeiriz@gmail.com",
+      "\"Pedro Cao Eiriz\" Barcelona",
+      "\"Passeig Maragall 13\" Barcelona empresa",
+      "+34617758559",
+      "\"617758559\" España",
+      "linkedin \"Pedro Cao Eiriz\"",
+      "\"Cao Eiriz\" Barcelona Spain",
+      "\"Cao Eiriz\" España",
+      "\"pedrocaoeiriz\" site:linkedin.com OR site:instagram.com OR site:twitter.com OR site:facebook.com",
+      "\"Passeig Maragall 13\" \"08026\" empresa negocio",
+      "Pedro Cao Eiriz linkedin Barcelona",
+      "\"Pedro Cao\" \"08026\" OR \"Maragall\" Barcelona",
+      "\"Mio Interiors\" \"Pasaje Maragall\" Barcelona Pedro",
+      "\"Mio Interiors\" Barcelona administrador propietario",
+      "Pedro Cao Eiriz empresa autónomo España",
+      "site:linkedin.com \"Pedro Cao Eiriz\"",
+      "\"pedrocaoeiriz\" OR \"pedro.cao.eiriz\" OR \"pedro_cao_eiriz\"",
+      "\"617 75 85 59\" España",
+      "Pedro Cao Eiriz twitter facebook instagram",
+      "\"Pedro Cao\" Barcelona \"Maragall\" OR \"08026\"",
+      "tapadelwater.com Pedro Cao Eiriz",
+      "\"Pedro Cao\" Barcelona Galicia autónomo freelance"
+    ],
+    "fetched_urls": [
+      "https://es.linkedin.com/in/carolina-cao-eiriz-77501b14b",
+      "https://es.kompass.com/c/mio-interiors/es1335684/",
+      "https://www.instagram.com/pedro_cao/",
+      "https://www.tapadelwater.com"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 101.77642941701924
+}

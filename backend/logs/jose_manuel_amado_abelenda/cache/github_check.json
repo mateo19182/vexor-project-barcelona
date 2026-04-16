@@ -1,0 +1,18 @@
+{
+  "name": "github_check",
+  "status": "ok",
+  "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on GitHub.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "platform": "GitHub",
+    "identifier": "josemanuelamadoabelenda@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "session_id": "f6856e2e-ac8e-4c92-a9dd-b554a3b4b4ca",
+    "error": null
+  },
+  "duration_s": 0.9179606669931673
+}

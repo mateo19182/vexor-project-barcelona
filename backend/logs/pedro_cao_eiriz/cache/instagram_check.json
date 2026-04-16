@@ -1,0 +1,20 @@
+{
+  "name": "instagram_check",
+  "status": "no_data",
+  "summary": "Instagram check for pedrocaoeiriz@gmail.com was inconclusive (status: INVALID).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Instagram returned ambiguous status 'INVALID' for pedrocaoeiriz@gmail.com"
+  ],
+  "raw": {
+    "platform": "Instagram",
+    "identifier": "pedrocaoeiriz@gmail.com",
+    "status_raw": "INVALID",
+    "http_status": 200,
+    "session_id": "1550eff4-2bcc-4d14-befc-f14787c1a45d",
+    "error": null
+  },
+  "duration_s": 0.21377941698301584
+}

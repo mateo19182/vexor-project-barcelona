@@ -1,0 +1,27 @@
+{
+  "name": "twitter_check",
+  "status": "ok",
+  "summary": "pedrocaoeiriz@gmail.com is registered on Twitter.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "Twitter account registered to pedrocaoeiriz@gmail.com",
+      "source": "platform_check:twitter_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: REGISTERED",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "pedrocaoeiriz@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "session_id": "ea5d635b-31dc-4d71-9201-48e72e169f18",
+    "error": null
+  },
+  "duration_s": 0.8468086249777116
+}

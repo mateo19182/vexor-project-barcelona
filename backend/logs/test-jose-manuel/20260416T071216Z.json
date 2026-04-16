@@ -1,0 +1,4333 @@
+{
+  "case_id": "test-jose-manuel",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Found 25 social profile(s) via Brave search Found in 4 breach record(s) | 7 new phone(s) discovered: +34881983814, +34981433901, +34981714428 | Aliases/usernames: josemanuelamado, jose-amado-69554b26 | 7 business association(s): Motivos Singulares Sl, Serviocio Cultura Deporte Y Recreacion Sl, Hotel Natureza Monte Blanco Sl josemanuelamadoabelenda@gmail.com is NOT registered on GitHub. josemanuelamadoabelenda@gmail.com -> Google Gaia ID 105982492274469151146 josemanuelamadoabelenda@gmail.com is registered on iCloud. Email found on 2 platform(s) | 2 breach/leak hit(s) josemanuelamadoabelenda@gmail.com is NOT registered on Uber. Email found in 3 breach(es); registered on: canva.com, verifications.io, linkedin.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 3 breach(es); earliest 2012, latest 2019 GAIA enrichment for 105982492274469151146. Name: Contribuciones. Could not resolve Instagram profile picture URL for @https://www.instagram.com/p/C_0JFG2sY9Y/; reverse-image search skipped. Could not retrieve any Instagram data for @https://www.instagram.com/p/C_0JFG2sY9Y/. LinkedIn @jose-manuel-arranz-abelenda-1841883a (Jose Manuel Arranz Abelenda) — Senior Infrastructure Project Manager — Vilvoorde, Flemish Region, Belgium — 821 followers. @amadoasenjo is a valid Twitter/X user; name=Jose Manuel Amado Asenjo; email=jo*************@g****.***. Jooble: 'Senior Infrastructure Project Manager' in Vilvoorde, Flemish Region, Belgium → 0 listing(s).",
+    "facts": [
+      {
+        "claim": "Identity found in 4 breach record(s) in the breach intelligence database",
+        "source": "https://9ghz.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Email active on 4 platform(s) out of 43 checked: leakcheck.io, Breach Check v2, multi, kucoin.com",
+        "source": "https://nosint.org",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Email found in 3 breach(es); earliest 2012, latest 2019",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, Names, Passwords, Phone numbers, Physical addresses, Usernames",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Moderate (45/100)",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "LinkedIn About: • Certified PRINCE2 Practitioner + Project Management Professional (PMP).\n• Experience with ITIL Methodology.\n• Proven supervisory and organisational skills in projects, team leadership and computer support management.\n• 25 years of experience on numerous IT projects including: IT infrastructure projects, real-time systems in railways control centers, Disaster Recovery (DR) solutions.\n• Excellent analytical and document drafting skills: Ability to gather, analyse and evaluate facts and to presen",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.85
+      },
+      {
+        "claim": "LinkedIn position: Project Manager — Daikin Europe · Freelance — Sep 2024 - Present · 1 yr 8 mos",
+        "source": "https://www.linkedin.com/company/10118/",
+        "confidence": 0.8
+      },
+      {
+        "claim": "LinkedIn position: Senior Infrastructure Project Manager — Sodexo Benefits and Rewards Services · Freelance — Mar 2023 - Feb 2024 · 1 yr",
+        "source": "https://www.linkedin.com/company/10884655/",
+        "confidence": 0.8
+      },
+      {
+        "claim": "LinkedIn position: Infrastructure Project Manager — Fujitsu / TVH · Freelance — Mar 2021 - Dec 2022 · 1 yr 10 mos",
+        "source": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+TVH",
+        "confidence": 0.8
+      }
+    ],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "Debtor identifiers found in 4 breach record(s)",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "notes": "Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "+34881983814",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34981433901",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34981714428",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34916245811",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34988210769",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34902313110",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34982120040",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "josemanuelamado",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "notes": "Username / alias found in breach records — may correspond to social profiles",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "jose-amado-69554b26",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "notes": "Username / alias found in breach records — may correspond to social profiles",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Motivos Singulares Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): associated. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Cultura Deporte Y Recreacion Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Hotel Natureza Monte Blanco Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Sole Administrator. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Madrid Sur Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): General Manager, Member of the Board, Commercial Director, Financial Manager. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Ourense Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Granada Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Eciman Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Administrator. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "105982492274469151146",
+        "source": "platform_check:google_gaia_check",
+        "confidence": 1.0,
+        "notes": "Google account registered to josemanuelamadoabelenda@gmail.com",
+        "tag": "gaia_id"
+      },
+      {
+        "kind": "contact",
+        "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+        "source": "platform_check:icloud_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: SUCCESS",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Leak Check",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Leak Check; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Breach Check v2",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Breach Check v2; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "multi",
+        "source": "https://multi",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: Multi-site Account; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "kucoin.com",
+        "source": "https://kucoin.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: KuCoin; (cached result)",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "nosint",
+        "source": "https://nosint.org",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "contact",
+        "value": "canva.com",
+        "source": "https://www.canva.com/en_in/help/incident-may24/",
+        "confidence": 0.85,
+        "notes": "Account registered on canva.com (breach year: 2019). Data exposed: Email addresses, Names, Usernames",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "verifications.io",
+        "source": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+        "confidence": 0.85,
+        "notes": "Account registered on verifications.io (breach year: 2019). Data exposed: Email addresses, Names, Dates of birth, Genders, Geographic locations, Phone numbers, Physical addresses",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "linkedin.com",
+        "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+        "confidence": 0.85,
+        "notes": "Account registered on linkedin.com (breach year: 2012). Data exposed: Email addresses, Passwords",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in LinkedIn breach",
+        "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+        "confidence": 0.9,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "role",
+        "value": "Senior Infrastructure Project Manager",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.85,
+        "notes": "Verbatim LinkedIn headline",
+        "tag": null
+      },
+      {
+        "kind": "employer",
+        "value": "Daikin Europe",
+        "source": "https://www.linkedin.com/company/daikin-europe-nv/",
+        "confidence": 0.85,
+        "notes": "Listed as current position on LinkedIn",
+        "tag": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "Industry: Information Technology & Services",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.7,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "location",
+        "value": "Vilvoorde, Flemish Region, Belgium",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.8,
+        "notes": "Self-reported location on LinkedIn profile",
+        "tag": null
+      },
+      {
+        "kind": "name",
+        "value": "Jose Manuel Amado Asenjo",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.8,
+        "notes": "Display name from Twitter/X profile @amadoasenjo",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "jo*************@g****.***",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.85,
+        "notes": "Masked email associated with @amadoasenjo",
+        "tag": "email_masked"
+      },
+      {
+        "kind": "contact",
+        "value": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.9,
+        "notes": "Twitter/X profile picture for @amadoasenjo",
+        "tag": "photo"
+      }
+    ],
+    "gaps": [
+      "Instagram returned ambiguous status 'INVALID' for josemanuelamadoabelenda@gmail.com",
+      "osint_web raised BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca72uJpv6iZSfAKmu2YAx'}",
+      "Twitter returned ambiguous status 'BAN' for josemanuelamadoabelenda@gmail.com",
+      "Stats API: no stats returned (profile may be empty or private)",
+      "No public reviews found on the contributor page",
+      "No public photos found on the contributor page",
+      "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted",
+      "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python",
+      "Twitter profile @amadoasenjo not retrievable: user_not_found",
+      "jooble: no listings found for 'Senior Infrastructure Project Manager' in 'Vilvoorde, Flemish Region, Belgium' — headline may be non-standard or market is very niche",
+      "skipped: missing inputs [address]"
+    ]
+  },
+  "enriched_dossier": {
+    "subject": {
+      "name": "Jose Manuel Amado Abelenda",
+      "aliases": [
+        "Jose Manuel Amado Asenjo"
+      ],
+      "location": "Vilvoorde, Flemish Region, Belgium",
+      "country": "ES",
+      "phones": [
+        "+34881983814",
+        "+34981433901",
+        "+34981714428",
+        "+34916245811",
+        "+34988210769",
+        "+34902313110",
+        "+34982120040"
+      ],
+      "emails": [
+        "josemanuelamadoabelenda@gmail.com"
+      ],
+      "social_handles": {
+        "instagram": "https://www.instagram.com/p/C_0JFG2sY9Y/",
+        "twitter": "amadoasenjo",
+        "linkedin": "jose-manuel-arranz-abelenda-1841883a",
+        "github": "jmaburto",
+        "facebook": "2592049217532755",
+        "tiktok": "https://www.tiktok.com/discover/dr-juan-manuel-amado"
+      }
+    },
+    "case_summary": "No case metadata provided..",
+    "digital_footprint": "extensive",
+    "contact_channels": [
+      {
+        "channel": "email",
+        "value": "josemanuelamadoabelenda@gmail.com",
+        "verified_on": [
+          "Google",
+          "iCloud",
+          "Kucoin"
+        ],
+        "confidence": 1.0,
+        "notes": null
+      },
+      {
+        "channel": "twitter",
+        "value": "amadoasenjo",
+        "verified_on": [
+          "Twitter"
+        ],
+        "confidence": 0.95,
+        "notes": null
+      },
+      {
+        "channel": "phone",
+        "value": "+34881983814",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "phone",
+        "value": "+34981433901",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "phone",
+        "value": "+34981714428",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "phone",
+        "value": "+34916245811",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "phone",
+        "value": "+34988210769",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "phone",
+        "value": "+34902313110",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "phone",
+        "value": "+34982120040",
+        "verified_on": [],
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "channel": "instagram",
+        "value": "https://www.instagram.com/p/C_0JFG2sY9Y/",
+        "verified_on": [
+          "Instagram"
+        ],
+        "confidence": 0.65,
+        "notes": null
+      },
+      {
+        "channel": "linkedin",
+        "value": "jose-manuel-arranz-abelenda-1841883a",
+        "verified_on": [
+          "Linkedin"
+        ],
+        "confidence": 0.65,
+        "notes": null
+      },
+      {
+        "channel": "github",
+        "value": "jmaburto",
+        "verified_on": [
+          "Github"
+        ],
+        "confidence": 0.65,
+        "notes": null
+      },
+      {
+        "channel": "facebook",
+        "value": "2592049217532755",
+        "verified_on": [
+          "Facebook"
+        ],
+        "confidence": 0.65,
+        "notes": null
+      },
+      {
+        "channel": "tiktok",
+        "value": "https://www.tiktok.com/discover/dr-juan-manuel-amado",
+        "verified_on": [
+          "Tiktok"
+        ],
+        "confidence": 0.65,
+        "notes": null
+      },
+      {
+        "channel": "phone",
+        "value": "+34881983814",
+        "verified_on": [],
+        "confidence": 0.55,
+        "notes": "First phone discovered from breach records"
+      }
+    ],
+    "intelligence": [
+      {
+        "category": "employment",
+        "finding": "Senior Infrastructure Project Manager — Verbatim LinkedIn headline",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.85,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Daikin Europe — Listed as current position on LinkedIn",
+        "source": "https://www.linkedin.com/company/daikin-europe-nv/",
+        "confidence": 0.85,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Motivos Singulares Sl — Role(s): associated. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Serviocio Cultura Deporte Y Recreacion Sl — Role(s): Member of the Board. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Hotel Natureza Monte Blanco Sl — Role(s): Sole Administrator. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Serviocio Madrid Sur Sl — Role(s): General Manager, Member of the Board, Commercial Director, Financial Manager. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Serviocio Ourense Sl — Role(s): Member of the Board. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Serviocio Granada Sl — Role(s): Member of the Board. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "employment",
+        "finding": "Eciman Sl — Role(s): Administrator. Found in breach intelligence records.",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "location",
+        "finding": "Vilvoorde, Flemish Region, Belgium — Self-reported location on LinkedIn profile",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.8,
+        "actionable": true
+      },
+      {
+        "category": "risk",
+        "finding": "Email found in 3 breach(es); earliest 2012, latest 2019",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.95,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Password exposed as easytocrack in LinkedIn breach",
+        "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+        "confidence": 0.9,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, Names, Passwords, Phone numbers, Physical addresses, Usernames",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.9,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.9,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Debtor identifiers found in 4 breach record(s) — Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Email found in Leak Check — Found by NoSINT module: Leak Check; (cached result)",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Email found in Breach Check v2 — Found by NoSINT module: Breach Check v2; (cached result)",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "canva.com — Account registered on canva.com (breach year: 2019). Data exposed: Email addresses, Names, Usernames",
+        "source": "https://www.canva.com/en_in/help/incident-may24/",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "verifications.io — Account registered on verifications.io (breach year: 2019). Data exposed: Email addresses, Names, Dates of birth, Genders, Geographic locations, Phone numbers, Physical addresses",
+        "source": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "linkedin.com — Account registered on linkedin.com (breach year: 2012). Data exposed: Email addresses, Passwords",
+        "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Identity found in 4 breach record(s) in the breach intelligence database",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Email active on 4 platform(s) out of 43 checked: leakcheck.io, Breach Check v2, multi, kucoin.com",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "risk",
+        "finding": "Overall breach risk score: Moderate (45/100)",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "LinkedIn About: • Certified PRINCE2 Practitioner + Project Management Professional (PMP).\n• Experience with ITIL Methodology.\n• Proven supervisory and organisational skills in projects, team leadership and computer support management.\n• 25 years of experience on numerous IT projects including: IT infrastructure projects, real-time systems in railways control centers, Disaster Recovery (DR) solutions.\n• Excellent analytical and document drafting skills: Ability to gather, analyse and evaluate facts and to presen",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.85,
+        "actionable": false
+      },
+      {
+        "category": "identity",
+        "finding": "Jose Manuel Amado Asenjo — Display name from Twitter/X profile @amadoasenjo",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.8,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "LinkedIn position: Project Manager — Daikin Europe · Freelance — Sep 2024 - Present · 1 yr 8 mos",
+        "source": "https://www.linkedin.com/company/10118/",
+        "confidence": 0.8,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "LinkedIn position: Senior Infrastructure Project Manager — Sodexo Benefits and Rewards Services · Freelance — Mar 2023 - Feb 2024 · 1 yr",
+        "source": "https://www.linkedin.com/company/10884655/",
+        "confidence": 0.8,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "LinkedIn position: Infrastructure Project Manager — Fujitsu / TVH · Freelance — Mar 2021 - Dec 2022 · 1 yr 10 mos",
+        "source": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+TVH",
+        "confidence": 0.8,
+        "actionable": false
+      },
+      {
+        "category": "identity",
+        "finding": "Industry: Information Technology & Services",
+        "source": "jose-manuel-arranz-abelenda-1841883a",
+        "confidence": 0.7,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "josemanuelamado — Username / alias found in breach records — may correspond to social profiles",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "actionable": false
+      },
+      {
+        "category": "digital",
+        "finding": "jose-amado-69554b26 — Username / alias found in breach records — may correspond to social profiles",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "actionable": false
+      }
+    ],
+    "risk_flags": [
+      "Debtor identifiers found in 4 breach record(s) (Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com)",
+      "Email found in Leak Check (Found by NoSINT module: Leak Check; (cached result))",
+      "Email found in Breach Check v2 (Found by NoSINT module: Breach Check v2; (cached result))",
+      "Password exposed as easytocrack in LinkedIn breach"
+    ],
+    "platform_registrations": [
+      "Google",
+      "Kucoin",
+      "LinkedIn"
+    ],
+    "gaps": [
+      "osint_web raised BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca72uJpv6iZSfAKmu2YAx'}",
+      "Stats API: no stats returned (profile may be empty or private)",
+      "No public reviews found on the contributor page",
+      "No public photos found on the contributor page",
+      "Twitter profile @amadoasenjo not retrievable: user_not_found",
+      "jooble: no listings found for 'Senior Infrastructure Project Manager' in 'Vilvoorde, Flemish Region, Belgium' — headline may be non-standard or market is very niche"
+    ],
+    "technical_issues": [
+      "Instagram returned ambiguous status 'INVALID' for josemanuelamadoabelenda@gmail.com",
+      "Twitter returned ambiguous status 'BAN' for josemanuelamadoabelenda@gmail.com",
+      "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted",
+      "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python",
+      "skipped: missing inputs [address]"
+    ],
+    "module_coverage": {
+      "boe": "no_data",
+      "borme": "no_data",
+      "brave_social": "ok",
+      "breach_scout": "ok",
+      "github_check": "ok",
+      "google_gaia_check": "ok",
+      "icloud_check": "ok",
+      "instagram_check": "no_data",
+      "nosint": "ok",
+      "osint_web": "error",
+      "twitter_check": "no_data",
+      "uber_hint": "ok",
+      "xon": "ok",
+      "gaia_enrichment": "ok",
+      "image_search": "ok",
+      "instagram": "ok",
+      "linkedin": "ok",
+      "twitter": "ok",
+      "twitter_vu": "ok",
+      "jooble": "ok",
+      "property": "skipped"
+    }
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "no_data",
+      "summary": "No BOE entries found for 'Jose Manuel Amado Abelenda'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.7043829159811139
+    },
+    {
+      "name": "borme",
+      "status": "no_data",
+      "summary": "No BORME entries found for 'Jose Manuel Amado Abelenda'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 0.688738624972757
+    },
+    {
+      "name": "brave_social",
+      "status": "ok",
+      "summary": "Found 25 social profile(s) via Brave search",
+      "social_links": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/C_0JFG2sY9Y/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/C68RBAFMofy/?locale=en",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jose-manuel-arranz-abelenda-1841883a/",
+          "handle": "jose-manuel-arranz-abelenda-1841883a",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jose-manuel-amado-8532b7145/",
+          "handle": "jose-manuel-amado-8532b7145",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jose-abelenda-483821/",
+          "handle": "jose-abelenda-483821",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/jotamado/",
+          "handle": "jotamado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/jose.abelenda/?hl=it",
+          "handle": "jose.abelenda",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/joseandradea/",
+          "handle": "joseandradea",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/amadoasenjo?lang=pt",
+          "handle": "amadoasenjo",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/joseamado89?lang=ar",
+          "handle": "joseamado89",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/joselitoamado",
+          "handle": "joselitoamado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/amado_lito",
+          "handle": "amado_lito",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/josemanuelvall4",
+          "handle": "josemanuelvall4",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/2592049217532755",
+          "handle": "2592049217532755",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/josemanuel.tadendeabelenda",
+          "handle": "josemanuel.tadendeabelenda",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/josemanuel.fernandezamado/",
+          "handle": "josemanuel.fernandezamado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/p/Jos%C3%A9-Manuel-Amado-Amado-100087606465514/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/jose.criadoabelenda/",
+          "handle": "jose.criadoabelenda",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/jmaburto",
+          "handle": "jmaburto",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/ingelectronicadj",
+          "handle": "ingelectronicadj",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/jmvillalobos",
+          "handle": "jmvillalobos",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/manuelen",
+          "handle": "manuelen",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/dr-juan-manuel-amado",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/juan-manuel-amado?lang=es",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/jose-manuel-solis-%C3%A1ngeles-de-fuego",
+          "handle": null,
+          "confidence": 0.65
+        }
+      ],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "queries": [
+          "\"Jose Manuel Amado Abelenda\" site:linkedin.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:instagram.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:x.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:facebook.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:github.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:tiktok.com ES",
+          "josemanuelamadoabelenda site:linkedin.com",
+          "josemanuelamadoabelenda site:instagram.com",
+          "josemanuelamadoabelenda site:x.com",
+          "josemanuelamadoabelenda site:facebook.com",
+          "josemanuelamadoabelenda site:github.com",
+          "josemanuelamadoabelenda site:tiktok.com"
+        ],
+        "links_found": 25,
+        "errors": []
+      },
+      "duration_s": 0.679694666992873
+    },
+    {
+      "name": "breach_scout",
+      "status": "ok",
+      "summary": "Found in 4 breach record(s) | 7 new phone(s) discovered: +34881983814, +34981433901, +34981714428 | Aliases/usernames: josemanuelamado, jose-amado-69554b26 | 7 business association(s): Motivos Singulares Sl, Serviocio Cultura Deporte Y Recreacion Sl, Hotel Natureza Monte Blanco Sl",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Identity found in 4 breach record(s) in the breach intelligence database",
+          "source": "https://9ghz.com",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Debtor identifiers found in 4 breach record(s)",
+          "source": "https://9ghz.com",
+          "confidence": 0.85,
+          "notes": "Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "+34881983814",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34981433901",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34981714428",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34916245811",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34988210769",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34902313110",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34982120040",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34881983814",
+          "source": "https://9ghz.com",
+          "confidence": 0.55,
+          "notes": "First phone discovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "josemanuelamado",
+          "source": "https://9ghz.com",
+          "confidence": 0.65,
+          "notes": "Username / alias found in breach records — may correspond to social profiles",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "jose-amado-69554b26",
+          "source": "https://9ghz.com",
+          "confidence": 0.65,
+          "notes": "Username / alias found in breach records — may correspond to social profiles",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Motivos Singulares Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): associated. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Cultura Deporte Y Recreacion Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Hotel Natureza Monte Blanco Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Sole Administrator. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Madrid Sur Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): General Manager, Member of the Board, Commercial Director, Financial Manager. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Ourense Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Granada Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Eciman Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Administrator. Found in breach intelligence records.",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "keywords": [
+          "Jose Manuel Amado Abelenda",
+          "josemanuelamadoabelenda@gmail.com"
+        ],
+        "mode": "authenticated_batch",
+        "response": {
+          "code": 0,
+          "msg": "ok",
+          "data": [
+            {
+              "data": [
+                {
+                  "other_info": "Motivos Singulares Sl",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Motivos Singulares Sl  +34 881983814",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Serviocio Cultura Deporte Y Recreacion Sl",
+                  "real_name": "jose manuel amado abelenda",
+                  "region": "ES",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Serviocio Cultura Deporte Y Recreacion Sl  +34 981433901",
+                  "real_name": "jose manuel amado abelenda",
+                  "region": "ES",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Sole Administrator Hotel Natureza Monte Blanco Sl.  +34 981714428",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "General Manager Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Ourense Sl  +34 988210769",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Granada Sl.  +34 902313110",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Administrator Eciman Sl  +34 982120040",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Cultura Deporte Y Recreacion Sl  +34 981433901",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Commercial Director Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Financial Manager Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                }
+              ],
+              "keyword": "Jose Manuel Amado Abelenda",
+              "total_count": 13
+            },
+            {
+              "data": [
+                {
+                  "email": "josemanuelamadoabelenda@gmail.com",
+                  "other_info": "jose manuel Amado",
+                  "source": {
+                    "breach_date": "2019-05-24",
+                    "domain": "canva.com",
+                    "id": "514932",
+                    "record_count": 137272116,
+                    "region": "",
+                    "title": "Canva"
+                  },
+                  "user_name": "josemanuelamado"
+                },
+                {
+                  "email": "josemanuelamadoabelenda@gmail.com",
+                  "real_name": "jose amado",
+                  "source": {
+                    "breach_date": "2019-01-01",
+                    "domain": "peopledatalabs.com",
+                    "id": "514356",
+                    "record_count": 471014406,
+                    "region": "US",
+                    "title": "PeopleDataLabs (PDL) "
+                  },
+                  "user_name": "jose-amado-69554b26"
+                },
+                {
+                  "email": "josemanuelamadoabelenda@gmail.com",
+                  "source": {
+                    "breach_date": "2019-02-25",
+                    "domain": "verifications.io",
+                    "id": "324b37",
+                    "record_count": 763117241,
+                    "region": "",
+                    "title": "Verifications.io"
+                  }
+                }
+              ],
+              "keyword": "josemanuelamadoabelenda@gmail.com",
+              "total_count": 3
+            }
+          ]
+        },
+        "status_code": 200,
+        "response_bytes": 4229
+      },
+      "duration_s": 1.320103709003888
+    },
+    {
+      "name": "github_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on GitHub.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "platform": "GitHub",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "734632e8-7690-489c-92e8-59635f387c22",
+        "error": null
+      },
+      "duration_s": 0.8003818329889327
+    },
+    {
+      "name": "google_gaia_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com -> Google Gaia ID 105982492274469151146",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "105982492274469151146",
+          "source": "platform_check:google_gaia_check",
+          "confidence": 1.0,
+          "notes": "Google account registered to josemanuelamadoabelenda@gmail.com",
+          "tag": "gaia_id"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "josemanuelamadoabelenda@gmail.com",
+          "gaiaId": "105982492274469151146"
+        },
+        "error": null
+      },
+      "duration_s": 11.203761083015706
+    },
+    {
+      "name": "icloud_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is registered on iCloud.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+          "source": "platform_check:icloud_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: SUCCESS",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "checks": [
+          {
+            "platform": "iCloud",
+            "identifier": "josemanuelamadoabelenda@gmail.com",
+            "status_raw": "SUCCESS",
+            "http_status": 200,
+            "session_id": "d7a6ebcf-21b7-471a-825f-aa5dd2e486b1",
+            "error": null
+          }
+        ]
+      },
+      "duration_s": 1.384819958009757
+    },
+    {
+      "name": "instagram_check",
+      "status": "no_data",
+      "summary": "Instagram check for josemanuelamadoabelenda@gmail.com was inconclusive (status: INVALID).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Instagram returned ambiguous status 'INVALID' for josemanuelamadoabelenda@gmail.com"
+      ],
+      "raw": {
+        "platform": "Instagram",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "INVALID",
+        "http_status": 200,
+        "session_id": "88b4c544-bf1e-4e24-b85b-6575808b1862",
+        "error": null
+      },
+      "duration_s": 0.23410299996612594
+    },
+    {
+      "name": "nosint",
+      "status": "ok",
+      "summary": "Email found on 2 platform(s) | 2 breach/leak hit(s)",
+      "social_links": [
+        {
+          "platform": "multi-site account",
+          "url": "https://multi",
+          "handle": null,
+          "confidence": 0.8
+        },
+        {
+          "platform": "kucoin",
+          "url": "https://kucoin.com",
+          "handle": null,
+          "confidence": 0.8
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Email active on 4 platform(s) out of 43 checked: leakcheck.io, Breach Check v2, multi, kucoin.com",
+          "source": "https://nosint.org",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Leak Check",
+          "source": "https://leakcheck.io",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Leak Check; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Breach Check v2",
+          "source": "https://nosint.org",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Breach Check v2; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "multi",
+          "source": "https://multi",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: Multi-site Account; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "kucoin.com",
+          "source": "https://kucoin.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: KuCoin; (cached result)",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "nosint",
+          "source": "https://nosint.org",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "search_id": "a78a3d28-60c9-49e5-b17f-9b17a51d82fe",
+        "total_modules_run": 43,
+        "hits_count": 4,
+        "all_results": [
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Instagram",
+            "target_url": "instagram.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_401",
+            "start_time": "2026-04-16T07:11:37.737855Z",
+            "end_time": "2026-04-16T07:11:37.737931Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Plex.TV",
+            "target_url": "plex.tv",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "email_lookup_failed",
+            "start_time": "2026-04-16T07:11:37.736588Z",
+            "end_time": "2026-04-16T07:11:37.736639Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Adobe Recovery",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_state_401",
+            "start_time": "2026-04-16T07:11:37.735724Z",
+            "end_time": "2026-04-16T07:11:37.735827Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "EA.com",
+            "target_url": "ea.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_or_fetch_failed",
+            "start_time": "2026-04-16T07:11:37.736448Z",
+            "end_time": "2026-04-16T07:11:37.736559Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Foursquare email to account",
+            "target_url": "foursquare.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "api_error_401",
+            "start_time": "2026-04-16T07:11:37.736374Z",
+            "end_time": "2026-04-16T07:11:37.736430Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Forever21",
+            "target_url": "forever21.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "user_not_found",
+            "start_time": "2026-04-16T07:11:37.737778Z",
+            "end_time": "2026-04-16T07:11:37.737834Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.735651Z",
+            "end_time": "2026-04-16T07:11:37.735707Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Trello email to account",
+            "target_url": "trello.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.735491Z",
+            "end_time": "2026-04-16T07:11:37.735551Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "ImageShack",
+            "target_url": "imageshack.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T07:11:37.735568Z",
+            "end_time": "2026-04-16T07:11:37.735633Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Adobe T2E",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T07:11:37.736285Z",
+            "end_time": "2026-04-16T07:11:37.736352Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "AutoDropship to account",
+            "target_url": "autods.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.735416Z",
+            "end_time": "2026-04-16T07:11:37.735473Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Mail.ru",
+            "target_url": "mail.ru",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_domain",
+            "start_time": "2026-04-16T07:11:37.735325Z",
+            "end_time": "2026-04-16T07:11:37.735398Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Gravatar to account",
+            "target_url": "en.gravatar.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_gravatar_profile",
+            "start_time": "2026-04-16T07:11:37.737693Z",
+            "end_time": "2026-04-16T07:11:37.737758Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Poshmark email to account",
+            "target_url": "poshmark.com",
+            "module_target": [
+              "email",
+              "name"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.736172Z",
+            "end_time": "2026-04-16T07:11:37.736266Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Duolingo Account Check",
+            "target_url": "duolingo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "cannot access local variable 'user' where it is not associated with a value",
+            "start_time": "2026-04-16T07:11:37.735164Z",
+            "end_time": "2026-04-16T07:11:37.735291Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Life360 email to partial phone",
+            "target_url": "life360.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T07:11:37.737529Z",
+            "end_time": "2026-04-16T07:11:37.737600Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Facebook",
+            "target_url": "facebook.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "AsyncClient.post() got an unexpected keyword argument 'allow_redirects'",
+            "start_time": "2026-04-16T07:11:37.735074Z",
+            "end_time": "2026-04-16T07:11:37.735146Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "SolidCore",
+            "target_url": "solidcore.co",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.734976Z",
+            "end_time": "2026-04-16T07:11:37.735053Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "IMVU email to account",
+            "target_url": "imvu.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.736050Z",
+            "end_time": "2026-04-16T07:11:37.736151Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T07:11:37.737471Z",
+            "end_time": "2026-04-16T07:11:37.737512Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Microsoft Info Exposure",
+            "target_url": "microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "connection_failed",
+            "start_time": "2026-04-16T07:11:37.736658Z",
+            "end_time": "2026-04-16T07:11:37.736720Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T07:11:37.737393Z",
+            "end_time": "2026-04-16T07:11:37.737453Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Mega.nz",
+            "target_url": "mega.nz",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.734865Z",
+            "end_time": "2026-04-16T07:11:37.734957Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Leak Check",
+            "target_url": "leakcheck.io",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "1"
+              },
+              "display_table": {
+                "headers": [
+                  "Password",
+                  "Source",
+                  "Breach Date"
+                ],
+                "values": [
+                  [
+                    "amadolinkedin",
+                    "Canva.com",
+                    "2019-05"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "name": "Leak Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T07:11:37.737315Z",
+            "end_time": "2026-04-16T07:11:37.737375Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Breach Check v2",
+            "target_url": "",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "3",
+                "unique_sources": "3"
+              },
+              "display_table": {
+                "headers": [
+                  "Email",
+                  "Username",
+                  "Source",
+                  "Date"
+                ],
+                "values": [
+                  [
+                    "josemanuelamadoabelenda@gmail.com",
+                    "-",
+                    "verifications.io",
+                    "2019-02"
+                  ],
+                  [
+                    "josemanuelamadoabelenda@gmail.com",
+                    "jose-amado-69554b26",
+                    "peopledatalabs.com",
+                    "2019"
+                  ],
+                  [
+                    "josemanuelamadoabelenda@gmail.com",
+                    "josemanuelAmado",
+                    "canva.com",
+                    "2019-05"
+                  ]
+                ]
+              },
+              "badges_list": [
+                "3 breaches"
+              ],
+              "_metadata": {
+                "name": "Breach Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T07:11:37.737245Z",
+            "end_time": "2026-04-16T07:11:37.737299Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Yandex account recovery info",
+            "target_url": "yandex.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_page_302",
+            "start_time": "2026-04-16T07:11:37.734779Z",
+            "end_time": "2026-04-16T07:11:37.734847Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Deliveroo",
+            "target_url": "deliveroo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_404",
+            "start_time": "2026-04-16T07:11:37.734689Z",
+            "end_time": "2026-04-16T07:11:37.734759Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "OK.ru",
+            "target_url": "ok.ru",
+            "module_target": [
+              "email",
+              "phone",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T07:11:37.737175Z",
+            "end_time": "2026-04-16T07:11:37.737228Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.737118Z",
+            "end_time": "2026-04-16T07:11:37.737159Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Typeform",
+            "target_url": "typeform.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "not_registered",
+            "start_time": "2026-04-16T07:11:37.733844Z",
+            "end_time": "2026-04-16T07:11:37.734130Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Zoho",
+            "target_url": "accounts.zoho.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "missing_csrf_token",
+            "start_time": "2026-04-16T07:11:37.734606Z",
+            "end_time": "2026-04-16T07:11:37.734665Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Multi-site Account",
+            "target_url": "multi",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "total_checked": 121,
+              "found_count": 0,
+              "badges_list": [],
+              "display_table": {
+                "headers": [
+                  "Site",
+                  "Status",
+                  "Recovery Email",
+                  "Recovery Phone",
+                  "Metadata"
+                ],
+                "values": [
+                  [
+                    "about.me",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "adobe.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "amazon.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "amocrm.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "anydo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "archive.org",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "armurerieauxerre.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "atlassian.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "axonaut.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "babeshows.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "badeggsonline.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "biosmods.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "biotechnologyforums.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "bitmoji.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blablacar.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blackworldforum.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blip.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "blitzortung.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "bluegrassrivals.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "bodybuilding.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "buymeacoffee.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cambridgemt.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "caringbridge.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "chinaphonearena.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "clashfarmer.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "codecademy.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "codeigniter.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "codepen.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "coroflot.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cpaelites.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cpahero.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "cracked_to.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "crevado.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "deliveroo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "demonforums.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "devrant.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "diigo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "discord.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "docker.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "dominosfr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "ebay.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "ello.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "envato.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "eventbrite.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "evernote.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "fanpop.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "firefox.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "flickr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "freelancer.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "freiberg.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "garmin.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "github.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "google.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "gravatar.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "hubspot.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "imgur.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "insightly.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "instagram.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "issuu.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "koditv.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "komoot.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "laposte.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "lastfm.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "lastpass.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "mail.ru",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "mybb.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "myspace.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nattyornot.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "naturabuy.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "ndemiccreations.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nextpvr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nike.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nimble.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nocrm.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "nutshell.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "odnoklassniki.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "office365.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "onlinesequencer.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "parler.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "patreon.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "pinterest.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "pipedrive.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "plurk.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "pornhub.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "proton.me",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "quora.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "rambler.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "redtube.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "replit.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "rocketreach.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "samsung.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "seoclerks.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "sevencups.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "smule.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "snapchat.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "soundcloud.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "sporcle.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "spotify.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "strava.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "taringa.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "teamleader.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "teamtreehouse.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "tellonym.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "thecardboard.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "therianguide.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "thevapingforum.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "tumblr.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "tunefind.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "twitter.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "venmo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "vivino.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "voxmedia.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "vrbo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "vsco.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "wattpad.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "wordpress.com",
+                    "Not found",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "xing.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "xnxx.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "xvideos.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "yahoo.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ],
+                  [
+                    "zoho.com",
+                    "Proxy Timeout",
+                    null,
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_icon": "https://img.icons8.com/color/48/000000/globe.png",
+                "overwrite_category": "registered_sites",
+                "include_not_found": true
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T07:11:37.737034Z",
+            "end_time": "2026-04-16T07:11:37.737097Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "ProtonMail account check",
+            "target_url": "proton.me",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.734519Z",
+            "end_time": "2026-04-16T07:11:37.734583Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Proton Wallet",
+            "target_url": "protonmail.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_proton_account",
+            "start_time": "2026-04-16T07:11:37.736941Z",
+            "end_time": "2026-04-16T07:11:37.737016Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Tutanota",
+            "target_url": "mail.tutanota.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unsupported_domain",
+            "start_time": "2026-04-16T07:11:37.734425Z",
+            "end_time": "2026-04-16T07:11:37.734502Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "HudsonRock",
+            "target_url": "cavalier.hudsonrock.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T07:11:37.734340Z",
+            "end_time": "2026-04-16T07:11:37.734406Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "AntiPublic Leak Check",
+            "target_url": "antipublic.one",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T07:11:37.734251Z",
+            "end_time": "2026-04-16T07:11:37.734319Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "HubSpot",
+            "target_url": "hubspot.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T07:11:37.735966Z",
+            "end_time": "2026-04-16T07:11:37.736028Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "GitHub email to users",
+            "target_url": "github.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T07:11:37.734159Z",
+            "end_time": "2026-04-16T07:11:37.734231Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Flickr email to account",
+            "target_url": "flickr.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.735852Z",
+            "end_time": "2026-04-16T07:11:37.735942Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "KuCoin",
+            "target_url": "kucoin.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "registered_email": "josemanuelamadoabelenda@gmail.com",
+                "all_methods_found": "Email, SMS",
+                "combinations_count": 1
+              },
+              "badges_list": [
+                "Email",
+                "SMS"
+              ],
+              "display_table": {
+                "headers": [
+                  "Valid Recovery Combinations"
+                ],
+                "values": [
+                  [
+                    "Email, SMS required"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "KuCoin",
+                "site_icon": "https://www.kucoin.com/favicon.ico",
+                "profile_url": "https://www.kucoin.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T07:11:37.736834Z",
+            "end_time": "2026-04-16T07:11:37.736923Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Coinbase Wallet Balances",
+            "target_url": "coinbase.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "profile_not_found",
+            "start_time": "2026-04-16T07:11:37.736746Z",
+            "end_time": "2026-04-16T07:11:37.736815Z",
+            "duration_ms": 0,
+            "cached": true
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Microsoft Account Recovery",
+            "target_url": "account.microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T07:11:37.737618Z",
+            "end_time": "2026-04-16T07:11:37.737670Z",
+            "duration_ms": 0,
+            "cached": true
+          }
+        ]
+      },
+      "duration_s": 0.6753705420414917
+    },
+    {
+      "name": "osint_web",
+      "status": "error",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "osint_web raised BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca72uJpv6iZSfAKmu2YAx'}"
+      ],
+      "raw": {
+        "backend": "anthropic_web",
+        "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca72uJpv6iZSfAKmu2YAx'}"
+      },
+      "duration_s": 0.4210801249719225
+    },
+    {
+      "name": "twitter_check",
+      "status": "no_data",
+      "summary": "Twitter check for josemanuelamadoabelenda@gmail.com was inconclusive (status: BAN).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter returned ambiguous status 'BAN' for josemanuelamadoabelenda@gmail.com"
+      ],
+      "raw": {
+        "platform": "Twitter",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "BAN",
+        "http_status": 200,
+        "session_id": "21da18b2-974d-490a-a91f-1917590f0626",
+        "error": null
+      },
+      "duration_s": 0.9531975419959053
+    },
+    {
+      "name": "uber_hint",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on Uber.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "email_lookup": {
+          "identifier": "josemanuelamadoabelenda@gmail.com",
+          "id_type": "email",
+          "status_raw": "FAIL",
+          "data": null,
+          "error": null
+        }
+      },
+      "duration_s": 1.0987704999861307
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 3 breach(es); registered on: canva.com, verifications.io, linkedin.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 3 breach(es); earliest 2012, latest 2019",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 3 breach(es); earliest 2012, latest 2019",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, Names, Passwords, Phone numbers, Physical addresses, Usernames",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Moderate (45/100)",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "canva.com",
+          "source": "https://www.canva.com/en_in/help/incident-may24/",
+          "confidence": 0.85,
+          "notes": "Account registered on canva.com (breach year: 2019). Data exposed: Email addresses, Names, Usernames",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "verifications.io",
+          "source": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+          "confidence": 0.85,
+          "notes": "Account registered on verifications.io (breach year: 2019). Data exposed: Email addresses, Names, Dates of birth, Genders, Geographic locations, Phone numbers, Physical addresses",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "linkedin.com",
+          "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+          "confidence": 0.85,
+          "notes": "Account registered on linkedin.com (breach year: 2012). Data exposed: Email addresses, Passwords",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in LinkedIn breach",
+          "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+          "confidence": 0.9,
+          "notes": null,
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  0
+                ],
+                [
+                  "heal",
+                  0
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  0
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  3
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 0,
+                "Unknown": 2
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Moderate",
+                "risk_score": 45
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Names",
+                        "value": 2
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Genders",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 3
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Phone numbers",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👥 Demographics",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Geographic locations",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Dates of birth",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Physical addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 1,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 0,
+                "y2018": 0,
+                "y2019": 2,
+                "y2020": 0,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 0,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "Canva;LinkedIn;Verifications"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "Canva",
+                "details": "Canva, an Australian graphic design and publishing company, announced that it had suffered a data breach in 2019. An unauthorized third-party had gained access to certain data stored on its systems, potentially affecting the personal information of over 137 million users. The exposed data includes customers' names, email addresses, and hashed passwords. ",
+                "domain": "canva.com",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Canva.png",
+                "password_risk": "unknown",
+                "references": "https://www.canva.com/en_in/help/incident-may24/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Names;Usernames",
+                "xposed_date": "2019",
+                "xposed_records": 137504762,
+                "added": "2023-11-08T06:30:25+00:00"
+              },
+              {
+                "breach": "Verifications",
+                "details": "Verifications.io, a comprehensive email verification service, suffered a severe data breach in 2019 that compromised a vast array of personal user data. The exposed data included email addresses, phone numbers, dates of birth, and other personal details, which presented a considerable privacy and security risk to the affected users.",
+                "domain": "verifications.io",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Verificationsio.png",
+                "password_risk": "unknown",
+                "references": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Names;Dates of birth;Genders;Geographic locations;Phone numbers;Physical addresses",
+                "xposed_date": "2019",
+                "xposed_records": 762579945,
+                "added": "2023-11-08T06:30:24+00:00"
+              },
+              {
+                "breach": "LinkedIn",
+                "details": "LinkedIn, the popular professional networking site, suffered a data breach in 2012,  in which hackers obtained user data including email addresses and hashed passwords. The breach reportedly impacted over 167 million user accounts. In 2016, it was discovered that the compromised data was being sold on the dark web. Following the discovery, LinkedIn forced a password reset for all impacted accounts and implemented new security measures to prevent future breaches.",
+                "domain": "linkedin.com",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Linkedin.png",
+                "password_risk": "easytocrack",
+                "references": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Passwords",
+                "xposed_date": "2012",
+                "xposed_records": 160042644,
+                "added": "2023-11-08T06:30:00+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "duration_s": 0.1518705419730395
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "ok",
+      "summary": "GAIA enrichment for 105982492274469151146. Name: Contribuciones.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Stats API: no stats returned (profile may be empty or private)",
+        "No public reviews found on the contributor page",
+        "No public photos found on the contributor page"
+      ],
+      "raw": {
+        "gaia_id": "105982492274469151146",
+        "profile_url": "https://www.google.com/maps/contrib/105982492274469151146/reviews",
+        "name": "Contribuciones",
+        "profile_pic_url": "https://lh3.googleusercontent.com/a/default-user=s72-cc",
+        "stats": {
+          "reviews_count": 0,
+          "ratings_count": 0,
+          "photos_count": 0,
+          "local_guides_level": 0
+        },
+        "reviews": [],
+        "photos": [],
+        "total_reviews": 0,
+        "gaps": [
+          "Stats API: no stats returned (profile may be empty or private)",
+          "No public reviews found on the contributor page",
+          "No public photos found on the contributor page"
+        ]
+      },
+      "duration_s": 27.40579320798861
+    },
+    {
+      "name": "image_search",
+      "status": "ok",
+      "summary": "Could not resolve Instagram profile picture URL for @https://www.instagram.com/p/C_0JFG2sY9Y/; reverse-image search skipped.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted"
+      ],
+      "raw": {
+        "provider": "serpapi_google_lens_exact",
+        "handle": "https://www.instagram.com/p/C_0JFG2sY9Y/"
+      },
+      "duration_s": 0.22836604196345434
+    },
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "Could not retrieve any Instagram data for @https://www.instagram.com/p/C_0JFG2sY9Y/.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python"
+      ],
+      "raw": {
+        "profile_info": null,
+        "raw_captions": [],
+        "image_count": 0,
+        "video_count": 0
+      },
+      "duration_s": 0.00293354201130569
+    },
+    {
+      "name": "linkedin",
+      "status": "ok",
+      "summary": "LinkedIn @jose-manuel-arranz-abelenda-1841883a (Jose Manuel Arranz Abelenda) — Senior Infrastructure Project Manager — Vilvoorde, Flemish Region, Belgium — 821 followers.",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "LinkedIn About: • Certified PRINCE2 Practitioner + Project Management Professional (PMP).\n• Experience with ITIL Methodology.\n• Proven supervisory and organisational skills in projects, team leadership and computer support management.\n• 25 years of experience on numerous IT projects including: IT infrastructure projects, real-time systems in railways control centers, Disaster Recovery (DR) solutions.\n• Excellent analytical and document drafting skills: Ability to gather, analyse and evaluate facts and to presen",
+          "source": "jose-manuel-arranz-abelenda-1841883a",
+          "confidence": 0.85
+        },
+        {
+          "claim": "LinkedIn position: Project Manager — Daikin Europe · Freelance — Sep 2024 - Present · 1 yr 8 mos",
+          "source": "https://www.linkedin.com/company/10118/",
+          "confidence": 0.8
+        },
+        {
+          "claim": "LinkedIn position: Senior Infrastructure Project Manager — Sodexo Benefits and Rewards Services · Freelance — Mar 2023 - Feb 2024 · 1 yr",
+          "source": "https://www.linkedin.com/company/10884655/",
+          "confidence": 0.8
+        },
+        {
+          "claim": "LinkedIn position: Infrastructure Project Manager — Fujitsu / TVH · Freelance — Mar 2021 - Dec 2022 · 1 yr 10 mos",
+          "source": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+TVH",
+          "confidence": 0.8
+        }
+      ],
+      "signals": [
+        {
+          "kind": "role",
+          "value": "Senior Infrastructure Project Manager",
+          "source": "jose-manuel-arranz-abelenda-1841883a",
+          "confidence": 0.85,
+          "notes": "Verbatim LinkedIn headline",
+          "tag": null
+        },
+        {
+          "kind": "employer",
+          "value": "Daikin Europe",
+          "source": "https://www.linkedin.com/company/daikin-europe-nv/",
+          "confidence": 0.85,
+          "notes": "Listed as current position on LinkedIn",
+          "tag": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "Industry: Information Technology & Services",
+          "source": "jose-manuel-arranz-abelenda-1841883a",
+          "confidence": 0.7,
+          "notes": null,
+          "tag": null
+        },
+        {
+          "kind": "location",
+          "value": "Vilvoorde, Flemish Region, Belgium",
+          "source": "jose-manuel-arranz-abelenda-1841883a",
+          "confidence": 0.8,
+          "notes": "Self-reported location on LinkedIn profile",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "username": "jose-manuel-arranz-abelenda-1841883a",
+        "profile_url": "jose-manuel-arranz-abelenda-1841883a",
+        "urn": "ACoAAAg2avQBouDH4R87UZ5EgU4BuM1KiUgM-MA",
+        "overview": {
+          "firstName": "Jose Manuel",
+          "lastName": "Arranz Abelenda",
+          "fullName": "Jose Manuel Arranz Abelenda",
+          "headline": "Senior Infrastructure Project Manager",
+          "publicIdentifier": "jose-arranz-1841883a",
+          "followerCount": 821,
+          "connectionsCount": 816,
+          "qualityProfile": true,
+          "joined": 1314615297270,
+          "profileID": "137784052",
+          "urn": "ACoAAAg2avQBouDH4R87UZ5EgU4BuM1KiUgM-MA",
+          "CurrentPositions": [
+            {
+              "id": "10118",
+              "name": "Daikin Europe",
+              "url": "https://www.linkedin.com/company/daikin-europe-nv/",
+              "logoURL": "https://media.licdn.com/dms/image/v2/C4D0BAQHB6W4Qp9wCDQ/company-logo_400_400/company-logo_400_400/0/1631359584515?e=1778112000&v=beta&t=ie01o-KgRHL6M-s88rdN2AlOYFD_2hHDS7Y96I0GpxU"
+            }
+          ],
+          "isTopVoice": false,
+          "premium": true,
+          "influencer": false,
+          "industryName": "Information Technology & Services",
+          "industryUrn": "urn:li:fsd_industry:96",
+          "location": {
+            "countryCode": "be",
+            "countryName": "Belgium",
+            "city": "Vilvoorde, Flemish Region",
+            "fullLocation": "Vilvoorde, Flemish Region, Belgium"
+          },
+          "profilePictureURL": "https://media.licdn.com/dms/image/v2/D4E03AQHasrrrCDgYjg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1668435234356?e=1778112000&v=beta&t=jUljnKiG4tzv8Jfgz5RDnIAyDDGApiHVvvcI_6ChpOM",
+          "supportedLocales": [
+            {
+              "country": "US",
+              "language": "en"
+            }
+          ]
+        },
+        "details": {
+          "about": "• Certified PRINCE2 Practitioner + Project Management Professional (PMP).\n• Experience with ITIL Methodology.\n• Proven supervisory and organisational skills in projects, team leadership and computer support management.\n• 25 years of experience on numerous IT projects including: IT infrastructure projects, real-time systems in railways control centers, Disaster Recovery (DR) solutions.\n• Excellent analytical and document drafting skills: Ability to gather, analyse and evaluate facts and to present findings in concise structured reports. \n• Experience across diverse sectors: Banking, Transport, Energy.\n• Extensive experience on Microsoft and Solaris environments.\n• Methodical and work perfectionist.\n• Identified with the corporate customer-service culture.\n• Main Infrastructure-Application Management skills: Incident/Change/Problem management, writing functional/operational instructions, production follow up.\n• Main Team Management skills: Team coordination, Team leadership, Deployment coordination.",
+          "featuredPosts": null,
+          "positions": [
+            {
+              "jobTitle": "Project Manager",
+              "company": "Daikin Europe · Freelance",
+              "location": "Hybrid",
+              "duration": "Sep 2024 - Present · 1 yr 8 mos",
+              "companyLink": "https://www.linkedin.com/company/10118/",
+              "companyId": "10118",
+              "jobDescription": ""
+            },
+            {
+              "jobTitle": "Senior Infrastructure Project Manager",
+              "company": "Sodexo Benefits and Rewards Services · Freelance",
+              "location": "Brussels, Brussels Region, Belgium · Hybrid",
+              "duration": "Mar 2023 - Feb 2024 · 1 yr",
+              "companyLink": "https://www.linkedin.com/company/10884655/",
+              "companyId": "10884655",
+              "jobDescription": ""
+            },
+            {
+              "jobTitle": "Infrastructure Project Manager",
+              "company": "Fujitsu / TVH · Freelance",
+              "location": "",
+              "duration": "Mar 2021 - Dec 2022 · 1 yr 10 mos",
+              "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+TVH",
+              "companyId": "all",
+              "jobDescription": ""
+            },
+            {
+              "jobTitle": "Infrastructure Project Manager",
+              "company": "Boortmalt · Freelance",
+              "location": "Antwerp, Flemish Region, Belgium",
+              "duration": "Sep 2020 - Dec 2020 · 4 mos",
+              "companyLink": "https://www.linkedin.com/company/735889/",
+              "companyId": "735889",
+              "jobDescription": "Project description:\n• Migration infrastructure project where recently purchased sites/plants from old former company (Cargill) were migrated and onboarded to the infrastructure, standards and requirements of the new company (Boortmalt).\n\nResponsibilities:\n• Manage project plan, timescales and delivery milestones.\n• Manage the project’s communications with stakeholders, management and project team working onsite and remotely.\n• Manage and coordinate end-to-end the preparation, roll-out and after care phase of the project to successfully hand over the deliverables to day-to-day operations team(s).\n• Report periodically about project status to Project Lead keeping updated risk and issue logs."
+            },
+            {
+              "jobTitle": "Senior Infrastructure Project Manager",
+              "company": "Fujitsu / Borealis · Freelance",
+              "location": "Brussels Metropolitan Area",
+              "duration": "Jan 2020 - Jun 2020 · 6 mos",
+              "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+Borealis",
+              "companyId": "all",
+              "jobDescription": "Project description:\n• Mailbox migration from Exchange On-prem to On-Line (7000 mailboxes located in same datacenter and including Enterprise Vault data).\n• Microsoft Exchange, Veritas Enterprise Vault, Quadrotech Archive Shuttle \n\nResponsibilities:\n• Perform migration following and refining the process initially defined in a previous Pilot project.\n• Developing detailed migration plan and schedule with Borealis PM counterpart.\n• Coordinating with customer IT representative/counterparts.\n• Liaising between customer and Fujitsu offshoring teams (Exchange Architect/migration team at Kazan, Service Desk at Lisbon and Local support)\n• Controlling budget, scope and project plan, detecting deviations and ensuring project is kept under control.\n• Reporting periodically about project status to Service Delivery Manager and keeping updated risk and issue logs."
+            }
+          ],
+          "education": [
+            {
+              "duration": "1998 - 2004",
+              "durationParsed": {
+                "start": {
+                  "year": 1998,
+                  "month": 1,
+                  "day": 1
+                },
+                "end": {
+                  "year": 2004,
+                  "month": 1,
+                  "day": 1
+                }
+              },
+              "university": "Pontifical University of Salamanca (UPSAM)",
+              "universityLink": "https://www.linkedin.com/search/results/all/?keywords=Pontifical+University+of+Salamanca+%28UPSAM%29",
+              "degree": "Bachelor's Degree (5 years) in Computer Science.",
+              "description": null,
+              "subDescription": null
+            },
+            {
+              "duration": "1994 - 1998",
+              "durationParsed": {
+                "start": {
+                  "year": 1994,
+                  "month": 1,
+                  "day": 1
+                },
+                "end": {
+                  "year": 1998,
+                  "month": 1,
+                  "day": 1
+                }
+              },
+              "university": "Pontifical University of Salamanca (UPSAM)",
+              "universityLink": "https://www.linkedin.com/search/results/all/?keywords=Pontifical+University+of+Salamanca+%28UPSAM%29",
+              "degree": "Degree (3 years) in Computer Science., Computer Science.",
+              "description": null,
+              "subDescription": null
+            }
+          ],
+          "languages": {
+            "languages": [
+              {
+                "Language": "English",
+                "Level": "Full professional proficiency"
+              },
+              {
+                "Language": "French",
+                "Level": "Professional working proficiency"
+              }
+            ],
+            "deepLink": "https://www.linkedin.com/in/jose-arranz-1841883a/details/languages?profileUrn=urn%3Ali%3Afsd_profile%3AACoAAAg2avQBouDH4R87UZ5EgU4BuM1KiUgM-MA"
+          }
+        }
+      },
+      "duration_s": 3.325819624995347
+    },
+    {
+      "name": "twitter",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter profile @amadoasenjo not retrievable: user_not_found"
+      ],
+      "raw": {
+        "error": "user_not_found",
+        "handle": "amadoasenjo"
+      },
+      "duration_s": 0.026095749984961003
+    },
+    {
+      "name": "twitter_vu",
+      "status": "ok",
+      "summary": "@amadoasenjo is a valid Twitter/X user; name=Jose Manuel Amado Asenjo; email=jo*************@g****.***.",
+      "social_links": [
+        {
+          "platform": "twitter",
+          "url": "https://x.com/amadoasenjo",
+          "handle": "amadoasenjo",
+          "confidence": 0.95
+        }
+      ],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "name",
+          "value": "Jose Manuel Amado Asenjo",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.8,
+          "notes": "Display name from Twitter/X profile @amadoasenjo",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "jo*************@g****.***",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.85,
+          "notes": "Masked email associated with @amadoasenjo",
+          "tag": "email_masked"
+        },
+        {
+          "kind": "contact",
+          "value": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.9,
+          "notes": "Twitter/X profile picture for @amadoasenjo",
+          "tag": "photo"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "amadoasenjo",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "amadoasenjo",
+          "name": "Jose Manuel Amado Asenjo",
+          "email": "jo*************@g****.***",
+          "phone": "",
+          "avatar": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+        },
+        "error": null
+      },
+      "duration_s": 2.5226095829857513
+    },
+    {
+      "name": "jooble",
+      "status": "ok",
+      "summary": "Jooble: 'Senior Infrastructure Project Manager' in Vilvoorde, Flemish Region, Belgium → 0 listing(s).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "jooble: no listings found for 'Senior Infrastructure Project Manager' in 'Vilvoorde, Flemish Region, Belgium' — headline may be non-standard or market is very niche"
+      ],
+      "raw": {
+        "jobs": [],
+        "total_count": 0,
+        "errors": [],
+        "job_title_used": "Senior Infrastructure Project Manager"
+      },
+      "duration_s": 0.25573233398608863
+    },
+    {
+      "name": "property",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [address]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.18750031106174e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 21 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "twitter_vu",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.0001300839940086007,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'icloud_check', 'instagram_check', 'nosint', 'osint_web', 'twitter_check', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "icloud_check",
+          "instagram_check",
+          "nosint",
+          "osint_web",
+          "twitter_check",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.219314499991015,
+      "module": "boe",
+      "wave": 1,
+      "message": "no_data in 0.70s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.7043829159811139,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.219717375002801,
+      "module": "borme",
+      "wave": 1,
+      "message": "no_data in 0.69s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.688738624972757,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.219868500018492,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "ok in 0.68s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.679694666992873,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220047125010751,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "ok in 1.32s (18 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.320103709003888,
+        "signals": 18,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.22021645901259,
+      "module": "github_check",
+      "wave": 1,
+      "message": "ok in 0.80s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.8003818329889327,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220321208995301,
+      "module": "google_gaia_check",
+      "wave": 1,
+      "message": "ok in 11.20s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 11.203761083015706,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.22041154204635,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "ok in 1.38s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.384819958009757,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220494084001984,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "no_data in 0.23s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.23410299996612594,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220580834022257,
+      "module": "nosint",
+      "wave": 1,
+      "message": "ok in 0.68s (5 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.6753705420414917,
+        "signals": 5,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220809291990008,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "error in 0.42s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "error",
+        "duration_s": 0.4210801249719225,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220817417022772,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "no_data in 0.95s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.9531975419959053,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220891709032003,
+      "module": "uber_hint",
+      "wave": 1,
+      "message": "ok in 1.10s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.0987704999861307,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 11.220970124995802,
+      "module": "xon",
+      "wave": 1,
+      "message": "ok in 0.15s (4 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.1518705419730395,
+        "signals": 4,
+        "facts": 4,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 11.22114583401708,
+      "module": null,
+      "wave": 2,
+      "message": "['gaia_enrichment', 'image_search', 'instagram', 'linkedin', 'twitter', 'twitter_vu']",
+      "detail": {
+        "modules": [
+          "gaia_enrichment",
+          "image_search",
+          "instagram",
+          "linkedin",
+          "twitter",
+          "twitter_vu"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.62713050004095,
+      "module": "gaia_enrichment",
+      "wave": 2,
+      "message": "ok in 27.41s (0 signal(s), 0 fact(s), 3 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 27.40579320798861,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 3
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.627467667043675,
+      "module": "image_search",
+      "wave": 2,
+      "message": "ok in 0.23s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.22836604196345434,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.62758416699944,
+      "module": "instagram",
+      "wave": 2,
+      "message": "ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.00293354201130569,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.627677334006876,
+      "module": "linkedin",
+      "wave": 2,
+      "message": "ok in 3.33s (4 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 3.325819624995347,
+        "signals": 4,
+        "facts": 4,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.62787454202771,
+      "module": "twitter",
+      "wave": 2,
+      "message": "ok in 0.03s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.026095749984961003,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.62798945902614,
+      "module": "twitter_vu",
+      "wave": 2,
+      "message": "ok in 2.52s (3 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 2.5226095829857513,
+        "signals": 3,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 38.628317833994515,
+      "module": null,
+      "wave": 3,
+      "message": "['jooble']",
+      "detail": {
+        "modules": [
+          "jooble"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.88429741701111,
+      "module": "jooble",
+      "wave": 3,
+      "message": "ok in 0.26s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.25573233398608863,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 38.88460375001887,
+      "module": "property",
+      "wave": null,
+      "message": "skipped — missing inputs ['address']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "address"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 38.884631625027396,
+      "module": null,
+      "wave": null,
+      "message": "15 ok, 1 skipped, 1 error(s)",
+      "detail": {
+        "ok": 15,
+        "error": 1,
+        "skipped": 1
+      }
+    }
+  ]
+}

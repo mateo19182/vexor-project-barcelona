@@ -1,0 +1,47 @@
+{
+  "name": "twitter_vu",
+  "status": "ok",
+  "summary": "@pedroca is a valid Twitter/X user; name=Pedroca Monteiro.",
+  "social_links": [
+    {
+      "platform": "twitter",
+      "url": "https://x.com/pedroca",
+      "handle": "pedroca",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "name",
+      "value": "Pedroca Monteiro",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.8,
+      "notes": "Display name from Twitter/X profile @pedroca",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "https://pbs.twimg.com/profile_images/1153524310801289216/w24W30wx_normal.jpg",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.9,
+      "notes": "Twitter/X profile picture for @pedroca",
+      "tag": "photo"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "pedroca",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "pedroca",
+      "name": "Pedroca Monteiro",
+      "email": "",
+      "phone": "",
+      "avatar": "https://pbs.twimg.com/profile_images/1153524310801289216/w24W30wx_normal.jpg"
+    },
+    "error": null
+  },
+  "duration_s": 1.0913209579885006
+}

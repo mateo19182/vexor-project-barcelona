@@ -1,0 +1,39 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "pedrocaoeiriz@gmail.com is NOT registered on iCloud. | +34617758559 is registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to +34617758559",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "e8eba3f5-b463-4af8-9b42-ecb389833dce",
+        "error": null
+      },
+      {
+        "platform": "iCloud",
+        "identifier": "+34617758559",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "f384433b-ead6-4e1f-a230-6ecd931d2b75",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 1.6655889170360751
+}

@@ -26,7 +26,6 @@ One file per module/component in the pipeline.
 | [platform_check.md](platform_check.md) | `instagram_check` | `email` | Platform-check VM: Instagram registration |
 | [platform_check.md](platform_check.md) | `twitter_check` | `email` | Platform-check VM: Twitter/X registration |
 | [platform_check.md](platform_check.md) | `icloud_check` | `email` | Platform-check VM: iCloud registration |
-| [google_id.md](google_id.md) | `google_id` | `email` | Resolves Gmail → Google Gaia ID (unblocks google_maps_reviews) |
 | [image_search.md](image_search.md) | `image_search` | `instagram_handle` | Reverse image OSINT via Google Lens |
 | [instagram.md](instagram.md) | `instagram` | `instagram_handle` | Instagram OSINT — posts, captions, location tags |
 | [linkedin.md](linkedin.md) | `linkedin` | `linkedin_url` | LinkedIn profile — headline, employer, location, positions |
@@ -39,15 +38,14 @@ One file per module/component in the pipeline.
 ```
 Wave 1 (always run — case seed provides name/email):
   osint_web, boe, borme, breach_scout, nosint, xon,
-  github_check, instagram_check, twitter_check, icloud_check,
-  google_id
+  github_check, instagram_check, twitter_check, icloud_check
 
 Wave 2+ (unblocked by wave-1 ctx_patches):
   instagram          ← instagram_handle promoted by osint_web
   image_search       ← instagram_handle promoted by osint_web
   linkedin           ← linkedin_url promoted by osint_web
   twitter     ← twitter_handle promoted by osint_web
-  google_maps_reviews ← gaia_id promoted by google_id
+  google_maps_reviews ← gaia_id from case input
   property           ← address promoted by case or osint_web
 
 Post:

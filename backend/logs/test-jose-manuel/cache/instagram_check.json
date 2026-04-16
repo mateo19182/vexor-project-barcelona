@@ -1,0 +1,20 @@
+{
+  "name": "instagram_check",
+  "status": "no_data",
+  "summary": "Instagram check for josemanuelamadoabelenda@gmail.com was inconclusive (status: INVALID).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Instagram returned ambiguous status 'INVALID' for josemanuelamadoabelenda@gmail.com"
+  ],
+  "raw": {
+    "platform": "Instagram",
+    "identifier": "josemanuelamadoabelenda@gmail.com",
+    "status_raw": "INVALID",
+    "http_status": 200,
+    "session_id": "88b4c544-bf1e-4e24-b85b-6575808b1862",
+    "error": null
+  },
+  "duration_s": 0.23410299996612594
+}

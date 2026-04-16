@@ -1,0 +1,139 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "Jose Manuel Amado Abelenda is a sports and wellness entrepreneur based in Oleiros, A Coruña, Spain. He is the President and founder of the Clúster Galego da Industria do Deporte e o Benestar and founding partner/sole proprietor of Motivos Singulares S.L. He holds a degree in Physical Activity and Sport Sciences from INEF de Galicia and is an investor in health, exercise, and nutrition projects. His corporate footprint in the Spanish BORME spans over 21 companies across sports, tourism, and nutrition sectors.",
+  "social_links": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://es.linkedin.com/in/jose-manuel-amado-abelenda-04b2831b",
+      "handle": "jose-manuel-amado-abelenda-04b2831b",
+      "confidence": 0.92
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Described publicly as 'Presidente y fundador' in a LinkedIn post by Vertical Proyect",
+      "source": "https://es.linkedin.com/posts/vertical-proyect_%C3%A9l-es-jose-manuel-amado-abelenda-presidente-activity-7209255176346521600-pCnE",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Has 3 active corporate roles, 31 historical roles, across 21 total companies per BORME",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95
+    },
+    {
+      "claim": "Featured as participant in Capacita Directivos executive training programme",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.9
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Oleiros, A Coruña, ES",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95,
+      "notes": "Subject address provided; multiple A Coruña-registered companies in BORME records",
+      "tag": null
+    },
+    {
+      "kind": "role",
+      "value": "Presidente del Clúster Galego da Industria do Deporte e o Benestar",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.95,
+      "notes": "Also corroborated by agaxede.org interview and Instagram posts by circulo.gal",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Motivos Singulares SL – Socio fundador / Administrador Único (2011–present)",
+      "source": "https://librebor.me/en/borme/empresa/motivos-singulares/",
+      "confidence": 0.95,
+      "notes": "Developer of educational activities in rural houses and tourist accommodations; sole proprietorship registered 15/02/2011",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "ARTIO NUTRICION SL – Apoderado Mancomunado/Solidario (2022–present)",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.9,
+      "notes": "Active role per BORME; nutrition company linked to his health/wellness investment focus",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "MOTIVOS TURISTICOS SL – Administrador Único (2012–2020, liquidated)",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95,
+      "notes": "Also served as Liquidador upon dissolution in July 2020",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "HOTEL NATUREZA MONTE BLANCO SL – Sole Proprietor / Administrador Único (2012–2020, liquidated)",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95,
+      "notes": "Hospitality venture liquidated July 2020",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "INEF de Galicia – Graduado en Ciencias de la Actividad Física y del Deporte",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.95,
+      "notes": "Degree in Physical Activity and Sport Sciences",
+      "tag": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Investor in health, physical exercise, and nutrition projects",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.9,
+      "notes": "Stated on Capacita Directivos professional profile",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "osint_web",
+      "source": "osint_web",
+      "confidence": 1.0,
+      "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+      "tag": "enrichment_ran"
+    }
+  ],
+  "gaps": [
+    "No personal Instagram, Twitter/X, or Facebook profile confirmed as belonging to this specific subject",
+    "LinkedIn profile URL inferred from post URL pattern; direct profile page could not be fetched for full confirmation",
+    "Whether he remains active as Cluster Galego president in 2026 is unconfirmed (last reference from 2024)",
+    "Nature and scale of 'Vertical Proyect' affiliation not fully established",
+    "Current employer or active salary-paying role beyond cluster/business ownership not confirmed"
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "anthropic_web",
+    "search_queries": [
+      "Jose Manuel Amado Abelenda A Coruña Oleiros",
+      "\"josemanuelamadoabelenda@gmail.com\"",
+      "\"Jose Manuel Amado Abelenda\" LinkedIn OR Twitter",
+      "\"Jose Manuel Amado Abelenda\" \"Cluster Galego\" deporte benestar",
+      "\"Jose Manuel Amado Abelenda\" LinkedIn",
+      "site:linkedin.com \"jose-manuel-amado-abelenda\"",
+      "\"Jose Manuel Amado Abelenda\" instagram Cluster Galego deporte",
+      "\"Jose Manuel Amado Abelenda\" \"Vertical Proyect\" OR \"ARTIO NUTRICION\" OR \"Motivos Singulares\"",
+      "\"Jose Manuel Amado\" \"Vertical Proyect\" Galicia presidente fundador",
+      "\"Vertical Proyect\" Galicia deporte \"Jose Manuel Amado\""
+    ],
+    "fetched_urls": [
+      "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "https://es.linkedin.com/posts/jose-manuel-amado-abelenda-04b2831b_medramos-medrar-rae-1-dicho-de-un-animal-activity-7204774882046337026-Ddvl",
+      "https://www.agaxede.org/gl/noticia/jos-amado-hace-falta-un-plan-marshall-para-la-prctica-deportiva/",
+      "https://www.instagram.com/p/C_0JFG2sY9Y/",
+      "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "https://es.linkedin.com/posts/vertical-proyect_%C3%A9l-es-jose-manuel-amado-abelenda-presidente-activity-7209255176346521600-pCnE",
+      "https://capacitadirectivos.com/participante/jose-manuel-amado/"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 180.47853725001914
+}

@@ -1,0 +1,112 @@
+{
+  "name": "breach_scout",
+  "status": "ok",
+  "summary": "Found in 2 breach record(s) | 1 new phone(s) discovered: 77.27.5.101 | Aliases/usernames: pedroko22",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Identity found in 2 breach record(s) in the breach intelligence database",
+      "source": "https://9ghz.com",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Debtor identifiers found in 2 breach record(s)",
+      "source": "https://9ghz.com",
+      "confidence": 0.85,
+      "notes": "Breaches: Taringa, 8fit, taringa.net, 8fit.com",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "77.27.5.101",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "pedroko22",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "keywords": [
+      "Pedro Cao Eiriz",
+      "pedrocaoeiriz@gmail.com",
+      "+34617758559"
+    ],
+    "mode": "authenticated_batch",
+    "response": {
+      "code": 0,
+      "msg": "ok",
+      "data": [
+        {
+          "data": [],
+          "keyword": "Pedro Cao Eiriz",
+          "total_count": 0
+        },
+        {
+          "data": [
+            {
+              "email": "pedrocaoeiriz@gmail.com",
+              "source": {
+                "breach_date": "2017-08-01",
+                "domain": "taringa.net",
+                "id": "473659",
+                "record_count": 27971100,
+                "region": "",
+                "title": "Taringa"
+              },
+              "user_name": "pedroko22"
+            },
+            {
+              "address": "ES",
+              "email": "pedrocaoeiriz@gmail.com",
+              "gender": "M",
+              "ip_address": "77.27.5.101",
+              "real_name": "Pedro",
+              "source": {
+                "breach_date": "2018-07-01",
+                "domain": "8fit.com",
+                "id": "47485a",
+                "record_count": 15025407,
+                "region": "",
+                "title": "8fit"
+              }
+            },
+            {
+              "email": "pedrocaoeiriz@gmail.com",
+              "password": "$2a$10$oqf9O8daMMn33RdvdqGvCO4vjG.yv/MTz6izxlUW6CldZe0hs9Vme",
+              "source": {
+                "breach_date": "2018-07-01",
+                "domain": "8fit.com",
+                "id": "47485a",
+                "record_count": 15025407,
+                "region": "",
+                "title": "8fit"
+              }
+            }
+          ],
+          "keyword": "pedrocaoeiriz@gmail.com",
+          "total_count": 3
+        },
+        {
+          "data": [],
+          "keyword": "+34617758559",
+          "total_count": 0
+        }
+      ]
+    },
+    "status_code": 200,
+    "response_bytes": 858
+  },
+  "duration_s": 1.3772184579866007
+}

@@ -1,5 +1,6 @@
 ---
-gsd_state_version: 1.0
+
+## gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to plan
@@ -10,7 +11,6 @@ progress:
   total_plans: 2
   completed_plans: 2
   percent: 100
----
 
 # Project State
 
@@ -23,14 +23,16 @@ See: .planning/PROJECT.md (updated 2026-04-16)
 
 ## Phase Status
 
-| Phase | Status | Started | Completed |
-|-------|--------|---------|-----------|
-| 1 — Foundation & Design System | In Progress | 2026-04-16 | — |
-| 2 — Case Input | Pending | — | — |
-| 3 — Module Selection | Pending | — | — |
-| 4 — Live Run View Layout | Pending | — | — |
-| 5 — Real-Time Pipeline Streaming | Pending | — | — |
-| 6 — Node Graph Interactivity & Polish | Pending | — | — |
+
+| Phase                                 | Status      | Started    | Completed |
+| ------------------------------------- | ----------- | ---------- | --------- |
+| 1 — Foundation & Design System        | In Progress | 2026-04-16 | —         |
+| 2 — Case Input                        | Pending     | —          | —         |
+| 3 — Module Selection                  | Pending     | —          | —         |
+| 4 — Live Run View Layout              | Pending     | —          | —         |
+| 5 — Real-Time Pipeline Streaming      | Pending     | —          | —         |
+| 6 — Node Graph Interactivity & Polish | Pending     | —          | —         |
+
 
 ## Current Context
 
@@ -45,7 +47,10 @@ Plan 01-01 complete. Frontend scaffold is live:
 
 ## Key Decisions
 
-| Decision | Rationale |
-|----------|-----------|
+
+| Decision                                | Rationale                                                                                       |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `ignoreDeprecations: "6.0"` in tsconfig | TypeScript 5.x deprecates `baseUrl` needed for `@/` alias; silenced for shadcn/ui compatibility |
-| `@import` before `@tailwind` directives | PostCSS requires `@import` to precede all other statements to avoid warnings |
+| `@import` before `@tailwind` directives | PostCSS requires `@import` to precede all other statements to avoid warnings                    |
+
+

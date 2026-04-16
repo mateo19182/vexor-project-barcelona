@@ -1,10 +1,10 @@
 ---
-plan: 01-01
+
+## plan: 01-01
 phase: 01-foundation-design-system
 status: complete
 started: 2026-04-16T05:00:00.000Z
 completed: 2026-04-16T05:30:00.000Z
----
 
 # Summary: Scaffold Vite + React + TypeScript with Tailwind and Design Tokens
 

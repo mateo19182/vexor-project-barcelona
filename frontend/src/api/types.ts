@@ -59,14 +59,57 @@ export interface Dossier {
 }
 
 export interface LlmSummary {
-  summary: string;
+  executive_brief: string;
+  approach_context: string;
+  confidence_level: "high" | "moderate" | "low";
   key_facts: string[];
+  unanswered_questions: string[];
+}
+
+export interface SubjectProfile {
+  name: string;
+  aliases: string[];
+  location: string | null;
+  country: string | null;
+  phones: string[];
+  emails: string[];
+  social_handles: Record<string, string>;
+}
+
+export interface ContactChannel {
+  channel: string;
+  value: string;
+  verified_on: string[];
+  confidence: number;
+  notes: string | null;
+}
+
+export interface IntelligenceItem {
+  category: string;
+  finding: string;
+  source: string;
+  confidence: number;
+  actionable: boolean;
+}
+
+export interface EnrichedDossier {
+  subject: SubjectProfile;
+  case_summary: string;
+  digital_footprint: "minimal" | "moderate" | "extensive";
+  contact_channels: ContactChannel[];
+  intelligence: IntelligenceItem[];
+  risk_flags: string[];
+  platform_registrations: string[];
+  gaps: string[];
+  technical_issues: string[];
+  module_coverage: Record<string, string>;
 }
 
 export interface EnrichmentResponse {
   case_id: string;
   status: string;
   dossier: Dossier | null;
+  enriched_dossier: EnrichedDossier | null;
   llm_summary: LlmSummary | null;
   modules: ModuleResult[];
   audit_log: AuditEvent[];

@@ -6,14 +6,16 @@
 
 ## Overview
 
-| # | Phase | Goal | Requirements | Success Criteria |
-|---|-------|------|--------------|------------------|
-| 1 | Foundation & Design System | Scaffold the app with the dark futuristic theme and routing skeleton | UIX-01 | 3 |
-| 2 | Case Input | Collector can enter debtor data and submit a case | INP-01, INP-02 | 3 |
-| 3 | Module Selection | Collector can choose which enrichment modules to run | MOD-01, MOD-02, MOD-03 | 3 |
-| 4 | Live Run View Layout | Two-panel run screen renders with log stream and node graph side by side | UIX-03, RUN-01, RUN-02 | 4 |
-| 5 | Real-Time Pipeline Streaming | WebSocket connects and drives live updates to the log and graph | RUN-05 | 3 |
-| 6 | Node Graph Interactivity & Polish | Nodes animate in, hover shows summary, click expands full output | RUN-03, RUN-04, UIX-02 | 4 |
+
+| #   | Phase                             | Goal                                                                     | Requirements           | Success Criteria |
+| --- | --------------------------------- | ------------------------------------------------------------------------ | ---------------------- | ---------------- |
+| 1   | Foundation & Design System        | Scaffold the app with the dark futuristic theme and routing skeleton     | UIX-01                 | 3                |
+| 2   | Case Input                        | Collector can enter debtor data and submit a case                        | INP-01, INP-02         | 3                |
+| 3   | Module Selection                  | Collector can choose which enrichment modules to run                     | MOD-01, MOD-02, MOD-03 | 3                |
+| 4   | Live Run View Layout              | Two-panel run screen renders with log stream and node graph side by side | UIX-03, RUN-01, RUN-02 | 4                |
+| 5   | Real-Time Pipeline Streaming      | WebSocket connects and drives live updates to the log and graph          | RUN-05                 | 3                |
+| 6   | Node Graph Interactivity & Polish | Nodes animate in, hover shows summary, click expands full output         | RUN-03, RUN-04, UIX-02 | 4                |
+
 
 ---
 

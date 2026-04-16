@@ -1,0 +1,629 @@
+{
+  "case_id": "test",
+  "status": "enriched",
+  "dossier": {
+    "summary": "No confirmed public profiles found for Pedro Garcia matching the provided identifiers. 'Pedro Garcia' is an extremely common name with tens of thousands of public profiles worldwide; without identity anchors (email, phone, or address), no specific individual could be confirmed as the subject.",
+    "facts": [],
+    "signals": [
+      {
+        "kind": "contact",
+        "value": "osint_web",
+        "source": "osint_web",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      }
+    ],
+    "gaps": [
+      "BRAVE_API_KEY env var not configured",
+      "BRAVE_API_KEY env var not configured",
+      "BRAVE_API_KEY not configured",
+      "BREACH_INTEL_HOST env var not set — module disabled",
+      "icloud_check: missing port/api_key settings",
+      "No identity anchors were provided (no email, phone, address, or country), making it impossible to distinguish the subject from the thousands of other individuals named Pedro Garcia found in public sources.",
+      "LinkedIn alone lists over 19,100 profiles under the name 'Pedro Garcia'; none could be attributed to a specific subject without additional identifiers.",
+      "Multiple Instagram accounts, Facebook profiles, and other social media pages exist for people named Pedro Garcia, but none could be confirmed as belonging to this specific subject.",
+      "Country of residence was listed as 'None', further preventing geographic disambiguation.",
+      "wallapop raised AttributeError: 'Context' object has no attribute 'name'",
+      "skipped: missing inputs [contact:email]",
+      "skipped: missing inputs [contact:gaia_id]",
+      "skipped: missing inputs [contact:instagram]",
+      "skipped: missing inputs [contact:instagram]",
+      "skipped: missing inputs [contact:email]",
+      "skipped: missing inputs [role]",
+      "skipped: missing inputs [contact:linkedin]",
+      "skipped: missing inputs [contact:email]",
+      "skipped: missing inputs [address]",
+      "skipped: missing inputs [contact:email]",
+      "skipped: missing inputs [contact:twitter]",
+      "skipped: missing inputs [contact:email]"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "skipped",
+      "summary": "BOE module disabled (BRAVE_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BRAVE_API_KEY env var not configured"
+      ],
+      "raw": {},
+      "duration_s": 1.0165967978537083e-05
+    },
+    {
+      "name": "borme",
+      "status": "skipped",
+      "summary": "BORME module disabled (BRAVE_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BRAVE_API_KEY env var not configured"
+      ],
+      "raw": {},
+      "duration_s": 3.999972250312567e-06
+    },
+    {
+      "name": "brave_social",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BRAVE_API_KEY not configured"
+      ],
+      "raw": {},
+      "duration_s": 3.2919924706220627e-06
+    },
+    {
+      "name": "breach_scout",
+      "status": "skipped",
+      "summary": "Breach intelligence host not configured (BREACH_INTEL_HOST unset).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "BREACH_INTEL_HOST env var not set — module disabled"
+      ],
+      "raw": {},
+      "duration_s": 4.833040293306112e-06
+    },
+    {
+      "name": "icloud_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "icloud_check: missing port/api_key settings"
+      ],
+      "raw": {},
+      "duration_s": 3.832974471151829e-06
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "No confirmed public profiles found for Pedro Garcia matching the provided identifiers. 'Pedro Garcia' is an extremely common name with tens of thousands of public profiles worldwide; without identity anchors (email, phone, or address), no specific individual could be confirmed as the subject.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "osint_web",
+          "source": "osint_web",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [
+        "No identity anchors were provided (no email, phone, address, or country), making it impossible to distinguish the subject from the thousands of other individuals named Pedro Garcia found in public sources.",
+        "LinkedIn alone lists over 19,100 profiles under the name 'Pedro Garcia'; none could be attributed to a specific subject without additional identifiers.",
+        "Multiple Instagram accounts, Facebook profiles, and other social media pages exist for people named Pedro Garcia, but none could be confirmed as belonging to this specific subject.",
+        "Country of residence was listed as 'None', further preventing geographic disambiguation."
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "anthropic_web",
+        "search_queries": [
+          "Pedro Garcia social media profile",
+          "Pedro Garcia LinkedIn"
+        ],
+        "fetched_urls": [],
+        "stop_reason": "end_turn"
+      },
+      "duration_s": 20.558305333950557
+    },
+    {
+      "name": "wallapop",
+      "status": "error",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "wallapop raised AttributeError: 'Context' object has no attribute 'name'"
+      ],
+      "raw": {},
+      "duration_s": 5.209003575146198e-06
+    },
+    {
+      "name": "github_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:gaia_id]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "image_search",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:instagram]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "instagram",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:instagram]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "instagram_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "jooble",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [role]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "linkedin",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:linkedin]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "nosint",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "property",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [address]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "twitter_check",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "twitter",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:twitter]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    },
+    {
+      "name": "xon",
+      "status": "skipped",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "skipped: missing inputs [contact:email]"
+      ],
+      "raw": {},
+      "duration_s": 0.0
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 1.2666976545006037e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 19 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'wallapop', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "wallapop",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 9.170797420665622e-05,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'icloud_check', 'osint_web', 'wallapop']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "icloud_check",
+          "osint_web",
+          "wallapop"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0005265829968266189,
+      "module": "boe",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 1.0165967978537083e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0005515419761650264,
+      "module": "borme",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.999972250312567e-06,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0005670419777743518,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.2919924706220627e-06,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0005811249720863998,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 4.833040293306112e-06,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.000593625009059906,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 3.832974471151829e-06,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0006092499825172126,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "loaded cached ok (1 signal(s), 0 fact(s), 4 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 1,
+        "facts": 0,
+        "gaps": 4,
+        "cached_duration_s": 20.558305333950557
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0006217079935595393,
+      "module": "wallapop",
+      "wave": 1,
+      "message": "error in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "error",
+        "duration_s": 5.209003575146198e-06,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0006412919610738754,
+      "module": "github_check",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0006615419988520443,
+      "module": "gaia_enrichment",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:gaia_id']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:gaia_id"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0006769999745301902,
+      "module": "image_search",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:instagram']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:instagram"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0006912919925525784,
+      "module": "instagram",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:instagram']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:instagram"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007048749830573797,
+      "module": "instagram_check",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007183749694377184,
+      "module": "jooble",
+      "wave": null,
+      "message": "skipped — missing inputs ['role']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "role"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007317079580388963,
+      "module": "linkedin",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:linkedin']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:linkedin"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007444169605150819,
+      "module": "nosint",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007572079775854945,
+      "module": "property",
+      "wave": null,
+      "message": "skipped — missing inputs ['address']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "address"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.000772083003539592,
+      "module": "twitter_check",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007857499876990914,
+      "module": "twitter",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:twitter']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:twitter"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.0007986669661477208,
+      "module": "xon",
+      "wave": null,
+      "message": "skipped — missing inputs ['contact:email']",
+      "detail": {
+        "status": "skipped",
+        "missing": [
+          "contact:email"
+        ]
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.000816916988696903,
+      "module": null,
+      "wave": null,
+      "message": "1 ok, 17 skipped, 1 error(s)",
+      "detail": {
+        "ok": 1,
+        "error": 1,
+        "skipped": 17
+      }
+    }
+  ]
+}

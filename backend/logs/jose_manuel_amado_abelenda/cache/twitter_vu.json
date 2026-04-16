@@ -1,0 +1,55 @@
+{
+  "name": "twitter_vu",
+  "status": "ok",
+  "summary": "@amadoasenjo is a valid Twitter/X user; name=Jose Manuel Amado Asenjo; email=jo*************@g****.***.",
+  "social_links": [
+    {
+      "platform": "twitter",
+      "url": "https://x.com/amadoasenjo",
+      "handle": "amadoasenjo",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "name",
+      "value": "Jose Manuel Amado Asenjo",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.8,
+      "notes": "Display name from Twitter/X profile @amadoasenjo",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "jo*************@g****.***",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.85,
+      "notes": "Masked email associated with @amadoasenjo",
+      "tag": "email_masked"
+    },
+    {
+      "kind": "contact",
+      "value": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+      "source": "platform_check:twitter_vu",
+      "confidence": 0.9,
+      "notes": "Twitter/X profile picture for @amadoasenjo",
+      "tag": "photo"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "amadoasenjo",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "amadoasenjo",
+      "name": "Jose Manuel Amado Asenjo",
+      "email": "jo*************@g****.***",
+      "phone": "",
+      "avatar": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+    },
+    "error": null
+  },
+  "duration_s": 1.202364458993543
+}

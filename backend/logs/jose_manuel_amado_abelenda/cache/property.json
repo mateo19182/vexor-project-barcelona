@@ -1,0 +1,62 @@
+{
+  "name": "property",
+  "status": "ok",
+  "summary": "Sin estimacion de valor para Emilia Pardo Bazan 53, A Coruña, Oleiros, Spain. Ver gaps.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Arillo, ES",
+      "source": "geocoding",
+      "confidence": 0.75,
+      "notes": "Location derived from debtor's known address",
+      "tag": null
+    }
+  ],
+  "gaps": [
+    "Catastro /vias sin resultado para 'EMILIA PARDO BAZÁN' en Arillo — usando tipo de via inferido",
+    "Catastro API sin inmuebles para 'AV EMILIA PARDO BAZÁN 53' en Arillo — sin m2 ni RC",
+    "MITMA: 'Arillo' no en base (~306 municipios >25k hab) — usando capital de provincia 'Coruña (A)' como referencia",
+    "SERPAVI: 'Arillo' no en base (2.555 municipios) — usando capital de provincia 'Coruña, A' como referencia"
+  ],
+  "raw": {
+    "geocode": {
+      "engine": "nominatim",
+      "display_name": "Avenida de Emilia Pardo Bazán, Os Tornos, Dorneda, Arillo, Oleiros, A Coruña, Galicia, 15178, España",
+      "lat": "43.3545407",
+      "lon": "-8.3128946",
+      "postcode": "15178",
+      "city": "Arillo",
+      "provincia": "A Coruña",
+      "state": "Galicia"
+    },
+    "mitma": {
+      "municipio": "Coruña (A)",
+      "provincia": "La Coruña",
+      "eur_m2_total": 2594.7,
+      "eur_m2_nueva": 3035.3,
+      "eur_m2_usada": 2588.2,
+      "n_tasaciones": 653,
+      "granularidad": "provincia_capital",
+      "periodo": "T4 2025",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+    },
+    "serpavi": {
+      "municipio": "Coruña, A",
+      "provincia": "Coruña, A",
+      "alquiler_eur_m2_mes_mediana": 7.1,
+      "alquiler_eur_m2_mes_p25": 5.56,
+      "alquiler_eur_m2_mes_p75": 9.08,
+      "alquiler_eur_mes_mediana": 537.76,
+      "alquiler_eur_mes_p25": 433.9,
+      "alquiler_eur_mes_p75": 662.14,
+      "superficie_tipica_m2": 79.0,
+      "n_viviendas_muestra": 24978,
+      "granularidad": "provincia_capital",
+      "periodo": "2024",
+      "source": "https://serpavi.mivau.gob.es/"
+    }
+  },
+  "duration_s": 1.1505731249926612
+}

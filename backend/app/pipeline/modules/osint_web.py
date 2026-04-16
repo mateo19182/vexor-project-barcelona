@@ -622,6 +622,18 @@ class OsintWebModule:
             f"{len(queries)} search(es), {len(urls)} fetch(es)"
         )
 
+        # Shared scheduling sentinel — signals that wave-1 enrichment completed
+        # so username_finder (which requires contact:enrichment_ran) can run
+        # in the next wave with all handles discovered here already on context.
+        signals.append(Signal(
+            kind="contact",
+            tag="enrichment_ran",
+            value="osint_web",
+            source="osint_web",
+            confidence=1.0,
+            notes="Scheduling sentinel — signals that wave-1 enrichment completed.",
+        ))
+
         return ModuleResult(
             name=self.name,
             status="ok",

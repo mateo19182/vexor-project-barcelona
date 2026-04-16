@@ -1,0 +1,47 @@
+{
+  "name": "uber_hint",
+  "status": "ok",
+  "summary": "pedrocaoeiriz@gmail.com is NOT registered on Uber. | +34617758559 registered on Uber; email=p******z@gmail.com",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "Uber account registered to +34617758559",
+      "source": "platform_check:uber_hint",
+      "confidence": 0.85,
+      "notes": null,
+      "tag": "uber"
+    },
+    {
+      "kind": "contact",
+      "value": "p******z@gmail.com",
+      "source": "platform_check:uber_hint",
+      "confidence": 0.8,
+      "notes": "Masked email from Uber (looked up via phone: +34617758559)",
+      "tag": "email_masked"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "email_lookup": {
+      "identifier": "pedrocaoeiriz@gmail.com",
+      "id_type": "email",
+      "status_raw": "FAIL",
+      "data": null,
+      "error": null
+    },
+    "phone_lookup": {
+      "identifier": "+34617758559",
+      "id_type": "phone",
+      "status_raw": "REGISTERED",
+      "data": {
+        "login": "+34617758559",
+        "phoneMask": "",
+        "emailMask": "p******z@gmail.com"
+      },
+      "error": null
+    }
+  },
+  "duration_s": 5.244308916036971
+}

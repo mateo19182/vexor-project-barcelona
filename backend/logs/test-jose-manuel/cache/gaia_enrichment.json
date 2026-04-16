@@ -1,0 +1,34 @@
+{
+  "name": "gaia_enrichment",
+  "status": "ok",
+  "summary": "GAIA enrichment for 105982492274469151146. Name: Contribuciones.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Stats API: no stats returned (profile may be empty or private)",
+    "No public reviews found on the contributor page",
+    "No public photos found on the contributor page"
+  ],
+  "raw": {
+    "gaia_id": "105982492274469151146",
+    "profile_url": "https://www.google.com/maps/contrib/105982492274469151146/reviews",
+    "name": "Contribuciones",
+    "profile_pic_url": "https://lh3.googleusercontent.com/a/default-user=s72-cc",
+    "stats": {
+      "reviews_count": 0,
+      "ratings_count": 0,
+      "photos_count": 0,
+      "local_guides_level": 0
+    },
+    "reviews": [],
+    "photos": [],
+    "total_reviews": 0,
+    "gaps": [
+      "Stats API: no stats returned (profile may be empty or private)",
+      "No public reviews found on the contributor page",
+      "No public photos found on the contributor page"
+    ]
+  },
+  "duration_s": 27.40579320798861
+}

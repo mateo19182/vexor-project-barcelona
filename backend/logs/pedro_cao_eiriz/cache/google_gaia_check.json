@@ -1,0 +1,29 @@
+{
+  "name": "google_gaia_check",
+  "status": "ok",
+  "summary": "pedrocaoeiriz@gmail.com -> Google Gaia ID 109807121807838897737",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "109807121807838897737",
+      "source": "platform_check:google_gaia_check",
+      "confidence": 1.0,
+      "notes": "Google account registered to pedrocaoeiriz@gmail.com",
+      "tag": "gaia_id"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "identifier": "pedrocaoeiriz@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "data": {
+      "login": "pedrocaoeiriz@gmail.com",
+      "gaiaId": "109807121807838897737"
+    },
+    "error": null
+  },
+  "duration_s": 1.5460218749940395
+}

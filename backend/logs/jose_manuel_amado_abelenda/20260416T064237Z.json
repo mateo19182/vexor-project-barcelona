@@ -1,0 +1,3172 @@
+{
+  "case_id": "jose_manuel_amado_abelenda",
+  "status": "enriched",
+  "dossier": {
+    "summary": "Found 25 social profile(s) via Brave search Found in 4 breach record(s) | 7 new phone(s) discovered: +34881983814, +34981433901, +34981714428 | Aliases/usernames: josemanuelamado, jose-amado-69554b26 | 7 business association(s): Motivos Singulares Sl, Serviocio Cultura Deporte Y Recreacion Sl, Hotel Natureza Monte Blanco Sl josemanuelamadoabelenda@gmail.com is NOT registered on GitHub. josemanuelamadoabelenda@gmail.com -> Google Gaia ID 105982492274469151146 josemanuelamadoabelenda@gmail.com is registered on iCloud. | +34609832721 is registered on iCloud. Email found on 1 platform(s) | 2 breach/leak hit(s) Jose Manuel Amado Abelenda is a sports and wellness entrepreneur based in Oleiros, A Coruña, Spain. He is the President and founder of the Clúster Galego da Industria do Deporte e o Benestar and founding partner/sole proprietor of Motivos Singulares S.L. He holds a degree in Physical Activity and Sport Sciences from INEF de Galicia and is an investor in health, exercise, and nutrition projects. His corporate footprint in the Spanish BORME spans over 21 companies across sports, tourism, and nutrition sectors. Sin estimacion de valor para Emilia Pardo Bazan 53, A Coruña, Oleiros, Spain. Ver gaps. josemanuelamadoabelenda@gmail.com is NOT registered on Twitter. josemanuelamadoabelenda@gmail.com is NOT registered on Uber. | +34609832721 registered on Uber; email=2fv648hdy9@privaterelay.appleid.com Email found in 3 breach(es); registered on: canva.com, verifications.io, linkedin.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 3 breach(es); earliest 2012, latest 2019 GAIA enrichment for 105982492274469151146. Name: Contribuciones. Could not resolve Instagram profile picture URL for @https://www.instagram.com/p/C_0JFG2sY9Y/; reverse-image search skipped. Could not retrieve any Instagram data for @https://www.instagram.com/p/C_0JFG2sY9Y/. Jooble: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' in Oleiros, A Coruña, ES → 338 listing(s). Sample salaries: 15 €/hora. @amadoasenjo is a valid Twitter/X user; name=Jose Manuel Amado Asenjo; email=jo*************@g****.***.",
+    "facts": [
+      {
+        "claim": "Identity found in 4 breach record(s) in the breach intelligence database",
+        "source": "https://9ghz.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Email active on 3 platform(s) out of 42 checked: Breach Check v2, kucoin.com, leakcheck.io",
+        "source": "https://nosint.org",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Described publicly as 'Presidente y fundador' in a LinkedIn post by Vertical Proyect",
+        "source": "https://es.linkedin.com/posts/vertical-proyect_%C3%A9l-es-jose-manuel-amado-abelenda-presidente-activity-7209255176346521600-pCnE",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Has 3 active corporate roles, 31 historical roles, across 21 total companies per BORME",
+        "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Featured as participant in Capacita Directivos executive training programme",
+        "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Email found in 3 breach(es); earliest 2012, latest 2019",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, Names, Passwords, Phone numbers, Physical addresses, Usernames",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Moderate (45/100)",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Jooble salary range for 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' in Oleiros, A Coruña, ES: 15 €/hora",
+        "source": "jooble.org search: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' / 'Oleiros, A Coruña, ES'",
+        "confidence": 0.55
+      },
+      {
+        "claim": "Jooble confirms 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' is an active job title in Oleiros, A Coruña, ES (338 listing(s) found).",
+        "source": "jooble.org search: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' / 'Oleiros, A Coruña, ES'",
+        "confidence": 0.6
+      }
+    ],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "Debtor identifiers found in 4 breach record(s)",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "notes": "Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "+34881983814",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34981433901",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34981714428",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34916245811",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34988210769",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34902313110",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "+34982120040",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records",
+        "tag": "phone"
+      },
+      {
+        "kind": "contact",
+        "value": "josemanuelamado",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "notes": "Username / alias found in breach records — may correspond to social profiles",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "jose-amado-69554b26",
+        "source": "https://9ghz.com",
+        "confidence": 0.65,
+        "notes": "Username / alias found in breach records — may correspond to social profiles",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Motivos Singulares Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): associated. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Cultura Deporte Y Recreacion Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Hotel Natureza Monte Blanco Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Sole Administrator. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Madrid Sur Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): General Manager, Member of the Board, Commercial Director, Financial Manager. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Ourense Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Serviocio Granada Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Eciman Sl",
+        "source": "https://9ghz.com",
+        "confidence": 0.8,
+        "notes": "Role(s): Administrator. Found in breach intelligence records.",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "105982492274469151146",
+        "source": "platform_check:google_gaia_check",
+        "confidence": 1.0,
+        "notes": "Google account registered to josemanuelamadoabelenda@gmail.com",
+        "tag": "gaia_id"
+      },
+      {
+        "kind": "contact",
+        "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+        "source": "platform_check:icloud_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: SUCCESS",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "iCloud account registered to +34609832721",
+        "source": "platform_check:icloud_check",
+        "confidence": 0.8,
+        "notes": "Upstream status: SUCCESS",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Breach Check v2",
+        "source": "https://nosint.org",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Breach Check v2",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "kucoin.com",
+        "source": "https://kucoin.com",
+        "confidence": 0.8,
+        "notes": "Found by NoSINT module: KuCoin",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Email found in Leak Check",
+        "source": "https://leakcheck.io",
+        "confidence": 0.85,
+        "notes": "Found by NoSINT module: Leak Check",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "nosint",
+        "source": "https://nosint.org",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "location",
+        "value": "Oleiros, A Coruña, ES",
+        "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+        "confidence": 0.95,
+        "notes": "Subject address provided; multiple A Coruña-registered companies in BORME records",
+        "tag": null
+      },
+      {
+        "kind": "role",
+        "value": "Presidente del Clúster Galego da Industria do Deporte e o Benestar",
+        "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+        "confidence": 0.95,
+        "notes": "Also corroborated by agaxede.org interview and Instagram posts by circulo.gal",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "Motivos Singulares SL – Socio fundador / Administrador Único (2011–present)",
+        "source": "https://librebor.me/en/borme/empresa/motivos-singulares/",
+        "confidence": 0.95,
+        "notes": "Developer of educational activities in rural houses and tourist accommodations; sole proprietorship registered 15/02/2011",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "ARTIO NUTRICION SL – Apoderado Mancomunado/Solidario (2022–present)",
+        "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+        "confidence": 0.9,
+        "notes": "Active role per BORME; nutrition company linked to his health/wellness investment focus",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "MOTIVOS TURISTICOS SL – Administrador Único (2012–2020, liquidated)",
+        "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+        "confidence": 0.95,
+        "notes": "Also served as Liquidador upon dissolution in July 2020",
+        "tag": null
+      },
+      {
+        "kind": "business",
+        "value": "HOTEL NATUREZA MONTE BLANCO SL – Sole Proprietor / Administrador Único (2012–2020, liquidated)",
+        "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+        "confidence": 0.95,
+        "notes": "Hospitality venture liquidated July 2020",
+        "tag": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "INEF de Galicia – Graduado en Ciencias de la Actividad Física y del Deporte",
+        "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+        "confidence": 0.95,
+        "notes": "Degree in Physical Activity and Sport Sciences",
+        "tag": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Investor in health, physical exercise, and nutrition projects",
+        "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+        "confidence": 0.9,
+        "notes": "Stated on Capacita Directivos professional profile",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "osint_web",
+        "source": "osint_web",
+        "confidence": 1.0,
+        "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+        "tag": "enrichment_ran"
+      },
+      {
+        "kind": "location",
+        "value": "Arillo, ES",
+        "source": "geocoding",
+        "confidence": 0.75,
+        "notes": "Location derived from debtor's known address",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "Uber account registered to +34609832721",
+        "source": "platform_check:uber_hint",
+        "confidence": 0.85,
+        "notes": null,
+        "tag": "uber"
+      },
+      {
+        "kind": "contact",
+        "value": "2fv648hdy9@privaterelay.appleid.com",
+        "source": "platform_check:uber_hint",
+        "confidence": 0.8,
+        "notes": "Masked email from Uber (looked up via phone: +34609832721)",
+        "tag": "email_masked"
+      },
+      {
+        "kind": "contact",
+        "value": "canva.com",
+        "source": "https://www.canva.com/en_in/help/incident-may24/",
+        "confidence": 0.85,
+        "notes": "Account registered on canva.com (breach year: 2019). Data exposed: Email addresses, Names, Usernames",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "verifications.io",
+        "source": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+        "confidence": 0.85,
+        "notes": "Account registered on verifications.io (breach year: 2019). Data exposed: Email addresses, Names, Dates of birth, Genders, Geographic locations, Phone numbers, Physical addresses",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "linkedin.com",
+        "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+        "confidence": 0.85,
+        "notes": "Account registered on linkedin.com (breach year: 2012). Data exposed: Email addresses, Passwords",
+        "tag": null
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in LinkedIn breach",
+        "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+        "confidence": 0.9,
+        "notes": null,
+        "tag": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Active job market for Presidente del Clúster Galego da Industria do Deporte e o Benestar in Oleiros, A Coruña, ES (338+ listings)",
+        "source": "jooble.org search: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' / 'Oleiros, A Coruña, ES'",
+        "confidence": 0.65,
+        "notes": "High demand: 338 active Jooble listings for 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' in Oleiros, A Coruña, ES — consistent with active local employment.",
+        "tag": null
+      },
+      {
+        "kind": "name",
+        "value": "Jose Manuel Amado Asenjo",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.8,
+        "notes": "Display name from Twitter/X profile @amadoasenjo",
+        "tag": null
+      },
+      {
+        "kind": "contact",
+        "value": "jo*************@g****.***",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.85,
+        "notes": "Masked email associated with @amadoasenjo",
+        "tag": "email_masked"
+      },
+      {
+        "kind": "contact",
+        "value": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "source": "platform_check:twitter_vu",
+        "confidence": 0.9,
+        "notes": "Twitter/X profile picture for @amadoasenjo",
+        "tag": "photo"
+      }
+    ],
+    "gaps": [
+      "Instagram returned ambiguous status 'INVALID' for josemanuelamadoabelenda@gmail.com",
+      "No personal Instagram, Twitter/X, or Facebook profile confirmed as belonging to this specific subject",
+      "LinkedIn profile URL inferred from post URL pattern; direct profile page could not be fetched for full confirmation",
+      "Whether he remains active as Cluster Galego president in 2026 is unconfirmed (last reference from 2024)",
+      "Nature and scale of 'Vertical Proyect' affiliation not fully established",
+      "Current employer or active salary-paying role beyond cluster/business ownership not confirmed",
+      "Catastro /vias sin resultado para 'EMILIA PARDO BAZÁN' en Arillo — usando tipo de via inferido",
+      "Catastro API sin inmuebles para 'AV EMILIA PARDO BAZÁN 53' en Arillo — sin m2 ni RC",
+      "MITMA: 'Arillo' no en base (~306 municipios >25k hab) — usando capital de provincia 'Coruña (A)' como referencia",
+      "SERPAVI: 'Arillo' no en base (2.555 municipios) — usando capital de provincia 'Coruña, A' como referencia",
+      "Stats API: no stats returned (profile may be empty or private)",
+      "No public reviews found on the contributor page",
+      "No public photos found on the contributor page",
+      "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted",
+      "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python",
+      "linkedin: could not parse slug from 'jose-manuel-amado-abelenda-04b2831b'",
+      "Twitter profile @amadoasenjo not retrievable: user_not_found"
+    ]
+  },
+  "llm_summary": null,
+  "modules": [
+    {
+      "name": "boe",
+      "status": "no_data",
+      "summary": "No BOE entries found for 'Jose Manuel Amado Abelenda'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.0452134580118582
+    },
+    {
+      "name": "borme",
+      "status": "no_data",
+      "summary": "No BORME entries found for 'Jose Manuel Amado Abelenda'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {},
+      "duration_s": 1.0336052909842692
+    },
+    {
+      "name": "brave_social",
+      "status": "ok",
+      "summary": "Found 25 social profile(s) via Brave search",
+      "social_links": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/C_0JFG2sY9Y/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/C68RBAFMofy/?locale=en",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jose-manuel-arranz-abelenda-1841883a/",
+          "handle": "jose-manuel-arranz-abelenda-1841883a",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jose-manuel-amado-8532b7145/",
+          "handle": "jose-manuel-amado-8532b7145",
+          "confidence": 0.65
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/in/jose-abelenda-483821/",
+          "handle": "jose-abelenda-483821",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/jotamado/",
+          "handle": "jotamado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/jose.abelenda/?hl=it",
+          "handle": "jose.abelenda",
+          "confidence": 0.65
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/joseandradea/",
+          "handle": "joseandradea",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/amadoasenjo?lang=pt",
+          "handle": "amadoasenjo",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/joseamado89?lang=ar",
+          "handle": "joseamado89",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/joselitoamado",
+          "handle": "joselitoamado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/amado_lito",
+          "handle": "amado_lito",
+          "confidence": 0.65
+        },
+        {
+          "platform": "twitter",
+          "url": "https://x.com/jmalba80?lang=en",
+          "handle": "jmalba80",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/2592049217532755",
+          "handle": "2592049217532755",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/josemanuel.tadendeabelenda",
+          "handle": "josemanuel.tadendeabelenda",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/josemanuel.fernandezamado/",
+          "handle": "josemanuel.fernandezamado",
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/p/Jos%C3%A9-Manuel-Amado-Amado-100087606465514/",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/jose.criadoabelenda/",
+          "handle": "jose.criadoabelenda",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/jmaburto",
+          "handle": "jmaburto",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/ingelectronicadj",
+          "handle": "ingelectronicadj",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/jmvillalobos",
+          "handle": "jmvillalobos",
+          "confidence": 0.65
+        },
+        {
+          "platform": "github",
+          "url": "https://github.com/manuelen",
+          "handle": "manuelen",
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/dr-juan-manuel-amado",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/juan-manuel-amado?lang=es",
+          "handle": null,
+          "confidence": 0.65
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/discover/jose-manuel-solis-%C3%A1ngeles-de-fuego",
+          "handle": null,
+          "confidence": 0.65
+        }
+      ],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "queries": [
+          "\"Jose Manuel Amado Abelenda\" site:linkedin.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:instagram.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:x.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:facebook.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:github.com ES",
+          "\"Jose Manuel Amado Abelenda\" site:tiktok.com ES",
+          "josemanuelamadoabelenda site:linkedin.com",
+          "josemanuelamadoabelenda site:instagram.com",
+          "josemanuelamadoabelenda site:x.com",
+          "josemanuelamadoabelenda site:facebook.com",
+          "josemanuelamadoabelenda site:github.com",
+          "josemanuelamadoabelenda site:tiktok.com"
+        ],
+        "links_found": 25,
+        "errors": []
+      },
+      "duration_s": 1.119878500001505
+    },
+    {
+      "name": "breach_scout",
+      "status": "ok",
+      "summary": "Found in 4 breach record(s) | 7 new phone(s) discovered: +34881983814, +34981433901, +34981714428 | Aliases/usernames: josemanuelamado, jose-amado-69554b26 | 7 business association(s): Motivos Singulares Sl, Serviocio Cultura Deporte Y Recreacion Sl, Hotel Natureza Monte Blanco Sl",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Identity found in 4 breach record(s) in the breach intelligence database",
+          "source": "https://9ghz.com",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Debtor identifiers found in 4 breach record(s)",
+          "source": "https://9ghz.com",
+          "confidence": 0.85,
+          "notes": "Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "+34881983814",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34981433901",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34981714428",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34916245811",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34988210769",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34902313110",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "+34982120040",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records",
+          "tag": "phone"
+        },
+        {
+          "kind": "contact",
+          "value": "josemanuelamado",
+          "source": "https://9ghz.com",
+          "confidence": 0.65,
+          "notes": "Username / alias found in breach records — may correspond to social profiles",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "jose-amado-69554b26",
+          "source": "https://9ghz.com",
+          "confidence": 0.65,
+          "notes": "Username / alias found in breach records — may correspond to social profiles",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Motivos Singulares Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): associated. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Cultura Deporte Y Recreacion Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Hotel Natureza Monte Blanco Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Sole Administrator. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Madrid Sur Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): General Manager, Member of the Board, Commercial Director, Financial Manager. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Ourense Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Serviocio Granada Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Eciman Sl",
+          "source": "https://9ghz.com",
+          "confidence": 0.8,
+          "notes": "Role(s): Administrator. Found in breach intelligence records.",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "keywords": [
+          "Jose Manuel Amado Abelenda",
+          "josemanuelamadoabelenda@gmail.com",
+          "+34609832721"
+        ],
+        "mode": "authenticated_batch",
+        "response": {
+          "code": 0,
+          "msg": "ok",
+          "data": [
+            {
+              "data": [
+                {
+                  "other_info": "Motivos Singulares Sl",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Motivos Singulares Sl  +34 881983814",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Serviocio Cultura Deporte Y Recreacion Sl",
+                  "real_name": "jose manuel amado abelenda",
+                  "region": "ES",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Serviocio Cultura Deporte Y Recreacion Sl  +34 981433901",
+                  "real_name": "jose manuel amado abelenda",
+                  "region": "ES",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Sole Administrator Hotel Natureza Monte Blanco Sl.  +34 981714428",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "General Manager Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Ourense Sl  +34 988210769",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Granada Sl.  +34 902313110",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Administrator Eciman Sl  +34 982120040",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Member of the Board Serviocio Cultura Deporte Y Recreacion Sl  +34 981433901",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Commercial Director Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                },
+                {
+                  "other_info": "Financial Manager Serviocio Madrid Sur Sl  +34 916245811",
+                  "real_name": "jose manuel amado abelenda",
+                  "source": {
+                    "breach_date": "2021-07-01",
+                    "domain": "bvdinfo.com",
+                    "id": "324a55",
+                    "record_count": 484305582,
+                    "region": "",
+                    "title": "Bureau van Dijk Database"
+                  }
+                }
+              ],
+              "keyword": "Jose Manuel Amado Abelenda",
+              "total_count": 13
+            },
+            {
+              "data": [
+                {
+                  "email": "josemanuelamadoabelenda@gmail.com",
+                  "other_info": "jose manuel Amado",
+                  "source": {
+                    "breach_date": "2019-05-24",
+                    "domain": "canva.com",
+                    "id": "514932",
+                    "record_count": 137272116,
+                    "region": "",
+                    "title": "Canva"
+                  },
+                  "user_name": "josemanuelamado"
+                },
+                {
+                  "email": "josemanuelamadoabelenda@gmail.com",
+                  "real_name": "jose amado",
+                  "source": {
+                    "breach_date": "2019-01-01",
+                    "domain": "peopledatalabs.com",
+                    "id": "514356",
+                    "record_count": 471014406,
+                    "region": "US",
+                    "title": "PeopleDataLabs (PDL) "
+                  },
+                  "user_name": "jose-amado-69554b26"
+                },
+                {
+                  "email": "josemanuelamadoabelenda@gmail.com",
+                  "source": {
+                    "breach_date": "2019-02-25",
+                    "domain": "verifications.io",
+                    "id": "324b37",
+                    "record_count": 763117241,
+                    "region": "",
+                    "title": "Verifications.io"
+                  }
+                }
+              ],
+              "keyword": "josemanuelamadoabelenda@gmail.com",
+              "total_count": 3
+            },
+            {
+              "data": [],
+              "keyword": "+34609832721",
+              "total_count": 0
+            }
+          ]
+        },
+        "status_code": 200,
+        "response_bytes": 4282
+      },
+      "duration_s": 1.4222702919505537
+    },
+    {
+      "name": "github_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on GitHub.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "platform": "GitHub",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "56766b05-8b83-40a8-b54f-3345a3069013",
+        "error": null
+      },
+      "duration_s": 1.5266321249655448
+    },
+    {
+      "name": "google_gaia_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com -> Google Gaia ID 105982492274469151146",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "105982492274469151146",
+          "source": "platform_check:google_gaia_check",
+          "confidence": 1.0,
+          "notes": "Google account registered to josemanuelamadoabelenda@gmail.com",
+          "tag": "gaia_id"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "josemanuelamadoabelenda@gmail.com",
+          "gaiaId": "105982492274469151146"
+        },
+        "error": null
+      },
+      "duration_s": 0.8787074580322951
+    },
+    {
+      "name": "icloud_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is registered on iCloud. | +34609832721 is registered on iCloud.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+          "source": "platform_check:icloud_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: SUCCESS",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "iCloud account registered to +34609832721",
+          "source": "platform_check:icloud_check",
+          "confidence": 0.8,
+          "notes": "Upstream status: SUCCESS",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "checks": [
+          {
+            "platform": "iCloud",
+            "identifier": "josemanuelamadoabelenda@gmail.com",
+            "status_raw": "SUCCESS",
+            "http_status": 200,
+            "session_id": "c03c6942-7bc1-4b32-8d7b-fd738dfc410d",
+            "error": null
+          },
+          {
+            "platform": "iCloud",
+            "identifier": "+34609832721",
+            "status_raw": "SUCCESS",
+            "http_status": 200,
+            "session_id": "902efe89-678d-4dd9-8a00-3821cd92448b",
+            "error": null
+          }
+        ]
+      },
+      "duration_s": 6.128814583003987
+    },
+    {
+      "name": "instagram_check",
+      "status": "no_data",
+      "summary": "Instagram check for josemanuelamadoabelenda@gmail.com was inconclusive (status: INVALID).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Instagram returned ambiguous status 'INVALID' for josemanuelamadoabelenda@gmail.com"
+      ],
+      "raw": {
+        "platform": "Instagram",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "INVALID",
+        "http_status": 200,
+        "session_id": "a0110bde-aeb2-4852-abda-42e147372104",
+        "error": null
+      },
+      "duration_s": 0.22170666698366404
+    },
+    {
+      "name": "nosint",
+      "status": "ok",
+      "summary": "Email found on 1 platform(s) | 2 breach/leak hit(s)",
+      "social_links": [
+        {
+          "platform": "kucoin",
+          "url": "https://kucoin.com",
+          "handle": null,
+          "confidence": 0.8
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Email active on 3 platform(s) out of 42 checked: Breach Check v2, kucoin.com, leakcheck.io",
+          "source": "https://nosint.org",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Breach Check v2",
+          "source": "https://nosint.org",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Breach Check v2",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "kucoin.com",
+          "source": "https://kucoin.com",
+          "confidence": 0.8,
+          "notes": "Found by NoSINT module: KuCoin",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Email found in Leak Check",
+          "source": "https://leakcheck.io",
+          "confidence": 0.85,
+          "notes": "Found by NoSINT module: Leak Check",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "nosint",
+          "source": "https://nosint.org",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+        "total_modules_run": 42,
+        "hits_count": 3,
+        "all_results": [
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Mail.ru",
+            "target_url": "mail.ru",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_domain",
+            "start_time": "2026-04-16T06:39:09.405509Z",
+            "end_time": "2026-04-16T06:39:09.405687Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Tutanota",
+            "target_url": "mail.tutanota.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unsupported_domain",
+            "start_time": "2026-04-16T06:39:09.349221Z",
+            "end_time": "2026-04-16T06:39:09.349470Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "OK.ru",
+            "target_url": "ok.ru",
+            "module_target": [
+              "email",
+              "phone",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T06:39:09.539768Z",
+            "end_time": "2026-04-16T06:39:09.539797Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "username",
+              "email"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T06:39:09.539643Z",
+            "end_time": "2026-04-16T06:39:09.539731Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email",
+              "username"
+            ],
+            "is_valid": false,
+            "error": "invalid_input",
+            "details": [
+              "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+            ],
+            "start_time": "2026-04-16T06:39:09.543878Z",
+            "end_time": "2026-04-16T06:39:09.543938Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Proton Wallet",
+            "target_url": "protonmail.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "invalid_proton_account",
+            "start_time": "2026-04-16T06:39:09.442722Z",
+            "end_time": "2026-04-16T06:39:09.443033Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Zoho",
+            "target_url": "accounts.zoho.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "missing_csrf_token",
+            "start_time": "2026-04-16T06:39:09.349785Z",
+            "end_time": "2026-04-16T06:39:10.255398Z",
+            "duration_ms": 905
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "ProtonMail account check",
+            "target_url": "proton.me",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.349583Z",
+            "end_time": "2026-04-16T06:39:09.349728Z",
+            "duration_ms": 0
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "HubSpot",
+            "target_url": "hubspot.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T06:39:09.420948Z",
+            "end_time": "2026-04-16T06:39:10.371263Z",
+            "duration_ms": 950
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Life360 email to partial phone",
+            "target_url": "life360.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T06:39:09.543964Z",
+            "end_time": "2026-04-16T06:39:10.401613Z",
+            "duration_ms": 857
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Facebook",
+            "target_url": "facebook.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "AsyncClient.post() got an unexpected keyword argument 'allow_redirects'",
+            "start_time": "2026-04-16T06:39:09.401646Z",
+            "end_time": "2026-04-16T06:39:10.399631Z",
+            "duration_ms": 997
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Deliveroo",
+            "target_url": "deliveroo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_404",
+            "start_time": "2026-04-16T06:39:09.350222Z",
+            "end_time": "2026-04-16T06:39:10.370961Z",
+            "duration_ms": 1020
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Microsoft Info Exposure",
+            "target_url": "microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "connection_failed",
+            "start_time": "2026-04-16T06:39:09.435217Z",
+            "end_time": "2026-04-16T06:39:10.403393Z",
+            "duration_ms": 968
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Poshmark email to account",
+            "target_url": "poshmark.com",
+            "module_target": [
+              "email",
+              "name"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.424729Z",
+            "end_time": "2026-04-16T06:39:10.407138Z",
+            "duration_ms": 982
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Gravatar to account",
+            "target_url": "en.gravatar.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_gravatar_profile",
+            "start_time": "2026-04-16T06:39:09.546651Z",
+            "end_time": "2026-04-16T06:39:10.454468Z",
+            "duration_ms": 907
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "BeatStars",
+            "target_url": "beatstars.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.414852Z",
+            "end_time": "2026-04-16T06:39:10.468204Z",
+            "duration_ms": 1053
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "ImageShack",
+            "target_url": "imageshack.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_400",
+            "start_time": "2026-04-16T06:39:09.411538Z",
+            "end_time": "2026-04-16T06:39:10.456083Z",
+            "duration_ms": 1044
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "EA.com",
+            "target_url": "ea.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_or_fetch_failed",
+            "start_time": "2026-04-16T06:39:09.429785Z",
+            "end_time": "2026-04-16T06:39:10.469381Z",
+            "duration_ms": 1039
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Foursquare email to account",
+            "target_url": "foursquare.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "api_error_401",
+            "start_time": "2026-04-16T06:39:09.428279Z",
+            "end_time": "2026-04-16T06:39:10.467278Z",
+            "duration_ms": 1038
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "IMVU email to account",
+            "target_url": "imvu.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.423087Z",
+            "end_time": "2026-04-16T06:39:10.467973Z",
+            "duration_ms": 1044
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "AutoDropship to account",
+            "target_url": "autods.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.405782Z",
+            "end_time": "2026-04-16T06:39:10.468420Z",
+            "duration_ms": 1062
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Instagram",
+            "target_url": "instagram.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_401",
+            "start_time": "2026-04-16T06:39:09.548212Z",
+            "end_time": "2026-04-16T06:39:10.481224Z",
+            "duration_ms": 933
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Breach Check v2",
+            "target_url": "",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "3",
+                "unique_sources": "3"
+              },
+              "display_table": {
+                "headers": [
+                  "Email",
+                  "Username",
+                  "Source",
+                  "Date"
+                ],
+                "values": [
+                  [
+                    "josemanuelamadoabelenda@gmail.com",
+                    "-",
+                    "verifications.io",
+                    "2019-02"
+                  ],
+                  [
+                    "josemanuelamadoabelenda@gmail.com",
+                    "jose-amado-69554b26",
+                    "peopledatalabs.com",
+                    "2019"
+                  ],
+                  [
+                    "josemanuelamadoabelenda@gmail.com",
+                    "josemanuelAmado",
+                    "canva.com",
+                    "2019-05"
+                  ]
+                ]
+              },
+              "badges_list": [
+                "3 breaches"
+              ],
+              "_metadata": {
+                "name": "Breach Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:39:09.539833Z",
+            "end_time": "2026-04-16T06:39:10.491829Z",
+            "duration_ms": 951
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Typeform",
+            "target_url": "typeform.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "not_registered",
+            "start_time": "2026-04-16T06:39:09.326627Z",
+            "end_time": "2026-04-16T06:39:10.474657Z",
+            "duration_ms": 1148
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Duolingo Account Check",
+            "target_url": "duolingo.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "cannot access local variable 'user' where it is not associated with a value",
+            "start_time": "2026-04-16T06:39:09.403454Z",
+            "end_time": "2026-04-16T06:39:10.481456Z",
+            "duration_ms": 1078
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "KuCoin",
+            "target_url": "kucoin.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "registered_email": "josemanuelamadoabelenda@gmail.com",
+                "all_methods_found": "Email, SMS",
+                "combinations_count": 1
+              },
+              "badges_list": [
+                "Email",
+                "SMS"
+              ],
+              "display_table": {
+                "headers": [
+                  "Valid Recovery Combinations"
+                ],
+                "values": [
+                  [
+                    "Email, SMS required"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "site_name": "KuCoin",
+                "site_icon": "https://www.kucoin.com/favicon.ico",
+                "profile_url": "https://www.kucoin.com/"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:39:09.440003Z",
+            "end_time": "2026-04-16T06:39:10.502121Z",
+            "duration_ms": 1062
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Adobe T2E",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T06:39:09.426451Z",
+            "end_time": "2026-04-16T06:39:10.502293Z",
+            "duration_ms": 1075
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Trello email to account",
+            "target_url": "trello.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.409372Z",
+            "end_time": "2026-04-16T06:39:10.509128Z",
+            "duration_ms": 1099
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Adobe Recovery",
+            "target_url": "adobe.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_state_401",
+            "start_time": "2026-04-16T06:39:09.417023Z",
+            "end_time": "2026-04-16T06:39:10.512098Z",
+            "duration_ms": 1095
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "GitHub email to users",
+            "target_url": "github.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T06:39:09.335696Z",
+            "end_time": "2026-04-16T06:39:10.539613Z",
+            "duration_ms": 1203
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Mega.nz",
+            "target_url": "mega.nz",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.397875Z",
+            "end_time": "2026-04-16T06:39:10.550814Z",
+            "duration_ms": 1152
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Flickr email to account",
+            "target_url": "flickr.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.419043Z",
+            "end_time": "2026-04-16T06:39:10.564789Z",
+            "duration_ms": 1145
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "SolidCore",
+            "target_url": "solidcore.co",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.399637Z",
+            "end_time": "2026-04-16T06:39:10.581197Z",
+            "duration_ms": 1181
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Yandex account recovery info",
+            "target_url": "yandex.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "auth_page_302",
+            "start_time": "2026-04-16T06:39:09.390066Z",
+            "end_time": "2026-04-16T06:39:10.645185Z",
+            "duration_ms": 1255
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Breach.VIP Breach Search",
+            "target_url": "breach.vip",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "unhashable type: 'list'",
+            "start_time": "2026-04-16T06:39:09.542035Z",
+            "end_time": "2026-04-16T06:39:10.730428Z",
+            "duration_ms": 1188
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Leak Check",
+            "target_url": "leakcheck.io",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": true,
+            "result": {
+              "display": {
+                "breaches_found": "1"
+              },
+              "display_table": {
+                "headers": [
+                  "Password",
+                  "Source",
+                  "Breach Date"
+                ],
+                "values": [
+                  [
+                    "amadolinkedin",
+                    "Canva.com",
+                    "2019-05"
+                  ]
+                ]
+              },
+              "_metadata": {
+                "name": "Leak Check",
+                "overwrite_category": "breach"
+              }
+            },
+            "error": null,
+            "start_time": "2026-04-16T06:39:09.541186Z",
+            "end_time": "2026-04-16T06:39:10.766876Z",
+            "duration_ms": 1225
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Plex.TV",
+            "target_url": "plex.tv",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "email_lookup_failed",
+            "start_time": "2026-04-16T06:39:09.432241Z",
+            "end_time": "2026-04-16T06:39:10.788234Z",
+            "duration_ms": 1355
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Forever21",
+            "target_url": "forever21.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "user_not_found",
+            "start_time": "2026-04-16T06:39:09.547411Z",
+            "end_time": "2026-04-16T06:39:10.904095Z",
+            "duration_ms": 1356
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "AntiPublic Leak Check",
+            "target_url": "antipublic.one",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "status_403",
+            "start_time": "2026-04-16T06:39:09.341399Z",
+            "end_time": "2026-04-16T06:39:10.934759Z",
+            "duration_ms": 1593
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "HudsonRock",
+            "target_url": "cavalier.hudsonrock.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "no_accounts_found",
+            "start_time": "2026-04-16T06:39:09.343179Z",
+            "end_time": "2026-04-16T06:39:10.989745Z",
+            "duration_ms": 1646
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Coinbase Wallet Balances",
+            "target_url": "coinbase.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "profile_not_found",
+            "start_time": "2026-04-16T06:39:09.437063Z",
+            "end_time": "2026-04-16T06:39:11.444706Z",
+            "duration_ms": 2007
+          },
+          {
+            "search_id": "23de2c1b-3d3c-42ca-96a9-4f8a96d66868",
+            "module_name": "Microsoft Account Recovery",
+            "target_url": "account.microsoft.com",
+            "module_target": [
+              "email"
+            ],
+            "is_valid": false,
+            "result": null,
+            "error": "account_not_found",
+            "start_time": "2026-04-16T06:39:09.545360Z",
+            "end_time": "2026-04-16T06:39:11.550628Z",
+            "duration_ms": 2005
+          }
+        ]
+      },
+      "duration_s": 7.7095585000352
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "Jose Manuel Amado Abelenda is a sports and wellness entrepreneur based in Oleiros, A Coruña, Spain. He is the President and founder of the Clúster Galego da Industria do Deporte e o Benestar and founding partner/sole proprietor of Motivos Singulares S.L. He holds a degree in Physical Activity and Sport Sciences from INEF de Galicia and is an investor in health, exercise, and nutrition projects. His corporate footprint in the Spanish BORME spans over 21 companies across sports, tourism, and nutrition sectors.",
+      "social_links": [
+        {
+          "platform": "LinkedIn",
+          "url": "https://es.linkedin.com/in/jose-manuel-amado-abelenda-04b2831b",
+          "handle": "jose-manuel-amado-abelenda-04b2831b",
+          "confidence": 0.92
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Described publicly as 'Presidente y fundador' in a LinkedIn post by Vertical Proyect",
+          "source": "https://es.linkedin.com/posts/vertical-proyect_%C3%A9l-es-jose-manuel-amado-abelenda-presidente-activity-7209255176346521600-pCnE",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Has 3 active corporate roles, 31 historical roles, across 21 total companies per BORME",
+          "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Featured as participant in Capacita Directivos executive training programme",
+          "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "Oleiros, A Coruña, ES",
+          "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+          "confidence": 0.95,
+          "notes": "Subject address provided; multiple A Coruña-registered companies in BORME records",
+          "tag": null
+        },
+        {
+          "kind": "role",
+          "value": "Presidente del Clúster Galego da Industria do Deporte e o Benestar",
+          "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+          "confidence": 0.95,
+          "notes": "Also corroborated by agaxede.org interview and Instagram posts by circulo.gal",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "Motivos Singulares SL – Socio fundador / Administrador Único (2011–present)",
+          "source": "https://librebor.me/en/borme/empresa/motivos-singulares/",
+          "confidence": 0.95,
+          "notes": "Developer of educational activities in rural houses and tourist accommodations; sole proprietorship registered 15/02/2011",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "ARTIO NUTRICION SL – Apoderado Mancomunado/Solidario (2022–present)",
+          "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+          "confidence": 0.9,
+          "notes": "Active role per BORME; nutrition company linked to his health/wellness investment focus",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "MOTIVOS TURISTICOS SL – Administrador Único (2012–2020, liquidated)",
+          "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+          "confidence": 0.95,
+          "notes": "Also served as Liquidador upon dissolution in July 2020",
+          "tag": null
+        },
+        {
+          "kind": "business",
+          "value": "HOTEL NATUREZA MONTE BLANCO SL – Sole Proprietor / Administrador Único (2012–2020, liquidated)",
+          "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+          "confidence": 0.95,
+          "notes": "Hospitality venture liquidated July 2020",
+          "tag": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "INEF de Galicia – Graduado en Ciencias de la Actividad Física y del Deporte",
+          "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+          "confidence": 0.95,
+          "notes": "Degree in Physical Activity and Sport Sciences",
+          "tag": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Investor in health, physical exercise, and nutrition projects",
+          "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+          "confidence": 0.9,
+          "notes": "Stated on Capacita Directivos professional profile",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "osint_web",
+          "source": "osint_web",
+          "confidence": 1.0,
+          "notes": "Scheduling sentinel — signals that wave-1 enrichment completed.",
+          "tag": "enrichment_ran"
+        }
+      ],
+      "gaps": [
+        "No personal Instagram, Twitter/X, or Facebook profile confirmed as belonging to this specific subject",
+        "LinkedIn profile URL inferred from post URL pattern; direct profile page could not be fetched for full confirmation",
+        "Whether he remains active as Cluster Galego president in 2026 is unconfirmed (last reference from 2024)",
+        "Nature and scale of 'Vertical Proyect' affiliation not fully established",
+        "Current employer or active salary-paying role beyond cluster/business ownership not confirmed"
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "anthropic_web",
+        "search_queries": [
+          "Jose Manuel Amado Abelenda A Coruña Oleiros",
+          "\"josemanuelamadoabelenda@gmail.com\"",
+          "\"Jose Manuel Amado Abelenda\" LinkedIn OR Twitter",
+          "\"Jose Manuel Amado Abelenda\" \"Cluster Galego\" deporte benestar",
+          "\"Jose Manuel Amado Abelenda\" LinkedIn",
+          "site:linkedin.com \"jose-manuel-amado-abelenda\"",
+          "\"Jose Manuel Amado Abelenda\" instagram Cluster Galego deporte",
+          "\"Jose Manuel Amado Abelenda\" \"Vertical Proyect\" OR \"ARTIO NUTRICION\" OR \"Motivos Singulares\"",
+          "\"Jose Manuel Amado\" \"Vertical Proyect\" Galicia presidente fundador",
+          "\"Vertical Proyect\" Galicia deporte \"Jose Manuel Amado\""
+        ],
+        "fetched_urls": [
+          "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+          "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+          "https://es.linkedin.com/posts/jose-manuel-amado-abelenda-04b2831b_medramos-medrar-rae-1-dicho-de-un-animal-activity-7204774882046337026-Ddvl",
+          "https://www.agaxede.org/gl/noticia/jos-amado-hace-falta-un-plan-marshall-para-la-prctica-deportiva/",
+          "https://www.instagram.com/p/C_0JFG2sY9Y/",
+          "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+          "https://es.linkedin.com/posts/vertical-proyect_%C3%A9l-es-jose-manuel-amado-abelenda-presidente-activity-7209255176346521600-pCnE",
+          "https://capacitadirectivos.com/participante/jose-manuel-amado/"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "duration_s": 180.47853725001914
+    },
+    {
+      "name": "property",
+      "status": "ok",
+      "summary": "Sin estimacion de valor para Emilia Pardo Bazan 53, A Coruña, Oleiros, Spain. Ver gaps.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "Arillo, ES",
+          "source": "geocoding",
+          "confidence": 0.75,
+          "notes": "Location derived from debtor's known address",
+          "tag": null
+        }
+      ],
+      "gaps": [
+        "Catastro /vias sin resultado para 'EMILIA PARDO BAZÁN' en Arillo — usando tipo de via inferido",
+        "Catastro API sin inmuebles para 'AV EMILIA PARDO BAZÁN 53' en Arillo — sin m2 ni RC",
+        "MITMA: 'Arillo' no en base (~306 municipios >25k hab) — usando capital de provincia 'Coruña (A)' como referencia",
+        "SERPAVI: 'Arillo' no en base (2.555 municipios) — usando capital de provincia 'Coruña, A' como referencia"
+      ],
+      "raw": {
+        "geocode": {
+          "engine": "nominatim",
+          "display_name": "Avenida de Emilia Pardo Bazán, Os Tornos, Dorneda, Arillo, Oleiros, A Coruña, Galicia, 15178, España",
+          "lat": "43.3545407",
+          "lon": "-8.3128946",
+          "postcode": "15178",
+          "city": "Arillo",
+          "provincia": "A Coruña",
+          "state": "Galicia"
+        },
+        "mitma": {
+          "municipio": "Coruña (A)",
+          "provincia": "La Coruña",
+          "eur_m2_total": 2594.7,
+          "eur_m2_nueva": 3035.3,
+          "eur_m2_usada": 2588.2,
+          "n_tasaciones": 653,
+          "granularidad": "provincia_capital",
+          "periodo": "T4 2025",
+          "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+        },
+        "serpavi": {
+          "municipio": "Coruña, A",
+          "provincia": "Coruña, A",
+          "alquiler_eur_m2_mes_mediana": 7.1,
+          "alquiler_eur_m2_mes_p25": 5.56,
+          "alquiler_eur_m2_mes_p75": 9.08,
+          "alquiler_eur_mes_mediana": 537.76,
+          "alquiler_eur_mes_p25": 433.9,
+          "alquiler_eur_mes_p75": 662.14,
+          "superficie_tipica_m2": 79.0,
+          "n_viviendas_muestra": 24978,
+          "granularidad": "provincia_capital",
+          "periodo": "2024",
+          "source": "https://serpavi.mivau.gob.es/"
+        }
+      },
+      "duration_s": 1.3725272080046125
+    },
+    {
+      "name": "twitter_check",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on Twitter.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "platform": "Twitter",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "eb8f9a82-99a1-42ab-9630-918d0fd34a98",
+        "error": null
+      },
+      "duration_s": 0.9202374169835821
+    },
+    {
+      "name": "uber_hint",
+      "status": "ok",
+      "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on Uber. | +34609832721 registered on Uber; email=2fv648hdy9@privaterelay.appleid.com",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "Uber account registered to +34609832721",
+          "source": "platform_check:uber_hint",
+          "confidence": 0.85,
+          "notes": null,
+          "tag": "uber"
+        },
+        {
+          "kind": "contact",
+          "value": "2fv648hdy9@privaterelay.appleid.com",
+          "source": "platform_check:uber_hint",
+          "confidence": 0.8,
+          "notes": "Masked email from Uber (looked up via phone: +34609832721)",
+          "tag": "email_masked"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "email_lookup": {
+          "identifier": "josemanuelamadoabelenda@gmail.com",
+          "id_type": "email",
+          "status_raw": "FAIL",
+          "data": null,
+          "error": null
+        },
+        "phone_lookup": {
+          "identifier": "+34609832721",
+          "id_type": "phone",
+          "status_raw": "REGISTERED",
+          "data": {
+            "login": "+34609832721",
+            "phoneMask": "",
+            "emailMask": "2fv648hdy9@privaterelay.appleid.com"
+          },
+          "error": null
+        }
+      },
+      "duration_s": 14.960796583036426
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 3 breach(es); registered on: canva.com, verifications.io, linkedin.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 3 breach(es); earliest 2012, latest 2019",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 3 breach(es); earliest 2012, latest 2019",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, Names, Passwords, Phone numbers, Physical addresses, Usernames",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Moderate (45/100)",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "canva.com",
+          "source": "https://www.canva.com/en_in/help/incident-may24/",
+          "confidence": 0.85,
+          "notes": "Account registered on canva.com (breach year: 2019). Data exposed: Email addresses, Names, Usernames",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "verifications.io",
+          "source": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+          "confidence": 0.85,
+          "notes": "Account registered on verifications.io (breach year: 2019). Data exposed: Email addresses, Names, Dates of birth, Genders, Geographic locations, Phone numbers, Physical addresses",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "linkedin.com",
+          "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+          "confidence": 0.85,
+          "notes": "Account registered on linkedin.com (breach year: 2012). Data exposed: Email addresses, Passwords",
+          "tag": null
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in LinkedIn breach",
+          "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+          "confidence": 0.9,
+          "notes": null,
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  0
+                ],
+                [
+                  "heal",
+                  0
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  0
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  3
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 0,
+                "Unknown": 2
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Moderate",
+                "risk_score": 45
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Names",
+                        "value": 2
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Genders",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 3
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Phone numbers",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👥 Demographics",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Geographic locations",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Dates of birth",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Physical addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 1,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 0,
+                "y2018": 0,
+                "y2019": 2,
+                "y2020": 0,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 0,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "Canva;LinkedIn;Verifications"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "Canva",
+                "details": "Canva, an Australian graphic design and publishing company, announced that it had suffered a data breach in 2019. An unauthorized third-party had gained access to certain data stored on its systems, potentially affecting the personal information of over 137 million users. The exposed data includes customers' names, email addresses, and hashed passwords. ",
+                "domain": "canva.com",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Canva.png",
+                "password_risk": "unknown",
+                "references": "https://www.canva.com/en_in/help/incident-may24/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Names;Usernames",
+                "xposed_date": "2019",
+                "xposed_records": 137504762,
+                "added": "2023-11-08T06:30:25+00:00"
+              },
+              {
+                "breach": "Verifications",
+                "details": "Verifications.io, a comprehensive email verification service, suffered a severe data breach in 2019 that compromised a vast array of personal user data. The exposed data included email addresses, phone numbers, dates of birth, and other personal details, which presented a considerable privacy and security risk to the affected users.",
+                "domain": "verifications.io",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Verificationsio.png",
+                "password_risk": "unknown",
+                "references": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Names;Dates of birth;Genders;Geographic locations;Phone numbers;Physical addresses",
+                "xposed_date": "2019",
+                "xposed_records": 762579945,
+                "added": "2023-11-08T06:30:24+00:00"
+              },
+              {
+                "breach": "LinkedIn",
+                "details": "LinkedIn, the popular professional networking site, suffered a data breach in 2012,  in which hackers obtained user data including email addresses and hashed passwords. The breach reportedly impacted over 167 million user accounts. In 2016, it was discovered that the compromised data was being sold on the dark web. Following the discovery, LinkedIn forced a password reset for all impacted accounts and implemented new security measures to prevent future breaches.",
+                "domain": "linkedin.com",
+                "industry": "Information Technology",
+                "logo": "https://xposedornot.com/static/logos/Linkedin.png",
+                "password_risk": "easytocrack",
+                "references": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Passwords",
+                "xposed_date": "2012",
+                "xposed_records": 160042644,
+                "added": "2023-11-08T06:30:00+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "duration_s": 0.17295475001446903
+    },
+    {
+      "name": "gaia_enrichment",
+      "status": "ok",
+      "summary": "GAIA enrichment for 105982492274469151146. Name: Contribuciones.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Stats API: no stats returned (profile may be empty or private)",
+        "No public reviews found on the contributor page",
+        "No public photos found on the contributor page"
+      ],
+      "raw": {
+        "gaia_id": "105982492274469151146",
+        "profile_url": "https://www.google.com/maps/contrib/105982492274469151146/reviews",
+        "name": "Contribuciones",
+        "profile_pic_url": "https://lh3.googleusercontent.com/a/default-user=s72-cc",
+        "stats": {
+          "reviews_count": 0,
+          "ratings_count": 0,
+          "photos_count": 0,
+          "local_guides_level": 0
+        },
+        "reviews": [],
+        "photos": [],
+        "total_reviews": 0,
+        "gaps": [
+          "Stats API: no stats returned (profile may be empty or private)",
+          "No public reviews found on the contributor page",
+          "No public photos found on the contributor page"
+        ]
+      },
+      "duration_s": 27.50373816699721
+    },
+    {
+      "name": "image_search",
+      "status": "ok",
+      "summary": "Could not resolve Instagram profile picture URL for @https://www.instagram.com/p/C_0JFG2sY9Y/; reverse-image search skipped.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted"
+      ],
+      "raw": {
+        "provider": "serpapi_google_lens_exact",
+        "handle": "https://www.instagram.com/p/C_0JFG2sY9Y/"
+      },
+      "duration_s": 0.17093345895409584
+    },
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "Could not retrieve any Instagram data for @https://www.instagram.com/p/C_0JFG2sY9Y/.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Osintgram 'info': Osintgram not found at ../Osintgram/venv/bin/python"
+      ],
+      "raw": {
+        "profile_info": null,
+        "raw_captions": [],
+        "image_count": 0,
+        "video_count": 0
+      },
+      "duration_s": 0.002784166019409895
+    },
+    {
+      "name": "jooble",
+      "status": "ok",
+      "summary": "Jooble: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' in Oleiros, A Coruña, ES → 338 listing(s). Sample salaries: 15 €/hora.",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Jooble salary range for 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' in Oleiros, A Coruña, ES: 15 €/hora",
+          "source": "jooble.org search: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' / 'Oleiros, A Coruña, ES'",
+          "confidence": 0.55
+        },
+        {
+          "claim": "Jooble confirms 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' is an active job title in Oleiros, A Coruña, ES (338 listing(s) found).",
+          "source": "jooble.org search: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' / 'Oleiros, A Coruña, ES'",
+          "confidence": 0.6
+        }
+      ],
+      "signals": [
+        {
+          "kind": "lifestyle",
+          "value": "Active job market for Presidente del Clúster Galego da Industria do Deporte e o Benestar in Oleiros, A Coruña, ES (338+ listings)",
+          "source": "jooble.org search: 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' / 'Oleiros, A Coruña, ES'",
+          "confidence": 0.65,
+          "notes": "High demand: 338 active Jooble listings for 'Presidente del Clúster Galego da Industria do Deporte e o Benestar' in Oleiros, A Coruña, ES — consistent with active local employment.",
+          "tag": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "jobs": [
+          {
+            "title": "DOCENTE FP RAMA INFORMÁTICA GRADOS D Y E",
+            "company": "CHIOS FORMACIÓN SL",
+            "location": "A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...empresarial, idiomas, y habilidades blandas, adaptados a las necesidades <b>del </b>mercado actual. \r\n Contamos con un equipo de instructores...&nbsp;&nbsp;...Preparar y planificar el contenido curricular para los grados D y <b>E </b>de Formación Profesional en la rama de informática. \r\n Impartir clases...&nbsp;",
+            "link": "https://es.jooble.org/jdp/3594825720680698469",
+            "updated": "2026-04-12T00:00:00.0000000"
+          },
+          {
+            "title": "Profesor/a de entrenador personal - A Coruña",
+            "company": "SuperProf",
+            "location": "A Coruña",
+            "salary": "15 €/hora",
+            "snippet": "&nbsp;...progresar en más de 2000 materias  : matemáticas, inglés, dibujo, <b>deportes.</b>.. \r\nEn 10 años, Superprof se ha convertido en lider mundial de...&nbsp;&nbsp;...particulares estando presente en más de 70 países. \r\n¿La clave <b>del </b>éxito? Ofrecer a los profesores flexibilidad, libertad y un modelo...&nbsp;",
+            "link": "https://es.jooble.org/jdp/1750724007487963623",
+            "updated": "2026-04-03T09:55:36.3570000"
+          },
+          {
+            "title": "Profesor/a de entrenador personal - A Coruña",
+            "company": "SuperProf",
+            "location": "A Coruña",
+            "salary": "15 €/hora",
+            "snippet": "&nbsp;...progresar en más de 2000 materias  : matemáticas, inglés, dibujo, <b>deportes.</b>.. \r\nEn 10 años, Superprof se ha convertido en lider mundial de...&nbsp;&nbsp;...particulares estando presente en más de 70 países. \r\n¿La clave <b>del </b>éxito? Ofrecer a los profesores flexibilidad, libertad y un modelo...&nbsp;",
+            "link": "https://es.jooble.org/jdp/7571317146619388523",
+            "updated": "2026-04-09T11:46:10.6900000"
+          },
+          {
+            "title": "Profesor/a Doctor/a - Director/a del Grado en Business Analytics",
+            "company": "Universidad Nebrija",
+            "location": "A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...convoca una plaza de  Profesor/a Doctor/a que asumirá la Dirección <b>del </b>Grado en Business Analytics  , con dedicación a tiempo completo,...&nbsp;&nbsp;...gestión empresarial  . \r\n Participación en el diseño, actualización <b>e </b>innovación de contenidos docentes en el ámbito de la analítica de...&nbsp;",
+            "link": "https://es.jooble.org/jdp/-8889021525630853492",
+            "updated": "2026-04-12T00:00:00.0000000"
+          },
+          {
+            "title": "Entrenador personal para sesiones individuales en A Coruña",
+            "company": "Duduo",
+            "location": "A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...individuales en A Coruña \r\n Empleo de Servicio de Fitness \r\n&##128204; Inicio inmediato \r\n&##128994; Vacante abierta \r\n Descripción <b>del </b>puesto: \r\n Busco un entrenador personal para sesiones de fitness en mi casa, 2‑3 veces por semana. Necesito alguien que sepa diseñar...&nbsp;",
+            "link": "https://es.jooble.org/jdp/-4685803537332338096",
+            "updated": "2026-04-13T00:00:00.0000000"
+          },
+          {
+            "title": "Nike Retail Store Associate (Athlete)- Contrato a media jornada - Nike Store La Coruna",
+            "company": "Nike",
+            "location": "Culleredo, A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...de gente a la que le gusta el <b>deporte </b>y la moda. Para trabajar en retail...&nbsp;&nbsp;...y atletas de élite de la <b>industria.</b> \r\n\r\n¿Sabes qué nos falta para...&nbsp;&nbsp;...ser el mejor equipo de retail <b>del </b>mundo? ¡Alguien como  TÚ !...&nbsp;&nbsp;...misión para  brindar inspiración <b>e </b>innovación para cada atleta del...&nbsp;",
+            "link": "https://es.jooble.org/jdp/-5748929662124366544",
+            "updated": "2026-03-06T12:08:55.9984277+00:00"
+          },
+          {
+            "title": "Entrenador personal para sesiones de fitness",
+            "company": "Duduo",
+            "location": "A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...para sesiones de fitness \r\n Empleo de Servicio de Fitness \r\n&##128204; Inicio inmediato \r\n&##128994; Vacante abierta \r\n Descripción <b>del </b>puesto: \r\n Estamos buscando a alguien apasionado por el fitness que pueda ofrecer sesiones personalizadas a diferentes niveles. El horario...&nbsp;",
+            "link": "https://es.jooble.org/jdp/872051621806827668",
+            "updated": "2026-04-15T00:00:00.0000000"
+          },
+          {
+            "title": "Profesor particular de natación para niño con nivel principiante",
+            "company": "Cronoshare.com",
+            "location": "Narón, A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...operado de oido, no pudo mejorar técnica ni prácticar. \r\n~¿Qué tipo de clases se está buscando? Clases individuales \r\n~¿Cuál es la edad <b>del </b>cliente/s? Niño (6 a 12 años)\r\n~¿Qué nivel de experiencia tiene el alumno/s? Principiante \r\n~¿El alumno/s se siente cómodo en el agua...&nbsp;",
+            "link": "https://es.jooble.org/jdp/-5067938533288560531",
+            "updated": "2026-04-14T00:00:00.0000000"
+          },
+          {
+            "title": "Coach Fitness (40h)",
+            "company": "Orangetheory Fitness Spain",
+            "location": "A Coruña",
+            "salary": "",
+            "snippet": "¿Te apasiona el <b>deporte </b>y te motiva ayudar a otros a superarse cada día?\r\n Los candidatos deben tomarse el tiempo de leer atentamente todos...&nbsp;&nbsp;...Fitness, llevamos más de 10 años transformando el mundo <b>del </b>fitness, con más de 1.900 estudios en 32 países. En España ya estamos...&nbsp;",
+            "link": "https://es.jooble.org/jdp/-3287104931462001155",
+            "updated": "2026-04-12T00:00:00.0000000"
+          },
+          {
+            "title": "Entrenador de fitness",
+            "company": "Mio Clubs",
+            "location": "A Coruña",
+            "salary": "",
+            "snippet": "&nbsp;...se ajustan al perfil. \r\n Descripción <b>del </b>puesto \r\n¿Te apasiona el fitness y trabajar...&nbsp;&nbsp;...positiva, empática y pasión por el <b>deporte.</b> \r\n Idiomas: español <b>e </b>inglés. \r\n\r\n Qué ofrecemos \r\n~...&nbsp;&nbsp;...siguiente nivel como profesional de la <b>industria </b>fitness. \r\n~ Formaciones con los mejores...&nbsp;",
+            "link": "https://es.jooble.org/jdp/2857549005305009889",
+            "updated": "2026-04-12T00:00:00.0000000"
+          }
+        ],
+        "total_count": 338,
+        "errors": [],
+        "job_title_used": "Presidente del Clúster Galego da Industria do Deporte e o Benestar"
+      },
+      "duration_s": 0.3110788749763742
+    },
+    {
+      "name": "linkedin",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "linkedin: could not parse slug from 'jose-manuel-amado-abelenda-04b2831b'"
+      ],
+      "raw": {},
+      "duration_s": 1.6000005416572094e-05
+    },
+    {
+      "name": "twitter",
+      "status": "ok",
+      "summary": "",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter profile @amadoasenjo not retrievable: user_not_found"
+      ],
+      "raw": {
+        "error": "user_not_found",
+        "handle": "amadoasenjo"
+      },
+      "duration_s": 0.05245466699125245
+    },
+    {
+      "name": "twitter_vu",
+      "status": "ok",
+      "summary": "@amadoasenjo is a valid Twitter/X user; name=Jose Manuel Amado Asenjo; email=jo*************@g****.***.",
+      "social_links": [
+        {
+          "platform": "twitter",
+          "url": "https://x.com/amadoasenjo",
+          "handle": "amadoasenjo",
+          "confidence": 0.95
+        }
+      ],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "name",
+          "value": "Jose Manuel Amado Asenjo",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.8,
+          "notes": "Display name from Twitter/X profile @amadoasenjo",
+          "tag": null
+        },
+        {
+          "kind": "contact",
+          "value": "jo*************@g****.***",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.85,
+          "notes": "Masked email associated with @amadoasenjo",
+          "tag": "email_masked"
+        },
+        {
+          "kind": "contact",
+          "value": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+          "source": "platform_check:twitter_vu",
+          "confidence": 0.9,
+          "notes": "Twitter/X profile picture for @amadoasenjo",
+          "tag": "photo"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "identifier": "amadoasenjo",
+        "status_raw": "REGISTERED",
+        "http_status": 200,
+        "data": {
+          "login": "amadoasenjo",
+          "name": "Jose Manuel Amado Asenjo",
+          "email": "jo*************@g****.***",
+          "phone": "",
+          "avatar": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+        },
+        "error": null
+      },
+      "duration_s": 1.511788957985118
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 4.8874993808567524e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 21 module(s): ['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'gaia_enrichment', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'jooble', 'linkedin', 'nosint', 'osint_web', 'property', 'twitter_check', 'twitter', 'twitter_vu', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "gaia_enrichment",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "jooble",
+          "linkedin",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "twitter",
+          "twitter_vu",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.0002644169726409018,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'borme', 'brave_social', 'breach_scout', 'github_check', 'google_gaia_check', 'icloud_check', 'instagram_check', 'nosint', 'osint_web', 'property', 'twitter_check', 'uber_hint', 'xon']",
+      "detail": {
+        "modules": [
+          "boe",
+          "borme",
+          "brave_social",
+          "breach_scout",
+          "github_check",
+          "google_gaia_check",
+          "icloud_check",
+          "instagram_check",
+          "nosint",
+          "osint_web",
+          "property",
+          "twitter_check",
+          "uber_hint",
+          "xon"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49683033296606,
+      "module": "boe",
+      "wave": 1,
+      "message": "no_data in 1.05s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 1.0452134580118582,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49723558296682,
+      "module": "borme",
+      "wave": 1,
+      "message": "no_data in 1.03s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 1.0336052909842692,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49741675000405,
+      "module": "brave_social",
+      "wave": 1,
+      "message": "ok in 1.12s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.119878500001505,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49790141702397,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "ok in 1.42s (17 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.4222702919505537,
+        "signals": 17,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.4980884999968,
+      "module": "github_check",
+      "wave": 1,
+      "message": "ok in 1.53s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.5266321249655448,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49820562498644,
+      "module": "google_gaia_check",
+      "wave": 1,
+      "message": "ok in 0.88s (1 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.8787074580322951,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49831375002395,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "ok in 6.13s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 6.128814583003987,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49840520799626,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "no_data in 0.22s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "duration_s": 0.22170666698366404,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49851458298508,
+      "module": "nosint",
+      "wave": 1,
+      "message": "ok in 7.71s (4 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 7.7095585000352,
+        "signals": 4,
+        "facts": 1,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49870216700947,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "ok in 180.48s (9 signal(s), 3 fact(s), 5 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 180.47853725001914,
+        "signals": 9,
+        "facts": 3,
+        "gaps": 5
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49909075000323,
+      "module": "property",
+      "wave": 1,
+      "message": "ok in 1.37s (1 signal(s), 0 fact(s), 4 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.3725272080046125,
+        "signals": 1,
+        "facts": 0,
+        "gaps": 4
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49928091699257,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "ok in 0.92s (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.9202374169835821,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49940341699403,
+      "module": "uber_hint",
+      "wave": 1,
+      "message": "ok in 14.96s (2 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 14.960796583036426,
+        "signals": 2,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 180.49952516698977,
+      "module": "xon",
+      "wave": 1,
+      "message": "ok in 0.17s (4 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.17295475001446903,
+        "signals": 4,
+        "facts": 4,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 180.49973824998597,
+      "module": null,
+      "wave": 2,
+      "message": "['gaia_enrichment', 'image_search', 'instagram', 'jooble', 'linkedin', 'twitter', 'twitter_vu']",
+      "detail": {
+        "modules": [
+          "gaia_enrichment",
+          "image_search",
+          "instagram",
+          "jooble",
+          "linkedin",
+          "twitter",
+          "twitter_vu"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.00360937498044,
+      "module": "gaia_enrichment",
+      "wave": 2,
+      "message": "ok in 27.50s (0 signal(s), 0 fact(s), 3 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 27.50373816699721,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 3
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.00390141701791,
+      "module": "image_search",
+      "wave": 2,
+      "message": "ok in 0.17s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.17093345895409584,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.0040288749733,
+      "module": "instagram",
+      "wave": 2,
+      "message": "ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.002784166019409895,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.004133792012,
+      "module": "jooble",
+      "wave": 2,
+      "message": "ok in 0.31s (1 signal(s), 2 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.3110788749763742,
+        "signals": 1,
+        "facts": 2,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.00431845796993,
+      "module": "linkedin",
+      "wave": 2,
+      "message": "ok in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.6000005416572094e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.00441979197785,
+      "module": "twitter",
+      "wave": 2,
+      "message": "ok in 0.05s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 0.05245466699125245,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 208.00451804196928,
+      "module": "twitter_vu",
+      "wave": 2,
+      "message": "ok in 1.51s (3 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "duration_s": 1.511788957985118,
+        "signals": 3,
+        "facts": 0,
+        "gaps": 0
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 208.00462816702202,
+      "module": null,
+      "wave": null,
+      "message": "18 ok, 0 skipped, 0 error(s)",
+      "detail": {
+        "ok": 18,
+        "error": 0,
+        "skipped": 0
+      }
+    }
+  ]
+}

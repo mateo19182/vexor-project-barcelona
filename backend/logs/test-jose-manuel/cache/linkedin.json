@@ -1,0 +1,214 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "LinkedIn @jose-manuel-arranz-abelenda-1841883a (Jose Manuel Arranz Abelenda) — Senior Infrastructure Project Manager — Vilvoorde, Flemish Region, Belgium — 821 followers.",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "LinkedIn About: • Certified PRINCE2 Practitioner + Project Management Professional (PMP).\n• Experience with ITIL Methodology.\n• Proven supervisory and organisational skills in projects, team leadership and computer support management.\n• 25 years of experience on numerous IT projects including: IT infrastructure projects, real-time systems in railways control centers, Disaster Recovery (DR) solutions.\n• Excellent analytical and document drafting skills: Ability to gather, analyse and evaluate facts and to presen",
+      "source": "jose-manuel-arranz-abelenda-1841883a",
+      "confidence": 0.85
+    },
+    {
+      "claim": "LinkedIn position: Project Manager — Daikin Europe · Freelance — Sep 2024 - Present · 1 yr 8 mos",
+      "source": "https://www.linkedin.com/company/10118/",
+      "confidence": 0.8
+    },
+    {
+      "claim": "LinkedIn position: Senior Infrastructure Project Manager — Sodexo Benefits and Rewards Services · Freelance — Mar 2023 - Feb 2024 · 1 yr",
+      "source": "https://www.linkedin.com/company/10884655/",
+      "confidence": 0.8
+    },
+    {
+      "claim": "LinkedIn position: Infrastructure Project Manager — Fujitsu / TVH · Freelance — Mar 2021 - Dec 2022 · 1 yr 10 mos",
+      "source": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+TVH",
+      "confidence": 0.8
+    }
+  ],
+  "signals": [
+    {
+      "kind": "role",
+      "value": "Senior Infrastructure Project Manager",
+      "source": "jose-manuel-arranz-abelenda-1841883a",
+      "confidence": 0.85,
+      "notes": "Verbatim LinkedIn headline",
+      "tag": null
+    },
+    {
+      "kind": "employer",
+      "value": "Daikin Europe",
+      "source": "https://www.linkedin.com/company/daikin-europe-nv/",
+      "confidence": 0.85,
+      "notes": "Listed as current position on LinkedIn",
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Industry: Information Technology & Services",
+      "source": "jose-manuel-arranz-abelenda-1841883a",
+      "confidence": 0.7,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "location",
+      "value": "Vilvoorde, Flemish Region, Belgium",
+      "source": "jose-manuel-arranz-abelenda-1841883a",
+      "confidence": 0.8,
+      "notes": "Self-reported location on LinkedIn profile",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "username": "jose-manuel-arranz-abelenda-1841883a",
+    "profile_url": "jose-manuel-arranz-abelenda-1841883a",
+    "urn": "ACoAAAg2avQBouDH4R87UZ5EgU4BuM1KiUgM-MA",
+    "overview": {
+      "firstName": "Jose Manuel",
+      "lastName": "Arranz Abelenda",
+      "fullName": "Jose Manuel Arranz Abelenda",
+      "headline": "Senior Infrastructure Project Manager",
+      "publicIdentifier": "jose-arranz-1841883a",
+      "followerCount": 821,
+      "connectionsCount": 816,
+      "qualityProfile": true,
+      "joined": 1314615297270,
+      "profileID": "137784052",
+      "urn": "ACoAAAg2avQBouDH4R87UZ5EgU4BuM1KiUgM-MA",
+      "CurrentPositions": [
+        {
+          "id": "10118",
+          "name": "Daikin Europe",
+          "url": "https://www.linkedin.com/company/daikin-europe-nv/",
+          "logoURL": "https://media.licdn.com/dms/image/v2/C4D0BAQHB6W4Qp9wCDQ/company-logo_400_400/company-logo_400_400/0/1631359584515?e=1778112000&v=beta&t=ie01o-KgRHL6M-s88rdN2AlOYFD_2hHDS7Y96I0GpxU"
+        }
+      ],
+      "isTopVoice": false,
+      "premium": true,
+      "influencer": false,
+      "industryName": "Information Technology & Services",
+      "industryUrn": "urn:li:fsd_industry:96",
+      "location": {
+        "countryCode": "be",
+        "countryName": "Belgium",
+        "city": "Vilvoorde, Flemish Region",
+        "fullLocation": "Vilvoorde, Flemish Region, Belgium"
+      },
+      "profilePictureURL": "https://media.licdn.com/dms/image/v2/D4E03AQHasrrrCDgYjg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1668435234356?e=1778112000&v=beta&t=jUljnKiG4tzv8Jfgz5RDnIAyDDGApiHVvvcI_6ChpOM",
+      "supportedLocales": [
+        {
+          "country": "US",
+          "language": "en"
+        }
+      ]
+    },
+    "details": {
+      "about": "• Certified PRINCE2 Practitioner + Project Management Professional (PMP).\n• Experience with ITIL Methodology.\n• Proven supervisory and organisational skills in projects, team leadership and computer support management.\n• 25 years of experience on numerous IT projects including: IT infrastructure projects, real-time systems in railways control centers, Disaster Recovery (DR) solutions.\n• Excellent analytical and document drafting skills: Ability to gather, analyse and evaluate facts and to present findings in concise structured reports. \n• Experience across diverse sectors: Banking, Transport, Energy.\n• Extensive experience on Microsoft and Solaris environments.\n• Methodical and work perfectionist.\n• Identified with the corporate customer-service culture.\n• Main Infrastructure-Application Management skills: Incident/Change/Problem management, writing functional/operational instructions, production follow up.\n• Main Team Management skills: Team coordination, Team leadership, Deployment coordination.",
+      "featuredPosts": null,
+      "positions": [
+        {
+          "jobTitle": "Project Manager",
+          "company": "Daikin Europe · Freelance",
+          "location": "Hybrid",
+          "duration": "Sep 2024 - Present · 1 yr 8 mos",
+          "companyLink": "https://www.linkedin.com/company/10118/",
+          "companyId": "10118",
+          "jobDescription": ""
+        },
+        {
+          "jobTitle": "Senior Infrastructure Project Manager",
+          "company": "Sodexo Benefits and Rewards Services · Freelance",
+          "location": "Brussels, Brussels Region, Belgium · Hybrid",
+          "duration": "Mar 2023 - Feb 2024 · 1 yr",
+          "companyLink": "https://www.linkedin.com/company/10884655/",
+          "companyId": "10884655",
+          "jobDescription": ""
+        },
+        {
+          "jobTitle": "Infrastructure Project Manager",
+          "company": "Fujitsu / TVH · Freelance",
+          "location": "",
+          "duration": "Mar 2021 - Dec 2022 · 1 yr 10 mos",
+          "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+TVH",
+          "companyId": "all",
+          "jobDescription": ""
+        },
+        {
+          "jobTitle": "Infrastructure Project Manager",
+          "company": "Boortmalt · Freelance",
+          "location": "Antwerp, Flemish Region, Belgium",
+          "duration": "Sep 2020 - Dec 2020 · 4 mos",
+          "companyLink": "https://www.linkedin.com/company/735889/",
+          "companyId": "735889",
+          "jobDescription": "Project description:\n• Migration infrastructure project where recently purchased sites/plants from old former company (Cargill) were migrated and onboarded to the infrastructure, standards and requirements of the new company (Boortmalt).\n\nResponsibilities:\n• Manage project plan, timescales and delivery milestones.\n• Manage the project’s communications with stakeholders, management and project team working onsite and remotely.\n• Manage and coordinate end-to-end the preparation, roll-out and after care phase of the project to successfully hand over the deliverables to day-to-day operations team(s).\n• Report periodically about project status to Project Lead keeping updated risk and issue logs."
+        },
+        {
+          "jobTitle": "Senior Infrastructure Project Manager",
+          "company": "Fujitsu / Borealis · Freelance",
+          "location": "Brussels Metropolitan Area",
+          "duration": "Jan 2020 - Jun 2020 · 6 mos",
+          "companyLink": "https://www.linkedin.com/search/results/all/?keywords=Fujitsu+%2F+Borealis",
+          "companyId": "all",
+          "jobDescription": "Project description:\n• Mailbox migration from Exchange On-prem to On-Line (7000 mailboxes located in same datacenter and including Enterprise Vault data).\n• Microsoft Exchange, Veritas Enterprise Vault, Quadrotech Archive Shuttle \n\nResponsibilities:\n• Perform migration following and refining the process initially defined in a previous Pilot project.\n• Developing detailed migration plan and schedule with Borealis PM counterpart.\n• Coordinating with customer IT representative/counterparts.\n• Liaising between customer and Fujitsu offshoring teams (Exchange Architect/migration team at Kazan, Service Desk at Lisbon and Local support)\n• Controlling budget, scope and project plan, detecting deviations and ensuring project is kept under control.\n• Reporting periodically about project status to Service Delivery Manager and keeping updated risk and issue logs."
+        }
+      ],
+      "education": [
+        {
+          "duration": "1998 - 2004",
+          "durationParsed": {
+            "start": {
+              "year": 1998,
+              "month": 1,
+              "day": 1
+            },
+            "end": {
+              "year": 2004,
+              "month": 1,
+              "day": 1
+            }
+          },
+          "university": "Pontifical University of Salamanca (UPSAM)",
+          "universityLink": "https://www.linkedin.com/search/results/all/?keywords=Pontifical+University+of+Salamanca+%28UPSAM%29",
+          "degree": "Bachelor's Degree (5 years) in Computer Science.",
+          "description": null,
+          "subDescription": null
+        },
+        {
+          "duration": "1994 - 1998",
+          "durationParsed": {
+            "start": {
+              "year": 1994,
+              "month": 1,
+              "day": 1
+            },
+            "end": {
+              "year": 1998,
+              "month": 1,
+              "day": 1
+            }
+          },
+          "university": "Pontifical University of Salamanca (UPSAM)",
+          "universityLink": "https://www.linkedin.com/search/results/all/?keywords=Pontifical+University+of+Salamanca+%28UPSAM%29",
+          "degree": "Degree (3 years) in Computer Science., Computer Science.",
+          "description": null,
+          "subDescription": null
+        }
+      ],
+      "languages": {
+        "languages": [
+          {
+            "Language": "English",
+            "Level": "Full professional proficiency"
+          },
+          {
+            "Language": "French",
+            "Level": "Professional working proficiency"
+          }
+        ],
+        "deepLink": "https://www.linkedin.com/in/jose-arranz-1841883a/details/languages?profileUrn=urn%3Ali%3Afsd_profile%3AACoAAAg2avQBouDH4R87UZ5EgU4BuM1KiUgM-MA"
+      }
+    }
+  },
+  "duration_s": 3.325819624995347
+}

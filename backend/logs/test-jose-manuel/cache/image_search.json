@@ -1,0 +1,16 @@
+{
+  "name": "image_search",
+  "status": "ok",
+  "summary": "Could not resolve Instagram profile picture URL for @https://www.instagram.com/p/C_0JFG2sY9Y/; reverse-image search skipped.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Failed to resolve Instagram profile picture URL via hikerapi — reverse-image search not attempted"
+  ],
+  "raw": {
+    "provider": "serpapi_google_lens_exact",
+    "handle": "https://www.instagram.com/p/C_0JFG2sY9Y/"
+  },
+  "duration_s": 0.22836604196345434
+}

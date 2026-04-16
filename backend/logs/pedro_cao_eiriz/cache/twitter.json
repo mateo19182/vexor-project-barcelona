@@ -1,0 +1,16 @@
+{
+  "name": "twitter",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter profile @pedroca not retrievable: user_not_found"
+  ],
+  "raw": {
+    "error": "user_not_found",
+    "handle": "pedroca"
+  },
+  "duration_s": 0.034023916989099234
+}

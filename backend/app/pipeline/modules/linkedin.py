@@ -49,7 +49,14 @@ class LinkedInModule:
 
         sig = ctx.best("contact", "linkedin")
         url = sig.value if sig else ""
+        # The runner stores the handle as value and the full URL as source.
+        # Try the value first (works for both bare slugs and full URLs),
+        # then fall back to the source URL.
         username = extract_username(url)
+        if not username and sig and sig.source:
+            username = extract_username(sig.source)
+            if username:
+                url = sig.source
         if not username:
             return ModuleResult(
                 name=self.name,

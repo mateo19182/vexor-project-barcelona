@@ -1,0 +1,179 @@
+{
+  "name": "brave_social",
+  "status": "ok",
+  "summary": "Found 25 social profile(s) via Brave search",
+  "social_links": [
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/C_0JFG2sY9Y/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/C68RBAFMofy/?locale=en",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jose-manuel-arranz-abelenda-1841883a/",
+      "handle": "jose-manuel-arranz-abelenda-1841883a",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jose-manuel-amado-8532b7145/",
+      "handle": "jose-manuel-amado-8532b7145",
+      "confidence": 0.65
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jose-abelenda-483821/",
+      "handle": "jose-abelenda-483821",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/jotamado/",
+      "handle": "jotamado",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/jose.abelenda/?hl=it",
+      "handle": "jose.abelenda",
+      "confidence": 0.65
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/joseandradea/",
+      "handle": "joseandradea",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/amadoasenjo?lang=pt",
+      "handle": "amadoasenjo",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/joseamado89?lang=ar",
+      "handle": "joseamado89",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/joselitoamado",
+      "handle": "joselitoamado",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/amado_lito",
+      "handle": "amado_lito",
+      "confidence": 0.65
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/josemanuelvall4",
+      "handle": "josemanuelvall4",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/2592049217532755",
+      "handle": "2592049217532755",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/josemanuel.tadendeabelenda",
+      "handle": "josemanuel.tadendeabelenda",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/josemanuel.fernandezamado/",
+      "handle": "josemanuel.fernandezamado",
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/p/Jos%C3%A9-Manuel-Amado-Amado-100087606465514/",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/jose.criadoabelenda/",
+      "handle": "jose.criadoabelenda",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/jmaburto",
+      "handle": "jmaburto",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/ingelectronicadj",
+      "handle": "ingelectronicadj",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/jmvillalobos",
+      "handle": "jmvillalobos",
+      "confidence": 0.65
+    },
+    {
+      "platform": "github",
+      "url": "https://github.com/manuelen",
+      "handle": "manuelen",
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/dr-juan-manuel-amado",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/juan-manuel-amado?lang=es",
+      "handle": null,
+      "confidence": 0.65
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://www.tiktok.com/discover/jose-manuel-solis-%C3%A1ngeles-de-fuego",
+      "handle": null,
+      "confidence": 0.65
+    }
+  ],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "queries": [
+      "\"Jose Manuel Amado Abelenda\" site:linkedin.com",
+      "\"Jose Manuel Amado Abelenda\" site:instagram.com",
+      "\"Jose Manuel Amado Abelenda\" site:x.com",
+      "\"Jose Manuel Amado Abelenda\" site:facebook.com",
+      "\"Jose Manuel Amado Abelenda\" site:github.com",
+      "\"Jose Manuel Amado Abelenda\" site:tiktok.com",
+      "josemanuelamadoabelenda site:linkedin.com",
+      "josemanuelamadoabelenda site:instagram.com",
+      "josemanuelamadoabelenda site:x.com",
+      "josemanuelamadoabelenda site:facebook.com",
+      "josemanuelamadoabelenda site:github.com",
+      "josemanuelamadoabelenda site:tiktok.com"
+    ],
+    "links_found": 25,
+    "errors": []
+  },
+  "duration_s": 0.6202984999981709
+}

@@ -16,7 +16,7 @@ from app.pipeline.base import context_from_case
 from app.pipeline.modules import REGISTRY
 from app.pipeline.runner import run_pipeline
 from app.pipeline.llm_summary import generate_llm_summary
-from app.pipeline.synthesis import synthesize
+from app.pipeline.synthesis import synthesize, build_enriched_dossier
 
 app = FastAPI(title="Vexor BCN — debtor enrichment")
 
@@ -93,6 +93,7 @@ async def run_enrichment(
         fresh=fresh,
     )
     dossier = await synthesize(ctx, results)
+    enriched = await build_enriched_dossier(ctx, results)
     # Skip the LLM summary when running a module subset — it's expensive and
     # a single-module dossier isn't worth summarizing. Full runs still get it.
     llm_summary = None if only is not None else await generate_llm_summary(ctx, dossier)
@@ -103,6 +104,7 @@ async def run_enrichment(
         case_id=case.case_id,
         status=status,
         dossier=dossier,
+        enriched_dossier=enriched,
         llm_summary=llm_summary,
         modules=results,
         audit_log=audit.events,
@@ -190,6 +192,7 @@ async def enrich_stream(
                 ctx, mods, audit, logs_dir=settings.logs_dir, fresh=fresh_val,
             )
             dossier = await synthesize(ctx, results)
+            enriched = await build_enriched_dossier(ctx, results)
             llm_summary = (
                 None if only_val is not None
                 else await generate_llm_summary(ctx, dossier)
@@ -200,6 +203,7 @@ async def enrich_stream(
                 case_id=case.case_id,
                 status=status,
                 dossier=dossier,
+                enriched_dossier=enriched,
                 llm_summary=llm_summary,
                 modules=results,
                 audit_log=audit.events,

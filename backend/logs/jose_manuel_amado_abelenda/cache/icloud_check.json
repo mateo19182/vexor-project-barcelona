@@ -1,0 +1,47 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "josemanuelamadoabelenda@gmail.com is registered on iCloud. | +34617758559 is registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to +34617758559",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "685f65c6-c8a8-4ef5-b2fe-b497294ab76b",
+        "error": null
+      },
+      {
+        "platform": "iCloud",
+        "identifier": "+34617758559",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "4a55163c-f184-44ef-a723-7a68f6525215",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 3.1476573750260286
+}
