@@ -90,8 +90,8 @@ def _scan_tweets(tweets: list[dict], profile_url: str) -> list[Signal]:
     return signals
 
 
-class TwitterEnrichModule:
-    name = "twitter_enrich"
+class TwitterModule:
+    name = "twitter"
     requires: tuple[str, ...] = ("twitter_handle",)
 
     async def run(self, ctx: Context) -> ModuleResult:

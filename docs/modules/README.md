@@ -2,26 +2,54 @@
 
 One file per module/component in the pipeline.
 
+## Infrastructure
+
 | File | Path | Role |
 |---|---|---|
 | [base.md](base.md) | `app/pipeline/base.py` | Core abstractions: `Context`, `ModuleResult`, `Module` protocol |
 | [runner.md](runner.md) | `app/pipeline/runner.py` | Wave-based scheduler, ctx_patch merge, error handling |
-| [osint_web.md](osint_web.md) | `app/pipeline/modules/osint_web.py` | Claude-powered web OSINT (wave 1) |
-| [boe.md](boe.md) | `app/pipeline/modules/boe.py` | BOE (Spain official gazette) — legal notices, bankruptcy, embargos (wave 1) |
-| [borme.md](borme.md) | `app/pipeline/modules/borme.py` | BORME (Spain commercial registry) — directorships, dissolutions, concursos (wave 1) |
-| [breach_scout.md](breach_scout.md) | `app/pipeline/modules/breach_scout.py` | Breach intelligence — contact discovery & risk flags (wave 1) |
-| [instagram.md](instagram.md) | `app/pipeline/modules/instagram.py` | Instagram OSINT adapter (wave 2+) |
-| [image_search.md](image_search.md) | `app/pipeline/modules/image_search.py` | Reverse image OSINT via Google Lens (wave 2+) |
-| [xon.md](xon.md) | `app/pipeline/modules/xon.py` | XposedOrNot breach lookup — registered services & risk flags (wave 1) |
-| [platform_check.md](platform_check.md) | `app/enrichment/platform_check.py` + `*_check.py` | Upstream registration checks (Instagram / Twitter / iCloud) |
-| [property.md](property.md) | `app/pipeline/modules/property.py` | Spanish real-estate valuation (Nominatim + Catastro + MITMA + SERPAVI) |
 | [audit.md](audit.md) | `app/pipeline/audit.py` | Structured event log + CLI summary renderer |
 | [synthesis.md](synthesis.md) | `app/pipeline/synthesis.py` | Aggregation + dedup into final `Dossier` |
+| [platform_check.md](platform_check.md) | `app/enrichment/platform_check.py` | Shared upstream VM protocol for registration checks |
+
+## Modules
+
+| File | Module | requires | Role |
+|---|---|---|---|
+| [osint_web.md](osint_web.md) | `osint_web` | `name` | Claude-powered web OSINT — social links, employer, location |
+| [boe.md](boe.md) | `boe` | `name` | BOE (Spain official gazette) — legal notices, bankruptcy, embargos |
+| [borme.md](borme.md) | `borme` | `name` | BORME (Spain commercial registry) — directorships, dissolutions |
+| [breach_scout.md](breach_scout.md) | `breach_scout` | `email` | Breach intelligence — contact discovery & risk flags |
+| [nosint.md](nosint.md) | `nosint` | `email` | NoSINT / CSINT — 30+ module email lookup, platform hits & breach flags |
+| [xon.md](xon.md) | `xon` | `email` | XposedOrNot — breach lookup, registered services |
+| [github_check.md](github_check.md) | `github_check` | `email` | Platform-check VM: GitHub registration |
+| [platform_check.md](platform_check.md) | `instagram_check` | `email` | Platform-check VM: Instagram registration |
+| [platform_check.md](platform_check.md) | `twitter_check` | `email` | Platform-check VM: Twitter/X registration |
+| [platform_check.md](platform_check.md) | `icloud_check` | `email` | Platform-check VM: iCloud registration |
+| [google_id.md](google_id.md) | `google_id` | `email` | Resolves Gmail → Google Gaia ID (unblocks google_maps_reviews) |
+| [image_search.md](image_search.md) | `image_search` | `instagram_handle` | Reverse image OSINT via Google Lens |
+| [instagram.md](instagram.md) | `instagram` | `instagram_handle` | Instagram OSINT — posts, captions, location tags |
+| [linkedin.md](linkedin.md) | `linkedin` | `linkedin_url` | LinkedIn profile — headline, employer, location, positions |
+| [twitter.md](twitter.md) | `twitter` | `twitter_handle` | Twitter/X — bio, location, timeline keyword scan |
+| [google_maps_reviews.md](google_maps_reviews.md) | `google_maps_reviews` | `gaia_id` | Google Maps review history — lifestyle signals |
+| [property.md](property.md) | `property` | `address` | Spanish real-estate valuation (Catastro + MITMA + SERPAVI) |
 
 ## Wave ordering
 
 ```
-Wave 1:  osint_web, boe, borme, breach_scout, xon   (requires: name / email — always set from case)
-Wave 2:  instagram, image_search        (requires: instagram_handle — may be promoted by osint_web)
-Post:    synthesis            (runs after all waves complete)
+Wave 1 (always run — case seed provides name/email):
+  osint_web, boe, borme, breach_scout, nosint, xon,
+  github_check, instagram_check, twitter_check, icloud_check,
+  google_id
+
+Wave 2+ (unblocked by wave-1 ctx_patches):
+  instagram          ← instagram_handle promoted by osint_web
+  image_search       ← instagram_handle promoted by osint_web
+  linkedin           ← linkedin_url promoted by osint_web
+  twitter     ← twitter_handle promoted by osint_web
+  google_maps_reviews ← gaia_id promoted by google_id
+  property           ← address promoted by case or osint_web
+
+Post:
+  synthesis          (runs after all waves complete)
 ```

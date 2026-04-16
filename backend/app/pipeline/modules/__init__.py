@@ -25,7 +25,7 @@ from app.pipeline.modules.linkedin import LinkedInModule
 from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.property import PropertyModule
 from app.pipeline.modules.twitter_check import TwitterCheckModule
-from app.pipeline.modules.twitter_enrich import TwitterEnrichModule
+from app.pipeline.modules.twitter import TwitterModule
 from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
@@ -43,6 +43,6 @@ REGISTRY: list[Module] = [
     OsintWebModule(),
     PropertyModule(),
     TwitterCheckModule(),
-    TwitterEnrichModule(),
+    TwitterModule(),
     XposedOrNotModule(),
 ]
