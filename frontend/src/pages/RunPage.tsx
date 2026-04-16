@@ -10,8 +10,8 @@ export function RunPage() {
         <h1 className="text-2xl font-semibold tracking-tight">
           Run View
         </h1>
-        <Badge variant="outline" className="text-accent-cyan bg-cyan-500/10 border-cyan-500/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+        <Badge variant="outline" className="text-text-primary bg-white/5 border-white/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
           {runId}
         </Badge>
       </div>
