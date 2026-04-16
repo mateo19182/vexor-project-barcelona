@@ -21,4 +21,18 @@ mechanism to go back to a module on new data
 
 profile pic maps to similarity search!
 
-frontend!
+Carrier —> Detectar compañía y consultar cuando fue la última vez que recibió llamadas
+
+Eyescanner —> Encontrar mismas caras en otras redes sociales
+
+Iterar modificaciones de dominio (yahoo.com, outlook.com, ...) lo de los con 0bounce
+
+Matchear country con proxy en el bot para mejor rate en el hinter de twitter
+
+ GET INVOLVED INTO JUDICIAL REQUESTS
+
+Posibles extas
+· Carrier —> Detectar compañía y consultar cuando fue la última vez que recibió llamadas
+· Eyescanner —> Encontrar mismas caras en otras redes sociales
+· Iterar modificaciones de dominio (yahoo.com, outlook.com, ...) lo de los con 0bounce
+· Matchear country con proxy en el bot para mejor rate en el hinter de X

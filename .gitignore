@@ -11,3 +11,6 @@ build/
 .agent
 Dan/*.private.md
 .planning
+.claude
+samples/*
+*.7z

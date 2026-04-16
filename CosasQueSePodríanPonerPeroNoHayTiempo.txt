@@ -1,7 +1,0 @@
-Carrier —> Detectar compañía y consultar cuando fue la última vez que recibió llamadas
-
-Eyescanner —> Encontrar mismas caras en otras redes sociales
-
-Iterar modificaciones de dominio (yahoo.com, outlook.com, ...) lo de los con 0bounce
-
-Matchear country con proxy en el bot para mejor rate en el hinter de twitter
