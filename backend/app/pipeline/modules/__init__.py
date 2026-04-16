@@ -20,6 +20,7 @@ from app.pipeline.modules.icloud_check import ICloudCheckModule
 from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
 from app.pipeline.modules.instagram_check import InstagramCheckModule
+from app.pipeline.modules.linkedin import LinkedInModule
 from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.property import PropertyModule
 from app.pipeline.modules.twitter_check import TwitterCheckModule
@@ -37,7 +38,11 @@ REGISTRY: list[Module] = [
     ImageSearchModule(),
     InstagramModule(),
     InstagramCheckModule(),
+<<<<<<< HEAD
     NosintModule(),
+=======
+    LinkedInModule(),
+>>>>>>> 0c9f1f1 (linkedin scraper module)
     OsintWebModule(),
     PropertyModule(),
     TwitterCheckModule(),

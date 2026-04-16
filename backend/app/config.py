@@ -64,6 +64,12 @@ class Settings(BaseSettings):
     twitter_password: str = ""
     twitter_cookies: str = ""  # JSON dict of cookies; overrides password auth
 
+    # ── LinkedIn enrichment (LinkdAPI) ─────────────────────────────────────
+    # API key for https://linkdapi.com — used by the `linkedin` module to
+    # call /api/v1/profile/overview and /api/v1/profile/details. Blank → the
+    # module skips cleanly.
+    linkdapi_api_key: str = ""
+
     # ── Google Maps reviews module ──────────────────────────────────────────
     # JSON dict copied from Chrome DevTools → Application → Cookies → google.com
     # Required keys: SID, SSID, APISID, SAPISID, __Secure-1PAPISID, NID
