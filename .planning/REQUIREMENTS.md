@@ -65,24 +65,24 @@ Requirements for initial release. Each maps to roadmap phases.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INP-01 | — | Pending |
-| INP-02 | — | Pending |
-| MOD-01 | — | Pending |
-| MOD-02 | — | Pending |
-| MOD-03 | — | Pending |
-| RUN-01 | — | Pending |
-| RUN-02 | — | Pending |
-| RUN-03 | — | Pending |
-| RUN-04 | — | Pending |
-| RUN-05 | — | Pending |
-| UIX-01 | — | Pending |
-| UIX-02 | — | Pending |
-| UIX-03 | — | Pending |
+| INP-01 | Phase 2 — Case Input | Pending |
+| INP-02 | Phase 2 — Case Input | Pending |
+| MOD-01 | Phase 3 — Module Selection | Pending |
+| MOD-02 | Phase 3 — Module Selection | Pending |
+| MOD-03 | Phase 3 — Module Selection | Pending |
+| RUN-01 | Phase 4 — Live Run View Layout | Pending |
+| RUN-02 | Phase 4 — Live Run View Layout | Pending |
+| RUN-03 | Phase 6 — Node Graph Interactivity & Polish | Pending |
+| RUN-04 | Phase 6 — Node Graph Interactivity & Polish | Pending |
+| RUN-05 | Phase 5 — Real-Time Pipeline Streaming | Pending |
+| UIX-01 | Phase 1 — Foundation & Design System | Pending |
+| UIX-02 | Phase 6 — Node Graph Interactivity & Polish | Pending |
+| UIX-03 | Phase 4 — Live Run View Layout | Pending |
 
 **Coverage:**
 - v1 requirements: 13 total
-- Mapped to phases: 0
-- Unmapped: 13 ⚠️
+- Mapped to phases: 13
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-16*
