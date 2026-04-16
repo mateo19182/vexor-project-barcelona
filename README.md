@@ -2,6 +2,8 @@
 
 AI enrichment pipeline for debtor cases. Takes a minimal case record and returns a sourced dossier a human collector can act on immediately.
 
+<img width="2140" height="1366" alt="pic" src="https://github.com/user-attachments/assets/971f6653-577b-4be2-88ba-cf3853d99849" />
+
 ## What it does
 
 A debt servicer starts with almost nothing: a name, a country, a debt amount, and a string of failed call attempts. This pipeline takes that sparse record and fans out across multiple OSINT sources in parallel, then synthesizes the findings into a single collector-ready dossier.
