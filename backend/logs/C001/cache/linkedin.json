@@ -1,0 +1,32 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "LinkedIn profile 'george-hotz-b3866476' not retrievable: the data cannot be displayed or it doesn't exist, make sure the username is correct and exists"
+  ],
+  "raw": {
+    "username": "george-hotz-b3866476",
+    "profile_url": "https://www.linkedin.com/in/george-hotz-b3866476",
+    "overview": {
+      "error": "api_error",
+      "status": 200,
+      "detail": "the data cannot be displayed or it doesn't exist, make sure the username is correct and exists"
+    },
+    "details": null
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null,
+    "twitter_handle": null,
+    "gaia_id": null
+  },
+  "duration_s": 2.5989832369959913
+}

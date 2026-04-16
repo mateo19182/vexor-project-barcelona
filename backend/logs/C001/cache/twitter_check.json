@@ -1,0 +1,28 @@
+{
+  "name": "twitter_check",
+  "status": "ok",
+  "summary": "geohot@gmail.com is NOT registered on Twitter.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "geohot@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "session_id": "14a2a39e-871d-4d55-9e48-61110fcbfd2b",
+    "error": null
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null,
+    "twitter_handle": null,
+    "gaia_id": null
+  },
+  "duration_s": 0.9810777620004956
+}

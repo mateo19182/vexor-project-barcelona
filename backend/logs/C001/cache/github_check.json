@@ -1,0 +1,36 @@
+{
+  "name": "github_check",
+  "status": "ok",
+  "summary": "geohot@gmail.com is registered on GitHub.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "GitHub account registered to geohot@gmail.com",
+      "source": "platform_check:github_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: REGISTERED"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "platform": "GitHub",
+    "identifier": "geohot@gmail.com",
+    "status_raw": "REGISTERED",
+    "http_status": 200,
+    "session_id": "b0f6501c-8702-4e3c-ae34-6ec84755775a",
+    "error": null
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null,
+    "twitter_handle": null,
+    "gaia_id": null
+  },
+  "duration_s": 1.5763055909992545
+}

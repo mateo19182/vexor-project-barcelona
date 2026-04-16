@@ -15,6 +15,7 @@ Requires BRAVE_API_KEY in environment.
 from __future__ import annotations
 
 import asyncio
+import re
 from typing import Any
 
 import httpx
@@ -62,6 +63,14 @@ _ROLE_KEYWORDS = {
     "reducción de capital",
     "reduccion de capital",
 }
+
+
+def _name_in_text(name: str, text: str) -> bool:
+    """Return True if all words of *name* appear in *text* (case-insensitive)."""
+    for word in name.split():
+        if not re.search(re.escape(word), text, re.IGNORECASE):
+            return False
+    return True
 
 
 def _classify(text: str) -> tuple[str | None, float]:
@@ -132,6 +141,9 @@ class BormeModule:
                 title = r.get("title", "") or ""
                 description = r.get("description", "") or ""
                 text = f"{title} {description}"
+
+                if not _name_in_text(name, text):
+                    continue
 
                 kind, confidence = _classify(text)
                 if kind:

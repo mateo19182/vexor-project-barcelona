@@ -1,0 +1,31 @@
+{
+  "name": "image_search",
+  "status": "ok",
+  "summary": "Reverse image search (exact match) on @georgehotz's profile picture returned no matches.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Visual-match results are not identity-verified; manual or LLM same-person check required before trusting any discovered profile.",
+    "No exact image matches found for the profile picture"
+  ],
+  "raw": {
+    "provider": "serpapi_google_lens_exact",
+    "handle": "georgehotz",
+    "image_url": "https://scontent-prg1-1.cdninstagram.com/v/t51.2885-19/51810491_2081208458667230_5574954123863785472_n.jpg?stp=dst-jpg_e0_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-prg1-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gEzHz4OfDaKrp0nDDoyd5RxMHCgTLYZE11QL2vz9HbZ34vwVoLWb_MglZBIUElwZSQ&_nc_ohc=UaDSiNMcLmcQ7kNvwF3YQg4&_nc_gid=dgUXcn8a8HShZV4wiQeY-Q&edm=AO4kU9EBAAAA&ccb=7-5&ig_cache_key=GLuQFgPe5OEa2WQHAAAAAAA9N15NbkULAAAB1501500j-ccb7-5&oh=00_Af22V7VRR0M2DXBvt0cV816owN3zGTrehHnDLhvybnjFNQ&oe=69E5EBCF&_nc_sid=164c1d",
+    "exact_match_count": 0,
+    "platform_breakdown": {},
+    "raw_matches": []
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null,
+    "twitter_handle": null,
+    "gaia_id": null
+  },
+  "duration_s": 4.329020625002158
+}
