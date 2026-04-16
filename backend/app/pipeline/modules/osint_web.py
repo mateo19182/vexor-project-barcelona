@@ -529,8 +529,8 @@ class OsintWebModule:
         if not settings.anthropic_api_key:
             return ModuleResult(
                 name=self.name,
-                status="error",
-                gaps=["anthropic_api_key is not configured"],
+                status="skipped",
+                gaps=["anthropic_api_key is not configured — osint_web disabled"],
             )
 
         name_sig = ctx.best("name")

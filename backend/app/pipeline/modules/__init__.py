@@ -16,6 +16,7 @@ from app.pipeline.modules.borme import BormeModule
 from app.pipeline.modules.brave_social import BraveSocialModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
 from app.pipeline.modules.github_check import GithubCheckModule
+from app.pipeline.modules.google_gaia_check import GoogleGaiaCheckModule
 from app.pipeline.modules.gaia_enrichment import GaiaEnrichmentModule
 from app.pipeline.modules.icloud_check import ICloudCheckModule
 from app.pipeline.modules.image_search import ImageSearchModule
@@ -28,7 +29,8 @@ from app.pipeline.modules.osint_web import OsintWebModule
 from app.pipeline.modules.property import PropertyModule
 from app.pipeline.modules.twitter_check import TwitterCheckModule
 from app.pipeline.modules.twitter import TwitterModule
-from app.pipeline.modules.wallapop import WallapopModule
+from app.pipeline.modules.twitter_vu import TwitterVuModule
+from app.pipeline.modules.uber_hint import UberHintModule
 from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
@@ -37,6 +39,7 @@ REGISTRY: list[Module] = [
     BraveSocialModule(),
     BreachScoutModule(),
     GithubCheckModule(),
+    GoogleGaiaCheckModule(),
     GaiaEnrichmentModule(),
     ICloudCheckModule(),
     ImageSearchModule(),
@@ -49,6 +52,7 @@ REGISTRY: list[Module] = [
     PropertyModule(),
     TwitterCheckModule(),
     TwitterModule(),
-    WallapopModule(),
+    TwitterVuModule(),
+    UberHintModule(),
     XposedOrNotModule(),
 ]
