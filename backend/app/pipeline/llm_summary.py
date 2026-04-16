@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import json
 import sys
-from typing import Any
 
 import anthropic
 
@@ -46,25 +45,7 @@ Rules:
 6. Always include the case facts (debt amount, origin, age, country, prior call attempts/outcome, legal asset finding) even if enrichment found nothing.
 7. CRITICAL: Never mention other individuals found during research. Only report on the subject.
 
-Output ONLY the structured JSON requested."""
-
-
-OUTPUT_SCHEMA: dict[str, Any] = {
-    "type": "object",
-    "properties": {
-        "summary": {
-            "type": "string",
-            "description": "Factual prose summary of debtor + case, length scaled to dossier richness.",
-        },
-        "key_facts": {
-            "type": "array",
-            "items": {"type": "string"},
-            "description": "Short bullets \u2014 one concrete verified fact each.",
-        },
-    },
-    "required": ["summary", "key_facts"],
-    "additionalProperties": False,
-}
+Respond with a JSON object with exactly two keys: "summary" (string) and "key_facts" (array of strings). Output ONLY the JSON — no markdown fences, no other text."""
 
 
 def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
@@ -197,9 +178,6 @@ async def generate_llm_summary(
             max_tokens=MAX_TOKENS,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_prompt}],
-            output_config={
-                "format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}
-            },
         )
     except anthropic.APIError as e:
         _log(f"[llm_summary] API error: {e}")

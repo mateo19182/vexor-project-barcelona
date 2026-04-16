@@ -80,9 +80,19 @@ def _social_links_to_signals(links: list[SocialLink]) -> list[Signal]:
 
 
 def _accumulate_signals(ctx: Context, result: ModuleResult) -> None:
-    """Append a module's signals + converted social_links to the shared context."""
+    """Append a module's signals + converted social_links to the shared context.
+
+    Social links that pass the confidence floor are converted to contact signals
+    and added BOTH to ctx (for downstream module scheduling) AND to result.signals
+    so that synthesize() — which reads result.signals — includes them in the
+    dossier. Without this, auto-promoted contact signals would be invisible in
+    the API response.
+    """
     ctx.signals.extend(result.signals)
-    ctx.signals.extend(_social_links_to_signals(result.social_links))
+    promoted = _social_links_to_signals(result.social_links)
+    if promoted:
+        result.signals.extend(promoted)
+    ctx.signals.extend(promoted)
 
 
 async def _run_one(module: Module, ctx: Context) -> ModuleResult:

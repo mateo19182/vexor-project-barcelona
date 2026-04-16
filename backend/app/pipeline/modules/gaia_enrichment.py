@@ -13,6 +13,7 @@ import sys
 
 from app.config import settings
 from app.enrichment.gaia_enrichment import fetch_gaia
+from app.enrichment.image_store import download_image, get_photos_dir
 from app.models import Fact, Signal
 from app.pipeline.base import Context, ModuleResult
 
@@ -75,8 +76,9 @@ class GaiaEnrichmentModule:
                     confidence=0.80,
                 ))
 
-        # -- Photo signals --
-        for photo in enrichment.photos:
+        # -- Photo signals + downloads --
+        photos_dir = get_photos_dir(ctx.case.case_id, "google_maps")
+        for idx, photo in enumerate(enrichment.photos):
             label = photo.place_name or "unknown location"
             signals.append(Signal(
                 kind="lifestyle",
@@ -84,6 +86,24 @@ class GaiaEnrichmentModule:
                 source=photo.url,
                 confidence=0.75,
                 notes=None,
+            ))
+            # Download to centralized photos dir
+            fname = f"gaia_{gaia_id}_{idx:03d}.jpg"
+            await download_image(photo.url, photos_dir / fname)
+
+        # Download profile pic if available — also emit contact:photo so
+        # vision_batch's scheduling requirement is satisfied.
+        if enrichment.profile_pic_url:
+            await download_image(
+                enrichment.profile_pic_url,
+                photos_dir / f"gaia_{gaia_id}_profile.jpg",
+            )
+            signals.append(Signal(
+                kind="contact", tag="photo",
+                value=enrichment.profile_pic_url,
+                source=enrichment.profile_url,
+                confidence=0.90,
+                notes=f"Google profile picture for Gaia ID {gaia_id}",
             ))
 
         # -- Stats facts --

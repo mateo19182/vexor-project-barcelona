@@ -29,12 +29,13 @@ from urllib.parse import urlparse
 import httpx
 
 from app.config import settings
+from app.enrichment.image_store import download_image, get_photos_dir
 from app.enrichment.reverse_image import (
     VisualMatch,
     fetch_instagram_profile_pic,
     reverse_image_lookup,
 )
-from app.models import Fact, SocialLink
+from app.models import Fact, Signal, SocialLink
 from app.pipeline.base import Context, ModuleResult
 
 # Confidence ceilings — matches are visual-only, identity unverified.
@@ -280,6 +281,27 @@ class ImageSearchModule:
                 "or unrelated accounts."
             )
 
+        # Download profile pic + match thumbnails to centralized photos dir.
+        # Emit contact:photo so vision_batch is scheduled after us.
+        rm_dir = get_photos_dir(ctx.case.case_id, "reverse_matches")
+        source_downloaded = await download_image(image_url, rm_dir / f"{handle}_source.jpg")
+        for idx, match in enumerate(matches):
+            if match.thumbnail:
+                await download_image(
+                    match.thumbnail,
+                    rm_dir / f"{handle}_match_{idx:03d}.jpg",
+                )
+
+        extra_signals: list[Signal] = []
+        if source_downloaded:
+            extra_signals.append(Signal(
+                kind="contact", tag="photo",
+                value=image_url,
+                source=f"https://www.instagram.com/{handle}/",
+                confidence=0.75,
+                notes=f"Instagram profile picture used for reverse-image search",
+            ))
+
         _log(
             f"done: {len(matches)} match(es), {len(social_links)} social_link(s), "
             f"{len(facts)} fact(s), platforms={dict(platform_counts)}"
@@ -289,6 +311,7 @@ class ImageSearchModule:
             name=self.name,
             status="ok",
             summary=summary,
+            signals=extra_signals,
             social_links=social_links,
             facts=facts,
             gaps=gaps,

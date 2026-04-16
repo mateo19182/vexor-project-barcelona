@@ -178,6 +178,34 @@ class AuditEvent(BaseModel):
     detail: dict[str, Any] = Field(default_factory=dict)
 
 
+class LeadVerification(BaseModel):
+    """Structured assessment of whether the lead's contact data is current.
+
+    Built by comparing known emails/phones against masked versions returned
+    by platform-check APIs (Twitter VU, Uber Hint).
+    """
+
+    quality: str = Field(
+        description="Overall quality grade: high, medium, low, unknown"
+    )
+    score: float = Field(
+        ge=0.0, le=1.0,
+        description="Numeric quality score (0–1)",
+    )
+    summary: str = Field(description="Human-readable verification summary")
+    checks: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description=(
+            "Per-field verification: each entry has field, input, matches "
+            "(platform + mask + result + reason), and verdict"
+        ),
+    )
+    cross_checks: list[dict[str, Any]] = Field(
+        default_factory=list,
+        description="Cross-channel verifications (email→phone, phone→email)",
+    )
+
+
 class EnrichmentResponse(BaseModel):
     """Shape of the enriched profile. Grows as pipeline steps are added."""
 
@@ -185,5 +213,6 @@ class EnrichmentResponse(BaseModel):
     status: str = "received"
     dossier: Dossier | None = None
     llm_summary: LlmSummary | None = None
+    lead_verification: LeadVerification | None = None
     modules: list[Any] = []
     audit_log: list[AuditEvent] = []

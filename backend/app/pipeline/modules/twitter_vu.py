@@ -10,6 +10,7 @@ from __future__ import annotations
 import time
 
 from app.config import settings
+from app.enrichment.image_store import download_image, get_photos_dir
 from app.enrichment.platform_check import check_platform
 from app.models import Signal, SocialLink
 from app.pipeline.base import Context, ModuleResult
@@ -110,6 +111,9 @@ class TwitterVuModule:
                 confidence=0.90,
                 notes=f"Twitter/X profile picture for @{handle}",
             ))
+            # Download to centralized photos dir
+            tw_dir = get_photos_dir(ctx.case.case_id, "twitter")
+            await download_image(avatar, tw_dir / f"{handle}_avatar.jpg")
 
         social_links.append(SocialLink(
             platform="twitter",
