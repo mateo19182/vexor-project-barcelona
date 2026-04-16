@@ -35,6 +35,9 @@ class Case(BaseModel):
     # Resolution from name → handle is out of scope for this step.
     instagram_handle: str | None = None
 
+    # Optional Google/Gaia ID — if known, skips the Gmail-resolution step.
+    google_id: str | None = None
+
     # Optional — mejora la estimación de valor total si hay banda €/m²
     property_sqm: float | None = Field(
         default=None,
@@ -117,6 +120,7 @@ class ContextPatch(BaseModel):
     instagram_handle: AttributedValue | None = None
     linkedin_url: AttributedValue | None = None
     twitter_handle: AttributedValue | None = None
+    gaia_id: AttributedValue | None = None
 
 
 class InstagramEnrichment(BaseModel):

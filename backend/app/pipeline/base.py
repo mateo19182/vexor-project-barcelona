@@ -39,6 +39,7 @@ class Context(BaseModel):
     instagram_handle: str | None = None
     linkedin_url: str | None = None
     twitter_handle: str | None = None
+    gaia_id: str | None = None
     # Provenance of each identity field, keyed by field name. Populated as
     # modules write patches; the case seed lands with source="case_input".
     identity_provenance: dict[str, AttributedValue] = Field(default_factory=dict)
@@ -57,8 +58,9 @@ def context_from_case(case: Case) -> Context:
         phone=case.phone,
         address=case.address,
         instagram_handle=case.instagram_handle,
+        gaia_id=case.google_id,
     )
-    for field in ("name", "email", "phone", "address", "instagram_handle"):
+    for field in ("name", "email", "phone", "address", "instagram_handle", "gaia_id"):
         val = getattr(ctx, field)
         if val:
             ctx.identity_provenance[field] = AttributedValue(

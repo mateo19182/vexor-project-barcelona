@@ -15,6 +15,7 @@ from app.pipeline.modules.boe import BoeModule
 from app.pipeline.modules.borme import BormeModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
 from app.pipeline.modules.google_maps import GoogleMapsModule
+from app.pipeline.modules.google_maps_reviews import GoogleMapsReviewsModule
 from app.pipeline.modules.icloud_check import ICloudCheckModule
 from app.pipeline.modules.image_search import ImageSearchModule
 from app.pipeline.modules.instagram import InstagramModule
@@ -30,6 +31,7 @@ REGISTRY: list[Module] = [
     BormeModule(),
     BreachScoutModule(),
     GoogleMapsModule(),
+    GoogleMapsReviewsModule(),
     ICloudCheckModule(),
     ImageSearchModule(),
     InstagramModule(),
