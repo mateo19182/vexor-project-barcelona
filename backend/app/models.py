@@ -116,6 +116,7 @@ class ContextPatch(BaseModel):
     address: AttributedValue | None = None
     instagram_handle: AttributedValue | None = None
     linkedin_url: AttributedValue | None = None
+    twitter_handle: AttributedValue | None = None
 
 
 class InstagramEnrichment(BaseModel):

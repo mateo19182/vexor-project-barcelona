@@ -38,6 +38,7 @@ class Context(BaseModel):
     address: str | None = None
     instagram_handle: str | None = None
     linkedin_url: str | None = None
+    twitter_handle: str | None = None
     # Provenance of each identity field, keyed by field name. Populated as
     # modules write patches; the case seed lands with source="case_input".
     identity_provenance: dict[str, AttributedValue] = Field(default_factory=dict)

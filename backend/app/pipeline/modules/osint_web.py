@@ -311,11 +311,11 @@ def _derive_ctx_patch(social_links: list[SocialLink]) -> ContextPatch:
     """
     patch = ContextPatch()
 
-    def best(platform: str) -> SocialLink | None:
+    def best(*platforms: str) -> SocialLink | None:
         candidates = [
             sl
             for sl in social_links
-            if sl.platform.strip().lower() == platform and sl.confidence >= 0.6
+            if sl.platform.strip().lower() in platforms and sl.confidence >= 0.6
         ]
         if not candidates:
             return None
@@ -333,6 +333,14 @@ def _derive_ctx_patch(social_links: list[SocialLink]) -> ContextPatch:
             value=ig.handle.lstrip("@"),
             source=ig.url,
             confidence=ig.confidence,
+        )
+
+    tw = best("twitter", "x")
+    if tw is not None and tw.handle:
+        patch.twitter_handle = AttributedValue(
+            value=tw.handle.lstrip("@"),
+            source=tw.url,
+            confidence=tw.confidence,
         )
 
     return patch

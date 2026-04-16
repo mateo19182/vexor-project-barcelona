@@ -56,6 +56,14 @@ class Settings(BaseSettings):
 
     catastro_api_key: str = ""
 
+    # ── Twitter/X enrichment (twscrape) ────────────────────────────────────
+    # Credentials for a burner Twitter account used by twscrape to fetch
+    # public profiles and timelines. Cookie-based auth is more stable —
+    # if TWITTER_COOKIES is set (JSON string), it takes precedence.
+    twitter_username: str = ""
+    twitter_password: str = ""
+    twitter_cookies: str = ""  # JSON dict of cookies; overrides password auth
+
     # ── Google Maps reviews module ──────────────────────────────────────────
     # JSON dict copied from Chrome DevTools → Application → Cookies → google.com
     # Required keys: SID, SSID, APISID, SAPISID, __Secure-1PAPISID, NID
