@@ -46,6 +46,7 @@ class AuditLog(BaseModel):
     # Wall-clock anchor for `elapsed_s` on each event. Private so it stays
     # out of serialization and never leaks into the API response.
     _started_at: float = PrivateAttr(default_factory=time.monotonic)
+    _on_event: Any = PrivateAttr(default=None)
 
     def record(
         self,
@@ -68,6 +69,8 @@ class AuditLog(BaseModel):
         self.events.append(ev)
         if stream:
             print(_format_stream(ev), file=sys.stderr, flush=True)
+        if self._on_event is not None:
+            self._on_event(ev)
         return ev
 
 

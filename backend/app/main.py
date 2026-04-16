@@ -182,13 +182,9 @@ async def ws_enrich(ws: WebSocket) -> None:
         return
 
     ctx = context_from_case(case)
-    audit = AuditLog()
     queue: asyncio.Queue[dict] = asyncio.Queue()
 
-    original_record = audit.record
-
-    def streaming_record(kind, **kwargs):
-        ev = original_record(kind, **kwargs)
+    def on_event(ev):
         queue.put_nowait({
             "kind": ev.kind,
             "module": ev.module,
@@ -197,9 +193,9 @@ async def ws_enrich(ws: WebSocket) -> None:
             "elapsed_s": round(ev.elapsed_s, 3),
             "detail": ev.detail if hasattr(ev, "detail") else {},
         })
-        return ev
 
-    audit.record = streaming_record
+    audit = AuditLog()
+    audit._on_event = on_event
 
     async def run():
         results = await run_pipeline(ctx, REGISTRY, audit, logs_dir=settings.logs_dir, fresh=False)
