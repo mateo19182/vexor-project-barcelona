@@ -36,6 +36,11 @@ cd backend
 uv run enrich ../samples/geohotz.json
 ```
 
+**Single Module**
+```
+echo '{"case_id":"test-nosint","email":"mateoamadoares@gmail.com"}' |     uv run enrich - --only nosint --fresh nosint
+```
+
 ## Enrich via API
 
 ```bash

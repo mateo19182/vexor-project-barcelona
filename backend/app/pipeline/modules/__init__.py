@@ -13,6 +13,7 @@ from __future__ import annotations
 from app.pipeline.base import Module
 from app.pipeline.modules.boe import BoeModule
 from app.pipeline.modules.borme import BormeModule
+from app.pipeline.modules.brave_social import BraveSocialModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
 from app.pipeline.modules.github_check import GithubCheckModule
 from app.pipeline.modules.google_id import GoogleIdModule
@@ -32,6 +33,7 @@ from app.pipeline.modules.xon import XposedOrNotModule
 REGISTRY: list[Module] = [
     BoeModule(),
     BormeModule(),
+    BraveSocialModule(),
     BreachScoutModule(),
     GithubCheckModule(),
     GoogleIdModule(),
