@@ -1,0 +1,214 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "Pedro Cao Eiriz is a graphic and 3D designer from A Coruña, Spain, currently based in Barcelona where he studied Publicidad y RRPP at the Universitat Autònoma de Barcelona (2023–2025). His LinkedIn profile confirms a freelance design career since 2022 and past association with the La Coruña design/clothing brand Caosboi (2019–2022), which matches his registered address. The caosboi.com brand references Instagram handle @caosboi, consistent with his self-managed design brand.",
+  "social_links": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "handle": "pedro-cao-eiriz-132635243",
+      "confidence": 0.97
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/caosboi/",
+      "handle": "caosboi",
+      "confidence": 0.78
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Caosboi product listing cites 'my instagram: @caosboi', indicating sole/personal operation of brand",
+      "source": "https://www.caosboi.com/product/patagio-vest",
+      "confidence": 0.78
+    },
+    {
+      "claim": "Pedro Cao Eiriz has 59 LinkedIn connections and 60 followers as of Jan 2026",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.92
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "A Coruña, Galicia, ES",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.95,
+      "notes": "Multiple past work positions listed in La Coruña; matches registered address 15011 A Coruña"
+    },
+    {
+      "kind": "location",
+      "value": "Barcelona, Catalonia, ES",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.92,
+      "notes": "Current location per LinkedIn profile; linked to UAB studies 2023–2025"
+    },
+    {
+      "kind": "role",
+      "value": "Freelance Graphic & 3D Designer (Autónomo)",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.97,
+      "notes": "Self-employed since Jan 2022; packaging, 3D, graphic solutions for companies and individuals"
+    },
+    {
+      "kind": "business",
+      "value": "Caosboi (clothing/design brand, caosboi.com)",
+      "source": "https://www.caosboi.com/product/patagio-vest",
+      "confidence": 0.78,
+      "notes": "LinkedIn lists 'Diseñador at Caosboi' Jan 2019–Jan 2022, La Coruña; brand name derived from surname 'Cao'; website references 'my instagram: @caosboi' suggesting sole operator"
+    },
+    {
+      "kind": "employer",
+      "value": "Bar Lord, La Coruña (hospitality, seasonal)",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.92,
+      "notes": "Bar Waiter Jun–Sep 2024"
+    },
+    {
+      "kind": "employer",
+      "value": "Leinster House Hotel, London (hospitality, seasonal)",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.92,
+      "notes": "Hostelero Jul–Sep 2023, London area"
+    },
+    {
+      "kind": "employer",
+      "value": "Noa Boutique Hotel, La Coruña (hospitality, seasonal)",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.92,
+      "notes": "Bar Waiter Jun–Sep 2021"
+    },
+    {
+      "kind": "affiliation",
+      "value": "Universitat Autònoma de Barcelona – Publicidad y RRPP (2023–2025)",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.95,
+      "notes": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Universidade de Vigo (2021–2023)",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.95,
+      "notes": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Handmade organic clothing capsule collections (Caosboi brand)",
+      "source": "https://www.caosboi.com/product/patagio-vest",
+      "confidence": 0.75,
+      "notes": "Items priced €40–€95, handmade, organic cotton; sold EU-wide with ID verification"
+    }
+  ],
+  "gaps": [
+    "Cannot directly confirm the Gmail address pedrocaoeiriz@gmail.com is tied to the LinkedIn or Instagram profiles found — identity match inferred from exact name + La Coruña address overlap only",
+    "No Twitter/X or Facebook profile confirmed for this subject",
+    "Cannot confirm whether caosboi.com or @caosboi Instagram is solely operated by Pedro or involves collaborators (e.g. Marta Santorum listed on one product)",
+    "Current residential address in A Coruña vs. current LinkedIn location (Barcelona) — unclear if subject still maintains A Coruña as primary residence",
+    "No public records, company registration, or directorship found under this name in Spanish registries from retrieved sources"
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "exa",
+    "search_queries": [
+      "Pedro Cao Eiriz",
+      "pedrocaoeiriz@gmail.com",
+      "Pedro Cao Eiriz diseñador gráfico A Coruña Instagram",
+      "Caosboi diseñador A Coruña Pedro Cao",
+      "instagram.com/caosboi",
+      "caosboi.com Pedro Cao clothing brand A Coruña",
+      "site:caosboi.com about contact",
+      "\"Pedro Cao\" \"Coruña\" OR \"caosboi\" design portfolio"
+    ],
+    "fetched_urls": [
+      "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "https://www.linkedin.com/in/pedro-cao-b068b653",
+      "https://www.allaboutportugal.pt/pt/pacos-de-ferreira/desporto/campo-de-futebol-do-clube-desportivo-de-eiriz",
+      "https://empresite.jornaldenegocios.pt/Actividade/EIRIZ/",
+      "https://www.pai.pt/paginas/496885-pedro-meireles-cardoso-unipessoal-lda",
+      "https://www.playmakerstats.com/players/football/defender?current_team_id=11133",
+      "https://www.northdata.com/Pedro%20Meireles%20Cardoso%20Lda%C2%B7,%20Eiriz/PT%20513086862",
+      "https://www.ligaamadoratv.pt/2022/07/18/aguias-de-eiriz-aposta-forte-para-a-nova-temporada/",
+      "http://pesquisa.adb.uminho.pt/details?id=1255832",
+      "http://pesquisa.adb.uminho.pt/details?id=1287456",
+      "https://rocketreach.co/pedro-oliveira-email_50949835",
+      "https://www.oceansidegroup.pt/consultor/pedro-caeiro/34093014",
+      "http://www.transfermarkt.com/pedro-caeiro/profil/spieler/567521",
+      "https://building.theatlantic.com/@pedrocaeiros",
+      "https://eclan.eu/en/member/pedro-caeiro",
+      "https://www.criminaljusticenetwork.eu/it/autori/caeiro-pedro",
+      "https://eucrim.eu/authors/caeiro-pedro/",
+      "https://www.uc.pt/fduc/noticias/prof-doutor-pedro-caeiro-nomeado-como-membro-do-grupo-de-peritos-de-politica-criminal-da-uniao-europeia/",
+      "https://apps.uc.pt/mypage/faculty/pcaeiro/en/professional",
+      "https://www.transfermarkt.com.tr/pedro-caeiro/profil/spieler/567521",
+      "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "https://pedroairesdesign.com/",
+      "https://www.pai.pt/paginas/496885-pedro-meireles-cardoso-unipessoal-lda",
+      "https://www.eiriz.com/producto/comunica-con-exito/",
+      "https://www.eiroa.es/diseno-de-cocinas/",
+      "https://pedroiglesias.eu/",
+      "https://ruc.udc.es/items/b708f5f7-038a-4dad-937f-5c5c6723b7f7",
+      "https://linkedin.com/in/victortojo",
+      "https://helpermarketing.es/portfolio/cafeteria-aeira%C2%B7-novo-mesoiro-a-coruna/",
+      "https://linkedin.com/in/roberto-yepes-rodriguez-b347bb28",
+      "https://www.caosboi.com/product/patagio-vest",
+      "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "https://caoba.es/quienes-somos/",
+      "https://caoba.es/gl/",
+      "https://caoba.es/gl/sobre-nosotros-gallego/",
+      "https://linkedin.com/in/pedro-alves-0968a2136",
+      "https://pt.linkedin.com/pulse/ciao-pedro-segreto",
+      "http://www.xosecobas.com/",
+      "https://www.einforma.com/informacion-empresa/carmen-noya-cao-pedro-pombo-juan-bautista",
+      "https://caoba.es/",
+      "https://www.caosboi.com/product/patagio-vest",
+      "https://www.caosboi.com/product/gula-bag",
+      "https://www.behance.net/chuknorris",
+      "http://imgflip.com/user/CHAOS_BOI",
+      "https://nucleo.jor.br/garimpo/sabrina-carpenter-conservadorismo/",
+      "https://www.instagram.com/_caos.inside_/",
+      "https://socialveins.com/influencer/instagram/caosbrasil",
+      "https://www.instagram.com/ucheogboi/?hl=en",
+      "https://www.instagram.com/thatboi/?hl=en",
+      "http://caiotheboi.bandcamp.com/",
+      "https://www.caosboi.com/product/patagio-vest",
+      "https://www.caosbrand.com/pages/about-us",
+      "https://www.caosbrand.com/collections/outlet",
+      "https://caos.shopping/",
+      "https://caosbrand.com/",
+      "https://www.caosbrand.com/collections/tao",
+      "https://caos.shopping/en",
+      "https://www.caosbrand.com/products/boho-soft-negro",
+      "https://caoskids.com/single-brand/",
+      "https://www.caoscollective.co/collections/all",
+      "https://www.caosboi.com/product/patagio-vest",
+      "http://pcbo.dev/",
+      "https://www.caosboi.com/product/gula-bag",
+      "https://designbro.com/graphic-designer/Pedro/1646/",
+      "https://pedroepcastro.myportfolio.com/",
+      "https://cargocollective.com/pedrocaiado-en/Projects",
+      "https://github.com/pcbo",
+      "http://cargocollective.com/pedrocaiado/Objectos",
+      "https://silentcamxmf.github.io/",
+      "https://www.behance.net/pedrodesignstudio?locale=en_US"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": {
+      "value": "caosboi",
+      "source": "https://www.instagram.com/caosboi/",
+      "confidence": 0.78
+    },
+    "linkedin_url": {
+      "value": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+      "confidence": 0.97
+    }
+  },
+  "duration_s": 92.00924628800567
+}

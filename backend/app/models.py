@@ -9,13 +9,13 @@ class Case(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
 
     case_id: str
-    country: str = Field(description="ISO-2 country code, e.g. ES, PT, PL, FR")
-    debt_eur: float
-    debt_origin: str = Field(description="e.g. personal_loan, telecom, credit_card")
-    debt_age_months: int
-    call_attempts: int
-    call_outcome: str = Field(description="e.g. not_debtor, busy, rings_out, voicemail")
-    legal_asset_finding: str = Field(description="e.g. no_assets_found, bank_account")
+    country: str | None = Field(default=None, description="ISO-2 country code, e.g. ES, PT, PL, FR")
+    debt_eur: float | None = None
+    debt_origin: str | None = Field(default=None, description="e.g. personal_loan, telecom, credit_card")
+    debt_age_months: int | None = None
+    call_attempts: int | None = None
+    call_outcome: str | None = Field(default=None, description="e.g. not_debtor, busy, rings_out, voicemail")
+    legal_asset_finding: str | None = Field(default=None, description="e.g. no_assets_found, bank_account")
 
     # Optional real-world hints the user may add for testing.
     # Accepts both canonical field names and common CSV/API aliases.

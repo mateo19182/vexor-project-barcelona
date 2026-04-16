@@ -1,0 +1,30 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "pedrocaoeiriz@gmail.com is NOT registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "FAIL",
+        "http_status": 200,
+        "session_id": "ac9248b4-c7f5-4474-aeeb-40d074466a6e",
+        "error": null
+      }
+    ]
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 3.357403989000886
+}

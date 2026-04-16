@@ -1,0 +1,335 @@
+{
+  "name": "xon",
+  "status": "ok",
+  "summary": "Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+      "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+      "confidence": 0.95
+    },
+    {
+      "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+      "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Overall breach risk score: Moderate (28/100)",
+      "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+      "confidence": 0.85
+    },
+    {
+      "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+      "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+      "confidence": 0.9
+    }
+  ],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "8fit.com",
+      "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+      "confidence": 0.85,
+      "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations"
+    },
+    {
+      "kind": "contact",
+      "value": "taringa.net",
+      "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+      "confidence": 0.85,
+      "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords"
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Password exposed as easytocrack in Taringa breach",
+      "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+      "confidence": 0.9,
+      "notes": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "analytics_status": 200,
+    "analytics": {
+      "BreachMetrics": {
+        "get_details": [],
+        "industry": [
+          [
+            [
+              "misc",
+              0
+            ],
+            [
+              "ente",
+              0
+            ],
+            [
+              "heal",
+              1
+            ],
+            [
+              "elec",
+              0
+            ],
+            [
+              "mini",
+              0
+            ],
+            [
+              "musi",
+              0
+            ],
+            [
+              "manu",
+              0
+            ],
+            [
+              "ener",
+              0
+            ],
+            [
+              "news",
+              0
+            ],
+            [
+              "hosp",
+              0
+            ],
+            [
+              "food",
+              0
+            ],
+            [
+              "phar",
+              0
+            ],
+            [
+              "educ",
+              0
+            ],
+            [
+              "cons",
+              0
+            ],
+            [
+              "agri",
+              0
+            ],
+            [
+              "tele",
+              0
+            ],
+            [
+              "info",
+              0
+            ],
+            [
+              "tran",
+              0
+            ],
+            [
+              "aero",
+              0
+            ],
+            [
+              "fina",
+              0
+            ],
+            [
+              "reta",
+              0
+            ],
+            [
+              "nonp",
+              0
+            ],
+            [
+              "govt",
+              0
+            ],
+            [
+              "spor",
+              0
+            ],
+            [
+              "envi",
+              0
+            ]
+          ]
+        ],
+        "passwords_strength": [
+          {
+            "EasyToCrack": 1,
+            "PlainText": 0,
+            "StrongHash": 1,
+            "Unknown": 0
+          }
+        ],
+        "risk": [
+          {
+            "risk_label": "Moderate",
+            "risk_score": 28
+          }
+        ],
+        "xposed_data": [
+          {
+            "children": [
+              {
+                "name": "🔒 Security Practices",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "D",
+                    "name": "data_Passwords",
+                    "value": 2
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "📞 Communication and Social Interactions",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "F",
+                    "name": "data_Email addresses",
+                    "value": 2
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "👤 Personal Identification",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Names",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Genders",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Usernames",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "🖥️ Device and Network Information",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "G",
+                    "name": "data_IP addresses",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "👥 Demographics",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Geographic locations",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              }
+            ]
+          }
+        ],
+        "yearwise_details": [
+          {
+            "y2007": 0,
+            "y2008": 0,
+            "y2009": 0,
+            "y2010": 0,
+            "y2011": 0,
+            "y2012": 0,
+            "y2013": 0,
+            "y2014": 0,
+            "y2015": 0,
+            "y2016": 0,
+            "y2017": 1,
+            "y2018": 1,
+            "y2019": 0,
+            "y2020": 0,
+            "y2021": 0,
+            "y2022": 0,
+            "y2023": 0,
+            "y2024": 0,
+            "y2025": 0,
+            "y2026": 0
+          }
+        ]
+      },
+      "BreachesSummary": {
+        "site": "8fit;Taringa"
+      },
+      "ExposedBreaches": {
+        "breaches_details": [
+          {
+            "breach": "8fit",
+            "details": "8fit, a popular fitness and health app, experienced a data breach. The breach occurred in early 2021, with the database made public later in June. The leaked data included email addresses and usernames, along with salted MD5 password hashes.",
+            "domain": "8fit.com",
+            "industry": "Health Care",
+            "logo": "https://xposedornot.com/static/logos/8fit.png",
+            "password_risk": "hardtocrack",
+            "references": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Passwords;Genders;IP addresses;Names;Geographic locations",
+            "xposed_date": "2018",
+            "xposed_records": 15026800,
+            "added": "2023-11-08T06:30:21+00:00"
+          },
+          {
+            "breach": "Taringa",
+            "details": "Data breach that occurred at Taringa, a Latin American social network in 2018. The data breach was the result of a hacking incident in which the personal information of over 28 million users was exposed. The data that was compromised included email addresses, hashed passwords, and personal information such as names, birth dates, and location data.",
+            "domain": "taringa.net",
+            "industry": "Non-Profit/Charities",
+            "logo": "https://xposedornot.com/static/logos/Taringa.png",
+            "password_risk": "easytocrack",
+            "references": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Usernames;Email addresses;Passwords",
+            "xposed_date": "2017",
+            "xposed_records": 28001047,
+            "added": "2023-11-08T06:30:19+00:00"
+          }
+        ]
+      },
+      "ExposedPastes": null,
+      "PasteMetrics": null,
+      "PastesSummary": {
+        "cnt": 0,
+        "domain": "",
+        "tmpstmp": ""
+      }
+    },
+    "check_status": 0,
+    "check": null
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 0.8433834130046307
+}

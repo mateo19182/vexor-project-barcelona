@@ -8,6 +8,7 @@ One file per module/component in the pipeline.
 | [runner.md](runner.md) | `app/pipeline/runner.py` | Wave-based scheduler, ctx_patch merge, error handling |
 | [osint_web.md](osint_web.md) | `app/pipeline/modules/osint_web.py` | Claude-powered web OSINT (wave 1) |
 | [boe.md](boe.md) | `app/pipeline/modules/boe.py` | BOE (Spain official gazette) — legal notices, bankruptcy, embargos (wave 1) |
+| [borme.md](borme.md) | `app/pipeline/modules/borme.py` | BORME (Spain commercial registry) — directorships, dissolutions, concursos (wave 1) |
 | [breach_scout.md](breach_scout.md) | `app/pipeline/modules/breach_scout.py` | Breach intelligence — contact discovery & risk flags (wave 1) |
 | [instagram.md](instagram.md) | `app/pipeline/modules/instagram.py` | Instagram OSINT adapter (wave 2+) |
 | [image_search.md](image_search.md) | `app/pipeline/modules/image_search.py` | Reverse image OSINT via Google Lens (wave 2+) |
@@ -20,7 +21,7 @@ One file per module/component in the pipeline.
 ## Wave ordering
 
 ```
-Wave 1:  osint_web, boe, breach_scout, xon   (requires: name / email — always set from case)
+Wave 1:  osint_web, boe, borme, breach_scout, xon   (requires: name / email — always set from case)
 Wave 2:  instagram, image_search        (requires: instagram_handle — may be promoted by osint_web)
 Post:    synthesis            (runs after all waves complete)
 ```

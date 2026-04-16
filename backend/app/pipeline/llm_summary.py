@@ -72,10 +72,10 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
     lines = [
         "=== CASE ===",
         f"case_id: {case.case_id}",
-        f"country: {case.country}",
-        f"debt: €{case.debt_eur:.2f} ({case.debt_origin}, {case.debt_age_months} months old)",
-        f"call_history: {case.call_attempts} attempt(s), last outcome: {case.call_outcome}",
-        f"legal_asset_finding: {case.legal_asset_finding}",
+        f"country: {case.country or 'unknown'}",
+        f"debt: {f'€{case.debt_eur:.2f}' if case.debt_eur is not None else 'unknown'} ({case.debt_origin or 'unknown'}, {case.debt_age_months or 'unknown'} months old)",
+        f"call_history: {case.call_attempts if case.call_attempts is not None else 'unknown'} attempt(s), last outcome: {case.call_outcome or 'unknown'}",
+        f"legal_asset_finding: {case.legal_asset_finding or 'unknown'}",
     ]
     if ctx.name:
         lines.append(f"name: {ctx.name}")

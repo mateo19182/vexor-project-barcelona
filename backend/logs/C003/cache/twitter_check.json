@@ -1,0 +1,28 @@
+{
+  "name": "twitter_check",
+  "status": "no_data",
+  "summary": "Twitter check for pedrocaoeiriz@gmail.com was inconclusive (status: BAN).",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "Twitter returned ambiguous status 'BAN' for pedrocaoeiriz@gmail.com"
+  ],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "pedrocaoeiriz@gmail.com",
+    "status_raw": "BAN",
+    "http_status": 200,
+    "session_id": "51302541-566f-461e-9d39-bbaa45896c38",
+    "error": null
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 1.6304856019996805
+}

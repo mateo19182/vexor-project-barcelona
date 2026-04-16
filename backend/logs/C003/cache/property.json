@@ -1,0 +1,96 @@
+{
+  "name": "property",
+  "status": "ok",
+  "summary": "Inmueble en R. Filantropía, 36, 15011 A Coruña. Catastro: 172 m², Residencial, 1935 | venta estimada 357k €–536k € | alquiler estimado 1k €–1k €/mes",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Inmueble en R. Filantropía, 36, 15011 A Coruña: superficie 172 m², uso Residencial, año construcción 1935. Referencia catastral: 7318020NJ4071N0001HM.",
+      "source": "https://catastro-api.es",
+      "confidence": 0.95
+    }
+  ],
+  "signals": [
+    {
+      "kind": "asset",
+      "value": "Inmueble en A Coruña, ES: valor estimado 357k €–536k €",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS",
+      "confidence": 0.65,
+      "notes": "172 m² × 2595 €/m² (MITMA Coruña (A) T4 2025) × banda ±19%"
+    },
+    {
+      "kind": "asset",
+      "value": "Alquiler estimado 1k €–1k €/mes (A Coruña, ES)",
+      "source": "https://serpavi.mivau.gob.es/",
+      "confidence": 0.7,
+      "notes": "172 m² × 7.10 €/m²/mes (SERPAVI Coruña, A 2024) × banda ±15%"
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "geocode": {
+      "engine": "nominatim",
+      "display_name": "36, Rúa Filantropía, Cidade Escolar, Cidade Xardín, A Coruña, Galicia, 15011, España",
+      "lat": "43.3654202",
+      "lon": "-8.4180788",
+      "postcode": "15011",
+      "city": "A Coruña",
+      "provincia": "A Coruña",
+      "state": "Galicia"
+    },
+    "catastro": {
+      "referencia_catastral": "7318020NJ4071N0001HM",
+      "superficie_m2": 172.0,
+      "uso": "Residencial",
+      "ano_construccion": "1935",
+      "coeficiente_participacion": "100,00",
+      "codigo_postal": "15011",
+      "n_inmuebles_portal": 1
+    },
+    "mitma": {
+      "municipio": "Coruña (A)",
+      "provincia": "La Coruña",
+      "eur_m2_total": 2594.7,
+      "eur_m2_nueva": 3035.3,
+      "eur_m2_usada": 2588.2,
+      "n_tasaciones": 653,
+      "granularidad": "municipio",
+      "periodo": "T4 2025",
+      "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+    },
+    "serpavi": {
+      "municipio": "Coruña, A",
+      "provincia": "Coruña, A",
+      "alquiler_eur_m2_mes_mediana": 7.1,
+      "alquiler_eur_m2_mes_p25": 5.56,
+      "alquiler_eur_m2_mes_p75": 9.08,
+      "alquiler_eur_mes_mediana": 537.76,
+      "alquiler_eur_mes_p25": 433.9,
+      "alquiler_eur_mes_p75": 662.14,
+      "superficie_tipica_m2": 79.0,
+      "n_viviendas_muestra": 24978,
+      "granularidad": "municipio",
+      "periodo": "2024",
+      "source": "https://serpavi.mivau.gob.es/"
+    },
+    "estimates": {
+      "venta_total_eur_low": 357031,
+      "venta_total_eur_high": 535546,
+      "venta_base_eur": 446288,
+      "venta_nota": "172 m² × 2595 €/m² (MITMA Coruña (A) T4 2025) × banda ±19%",
+      "alquiler_mensual_eur_low": 1038,
+      "alquiler_mensual_eur_high": 1404,
+      "alquiler_mensual_base_eur": 1221,
+      "alquiler_nota": "172 m² × 7.10 €/m²/mes (SERPAVI Coruña, A 2024) × banda ±15%"
+    }
+  },
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 3.939928980995319
+}

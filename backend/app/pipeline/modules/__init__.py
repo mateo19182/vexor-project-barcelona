@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from app.pipeline.base import Module
 from app.pipeline.modules.boe import BoeModule
+from app.pipeline.modules.borme import BormeModule
 from app.pipeline.modules.breach_scout import BreachScoutModule
 from app.pipeline.modules.google_maps import GoogleMapsModule
 from app.pipeline.modules.icloud_check import ICloudCheckModule
@@ -25,6 +26,7 @@ from app.pipeline.modules.xon import XposedOrNotModule
 
 REGISTRY: list[Module] = [
     BoeModule(),
+    BormeModule(),
     BreachScoutModule(),
     GoogleMapsModule(),
     ICloudCheckModule(),

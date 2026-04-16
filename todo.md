@@ -1,25 +1,18 @@
-write audit log to file
-    ensure that runs are id'd by case number!
-
-how does vision depend on instagram?
-
 use ensemble models for osint web!
-    many more improvements! research, brave, exa etc...
+    many examples of people doing this, research
 
-if usefull, have automatic court order requests redacted and sent for additional data on identifies registered platforms
+automated court order requests for the data?
 
-improve context managment, currently full of not usefull data... also unstructured data is getting lost
+improve context managment, currently full of not usefull data... also some unstructured data is getting lost
 
-modules:
-    - instagram vm
-    - icloud vm
-    - address data
-    - haveibeen pwned
-    - clay
-
-~~get profile pictore and do search~~ — done: `image_search` module (SerpAPI google_lens)
-
+clay ?
 
 limited ourselves to free apis
 
-boe!
+boe regex to ensure relevant data
+
+sherlock osint tool
+
+linkedin!!
+
+twitter search!

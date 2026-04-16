@@ -120,9 +120,9 @@ async def reverse_image_lookup(
     expected to check configuration first. HTTP / JSON errors surface as
     exceptions; the caller logs and converts them to a module ``error`` state.
     """
-    api_key = settings.serpapi_api_key
+    api_key = settings.serper_api_key
     if not api_key:
-        raise RuntimeError("SERPAPI_API_KEY not configured")
+        raise RuntimeError("SERPER_API_KEY not configured")
 
     params = {
         "engine": "google_lens",

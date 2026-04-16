@@ -167,12 +167,12 @@ class ImageSearchModule:
                 duration_s=time.monotonic() - t0,
             )
 
-        if not settings.serpapi_api_key:
+        if not settings.serper_api_key:
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                summary="Reverse-image search disabled (SERPAPI_API_KEY not set).",
-                gaps=["SERPAPI_API_KEY not configured — module disabled"],
+                summary="Reverse-image search disabled (SERPER_API_KEY not set).",
+                gaps=["SERPER_API_KEY not configured — module disabled"],
                 duration_s=time.monotonic() - t0,
             )
         if not settings.hikerapi_token:

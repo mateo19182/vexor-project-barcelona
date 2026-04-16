@@ -1,0 +1,90 @@
+{
+  "name": "boe",
+  "status": "ok",
+  "summary": "10 BOE risk/role signal(s), 0 other entry(ies) for 'Pedro Cao Eiriz'.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "BOE-A-2020-4859 Real Decreto Legislativo 1/2020, de 5 de mayo, por el que se aprueba el texto refundido de la Ley Concursal.",
+      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-4859",
+      "confidence": 0.85,
+      "notes": "4. La solicitud de declaración de concurso presentada por cualquier acreedor deberá fundarse en alguno de los siguientes hechos externos reveladores del estado de insolvencia: 1.º <strong>La existencia de una previa declaración judicial o administrativa de insolvencia del deudor, siempre que sea firme</strong>."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se ",
+      "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-14580",
+      "confidence": 0.85,
+      "notes": "Cuando el deudor insolvente es una persona física, el <strong>concurso</strong> pretende identificar a los deudores de buena fe y ofrecerles una exoneración parcial de su pasivo insatisfecho que les permita beneficiarse de una segunda oportunidad, evitando su paso a la economía sumergida o a una situación ..."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOE-A-2003-13813 Ley 22/2003, de 9 de julio, Concursal.",
+      "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13813",
+      "confidence": 0.85,
+      "notes": "El efecto más severo que la ley ... y liquidadores, que <strong>el juez puede acordar cuando exista fundada posibilidad de que el concurso se califique como culpable y de que la masa activa resulte insuficiente para satisfacer todas las deudas</strong>...."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "TEJU . Búsqueda de edictos judiciales: ayuda y contenido",
+      "source": "https://www.boe.es/buscar/ayudas/edictos_judiciales_ayuda.php",
+      "confidence": 0.85,
+      "notes": "Tras efectuar la búsqueda se recupera un listado de resultados en los que aparecen reseñados los documentos localizados con los siguientes datos: publicación (número de BOE al que corresponde el suplemento y fecha de publicación), órgano judicial emisor del edicto, y título."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Ley 22/2003, de 9 de julio, Concursal. Jefatura del Estado",
+      "source": "https://boe.es/buscar/pdf/2003/BOE-A-2003-13813-consolidado.pdf",
+      "confidence": 0.85,
+      "notes": "Durante la tramitación del concurso se mantienen los órganos de la persona jurídica · deudora. Los administradores concursales están legitimados para ejercer las acciones de · responsabilidad contra los administradores, auditores y liquidadores, sin necesidad de previo · acuerdo de la junta o asamblea de socios. El efecto más severo que la ley establece es el · del embargo de bienes y derechos de los administradores y liquidadores, que el juez puede"
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOE.es - Buscar en todo el BOE: Ayuda y contenido",
+      "source": "https://www.boe.es/buscar/ayudas/boe_ayuda.php",
+      "confidence": 0.85,
+      "notes": "En la sección IV &quot;Administración de Justicia&quot; se publican los edictos, notificaciones, requisitorias y anuncios de los Juzgados y Tribunales, incluidos los anuncios de subastas judiciales del portal de subastas de la AEBOE."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOE.es - DOUE-L-2026-80503 Directiva (UE) 2026/799 del Parlamento Europeo y del Consejo, de 30 de marzo de 2026, relativa a la armonización de determinados aspectos del Derecho en materia de insolvencia.",
+      "source": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80503",
+      "confidence": 0.85,
+      "notes": "DOUE-L-2026-80503 Directiva (UE) 2026/799 del Parlamento Europeo y del Consejo, de 30 de marzo de 2026, relativa a la armonización de determinados aspectos del Derecho en materia de <strong>insolvencia</strong>."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOE-B-2016-57830 MADRID",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-57830",
+      "confidence": 0.85,
+      "notes": "<strong>ACUERDO DESESTIMAR la petición de concurso, por lo que se pone fin al presente procedimiento y lo anterior con expresa condena en costas a la parte actora</strong>. Líbrese Edicto al BOE con testimonio de éste Auto, así como despacho al Registro Civil, que serán entregados a la representación ..."
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la",
+      "source": "https://www.boe.es/buscar/pdf/2022/BOE-A-2022-14580-consolidado.pdf",
+      "confidence": 0.85,
+      "notes": "embargo, una novedad muy importante en nuestro sistema: el acceso a los registros de los · actos de ejecución del plan de reestructuración, incluso aunque no haya adquirido firmeza. Una impugnación del plan no impedirá la inscripción registral de esos actos. El interés en · facilitar la inmediatez de la reestructuración en una situación de extraordinaria urgencia ante · la inminencia del concurso justifica esta excepción a las reglas generales del derecho"
+    },
+    {
+      "kind": "risk_flag",
+      "value": "BOE-A-2015-7851 Ley 19/2015, de 13 de julio, de medidas de reforma administrativa en el ámbito de la Administración de Justicia y del Registro Civil.",
+      "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2015-7851",
+      "confidence": 0.85,
+      "notes": "Con carácter previo el Secretario judicial llevará a cabo la oportuna consulta al Registro Público Concursal a los efectos previstos en el apartado 4 del artículo 5 bis de la Ley Concursal.» · «3. Dictado el auto por el Juez o Magistrado, el Secretario judicial responsable de la ejecución, en el mismo día o en el siguiente día hábil a aquél en que hubiera sido dictado el auto despachando ejecución, dictará decreto en el que se contendrán: 1.º Las medidas ejecutivas concretas que resultaren procedentes, incluido si fuera posible el embargo de bienes."
+    }
+  ],
+  "gaps": [],
+  "raw": {},
+  "ctx_patch": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "address": null,
+    "instagram_handle": null,
+    "linkedin_url": null
+  },
+  "duration_s": 1.9333282379957382
+}

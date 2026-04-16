@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     brave_api_key: str = ""
     # SerpAPI key used by the image_search module's google_lens reverse-image
     # lookup. Absent → the module skips cleanly.
-    serpapi_api_key: str = ""
+    serper_api_key: str = ""
     # HikerAPI token for Osintgram's hikerapi-backed mode. Exported into the
     # subprocess env as HIKERAPI_TOKEN (Osintgram reads it case-sensitive).
     hikerapi_token: str = ""

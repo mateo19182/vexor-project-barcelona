@@ -1,0 +1,1526 @@
+{
+  "case_id": "C003",
+  "status": "enriched",
+  "dossier": {
+    "summary": "10 BOE risk/role signal(s), 0 other entry(ies) for 'Pedro Cao Eiriz'. Found in 1 breach record(s) | 3 new phone(s) discovered: 2017-08-01, 77.27.5.101, 2018-07-01 pedrocaoeiriz@gmail.com is NOT registered on iCloud. Pedro Cao Eiriz is a graphic and 3D designer from A Coruña, Spain, currently based in Barcelona where he studied Publicidad y RRPP at the Universitat Autònoma de Barcelona (2023–2025). His LinkedIn profile confirms a freelance design career since 2022 and past association with the La Coruña design/clothing brand Caosboi (2019–2022), which matches his registered address. The caosboi.com brand references Instagram handle @caosboi, consistent with his self-managed design brand. Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018 Inmueble en R. Filantropía, 36, 15011 A Coruña. Catastro: 172 m², Residencial, 1935 | venta estimada 357k €–536k € | alquiler estimado 1k €–1k €/mes Could not retrieve any Instagram data for @caosboi.",
+    "facts": [
+      {
+        "claim": "Identity found in 1 breach record(s) in the breach intelligence database",
+        "source": "https://9ghz.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "Caosboi product listing cites 'my instagram: @caosboi', indicating sole/personal operation of brand",
+        "source": "https://www.caosboi.com/product/patagio-vest",
+        "confidence": 0.78
+      },
+      {
+        "claim": "Pedro Cao Eiriz has 59 LinkedIn connections and 60 followers as of Jan 2026",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.92
+      },
+      {
+        "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Overall breach risk score: Moderate (28/100)",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.85
+      },
+      {
+        "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+        "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Inmueble en R. Filantropía, 36, 15011 A Coruña: superficie 172 m², uso Residencial, año construcción 1935. Referencia catastral: 7318020NJ4071N0001HM.",
+        "source": "https://catastro-api.es",
+        "confidence": 0.95
+      }
+    ],
+    "signals": [
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2020-4859 Real Decreto Legislativo 1/2020, de 5 de mayo, por el que se aprueba el texto refundido de la Ley Concursal.",
+        "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-4859",
+        "confidence": 0.85,
+        "notes": "4. La solicitud de declaración de concurso presentada por cualquier acreedor deberá fundarse en alguno de los siguientes hechos externos reveladores del estado de insolvencia: 1.º <strong>La existencia de una previa declaración judicial o administrativa de insolvencia del deudor, siempre que sea firme</strong>."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se ",
+        "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-14580",
+        "confidence": 0.85,
+        "notes": "Cuando el deudor insolvente es una persona física, el <strong>concurso</strong> pretende identificar a los deudores de buena fe y ofrecerles una exoneración parcial de su pasivo insatisfecho que les permita beneficiarse de una segunda oportunidad, evitando su paso a la economía sumergida o a una situación ..."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2003-13813 Ley 22/2003, de 9 de julio, Concursal.",
+        "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13813",
+        "confidence": 0.85,
+        "notes": "El efecto más severo que la ley ... y liquidadores, que <strong>el juez puede acordar cuando exista fundada posibilidad de que el concurso se califique como culpable y de que la masa activa resulte insuficiente para satisfacer todas las deudas</strong>...."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "TEJU . Búsqueda de edictos judiciales: ayuda y contenido",
+        "source": "https://www.boe.es/buscar/ayudas/edictos_judiciales_ayuda.php",
+        "confidence": 0.85,
+        "notes": "Tras efectuar la búsqueda se recupera un listado de resultados en los que aparecen reseñados los documentos localizados con los siguientes datos: publicación (número de BOE al que corresponde el suplemento y fecha de publicación), órgano judicial emisor del edicto, y título."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Ley 22/2003, de 9 de julio, Concursal. Jefatura del Estado",
+        "source": "https://boe.es/buscar/pdf/2003/BOE-A-2003-13813-consolidado.pdf",
+        "confidence": 0.85,
+        "notes": "Durante la tramitación del concurso se mantienen los órganos de la persona jurídica · deudora. Los administradores concursales están legitimados para ejercer las acciones de · responsabilidad contra los administradores, auditores y liquidadores, sin necesidad de previo · acuerdo de la junta o asamblea de socios. El efecto más severo que la ley establece es el · del embargo de bienes y derechos de los administradores y liquidadores, que el juez puede"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE.es - Buscar en todo el BOE: Ayuda y contenido",
+        "source": "https://www.boe.es/buscar/ayudas/boe_ayuda.php",
+        "confidence": 0.85,
+        "notes": "En la sección IV &quot;Administración de Justicia&quot; se publican los edictos, notificaciones, requisitorias y anuncios de los Juzgados y Tribunales, incluidos los anuncios de subastas judiciales del portal de subastas de la AEBOE."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE.es - DOUE-L-2026-80503 Directiva (UE) 2026/799 del Parlamento Europeo y del Consejo, de 30 de marzo de 2026, relativa a la armonización de determinados aspectos del Derecho en materia de insolvencia.",
+        "source": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80503",
+        "confidence": 0.85,
+        "notes": "DOUE-L-2026-80503 Directiva (UE) 2026/799 del Parlamento Europeo y del Consejo, de 30 de marzo de 2026, relativa a la armonización de determinados aspectos del Derecho en materia de <strong>insolvencia</strong>."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-B-2016-57830 MADRID",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-57830",
+        "confidence": 0.85,
+        "notes": "<strong>ACUERDO DESESTIMAR la petición de concurso, por lo que se pone fin al presente procedimiento y lo anterior con expresa condena en costas a la parte actora</strong>. Líbrese Edicto al BOE con testimonio de éste Auto, así como despacho al Registro Civil, que serán entregados a la representación ..."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la",
+        "source": "https://www.boe.es/buscar/pdf/2022/BOE-A-2022-14580-consolidado.pdf",
+        "confidence": 0.85,
+        "notes": "embargo, una novedad muy importante en nuestro sistema: el acceso a los registros de los · actos de ejecución del plan de reestructuración, incluso aunque no haya adquirido firmeza. Una impugnación del plan no impedirá la inscripción registral de esos actos. El interés en · facilitar la inmediatez de la reestructuración en una situación de extraordinaria urgencia ante · la inminencia del concurso justifica esta excepción a las reglas generales del derecho"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "BOE-A-2015-7851 Ley 19/2015, de 13 de julio, de medidas de reforma administrativa en el ámbito de la Administración de Justicia y del Registro Civil.",
+        "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2015-7851",
+        "confidence": 0.85,
+        "notes": "Con carácter previo el Secretario judicial llevará a cabo la oportuna consulta al Registro Público Concursal a los efectos previstos en el apartado 4 del artículo 5 bis de la Ley Concursal.» · «3. Dictado el auto por el Juez o Magistrado, el Secretario judicial responsable de la ejecución, en el mismo día o en el siguiente día hábil a aquél en que hubiera sido dictado el auto despachando ejecución, dictará decreto en el que se contendrán: 1.º Las medidas ejecutivas concretas que resultaren procedentes, incluido si fuera posible el embargo de bienes."
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Debtor identifiers found in 1 breach record(s)",
+        "source": "https://9ghz.com",
+        "confidence": 0.85,
+        "notes": "Breaches: breach database"
+      },
+      {
+        "kind": "contact",
+        "value": "2017-08-01",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "77.27.5.101",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "contact",
+        "value": "2018-07-01",
+        "source": "https://9ghz.com",
+        "confidence": 0.7,
+        "notes": "Phone number recovered from breach records"
+      },
+      {
+        "kind": "location",
+        "value": "A Coruña, Galicia, ES",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.95,
+        "notes": "Multiple past work positions listed in La Coruña; matches registered address 15011 A Coruña"
+      },
+      {
+        "kind": "location",
+        "value": "Barcelona, Catalonia, ES",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.92,
+        "notes": "Current location per LinkedIn profile; linked to UAB studies 2023–2025"
+      },
+      {
+        "kind": "role",
+        "value": "Freelance Graphic & 3D Designer (Autónomo)",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.97,
+        "notes": "Self-employed since Jan 2022; packaging, 3D, graphic solutions for companies and individuals"
+      },
+      {
+        "kind": "business",
+        "value": "Caosboi (clothing/design brand, caosboi.com)",
+        "source": "https://www.caosboi.com/product/patagio-vest",
+        "confidence": 0.78,
+        "notes": "LinkedIn lists 'Diseñador at Caosboi' Jan 2019–Jan 2022, La Coruña; brand name derived from surname 'Cao'; website references 'my instagram: @caosboi' suggesting sole operator"
+      },
+      {
+        "kind": "employer",
+        "value": "Bar Lord, La Coruña (hospitality, seasonal)",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.92,
+        "notes": "Bar Waiter Jun–Sep 2024"
+      },
+      {
+        "kind": "employer",
+        "value": "Leinster House Hotel, London (hospitality, seasonal)",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.92,
+        "notes": "Hostelero Jul–Sep 2023, London area"
+      },
+      {
+        "kind": "employer",
+        "value": "Noa Boutique Hotel, La Coruña (hospitality, seasonal)",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.92,
+        "notes": "Bar Waiter Jun–Sep 2021"
+      },
+      {
+        "kind": "affiliation",
+        "value": "Universitat Autònoma de Barcelona – Publicidad y RRPP (2023–2025)",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.95,
+        "notes": null
+      },
+      {
+        "kind": "affiliation",
+        "value": "Universidade de Vigo (2021–2023)",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.95,
+        "notes": null
+      },
+      {
+        "kind": "lifestyle",
+        "value": "Handmade organic clothing capsule collections (Caosboi brand)",
+        "source": "https://www.caosboi.com/product/patagio-vest",
+        "confidence": 0.75,
+        "notes": "Items priced €40–€95, handmade, organic cotton; sold EU-wide with ID verification"
+      },
+      {
+        "kind": "contact",
+        "value": "8fit.com",
+        "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+        "confidence": 0.85,
+        "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations"
+      },
+      {
+        "kind": "contact",
+        "value": "taringa.net",
+        "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+        "confidence": 0.85,
+        "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords"
+      },
+      {
+        "kind": "risk_flag",
+        "value": "Password exposed as easytocrack in Taringa breach",
+        "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+        "confidence": 0.9,
+        "notes": null
+      },
+      {
+        "kind": "asset",
+        "value": "Inmueble en A Coruña, ES: valor estimado 357k €–536k €",
+        "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS",
+        "confidence": 0.65,
+        "notes": "172 m² × 2595 €/m² (MITMA Coruña (A) T4 2025) × banda ±19%"
+      },
+      {
+        "kind": "asset",
+        "value": "Alquiler estimado 1k €–1k €/mes (A Coruña, ES)",
+        "source": "https://serpavi.mivau.gob.es/",
+        "confidence": 0.7,
+        "notes": "172 m² × 7.10 €/m²/mes (SERPAVI Coruña, A 2024) × banda ±15%"
+      }
+    ],
+    "gaps": [
+      "Instagram returned ambiguous status 'INVALID' for pedrocaoeiriz@gmail.com",
+      "Cannot directly confirm the Gmail address pedrocaoeiriz@gmail.com is tied to the LinkedIn or Instagram profiles found — identity match inferred from exact name + La Coruña address overlap only",
+      "No Twitter/X or Facebook profile confirmed for this subject",
+      "Cannot confirm whether caosboi.com or @caosboi Instagram is solely operated by Pedro or involves collaborators (e.g. Marta Santorum listed on one product)",
+      "Current residential address in A Coruña vs. current LinkedIn location (Barcelona) — unclear if subject still maintains A Coruña as primary residence",
+      "No public records, company registration, or directorship found under this name in Spanish registries from retrieved sources",
+      "Twitter returned ambiguous status 'BAN' for pedrocaoeiriz@gmail.com",
+      "SERPAPI_API_KEY not configured — module disabled",
+      "Osintgram 'info': Instagram user 'caosboi' not found"
+    ]
+  },
+  "llm_summary": {
+    "summary": "Pedro Cao Eiriz is a Spanish national registered at R. Filantropía, 36, 15011 A Coruña, Galicia, ES. His current location per LinkedIn is Barcelona, Catalonia, ES, where he studied Publicidad y RRPP at the Universitat Autònoma de Barcelona (2023–2025). He previously studied at the Universidade de Vigo (2021–2023). He is self-employed as a freelance graphic and 3D designer (autónomo) since January 2022. From January 2019 to January 2022 he operated Caosboi, a clothing and design brand based in La Coruña. He has held seasonal hospitality roles: Bar Waiter at Noa Boutique Hotel, La Coruña (Jun–Sep 2021); Hostelero at Leinster House Hotel, London (Jul–Sep 2023); Bar Waiter at Bar Lord, La Coruña (Jun–Sep 2024). The registered address at R. Filantropía, 36 corresponds to a 172 m² residential property built in 1935 (catastral reference 7318020NJ4071N0001HM), with an estimated sale value of €357,000–€536,000 and an estimated rental value of €1,000/month. The email pedrocaoeiriz@gmail.com appears in 2 data breaches (earliest 2017, latest 2018) via taringa.net and 8fit.com, with one exposed password classified as a weak hash. The debt amount, origin, age, call history, and legal asset finding are all unknown in the case file. BOE signals returned relate to general Spanish insolvency legislation and no named personal insolvency record for this subject was confirmed.",
+    "key_facts": [
+      "Registered address: R. Filantropía, 36, 15011 A Coruña, Galicia, ES",
+      "Current location per LinkedIn: Barcelona, Catalonia, ES",
+      "Self-employed freelance graphic and 3D designer (autónomo) since January 2022",
+      "Operated Caosboi clothing/design brand, La Coruña, January 2019–January 2022",
+      "Seasonal bar waiter at Bar Lord, La Coruña, June–September 2024",
+      "Seasonal hostelero at Leinster House Hotel, London, July–September 2023",
+      "Seasonal bar waiter at Noa Boutique Hotel, La Coruña, June–September 2021",
+      "Studied Publicidad y RRPP, Universitat Autònoma de Barcelona, 2023–2025",
+      "Studied at Universidade de Vigo, 2021–2023",
+      "Property at registered address: 172 m², residential, built 1935, catastral ref 7318020NJ4071N0001HM",
+      "Estimated property sale value: €357,000–€536,000",
+      "Estimated property rental value: €1,000/month",
+      "Email pedrocaoeiriz@gmail.com found in 2 data breaches (2017 and 2018)",
+      "Breach exposure includes: email addresses, passwords, usernames, names, IP addresses, genders, geographic locations",
+      "One exposed password is a weak hash (easy-to-crack)",
+      "Email registered on taringa.net and 8fit.com",
+      "Instagram handle: @caosboi",
+      "Debt amount, origin, age, call history, and legal asset finding: all unknown"
+    ]
+  },
+  "modules": [
+    {
+      "name": "boe",
+      "status": "ok",
+      "summary": "10 BOE risk/role signal(s), 0 other entry(ies) for 'Pedro Cao Eiriz'.",
+      "social_links": [],
+      "facts": [],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2020-4859 Real Decreto Legislativo 1/2020, de 5 de mayo, por el que se aprueba el texto refundido de la Ley Concursal.",
+          "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2020-4859",
+          "confidence": 0.85,
+          "notes": "4. La solicitud de declaración de concurso presentada por cualquier acreedor deberá fundarse en alguno de los siguientes hechos externos reveladores del estado de insolvencia: 1.º <strong>La existencia de una previa declaración judicial o administrativa de insolvencia del deudor, siempre que sea firme</strong>."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2022-14580 Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la Ley Concursal, aprobado por el Real Decreto Legislativo 1/2020, de 5 de mayo, para la transposición de la Directiva (UE) 2019/1023 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, sobre marcos de reestructuración preventiva, exoneración de deudas e inhabilitaciones, y sobre medidas para aumentar la eficiencia de los procedimientos de reestructuración, insolvencia y exoneración de deudas, y por la que se ",
+          "source": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-14580",
+          "confidence": 0.85,
+          "notes": "Cuando el deudor insolvente es una persona física, el <strong>concurso</strong> pretende identificar a los deudores de buena fe y ofrecerles una exoneración parcial de su pasivo insatisfecho que les permita beneficiarse de una segunda oportunidad, evitando su paso a la economía sumergida o a una situación ..."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2003-13813 Ley 22/2003, de 9 de julio, Concursal.",
+          "source": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-13813",
+          "confidence": 0.85,
+          "notes": "El efecto más severo que la ley ... y liquidadores, que <strong>el juez puede acordar cuando exista fundada posibilidad de que el concurso se califique como culpable y de que la masa activa resulte insuficiente para satisfacer todas las deudas</strong>...."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "TEJU . Búsqueda de edictos judiciales: ayuda y contenido",
+          "source": "https://www.boe.es/buscar/ayudas/edictos_judiciales_ayuda.php",
+          "confidence": 0.85,
+          "notes": "Tras efectuar la búsqueda se recupera un listado de resultados en los que aparecen reseñados los documentos localizados con los siguientes datos: publicación (número de BOE al que corresponde el suplemento y fecha de publicación), órgano judicial emisor del edicto, y título."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Ley 22/2003, de 9 de julio, Concursal. Jefatura del Estado",
+          "source": "https://boe.es/buscar/pdf/2003/BOE-A-2003-13813-consolidado.pdf",
+          "confidence": 0.85,
+          "notes": "Durante la tramitación del concurso se mantienen los órganos de la persona jurídica · deudora. Los administradores concursales están legitimados para ejercer las acciones de · responsabilidad contra los administradores, auditores y liquidadores, sin necesidad de previo · acuerdo de la junta o asamblea de socios. El efecto más severo que la ley establece es el · del embargo de bienes y derechos de los administradores y liquidadores, que el juez puede"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE.es - Buscar en todo el BOE: Ayuda y contenido",
+          "source": "https://www.boe.es/buscar/ayudas/boe_ayuda.php",
+          "confidence": 0.85,
+          "notes": "En la sección IV &quot;Administración de Justicia&quot; se publican los edictos, notificaciones, requisitorias y anuncios de los Juzgados y Tribunales, incluidos los anuncios de subastas judiciales del portal de subastas de la AEBOE."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE.es - DOUE-L-2026-80503 Directiva (UE) 2026/799 del Parlamento Europeo y del Consejo, de 30 de marzo de 2026, relativa a la armonización de determinados aspectos del Derecho en materia de insolvencia.",
+          "source": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80503",
+          "confidence": 0.85,
+          "notes": "DOUE-L-2026-80503 Directiva (UE) 2026/799 del Parlamento Europeo y del Consejo, de 30 de marzo de 2026, relativa a la armonización de determinados aspectos del Derecho en materia de <strong>insolvencia</strong>."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-B-2016-57830 MADRID",
+          "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2016-57830",
+          "confidence": 0.85,
+          "notes": "<strong>ACUERDO DESESTIMAR la petición de concurso, por lo que se pone fin al presente procedimiento y lo anterior con expresa condena en costas a la parte actora</strong>. Líbrese Edicto al BOE con testimonio de éste Auto, así como despacho al Registro Civil, que serán entregados a la representación ..."
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Ley 16/2022, de 5 de septiembre, de reforma del texto refundido de la",
+          "source": "https://www.boe.es/buscar/pdf/2022/BOE-A-2022-14580-consolidado.pdf",
+          "confidence": 0.85,
+          "notes": "embargo, una novedad muy importante en nuestro sistema: el acceso a los registros de los · actos de ejecución del plan de reestructuración, incluso aunque no haya adquirido firmeza. Una impugnación del plan no impedirá la inscripción registral de esos actos. El interés en · facilitar la inmediatez de la reestructuración en una situación de extraordinaria urgencia ante · la inminencia del concurso justifica esta excepción a las reglas generales del derecho"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "BOE-A-2015-7851 Ley 19/2015, de 13 de julio, de medidas de reforma administrativa en el ámbito de la Administración de Justicia y del Registro Civil.",
+          "source": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2015-7851",
+          "confidence": 0.85,
+          "notes": "Con carácter previo el Secretario judicial llevará a cabo la oportuna consulta al Registro Público Concursal a los efectos previstos en el apartado 4 del artículo 5 bis de la Ley Concursal.» · «3. Dictado el auto por el Juez o Magistrado, el Secretario judicial responsable de la ejecución, en el mismo día o en el siguiente día hábil a aquél en que hubiera sido dictado el auto despachando ejecución, dictará decreto en el que se contendrán: 1.º Las medidas ejecutivas concretas que resultaren procedentes, incluido si fuera posible el embargo de bienes."
+        }
+      ],
+      "gaps": [],
+      "raw": {},
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 1.9333282379957382
+    },
+    {
+      "name": "breach_scout",
+      "status": "ok",
+      "summary": "Found in 1 breach record(s) | 3 new phone(s) discovered: 2017-08-01, 77.27.5.101, 2018-07-01",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Identity found in 1 breach record(s) in the breach intelligence database",
+          "source": "https://9ghz.com",
+          "confidence": 0.85
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk_flag",
+          "value": "Debtor identifiers found in 1 breach record(s)",
+          "source": "https://9ghz.com",
+          "confidence": 0.85,
+          "notes": "Breaches: breach database"
+        },
+        {
+          "kind": "contact",
+          "value": "2017-08-01",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "77.27.5.101",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        },
+        {
+          "kind": "contact",
+          "value": "2018-07-01",
+          "source": "https://9ghz.com",
+          "confidence": 0.7,
+          "notes": "Phone number recovered from breach records"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "keywords": [
+          "Pedro Cao Eiriz",
+          "pedrocaoeiriz@gmail.com"
+        ],
+        "mode": "authenticated_batch",
+        "response": {
+          "code": 0,
+          "msg": "ok",
+          "data": [
+            {
+              "data": [],
+              "keyword": "Pedro Cao Eiriz",
+              "total_count": 0
+            },
+            {
+              "data": [
+                {
+                  "email": "pedrocaoeiriz@gmail.com",
+                  "source": {
+                    "breach_date": "2017-08-01",
+                    "domain": "taringa.net",
+                    "id": "473659",
+                    "record_count": 27971100,
+                    "region": "",
+                    "title": "Taringa"
+                  },
+                  "user_name": "pedroko22"
+                },
+                {
+                  "address": "ES",
+                  "email": "pedrocaoeiriz@gmail.com",
+                  "gender": "M",
+                  "ip_address": "77.27.5.101",
+                  "real_name": "Pedro",
+                  "source": {
+                    "breach_date": "2018-07-01",
+                    "domain": "8fit.com",
+                    "id": "47485a",
+                    "record_count": 15025407,
+                    "region": "",
+                    "title": "8fit"
+                  }
+                },
+                {
+                  "email": "pedrocaoeiriz@gmail.com",
+                  "password": "$2a$10$oqf9O8daMMn33RdvdqGvCO4vjG.yv/MTz6izxlUW6CldZe0hs9Vme",
+                  "source": {
+                    "breach_date": "2018-07-01",
+                    "domain": "8fit.com",
+                    "id": "47485a",
+                    "record_count": 15025407,
+                    "region": "",
+                    "title": "8fit"
+                  }
+                }
+              ],
+              "keyword": "pedrocaoeiriz@gmail.com",
+              "total_count": 3
+            }
+          ]
+        },
+        "status_code": 200,
+        "response_bytes": 805
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": {
+          "value": "2017-08-01",
+          "source": "https://9ghz.com",
+          "confidence": 0.55
+        },
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 2.1107182129999273
+    },
+    {
+      "name": "icloud_check",
+      "status": "ok",
+      "summary": "pedrocaoeiriz@gmail.com is NOT registered on iCloud.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [],
+      "raw": {
+        "checks": [
+          {
+            "platform": "iCloud",
+            "identifier": "pedrocaoeiriz@gmail.com",
+            "status_raw": "FAIL",
+            "http_status": 200,
+            "session_id": "ac9248b4-c7f5-4474-aeeb-40d074466a6e",
+            "error": null
+          }
+        ]
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 3.357403989000886
+    },
+    {
+      "name": "instagram_check",
+      "status": "no_data",
+      "summary": "Instagram check for pedrocaoeiriz@gmail.com was inconclusive (status: INVALID).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Instagram returned ambiguous status 'INVALID' for pedrocaoeiriz@gmail.com"
+      ],
+      "raw": {
+        "platform": "Instagram",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "INVALID",
+        "http_status": 200,
+        "session_id": "42892e95-add2-43f5-8381-350574640e47",
+        "error": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.9866040889974101
+    },
+    {
+      "name": "osint_web",
+      "status": "ok",
+      "summary": "Pedro Cao Eiriz is a graphic and 3D designer from A Coruña, Spain, currently based in Barcelona where he studied Publicidad y RRPP at the Universitat Autònoma de Barcelona (2023–2025). His LinkedIn profile confirms a freelance design career since 2022 and past association with the La Coruña design/clothing brand Caosboi (2019–2022), which matches his registered address. The caosboi.com brand references Instagram handle @caosboi, consistent with his self-managed design brand.",
+      "social_links": [
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "handle": "pedro-cao-eiriz-132635243",
+          "confidence": 0.97
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/caosboi/",
+          "handle": "caosboi",
+          "confidence": 0.78
+        }
+      ],
+      "facts": [
+        {
+          "claim": "Caosboi product listing cites 'my instagram: @caosboi', indicating sole/personal operation of brand",
+          "source": "https://www.caosboi.com/product/patagio-vest",
+          "confidence": 0.78
+        },
+        {
+          "claim": "Pedro Cao Eiriz has 59 LinkedIn connections and 60 followers as of Jan 2026",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.92
+        }
+      ],
+      "signals": [
+        {
+          "kind": "location",
+          "value": "A Coruña, Galicia, ES",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.95,
+          "notes": "Multiple past work positions listed in La Coruña; matches registered address 15011 A Coruña"
+        },
+        {
+          "kind": "location",
+          "value": "Barcelona, Catalonia, ES",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.92,
+          "notes": "Current location per LinkedIn profile; linked to UAB studies 2023–2025"
+        },
+        {
+          "kind": "role",
+          "value": "Freelance Graphic & 3D Designer (Autónomo)",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.97,
+          "notes": "Self-employed since Jan 2022; packaging, 3D, graphic solutions for companies and individuals"
+        },
+        {
+          "kind": "business",
+          "value": "Caosboi (clothing/design brand, caosboi.com)",
+          "source": "https://www.caosboi.com/product/patagio-vest",
+          "confidence": 0.78,
+          "notes": "LinkedIn lists 'Diseñador at Caosboi' Jan 2019–Jan 2022, La Coruña; brand name derived from surname 'Cao'; website references 'my instagram: @caosboi' suggesting sole operator"
+        },
+        {
+          "kind": "employer",
+          "value": "Bar Lord, La Coruña (hospitality, seasonal)",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.92,
+          "notes": "Bar Waiter Jun–Sep 2024"
+        },
+        {
+          "kind": "employer",
+          "value": "Leinster House Hotel, London (hospitality, seasonal)",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.92,
+          "notes": "Hostelero Jul–Sep 2023, London area"
+        },
+        {
+          "kind": "employer",
+          "value": "Noa Boutique Hotel, La Coruña (hospitality, seasonal)",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.92,
+          "notes": "Bar Waiter Jun–Sep 2021"
+        },
+        {
+          "kind": "affiliation",
+          "value": "Universitat Autònoma de Barcelona – Publicidad y RRPP (2023–2025)",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.95,
+          "notes": null
+        },
+        {
+          "kind": "affiliation",
+          "value": "Universidade de Vigo (2021–2023)",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.95,
+          "notes": null
+        },
+        {
+          "kind": "lifestyle",
+          "value": "Handmade organic clothing capsule collections (Caosboi brand)",
+          "source": "https://www.caosboi.com/product/patagio-vest",
+          "confidence": 0.75,
+          "notes": "Items priced €40–€95, handmade, organic cotton; sold EU-wide with ID verification"
+        }
+      ],
+      "gaps": [
+        "Cannot directly confirm the Gmail address pedrocaoeiriz@gmail.com is tied to the LinkedIn or Instagram profiles found — identity match inferred from exact name + La Coruña address overlap only",
+        "No Twitter/X or Facebook profile confirmed for this subject",
+        "Cannot confirm whether caosboi.com or @caosboi Instagram is solely operated by Pedro or involves collaborators (e.g. Marta Santorum listed on one product)",
+        "Current residential address in A Coruña vs. current LinkedIn location (Barcelona) — unclear if subject still maintains A Coruña as primary residence",
+        "No public records, company registration, or directorship found under this name in Spanish registries from retrieved sources"
+      ],
+      "raw": {
+        "model": "claude-sonnet-4-6",
+        "backend": "exa",
+        "search_queries": [
+          "Pedro Cao Eiriz",
+          "pedrocaoeiriz@gmail.com",
+          "Pedro Cao Eiriz diseñador gráfico A Coruña Instagram",
+          "Caosboi diseñador A Coruña Pedro Cao",
+          "instagram.com/caosboi",
+          "caosboi.com Pedro Cao clothing brand A Coruña",
+          "site:caosboi.com about contact",
+          "\"Pedro Cao\" \"Coruña\" OR \"caosboi\" design portfolio"
+        ],
+        "fetched_urls": [
+          "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "https://www.linkedin.com/in/pedro-cao-b068b653",
+          "https://www.allaboutportugal.pt/pt/pacos-de-ferreira/desporto/campo-de-futebol-do-clube-desportivo-de-eiriz",
+          "https://empresite.jornaldenegocios.pt/Actividade/EIRIZ/",
+          "https://www.pai.pt/paginas/496885-pedro-meireles-cardoso-unipessoal-lda",
+          "https://www.playmakerstats.com/players/football/defender?current_team_id=11133",
+          "https://www.northdata.com/Pedro%20Meireles%20Cardoso%20Lda%C2%B7,%20Eiriz/PT%20513086862",
+          "https://www.ligaamadoratv.pt/2022/07/18/aguias-de-eiriz-aposta-forte-para-a-nova-temporada/",
+          "http://pesquisa.adb.uminho.pt/details?id=1255832",
+          "http://pesquisa.adb.uminho.pt/details?id=1287456",
+          "https://rocketreach.co/pedro-oliveira-email_50949835",
+          "https://www.oceansidegroup.pt/consultor/pedro-caeiro/34093014",
+          "http://www.transfermarkt.com/pedro-caeiro/profil/spieler/567521",
+          "https://building.theatlantic.com/@pedrocaeiros",
+          "https://eclan.eu/en/member/pedro-caeiro",
+          "https://www.criminaljusticenetwork.eu/it/autori/caeiro-pedro",
+          "https://eucrim.eu/authors/caeiro-pedro/",
+          "https://www.uc.pt/fduc/noticias/prof-doutor-pedro-caeiro-nomeado-como-membro-do-grupo-de-peritos-de-politica-criminal-da-uniao-europeia/",
+          "https://apps.uc.pt/mypage/faculty/pcaeiro/en/professional",
+          "https://www.transfermarkt.com.tr/pedro-caeiro/profil/spieler/567521",
+          "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "https://pedroairesdesign.com/",
+          "https://www.pai.pt/paginas/496885-pedro-meireles-cardoso-unipessoal-lda",
+          "https://www.eiriz.com/producto/comunica-con-exito/",
+          "https://www.eiroa.es/diseno-de-cocinas/",
+          "https://pedroiglesias.eu/",
+          "https://ruc.udc.es/items/b708f5f7-038a-4dad-937f-5c5c6723b7f7",
+          "https://linkedin.com/in/victortojo",
+          "https://helpermarketing.es/portfolio/cafeteria-aeira%C2%B7-novo-mesoiro-a-coruna/",
+          "https://linkedin.com/in/roberto-yepes-rodriguez-b347bb28",
+          "https://www.caosboi.com/product/patagio-vest",
+          "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "https://caoba.es/quienes-somos/",
+          "https://caoba.es/gl/",
+          "https://caoba.es/gl/sobre-nosotros-gallego/",
+          "https://linkedin.com/in/pedro-alves-0968a2136",
+          "https://pt.linkedin.com/pulse/ciao-pedro-segreto",
+          "http://www.xosecobas.com/",
+          "https://www.einforma.com/informacion-empresa/carmen-noya-cao-pedro-pombo-juan-bautista",
+          "https://caoba.es/",
+          "https://www.caosboi.com/product/patagio-vest",
+          "https://www.caosboi.com/product/gula-bag",
+          "https://www.behance.net/chuknorris",
+          "http://imgflip.com/user/CHAOS_BOI",
+          "https://nucleo.jor.br/garimpo/sabrina-carpenter-conservadorismo/",
+          "https://www.instagram.com/_caos.inside_/",
+          "https://socialveins.com/influencer/instagram/caosbrasil",
+          "https://www.instagram.com/ucheogboi/?hl=en",
+          "https://www.instagram.com/thatboi/?hl=en",
+          "http://caiotheboi.bandcamp.com/",
+          "https://www.caosboi.com/product/patagio-vest",
+          "https://www.caosbrand.com/pages/about-us",
+          "https://www.caosbrand.com/collections/outlet",
+          "https://caos.shopping/",
+          "https://caosbrand.com/",
+          "https://www.caosbrand.com/collections/tao",
+          "https://caos.shopping/en",
+          "https://www.caosbrand.com/products/boho-soft-negro",
+          "https://caoskids.com/single-brand/",
+          "https://www.caoscollective.co/collections/all",
+          "https://www.caosboi.com/product/patagio-vest",
+          "http://pcbo.dev/",
+          "https://www.caosboi.com/product/gula-bag",
+          "https://designbro.com/graphic-designer/Pedro/1646/",
+          "https://pedroepcastro.myportfolio.com/",
+          "https://cargocollective.com/pedrocaiado-en/Projects",
+          "https://github.com/pcbo",
+          "http://cargocollective.com/pedrocaiado/Objectos",
+          "https://silentcamxmf.github.io/",
+          "https://www.behance.net/pedrodesignstudio?locale=en_US"
+        ],
+        "stop_reason": "end_turn"
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": {
+          "value": "caosboi",
+          "source": "https://www.instagram.com/caosboi/",
+          "confidence": 0.78
+        },
+        "linkedin_url": {
+          "value": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+          "confidence": 0.97
+        }
+      },
+      "duration_s": 92.00924628800567
+    },
+    {
+      "name": "twitter_check",
+      "status": "no_data",
+      "summary": "Twitter check for pedrocaoeiriz@gmail.com was inconclusive (status: BAN).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Twitter returned ambiguous status 'BAN' for pedrocaoeiriz@gmail.com"
+      ],
+      "raw": {
+        "platform": "Twitter",
+        "identifier": "pedrocaoeiriz@gmail.com",
+        "status_raw": "BAN",
+        "http_status": 200,
+        "session_id": "51302541-566f-461e-9d39-bbaa45896c38",
+        "error": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 1.6304856019996805
+    },
+    {
+      "name": "xon",
+      "status": "ok",
+      "summary": "Email found in 2 breach(es); registered on: 8fit.com, taringa.net | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 2 breach(es); earliest 2017, latest 2018",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Email found in 2 breach(es); earliest 2017, latest 2018",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.95
+        },
+        {
+          "claim": "Exposed data types across all breaches: Email addresses, Genders, Geographic locations, IP addresses, Names, Passwords, Usernames",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.9
+        },
+        {
+          "claim": "Overall breach risk score: Moderate (28/100)",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.85
+        },
+        {
+          "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+          "source": "https://xposedornot.com/xposed/#pedrocaoeiriz%40gmail.com",
+          "confidence": 0.9
+        }
+      ],
+      "signals": [
+        {
+          "kind": "contact",
+          "value": "8fit.com",
+          "source": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+          "confidence": 0.85,
+          "notes": "Account registered on 8fit.com (breach year: 2018). Data exposed: Email addresses, Passwords, Genders, IP addresses, Names, Geographic locations"
+        },
+        {
+          "kind": "contact",
+          "value": "taringa.net",
+          "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+          "confidence": 0.85,
+          "notes": "Account registered on taringa.net (breach year: 2017). Data exposed: Usernames, Email addresses, Passwords"
+        },
+        {
+          "kind": "risk_flag",
+          "value": "Password exposed as easytocrack in Taringa breach",
+          "source": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+          "confidence": 0.9,
+          "notes": null
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "analytics_status": 200,
+        "analytics": {
+          "BreachMetrics": {
+            "get_details": [],
+            "industry": [
+              [
+                [
+                  "misc",
+                  0
+                ],
+                [
+                  "ente",
+                  0
+                ],
+                [
+                  "heal",
+                  1
+                ],
+                [
+                  "elec",
+                  0
+                ],
+                [
+                  "mini",
+                  0
+                ],
+                [
+                  "musi",
+                  0
+                ],
+                [
+                  "manu",
+                  0
+                ],
+                [
+                  "ener",
+                  0
+                ],
+                [
+                  "news",
+                  0
+                ],
+                [
+                  "hosp",
+                  0
+                ],
+                [
+                  "food",
+                  0
+                ],
+                [
+                  "phar",
+                  0
+                ],
+                [
+                  "educ",
+                  0
+                ],
+                [
+                  "cons",
+                  0
+                ],
+                [
+                  "agri",
+                  0
+                ],
+                [
+                  "tele",
+                  0
+                ],
+                [
+                  "info",
+                  0
+                ],
+                [
+                  "tran",
+                  0
+                ],
+                [
+                  "aero",
+                  0
+                ],
+                [
+                  "fina",
+                  0
+                ],
+                [
+                  "reta",
+                  0
+                ],
+                [
+                  "nonp",
+                  0
+                ],
+                [
+                  "govt",
+                  0
+                ],
+                [
+                  "spor",
+                  0
+                ],
+                [
+                  "envi",
+                  0
+                ]
+              ]
+            ],
+            "passwords_strength": [
+              {
+                "EasyToCrack": 1,
+                "PlainText": 0,
+                "StrongHash": 1,
+                "Unknown": 0
+              }
+            ],
+            "risk": [
+              {
+                "risk_label": "Moderate",
+                "risk_score": 28
+              }
+            ],
+            "xposed_data": [
+              {
+                "children": [
+                  {
+                    "name": "🔒 Security Practices",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "D",
+                        "name": "data_Passwords",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "📞 Communication and Social Interactions",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "F",
+                        "name": "data_Email addresses",
+                        "value": 2
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👤 Personal Identification",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Names",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Genders",
+                        "value": 1
+                      },
+                      {
+                        "colname": "level3",
+                        "group": "A",
+                        "name": "data_Usernames",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "🖥️ Device and Network Information",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "G",
+                        "name": "data_IP addresses",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  },
+                  {
+                    "name": "👥 Demographics",
+                    "children": [
+                      {
+                        "colname": "level3",
+                        "group": "I",
+                        "name": "data_Geographic locations",
+                        "value": 1
+                      }
+                    ],
+                    "colname": "level2"
+                  }
+                ]
+              }
+            ],
+            "yearwise_details": [
+              {
+                "y2007": 0,
+                "y2008": 0,
+                "y2009": 0,
+                "y2010": 0,
+                "y2011": 0,
+                "y2012": 0,
+                "y2013": 0,
+                "y2014": 0,
+                "y2015": 0,
+                "y2016": 0,
+                "y2017": 1,
+                "y2018": 1,
+                "y2019": 0,
+                "y2020": 0,
+                "y2021": 0,
+                "y2022": 0,
+                "y2023": 0,
+                "y2024": 0,
+                "y2025": 0,
+                "y2026": 0
+              }
+            ]
+          },
+          "BreachesSummary": {
+            "site": "8fit;Taringa"
+          },
+          "ExposedBreaches": {
+            "breaches_details": [
+              {
+                "breach": "8fit",
+                "details": "8fit, a popular fitness and health app, experienced a data breach. The breach occurred in early 2021, with the database made public later in June. The leaked data included email addresses and usernames, along with salted MD5 password hashes.",
+                "domain": "8fit.com",
+                "industry": "Health Care",
+                "logo": "https://xposedornot.com/static/logos/8fit.png",
+                "password_risk": "hardtocrack",
+                "references": "https://www.theregister.com/2019/02/11/620_million_hacked_accounts_dark_web/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Email addresses;Passwords;Genders;IP addresses;Names;Geographic locations",
+                "xposed_date": "2018",
+                "xposed_records": 15026800,
+                "added": "2023-11-08T06:30:21+00:00"
+              },
+              {
+                "breach": "Taringa",
+                "details": "Data breach that occurred at Taringa, a Latin American social network in 2018. The data breach was the result of a hacking incident in which the personal information of over 28 million users was exposed. The data that was compromised included email addresses, hashed passwords, and personal information such as names, birth dates, and location data.",
+                "domain": "taringa.net",
+                "industry": "Non-Profit/Charities",
+                "logo": "https://xposedornot.com/static/logos/Taringa.png",
+                "password_risk": "easytocrack",
+                "references": "https://www.tripwire.com/state-of-security/latest-security-news/over-28-million-taringa-user-records-exposed-in-data-breach/",
+                "searchable": "Yes",
+                "verified": "Yes",
+                "xposed_data": "Usernames;Email addresses;Passwords",
+                "xposed_date": "2017",
+                "xposed_records": 28001047,
+                "added": "2023-11-08T06:30:19+00:00"
+              }
+            ]
+          },
+          "ExposedPastes": null,
+          "PasteMetrics": null,
+          "PastesSummary": {
+            "cnt": 0,
+            "domain": "",
+            "tmpstmp": ""
+          }
+        },
+        "check_status": 0,
+        "check": null
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 0.8433834130046307
+    },
+    {
+      "name": "property",
+      "status": "ok",
+      "summary": "Inmueble en R. Filantropía, 36, 15011 A Coruña. Catastro: 172 m², Residencial, 1935 | venta estimada 357k €–536k € | alquiler estimado 1k €–1k €/mes",
+      "social_links": [],
+      "facts": [
+        {
+          "claim": "Inmueble en R. Filantropía, 36, 15011 A Coruña: superficie 172 m², uso Residencial, año construcción 1935. Referencia catastral: 7318020NJ4071N0001HM.",
+          "source": "https://catastro-api.es",
+          "confidence": 0.95
+        }
+      ],
+      "signals": [
+        {
+          "kind": "asset",
+          "value": "Inmueble en A Coruña, ES: valor estimado 357k €–536k €",
+          "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS",
+          "confidence": 0.65,
+          "notes": "172 m² × 2595 €/m² (MITMA Coruña (A) T4 2025) × banda ±19%"
+        },
+        {
+          "kind": "asset",
+          "value": "Alquiler estimado 1k €–1k €/mes (A Coruña, ES)",
+          "source": "https://serpavi.mivau.gob.es/",
+          "confidence": 0.7,
+          "notes": "172 m² × 7.10 €/m²/mes (SERPAVI Coruña, A 2024) × banda ±15%"
+        }
+      ],
+      "gaps": [],
+      "raw": {
+        "geocode": {
+          "engine": "nominatim",
+          "display_name": "36, Rúa Filantropía, Cidade Escolar, Cidade Xardín, A Coruña, Galicia, 15011, España",
+          "lat": "43.3654202",
+          "lon": "-8.4180788",
+          "postcode": "15011",
+          "city": "A Coruña",
+          "provincia": "A Coruña",
+          "state": "Galicia"
+        },
+        "catastro": {
+          "referencia_catastral": "7318020NJ4071N0001HM",
+          "superficie_m2": 172.0,
+          "uso": "Residencial",
+          "ano_construccion": "1935",
+          "coeficiente_participacion": "100,00",
+          "codigo_postal": "15011",
+          "n_inmuebles_portal": 1
+        },
+        "mitma": {
+          "municipio": "Coruña (A)",
+          "provincia": "La Coruña",
+          "eur_m2_total": 2594.7,
+          "eur_m2_nueva": 3035.3,
+          "eur_m2_usada": 2588.2,
+          "n_tasaciones": 653,
+          "granularidad": "municipio",
+          "periodo": "T4 2025",
+          "source": "https://apps.fomento.gob.es/boletinonline2/sedal/35103500.XLS"
+        },
+        "serpavi": {
+          "municipio": "Coruña, A",
+          "provincia": "Coruña, A",
+          "alquiler_eur_m2_mes_mediana": 7.1,
+          "alquiler_eur_m2_mes_p25": 5.56,
+          "alquiler_eur_m2_mes_p75": 9.08,
+          "alquiler_eur_mes_mediana": 537.76,
+          "alquiler_eur_mes_p25": 433.9,
+          "alquiler_eur_mes_p75": 662.14,
+          "superficie_tipica_m2": 79.0,
+          "n_viviendas_muestra": 24978,
+          "granularidad": "municipio",
+          "periodo": "2024",
+          "source": "https://serpavi.mivau.gob.es/"
+        },
+        "estimates": {
+          "venta_total_eur_low": 357031,
+          "venta_total_eur_high": 535546,
+          "venta_base_eur": 446288,
+          "venta_nota": "172 m² × 2595 €/m² (MITMA Coruña (A) T4 2025) × banda ±19%",
+          "alquiler_mensual_eur_low": 1038,
+          "alquiler_mensual_eur_high": 1404,
+          "alquiler_mensual_base_eur": 1221,
+          "alquiler_nota": "172 m² × 7.10 €/m²/mes (SERPAVI Coruña, A 2024) × banda ±15%"
+        }
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 3.939928980995319
+    },
+    {
+      "name": "image_search",
+      "status": "skipped",
+      "summary": "Reverse-image search disabled (SERPAPI_API_KEY not set).",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "SERPAPI_API_KEY not configured — module disabled"
+      ],
+      "raw": {},
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 7.648400060134009e-05
+    },
+    {
+      "name": "instagram",
+      "status": "ok",
+      "summary": "Could not retrieve any Instagram data for @caosboi.",
+      "social_links": [],
+      "facts": [],
+      "signals": [],
+      "gaps": [
+        "Osintgram 'info': Instagram user 'caosboi' not found"
+      ],
+      "raw": {
+        "profile_info": null,
+        "raw_captions": [],
+        "image_count": 0,
+        "video_count": 0
+      },
+      "ctx_patch": {
+        "name": null,
+        "email": null,
+        "phone": null,
+        "address": null,
+        "instagram_handle": null,
+        "linkedin_url": null
+      },
+      "duration_s": 1.2071219079953153
+    }
+  ],
+  "audit_log": [
+    {
+      "kind": "pipeline_started",
+      "elapsed_s": 2.765200042631477e-05,
+      "module": null,
+      "wave": null,
+      "message": "starting with 10 module(s): ['boe', 'breach_scout', 'icloud_check', 'image_search', 'instagram', 'instagram_check', 'osint_web', 'twitter_check', 'xon', 'property']",
+      "detail": {
+        "modules": [
+          "boe",
+          "breach_scout",
+          "icloud_check",
+          "image_search",
+          "instagram",
+          "instagram_check",
+          "osint_web",
+          "twitter_check",
+          "xon",
+          "property"
+        ]
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.00012556499859783798,
+      "module": null,
+      "wave": 1,
+      "message": "['boe', 'breach_scout', 'icloud_check', 'instagram_check', 'osint_web', 'twitter_check', 'xon', 'property']",
+      "detail": {
+        "modules": [
+          "boe",
+          "breach_scout",
+          "icloud_check",
+          "instagram_check",
+          "osint_web",
+          "twitter_check",
+          "xon",
+          "property"
+        ]
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0024672020008438267,
+      "module": "boe",
+      "wave": 1,
+      "message": "loaded cached ok (10 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 10,
+        "facts": 0,
+        "gaps": 0,
+        "cached_duration_s": 1.9333282379957382
+      }
+    },
+    {
+      "kind": "ctx_patch_applied",
+      "elapsed_s": 0.0026684990007197484,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "phone='2017-08-01' (conf 0.55)",
+      "detail": {
+        "field": "phone",
+        "value": "2017-08-01",
+        "source": "https://9ghz.com",
+        "confidence": 0.55
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0026913420006167144,
+      "module": "breach_scout",
+      "wave": 1,
+      "message": "loaded cached ok (4 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 4,
+        "facts": 1,
+        "gaps": 0,
+        "cached_duration_s": 2.1107182129999273
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.002707230996747967,
+      "module": "icloud_check",
+      "wave": 1,
+      "message": "loaded cached ok (0 signal(s), 0 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 0,
+        "facts": 0,
+        "gaps": 0,
+        "cached_duration_s": 3.357403989000886
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0027195239963475615,
+      "module": "instagram_check",
+      "wave": 1,
+      "message": "loaded cached no_data (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1,
+        "cached_duration_s": 0.9866040889974101
+      }
+    },
+    {
+      "kind": "ctx_patch_applied",
+      "elapsed_s": 0.0027499509960762225,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "instagram_handle='caosboi' (conf 0.78)",
+      "detail": {
+        "field": "instagram_handle",
+        "value": "caosboi",
+        "source": "https://www.instagram.com/caosboi/",
+        "confidence": 0.78
+      }
+    },
+    {
+      "kind": "ctx_patch_applied",
+      "elapsed_s": 0.0027748779975809157,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "linkedin_url='https://linkedin.com/in/pedro-cao-eiriz-132635243' (conf 0.97)",
+      "detail": {
+        "field": "linkedin_url",
+        "value": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "source": "https://linkedin.com/in/pedro-cao-eiriz-132635243",
+        "confidence": 0.97
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0027867300013895147,
+      "module": "osint_web",
+      "wave": 1,
+      "message": "loaded cached ok (10 signal(s), 2 fact(s), 5 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 10,
+        "facts": 2,
+        "gaps": 5,
+        "cached_duration_s": 92.00924628800567
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0027996339995297603,
+      "module": "twitter_check",
+      "wave": 1,
+      "message": "loaded cached no_data (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "no_data",
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1,
+        "cached_duration_s": 1.6304856019996805
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0028117569963796996,
+      "module": "xon",
+      "wave": 1,
+      "message": "loaded cached ok (3 signal(s), 4 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 3,
+        "facts": 4,
+        "gaps": 0,
+        "cached_duration_s": 0.8433834130046307
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.002822566995746456,
+      "module": "property",
+      "wave": 1,
+      "message": "loaded cached ok (2 signal(s), 1 fact(s), 0 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 2,
+        "facts": 1,
+        "gaps": 0,
+        "cached_duration_s": 3.939928980995319
+      }
+    },
+    {
+      "kind": "wave_started",
+      "elapsed_s": 0.0028429859958123416,
+      "module": null,
+      "wave": 2,
+      "message": "['image_search', 'instagram']",
+      "detail": {
+        "modules": [
+          "image_search",
+          "instagram"
+        ]
+      }
+    },
+    {
+      "kind": "module_completed",
+      "elapsed_s": 0.003276076997281052,
+      "module": "image_search",
+      "wave": 2,
+      "message": "skipped in 0.00s (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "skipped",
+        "duration_s": 7.648400060134009e-05,
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1
+      }
+    },
+    {
+      "kind": "module_cache_hit",
+      "elapsed_s": 0.0032977980008581653,
+      "module": "instagram",
+      "wave": 2,
+      "message": "loaded cached ok (0 signal(s), 0 fact(s), 1 gap(s))",
+      "detail": {
+        "status": "ok",
+        "signals": 0,
+        "facts": 0,
+        "gaps": 1,
+        "cached_duration_s": 1.2071219079953153
+      }
+    },
+    {
+      "kind": "pipeline_completed",
+      "elapsed_s": 0.003322404001664836,
+      "module": null,
+      "wave": null,
+      "message": "7 ok, 1 skipped, 0 error(s)",
+      "detail": {
+        "ok": 7,
+        "error": 0,
+        "skipped": 1
+      }
+    }
+  ]
+}
