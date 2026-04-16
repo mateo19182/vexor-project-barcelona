@@ -51,7 +51,7 @@ UNVERIFIED_GAP = (
     "same-person check required before trusting any discovered profile."
 )
 
-# domain (lowercased, suffix-match) → canonical platform name
+# domain (lowercased, suffix-match) -> canonical platform name
 PLATFORM_BY_DOMAIN: dict[str, str] = {
     "linkedin.com": "LinkedIn",
     "twitter.com": "Twitter",
@@ -80,12 +80,6 @@ def _log(msg: str) -> None:
 
 
 def _platform_for(domain: str) -> str | None:
-    """Return the canonical platform name for ``domain``, or ``None``.
-
-    Matches by hostname suffix so ``www.linkedin.com`` and ``m.facebook.com``
-    resolve correctly. Longest suffix wins (so ``x.com`` does not shadow
-    ``something.x.com`` if that entry were ever added).
-    """
     if not domain:
         return None
     domain = domain.lower().lstrip(".")
@@ -95,8 +89,6 @@ def _platform_for(domain: str) -> str | None:
     return None
 
 
-# Conservative handle extractors — only match patterns we're confident about.
-# Misparsed handles are worse than no handle.
 _HANDLE_PATTERNS: dict[str, re.Pattern[str]] = {
     "LinkedIn": re.compile(r"^/in/([A-Za-z0-9_\-%.]+)/?"),
     "GitHub": re.compile(r"^/([A-Za-z0-9][A-Za-z0-9_\-]*)/?$"),
@@ -109,7 +101,6 @@ _HANDLE_PATTERNS: dict[str, re.Pattern[str]] = {
     "Dribbble": re.compile(r"^/([A-Za-z0-9_\-]+)/?$"),
 }
 
-# Twitter paths that look like handles but aren't (reserved routes).
 _TWITTER_RESERVED = {
     "i", "status", "home", "explore", "notifications", "messages",
     "search", "settings", "login", "signup", "tos", "privacy",
@@ -151,19 +142,18 @@ def _is_self_match(match: VisualMatch, subject_handle: str) -> bool:
 
 class ImageSearchModule:
     name = "image_search"
-    requires: tuple[str, ...] = ("instagram_handle",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "instagram"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         t0 = time.monotonic()
 
-        handle = (ctx.instagram_handle or "").lstrip("@").strip()
+        ig_sig = ctx.best("contact", "instagram")
+        handle = (ig_sig.value if ig_sig else "").lstrip("@").strip()
         if not handle:
-            # The runner should not schedule us in this case (requires), but
-            # guard defensively.
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                gaps=["No instagram_handle on context"],
+                gaps=["No instagram signal on context"],
                 duration_s=time.monotonic() - t0,
             )
 

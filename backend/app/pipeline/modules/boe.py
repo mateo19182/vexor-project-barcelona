@@ -88,7 +88,7 @@ async def _brave_search(client: httpx.AsyncClient, query: str, api_key: str) -> 
 
 class BoeModule:
     name = "boe"
-    requires: tuple[str, ...] = ("name",)
+    requires: tuple[tuple[str, str | None], ...] = (("name", None),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         if not settings.brave_api_key:
@@ -99,7 +99,8 @@ class BoeModule:
                 gaps=["BRAVE_API_KEY env var not configured"],
             )
 
-        name = ctx.name
+        name_sig = ctx.best("name")
+        name = name_sig.value if name_sig else ""
         queries = [
             f'site:boe.es "{name}"',
             f'site:boe.es "{name}" concurso OR embargo OR edicto OR insolvencia',

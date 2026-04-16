@@ -1,0 +1,13 @@
+{
+  "name": "linkedin",
+  "status": "ok",
+  "summary": "",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [
+    "linkedin: could not parse slug from 'jose-manuel-amado-abelenda-04b2831b'"
+  ],
+  "raw": {},
+  "duration_s": 0.00004354100383352488
+}

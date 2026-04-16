@@ -25,7 +25,14 @@ def modules() -> dict[str, list[dict[str, Any]]]:
     """List every registered module, including its declared `requires`."""
     return {
         "modules": [
-            {"name": m.name, "requires": list(m.requires)} for m in REGISTRY
+            {
+                "name": m.name,
+                "requires": [
+                    f"{kind}:{tag}" if tag else kind
+                    for kind, tag in m.requires
+                ],
+            }
+            for m in REGISTRY
         ]
     }
 

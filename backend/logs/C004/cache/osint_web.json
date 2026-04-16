@@ -1,0 +1,201 @@
+{
+  "name": "osint_web",
+  "status": "ok",
+  "summary": "Jose Manuel Amado Abelenda is a Galician entrepreneur and sports industry executive based in the A Coruña/Oleiros area of Galicia, Spain. He served as President of the Clúster Galego da Industria do Deporte e o Benestar from June 2022 to January 2025 and currently remains on its board as a Vogal. He is the sole administrator and founder of Motivos Singulares S.L., co-founder of Xenese Iniciativas, and founder of Serviocio S.L., with a career spanning more than 21 registered companies in Spain's Boletín Oficial del Registro Mercantil (BORME). He holds a degree in Physical Activity and Sports Sciences from INEF de Galicia.",
+  "social_links": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/jose-manuel-amado-abelenda-04b2831b/",
+      "handle": "jose-manuel-amado-abelenda-04b2831b",
+      "confidence": 0.95
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Named new president of Clúster Galego da Industria do Deporte e o Benestar in June 2022 as representative of Motivos Singulares and co-founder of the cluster",
+      "source": "https://gymfactory.net/2022/06/23/jose-amado-nombrado-nuevo-presidente-del-cluster-gallego-del-deporte/",
+      "confidence": 0.99
+    },
+    {
+      "claim": "Total of 3 currently active corporate roles and 31 historical roles across 21 companies as of BORME data",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.97
+    },
+    {
+      "claim": "Gave media interviews on the need for a 'Plan Marshall' for sports practice in Galicia (Palco23, El Correo Gallego, Economía en Galicia)",
+      "source": "https://www.mundodeportivo.com/palco23/entorno/jose-amado-hace-falta-un-plan-marshall-para-la-practica-deportiva",
+      "confidence": 0.99
+    },
+    {
+      "claim": "Voluntarily stepped down from the cluster presidency in January 2025, remaining as a board vocal",
+      "source": "https://gymfactory.net/2025/01/23/pedro-iglesias-asume-la-presidencia-del-cluster-gallego-del-deporte/",
+      "confidence": 0.99
+    }
+  ],
+  "signals": [
+    {
+      "kind": "location",
+      "value": "Oleiros / A Coruña, Galicia, ES",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.9,
+      "notes": "All business registrations are in the A Coruña registry; subject address given as Oleiros, consistent with Motivos Singulares SL registered in A Coruña province",
+      "tag": null
+    },
+    {
+      "kind": "role",
+      "value": "Vogal, Clúster Galego da Industria do Deporte e o Benestar",
+      "source": "https://gymfactory.net/2025/01/23/pedro-iglesias-asume-la-presidencia-del-cluster-gallego-del-deporte/",
+      "confidence": 0.98,
+      "notes": "Was President June 2022–Jan 2025; stepped down to Vogal role per Jan 2025 announcement",
+      "tag": null
+    },
+    {
+      "kind": "role",
+      "value": "Former President, Clúster Galego da Industria do Deporte e o Benestar (June 2022 – Jan 2025)",
+      "source": "https://gymfactory.net/2022/06/23/jose-amado-nombrado-nuevo-presidente-del-cluster-gallego-del-deporte/",
+      "confidence": 0.99,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Motivos Singulares S.L. — Administrador Único & Propietario (CIF B70266499, founded 2011, capital €1,279,050)",
+      "source": "https://www.empresia.es/empresa/motivos-singulares/",
+      "confidence": 0.98,
+      "notes": "Tourist accommodation and real estate; registered in A Coruña",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Xenese Iniciativas S.L. — Co-founder & Apoderado Mancomunado/Solidario",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95,
+      "notes": "Supports entrepreneurial initiatives in Galicia",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Serviocio S.L. — Founder (integral sports facilities management)",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Galpromeat Alimentacion S.L. — Apoderado Mancomunado/Solidario (2022–2025)",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Advon Gestion S.L. — Apoderado Mancomunado/Solidario (2021–2025)",
+      "source": "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "confidence": 0.95,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Clúster Galego da Industria do Deporte e o Benestar — Co-founder",
+      "source": "https://industriadeporte.gal/pedro-iglesias-necesitamos-unha-galicia-mais-sana-tanto-fisica-como-mentalmente/",
+      "confidence": 0.99,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Socio, Salvar Formar y Socorrer S.L. (aquatic installations)",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "Investor, 10mets (digital therapeutic fitness platform)",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "affiliation",
+      "value": "INEF de Galicia — Graduate, Ciencias de la Actividad Física y del Deporte",
+      "source": "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "confidence": 0.95,
+      "notes": null,
+      "tag": null
+    },
+    {
+      "kind": "lifestyle",
+      "value": "Active in sports industry, health, fitness and entrepreneurship ecosystem in Galicia",
+      "source": "https://www.mundodeportivo.com/palco23/entorno/jose-amado-hace-falta-un-plan-marshall-para-la-practica-deportiva",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    }
+  ],
+  "gaps": [
+    "No direct email/phone confirmation found in public web sources linking josemanuelamadoabelenda@gmail.com or +34609832721 explicitly to this person — identity match is based on the highly distinctive full name and consistent A Coruña/Oleiros geography",
+    "No Instagram, Twitter/X, Facebook or GitHub profiles confirmed for this person",
+    "Exact current primary employer/company affiliation beyond Motivos Singulares S.L. could not be pinpointed",
+    "Property or asset records at Emilia Pardo Bazan 53, Oleiros not located in public sources"
+  ],
+  "raw": {
+    "model": "claude-sonnet-4-6",
+    "backend": "exa",
+    "search_queries": [
+      "Jose Manuel Amado Abelenda A Coruña Oleiros Spain",
+      "\"josemanuelamadoabelenda@gmail.com\"",
+      "Jose Manuel Amado Abelenda \"Cluster Galego\" OR \"Clúster Galego\" deporte bienestar presidente",
+      "\"Jose Manuel Amado Abelenda\" Serviocio OR \"Motivos Singulares\" OR Oleiros OR \"+34609832721\""
+    ],
+    "fetched_urls": [
+      "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "https://www.empresia.es/empresa/motivos-singulares/",
+      "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "https://linkedin.com/in/jose-manuel-porteiro-abelenda-ab192aa2",
+      "https://coristanco.infoisinfo.es/ficha/abelenda_amarelle_jose_manuel/395056",
+      "https://www.aparejadoresperitosjudicialesdegalicia.es/es/asociados",
+      "https://gl.wikipedia.org/wiki/Manuel_Abelenda_Zapata",
+      "https://www.aparejadoresperitosjudicialesdegalicia.es/es/asociado/Jose-Miguel-Correa-Pazos/71",
+      "http://pdi.udc.es/en/File/Pdi/W36FH",
+      "https://www.wikipedia.es/wiki/Manuel_Abelenda_Zapata",
+      "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "https://www.expansion.com/ejecutivo-administrador/jose-manuel-amado-abelenda_615170_C20.html",
+      "https://www.expansion.com/ejecutivo-administrador/jose-manuel-amado-abelenda_615170_G51.html",
+      "https://a-coruna-provincia.cataloxy.es/firms/coristanco/jose-manuel-amado-abelenda.700562_c.htm",
+      "https://scholar.google.es/citations?hl=en&user=A7A9i2kAAAAJ",
+      "http://pdi.udc.es/en/File/Pdi/W36FH",
+      "https://www.nuevosemestre.com/profesor/jose-manuel-amado-p",
+      "https://www.facebook.com/public/Jose-Manuel-Abellan/",
+      "https://www4.lead411.com/Jose_Manuel_134363870.html",
+      "https://gymfactory.net/2022/06/23/jose-amado-nombrado-nuevo-presidente-del-cluster-gallego-del-deporte/",
+      "https://gymfactory.net/2025/01/23/pedro-iglesias-asume-la-presidencia-del-cluster-gallego-del-deporte/",
+      "https://www.elcorreogallego.es/deportes/2022/10/05/nueva-directiva-cluster-deporte-gallego-109444908.html",
+      "https://www.mundodeportivo.com/palco23/entorno/jose-amado-hace-falta-un-plan-marshall-para-la-practica-deportiva",
+      "https://industriadeporte.gal/equipo-directivo/",
+      "https://economiaengalicia.opennemas.com/articulo/protagonistas/2023-esperamos-que-sea-ano-recuperar-camino-perdido/20230206192629023009.html",
+      "https://www.agaxede.org/es/noticia/pedro-iglesias-asume-la-presidencia-del-cluster-gallego-de-la-industria-del-deporte-y-el-bienestar/",
+      "https://industriadeporte.gal/pedro-iglesias-necesitamos-unha-galicia-mais-sana-tanto-fisica-como-mentalmente/",
+      "https://industriadeporte.gal/",
+      "https://www.agaxede.org/gl/noticia/jos-amado-hace-falta-un-plan-marshall-para-la-prctica-deportiva/",
+      "https://capacitadirectivos.com/participante/jose-manuel-amado/",
+      "https://www.empresia.es/persona/amado-abelenda-jose-manuel/",
+      "https://infonif.economia3.com/ficha-empresa/motivos-singulares-sl",
+      "https://www.empresia.es/empresa/motivos-singulares/",
+      "https://www.datoscif.es/empresa/motivos-singulares-sl",
+      "https://www.empresia.es/empresa/serviocio-proyectos-deportivos/",
+      "https://wwww.lokinn.com/en/empresa/serviocio-ourense",
+      "https://coristanco.infoisinfo.es/ficha/abelenda_amarelle_jose_manuel/395056",
+      "https://www.aparejadoresperitosjudicialesdegalicia.es/es/asociado/Visitacion-Mouzo-Souto/83",
+      "https://www.aparejadoresperitosjudicialesdegalicia.es/es/asociados"
+    ],
+    "stop_reason": "end_turn"
+  },
+  "duration_s": 70.87190354299673
+}

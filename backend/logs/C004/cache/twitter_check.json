@@ -1,0 +1,18 @@
+{
+  "name": "twitter_check",
+  "status": "ok",
+  "summary": "josemanuelamadoabelenda@gmail.com is NOT registered on Twitter.",
+  "social_links": [],
+  "facts": [],
+  "signals": [],
+  "gaps": [],
+  "raw": {
+    "platform": "Twitter",
+    "identifier": "josemanuelamadoabelenda@gmail.com",
+    "status_raw": "FAIL",
+    "http_status": 200,
+    "session_id": "0412b405-03fa-4f93-a34a-10049d4d7b52",
+    "error": null
+  },
+  "duration_s": 3.101878002002195
+}

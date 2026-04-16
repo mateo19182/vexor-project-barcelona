@@ -39,10 +39,11 @@ def _load_cookies() -> dict[str, str] | None:
 
 class GoogleMapsReviewsModule:
     name = "google_maps_reviews"
-    requires: tuple[str, ...] = ("gaia_id",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "gaia_id"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
-        gaia_id = ctx.gaia_id or ""
+        gaia_sig = ctx.best("contact", "gaia_id")
+        gaia_id = gaia_sig.value if gaia_sig else ""
 
         cookies = _load_cookies()
         if cookies is None:

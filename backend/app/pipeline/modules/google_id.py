@@ -1,14 +1,14 @@
 """Google ID resolver module.
 
-Input  (requires): ctx.email
-Output (ctx_patch): ctx.gaia_id
+Input  (requires): contact:email signal
+Output (signal):   contact:gaia_id signal
 
 Resolves a Gmail address to its Google Gaia ID using the same technique as
 GHunt (https://github.com/mxrch/GHunt): authenticates against Google's
 internal people-pa endpoint via SAPISIDHASH + the Photos API key.
 
 Auth: GOOGLE_SESSION_COOKIES in .env — JSON dict of Google session cookies.
-Copy from Chrome DevTools → Application → Cookies → google.com.
+Copy from Chrome DevTools -> Application -> Cookies -> google.com.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import time
 import httpx
 
 from app.config import settings
-from app.models import AttributedValue, ContextPatch
+from app.models import Signal
 from app.pipeline.base import Context, ModuleResult
 
 _PEOPLE_URL = "https://people-pa.clients6.google.com/v2/people/lookup"
@@ -94,13 +94,13 @@ async def resolve_gaia_id(email: str, cookies: dict[str, str]) -> str | None:
         people = data.get("people") or {}
         if isinstance(people, dict) and people:
             gaia_id = next(iter(people))
-            _log(f"[google_id] {email} → {gaia_id}")
+            _log(f"[google_id] {email} -> {gaia_id}")
             return gaia_id
         matches = data.get("matches") or []
         if matches:
             ids = matches[0].get("personId") or []
             if ids:
-                _log(f"[google_id] {email} → {ids[0]} (from matches)")
+                _log(f"[google_id] {email} -> {ids[0]} (from matches)")
                 return str(ids[0])
 
         _log(f"[google_id] no result for {email}: {json.dumps(data)[:200]}")
@@ -113,14 +113,15 @@ async def resolve_gaia_id(email: str, cookies: dict[str, str]) -> str | None:
 
 class GoogleIdModule:
     name = "google_id"
-    requires: tuple[str, ...] = ("email",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "email"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
-        if ctx.gaia_id:
+        if ctx.has("contact", "gaia_id"):
+            gaia_sig = ctx.best("contact", "gaia_id")
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                summary=f"Gaia ID already in context: {ctx.gaia_id}",
+                summary=f"Gaia ID already in context: {gaia_sig.value if gaia_sig else ''}",
             )
 
         cookies = _load_cookies()
@@ -131,7 +132,8 @@ class GoogleIdModule:
                 gaps=["GOOGLE_SESSION_COOKIES not set in .env"],
             )
 
-        email = ctx.email or ""
+        email_sig = ctx.best("contact", "email")
+        email = email_sig.value if email_sig else ""
         gaia_id = await resolve_gaia_id(email, cookies)
 
         if not gaia_id:
@@ -145,13 +147,15 @@ class GoogleIdModule:
         return ModuleResult(
             name=self.name,
             status="ok",
-            summary=f"{email} → Gaia ID {gaia_id}",
-            ctx_patch=ContextPatch(
-                gaia_id=AttributedValue(
+            summary=f"{email} -> Gaia ID {gaia_id}",
+            signals=[
+                Signal(
+                    kind="contact",
+                    tag="gaia_id",
                     value=gaia_id,
                     source=f"https://www.google.com/maps/contrib/{gaia_id}",
                     confidence=1.0,
                 )
-            ),
+            ],
             raw={"email": email, "gaia_id": gaia_id},
         )

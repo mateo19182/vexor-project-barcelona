@@ -1,0 +1,381 @@
+{
+  "name": "breach_scout",
+  "status": "ok",
+  "summary": "Found in 4 breach record(s) | 7 new phone(s) discovered: +34881983814, +34981433901, +34981714428 | Aliases/usernames: josemanuelamado, jose-amado-69554b26 | 7 business association(s): Motivos Singulares Sl, Serviocio Cultura Deporte Y Recreacion Sl, Hotel Natureza Monte Blanco Sl",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Identity found in 4 breach record(s) in the breach intelligence database",
+      "source": "https://9ghz.com",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "risk_flag",
+      "value": "Debtor identifiers found in 4 breach record(s)",
+      "source": "https://9ghz.com",
+      "confidence": 0.85,
+      "notes": "Breaches: Bureau van Dijk Database, Canva, PeopleDataLabs (PDL), Verifications.io, bvdinfo.com",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "+34881983814",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+34981433901",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+34981714428",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+34916245811",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+34988210769",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+34902313110",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "+34982120040",
+      "source": "https://9ghz.com",
+      "confidence": 0.7,
+      "notes": "Phone number recovered from breach records",
+      "tag": "phone"
+    },
+    {
+      "kind": "contact",
+      "value": "josemanuelamado",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "jose-amado-69554b26",
+      "source": "https://9ghz.com",
+      "confidence": 0.65,
+      "notes": "Username / alias found in breach records — may correspond to social profiles",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Motivos Singulares Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): associated. Found in breach intelligence records.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Serviocio Cultura Deporte Y Recreacion Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Hotel Natureza Monte Blanco Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): Sole Administrator. Found in breach intelligence records.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Serviocio Madrid Sur Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): General Manager, Member of the Board, Commercial Director, Financial Manager. Found in breach intelligence records.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Serviocio Ourense Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Serviocio Granada Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): Member of the Board. Found in breach intelligence records.",
+      "tag": null
+    },
+    {
+      "kind": "business",
+      "value": "Eciman Sl",
+      "source": "https://9ghz.com",
+      "confidence": 0.8,
+      "notes": "Role(s): Administrator. Found in breach intelligence records.",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "keywords": [
+      "Jose Manuel Amado Abelenda",
+      "josemanuelamadoabelenda@gmail.com",
+      "+34609832721"
+    ],
+    "mode": "authenticated_batch",
+    "response": {
+      "code": 0,
+      "msg": "ok",
+      "data": [
+        {
+          "data": [
+            {
+              "other_info": "Motivos Singulares Sl",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Motivos Singulares Sl  +34 881983814",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Serviocio Cultura Deporte Y Recreacion Sl",
+              "real_name": "jose manuel amado abelenda",
+              "region": "ES",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Serviocio Cultura Deporte Y Recreacion Sl  +34 981433901",
+              "real_name": "jose manuel amado abelenda",
+              "region": "ES",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Sole Administrator Hotel Natureza Monte Blanco Sl.  +34 981714428",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "General Manager Serviocio Madrid Sur Sl  +34 916245811",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Member of the Board Serviocio Ourense Sl  +34 988210769",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Member of the Board Serviocio Madrid Sur Sl  +34 916245811",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Member of the Board Serviocio Granada Sl.  +34 902313110",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Administrator Eciman Sl  +34 982120040",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Member of the Board Serviocio Cultura Deporte Y Recreacion Sl  +34 981433901",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Commercial Director Serviocio Madrid Sur Sl  +34 916245811",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            },
+            {
+              "other_info": "Financial Manager Serviocio Madrid Sur Sl  +34 916245811",
+              "real_name": "jose manuel amado abelenda",
+              "source": {
+                "breach_date": "2021-07-01",
+                "domain": "bvdinfo.com",
+                "id": "324a55",
+                "record_count": 484305582,
+                "region": "",
+                "title": "Bureau van Dijk Database"
+              }
+            }
+          ],
+          "keyword": "Jose Manuel Amado Abelenda",
+          "total_count": 13
+        },
+        {
+          "data": [
+            {
+              "email": "josemanuelamadoabelenda@gmail.com",
+              "other_info": "jose manuel Amado",
+              "source": {
+                "breach_date": "2019-05-24",
+                "domain": "canva.com",
+                "id": "514932",
+                "record_count": 137272116,
+                "region": "",
+                "title": "Canva"
+              },
+              "user_name": "josemanuelamado"
+            },
+            {
+              "email": "josemanuelamadoabelenda@gmail.com",
+              "real_name": "jose amado",
+              "source": {
+                "breach_date": "2019-01-01",
+                "domain": "peopledatalabs.com",
+                "id": "514356",
+                "record_count": 471014406,
+                "region": "US",
+                "title": "PeopleDataLabs (PDL) "
+              },
+              "user_name": "jose-amado-69554b26"
+            },
+            {
+              "email": "josemanuelamadoabelenda@gmail.com",
+              "source": {
+                "breach_date": "2019-02-25",
+                "domain": "verifications.io",
+                "id": "324b37",
+                "record_count": 763117241,
+                "region": "",
+                "title": "Verifications.io"
+              }
+            }
+          ],
+          "keyword": "josemanuelamadoabelenda@gmail.com",
+          "total_count": 3
+        },
+        {
+          "data": [],
+          "keyword": "+34609832721",
+          "total_count": 0
+        }
+      ]
+    },
+    "status_code": 200,
+    "response_bytes": 4282
+  },
+  "duration_s": 4.2467303029989125
+}

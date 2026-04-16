@@ -1,0 +1,17 @@
+{
+    "case_id": "C004",
+    "country": "ES",
+    "debt_eur": 2077,
+    "debt_origin": "personal_loan",
+    "debt_age_months": 12,
+    "call_attempts": 1,
+    "call_outcome": "rings_out",
+    "legal_asset_finding": "assets_not_seizable",
+    "signals": [
+      {"kind": "name",    "value": "Jose Manuel Amado Abelenda", "source": "case_input", "confidence": 1.0},
+      {"kind": "contact", "value": "+34609832721",             "source": "case_input", "confidence": 1.0, "tag": "phone"},
+      {"kind": "contact", "value": "josemanuelamadoabelenda@gmail.com", "source": "case_input", "confidence": 1.0, "tag": "email"},
+      {"kind": "address", "value": "Emilia Pardo Bazan 53, A Coruña, Oleiros, Spain", "source": "case_input", "confidence": 1.0}
+    ]
+  }
+  

@@ -1,8 +1,8 @@
 """Twitter/X OSINT enrichment module.
 
-Requires ``twitter_handle`` on the Context — promoted by ``osint_web`` when
-it finds a Twitter/X profile with confidence >= 0.6.  Fetches the public
-profile and recent timeline via ``twscrape`` and surfaces:
+Requires a ``contact:twitter`` signal on the Context — promoted by
+``osint_web`` when it finds a Twitter/X profile with confidence >= 0.6.
+Fetches the public profile and recent timeline via ``twscrape`` and surfaces:
 
   * Bio text as a Fact (employer hints, location clues).
   * Profile location field as a ``location`` Signal.
@@ -92,7 +92,7 @@ def _scan_tweets(tweets: list[dict], profile_url: str) -> list[Signal]:
 
 class TwitterModule:
     name = "twitter"
-    requires: tuple[str, ...] = ("twitter_handle",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "twitter"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         if not settings.twitter_username:
@@ -102,7 +102,8 @@ class TwitterModule:
                 gaps=["twitter_enrich: TWITTER_USERNAME not configured — skipping"],
             )
 
-        handle = (ctx.twitter_handle or "").strip().lstrip("@")
+        sig = ctx.best("contact", "twitter")
+        handle = (sig.value if sig else "").strip().lstrip("@")
         profile_url = f"https://x.com/{handle}"
 
         data = await enrich_twitter(
@@ -134,7 +135,7 @@ class TwitterModule:
         facts: list[Fact] = []
         gaps: list[str] = []
 
-        # Bio → Fact
+        # Bio -> Fact
         bio = (data.get("bio") or "").strip()
         if bio:
             facts.append(
@@ -145,7 +146,7 @@ class TwitterModule:
                 )
             )
 
-        # Profile location field → Signal
+        # Profile location field -> Signal
         location = (data.get("location") or "").strip()
         if location:
             signals.append(
@@ -158,7 +159,7 @@ class TwitterModule:
                 )
             )
 
-        # Activity recency — active posting while claiming nothing is a contradiction
+        # Activity recency
         recent = data.get("recent_tweets") or []
         if recent:
             last_date = recent[0]["date"][:10]

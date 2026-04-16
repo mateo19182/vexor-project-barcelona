@@ -1,0 +1,741 @@
+{
+  "name": "nosint",
+  "status": "ok",
+  "summary": "Email found on 1 platform(s) | 2 breach/leak hit(s)",
+  "social_links": [
+    {
+      "platform": "KuCoin",
+      "url": "https://kucoin.com",
+      "handle": null,
+      "confidence": 0.8
+    }
+  ],
+  "facts": [
+    {
+      "claim": "Email active on 3 platform(s) out of 42 checked: kucoin.com, Breach Check v2, leakcheck.io",
+      "source": "https://nosint.org",
+      "confidence": 0.85
+    }
+  ],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "kucoin.com",
+      "source": "https://kucoin.com",
+      "confidence": 0.8,
+      "notes": "Found by NoSINT module: KuCoin",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Email found in Breach Check v2",
+      "source": "https://nosint.org",
+      "confidence": 0.85,
+      "notes": "Found by NoSINT module: Breach Check v2",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Email found in Leak Check",
+      "source": "https://leakcheck.io",
+      "confidence": 0.85,
+      "notes": "Found by NoSINT module: Leak Check",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+    "total_modules_run": 42,
+    "hits_count": 3,
+    "all_results": [
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Mail.ru",
+        "target_url": "mail.ru",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "invalid_domain",
+        "start_time": "2026-04-16T02:41:44.124772Z",
+        "end_time": "2026-04-16T02:41:44.125167Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "ProtonMail account check",
+        "target_url": "proton.me",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.080472Z",
+        "end_time": "2026-04-16T02:41:44.080589Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Tutanota",
+        "target_url": "mail.tutanota.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "unsupported_domain",
+        "start_time": "2026-04-16T02:41:44.080078Z",
+        "end_time": "2026-04-16T02:41:44.080364Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "BeatStars",
+        "target_url": "beatstars.com",
+        "module_target": [
+          "username",
+          "email"
+        ],
+        "is_valid": false,
+        "error": "invalid_input",
+        "details": [
+          "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+        ],
+        "start_time": "2026-04-16T02:41:44.229645Z",
+        "end_time": "2026-04-16T02:41:44.229715Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Breach.VIP Breach Search",
+        "target_url": "breach.vip",
+        "module_target": [
+          "email",
+          "username"
+        ],
+        "is_valid": false,
+        "error": "invalid_input",
+        "details": [
+          "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+        ],
+        "start_time": "2026-04-16T02:41:44.233616Z",
+        "end_time": "2026-04-16T02:41:44.233662Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "OK.ru",
+        "target_url": "ok.ru",
+        "module_target": [
+          "email",
+          "phone",
+          "username"
+        ],
+        "is_valid": false,
+        "error": "invalid_input",
+        "details": [
+          "Username must be 3-20 characters long and contain only letters, numbers, underscores, or hyphens."
+        ],
+        "start_time": "2026-04-16T02:41:44.229750Z",
+        "end_time": "2026-04-16T02:41:44.229768Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Zoho",
+        "target_url": "accounts.zoho.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "missing_csrf_token",
+        "start_time": "2026-04-16T02:41:44.080650Z",
+        "end_time": "2026-04-16T02:41:44.985109Z",
+        "duration_ms": 904
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Proton Wallet",
+        "target_url": "protonmail.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "invalid_proton_account",
+        "start_time": "2026-04-16T02:41:44.162856Z",
+        "end_time": "2026-04-16T02:41:44.163079Z",
+        "duration_ms": 0
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Facebook",
+        "target_url": "facebook.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "AsyncClient.post() got an unexpected keyword argument 'allow_redirects'",
+        "start_time": "2026-04-16T02:41:44.120705Z",
+        "end_time": "2026-04-16T02:41:45.123868Z",
+        "duration_ms": 1003
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Deliveroo",
+        "target_url": "deliveroo.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "status_404",
+        "start_time": "2026-04-16T02:41:44.084393Z",
+        "end_time": "2026-04-16T02:41:45.081476Z",
+        "duration_ms": 997
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "HubSpot",
+        "target_url": "hubspot.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "status_400",
+        "start_time": "2026-04-16T02:41:44.138998Z",
+        "end_time": "2026-04-16T02:41:45.081808Z",
+        "duration_ms": 942
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "BeatStars",
+        "target_url": "beatstars.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.131438Z",
+        "end_time": "2026-04-16T02:41:45.146402Z",
+        "duration_ms": 1014
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Microsoft Info Exposure",
+        "target_url": "microsoft.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "connection_failed",
+        "start_time": "2026-04-16T02:41:44.157094Z",
+        "end_time": "2026-04-16T02:41:45.152728Z",
+        "duration_ms": 995
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Foursquare email to account",
+        "target_url": "foursquare.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "api_error_401",
+        "start_time": "2026-04-16T02:41:44.146806Z",
+        "end_time": "2026-04-16T02:41:45.155437Z",
+        "duration_ms": 1008
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Life360 email to partial phone",
+        "target_url": "life360.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "status_403",
+        "start_time": "2026-04-16T02:41:44.233688Z",
+        "end_time": "2026-04-16T02:41:45.152531Z",
+        "duration_ms": 918
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "AutoDropship to account",
+        "target_url": "autods.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.125249Z",
+        "end_time": "2026-04-16T02:41:45.155306Z",
+        "duration_ms": 1030
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "IMVU email to account",
+        "target_url": "imvu.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.141216Z",
+        "end_time": "2026-04-16T02:41:45.162555Z",
+        "duration_ms": 1021
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "EA.com",
+        "target_url": "ea.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "auth_or_fetch_failed",
+        "start_time": "2026-04-16T02:41:44.152801Z",
+        "end_time": "2026-04-16T02:41:45.209628Z",
+        "duration_ms": 1056
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Poshmark email to account",
+        "target_url": "poshmark.com",
+        "module_target": [
+          "email",
+          "name"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.143049Z",
+        "end_time": "2026-04-16T02:41:45.207699Z",
+        "duration_ms": 1064
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Gravatar to account",
+        "target_url": "en.gravatar.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "no_gravatar_profile",
+        "start_time": "2026-04-16T02:41:44.235803Z",
+        "end_time": "2026-04-16T02:41:45.194594Z",
+        "duration_ms": 958
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Duolingo Account Check",
+        "target_url": "duolingo.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "cannot access local variable 'user' where it is not associated with a value",
+        "start_time": "2026-04-16T02:41:44.122636Z",
+        "end_time": "2026-04-16T02:41:45.221748Z",
+        "duration_ms": 1099
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Trello email to account",
+        "target_url": "trello.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.126650Z",
+        "end_time": "2026-04-16T02:41:45.221473Z",
+        "duration_ms": 1094
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "ImageShack",
+        "target_url": "imageshack.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "status_400",
+        "start_time": "2026-04-16T02:41:44.128859Z",
+        "end_time": "2026-04-16T02:41:45.215258Z",
+        "duration_ms": 1086
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Typeform",
+        "target_url": "typeform.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "not_registered",
+        "start_time": "2026-04-16T02:41:44.045498Z",
+        "end_time": "2026-04-16T02:41:45.215067Z",
+        "duration_ms": 1169
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Instagram",
+        "target_url": "instagram.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "status_401",
+        "start_time": "2026-04-16T02:41:44.237176Z",
+        "end_time": "2026-04-16T02:41:45.228873Z",
+        "duration_ms": 991
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "KuCoin",
+        "target_url": "kucoin.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": true,
+        "result": {
+          "display": {
+            "registered_email": "josemanuelamadoabelenda@gmail.com",
+            "all_methods_found": "Email, SMS",
+            "combinations_count": 1
+          },
+          "badges_list": [
+            "Email",
+            "SMS"
+          ],
+          "display_table": {
+            "headers": [
+              "Valid Recovery Combinations"
+            ],
+            "values": [
+              [
+                "Email, SMS required"
+              ]
+            ]
+          },
+          "_metadata": {
+            "site_name": "KuCoin",
+            "site_icon": "https://www.kucoin.com/favicon.ico",
+            "profile_url": "https://www.kucoin.com/"
+          }
+        },
+        "error": null,
+        "start_time": "2026-04-16T02:41:44.161108Z",
+        "end_time": "2026-04-16T02:41:45.240790Z",
+        "duration_ms": 1079
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Adobe T2E",
+        "target_url": "adobe.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "no_accounts_found",
+        "start_time": "2026-04-16T02:41:44.144886Z",
+        "end_time": "2026-04-16T02:41:45.245862Z",
+        "duration_ms": 1100
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "GitHub email to users",
+        "target_url": "github.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "no_accounts_found",
+        "start_time": "2026-04-16T02:41:44.063863Z",
+        "end_time": "2026-04-16T02:41:45.254686Z",
+        "duration_ms": 1190
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Breach Check v2",
+        "target_url": "",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": true,
+        "result": {
+          "display": {
+            "breaches_found": "3",
+            "unique_sources": "3"
+          },
+          "display_table": {
+            "headers": [
+              "Email",
+              "Username",
+              "Source",
+              "Date"
+            ],
+            "values": [
+              [
+                "josemanuelamadoabelenda@gmail.com",
+                "-",
+                "verifications.io",
+                "2019-02"
+              ],
+              [
+                "josemanuelamadoabelenda@gmail.com",
+                "jose-amado-69554b26",
+                "peopledatalabs.com",
+                "2019"
+              ],
+              [
+                "josemanuelamadoabelenda@gmail.com",
+                "josemanuelAmado",
+                "canva.com",
+                "2019-05"
+              ]
+            ]
+          },
+          "badges_list": [
+            "3 breaches"
+          ],
+          "_metadata": {
+            "name": "Breach Check",
+            "overwrite_category": "breach"
+          }
+        },
+        "error": null,
+        "start_time": "2026-04-16T02:41:44.229786Z",
+        "end_time": "2026-04-16T02:41:45.255415Z",
+        "duration_ms": 1025
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Flickr email to account",
+        "target_url": "flickr.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.137264Z",
+        "end_time": "2026-04-16T02:41:45.267735Z",
+        "duration_ms": 1130
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Adobe Recovery",
+        "target_url": "adobe.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "auth_state_401",
+        "start_time": "2026-04-16T02:41:44.133534Z",
+        "end_time": "2026-04-16T02:41:45.272928Z",
+        "duration_ms": 1139
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Yandex account recovery info",
+        "target_url": "yandex.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "auth_page_302",
+        "start_time": "2026-04-16T02:41:44.102383Z",
+        "end_time": "2026-04-16T02:41:45.358828Z",
+        "duration_ms": 1256
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Forever21",
+        "target_url": "forever21.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "user_not_found",
+        "start_time": "2026-04-16T02:41:44.236465Z",
+        "end_time": "2026-04-16T02:41:45.457983Z",
+        "duration_ms": 1221
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Mega.nz",
+        "target_url": "mega.nz",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.112934Z",
+        "end_time": "2026-04-16T02:41:45.485969Z",
+        "duration_ms": 1373
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "SolidCore",
+        "target_url": "solidcore.co",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.114941Z",
+        "end_time": "2026-04-16T02:41:45.484638Z",
+        "duration_ms": 1369
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Plex.TV",
+        "target_url": "plex.tv",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "email_lookup_failed",
+        "start_time": "2026-04-16T02:41:44.155098Z",
+        "end_time": "2026-04-16T02:41:45.500048Z",
+        "duration_ms": 1344
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "AntiPublic Leak Check",
+        "target_url": "antipublic.one",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "status_403",
+        "start_time": "2026-04-16T02:41:44.071015Z",
+        "end_time": "2026-04-16T02:41:45.524251Z",
+        "duration_ms": 1453
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Leak Check",
+        "target_url": "leakcheck.io",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": true,
+        "result": {
+          "display": {
+            "breaches_found": "1"
+          },
+          "display_table": {
+            "headers": [
+              "Password",
+              "Source",
+              "Breach Date"
+            ],
+            "values": [
+              [
+                "amadolinkedin",
+                "Canva.com",
+                "2019-05"
+              ]
+            ]
+          },
+          "_metadata": {
+            "name": "Leak Check",
+            "overwrite_category": "breach"
+          }
+        },
+        "error": null,
+        "start_time": "2026-04-16T02:41:44.231051Z",
+        "end_time": "2026-04-16T02:41:45.527730Z",
+        "duration_ms": 1296
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Microsoft Account Recovery",
+        "target_url": "account.microsoft.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "account_not_found",
+        "start_time": "2026-04-16T02:41:44.234703Z",
+        "end_time": "2026-04-16T02:41:45.617558Z",
+        "duration_ms": 1382
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Breach.VIP Breach Search",
+        "target_url": "breach.vip",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "unhashable type: 'list'",
+        "start_time": "2026-04-16T02:41:44.231753Z",
+        "end_time": "2026-04-16T02:41:45.738594Z",
+        "duration_ms": 1506
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "HudsonRock",
+        "target_url": "cavalier.hudsonrock.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "no_accounts_found",
+        "start_time": "2026-04-16T02:41:44.077053Z",
+        "end_time": "2026-04-16T02:41:45.766260Z",
+        "duration_ms": 1689
+      },
+      {
+        "search_id": "c82498db-44af-424c-8d5a-c381f1b4bb9d",
+        "module_name": "Coinbase Wallet Balances",
+        "target_url": "coinbase.com",
+        "module_target": [
+          "email"
+        ],
+        "is_valid": false,
+        "result": null,
+        "error": "profile_not_found",
+        "start_time": "2026-04-16T02:41:44.159668Z",
+        "end_time": "2026-04-16T02:41:46.419842Z",
+        "duration_ms": 2260
+      }
+    ]
+  },
+  "duration_s": 8.895426165996469
+}

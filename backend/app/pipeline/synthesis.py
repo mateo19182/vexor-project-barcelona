@@ -13,14 +13,14 @@ from app.pipeline.base import Context, ModuleResult
 
 
 def _dedupe_signals(signals: list[Signal]) -> list[Signal]:
-    """Keep one signal per `(kind, value)`, picking the highest confidence.
+    """Keep one signal per `(kind, tag, value)`, picking the highest confidence.
 
     Value comparison is case-insensitive and trim-insensitive; two modules
     reporting "Barcelona, ES" and " barcelona, es " should collapse.
     """
-    best: dict[tuple[str, str], Signal] = {}
+    best: dict[tuple[str, str | None, str], Signal] = {}
     for s in signals:
-        key = (s.kind, s.value.strip().lower())
+        key = (s.kind, s.tag, s.value.strip().lower())
         existing = best.get(key)
         if existing is None or s.confidence > existing.confidence:
             best[key] = s

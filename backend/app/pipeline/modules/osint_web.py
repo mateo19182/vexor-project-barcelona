@@ -36,6 +36,9 @@ MODEL = "claude-sonnet-4-6"
 MAX_TOKENS = 8000
 # Server-side tool loop cap — resume at most once.
 MAX_RESUMES = 1
+# Retry on 5xx Anthropic API errors.
+_API_RETRIES = 1
+_API_RETRY_DELAY_S = 10
 # Client-side Exa tool loop cap — bound cost if Claude keeps calling search.
 MAX_EXA_ITERS = 6
 # Per-result text truncation sent back in tool_result content, to cap token spend.
@@ -197,28 +200,36 @@ OUTPUT_SCHEMA: dict[str, Any] = {
 
 
 def _build_user_prompt(ctx: Context) -> str:
+    name_sig = ctx.best("name")
+    name = name_sig.value if name_sig else "Unknown"
     case = ctx.case
     lines = [
         "=== SUBJECT ===",
-        f"Name: {ctx.name}",
+        f"Name: {name}",
         f"Country: {case.country}",
     ]
-    if ctx.email:
-        lines.append(f"Email (confirmed): {ctx.email}")
-    if ctx.phone:
-        lines.append(f"Phone: {ctx.phone}")
-    if ctx.address:
-        lines.append(f"Address: {ctx.address}")
-    if ctx.instagram_handle:
-        lines.append(f"Known Instagram: @{ctx.instagram_handle}")
-    if ctx.linkedin_url:
-        lines.append(f"Known LinkedIn: {ctx.linkedin_url}")
-    if ctx.twitter_handle:
-        lines.append(f"Known Twitter: @{ctx.twitter_handle}")
+    email_sig = ctx.best("contact", "email")
+    if email_sig:
+        lines.append(f"Email (confirmed): {email_sig.value}")
+    phone_sig = ctx.best("contact", "phone")
+    if phone_sig:
+        lines.append(f"Phone: {phone_sig.value}")
+    address_sig = ctx.best("address")
+    if address_sig:
+        lines.append(f"Address: {address_sig.value}")
+    ig_sig = ctx.best("contact", "instagram")
+    if ig_sig:
+        lines.append(f"Known Instagram: @{ig_sig.value}")
+    li_sig = ctx.best("contact", "linkedin")
+    if li_sig:
+        lines.append(f"Known LinkedIn: {li_sig.value}")
+    tw_sig = ctx.best("contact", "twitter")
+    if tw_sig:
+        lines.append(f"Known Twitter: @{tw_sig.value}")
     # Surface any structured signals from prior waves so the research
     # module can use them as identity anchors.
     for kind in ("employer", "role", "location"):
-        for s in ctx.best_signals(kind):
+        for s in ctx.all(kind):
             if s.confidence >= 0.70:
                 lines.append(f"Known {s.kind}: {s.value}")
                 break  # best one per kind is enough
@@ -431,12 +442,7 @@ async def _run_exa_tool(
     exa_client: Any,
     ctx: Context,
 ) -> tuple[str, list[str], list[str], str | None]:
-    """Drive the investigation using Exa as a client-side tool. One tool —
-    `exa_search` via `search_and_contents` — serves as both search and fetch
-    (Exa returns extracted page text alongside URLs). We run a standard
-    Anthropic client-side tool loop: while stop_reason=tool_use, execute Exa
-    and post a tool_result block; stop when Claude produces its final text.
-    """
+    """Drive the investigation using Exa as a client-side tool."""
     user_prompt = _build_user_prompt(ctx)
     messages: list[dict[str, Any]] = [{"role": "user", "content": user_prompt}]
 
@@ -467,7 +473,6 @@ async def _run_exa_tool(
         if stop_reason != "tool_use":
             break
 
-        # Execute every exa_search tool_use in this turn and collect tool_results.
         tool_results: list[dict[str, Any]] = []
         for block in response.content:
             if getattr(block, "type", None) != "tool_use":
@@ -478,8 +483,6 @@ async def _run_exa_tool(
             query = str(tool_input.get("query", "")).strip()
             queries.append(query)
             try:
-                # exa_py is synchronous; offload to a thread so we don't
-                # block the event loop (other modules may run concurrently).
                 exa_result = await asyncio.to_thread(
                     exa_client.search_and_contents,
                     query=query,
@@ -507,11 +510,8 @@ async def _run_exa_tool(
             )
 
         if not tool_results:
-            # stop_reason==tool_use but no exa_search blocks — stop defensively.
             break
 
-        # Preserve response.content verbatim — thinking blocks are signed and
-        # must round-trip unmodified when tools are enabled.
         messages = messages + [
             {"role": "assistant", "content": response.content},
             {"role": "user", "content": tool_results},
@@ -523,7 +523,7 @@ async def _run_exa_tool(
 
 class OsintWebModule:
     name = "osint_web"
-    requires: tuple[str, ...] = ("name",)
+    requires: tuple[tuple[str, str | None], ...] = (("name", None),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         if not settings.anthropic_api_key:
@@ -533,14 +533,17 @@ class OsintWebModule:
                 gaps=["anthropic_api_key is not configured"],
             )
 
+        name_sig = ctx.best("name")
+        name = name_sig.value if name_sig else "Unknown"
         backend = "exa" if settings.exa_api_key else "anthropic_web"
         _log(
-            f"[osint_web] investigating '{ctx.name}' "
+            f"[osint_web] investigating '{name}' "
             f"(country={ctx.case.country}, backend={backend})"
         )
 
         anthropic_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
 
+        exa_client = None
         if backend == "exa":
             try:
                 from exa_py import Exa
@@ -554,12 +557,38 @@ class OsintWebModule:
                     ],
                 )
             exa_client = Exa(api_key=settings.exa_api_key)
-            final_text, queries, urls, stop_reason = await _run_exa_tool(
-                anthropic_client, exa_client, ctx
-            )
-        else:
-            final_text, queries, urls, stop_reason = await _run_anthropic_web_tools(
-                anthropic_client, ctx
+
+        last_error: Exception | None = None
+        for retry in range(_API_RETRIES + 1):
+            try:
+                if backend == "exa":
+                    final_text, queries, urls, stop_reason = await _run_exa_tool(
+                        anthropic_client, exa_client, ctx
+                    )
+                else:
+                    final_text, queries, urls, stop_reason = await _run_anthropic_web_tools(
+                        anthropic_client, ctx
+                    )
+                last_error = None
+                break
+            except anthropic.APIStatusError as exc:
+                last_error = exc
+                if exc.status_code >= 500 and retry < _API_RETRIES:
+                    delay = _API_RETRY_DELAY_S * (retry + 1)
+                    _log(
+                        f"[osint_web] server error (attempt {retry + 1}/{_API_RETRIES + 1}), "
+                        f"retrying in {delay}s: {exc}"
+                    )
+                    await asyncio.sleep(delay)
+                    continue
+                break
+
+        if last_error is not None:
+            return ModuleResult(
+                name=self.name,
+                status="error",
+                gaps=[f"osint_web raised {type(last_error).__name__}: {last_error}"],
+                raw={"backend": backend, "error": str(last_error)},
             )
 
         parsed = _loose_json(final_text)

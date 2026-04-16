@@ -5,8 +5,8 @@ email OR a phone number as the `w` field. If both are on the Context we
 check both and merge the results — a single registered identifier is enough
 to surface an iCloud contact signal.
 
-Requires none of the canonical identity fields strictly (the runner's
-`requires` is AND-only), but self-skips if neither email nor phone is set.
+Requires none of the signal pairs strictly (the runner's `requires` is
+AND-only), but self-skips if neither email nor phone signal is set.
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ from app.pipeline.base import Context, ModuleResult
 class ICloudCheckModule:
     name = "icloud_check"
     # Empty because the upstream takes email OR phone — we self-skip below.
-    requires: tuple[str, ...] = ()
+    requires: tuple[tuple[str, str | None], ...] = ()
 
     async def run(self, ctx: Context) -> ModuleResult:
         t0 = time.monotonic()
@@ -36,12 +36,14 @@ class ICloudCheckModule:
                 duration_s=time.monotonic() - t0,
             )
 
-        identifiers: list[str] = [v for v in (ctx.email, ctx.phone) if v]
+        email_sig = ctx.best("contact", "email")
+        phone_sig = ctx.best("contact", "phone")
+        identifiers: list[str] = [s.value for s in (email_sig, phone_sig) if s]
         if not identifiers:
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                gaps=["icloud_check: neither email nor phone on context"],
+                gaps=["icloud_check: neither email nor phone signal on context"],
                 duration_s=time.monotonic() - t0,
             )
 

@@ -17,7 +17,7 @@ from pathlib import Path
 
 from app.config import settings
 from app.enrichment.vision import analyze_images
-from app.models import Case, InstagramEnrichment
+from app.models import InstagramEnrichment
 
 
 def _log(msg: str) -> None:
@@ -225,20 +225,22 @@ def _collect_outputs(
     return images, video_count, captions, profile_info
 
 
-async def enrich_instagram(case: Case) -> InstagramEnrichment:
-    """Run the Instagram OSINT enrichment step for one case.
+async def enrich_instagram(
+    *, handle: str, case_id: str = ""
+) -> InstagramEnrichment:
+    """Run the Instagram OSINT enrichment step for one handle.
 
     Always returns an InstagramEnrichment (never raises) — any failures are
     recorded in `gaps` so the collector can see exactly what we couldn't find.
     """
-    handle = (case.instagram_handle or "").strip().lstrip("@")
+    handle = handle.strip().lstrip("@")
     if not handle:
         return InstagramEnrichment(
             summary="No Instagram handle provided for this case.",
             gaps=["No Instagram handle provided"],
         )
 
-    _log(f"[instagram] enrichment for @{handle} (case {case.case_id})")
+    _log(f"[instagram] enrichment for @{handle} (case {case_id})")
     t_total = time.monotonic()
 
     # Share one output dir across all cases keyed by handle, so two cases

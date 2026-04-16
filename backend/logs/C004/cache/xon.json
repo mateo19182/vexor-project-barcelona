@@ -1,0 +1,359 @@
+{
+  "name": "xon",
+  "status": "ok",
+  "summary": "Email found in 3 breach(es); registered on: canva.com, verifications.io, linkedin.com | 1 risk flag(s) raised (plaintext passwords, sensitive data, or pastes) | Email found in 3 breach(es); earliest 2012, latest 2019",
+  "social_links": [],
+  "facts": [
+    {
+      "claim": "Email found in 3 breach(es); earliest 2012, latest 2019",
+      "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+      "confidence": 0.95
+    },
+    {
+      "claim": "Exposed data types across all breaches: Dates of birth, Email addresses, Genders, Geographic locations, Names, Passwords, Phone numbers, Physical addresses, Usernames",
+      "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+      "confidence": 0.9
+    },
+    {
+      "claim": "Overall breach risk score: Moderate (45/100)",
+      "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+      "confidence": 0.85
+    },
+    {
+      "claim": "1 exposed password(s) are plaintext or easy-to-crack (0 plaintext, 1 weak hash)",
+      "source": "https://xposedornot.com/xposed/#josemanuelamadoabelenda%40gmail.com",
+      "confidence": 0.9
+    }
+  ],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "canva.com",
+      "source": "https://www.canva.com/en_in/help/incident-may24/",
+      "confidence": 0.85,
+      "notes": "Account registered on canva.com (breach year: 2019). Data exposed: Email addresses, Names, Usernames",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "verifications.io",
+      "source": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+      "confidence": 0.85,
+      "notes": "Account registered on verifications.io (breach year: 2019). Data exposed: Email addresses, Names, Dates of birth, Genders, Geographic locations, Phone numbers, Physical addresses",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "linkedin.com",
+      "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+      "confidence": 0.85,
+      "notes": "Account registered on linkedin.com (breach year: 2012). Data exposed: Email addresses, Passwords",
+      "tag": null
+    },
+    {
+      "kind": "risk_flag",
+      "value": "Password exposed as easytocrack in LinkedIn breach",
+      "source": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+      "confidence": 0.9,
+      "notes": null,
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "analytics_status": 200,
+    "analytics": {
+      "BreachMetrics": {
+        "get_details": [],
+        "industry": [
+          [
+            [
+              "misc",
+              0
+            ],
+            [
+              "ente",
+              0
+            ],
+            [
+              "heal",
+              0
+            ],
+            [
+              "elec",
+              0
+            ],
+            [
+              "mini",
+              0
+            ],
+            [
+              "musi",
+              0
+            ],
+            [
+              "manu",
+              0
+            ],
+            [
+              "ener",
+              0
+            ],
+            [
+              "news",
+              0
+            ],
+            [
+              "hosp",
+              0
+            ],
+            [
+              "food",
+              0
+            ],
+            [
+              "phar",
+              0
+            ],
+            [
+              "educ",
+              0
+            ],
+            [
+              "cons",
+              0
+            ],
+            [
+              "agri",
+              0
+            ],
+            [
+              "tele",
+              0
+            ],
+            [
+              "info",
+              3
+            ],
+            [
+              "tran",
+              0
+            ],
+            [
+              "aero",
+              0
+            ],
+            [
+              "fina",
+              0
+            ],
+            [
+              "reta",
+              0
+            ],
+            [
+              "nonp",
+              0
+            ],
+            [
+              "govt",
+              0
+            ],
+            [
+              "spor",
+              0
+            ],
+            [
+              "envi",
+              0
+            ]
+          ]
+        ],
+        "passwords_strength": [
+          {
+            "EasyToCrack": 1,
+            "PlainText": 0,
+            "StrongHash": 0,
+            "Unknown": 2
+          }
+        ],
+        "risk": [
+          {
+            "risk_label": "Moderate",
+            "risk_score": 45
+          }
+        ],
+        "xposed_data": [
+          {
+            "children": [
+              {
+                "name": "👤 Personal Identification",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Usernames",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Names",
+                    "value": 2
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "A",
+                    "name": "data_Genders",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "📞 Communication and Social Interactions",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "F",
+                    "name": "data_Email addresses",
+                    "value": 3
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "F",
+                    "name": "data_Phone numbers",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "🔒 Security Practices",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "D",
+                    "name": "data_Passwords",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              },
+              {
+                "name": "👥 Demographics",
+                "children": [
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Geographic locations",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Dates of birth",
+                    "value": 1
+                  },
+                  {
+                    "colname": "level3",
+                    "group": "I",
+                    "name": "data_Physical addresses",
+                    "value": 1
+                  }
+                ],
+                "colname": "level2"
+              }
+            ]
+          }
+        ],
+        "yearwise_details": [
+          {
+            "y2007": 0,
+            "y2008": 0,
+            "y2009": 0,
+            "y2010": 0,
+            "y2011": 0,
+            "y2012": 1,
+            "y2013": 0,
+            "y2014": 0,
+            "y2015": 0,
+            "y2016": 0,
+            "y2017": 0,
+            "y2018": 0,
+            "y2019": 2,
+            "y2020": 0,
+            "y2021": 0,
+            "y2022": 0,
+            "y2023": 0,
+            "y2024": 0,
+            "y2025": 0,
+            "y2026": 0
+          }
+        ]
+      },
+      "BreachesSummary": {
+        "site": "Canva;LinkedIn;Verifications"
+      },
+      "ExposedBreaches": {
+        "breaches_details": [
+          {
+            "breach": "Canva",
+            "details": "Canva, an Australian graphic design and publishing company, announced that it had suffered a data breach in 2019. An unauthorized third-party had gained access to certain data stored on its systems, potentially affecting the personal information of over 137 million users. The exposed data includes customers' names, email addresses, and hashed passwords. ",
+            "domain": "canva.com",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/Canva.png",
+            "password_risk": "unknown",
+            "references": "https://www.canva.com/en_in/help/incident-may24/",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Names;Usernames",
+            "xposed_date": "2019",
+            "xposed_records": 137504762,
+            "added": "2023-11-08T06:30:25+00:00"
+          },
+          {
+            "breach": "Verifications",
+            "details": "Verifications.io, a comprehensive email verification service, suffered a severe data breach in 2019 that compromised a vast array of personal user data. The exposed data included email addresses, phone numbers, dates of birth, and other personal details, which presented a considerable privacy and security risk to the affected users.",
+            "domain": "verifications.io",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/Verificationsio.png",
+            "password_risk": "unknown",
+            "references": "https://www.bitdefender.com/blog/hotforsecurity/email-verifiers-and-data-breaches-what-you-need-to-know",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Names;Dates of birth;Genders;Geographic locations;Phone numbers;Physical addresses",
+            "xposed_date": "2019",
+            "xposed_records": 762579945,
+            "added": "2023-11-08T06:30:24+00:00"
+          },
+          {
+            "breach": "LinkedIn",
+            "details": "LinkedIn, the popular professional networking site, suffered a data breach in 2012,  in which hackers obtained user data including email addresses and hashed passwords. The breach reportedly impacted over 167 million user accounts. In 2016, it was discovered that the compromised data was being sold on the dark web. Following the discovery, LinkedIn forced a password reset for all impacted accounts and implemented new security measures to prevent future breaches.",
+            "domain": "linkedin.com",
+            "industry": "Information Technology",
+            "logo": "https://xposedornot.com/static/logos/Linkedin.png",
+            "password_risk": "easytocrack",
+            "references": "https://en.wikipedia.org/wiki/2012_LinkedIn_hack",
+            "searchable": "Yes",
+            "verified": "Yes",
+            "xposed_data": "Email addresses;Passwords",
+            "xposed_date": "2012",
+            "xposed_records": 160042644,
+            "added": "2023-11-08T06:30:00+00:00"
+          }
+        ]
+      },
+      "ExposedPastes": null,
+      "PasteMetrics": null,
+      "PastesSummary": {
+        "cnt": 0,
+        "domain": "",
+        "tmpstmp": ""
+      }
+    },
+    "check_status": 0,
+    "check": null
+  },
+  "duration_s": 2.5136198429972865
+}

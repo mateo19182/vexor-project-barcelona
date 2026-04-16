@@ -40,9 +40,9 @@ You are NOT coaching the voice agent. Do NOT suggest phrasing, openings, strateg
 Rules:
 1. Use only facts present in the dossier input. Do not invent or infer.
 2. Drop low-confidence or contradictory items silently. Do not hedge ("possibly", "maybe").
-3. Prefer canonical values ("Barcelona, ES", "Acme Corp", "€1,240 personal loan, 31 months old").
-4. `summary`: prose, neutral tone. Cover debtor identity, location, employment/role, lifestyle, and any risk/asset findings that are CONFIRMED for this specific person. Length scales with richness — a thin dossier gets a short summary. Do not pad with speculation, caveats, or information about other people.
-5. `key_facts`: short bullets — one confirmed fact per bullet. Omit anything speculative or unconfirmed.
+3. Prefer canonical values ("Barcelona, ES", "Acme Corp", "\u20ac1,240 personal loan, 31 months old").
+4. `summary`: prose, neutral tone. Cover debtor identity, location, employment/role, lifestyle, and any risk/asset findings that are CONFIRMED for this specific person. Length scales with richness \u2014 a thin dossier gets a short summary. Do not pad with speculation, caveats, or information about other people.
+5. `key_facts`: short bullets \u2014 one confirmed fact per bullet. Omit anything speculative or unconfirmed.
 6. Always include the case facts (debt amount, origin, age, country, prior call attempts/outcome, legal asset finding) even if enrichment found nothing.
 7. CRITICAL: Never mention other individuals found during research. Only report on the subject.
 
@@ -59,7 +59,7 @@ OUTPUT_SCHEMA: dict[str, Any] = {
         "key_facts": {
             "type": "array",
             "items": {"type": "string"},
-            "description": "Short bullets — one concrete verified fact each.",
+            "description": "Short bullets \u2014 one concrete verified fact each.",
         },
     },
     "required": ["summary", "key_facts"],
@@ -73,31 +73,46 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
         "=== CASE ===",
         f"case_id: {case.case_id}",
         f"country: {case.country or 'unknown'}",
-        f"debt: {f'€{case.debt_eur:.2f}' if case.debt_eur is not None else 'unknown'} ({case.debt_origin or 'unknown'}, {case.debt_age_months or 'unknown'} months old)",
+        f"debt: {f'\u20ac{case.debt_eur:.2f}' if case.debt_eur is not None else 'unknown'} ({case.debt_origin or 'unknown'}, {case.debt_age_months or 'unknown'} months old)",
         f"call_history: {case.call_attempts if case.call_attempts is not None else 'unknown'} attempt(s), last outcome: {case.call_outcome or 'unknown'}",
         f"legal_asset_finding: {case.legal_asset_finding or 'unknown'}",
     ]
-    if ctx.name:
-        lines.append(f"name: {ctx.name}")
-    if ctx.phone:
-        lines.append(f"phone: {ctx.phone}")
-    if ctx.email:
-        lines.append(f"email: {ctx.email}")
-    if ctx.address:
-        lines.append(f"address: {ctx.address}")
-    if ctx.instagram_handle:
-        lines.append(f"instagram: @{ctx.instagram_handle}")
-    if ctx.linkedin_url:
-        lines.append(f"linkedin: {ctx.linkedin_url}")
-    if ctx.twitter_handle:
-        lines.append(f"twitter: @{ctx.twitter_handle}")
+
+    # Surface identity signals from Context
+    name_sig = ctx.best("name")
+    if name_sig:
+        lines.append(f"name: {name_sig.value}")
+
+    phone_sig = ctx.best("contact", "phone")
+    if phone_sig:
+        lines.append(f"phone: {phone_sig.value}")
+
+    email_sig = ctx.best("contact", "email")
+    if email_sig:
+        lines.append(f"email: {email_sig.value}")
+
+    address_sig = ctx.best("address")
+    if address_sig:
+        lines.append(f"address: {address_sig.value}")
+
+    ig_sig = ctx.best("contact", "instagram")
+    if ig_sig:
+        lines.append(f"instagram: @{ig_sig.value}")
+
+    li_sig = ctx.best("contact", "linkedin")
+    if li_sig:
+        lines.append(f"linkedin: {li_sig.value}")
+
+    tw_sig = ctx.best("contact", "twitter")
+    if tw_sig:
+        lines.append(f"twitter: @{tw_sig.value}")
 
     # Surface high-confidence structured signals accumulated on Context
     # so the LLM has confirmed profile data to work with.
     profile_kinds = ("employer", "role", "location", "business")
     profile_lines: list[str] = []
     for kind in profile_kinds:
-        for s in ctx.best_signals(kind):
+        for s in ctx.all(kind):
             if s.confidence >= 0.70:
                 profile_lines.append(f"{s.kind}: {s.value} (conf={s.confidence:.2f}, src={s.source})")
     if profile_lines:
@@ -120,9 +135,10 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
         lines.append("")
         lines.append("signals:")
         for s in dossier.signals:
-            note = f" — {s.notes}" if s.notes else ""
+            tag_str = f"/{s.tag}" if s.tag else ""
+            note = f" \u2014 {s.notes}" if s.notes else ""
             lines.append(
-                f"  [{s.kind}] {s.value} (conf={s.confidence:.2f}){note}"
+                f"  [{s.kind}{tag_str}] {s.value} (conf={s.confidence:.2f}){note}"
             )
 
     if dossier.facts:
@@ -138,7 +154,7 @@ def _build_user_prompt(ctx: Context, dossier: Dossier) -> str:
             lines.append(f"  - {g}")
 
     lines.append("")
-    lines.append("Produce the summary JSON now. Facts only — no coaching.")
+    lines.append("Produce the summary JSON now. Facts only \u2014 no coaching.")
     return "\n".join(lines)
 
 
@@ -163,11 +179,11 @@ async def generate_llm_summary(
     """Run the LLM over the finished Dossier and return a factual summary.
 
     Returns None if the API key is missing or the model fails to return
-    valid JSON — the caller treats it as optional, the pipeline is not
+    valid JSON \u2014 the caller treats it as optional, the pipeline is not
     broken by a failed summary.
     """
     if not settings.anthropic_api_key:
-        _log("[llm_summary] skipped — anthropic_api_key not configured")
+        _log("[llm_summary] skipped \u2014 anthropic_api_key not configured")
         return None
 
     client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)

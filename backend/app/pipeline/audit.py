@@ -103,25 +103,6 @@ def render_summary(response: EnrichmentResponse) -> str:
             f"{len(m.gaps):>2} gap(s)"
         )
 
-    applied = [e for e in response.audit_log if e.kind == "ctx_patch_applied"]
-    rejected = [e for e in response.audit_log if e.kind == "ctx_patch_rejected"]
-    if applied or rejected:
-        lines.append("")
-        lines.append("ctx writes:")
-        for e in applied:
-            d = e.detail
-            lines.append(
-                f"  {d.get('field', ''):<18} = {d.get('value', '')!r}   "
-                f"by {e.module}  conf={float(d.get('confidence', 0.0)):.2f}"
-            )
-        for e in rejected:
-            d = e.detail
-            lines.append(
-                f"  {d.get('field', ''):<18} kept  "
-                f"(rejected {e.module} conf={float(d.get('incoming_confidence', 0.0)):.2f} "
-                f"< existing {float(d.get('existing_confidence', 0.0)):.2f})"
-            )
-
     gap_events = [(m.name, g) for m in response.modules for g in m.gaps]
     if gap_events:
         lines.append("")

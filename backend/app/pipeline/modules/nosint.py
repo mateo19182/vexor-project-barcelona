@@ -1,6 +1,6 @@
 """NoSINT CSINT module — streams 30+ module results for a given email address.
 
-Requires: ctx.email
+Requires: contact:email signal
 Output:
   signals  — one `contact` signal per platform where the email is found;
              `risk_flag` for any breach/leak/paste module hit.
@@ -34,7 +34,7 @@ def _is_breach_module(module_name: str) -> bool:
 
 class NosintModule:
     name = "nosint"
-    requires: tuple[str, ...] = ("email",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "email"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         api_key = settings.nosint_api_key
@@ -46,7 +46,8 @@ class NosintModule:
                 gaps=["NOSINT_API_KEY is not set"],
             )
 
-        email = ctx.email
+        email_sig = ctx.best("contact", "email")
+        email = email_sig.value if email_sig else ""
         result = await enrich_nosint(email, api_key)
 
         if not result.all_results and result.gaps:

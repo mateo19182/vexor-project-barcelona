@@ -2,17 +2,19 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import AliasChoices, BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 
 
 SignalKind = Literal[
+    "name",          # subject's name
+    "address",       # physical address
     "location",      # current/frequent residence or region
     "employer",      # company or organization affiliation
     "role",          # job title / position
     "business",      # ownership / directorship / self-employment
     "asset",         # bank account, vehicle, property, crypto, etc.
     "lifestyle",     # travel, luxury goods, hobbies — hints at disposable income
-    "contact",       # additional phone / email / handle discovered
+    "contact",       # email, phone, handles — use tag to distinguish
     "affiliation",   # clubs, associations, education
     "risk_flag",     # data breach hit, criminal record, sanctions, etc.
 ]
@@ -23,10 +25,14 @@ class Signal(BaseModel):
 
     Every structured finding flows through signals. They accumulate on
     Context so any module can read prior modules' findings. Synthesis
-    dedupes by ``(kind, value.lower())``.
+    dedupes by ``(kind, tag, value.lower())``.
 
     ``value`` should be short and canonical (e.g. ``"Barcelona, ES"``,
     ``"Acme Corp"``). Extra detail goes in ``notes``.
+
+    ``tag`` distinguishes signals within a kind — e.g. ``contact``
+    signals use tag to separate email / phone / instagram / linkedin /
+    twitter / gaia_id / etc. Most other kinds don't need a tag.
     """
 
     kind: SignalKind
@@ -34,12 +40,11 @@ class Signal(BaseModel):
     source: str = Field(description="Full URL or reference backing the observation.")
     confidence: float = Field(ge=0.0, le=1.0)
     notes: str | None = None
+    tag: str | None = None
 
 
 class Case(BaseModel):
     """One row of the Vexor starting dataset — the minimal info a servicer has."""
-
-    model_config = ConfigDict(populate_by_name=True)
 
     case_id: str
     country: str | None = Field(default=None, description="ISO-2 country code, e.g. ES, PT, PL, FR")
@@ -50,62 +55,33 @@ class Case(BaseModel):
     call_outcome: str | None = Field(default=None, description="e.g. not_debtor, busy, rings_out, voicemail")
     legal_asset_finding: str | None = Field(default=None, description="e.g. no_assets_found, bank_account")
 
-    # Optional real-world hints the user may add for testing.
-    # Accepts both canonical field names and common CSV/API aliases.
-    name: str | None = Field(
-        default=None,
-        validation_alias=AliasChoices("name", "full_name"),
-    )
-    phone: str | None = Field(
-        default=None,
-        validation_alias=AliasChoices("phone", "phone_number"),
-    )
-    address: str | None = None
-    email: str | None = None
-    tax_id: str | None = None
-
-    # Optional Instagram handle for the social-media enrichment step.
-    # Resolution from name → handle is out of scope for this step.
-    instagram_handle: str | None = None
-
-    # Optional Twitter/X handle — skips the osint_web resolution step.
-    twitter_handle: str | None = None
-
-    # Optional Google/Gaia ID — if known, skips the Gmail-resolution step.
-    google_id: str | None = None
-
-    # Optional — mejora la estimación de valor total si hay banda €/m²
-    property_sqm: float | None = Field(
-        default=None,
-        description="Superficie construida aproximada en m² (si se conoce)",
-    )
-    property_typology: str | None = Field(
-        default=None,
-        description="piso, casa, local, etc. — solo metadato; no cambia el modelo aún",
-    )
-
-    # --- Structured pre-seed ---
-    # Known signals the caller wants injected into the pipeline at
-    # confidence 1.0. Same schema as module-emitted signals. These land
-    # on ctx.signals before wave 1 so every module can read them.
-    known_signals: list[Signal] = Field(
+    # Everything the caller knows about the subject — structured.
+    signals: list[Signal] = Field(
         default_factory=list,
         description=(
-            "Pre-seed the pipeline with known structured observations. "
-            'E.g. [{"kind": "employer", "value": "Acme Corp", '
+            "All structured data about the subject arrives as signals. "
+            'E.g. [{"kind": "name", "value": "Maria Lopez", '
             '"source": "case_input", "confidence": 1.0}]'
         ),
     )
 
-    # --- Unstructured context ---
-    # Free-form notes the caller wants to attach to the case. Passed through
-    # to modules and the LLM summary as additional context. Not parsed.
+    # Everything the caller knows — unstructured.
     context: str | None = Field(
         default=None,
         description=(
             "Free-form notes / unstructured context about the debtor. "
-            "E.g. 'Debtor mentioned having family in Málaga during the last call.'"
+            "E.g. 'Debtor mentioned having family in Malaga during the last call.'"
         ),
+    )
+
+    # Property metadata (not a signal, used by the property module directly).
+    property_sqm: float | None = Field(
+        default=None,
+        description="Superficie construida aproximada en m2 (si se conoce)",
+    )
+    property_typology: str | None = Field(
+        default=None,
+        description="piso, casa, local, etc. — solo metadato; no cambia el modelo aun",
     )
 
 
@@ -121,17 +97,6 @@ class Fact(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
 
 
-class AttributedValue(BaseModel):
-    """A value written to Context, tagged with where it came from and how
-    confident the writer is. The runner uses `confidence` to decide whether
-    an incoming patch overwrites an existing entry.
-    """
-
-    value: str
-    source: str
-    confidence: float = Field(ge=0.0, le=1.0)
-
-
 class SocialLink(BaseModel):
     """A confirmed (or candidate) social media / professional profile."""
 
@@ -139,27 +104,6 @@ class SocialLink(BaseModel):
     url: str
     handle: str | None = None
     confidence: float = Field(ge=0.0, le=1.0)
-
-
-class ContextPatch(BaseModel):
-    """How a module proposes identity-field updates back to Context.
-
-    Each field is optional; only non-None entries are applied. The runner
-    merges by confidence — see `pipeline/runner.py::_apply_patch`.
-
-    These are identity fields — resolved handles/URLs/emails that unlock
-    downstream modules (e.g. instagram_handle gates the instagram module).
-    All other structured data flows through signals.
-    """
-
-    name: AttributedValue | None = None
-    email: AttributedValue | None = None
-    phone: AttributedValue | None = None
-    address: AttributedValue | None = None
-    instagram_handle: AttributedValue | None = None
-    linkedin_url: AttributedValue | None = None
-    twitter_handle: AttributedValue | None = None
-    gaia_id: AttributedValue | None = None
 
 
 class InstagramEnrichment(BaseModel):
@@ -215,8 +159,6 @@ EventKind = Literal[
     "wave_started",
     "module_completed",
     "module_cache_hit",
-    "ctx_patch_applied",
-    "ctx_patch_rejected",
 ]
 
 

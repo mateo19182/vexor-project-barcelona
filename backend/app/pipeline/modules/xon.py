@@ -60,11 +60,12 @@ async def _get(client: httpx.AsyncClient, url: str) -> tuple[int, Any]:
 
 class XposedOrNotModule:
     name = "xon"
-    requires: tuple[str, ...] = ("email",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "email"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         t0 = time.monotonic()
-        email = ctx.email
+        email_sig = ctx.best("contact", "email")
+        email = email_sig.value if email_sig else ""
         enc = quote(email, safe="")
 
         async with httpx.AsyncClient() as client:

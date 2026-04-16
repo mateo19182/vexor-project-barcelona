@@ -1,6 +1,6 @@
 """LinkedIn OSINT enrichment module (LinkdAPI-backed).
 
-Requires ``linkedin_url`` on the Context — usually promoted by
+Requires a ``contact:linkedin`` signal on the Context — usually promoted by
 ``osint_web`` when it finds a linkedin.com/in/<slug> URL. Calls
 LinkdAPI's ``/profile/overview`` and ``/profile/details`` endpoints and
 translates the payload into Facts / Signals a collector can act on.
@@ -37,7 +37,7 @@ def _location_str(loc: dict | None) -> str:
 
 class LinkedInModule:
     name = "linkedin"
-    requires: tuple[str, ...] = ("linkedin_url",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "linkedin"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         if not settings.linkdapi_api_key:
@@ -47,7 +47,8 @@ class LinkedInModule:
                 gaps=["linkedin: LINKDAPI_API_KEY not configured — skipping"],
             )
 
-        url = ctx.linkedin_url or ""
+        sig = ctx.best("contact", "linkedin")
+        url = sig.value if sig else ""
         username = extract_username(url)
         if not username:
             return ModuleResult(
@@ -82,8 +83,6 @@ class LinkedInModule:
         industry = (overview.get("industryName") or "").strip()
         location = _location_str(overview.get("location"))
 
-        # Headline → role Signal. Previously also emitted as a Fact, but
-        # signals are the structured layer; the headline is the role value.
         if headline:
             signals.append(
                 Signal(
@@ -95,8 +94,6 @@ class LinkedInModule:
                 )
             )
 
-        # CurrentPositions[].name → employer Signals. High confidence —
-        # LinkedIn "current position" is user-maintained and dated.
         for pos in overview.get("CurrentPositions") or []:
             company = (pos.get("name") or "").strip()
             if company:
@@ -131,7 +128,6 @@ class LinkedInModule:
                 )
             )
 
-        # About / summary text — long-form blurb worth keeping as a Fact.
         about = (details.get("about") or "").strip()
         if about:
             facts.append(
@@ -142,8 +138,6 @@ class LinkedInModule:
                 )
             )
 
-        # Detailed positions (past + present) — surface the top few as
-        # Facts so the collector can eyeball career trajectory.
         positions = details.get("positions") or []
         for pos in positions[:3]:
             title = (pos.get("jobTitle") or "").strip()

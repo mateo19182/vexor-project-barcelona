@@ -1,0 +1,47 @@
+{
+  "name": "icloud_check",
+  "status": "ok",
+  "summary": "josemanuelamadoabelenda@gmail.com is registered on iCloud. | +34609832721 is registered on iCloud.",
+  "social_links": [],
+  "facts": [],
+  "signals": [
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to josemanuelamadoabelenda@gmail.com",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    },
+    {
+      "kind": "contact",
+      "value": "iCloud account registered to +34609832721",
+      "source": "platform_check:icloud_check",
+      "confidence": 0.8,
+      "notes": "Upstream status: SUCCESS",
+      "tag": null
+    }
+  ],
+  "gaps": [],
+  "raw": {
+    "checks": [
+      {
+        "platform": "iCloud",
+        "identifier": "josemanuelamadoabelenda@gmail.com",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "e878a616-eac9-490f-be6f-8f3a62deb77c",
+        "error": null
+      },
+      {
+        "platform": "iCloud",
+        "identifier": "+34609832721",
+        "status_raw": "SUCCESS",
+        "http_status": 200,
+        "session_id": "f032e985-0dc5-42b7-9966-342d2bbb9483",
+        "error": null
+      }
+    ]
+  },
+  "duration_s": 3.50593493499764
+}

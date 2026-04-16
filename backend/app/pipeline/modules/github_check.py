@@ -1,6 +1,6 @@
 """GitHub registration-check module.
 
-Asks the upstream platform-check VM whether `ctx.email` is tied to a
+Asks the upstream platform-check VM whether the subject's email is tied to a
 GitHub account.
 """
 
@@ -15,7 +15,7 @@ from app.pipeline.base import Context, ModuleResult
 
 class GithubCheckModule:
     name = "github_check"
-    requires: tuple[str, ...] = ("email",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "email"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         t0 = time.monotonic()
@@ -27,12 +27,15 @@ class GithubCheckModule:
                 duration_s=time.monotonic() - t0,
             )
 
+        email_sig = ctx.best("contact", "email")
+        email = email_sig.value if email_sig else ""
+
         result = await check_platform(
             platform="github",
             host=settings.platform_check_host,
             port=settings.github_check_port,
             api_key=settings.github_check_api_key,
-            identifier=ctx.email,
+            identifier=email,
             proxy=settings.platform_check_proxy,
         )
         bundle = build_module_result(

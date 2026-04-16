@@ -1,6 +1,6 @@
 """Instagram registration-check module.
 
-Asks the upstream platform-check VM whether `ctx.email` is tied to an
+Asks the upstream platform-check VM whether the subject's email is tied to an
 Instagram account. Thin wrapper around `platform_check.check_platform`.
 """
 
@@ -15,7 +15,7 @@ from app.pipeline.base import Context, ModuleResult
 
 class InstagramCheckModule:
     name = "instagram_check"
-    requires: tuple[str, ...] = ("email",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "email"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
         t0 = time.monotonic()
@@ -27,12 +27,15 @@ class InstagramCheckModule:
                 duration_s=time.monotonic() - t0,
             )
 
+        email_sig = ctx.best("contact", "email")
+        email = email_sig.value if email_sig else ""
+
         result = await check_platform(
             platform="instagram",
             host=settings.platform_check_host,
             port=settings.instagram_check_port,
             api_key=settings.instagram_check_api_key,
-            identifier=ctx.email,
+            identifier=email,
             proxy=settings.platform_check_proxy,
         )
         bundle = build_module_result(

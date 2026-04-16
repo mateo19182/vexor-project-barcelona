@@ -1,9 +1,9 @@
 """GAIA enrichment module.
 
-Input  → ctx.gaia_id
-Output → contributor stats, public reviews, public photos + lifestyle signals
+Input  -> contact:gaia_id signal
+Output -> contributor stats, public reviews, public photos + lifestyle signals
 
-Runs in wave 2+ — after google_id promotes gaia_id to Context.
+Runs in wave 2+ — after google_id emits the gaia_id signal.
 """
 
 from __future__ import annotations
@@ -38,10 +38,11 @@ def _load_cookies() -> dict[str, str] | None:
 
 class GaiaEnrichmentModule:
     name = "gaia_enrichment"
-    requires: tuple[str, ...] = ("gaia_id",)
+    requires: tuple[tuple[str, str | None], ...] = (("contact", "gaia_id"),)
 
     async def run(self, ctx: Context) -> ModuleResult:
-        gaia_id = ctx.gaia_id or ""
+        gaia_sig = ctx.best("contact", "gaia_id")
+        gaia_id = gaia_sig.value if gaia_sig else ""
 
         cookies = _load_cookies()
         if cookies is None:
@@ -57,13 +58,13 @@ class GaiaEnrichmentModule:
         signals: list[Signal] = []
         facts: list[Fact] = []
 
-        # ── Review signals ────────────────────────────────────────────────
+        # -- Review signals --
         for rev in enrichment.reviews:
             label = rev.place or "Unknown place"
             if rev.rating:
-                label += f" ({rev.rating}★)"
+                label += f" ({rev.rating}\u2605)"
             if rev.time_ago:
-                label += f" — {rev.time_ago}"
+                label += f" \u2014 {rev.time_ago}"
 
             if rev.place:
                 signals.append(Signal(
@@ -80,18 +81,18 @@ class GaiaEnrichmentModule:
                     confidence=0.80,
                 ))
 
-        # ── Photo signals ─────────────────────────────────────────────────
+        # -- Photo signals --
         for photo in enrichment.photos:
             label = photo.place_name or "unknown location"
             signals.append(Signal(
                 kind="lifestyle",
-                value=f"Google Maps photo uploaded — {label}",
+                value=f"Google Maps photo uploaded \u2014 {label}",
                 source=photo.url,
                 confidence=0.75,
                 notes=None,
             ))
 
-        # ── Stats facts ───────────────────────────────────────────────────
+        # -- Stats facts --
         s = enrichment.stats
         if s.reviews_count or s.ratings_count or s.photos_count:
             parts: list[str] = []
@@ -109,7 +110,7 @@ class GaiaEnrichmentModule:
                 confidence=0.90,
             ))
 
-        # ── Summary ───────────────────────────────────────────────────────
+        # -- Summary --
         summary_parts = [f"GAIA enrichment for {gaia_id}."]
         if enrichment.name:
             summary_parts.append(f"Name: {enrichment.name}.")

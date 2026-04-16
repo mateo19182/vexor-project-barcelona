@@ -1,17 +1,17 @@
 """Property enrichment module.
 
-Flujo para direcciones en España (country=ES):
-  1. Geocoding (Nominatim/Photon) → provincia, municipio, calle, número
-  2. Catastro API → m², uso, año de construcción, referencia catastral
-  3. MITMA T4 2025 → €/m² valor tasado de venta por municipio
-  4. SERPAVI 2024  → €/m²/mes alquiler real (datos fiscales AEAT) por municipio
-  5. Estimaciones = m² × precio_unitario, con banda de incertidumbre
+Flujo para direcciones en Espana (country=ES):
+  1. Geocoding (Nominatim/Photon) -> provincia, municipio, calle, numero
+  2. Catastro API -> m2, uso, ano de construccion, referencia catastral
+  3. MITMA T4 2025 -> EUR/m2 valor tasado de venta por municipio
+  4. SERPAVI 2024  -> EUR/m2/mes alquiler real (datos fiscales AEAT) por municipio
+  5. Estimaciones = m2 x precio_unitario, con banda de incertidumbre
 
 Emite:
-  - signals: `asset` con la estimación de valor/alquiler
-  - facts:   datos físicos del inmueble (m², uso, año, RC)
-  - raw:     todo el detalle estructurado para síntesis o respuesta API
-  - gaps:    qué no se pudo obtener y por qué
+  - signals: `asset` con la estimacion de valor/alquiler
+  - facts:   datos fisicos del inmueble (m2, uso, ano, RC)
+  - raw:     todo el detalle estructurado para sintesis o respuesta API
+  - gaps:    que no se pudo obtener y por que
 """
 
 from __future__ import annotations
@@ -37,24 +37,18 @@ RENT_BAND_LOW = 0.85
 RENT_BAND_HIGH = 1.15
 
 # Prefijos administrativos que Nominatim antepone al nombre de la provincia
-# cuando devuelve la CCAA en lugar de la provincia real.
 _PROVINCIA_PREFIJOS = (
     "comunidad de ",
     "comunidad foral de ",
-    "región de ",
+    "region de ",
     "principado de ",
     "islas ",
     "illes ",
-    "país ",
+    "pais ",
 )
 
 
 def _clean_provincia(raw: str | None) -> str:
-    """Devuelve el nombre de provincia limpio para Catastro.
-
-    Nominatim a veces devuelve "Comunidad de Madrid" en lugar de "Madrid",
-    "Región de Murcia" en lugar de "Murcia", etc.
-    """
     if not raw:
         return ""
     s = raw.strip()
@@ -72,31 +66,32 @@ def _log(msg: str) -> None:
 
 def _fmt_eur(v: float) -> str:
     if v >= 1_000_000:
-        return f"{v / 1_000_000:.2f}M €"
+        return f"{v / 1_000_000:.2f}M \u20ac"
     if v >= 1_000:
-        return f"{v / 1_000:.0f}k €"
-    return f"{v:.0f} €"
+        return f"{v / 1_000:.0f}k \u20ac"
+    return f"{v:.0f} \u20ac"
 
 
 class PropertyModule:
     name = "property"
-    requires: tuple[str, ...] = ("address",)
+    requires: tuple[tuple[str, str | None], ...] = (("address", None),)
 
     async def run(self, ctx: Context) -> ModuleResult:
-        # Solo España por ahora — MITMA y SERPAVI son bases nacionales ES
+        # Solo Espana por ahora
         if (ctx.case.country or "").upper() != "ES":
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                gaps=["property enrichment solo disponible para ES (country≠ES)"],
+                gaps=["property enrichment solo disponible para ES (country!=ES)"],
             )
 
-        address = ctx.address or ctx.case.address or ""
+        address_sig = ctx.best("address")
+        address = address_sig.value if address_sig else ""
         if not address.strip():
             return ModuleResult(
                 name=self.name,
                 status="skipped",
-                gaps=["sin dirección no se puede enriquecer el inmueble"],
+                gaps=["sin direccion no se puede enriquecer el inmueble"],
             )
 
         gaps: list[str] = []
@@ -110,7 +105,7 @@ class PropertyModule:
         try:
             hit, engine = await geocoding.geocode_best_effort(query=q, country_iso2="ES")
         except Exception as e:  # noqa: BLE001
-            gaps.append(f"Geocodificación falló: {e}")
+            gaps.append(f"Geocodificacion fallo: {e}")
             hit, engine = None, "none"
 
         hints: dict[str, str | None] = {}
@@ -127,25 +122,22 @@ class PropertyModule:
                 "state": hints.get("state"),
             }
         else:
-            gaps.append("Geocodificación sin resultados — usando datos de dirección tal cual")
+            gaps.append("Geocodificacion sin resultados — usando datos de direccion tal cual")
 
         municipio = hints.get("city") or ""
-        # Usar state_district (provincia real) en lugar de state (CCAA)
         provincia = _clean_provincia(hints.get("provincia") or hints.get("state"))
         road = hints.get("road") or ""
 
-        # Geocoders a veces devuelven house_number como rango ("1-3") o lo pierden.
-        # Si parece rango o está vacío, intentamos extraerlo del texto de la dirección.
         raw_num = hints.get("house_number") or ""
         if not raw_num or "-" in raw_num:
             fallback_num = _extract_house_number(address)
             if fallback_num:
-                _log(f"[property] house_number geocoder='{raw_num}' → usando fallback='{fallback_num}'")
+                _log(f"[property] house_number geocoder='{raw_num}' -> usando fallback='{fallback_num}'")
             house_number = fallback_num or raw_num
         else:
             house_number = raw_num
 
-        _log(f"[property] geocode → municipio={municipio!r}, provincia={provincia!r}, road={road!r}")
+        _log(f"[property] geocode -> municipio={municipio!r}, provincia={provincia!r}, road={road!r}")
 
         # --- 2. Catastro API ---
         catastro_data: dict[str, Any] | None = None
@@ -153,14 +145,9 @@ class PropertyModule:
         if road and house_number and municipio:
             tipo_via, nombre_via = catastro_svc.parse_tipo_via(road)
 
-            # Resolver nombre exacto de vía.
-            # Catastro usa la provincia administrativa ("Barcelona"), no la comarca
-            # ("Barcelonès"). Si el primer intento falla con la provincia geocodificada,
-            # reintentamos con provincia = municipio — válido para capitales cuyo
-            # nombre coincide con su provincia (Barcelona, Madrid, Sevilla…).
-            _log(f"[property] catastro /vias → {nombre_via!r} prov={provincia!r} mun={municipio!r}")
+            _log(f"[property] catastro /vias -> {nombre_via!r} prov={provincia!r} mun={municipio!r}")
             vias = await catastro_svc.get_vias(provincia, municipio, nombre_via[:20])
-            prov_catastro = provincia  # provincia que Catastro aceptó
+            prov_catastro = provincia
             if not vias and provincia.lower() != municipio.lower():
                 _log(f"[property] catastro /vias retry con provincia='{municipio}'")
                 vias = await catastro_svc.get_vias(municipio, municipio, nombre_via[:20])
@@ -176,15 +163,12 @@ class PropertyModule:
                 tipo_via_exacto = tipo_via
                 gaps.append(
                     f"Catastro /vias sin resultado para '{nombre_via}' en {municipio} "
-                    "— usando tipo de vía inferido"
+                    "— usando tipo de via inferido"
                 )
 
-            # Extraer planta y puerta del texto de la dirección para filtrar en Catastro.
-            # Si los pasamos, la API devuelve solo la unidad concreta (ej: EN/01)
-            # en vez de los 40 inmuebles del portal.
             planta, puerta = catastro_svc.parse_planta_puerta(address)
             _log(
-                f"[property] catastro /inmueble-localizacion → {tipo_via_exacto} {nombre_via_exacto} "
+                f"[property] catastro /inmueble-localizacion -> {tipo_via_exacto} {nombre_via_exacto} "
                 f"{house_number} planta={planta} puerta={puerta} (prov={prov_catastro})"
             )
             inmuebles = await catastro_svc.get_inmuebles_by_address(
@@ -197,10 +181,8 @@ class PropertyModule:
                 puerta=puerta,
             )
 
-            # Si el filtro por planta/puerta no devuelve nada (Catastro es estricto
-            # con los códigos), reintentamos sin filtro y elegimos el mejor.
             if not inmuebles and (planta or puerta):
-                _log("[property] catastro sin resultado con planta/puerta → retry sin filtro")
+                _log("[property] catastro sin resultado con planta/puerta -> retry sin filtro")
                 inmuebles = await catastro_svc.get_inmuebles_by_address(
                     provincia=prov_catastro,
                     municipio=municipio,
@@ -218,27 +200,26 @@ class PropertyModule:
                         "referencia_catastral": ref.get("referenciaCatastral"),
                         "superficie_m2": _safe_float(eco.get("superficieConstruida")),
                         "uso": eco.get("uso"),
-                        "ano_construccion": eco.get("añoConstruccion"),
+                        "ano_construccion": eco.get("anoConstruccion"),
                         "coeficiente_participacion": eco.get("coeficienteParticipacion"),
                         "codigo_postal": best.get("direccion", {}).get("codigoPostal"),
                         "n_inmuebles_portal": len(inmuebles),
                     }
                     raw["catastro"] = catastro_data
                     _log(
-                        f"[property] catastro → {catastro_data['superficie_m2']} m², "
+                        f"[property] catastro -> {catastro_data['superficie_m2']} m2, "
                         f"uso={catastro_data['uso']}, RC={catastro_data['referencia_catastral']}"
                     )
 
-                    # Fact: datos físicos del inmueble
                     rc = catastro_data["referencia_catastral"] or "desconocida"
                     uso = catastro_data["uso"] or "desconocido"
                     ano = catastro_data["ano_construccion"] or "desconocido"
                     m2_cat = catastro_data["superficie_m2"]
-                    m2_str = f"{m2_cat:.0f} m²" if m2_cat else "desconocida"
+                    m2_str = f"{m2_cat:.0f} m2" if m2_cat else "desconocida"
                     facts.append(Fact(
                         claim=(
                             f"Inmueble en {address}: superficie {m2_str}, uso {uso}, "
-                            f"año construcción {ano}. Referencia catastral: {rc}."
+                            f"ano construccion {ano}. Referencia catastral: {rc}."
                         ),
                         source=CATASTRO_SOURCE,
                         confidence=0.95,
@@ -246,21 +227,20 @@ class PropertyModule:
             else:
                 gaps.append(
                     f"Catastro API sin inmuebles para '{tipo_via_exacto} {nombre_via_exacto} "
-                    f"{house_number}' en {municipio} — sin m² ni RC"
+                    f"{house_number}' en {municipio} — sin m2 ni RC"
                 )
         else:
             gaps.append(
-                "Geocoding no resolvió calle + número + municipio — sin consulta a Catastro"
+                "Geocoding no resolvio calle + numero + municipio — sin consulta a Catastro"
             )
 
-        # m² efectivos: Catastro > case input
+        # m2 efectivos: Catastro > case input
         sqm: float | None = (
             (catastro_data or {}).get("superficie_m2")
             or ctx.case.property_sqm
         )
 
-        # --- 3. MITMA — precio venta €/m² ---
-        # Fallback: municipio exacto → municipio parcial → provincia capital
+        # --- 3. MITMA ---
         mitma_row: dict[str, Any] | None = None
         eur_m2_venta: float | None = None
         mitma_granularity: str = ""
@@ -270,7 +250,6 @@ class PropertyModule:
             if mitma_row:
                 mitma_granularity = "municipio"
             elif provincia:
-                # Fallback: buscar la capital de provincia (mismo nombre que la provincia)
                 mitma_row = mitma_svc.lookup(provincia)
                 if mitma_row:
                     mitma_granularity = "provincia_capital"
@@ -292,14 +271,13 @@ class PropertyModule:
                     "periodo": "T4 2025",
                     "source": MITMA_SOURCE,
                 }
-                _log(f"[property] MITMA → {eur_m2_venta} €/m² en {mitma_row['municipio']} ({mitma_granularity})")
+                _log(f"[property] MITMA -> {eur_m2_venta} EUR/m2 en {mitma_row['municipio']} ({mitma_granularity})")
             else:
                 gaps.append(
                     f"MITMA: ni municipio '{municipio}' ni provincia '{provincia}' encontrados"
                 )
 
-        # --- 4. SERPAVI — precio alquiler €/m²/mes ---
-        # Fallback: municipio exacto → municipio parcial → provincia capital
+        # --- 4. SERPAVI ---
         serpavi_row: dict[str, Any] | None = None
         eur_m2_mes: float | None = None
         serpavi_granularity: str = ""
@@ -334,7 +312,7 @@ class PropertyModule:
                     "periodo": "2024",
                     "source": SERPAVI_SOURCE,
                 }
-                _log(f"[property] SERPAVI → {eur_m2_mes} €/m²/mes en {serpavi_row['municipio']} ({serpavi_granularity})")
+                _log(f"[property] SERPAVI -> {eur_m2_mes} EUR/m2/mes en {serpavi_row['municipio']} ({serpavi_granularity})")
             else:
                 gaps.append(
                     f"SERPAVI: ni municipio '{municipio}' ni provincia '{provincia}' encontrados"
@@ -350,8 +328,8 @@ class PropertyModule:
             estimates["venta_total_eur_high"] = round(high)
             estimates["venta_base_eur"] = round(sqm * eur_m2_venta)
             estimates["venta_nota"] = (
-                f"{sqm:.0f} m² × {eur_m2_venta:.0f} €/m² (MITMA {mitma_row['municipio']} T4 2025)"
-                f" × banda ±{int((1 - SALE_BAND_LOW) * 100)}%"
+                f"{sqm:.0f} m2 x {eur_m2_venta:.0f} EUR/m2 (MITMA {mitma_row['municipio']} T4 2025)"
+                f" x banda +/-{int((1 - SALE_BAND_LOW) * 100)}%"
             )
 
         if eur_m2_mes is not None and sqm is not None and sqm > 0:
@@ -361,8 +339,8 @@ class PropertyModule:
             estimates["alquiler_mensual_eur_high"] = round(high_r)
             estimates["alquiler_mensual_base_eur"] = round(sqm * eur_m2_mes)
             estimates["alquiler_nota"] = (
-                f"{sqm:.0f} m² × {eur_m2_mes:.2f} €/m²/mes (SERPAVI {serpavi_row['municipio']} 2024)"
-                f" × banda ±{int((1 - RENT_BAND_LOW) * 100)}%"
+                f"{sqm:.0f} m2 x {eur_m2_mes:.2f} EUR/m2/mes (SERPAVI {serpavi_row['municipio']} 2024)"
+                f" x banda +/-{int((1 - RENT_BAND_LOW) * 100)}%"
             )
 
         if estimates:
@@ -372,8 +350,6 @@ class PropertyModule:
         location_str = ", ".join(p for p in [municipio, "ES"] if p)
         summary_parts: list[str] = []
 
-        # Emit a location signal from the geocoded address so downstream
-        # modules and the LLM summary can read it from ctx.signals.
         if municipio:
             signals.append(Signal(
                 kind="location",
@@ -384,14 +360,14 @@ class PropertyModule:
             ))
 
         if catastro_data:
-            m2_s = f"{catastro_data['superficie_m2']:.0f} m²" if catastro_data.get("superficie_m2") else "m² desconocidos"
+            m2_s = f"{catastro_data['superficie_m2']:.0f} m2" if catastro_data.get("superficie_m2") else "m2 desconocidos"
             uso_s = catastro_data.get("uso") or "uso desconocido"
             ano_s = catastro_data.get("ano_construccion") or ""
             summary_parts.append(f"Catastro: {m2_s}, {uso_s}" + (f", {ano_s}" if ano_s else ""))
 
         if "venta_total_eur_low" in estimates:
             venta_str = (
-                f"{_fmt_eur(estimates['venta_total_eur_low'])}–"
+                f"{_fmt_eur(estimates['venta_total_eur_low'])}\u2013"
                 f"{_fmt_eur(estimates['venta_total_eur_high'])}"
             )
             summary_parts.append(f"venta estimada {venta_str}")
@@ -405,7 +381,7 @@ class PropertyModule:
 
         if "alquiler_mensual_eur_low" in estimates:
             alq_str = (
-                f"{_fmt_eur(estimates['alquiler_mensual_eur_low'])}–"
+                f"{_fmt_eur(estimates['alquiler_mensual_eur_low'])}\u2013"
                 f"{_fmt_eur(estimates['alquiler_mensual_eur_high'])}/mes"
             )
             summary_parts.append(f"alquiler estimado {alq_str}")
@@ -424,7 +400,7 @@ class PropertyModule:
             f"Inmueble en {address}. "
             + " | ".join(summary_parts)
             if summary_parts
-            else f"Sin estimación de valor para {address}. Ver gaps."
+            else f"Sin estimacion de valor para {address}. Ver gaps."
         )
 
         status = "ok" if (catastro_data or eur_m2_venta or eur_m2_mes) else "error"
@@ -449,15 +425,6 @@ def _safe_float(v: Any) -> float | None:
 
 
 def _extract_house_number(address: str) -> str | None:
-    """Extrae el primer número de portal de una dirección en texto libre.
-
-    Fallback para cuando el geocoder da un house_number malo (ej: "1-3" en vez de "13").
-    Busca el primer número que aparece después de la primera palabra (el tipo de vía).
-
-    "Passeig Maragall 13, Entresuelo 1" → "13"
-    "Calle Mayor 5, 3º B"               → "5"
-    """
     import re
-    # Primer número tras al menos una palabra
     m = re.search(r"\b([1-9]\d{0,3})\b", address)
     return m.group(1) if m else None
